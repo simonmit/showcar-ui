@@ -1,0 +1,10 @@
+@import "mixins/links";
+
+a {
+  @include link;
+}
+
+.header-link,
+.footer-link {
+  @include link($variant: black)
+}
