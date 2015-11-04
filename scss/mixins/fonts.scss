@@ -1,5 +1,13 @@
 @import "../variables";
 
+@mixin font-bold() {
+    font-weight: 600;
+}
+
+@mixin font-silent() {
+    color: $black-60;
+}
+
 @mixin font($size: null, $bold: false, $silent: false, $line-height: null) {
     $font-sizes: (S: 0.75rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 2rem, XXXL: 2.5rem);
 
@@ -8,14 +16,15 @@
     }
 
     @if $bold {
-        font-weight: 600;
+        @include font-bold;
     }
 
     @if $silent {
-        color: $black-60;
+        @include font-silent;
     }
     
     @if $line-height {
         line-height: $line-height;
     }
 }
+

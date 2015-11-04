@@ -1,0 +1,25 @@
+@import "mixins/fonts";
+
+.font-s {
+  @include font(S);
+}
+
+.font-m {
+  @include font(M);
+}
+
+.font-l {
+  @include font(L);
+}
+
+.font-xl {
+  @include font(XL);
+}
+
+.font-silent {
+  @include font-silent;
+}
+
+.font-bold {
+  @include font-bold;
+}
