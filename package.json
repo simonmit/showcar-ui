@@ -1,0 +1,16 @@
+{
+  "name": "showcar-ui",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutoScout24/showcar-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/AutoScout24/showcar-ui#readme"
+}
