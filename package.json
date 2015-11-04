@@ -12,5 +12,11 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/AutoScout24/showcar-ui#readme"
+  "homepage": "https://github.com/AutoScout24/showcar-ui#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.3.0"
+  }
 }
