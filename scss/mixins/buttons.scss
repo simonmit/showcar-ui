@@ -1,0 +1,82 @@
+@import "utils";
+@import "../variables";
+@import "fonts";
+
+%btn {
+    @include avoid-selection();
+    @include font($bold: true);
+
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    transition: 0.1s ease-in;
+    text-decoration: none;
+    text-align: center;
+}
+
+%btn-bob {
+    background-color: $orange-100;
+
+    &:hover, &:focus {
+        background-color: #cb5f00;
+    }
+
+    &:active {
+        background-color: #994200;
+    }
+
+    &[disabled] {
+        background-color: #ffc996;
+    }
+}
+
+%btn-ross {
+    background-color: $blue-80;
+
+    &:hover, &:focus {
+        background-color: $blue-90;
+    }
+
+    &:active {
+        background-color: $blue-100;
+    }
+
+    &[disabled] {
+        background-color: #b1c2d2;
+    }
+}
+
+%btn-L {
+    @include font(L);
+
+    padding: 9px 20px;
+
+    [class^="icon-"] {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        background-size: contain;
+        position: relative;
+        top: 4px;
+    }
+}
+
+%btn-M {
+    @include font(M);
+    
+    padding: 6px 20px;
+
+    [class^="icon-"] {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-size: contain;
+        position: relative;
+    }
+}
+
+@mixin button($type, $size) {
+    @extend %btn;
+    @extend %btn-#{to-lower-case($type)};
+    @extend %btn-#{to-upper-case($size)};
+}
