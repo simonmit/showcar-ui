@@ -2,6 +2,7 @@
 @import "fonts";
 
 @mixin link($size: null, $variant: blue) {
+    cursor: pointer;
     text-decoration: none;
     transition: color .2s;
     background: none;

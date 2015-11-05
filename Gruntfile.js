@@ -16,12 +16,13 @@ module.exports = function(grunt) {
                     */
                 },
                 files: {
-                    'dist/showcar-ui.css': 'scss/showcar-ui.scss'
+                    'dist/showcar-ui.css': 'scss/showcar-ui.scss',
+                    'docs/css/style.css': 'docs/css/style.scss'
                 }
             }
         },
         watch: {
-            files: ['scss/**/*.scss', 'docs/index.html'],
+            files: ['scss/**/*.scss', 'docs/index.html', 'docs/css/*.scss'],
             tasks: ['sass'],
             options: {
                 livereload: true

@@ -8,154 +8,356 @@
 
 
     <link rel="stylesheet" href="../dist/showcar-ui.css">
-    <style>
-        body {
-            padding: 20px 40px;
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/default.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        String.prototype.formatCode = function (target) {
+            $(target).text(this.replace(/\n +/ig, '\n').replace(/&nbsp;/ig, '    '));
         }
-    </style>
+    </script>
 </head>
 <body>
-<div class="example-btn">
-    <button class="btn-bob-m">btn-bob-m</button>
-    <button class="btn-bob-l">btn-bob-l</button>
-    <button class="btn-bob-m" disabled>disabled</button>
+<h1>ShowCar UI</h1>
 
-    <button class="btn-ross-m">btn-ross-m</button>
-    <button class="btn-ross-l">btn-ross-l</button>
-    <button class="btn-ross-m" disabled>disabled</button>
+<ul class="docs-navigation">
+    <li><a href="#buttons">Buttons</a></li>
+    <li>
+        <a href="#typography">Typography</a>
+        <ul>
+            <li><a href="#body-copy">Body copy</a></li>
+            <li><a href="#links">Links</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#forms">Forms</a>
+        <ul>
+            <li><a href="#inputs-textareas">Inputs</a></li>
+            <li><a href="#selects">Select Boxes</a></li>
+            <li><a href="#radios">Radio Buttons</a></li>
+            <li><a href="#checkboxes">Checkboxes</a></li>
+            <li><a href="#input-groups">Input Groups</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#helper">Helper classes</a>
+        <ul>
+            <li><a href="#floats">floats</a></li>
+            <li><a href="#text-alignment">Text alignment</a></li>
+            <li><a href="#center-blocks">Center content blocks</a></li>
+        </ul>
+    </li>
+</ul>
 
-    <button class="btn-bob-m btn-block">btn-bob-m btn-block</button>
-    <button class="btn-ross-l btn-block">btn-ross-l btn-block</button>
+<hr>
+
+<div>
+    <a name="buttons"></a>
+    <h2>Buttons</h2>
+    <p>ShowCar uses two types of buttons <code>.btn-bob-&lt;size&gt;</code> and <code>.btn-ross-&lt;size&gt;</code> in two different sizes (<code>l</code>and <code>m</code>)</p>
+    <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element</p>
+
+    <div class="example example-buttons">
+        <div>
+            <button class="btn-bob-m">btn-bob-m</button>
+            <button class="btn-ross-m">btn-ross-m</button>
+        </div>
+        <div>
+            <button class="btn-bob-l">btn-bob-l</button>
+            <button class="btn-ross-l">btn-ross-l</button>
+        </div>
+        <div>
+            <button class="btn-bob-m" disabled>disabled</button>
+            <button class="btn-ross-m" disabled>disabled</button>
+        </div>
+        <div>
+            <button class="btn-bob-m btn-block">btn-bob-m btn-block</button>
+            <button class="btn-ross-l btn-block">btn-ross-l btn-block</button>
+        </div>
+    </div>
+    <pre><code class="html" id="code-buttons"></code></pre>
+    <script>
+        `<button class="btn-bob-m">btn-bob-m</button>
+        <button class="btn-ross-m">btn-ross-m</button>
+        <button class="btn-bob-l">btn-bob-l</button>
+        <button class="btn-ross-l">btn-ross-l</button>
+        <button class="btn-bob-m" disabled>disabled</button>
+        <button class="btn-ross-m" disabled>disabled</button>
+        <button class="btn-bob-m btn-block">btn-bob-m btn-block</button>
+        <button class="btn-ross-l btn-block">btn-ross-l btn-block</button>
+    `.formatCode('#code-buttons');
+    </script>
 </div>
-<div class="example-font">
-    <p class="font-s">font-s</p>
-    <p class="font-m">font-m (default)</p>
-    <p class="font-l">font-l</p>
-    <p class="font-xl">font-xl</p>
+<div>
+    <a name="typography"></a>
+    <h2>Typography</h2>
+    <a name="body-copy"></a>
+    <h3>Body copy</h3>
+    <p>
 
-    <p class="font-silent">font-silent</p>
-    <p class="font-bold">font-bold</p>
+    </p>
+    <div class="example example-body-copy">
+        <p class="font-m">.font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="font-s">.font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="font-l">.font-l<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="font-xl">.font-xl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+        <p class="font-silent">.font-silent<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="font-bold">.font-bold<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </div>
+    <pre><code class="html" id="code-typography"></code></pre>
+    <script>
+        `<p class="font-m">...</p>
+        <p class="font-s">...</p>
+        <p class="font-l">...</p>
+        <p class="font-xl">...</p>
+        <p class="font-silent">...</p>
+        <p class="font-bold">...</p>
+        `.formatCode('#code-typography');
+    </script>
+
+    <a name="links"></a>
+    <h3>Links</h3>
+    <div class="example example-links">
+        <div>
+            <a>Default Link</a>
+        </div>
+        <div>
+            <a class="header-link">Header Link</a>
+        </div>
+        <div>
+            <a class="footer-link">Footer Link</a>
+        </div>
+    </div>
+    <pre><code class="html" id="code-links"></code></pre>
+    <script>
+        `<a href="...">...</a>
+        <a href="..." class="header-link">...</a>
+        <a href="..." class="footer-link">...</a>
+        `.formatCode('#code-links');
+    </script>
 </div>
+<div>
+    <a name="forms"></a>
+    <h2>Forms</h2>
+    <a name="inputs-textareas"></a>
+    <h3>Inputs / Textareas</h3>
 
-<div class="example-link">
-    <div>
-        <a href="">Default Link</a>
+    <div class="example example-inputs">
+        <input type="text" value="default (.input-m)" readonly>
+        <input type="text" value=".input-l" class="input-l" readonly>
+
+        <input type="text" value="disabled" disabled readonly>
+        <input type="text" value=".info" class="info" readonly>
+        <input type="text" value=".success" class="success" readonly>
+        <input type="text" value=".error" class="error" readonly>
+
+        <textarea readonly>textarea</textarea>
     </div>
-    <div>
-        <a href="" class="header-link">header-link</a>
-    </div>
-    <div>
-        <a href="" class="footer-link">footer-link</a>
-    </div>
+    <pre><code class="html" id="code-inputs"></code></pre>
+    <script>
+        `<input type="text">
+        <input type="text" class="input-l">
+        <input type="text" disabled>
+        <input type="text" class="info">
+        <input type="text" class="success">
+        <input type="text" class="error">
+        <textarea>...</textarea>
+        `.formatCode('#code-inputs');
+    </script>
 
-</div>
-
-<div class="example-input">
-
-    <div>
-        <input type="text" value="default">
-        <input type="text" value=".input-l" class="input-l">
-
-        <input type="text" value="disabled" disabled>
-        <input type="text" value=".info" class="info">
-        <input type="text" value=".success" class="success">
-        <input type="text" value=".error" class="error">
-
-        <textarea>Textarea</textarea>
-    </div>
-    <div>
-        <input id="as24-radio-1" name="as24-radio" type="radio">
-        <label for="as24-radio-1">Radio 1</label>
-
-        <input id="as24-radio-2" name="as24-radio" type="radio">
-        <label for="as24-radio-2">Radio 2</label>
-
-        <input id="as24-radio-3" name="as24-radio" type="radio" disabled>
-        <label for="as24-radio-3">Radio 3 (disabled)</label>
-    </div>
-    <div>
+    <a name="selects"></a>
+    <h3>Select Boxes</h3>
+    <div class="example example-selects">
         <select name="as24-select-1">
-            <option value="1">default (.input-m)</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option>default (.input-m)</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
         </select>
         <select name="as24-select-2" class="input-l">
-            <option value="1">.input-l</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option>.input-l</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
         </select>
-
         <select name="as24-select-3" class="input-l" disabled>
-            <option value="1">(disabled)</option>
+            <option>disabled</option>
         </select>
     </div>
-    <div>
-        <input id="as24-checkbox-1" type="checkbox">
-        <label for="as24-checkbox-1">Checkbox</label>
+    <pre><code class="html" id="code-selects"></code></pre>
+    <script>
+        `<select>
+            &nbsp;<option>...</option>
+        </select>
 
-        <input id="as24-checkbox-2" type="checkbox" disabled>
-        <label for="as24-checkbox-2">Checkbox (disabled)</label>
-    </div>
-    <div>
-        <input id="as24-checkbox-3" type="checkbox" class="input-l">
-        <label for="as24-checkbox-3">Checkbox</label>
+        <select class="input-l">
+            &nbsp;...
+        </select>
 
-        <input id="as24-checkbox-4" type="checkbox" disabled class="input-l">
-        <label for="as24-checkbox-4">Checkbox (disabled)</label>
+        <select class="input-l" disabled>
+            &nbsp;...
+        </select>
+        `.formatCode('#code-selects');
+    </script>
+
+    <a name="radios"></a>
+    <h3>Radio Buttons</h3>
+    <div class="example example-radios">
+        <input id="as24-radio-1" type="radio">
+        <label for="as24-radio-1">Radio 1</label>
+
+        <input id="as24-radio-2" type="radio">
+        <label for="as24-radio-2">Radio 2</label>
+
+        <input id="as24-radio-3" type="radio" disabled>
+        <label for="as24-radio-3">Radio 3 (disabled)</label>
     </div>
-    <div>
+    <pre><code class="html" id="code-radios"></code></pre>
+    <script>
+        `<input id="radio1" type="radio">
+        <label for="radio1">...</label>
+
+        <input id="radio2" type="radio" disabled>
+        <label for="radio2">...</label>
+        `.formatCode('#code-radios');
+    </script>
+
+    <a name="checkboxes"></a>
+    <h3>Checkboxes</h3>
+    <div class="example example-checkboxes">
+        <div>
+            <input id="as24-checkbox-1" type="checkbox">
+            <label for="as24-checkbox-1">Checkbox</label>
+
+            <input id="as24-checkbox-2" type="checkbox" disabled>
+            <label for="as24-checkbox-2">Checkbox (disabled)</label>
+        </div>
+        <div>
+            <input id="as24-checkbox-3" type="checkbox" class="input-l">
+            <label for="as24-checkbox-3">Checkbox</label>
+
+            <input id="as24-checkbox-4" type="checkbox" disabled class="input-l">
+            <label for="as24-checkbox-4">Checkbox (disabled)</label>
+        </div>
+    </div>
+    <pre><code class="html" id="code-checkboxes"></code></pre>
+    <script>
+        `<input id="cb1" type="checkbox">
+        <label for="cb1">...</label>
+
+        <input id="cb2" type="checkbox" disabled>
+        <label for="cb2">...</label>
+
+        <input id="cb3" type="checkbox" class="input-l">
+        <label for="cb3">...</label>
+        `.formatCode('#code-checkboxes');
+    </script>
+
+    <a name="input-groups"></a>
+    <h3>Input Groups</h3>
+    <div class="example example-groups">
         <div class="input-group">
-            <input type="text" value="input1">
-            <input type="text" value="input2">
-            <button class="btn-bob-m">button</button>
+            <input type="text" placeholder="Text input 1">
+            <input type="text" placeholder="Text input 2">
+            <button class="btn-bob-m">Submit</button>
         </div>
 
         <div class="input-group-radio">
             <input id="as24-radio-4" name="as24-radio" type="radio">
-            <label for="as24-radio-4">Radio 1</label>
+            <label for="as24-radio-4">Option 1</label>
 
             <input id="as24-radio-5" name="as24-radio" type="radio" checked>
-            <label for="as24-radio-5">Radio 2</label>
+            <label for="as24-radio-5">Option 2</label>
 
             <input id="as24-radio-6" name="as24-radio" type="radio">
-            <label for="as24-radio-6">Radio 3</label>
+            <label for="as24-radio-6">Option 3</label>
         </div>
     </div>
+    <pre><code class="html" id="code-groups"></code></pre>
+    <script>
+        `<div class="input-group">
+            &nbsp;<input type="text">
+            &nbsp;...
+        </div>
 
-    <div class="example-utils">
+        <div class="input-group-radio">
+            &nbsp;<input id="radio" type="radio">
+            &nbsp;<label for="radio">...</label>
+            &nbsp;...
+        </div>
+        `.formatCode('#code-groups');
+    </script>
+</div>
+<div>
+    <a name="helper"></a>
+    <h2>Helper classes</h2>
+    <a name="floats"></a>
+    <h3>Floats</h3>
+    <div class="example example-floats">
         <div class="clearfix">
-            <div class="float-left">1</div>
-            <div class="float-left">2</div>
-            <div class="float-left">3</div>
+            <div class="pull-left"></div>
+            <div class="pull-left"></div>
+            <div class="pull-left"></div>
         </div>
         <hr>
         <div class="clearfix">
-            <div class="float-right">1</div>
-            <div class="float-right">2</div>
-            <div class="float-right">3</div>
+            <div class="pull-right"></div>
+            <div class="pull-right"></div>
+            <div class="pull-right"></div>
         </div>
-        <hr>
-        <div class="text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <hr>
-        <div class="text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <hr>
-        <div class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <hr>
-        <div class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <hr>
-        <div class="text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-        <hr>
-        <div class="block-center" style="width: 400px;">.block-center</div>
-        <hr>
-
-
-
     </div>
+    <pre><code class="html" id="code-floats"></code></pre>
+    <script>
+        `<div class="clearfix">...</div>
 
+        <div class="pull-left">...</div>
+        <div class="pull-right">...</div>
+        `.formatCode('#code-floats');
+    </script>
+
+    <a name="text-alignment"></a>
+    <h3>Text alignment</h3>
+    <div class="example example-text-alignment">
+        <p class="text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p class="text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p class="text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html" id="code-text-alignment"></code></pre>
+    <script>
+        `<p class="text-left">...</p>
+        <p class="text-right">...</p>
+        <p class="text-center">...</p>
+        <p class="text-justify">...</p>
+        <p class="text-nowrap">...</p>
+        `.formatCode('#code-text-alignment');
+    </script>
+
+    <a name="center-blocks"></a>
+    <h3>Center content blocks</h3>
+    <div class="example example-block-center">
+        <div class="block-center"></div>
+    </div>
+    <pre><code class="html" id="code-block-center"></code></pre>
+    <script>
+        `<div class="block-center">...</div>
+        `.formatCode('#code-block-center');
+    </script>
 </div>
 
+<!--
+TODO: add docs for <hr>
+-->
 
-<script type="text/javascript" src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=localhost"></script>
+<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=localhost"></script>
 <!--<script src="js/main.js"></script>-->
 </body>
 </html>
