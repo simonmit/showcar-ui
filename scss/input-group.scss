@@ -7,6 +7,7 @@
     > * {
         position: relative;
         width: 100%;
+        padding: 0 14px;
 
         &:first-child:not(:last-child) {
             border-top-right-radius: 0;
@@ -26,6 +27,7 @@
             z-index: 2;
         }
     }
+
 }
 .input-group-radio {
     @include input-group-radio;

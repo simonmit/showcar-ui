@@ -142,9 +142,22 @@ input[type="radio"], input[type="checkbox"] {
 input[type="radio"] {
     @include radiobutton(M);
 
+    &.input-m {
+        @include radiobutton(M);
+    }
+    &.input-l {
+        @include radiobutton(L);
+    }
 }
 input[type="checkbox"] {
     @include checkbox(M);
+
+    &.input-m {
+        @include checkbox(M);
+    }
+    &.input-l {
+        @include checkbox(L);
+    }
 }
 select {
     @include select(M);
@@ -152,7 +165,7 @@ select {
     &.input-m {
         @include select(M);
     }
-    &input-m {
+    &.input-l {
         @include select(L);
     }
 }

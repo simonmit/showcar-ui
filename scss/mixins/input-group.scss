@@ -18,32 +18,33 @@
     border-radius: $form-border-radius;
     font-weight: 400;
 
-    input[type=radio] + label {
-
-        padding: 5px $XL;
-        margin: 0;
-        border-right: 1px solid $black-60;
-        text-align: center;
-        cursor: pointer;
-        color: $black-100;
-
-        &:last-of-type {
-            border: none;
-        }
-    }
-
     input[type=radio] {
         display: none;
 
-        & + label:before {
-            border: none;
-            background-image: none;
+        & + label {
+            padding: 5px 14px;
+            margin: 0;
+            border-right: 1px solid $black-60;
+            text-align: center;
+            cursor: pointer;
+            color: $black-100;
+
+            &:last-of-type {
+                border: none;
+            }
+            &:before {
+                border: none;
+                background-image: none;
+            }
         }
 
         &:checked + label {
             color: $white;
-            background-color: $black-60;
+            background: $black-60;
 
+        }
+        &:not(:checked) + label:hover {
+            background: $black-30;
         }
     }
 }
