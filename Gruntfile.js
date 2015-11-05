@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dist/showcar-ui.css': 'scss/showcar-ui.scss',
-                    'docs/css/style.css': 'docs/css/style.scss'
+                    'docs/css/documenation.css': 'docs/css/documenation.scss'
                 }
             }
         },
