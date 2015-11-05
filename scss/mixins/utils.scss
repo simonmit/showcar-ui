@@ -8,35 +8,13 @@
     user-select: none;
 }
 
-/*
-@mixin ellipsis {
-    @extend %ellipsis;
-}
-
 @mixin clearfix() {
+    &:before,
     &:after {
-        content: "";
-        display: table;
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
         clear: both;
     }
 }
-
-
-
-
-
-%ellipsis {
-    -moz-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-%clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-*/
