@@ -8,6 +8,11 @@
 
 
     <link rel="stylesheet" href="../dist/showcar-ui.css">
+    <style>
+        body {
+            padding: 20px 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="example-btn">
@@ -45,6 +50,65 @@
 
 </div>
 
+<div class="example-input">
+
+    <div>
+        <input type="text" value="default">
+        <input type="text" value=".input-l" class="input-l">
+
+        <input type="text" value="disabled" disabled>
+        <input type="text" value=".info" class="info">
+        <input type="text" value=".success" class="success">
+        <input type="text" value=".error" class="error">
+
+        <textarea>Textarea</textarea>
+    </div>
+    <div>
+        <input id="as24-radio-1" name="as24-radio" type="radio">
+        <label for="as24-radio-1">Radio 1</label>
+
+        <input id="as24-radio-2" name="as24-radio" type="radio">
+        <label for="as24-radio-2">Radio 2</label>
+
+        <input id="as24-radio-3" name="as24-radio" type="radio" disabled>
+        <label for="as24-radio-3">Radio 3 (disabled)</label>
+    </div>
+    <div>
+        <select name="as24-select-1">
+            <option value="1">default (.input-m)</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <select name="as24-select-2" class="input-l">
+            <option value="1">.input-l</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+
+        <select name="as24-select-3" class="input-l" disabled>
+            <option value="1">(disabled)</option>
+        </select>
+    </div>
+    <div>
+        <input id="as24-checkbox-1" type="checkbox">
+        <label for="as24-checkbox-1">Checkbox</label>
+
+        <input id="as24-checkbox-2" type="checkbox" disabled>
+        <label for="as24-checkbox-2">Checkbox (disabled)</label>
+    </div>
+    <!--
+    disabled
+    regular
+    checked
+
+    error
+    success
+    info
+    -->
+</div>
+
+
+<script type="text/javascript" src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=localhost"></script>
 <!--<script src="js/main.js"></script>-->
 </body>
 </html>
