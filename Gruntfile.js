@@ -19,6 +19,10 @@ module.exports = function(grunt) {
                     'dist/showcar-ui.css': 'scss/showcar-ui.scss'
                 }
             }
+        },
+        watch: {
+            files: ['scss/**/*.scss'],
+            tasks: ['sass']
         }
     });
 
