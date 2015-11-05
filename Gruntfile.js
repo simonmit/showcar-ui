@@ -21,8 +21,11 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['scss/**/*.scss'],
-            tasks: ['sass']
+            files: ['scss/**/*.scss', 'docs/index.html'],
+            tasks: ['sass'],
+            options: {
+                livereload: true
+            }
         }
     });
 
