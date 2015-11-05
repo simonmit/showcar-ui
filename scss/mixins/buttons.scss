@@ -7,7 +7,7 @@
     @include font($bold: true);
 
     border: none;
-    border-radius: 4px;
+    border-radius: $form-border-radius;
     color: #fff;
     transition: 0.1s ease-in;
     text-decoration: none;
@@ -57,7 +57,7 @@
         display: inline-block;
         background-size: contain;
         position: relative;
-        top: 4px;
+        top: $XS;
     }
 }
 

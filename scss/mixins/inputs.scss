@@ -44,7 +44,7 @@
 %checkbox {
     & + label {
         &:before {
-            border-radius: 4px;
+            border-radius: $form-border-radius;
         }
     }
 

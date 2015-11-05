@@ -7,7 +7,7 @@ input[type="text"], input[type="tel"], input[type="number"], input[type="email"]
 
     font-family: inherit;
 
-    border-radius: $XS;
+    border-radius: $form-border-radius;
     border: 1px solid #959595; // CHECK: color: correct?
     color: $black-100;
     width: 100%;
