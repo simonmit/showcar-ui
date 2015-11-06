@@ -18,3 +18,15 @@
         clear: both;
     }
 }
+
+@mixin mqmin($min, $media: all) {
+    @media #{$media} and (min-width: $min + 0px) {
+        @content;
+    }
+}
+
+@mixin mqmax($max, $media: all) {
+    @media #{$media} and (max-width: $max + 0px) {
+        @content;
+    }
+}

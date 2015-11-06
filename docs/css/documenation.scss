@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/grid";
 
 body {
   padding: 20px 40px;
@@ -75,6 +76,16 @@ code {
   }
 }
 
+.example-grid {
+  .grid-row {
+    margin: 5px 0;
+
+    > div {
+      background: $black-20;
+      padding: 5px;
+    }
+  }
+}
 .example-buttons {
   button {
     margin: 5px 0;
