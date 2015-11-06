@@ -3,26 +3,40 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>ShowCar UI Library Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="stylesheet" href="../dist/showcar-ui.css">
-    <link rel="stylesheet" href="./css/documenation.css">
     <link rel="stylesheet" href="css/highlight.css">
+    <link rel="stylesheet" href="./css/documenation.css">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
-        String.prototype.formatCode = function (target) {
-            $(target).text(this.replace(/\n +/ig, '\n').replace(/&nbsp;/ig, '    '));
+        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
+
+        function encodeEntities(value) {
+            return value.
+                    replace(/&/g, '&amp;').
+                    replace(SURROGATE_PAIR_REGEXP, function(value) {
+                        var hi = value.charCodeAt(0);
+                        var low = value.charCodeAt(1);
+                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+                    }).
+                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+                        return '&#' + value.charCodeAt(0) + ';';
+                    }).
+                    replace(/</g, '&lt;').
+                    replace(/>/g, '&gt;');
+        }
+        function formatCode (code, target) {
+            document.querySelector(target).innerHTML = encodeEntities(code);
         }
     </script>
 </head>
 <body>
-<h1>ShowCar UI</h1>
+<h1>ShowCar UI Library Docs</h1>
 
 <ul class="docs-navigation">
     <li><a href="#buttons">Buttons</a></li>
@@ -81,15 +95,14 @@
     </div>
     <pre><code class="html" id="code-buttons"></code></pre>
     <script>
-        `<button class="btn-bob-m">btn-bob-m</button>
-        <button class="btn-ross-m">btn-ross-m</button>
-        <button class="btn-bob-l">btn-bob-l</button>
-        <button class="btn-ross-l">btn-ross-l</button>
-        <button class="btn-bob-m" disabled>disabled</button>
-        <button class="btn-ross-m" disabled>disabled</button>
-        <button class="btn-bob-m btn-block">btn-bob-m btn-block</button>
-        <button class="btn-ross-l btn-block">btn-ross-l btn-block</button>
-    `.formatCode('#code-buttons');
+        formatCode(`<button class="btn-bob-m">btn-bob-m</button>
+<button class="btn-ross-m">btn-ross-m</button>
+<button class="btn-bob-l">btn-bob-l</button>
+<button class="btn-ross-l">btn-ross-l</button>
+<button class="btn-bob-m" disabled>disabled</button>
+<button class="btn-ross-m" disabled>disabled</button>
+<button class="btn-bob-m btn-block">btn-bob-m btn-block</button>
+<button class="btn-ross-l btn-block">btn-ross-l btn-block</button>`, '#code-buttons');
     </script>
 </div>
 <div>
@@ -111,13 +124,13 @@
     </div>
     <pre><code class="html" id="code-typography"></code></pre>
     <script>
-        `<p class="font-m">...</p>
-        <p class="font-s">...</p>
-        <p class="font-l">...</p>
-        <p class="font-xl">...</p>
-        <p class="font-silent">...</p>
-        <p class="font-bold">...</p>
-        `.formatCode('#code-typography');
+        formatCode(`<p class="font-m">...</p>
+<p class="font-s">...</p>
+<p class="font-l">...</p>
+<p class="font-xl">...</p>
+<p class="font-silent">...</p>
+<p class="font-bold">...</p>
+        `, '#code-typography');
     </script>
 
     <a name="links"></a>
@@ -135,10 +148,9 @@
     </div>
     <pre><code class="html" id="code-links"></code></pre>
     <script>
-        `<a href="...">...</a>
-        <a href="..." class="header-link">...</a>
-        <a href="..." class="footer-link">...</a>
-        `.formatCode('#code-links');
+        formatCode(`<a href="...">...</a>
+<a href="..." class="header-link">...</a>
+<a href="..." class="footer-link">...</a>`,'#code-links');
     </script>
 </div>
 <div>
@@ -160,14 +172,13 @@
     </div>
     <pre><code class="html" id="code-inputs"></code></pre>
     <script>
-        `<input type="text">
-        <input type="text" class="input-l">
-        <input type="text" disabled>
-        <input type="text" class="info">
-        <input type="text" class="success">
-        <input type="text" class="error">
-        <textarea>...</textarea>
-        `.formatCode('#code-inputs');
+        formatCode(`<input type="text">
+<input type="text" class="input-l">
+<input type="text" disabled>
+<input type="text" class="info">
+<input type="text" class="success">
+<input type="text" class="error">
+<textarea>...</textarea>`, '#code-inputs');
     </script>
 
     <a name="selects"></a>
@@ -189,18 +200,17 @@
     </div>
     <pre><code class="html" id="code-selects"></code></pre>
     <script>
-        `<select>
-            &nbsp;<option>...</option>
-        </select>
+        formatCode(`<select>
+    <option>...</option>
+</select>
 
-        <select class="input-l">
-            &nbsp;...
-        </select>
+<select class="input-l">
+    ...
+</select>
 
-        <select class="input-l" disabled>
-            &nbsp;...
-        </select>
-        `.formatCode('#code-selects');
+<select class="input-l" disabled>
+    ...
+</select>`, '#code-selects');
     </script>
 
     <a name="radios"></a>
@@ -217,12 +227,11 @@
     </div>
     <pre><code class="html" id="code-radios"></code></pre>
     <script>
-        `<input id="radio1" type="radio">
-        <label for="radio1">...</label>
+        formatCode(`<input id="radio1" type="radio">
+<label for="radio1">...</label>
 
-        <input id="radio2" type="radio" disabled>
-        <label for="radio2">...</label>
-        `.formatCode('#code-radios');
+<input id="radio2" type="radio" disabled>
+<label for="radio2">...</label>`, '#code-radios');
     </script>
 
     <a name="checkboxes"></a>
@@ -245,15 +254,14 @@
     </div>
     <pre><code class="html" id="code-checkboxes"></code></pre>
     <script>
-        `<input id="cb1" type="checkbox">
-        <label for="cb1">...</label>
+        formatCode(`<input id="cb1" type="checkbox">
+<label for="cb1">...</label>
 
-        <input id="cb2" type="checkbox" disabled>
-        <label for="cb2">...</label>
+<input id="cb2" type="checkbox" disabled>
+<label for="cb2">...</label>
 
-        <input id="cb3" type="checkbox" class="input-l">
-        <label for="cb3">...</label>
-        `.formatCode('#code-checkboxes');
+<input id="cb3" type="checkbox" class="input-l">
+<label for="cb3">...</label>`, '#code-checkboxes');
     </script>
 
     <a name="input-groups"></a>
@@ -278,17 +286,16 @@
     </div>
     <pre><code class="html" id="code-groups"></code></pre>
     <script>
-        `<div class="input-group">
-            &nbsp;<input type="text">
-            &nbsp;...
-        </div>
+        formatCode(`<div class="input-group">
+    <input type="text">
+    ...
+</div>
 
-        <div class="input-group-radio">
-            &nbsp;<input id="radio" type="radio">
-            &nbsp;<label for="radio">...</label>
-            &nbsp;...
-        </div>
-        `.formatCode('#code-groups');
+<div class="input-group-radio">
+    <input id="radio" type="radio">
+    <label for="radio">...</label>
+    ...
+</div>`, '#code-groups');
     </script>
 </div>
 <div>
@@ -311,11 +318,10 @@
     </div>
     <pre><code class="html" id="code-floats"></code></pre>
     <script>
-        `<div class="clearfix">...</div>
+        formatCode(`<div class="clearfix">...</div>
 
-        <div class="pull-left">...</div>
-        <div class="pull-right">...</div>
-        `.formatCode('#code-floats');
+<div class="pull-left">...</div>
+<div class="pull-right">...</div>`, '#code-floats');
     </script>
 
     <a name="text-alignment"></a>
@@ -333,12 +339,11 @@
     </div>
     <pre><code class="html" id="code-text-alignment"></code></pre>
     <script>
-        `<p class="text-left">...</p>
-        <p class="text-right">...</p>
-        <p class="text-center">...</p>
-        <p class="text-justify">...</p>
-        <p class="text-nowrap">...</p>
-        `.formatCode('#code-text-alignment');
+        formatCode(`<p class="text-left">...</p>
+<p class="text-right">...</p>
+<p class="text-center">...</p>
+<p class="text-justify">...</p>
+<p class="text-nowrap">...</p>`, '#code-text-alignment');
     </script>
 
     <a name="center-blocks"></a>
@@ -348,8 +353,7 @@
     </div>
     <pre><code class="html" id="code-block-center"></code></pre>
     <script>
-        `<div class="block-center">...</div>
-        `.formatCode('#code-block-center');
+        formatCode(`<div class="block-center">...</div>`, '#code-block-center');
     </script>
 </div>
 
@@ -357,7 +361,7 @@
 TODO: add docs for <hr>
 -->
 
-<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=localhost"></script>
+<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=172.19.0.205"></script>
 <!--<script src="js/main.js"></script>-->
 </body>
 </html>
