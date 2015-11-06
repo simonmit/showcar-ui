@@ -76,6 +76,12 @@ code {
   }
 }
 
+.example-grid-container {
+  .grid-container {
+    border: 1px solid $black-70;
+  }
+}
+
 .example-grid {
   .grid-row {
     margin: 5px 0;

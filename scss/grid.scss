@@ -43,10 +43,6 @@ $susy: (
   }
 }
 
-
-
-
-
 .grid-row {
   @include clearfix;
 
@@ -63,6 +59,4 @@ $susy: (
   :last-child {
     @include last;
   }
-
-
 }
