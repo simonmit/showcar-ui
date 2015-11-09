@@ -549,9 +549,21 @@
             Collapse Hide
         </button>
     </div>
+
+    <pre><code class="html" id="code-collapse"></code></pre>
+    <script>
+        formatCode(`<button data-toggle="collapse" data-target="#collapse">...</button>
+<div id="collapse" class="collapse">...</div>
+
+<button class="collapse collapse-target in" data-toggle="collapse" data-target=".collapse-target">Show</button>
+<div class="collapse collapse-target">
+    ...
+</div>
+<button data-toggle="collapse" data-target=".collapse-target" class="collapse collapse-target">Hide</button>`, '#code-collapse');
+    </script>
 </div>
 
-<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=172.16.252.24"></script>
+<script src="js/livereload.js?host=172.16.252.24"></script>
 <script src="../dist/showcar-ui.min.js"></script>
 </body>
 </html>
