@@ -65,6 +65,13 @@
             <li><a href="#floats">floats</a></li>
             <li><a href="#text-alignment">Text alignment</a></li>
             <li><a href="#center-blocks">Center content blocks</a></li>
+            <li><a href="#horizontal-line">Horizontal line</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#components">Components</a>
+        <ul>
+            <li><a href="#collapse">Collapse</a></li>
         </ul>
     </li>
 </ul>
@@ -186,6 +193,25 @@
             </div>
             <div class="grid-col-1">
                 .grid-col-1
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-8">
+                .grid-col-8
+            </div>
+            <div class="grid-col-4">
+                .grid-col-4
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-3">
+                .grid-col-3
+            </div>
+            <div class="grid-col-6">
+                .grid-col-6
+            </div>
+            <div class="grid-col-3">
+                .grid-col-3
             </div>
         </div>
     </div>
@@ -490,13 +516,55 @@
     <script>
         formatCode(`<div class="block-center">...</div>`, '#code-block-center');
     </script>
+
+    <a name="horizontal-line"></a>
+    <h3>Horizontal line</h3>
+    <p>To seperate some content you can use a horizontal line.</p>
+    <div class="example example-horizontal-line">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html" id="code-hr"></code></pre>
+    <script>
+        formatCode(`<hr>`, '#code-hr');
+    </script>
+</div>
+<div>
+    <a name="components"></a>
+    <h2>Components</h2>
+    <a name="collapse"></a>
+    <h3>Collapse</h3>
+    <div class="example example-collapse">
+        <button class="btn-ross-m" data-toggle="collapse" data-target="#collapse-target-1">Collapse Toggle</button>
+        <div id="collapse-target-1" class="collapse">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
+        <hr>
+        <button class="btn-ross-m collapse collapse-target in" data-toggle="collapse" data-target=".collapse-target">Collapse Show</button>
+        <div class="collapse collapse-target">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
+        <button data-toggle="collapse" data-target=".collapse-target" class="btn-ross-m collapse collapse-target">
+            Collapse Hide
+        </button>
+    </div>
 </div>
 
-<!--
-TODO: add docs for <hr>
--->
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="collapse"]'), function (collapsable) {
+        collapsable.onclick = function () {
+            var targetAttr = collapsable.getAttribute('data-target');
+            var targets = document.querySelectorAll(targetAttr);
 
-<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=172.19.0.205"></script>
+            Array.prototype.forEach.call(targets, function (target) {
+                target.classList.toggle('in');
+            });
+        }
+    });
+</script>
+
+<script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=172.16.252.24"></script>
 <!--<script src="js/main.js"></script>-->
 </body>
 </html>
