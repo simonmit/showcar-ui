@@ -551,20 +551,7 @@
     </div>
 </div>
 
-<script>
-    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="collapse"]'), function (collapsable) {
-        collapsable.onclick = function () {
-            var targetAttr = collapsable.getAttribute('data-target');
-            var targets = document.querySelectorAll(targetAttr);
-
-            Array.prototype.forEach.call(targets, function (target) {
-                target.classList.toggle('in');
-            });
-        }
-    });
-</script>
-
 <script src="http://rawgit.com/livereload/livereload-js/master/dist/livereload.js?host=172.16.252.24"></script>
-<!--<script src="js/main.js"></script>-->
+<script src="../dist/showcar-ui.min.js"></script>
 </body>
 </html>

@@ -1,8 +1,19 @@
 module.exports = function(grunt) {
     var DEBUG = grunt.option('dbg');
 
-    grunt.initConfig({
+    var moduleName = "ui";
+    var loadConfig = function (name, module) {
+        var result = {};
+        module = module || moduleName || "module";
+        name = name.indexOf(".") > -1 ? name : name + ".conf";
+        result[module] = require("./config/" + name + ".js");
+        return result;
+    };
 
+    grunt.initConfig({
+        pkg: grunt.file.readJSON("package.json"),
+        webpack: loadConfig("webpack"),
+        uglify: loadConfig("uglify"),
         sass: {
             dist: {
                 options: {
@@ -10,10 +21,10 @@ module.exports = function(grunt) {
                     sourceMap: DEBUG,
                     sourceMapEmbed: true
                     /*
-                    includePaths: [
-                        'bower_components/susy/sass'
-                    ]
-                    */
+                     includePaths: [
+                     'bower_components/susy/sass'
+                     ]
+                     */
                 },
                 files: {
                     'dist/showcar-ui.css': 'scss/showcar-ui.scss',
@@ -22,15 +33,20 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['scss/**/*.scss', 'docs/index.html', 'docs/css/*.scss'],
-            tasks: ['sass'],
+            files: ['scss/**/*.scss', 'js/**/*.js','docs/index.html', 'docs/css/*.scss'],
+            tasks: ['sass', "webpack", "uglify"],
             options: {
                 livereload: true
             }
         }
     });
 
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask("build", ["sass", "webpack"]);
+    grunt.registerTask("dist", ["sass", "webpack", "uglify"]);
 
-    require('load-grunt-tasks')(grunt);
+    grunt.registerTask("default", ["dist"]);
+
+    require('load-grunt-tasks')(grunt, {
+        pattern: ['grunt-*', "!grunt-cli"]
+    });
 };
