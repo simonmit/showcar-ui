@@ -1,0 +1,24 @@
+{
+  "name": "showcar-ui",
+  "description": "",
+  "main": "",
+  "authors": [
+    "AutoScout24"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AutoScout24/showcar-ui",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.6"
+  }
+}
