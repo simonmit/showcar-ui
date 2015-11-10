@@ -74,6 +74,7 @@
     & + label {
         font-size : $size;
         padding-left: 2 * $size;
+        padding-top: 3px;
 
         &:before {
             width: $size + $XS;
