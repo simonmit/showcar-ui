@@ -16,6 +16,14 @@
   @include font(XL);
 }
 
+.font-xxl {
+  @include font(XXL);
+}
+
+.font-xxxl {
+  @include font(XXXL);
+}
+
 .font-silent {
   @include font-silent;
 }
