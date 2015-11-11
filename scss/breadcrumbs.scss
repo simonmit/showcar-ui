@@ -1,0 +1,5 @@
+@import "mixins/breadcrumbs";
+
+.breadcrumbs {
+  @include breadcrumb;
+}
