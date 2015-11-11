@@ -576,9 +576,31 @@
 </div>
 <button data-toggle="collapse" data-target=".collapse-target" class="collapse collapse-target">Hide</button>`, '#code-collapse');
     </script>
+
+    <a name="breadcrumbs"></a>
+    <h3>Breadcrumbs</h3>
+    <div class="example example-breadcrumbs">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="/url/to/home" data-breadcrumb="home">Home page</a></li>
+                <li><a href="/url/to/list" data-breadcrumb="list">List results</a></li>
+                <li><a href="/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+            </ul>
+        </div>
+    </div>
+    <pre><code class="html" id="code-breadcrumbs"></code></pre>
+    <script>
+        formatCode(`<div class="breadcrumbs">
+    <ul>
+        <li><a href="/url/to/home" data-breadcrumb="home">Home page</a></li>
+        <li><a href="/url/to/list" data-breadcrumb="list">List results</a></li>
+        <li><a href="/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+    </ul>
+</div>`, '#code-breadcrumbs');
+    </script>
 </div>
 
-<script src="js/livereload.js?host=172.16.252.24"></script>
+<script src="js/livereload.js?host=localhost"></script>
 <script src="../dist/showcar-ui.min.js"></script>
 </body>
 </html>
