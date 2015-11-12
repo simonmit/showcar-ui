@@ -53,10 +53,10 @@ $susy: (
     }
   }
 
-  :first-child {
+  >:first-child {
     @include first;
   }
-  :last-child {
+  >:last-child {
     @include last;
   }
 }
