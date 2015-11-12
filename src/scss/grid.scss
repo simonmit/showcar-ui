@@ -14,13 +14,15 @@ $susy: (
 );
 
 .grid-container {
-  @include container();
+  @include container;
   position: relative;
 
   // 1270px
   @include mqmin($grid-max-width + $gap-between-ad-and-grid + $side-ad-width) {
     float: left;
     width: 100%;
+
+
   }
 
   // 1440px

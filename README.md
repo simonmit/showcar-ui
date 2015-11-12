@@ -31,7 +31,7 @@ The advanced include needs some changes in your main scss and main JavaScript fi
 
 CSS
 
-    @import "../lib/showcar-ui/scss/showcar-ui";
+    @import "../lib/showcar-ui/src/scss/showcar-ui";
 
 JavaScript
 

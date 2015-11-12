@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         uglify: loadConfig("uglify"),
         sass: loadConfig("sass"),
         watch: {
-            files: ['scss/**/*.scss', 'js/**/*.js','docs/index.html', 'docs/css/*.scss'],
+            files: ['src/scss/**/*.scss', 'src/js/**/*.js','docs/index.html', 'docs/css/*.scss'],
             tasks: ['sass', "webpack", "uglify"],
             options: {
                 livereload: true
