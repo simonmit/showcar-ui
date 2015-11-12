@@ -6,12 +6,10 @@ module.exports = (function() {
         options: {
             outputStyle: DEBUG ? 'expanded' : 'compressed',
             sourceMap: DEBUG,
-            sourceMapEmbed: true
-            /*
-             includePaths: [
-             'bower_components/susy/sass'
-             ]
-             */
+            sourceMapEmbed: true,
+            includePaths: [
+                'bower_components/susy/sass'
+            ]
         },
         files: {
             'dist/showcar-ui.css': 'scss/showcar-ui.scss',
