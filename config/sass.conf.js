@@ -8,7 +8,7 @@ module.exports = (function() {
             sourceMap: DEBUG,
             sourceMapEmbed: true,
             includePaths: [
-                'bower_components/susy/sass'
+                'vendor/susy/sass/susy'
             ]
         },
         files: {
