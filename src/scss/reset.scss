@@ -17,7 +17,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-body {
+body, &[data-showcar-ui] {
   font-family: Source Sans Pro, sans-serif;
   font-size: 1rem;
   line-height: 1.382;

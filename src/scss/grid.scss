@@ -4,8 +4,9 @@
 
 $susy: (
         columns: 12,
-        gutters: $gutter-width / $grid-column-width,
         global-box-sizing: border-box,
+        gutters: $gutter-width / $grid-column-width,
+        gutter-position: after,
         container: $grid-max-width,
 
         debug: (
