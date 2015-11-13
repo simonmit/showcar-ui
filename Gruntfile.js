@@ -13,6 +13,7 @@ module.exports = function(grunt) {
         webpack: loadConfig("webpack"),
         uglify: loadConfig("uglify"),
         sass: loadConfig("sass"),
+        copy: loadConfig("copy"),
         watch: {
             files: ['src/scss/**/*.scss', 'src/js/**/*.js','docs/index.html', 'docs/css/*.scss'],
             tasks: ['sass', "webpack", "uglify"],
