@@ -4,6 +4,6 @@ module.exports = {
     module: {
         loaders: [{test: /\.js$/, loader: "babel?presets[]=es2015", include: "./js"}]
     },
-    devtool: "eval",
+    devtool: "source-map",
     cache: true
 };
