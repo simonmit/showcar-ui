@@ -19,6 +19,15 @@ The simple include only needs some additions in your html code:
 CSS
 
     <link href="./src/lib/showcar-ui/dist/showcar-ui.css" ... >
+    
+CSS (Namespaced version)
+
+If you want to use the showcar ui styling only in a certain part of your application, you can use the namespaced version.
+Therefor you have to include the namespaced version of the css and add the data-showcar-ui attribute to the element you want to apply the styles to.
+
+    <link href="./src/lib/showcar-ui/dist/showcar-ui-namespaced.css" ... >
+    
+    <body data-showcar-ui>
 
 JavaScript
 
