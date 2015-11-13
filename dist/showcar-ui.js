@@ -46,8 +46,6 @@
 
 	"use strict";
 	
-	console.log(location);
-	
 	const polyfills = __webpack_require__(1);
 	polyfills();
 	
@@ -66,16 +64,10 @@
 	    var sjs = __webpack_require__(2);
 	
 	    function getPolyfillPath() {
-	
 	        var src = document.querySelector('script[src*="showcar-ui.min.js"]').src;
 	        src = src.split('?')[0];
 	        return src.substr(0, src.lastIndexOf('/')) + '/polyfills/';
-	
-	
-	
 	    }
-	
-	
 	
 	    var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
 	
@@ -90,8 +82,8 @@
 	        && 'keys' in Object
 	        && 'trim' in String.prototype;
 	
-	    polyfills.push(getPolyfillPath() + 'dom4.js');
 	    if (!isDom4Browser) {
+	        polyfills.push(getPolyfillPath() + 'dom4.js');
 	    }
 	
 	    if (!isEs5Browser) {
