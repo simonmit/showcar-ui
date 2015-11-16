@@ -1,5 +1,18 @@
 module.exports = function(callback) {
     'use strict';
+
+    // intermediate solution
+    require('document-register-element/build/document-register-element.js');
+    require('dom4/build/dom4.js');
+    require('es5-shim/es5-shim.min.js');
+    require('placeholders/dist/placeholders.min.js');
+    if (callback && typeof callback === 'function') {
+        callback();
+    }
+    return;
+
+
+
     var polyfills = [];
 
     var sjs = require('scriptjs');
