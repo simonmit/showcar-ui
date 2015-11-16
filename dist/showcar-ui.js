@@ -753,10 +753,26 @@
 	
 	    // intermediate solution
 	    ;
+	    var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
+	
+	    var isDom4Browser = document.head && 'matches' in document.head && 'classList' in document.head && 'CustomEvent' in window;
+	
+	    var isEs5Browser = 'map' in Array.prototype && 'isArray' in Array && 'bind' in Function.prototype && 'keys' in Object && 'trim' in String.prototype;
+	
 	    __webpack_require__(3);
-	    __webpack_require__(4);
-	    __webpack_require__(5);
-	    __webpack_require__(6);
+	
+	    if (!isDom4Browser) {
+	        __webpack_require__(4);
+	    }
+	
+	    if (!isEs5Browser) {
+	        __webpack_require__(5);
+	    }
+	
+	    if (needsPlaceholderPolyfill) {
+	        __webpack_require__(6);
+	    }
+	
 	    if (callback && typeof callback === 'function') {
 	        callback();
 	    }
