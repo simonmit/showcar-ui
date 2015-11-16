@@ -31,20 +31,37 @@ Therefor you have to include the namespaced version of the css and add the data-
 
 JavaScript
 
-    <script src="./src/lib/showcar-ui/dist/showcar-ui.js"></script>
+    <script src="./src/lib/showcar-ui/dist/showcar-ui.min.js"></script>
 
 
 ### Advanced Include
 
-The advanced include needs some changes in your main scss and main JavaScript file:
+The advanced include needs some changes in your main scss file:
 
 CSS
 
     @import "../lib/showcar-ui/src/scss/showcar-ui";
+    
+## Additional information
 
-JavaScript
+The showcar-ui library includes some other libraries:
 
-    require('../lib/showcar-ui/js/showcar-ui.js');
+* showcar-storage
+* showcar-icons
+* Zepto
+
+### showcar-storage
+
+You can access the Stroage API via the global `Storage` object. For further information see the documentation under https://github.com/AutoScout24/showcar-storage
+
+### showcar-icons
+
+You can use all the icons defined by showcar-icons with the custom `<as24-icon>` tag. For further information see the documentation under https://github.com/AutoScout24/showcar-icons
+
+### Zepto
+
+Showcar-ui includes Zepto, which is a lightweight replacement for jQuery. You can access Zepto via the global variables `$` and `Zepto`. 
+For a detailed usage guide, have a look at http://zeptojs.com/ 
 
 ## How to use:
 
