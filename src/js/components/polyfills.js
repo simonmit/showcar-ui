@@ -32,7 +32,7 @@ module.exports = function(callback) {
     }
 
     if (needsPlaceholderPolyfill) {
-        polyfills.push(getPolyfillPath() + 'placeholders.js');
+        polyfills.push(getPolyfillPath() + 'placeholders.min.js');
     }
 
     if (polyfills.length) {

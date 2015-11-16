@@ -44,12 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	
-	const polyfills = __webpack_require__(1);
+	var polyfills = __webpack_require__(1);
 	polyfills();
 	
-	const collapse = __webpack_require__(4);
+	var collapse = __webpack_require__(4);
 	collapse();
 
 
@@ -91,7 +89,7 @@
 	    }
 	
 	    if (needsPlaceholderPolyfill) {
-	        polyfills.push(getPolyfillPath() + 'placeholders.js');
+	        polyfills.push(getPolyfillPath() + 'placeholders.min.js');
 	    }
 	
 	    if (polyfills.length) {
@@ -99,6 +97,8 @@
 	    } else {
 	        start();
 	    }
+	
+	    console.log(polyfills.length);
 	
 	    function start() {
 	        __webpack_require__(3);

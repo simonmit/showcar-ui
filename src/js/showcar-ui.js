@@ -1,7 +1,5 @@
-"use strict";
-
-const polyfills = require('./components/polyfills.js');
+var polyfills = require('./components/polyfills.js');
 polyfills();
 
-const collapse = require('./components/collapse.js');
+var collapse = require('./components/collapse.js');
 collapse();
