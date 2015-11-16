@@ -55,9 +55,6 @@
 	__webpack_require__(5);
 	
 	window.Storage = __webpack_require__(6);
-	
-	var local = new window.Storage('local');
-	console.log(local);
 
 /***/ },
 /* 1 */
