@@ -2,7 +2,7 @@ module.exports = {
     entry: "./src/js/showcar-ui.js",
     output: {filename: "./dist/showcar-ui.js"},
     module: {
-        loaders: [{test: /\.js$/, loader: "babel?presets[]=es2015", include: "./js"}]
+        loaders: [{test: /\.js$/, loader: "babel?presets[]=es2015"}]
     },
     resolve: {
         root: require('path').resolve('./vendor'),
