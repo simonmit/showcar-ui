@@ -1,0 +1,19 @@
+@import "./mixins/color-selector";
+
+.color-selector {
+  input[type="radio"], input[type="checkbox"] {
+    @include color-selector(M);
+
+    &.input-l {
+      @include color-selector(L);
+    }
+  }
+  input[type="checkbox"] {
+    & + label {
+      &:before,
+      &:after {
+        border-radius: $form-border-radius !important;
+      }
+    }
+  }
+}

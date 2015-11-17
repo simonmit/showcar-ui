@@ -1,0 +1,114 @@
+@import "fonts";
+
+@mixin color-selector($size) {
+  @extend %color-selector;
+  @extend %color-selector-#{to-upper_case($size)};
+}
+
+@mixin color-selector-color($color, $checkedColor:"333333") {
+  & + label {
+    &:before {
+      background-color: $color;
+    }
+  }
+  &:checked + label:before {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{$checkedColor}%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E');
+  }
+}
+
+%color-selector {
+  & + label {
+    &:before {
+      border: none;
+    }
+    &:after {
+      border: 1px solid #939393;
+      content: '';
+      display: block;
+      background-size: cover;
+      position: absolute;
+
+    }
+  }
+
+  &:disabled + label {
+    cursor: not-allowed;
+    color: $black-40;
+
+    &:after {
+      opacity: 0.45;
+    }
+  }
+
+  &:enabled + label:hover:after {
+    border-color: $black-100;
+  }
+
+  &:focus:enabled + label:after {
+    border-color: $blue-80;
+  }
+
+  &:checked + label:before {
+    //replace with tick
+    text-align: center;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+  }
+}
+
+%color-selector-M {
+  $size: 21px;
+
+  & + label {
+    @include font(M);
+    line-height: $size + $XS + 8;
+    padding-left: 2 * $size;
+
+    &:before {
+      width: $size + $XS;
+      height: $size + $XS;
+      top: 6px;
+      left: 4px;
+    }
+    &:after {
+      width: $size + $XS + 8;
+      height: $size + $XS + 8;
+      top: 2px;
+      left: 0;
+      border-radius: $size + $XS + 8;
+    }
+  }
+  &:checked + label:before {
+    padding-top: 1px;
+    line-height: $size + $XS;
+  }
+}
+
+%color-selector-L {
+  $size: 25px;
+
+  & + label {
+    //font-size : $size;
+    @include font(L);
+    line-height: $size + $XS + 8;
+    padding-left: 2 * $size;
+
+    &:before {
+      width: $size + $XS;
+      height: $size + $XS;
+      top: 6px;
+      left: 4px;
+    }
+    &:after {
+      width: $size + $XS + 8;
+      height: $size + $XS + 8;
+      top: 2px;
+      left: 0;
+      border-radius: $size + $XS + 8;
+    }
+  }
+  &:checked + label:before {
+    padding-top: 1px;
+    line-height: $size + $XS;
+  }
+}

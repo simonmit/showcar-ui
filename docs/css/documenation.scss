@@ -140,3 +140,19 @@ code {
     background: $orange-100;
   }
 }
+
+
+@import "../../src/scss/mixins/color-selector";
+.color-selector {
+  input[type="radio"] {
+    &.red {
+      @include color-selector-color(red, fff);
+    }
+    &.yellow {
+      @include color-selector-color(yellow);
+    }
+    &.green {
+      @include color-selector-color(green, fff);
+    }
+  }
+}
