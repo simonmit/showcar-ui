@@ -2252,8 +2252,8 @@
 	        }
 	    }, {
 	        key: 'set',
-	        value: function set(key, value, options) {
-	            this.store.set(key, value, options);
+	        value: function set(key, value) {
+	            this.store.set(key, value);
 	            return this;
 	        }
 	    }, {
@@ -2385,20 +2385,7 @@
 	    }, {
 	        key: "set",
 	        value: function set(key, value) {
-	            var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-	
-	            var _ref$expires = _ref.expires;
-	            var expires = _ref$expires === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : _ref$expires;
-	
-	            // support expires in seconds
-	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
-	                expires = new Date(Date.now() + parseInt(expires) * 1000).toUTCString();
-	            }
-	
-	            // support expires as date-object
-	            if (expires instanceof Date) {
-	                expires = expires.toUTCString();
-	            }
+	            var expires = arguments.length <= 2 || arguments[2] === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : arguments[2];
 	
 	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=/"].join("; ");
 	        }

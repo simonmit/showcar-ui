@@ -56,6 +56,7 @@
             <li><a href="#selects">Select Boxes</a></li>
             <li><a href="#radios">Radio Buttons</a></li>
             <li><a href="#checkboxes">Checkboxes</a></li>
+            <li><a href="#color-selector">Color Selectors</a></li>
             <li><a href="#input-groups">Input Groups</a></li>
         </ul>
     </li>
@@ -441,6 +442,9 @@
 <label for="cb3">...</label>`, '#code-checkboxes');
     </script>
 
+
+    <a name="color-selector"></a>
+    <h3>Color Selectors</h3>
     <div class="example example-color-picker">
         <div class="color-selector">
             <input id="as24-cb-cp-1" type="radio" name="xx" class="red">
@@ -467,6 +471,41 @@
             <label for="as24-cb-cp-6">radio</label>
         </div>
     </div>
+    <pre><code class="html" id="code-color-selector"></code></pre>
+    <script>
+        formatCode(`<div class="color-selector">
+    <input id="cs1" type="radio" name="cs1" class="red">
+    <label for="cs1">red</label>
+
+    <input id="cs2" type="radio" name="cs1" class="yellow">
+    <label for="cs2">yellow</label>
+
+    <input id="cs3" type="radio" name="cs1" class="green">
+    <label for="cs4">green</label>
+</div>
+-- additional scss --
+@import "path/to/mixins/color-selector";
+.color-selector {
+    input[type="radio"] {
+    &.red {
+        @include color-selector-color(red, fff);
+        }
+    }
+}
+
+-- radio buttons --
+<div class="color-selector">
+    <input id="..." type="radio" name="...">
+    <label for="...">...</label>
+</div>
+
+-- checkboxes --
+<div class="color-selector">
+    <input id="..." type="checkbox" name="...">
+    <label for="...">...</label>
+</div>
+`, '#code-color-selector');
+    </script>
 
     <a name="input-groups"></a>
     <h3>Input Groups</h3>
