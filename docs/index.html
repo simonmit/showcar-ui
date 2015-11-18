@@ -496,13 +496,13 @@
 @import "path/to/mixins/color-selector";
 .color-selector {
     input {
-    &.red {
-        @include color-selector-color(red, fff);
+        &.red {
+            @include color-selector-color(#ff0000, fff);
         }
-    }
     -- gradient support --
-    &.gold {
-        @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+        &.gold {
+            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+        }
     }
 }
 

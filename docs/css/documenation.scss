@@ -145,7 +145,7 @@ code {
 .color-selector {
   input {
     &.red {
-      @include color-selector-color(red, fff);
+      @include color-selector-color(#ff0000, fff);
     }
     &.yellow {
       @include color-selector-color(yellow);

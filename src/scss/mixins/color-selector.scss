@@ -62,6 +62,7 @@
   & + label {
     @include font(M);
     line-height: $size + $XS + 8;
+    min-height: $size + $XS + 8;
     padding-left: 2 * $size;
 
     &:before {
@@ -88,9 +89,9 @@
   $size: 25px;
 
   & + label {
-    //font-size : $size;
     @include font(L);
     line-height: $size + $XS + 8;
+    min-height: $size + $XS + 8;
     padding-left: 2 * $size;
 
     &:before {
