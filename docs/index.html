@@ -445,6 +445,12 @@
 
     <a name="color-selector"></a>
     <h3>Color Selectors</h3>
+    <p>
+        We created a special type of radio buttons and check boxes for you to easily implement a color selection.
+        In this case you have to write a little custom scss to define the background color of the elements. You can also
+        choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background
+        color as first argument and the checkmark color as a second one.
+    </p>
     <div class="example example-color-picker">
         <div class="color-selector">
             <input id="as24-cb-cp-1" type="radio" name="xx" class="red">
@@ -455,6 +461,9 @@
 
             <input id="as24-cb-cp-7" type="radio" name="xx" class="green">
             <label for="as24-cb-cp-7">green</label>
+
+            <input id="as24-cb-cp-8" type="radio" name="xx" class="gold">
+            <label for="as24-cb-cp-8">gold</label>
         </div>
         <div class="color-selector">
             <input id="as24-cb-cp-3" type="radio" name="xx" class="input-l">
@@ -486,7 +495,7 @@
 -- additional scss --
 @import "path/to/mixins/color-selector";
 .color-selector {
-    input[type="radio"] {
+    input {
     &.red {
         @include color-selector-color(red, fff);
         }

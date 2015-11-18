@@ -141,10 +141,9 @@ code {
   }
 }
 
-
 @import "../../src/scss/mixins/color-selector";
 .color-selector {
-  input[type="radio"] {
+  input {
     &.red {
       @include color-selector-color(red, fff);
     }
@@ -153,6 +152,9 @@ code {
     }
     &.green {
       @include color-selector-color(green, fff);
+    }
+    &.gold {
+      @include color-selector-color(linear-gradient(brown, yellow, brown));
     }
   }
 }
