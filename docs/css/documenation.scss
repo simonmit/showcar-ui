@@ -154,7 +154,13 @@ code {
       @include color-selector-color(green, fff);
     }
     &.gold {
-      @include color-selector-color(linear-gradient(brown, yellow, brown));
+      @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+    }
+    &.blue {
+      @include color-selector-color(blue, fff);
+    }
+    &.orange {
+      @include color-selector-color(orange, fff);
     }
   }
 }
