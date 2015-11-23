@@ -141,6 +141,13 @@ code {
   }
 }
 
+.example-horizontal-line {
+  padding: 0;
+  p {
+    padding: 0.5em;
+  }
+}
+
 @import "../../src/scss/mixins/color-selector";
 .color-selector {
   input {
