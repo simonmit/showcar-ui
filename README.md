@@ -16,11 +16,11 @@ To make the ShowCar-UI Library available within you frontend, it is necessary to
 
 The simple include only needs some additions in your html code:
 
-CSS
+#### CSS
 
     <link href="./src/lib/showcar-ui/dist/showcar-ui.css" ... >
     
-CSS (Namespaced version)
+#### CSS (Namespaced version)
 
 If you want to use the showcar ui styling only in a certain part of your application, you can use the namespaced version.
 Therefor you have to include the namespaced version of the css and add the data-showcar-ui attribute to the element you want to apply the styles to.
@@ -29,7 +29,9 @@ Therefor you have to include the namespaced version of the css and add the data-
     
     <body data-showcar-ui>
 
-JavaScript
+#### JavaScript
+
+You only need to include one JavaScript file. It enables all supported elements by default and exports some global variables, such as Storage.
 
     <script src="./src/lib/showcar-ui/dist/showcar-ui.min.js"></script>
 
@@ -38,9 +40,11 @@ JavaScript
 
 The advanced include needs some changes in your main scss file:
 
-CSS
+#### CSS
 
     @import "../lib/showcar-ui/src/scss/showcar-ui";
+    
+With this method, you can use all the mixins defined in the library within your own scss code.
     
 ## Additional information
 
