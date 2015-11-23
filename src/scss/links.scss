@@ -4,7 +4,6 @@ a {
   @include link;
 }
 
-.header-link,
-.footer-link {
+.inline-link {
   @include link($variant: black)
 }
