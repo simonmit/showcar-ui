@@ -33,7 +33,7 @@ Therefor you have to include the namespaced version of the css and add the data-
 
 You only need to include one JavaScript file. It enables all supported elements by default and exports some global variables, such as Storage.
 
-    <script src="./src/lib/showcar-ui/dist/showcar-ui.min.js"></script>
+    <script async src="./src/lib/showcar-ui/dist/showcar-ui.min.js"></script>
 
 
 ### Advanced Include
