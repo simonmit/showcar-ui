@@ -1,0 +1,5 @@
+@import "./mixins/custom-dropdown";
+
+custom-dropdown {
+  @include custom-dropdown(M);
+}

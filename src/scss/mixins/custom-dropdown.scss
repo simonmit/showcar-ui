@@ -1,0 +1,62 @@
+@import "ellipsis";
+@import "utils";
+@import "inputs";
+@import "select";
+@mixin custom-dropdown($size) {
+    position: relative;
+    background-color: $white;
+    display: block;
+
+    div:first-child {
+        @include input($size);
+        width: 100%;
+
+        @if $size == M {
+            height: 34px;
+        }
+
+        @if $size == L {
+            height: 46px;
+        }
+
+        & > p {
+            @include avoid-selection();
+            @extend %icon-dropdown-arrow-down;
+            @include ellipsis();
+
+            background-position: right center;
+            padding-right: 18px;
+        }
+    }
+
+    &.open {
+        border: none;
+
+        div:first-child {
+            border: 1px solid $blue-80;
+            border-radius: $XS;
+        }
+    }
+
+    & > div:last-child {
+        display: none;
+        position: relative;
+        background-color: $white;
+        border: 1px solid $blue-80;
+        border-radius: 0 0 $XS $XS;
+        border-top: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 7px 11px 11px 11px;
+        margin-top: -4px;
+    }
+
+    &.open > div:last-child {
+        display: block;
+    }
+
+    div label {
+        margin-top: $XS;
+        width: 100%;
+    }
+}

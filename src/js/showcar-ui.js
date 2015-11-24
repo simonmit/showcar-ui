@@ -10,3 +10,5 @@ require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 
 window.Storage = require('../../vendor/showcar-storage/src/storage.js');
 
+
+require('./components/custom-dropdown.js');

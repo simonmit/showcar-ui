@@ -676,6 +676,35 @@
     </ul>
 </div>`, '#code-breadcrumbs');
     </script>
+
+    <a name="custom-dropdown"></a>
+    <h3>Custom Dropdown</h3>
+    <div class="example example-custom-dropdown">
+        <label>Custom Dropdown</label>
+        <custom-dropdown checkboxgroup>
+            <div>
+                <p>All</p>
+            </div>
+            <div>
+                <input type="checkbox" id="cd1"/>
+                <label for="cd1">Value1</label>
+                <input type="checkbox" id="cd2"/>
+                <label for="cd2">Value2</label>
+                <input type="checkbox" id="cd3"/>
+                <label for="cd3">Value3</label>
+            </div>
+        </custom-dropdown>
+    </div>
+    <pre><code class="html" id="code-breadcrumbs"></code></pre>
+    <script>
+        formatCode(`<div class="breadcrumbs">
+                <ul>
+                <li><a href="/url/to/home" data-breadcrumb="home">Home page</a></li>
+        <li><a href="/url/to/list" data-breadcrumb="list">List results</a></li>
+        <li><a href="/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+        </ul>
+        </div>`, '#code-breadcrumbs');
+    </script>
 </div>
 
 <script src="js/livereload.js?host=localhost"></script>
