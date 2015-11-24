@@ -80,34 +80,34 @@ TBD
 MIT License
 
 
-    <link rel="stylesheet" href="dist/showcar-ui.css">
-    <link rel="stylesheet" href="docs/css/highlight.css">
-    <link rel="stylesheet" href="docs/css/documenation.css">
+<link rel="stylesheet" href="dist/showcar-ui.css">
+<link rel="stylesheet" href="docs/css/highlight.css">
+<link rel="stylesheet" href="docs/css/documenation.css">
 
-    <script src="js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+    NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
 
-        function encodeEntities(value) {
-            return value.
-                    replace(/&/g, '&amp;').
-                    replace(SURROGATE_PAIR_REGEXP, function(value) {
-                        var hi = value.charCodeAt(0);
-                        var low = value.charCodeAt(1);
-                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
-                    }).
-                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
-                        return '&#' + value.charCodeAt(0) + ';';
-                    }).
-                    replace(/</g, '&lt;').
-                    replace(/>/g, '&gt;');
-        }
-        function formatCode (code, target) {
-            document.querySelector(target).innerHTML = encodeEntities(code);
-        }
-    </script>
+    function encodeEntities(value) {
+        return value.
+                replace(/&/g, '&amp;').
+                replace(SURROGATE_PAIR_REGEXP, function(value) {
+                    var hi = value.charCodeAt(0);
+                    var low = value.charCodeAt(1);
+                    return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+                }).
+                replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+                    return '&#' + value.charCodeAt(0) + ';';
+                }).
+                replace(/</g, '&lt;').
+                replace(/>/g, '&gt;');
+    }
+    function formatCode (code, target) {
+        document.querySelector(target).innerHTML = encodeEntities(code);
+    }
+</script>
 <h1>ShowCar UI Library Docs</h1>
 
 <ul class="docs-navigation">
