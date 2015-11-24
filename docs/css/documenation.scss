@@ -61,6 +61,7 @@ code {
     border-radius: $form-border-radius;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-bottom: 10px;
 
     code {
       border: 0;
@@ -113,6 +114,18 @@ code {
     margin: 10px 0;
     width: 80%;
     max-width: 600px;
+  }
+  .input-group-emission-badge {
+    max-width: 400px;
+
+    as24-icon {
+      line-height: 0;
+      display: block;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
 .example-selects {
