@@ -35,5 +35,10 @@
     > label {
         position: relative;
         width: 100%;
+
+        as24-icon {
+            line-height: 0;
+            display: block;
+        }
     }
 }
