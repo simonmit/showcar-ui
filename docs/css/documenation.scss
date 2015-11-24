@@ -118,13 +118,9 @@ code {
   .input-group-emission-badge {
     max-width: 400px;
 
-    as24-icon {
-      line-height: 0;
-      display: block;
-      svg {
+    as24-icon svg {
         width: 24px;
         height: 24px;
-      }
     }
   }
 }

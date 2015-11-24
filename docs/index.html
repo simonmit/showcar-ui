@@ -536,25 +536,6 @@
             <input id="as24-radio-9" name="as24-radio" type="radio">
             <label for="as24-radio-9">Option 3</label>
         </div>
-    </div>
-    <pre><code class="html" id="code-groups"></code></pre>
-    <script>
-        formatCode(`<div class="input-group">
-    <input type="text">
-    ...
-</div>
-
-<div class="input-group-radio">
-    <input id="radio" type="radio">
-    <label for="radio">...</label>
-    ...
-</div>`, '#code-groups');
-    </script>
-    <div>
-
-        <p>To make the input groups work with <code>as24-icon</code> content, some additional css is needed:</p>
-    </div>
-    <div class="example example-groups">
         <div class="input-group-radio input-group-emission-badge">
             <input id="example-groups-3-1" name="example-groups-3" type="radio">
             <label for="example-groups-3-1">Alle</label>
@@ -569,28 +550,24 @@
             <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
         </div>
     </div>
-    <pre><code class="html" id="code-groups-2-1"></code></pre>
+    <pre><code class="html" id="code-groups"></code></pre>
     <script>
-        formatCode(`<div class="input-group-radio" >
+        formatCode(`<div class="input-group">
+    <input type="text">
+    ...
+</div>
+
+<div class="input-group-radio">
+    <input id="radio" type="radio">
+    <label for="radio">...</label>
+    ...
+</div>
+<div class="input-group-radio" >
     ...
     <input id="radio" type="radio">
     <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
     ...
-</div>
-<!--
--- additional scss --
-.your-selector {
-    as24-icon {
-        line-height: 0;
-        display: block;
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-    }
-}
--->`, '#code-groups-2-1');
+</div>`, '#code-groups');
     </script>
 </div>
 <div>
