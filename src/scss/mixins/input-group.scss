@@ -21,6 +21,15 @@
     input[type=radio] {
         display: none;
 
+        &:checked {
+            & + label {
+                &:before{
+                    border: none;
+                    background-image: none;
+                }
+            }
+        }
+
         & + label {
             padding: 5px 14px;
             margin: 0;
