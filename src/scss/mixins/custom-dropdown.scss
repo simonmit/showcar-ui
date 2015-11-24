@@ -3,6 +3,7 @@
 @import "inputs";
 @import "select";
 @mixin custom-dropdown($size) {
+    padding: 0;
     position: relative;
     background-color: $white;
     display: block;
