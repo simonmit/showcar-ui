@@ -60,9 +60,15 @@ $XXXL: 40px;
 
 // viewports
 // ----------------------------
-$mobile: 480px;
-$tablet: 768px;
-$desktop: 1024px;
+$viewportS: 480px;
+$viewportM: 768px;
+$viewportL: 1024px;
+$viewportXL: 1400px;
+
+//old viewport variables for compatibility, please use $viewportX instead
+$mobile: $viewportS;
+$tablet: $viewportM;
+$desktop: $viewportL;
 
 // sizes
 // ----------------------------

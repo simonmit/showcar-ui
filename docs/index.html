@@ -233,6 +233,82 @@
     <div class="grid-col-3">.grid-col-3</div>
 </div>`, '#code-grid');
     </script>
+    <h3>Stacked-to-horizontal</h3>
+    <p>
+        With the above example and the usage of the <code>.grid-col-*</code> you can build a simple grid system.
+        Per default, the columns are stacked with a width of 100% if your viewport is smaller than 768px (S-Viewport).
+    </p>
+
+    <h3>Responsive Grids</h3>
+    <p>
+        The above example of the <code>.grid-col-*</code> classes describe the general usage of the grid system.
+        In case you need some responsive grid functionality, you need to use the responsive grid classes additionally:
+    </p>
+    <table class="table-grid-info">
+        <thead>
+            <tr>
+                <th>Grid column classes</th>
+                <th>device<br>min-width</th>
+                <th>device<br>max-width</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>.grid-col-s-*</code></td>
+                <td></td>
+                <td>767px</td>
+            </tr>
+            <tr>
+                <td><code>.grid-col-m-*</code></td>
+                <td>767px</td>
+                <td>1023px</td>
+            </tr>
+            <tr>
+                <td><code>.grid-col-l-*</code></td>
+                <td>1024px</td>
+                <td>1399px</td>
+            </tr>
+            <tr>
+                <td><code>.grid-col-xl-*</code></td>
+                <td>1400px</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        With the responsive grid column classes, you are able, to set the column width in dependency to the viewport.
+        For Example if you define a grid with the classes <code>grid-col-4 grid-col-m-6 grid-col-s-12</code> it will
+        be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns
+        wide in devices with S-Viewport.
+    </p>
+    <p>
+        You can simply check the behavior of the grid by resizing the current page.
+    </p>
+    <div class="example example-grid">
+        <div class="grid-row">
+            <div class="grid-col-3 grid-col-s-12 grid-col-m-12">
+                .grid-col-3 .grid-col-s-12 .grid-col-m-12
+            </div>
+            <div class="grid-col-3 grid-col-s-6 grid-col-m-4">
+                .grid-col-3 .grid-col-s-6 .grid-col-m-4
+            </div>
+            <div class="grid-col-3 grid-col-s-6 grid-col-m-4">
+                .grid-col-3 .grid-col-s-6 .grid-col-m-4
+            </div>
+            <div class="grid-col-3 grid-col-s-12 grid-col-m-4">
+                .grid-col-3 .grid-col-s-12 .grid-col-m-4
+            </div>
+        </div>
+    </div>
+    <pre><code class="html" id="code-grid-2"></code></pre>
+    <script>
+formatCode(`<div class="grid-row">
+    <div class="grid-col-3 grid-col-s-12 grid-col-m-12">...</div>
+    <div class="grid-col-3 grid-col-s-6 grid-col-m-4">...</div>
+    <div class="grid-col-3 grid-col-s-6 grid-col-m-4">...</div>
+    <div class="grid-col-3 grid-col-s-12 grid-col-m-4">...</div>
+</div>`, '#code-grid-2');
+    </script>
 </div>
 
 <div>

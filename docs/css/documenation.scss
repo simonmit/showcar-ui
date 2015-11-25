@@ -85,14 +85,41 @@ code {
 
 .example-grid {
   .grid-row {
-    margin: 5px 0;
+    //margin: 2.5px 0;
 
     > div {
       background: $black-20;
+      margin-bottom: 5px;
       padding: 5px;
     }
   }
 }
+.table-grid-info {
+  border: 1px solid $black-30;
+  border-radius: $form-border-radius;
+  border-collapse: separate;
+  margin: 20px 0;
+
+  th {
+    background: $black-40;
+    font-weight: bold;
+  }
+
+  th, td {
+    padding: 8px 16px;
+    border-left: 1px solid $black-30;
+    width: 33.3%;
+    text-align: center;
+
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  tr:nth-child(even) td {
+    background: $black-20;
+  }
+}
+
 .example-buttons {
   button {
     margin: 5px 0;

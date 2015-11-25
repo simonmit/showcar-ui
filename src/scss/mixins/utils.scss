@@ -30,3 +30,9 @@
         @content;
     }
 }
+
+@mixin mqminmax($min, $max, $media: all) {
+    @media #{$media} and (min-width: $min + 0px) and (max-width: $max + 0px) {
+        @content;
+    }
+}

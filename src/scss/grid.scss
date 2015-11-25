@@ -3,15 +3,14 @@
 @import "variables";
 
 $susy: (
-        columns: 12,
-        global-box-sizing: border-box,
-        gutters: $gutter-width / $grid-column-width,
-        gutter-position: after,
-        container: $grid-max-width,
-
-        debug: (
-                image: $susy-grid-background,
-        )
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: $gutter-width / $grid-column-width,
+  gutter-position: split,
+  container: $grid-max-width,
+  debug: (
+    image: $susy-grid-background,
+  )
 );
 
 .content-container {
@@ -52,14 +51,33 @@ $susy: (
   @for $i from 1 through 12 {
     .grid-col-#{$i} {
       @include span($i);
+      //think about stacking the columns < 1024
 
+      @include mqmax($viewportM - 1) {
+        float: none;
+        width: 100%;
+      }
     }
-  }
 
-  >:first-child {
-    @include first;
-  }
-  >:last-child {
-    @include last;
+    @include mqmax($viewportM - 1) {
+      .grid-col-s-#{$i} {
+        @include span($i);
+      }
+    }
+    @include mqminmax($viewportM, $viewportL - 1) {
+      .grid-col-m-#{$i} {
+        @include span($i);
+      }
+    }
+    @include mqminmax($viewportL, $viewportXL - 1) {
+      .grid-col-l-#{$i} {
+        @include span($i);
+      }
+    }
+    @include mqmin($viewportXL) {
+      .grid-col-xl-#{$i} {
+        @include span($i);
+      }
+    }
   }
 }
