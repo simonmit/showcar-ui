@@ -67,6 +67,7 @@
             <li><a href="#text-alignment">Text alignment</a></li>
             <li><a href="#center-blocks">Center content blocks</a></li>
             <li><a href="#horizontal-line">Horizontal line</a></li>
+            <li><a href="#ellipsis">Ellipsis</a></li>
         </ul>
     </li>
     <li>
@@ -642,6 +643,17 @@
     <pre><code class="html" id="code-hr"></code></pre>
     <script>
         formatCode(`<hr>`, '#code-hr');
+    </script>
+
+    <a name="ellipsis"></a>
+    <h3>Ellipsis</h3>
+    <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+    <div class="example example-ellipsis">
+        <div class="ellipsis" title="My very long text">My very long text</div>
+    </div>
+    <pre><code class="html" id="code-ellipsis"></code></pre>
+    <script>
+        formatCode(`<div class="ellipsis" title="...">...</div>`, '#code-ellipsis');
     </script>
 </div>
 <div>

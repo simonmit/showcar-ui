@@ -1,4 +1,5 @@
 @import "mixins/utils";
+@import "mixins/ellipsis";
 
 .clearfix {
   @include clearfix;
@@ -39,6 +40,10 @@ hr {
   margin-bottom: $M;
   border: 0;
   border-top: 1px solid $black-30;
+}
+
+.ellipsis {
+  @include ellipsis();
 }
 
 //TODO: add ellipsis style & mixin
