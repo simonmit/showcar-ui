@@ -16,15 +16,15 @@ module.exports = function(grunt) {
         copy: loadConfig("copy"),
         watch: {
             files: ['src/scss/**/*.scss', 'src/js/**/*.js','docs/index.html', 'docs/css/*.scss'],
-            tasks: ['sass', "webpack", "uglify"],
+            tasks: ["dist"],
             options: {
                 livereload: true
             }
         }
     });
 
-    grunt.registerTask("build", ["sass", "webpack"]);
-    grunt.registerTask("dist", ["sass", "webpack", "uglify"]);
+    grunt.registerTask("build", ["sass", "webpack", "copy"]);
+    grunt.registerTask("dist", ["sass", "webpack", "uglify", "copy"]);
 
     grunt.registerTask("default", ["dist"]);
 

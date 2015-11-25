@@ -12,6 +12,7 @@ module.exports = (function() {
             ]
         },
         files: {
+            'dist/fonts.css': 'src/scss/font-faces.scss',
             'dist/showcar-ui.css': 'src/scss/showcar-ui.scss',
             'dist/showcar-ui-namespaced.css': 'src/scss/showcar-ui-namespaced.scss',
             'docs/css/documenation.css': 'docs/css/documenation.scss'

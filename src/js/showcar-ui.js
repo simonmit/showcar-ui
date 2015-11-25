@@ -12,3 +12,17 @@ window.Storage = require('../../vendor/showcar-storage/src/storage.js');
 
 
 require('./components/custom-dropdown.js');
+
+$(function () {
+    var dataFontSource = $('[data-font-source]');
+
+    if (dataFontSource.length > 0) {
+        window.WebFontConfig = {
+            custom: {
+                families: ['Source Sans Pro'],
+                urls: [dataFontSource.attr('data-font-source')]
+            }
+        };
+    }
+});
+
