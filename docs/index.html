@@ -73,6 +73,8 @@
         <a href="#components">Components</a>
         <ul>
             <li><a href="#collapse">Collapse</a></li>
+            <li><a href="#custom-dropdown">Custom Dropdown</a></li>
+            <li><a href="#rotating-arrow">Rotating Arrow</a></li>
         </ul>
     </li>
 </ul>
@@ -728,6 +730,22 @@
         ...
     </div>
 </custom-dropdown>`, '#code-custom-dropdown');
+    </script>
+
+    <a name="rotating-arrow"></a>
+    <h3>Rotating Arrow</h3>
+
+
+    <div id="rotating-arrow" >
+        <span class="font-bold">Some Text</span><span data-toggle="arrow" data-target="#rotating-arrow" class="pull-right"></span>
+        <hr/>
+    </div>
+    <pre><code class="html" id="code-rotating-arrow"></code></pre>
+    <script>
+        formatCode(`<div id="myId">
+    Your Text here
+    <span data-toggle="arrow" data-target="#myId"></span>
+</div>`, '#code-rotating-arrow');
     </script>
 </div>
 

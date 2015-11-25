@@ -58,7 +58,8 @@
 	
 	window.Storage = __webpack_require__(10);
 	
-	__webpack_require__(14);
+	__webpack_require__(14)();
+	__webpack_require__(15);
 	
 	$(function () {
 	    var dataFontSource = $('[data-font-source]');
@@ -2449,6 +2450,21 @@
 
 /***/ },
 /* 14 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function () {
+	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="arrow"]'), function (arrow) {
+	        var arrowEl = $(arrow);
+	        $(arrowEl.data('target')).on('click', function () {
+	            return arrowEl.toggleClass('open');
+	        });
+	    });
+	};
+
+/***/ },
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
