@@ -53,6 +53,7 @@ The showcar-ui library includes some other libraries:
 * showcar-storage
 * showcar-icons
 * Zepto
+* webfontloader
 
 ### showcar-storage
 
@@ -65,7 +66,14 @@ You can use all the icons defined by showcar-icons with the custom `<as24-icon>`
 ### Zepto
 
 Showcar-ui includes Zepto, which is a lightweight replacement for jQuery. You can access Zepto via the global variables `$` and `Zepto`. 
-For a detailed usage guide, have a look at http://zeptojs.com/ 
+For a detailed usage guide, have a look at http://zeptojs.com/
+ 
+### webfontloader
+
+webfontloader is a tool which is co-developed by Google and is used for loading fonts. It is possible to load fonts asynchronously and from various sources including Google servers.
+The current implementation uses a CSS file with inlined fonts. The CSS file is `dist/fonts.css`. To use webfontloader in your project you have to include the following snipped:
+
+    <script async src="./src/lib/showcar-ui/dist/webfontloader.js" data-font-source="./src/lib/showcar-ui/dist/fonts.css"></script>
 
 ## How to use:
 
