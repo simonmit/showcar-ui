@@ -26,11 +26,11 @@ function createdCallback() {
             var checkboxes = el.querySelectorAll('[type=checkbox]:checked');
             var texts = [];
             for (var i = 0, l = checkboxes.length; i < l; i++) {
-                texts.push(checkboxes[i].nextElementSibling.textContent);
+                texts.push(checkboxes[i].nextElementSibling.innerHTML);
             }
 
             var title = texts.join(', ') || defaultTitle;
-            titleElement.textContent = title;
+            titleElement.innerHTML = title;
         };
 
         el.addEventListener('change', updateCaption);
