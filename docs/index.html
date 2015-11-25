@@ -728,6 +728,71 @@
                 <label for="cd3">Value3</label>
             </div>
         </custom-dropdown>
+        <hr/>
+        <label>Custom Dropdown with Icons</label>
+        <custom-dropdown class="icon" checkboxgroup>
+            <div>
+                <p>All</p>
+            </div>
+            <div>
+                <input type="checkbox" id="cabrio"/>
+                <label for="cabrio">
+                    <as24-icon type="bodytypes/roadster"></as24-icon>
+                    <span>
+                        Cabrio
+                    </span>
+                </label>
+                <input type="checkbox" id="coupe"/>
+                <label for="coupe">
+                    <as24-icon type="bodytypes/sports"></as24-icon>
+                    <span>
+                        Coupé
+                    </span>
+                </label>
+                <input type="checkbox" id="compact"/>
+                <label for="compact">
+                    <as24-icon type="bodytypes/compact"></as24-icon>
+                    <span>
+                        Kleinwagen
+                    </span>
+                </label>
+                <input type="checkbox" id="station"/>
+                <label for="station">
+                    <as24-icon type="bodytypes/station"></as24-icon>
+                    <span>
+                        Kombi
+                    </span>
+                </label>
+                <input type="checkbox" id="limousine"/>
+                <label for="limousine">
+                    <as24-icon type="bodytypes/limousine"></as24-icon>
+                    <span>
+                        Limousine
+                    </span>
+                </label>
+                <input type="checkbox" id="offroad"/>
+                <label for="offroad">
+                    <as24-icon type="bodytypes/offroad"></as24-icon>
+                    <span>
+                        SUV/Geländewagen
+                    </span>
+                </label>
+                <input type="checkbox" id="delivery"/>
+                <label for="delivery">
+                    <as24-icon type="bodytypes/delivery"></as24-icon>
+                    <span>
+                        Transporter
+                    </span>
+                </label>
+                <input type="checkbox" id="van"/>
+                <label for="van">
+                    <as24-icon type="bodytypes/van"></as24-icon>
+                    <span>
+                        Van
+                    </span>
+                </label>
+            </div>
+        </custom-dropdown>
     </div>
     <pre><code class="html" id="code-custom-dropdown"></code></pre>
     <script>
@@ -739,6 +804,23 @@
     <div>
         <input type="checkbox" id="myId"/>
         <label for="myId">My Label</label>
+        ...
+    </div>
+</custom-dropdown>
+
+<label>Custom Dropdown with Icons</label>
+<custom-dropdown class="icon" checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="myId"/>
+        <label for="myId">
+            <as24-icon type="..."></as24-icon>
+            <span>
+                ...
+            </span>
+        </label>
         ...
     </div>
 </custom-dropdown>`, '#code-custom-dropdown');

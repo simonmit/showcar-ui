@@ -1,0 +1,20 @@
+custom-dropdown {
+  &.icon {
+    as24-icon {
+      svg {
+        position: absolute;
+        height: 26px;
+        width: 26px;
+      }
+    }
+    label {
+      margin-top: 0;
+      overflow: hidden;
+      height: 22px;
+      line-height: 22px;
+    }
+    span {
+      padding-left: 36px;
+    }
+  }
+}
