@@ -46,4 +46,47 @@ hr {
   @include ellipsis();
 }
 
-//TODO: add ellipsis style & mixin
+.hidden {
+  display: none;
+}
+.visible {
+  display: initial;
+}
+//xl viewport
+@include mqmin($viewportXL) {
+  .hidden-xl {
+    display: none;
+  }
+  .visible-xl {
+    display: initial;
+  }
+}
+//l viewport
+@include mqmax($viewportXL - 1) {
+  .hidden-l {
+    display: none;
+  }
+  .visible-l {
+    display: initial;
+  }
+}
+//m viewport
+@include mqmax($viewportL - 1) {
+  .hidden-m {
+    display: none;
+  }
+  .visible-m {
+    display: initial;
+  }
+}
+//s viewport
+@include mqmax($viewportM - 1) {
+  .hidden-s {
+    display: none;
+  }
+  .visible-s {
+    display: initial;
+  }
+}
+
+

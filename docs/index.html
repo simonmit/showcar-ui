@@ -61,13 +61,14 @@
         </ul>
     </li>
     <li>
-        <a href="#helper">Helper classes</a>
+        <a href="#utility">Utility classes</a>
         <ul>
             <li><a href="#floats">floats</a></li>
             <li><a href="#text-alignment">Text alignment</a></li>
             <li><a href="#center-blocks">Center content blocks</a></li>
             <li><a href="#horizontal-line">Horizontal line</a></li>
             <li><a href="#ellipsis">Ellipsis</a></li>
+            <li><a href="#visibility">Visibility</a></li>
         </ul>
     </li>
     <li>
@@ -242,9 +243,14 @@
     <h3>Responsive Grids</h3>
     <p>
         The above example of the <code>.grid-col-*</code> classes describe the general usage of the grid system.
-        In case you need some responsive grid functionality, you need to use the responsive grid classes additionally:
     </p>
-    <table class="table-grid-info">
+    <p>
+        In case you need some responsive grid functionality, you need to use the responsive grid classes additionally.
+        The best practice is to use the general <code>.grid-col-*</code> class first and override it, depending on
+        your needs with the necessary viewport specific grid class <code>.grid-col-*-*</code>.<br>
+        Always keep in mind, that smaller viewport grid classes override bigger ones.
+    </p>
+    <table class="docs-table docs-table-grid">
         <thead>
             <tr>
                 <th>Grid column classes</th>
@@ -254,24 +260,30 @@
         </thead>
         <tbody>
             <tr>
-                <td><code>.grid-col-s-*</code></td>
+                <td><code>.grid-col-*</code><br>(default)</td>
                 <td></td>
-                <td>767px</td>
-            </tr>
-            <tr>
-                <td><code>.grid-col-m-*</code></td>
-                <td>768px</td>
-                <td>1023px</td>
-            </tr>
-            <tr>
-                <td><code>.grid-col-l-*</code></td>
-                <td>1024px</td>
-                <td>1399px</td>
+                <td></td>
             </tr>
             <tr>
                 <td><code>.grid-col-xl-*</code></td>
                 <td>1400px</td>
+                <td>∞</td>
+            </tr>
+            <tr>
+                <td><code>.grid-col-l-*</code></td>
                 <td></td>
+                <td>1399px</td>
+            </tr>
+
+            <tr>
+                <td><code>.grid-col-m-*</code></td>
+                <td></td>
+                <td>1023px</td>
+            </tr>
+            <tr>
+                <td><code>.grid-col-s-*</code></td>
+                <td></td>
+                <td>767px</td>
             </tr>
         </tbody>
     </table>
@@ -651,8 +663,8 @@ formatCode(`<div class="grid-row">
     </script>
 </div>
 <div>
-    <a name="helper"></a>
-    <h2>Helper classes</h2>
+    <a name="utility"></a>
+    <h2>Utility classes</h2>
     <a name="floats"></a>
     <h3>Floats</h3>
     <div class="example example-floats">
@@ -731,6 +743,100 @@ formatCode(`<div class="grid-row">
     <script>
         formatCode(`<div class="ellipsis" title="...">...</div>`, '#code-ellipsis');
     </script>
+
+    <a name="visibility"></a>
+    <h3>Visibility</h3>
+    <p>
+        The ShowCarUI library provides some utility classes to show/hide elements based on the current viewport
+        (media queries).
+    </p>
+    <p>
+        <span class="font-bold">IMPORTANT</span>: Try to use these on a limited basis and avoid creating entirely different
+        versions of the same site. Instead, use them to complement each device's presentation.
+    </p>
+    <table class="docs-table docs-table-visibility">
+        <thead>
+        <tr>
+            <th></th>
+            <th>S Viewport</th>
+            <th>M Viewport</th>
+            <th>L Viewport</th>
+            <th>XL Viewport</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><code>.visible</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.visible-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.visible-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.visible-m</code></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.visible-s</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.hidden</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.hidden-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.hidden-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.hidden-m</code></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.hidden-s</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <div>
     <a name="components"></a>
@@ -918,6 +1024,8 @@ formatCode(`<div class="grid-row">
 </div>`, '#code-rotating-arrow');
     </script>
 </div>
+
+
 
 <script src="js/livereload.js?host=localhost"></script>
 <script src="../dist/showcar-ui.min.js"></script>

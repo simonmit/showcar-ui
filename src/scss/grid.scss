@@ -47,6 +47,10 @@ $susy: (
 
 .grid-row {
   @include clearfix;
+  
+  > *:empty {
+    min-height: 1px;
+  }
 
   @for $i from 1 through 12 {
     .grid-col-#{$i} {
@@ -59,23 +63,27 @@ $susy: (
       }
     }
 
-    @include mqmax($viewportM - 1) {
-      .grid-col-s-#{$i} {
+    //xl viewport
+    @include mqmin($viewportXL) {
+      .grid-col-xl-#{$i} {
         @include span($i);
       }
     }
-    @include mqminmax($viewportM, $viewportL - 1) {
-      .grid-col-m-#{$i} {
-        @include span($i);
-      }
-    }
-    @include mqminmax($viewportL, $viewportXL - 1) {
+    //l viewport
+    @include mqmax($viewportXL - 1) {
       .grid-col-l-#{$i} {
         @include span($i);
       }
     }
-    @include mqmin($viewportXL) {
-      .grid-col-xl-#{$i} {
+    //m viewport
+    @include mqmax($viewportL - 1) {
+      .grid-col-m-#{$i} {
+        @include span($i);
+      }
+    }
+    //s viewport
+    @include mqmax($viewportM - 1) {
+      .grid-col-s-#{$i} {
         @include span($i);
       }
     }

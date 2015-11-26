@@ -17,6 +17,9 @@ h3 {
   font-size: 1.6rem;
   margin: 20px 0 10px;
 }
+p {
+  margin: 5px 0;
+}
 
 code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -36,6 +39,35 @@ code {
 
   ul {
     margin-left: 30px;
+  }
+}
+
+.docs-table {
+  border: 1px solid $black-30;
+  border-radius: $form-border-radius;
+  border-collapse: separate;
+  margin: 20px 0;
+
+  th {
+    background: $black-40;
+    font-weight: bold;
+  }
+
+  th, td {
+    padding: 8px 16px;
+    border-left: 1px solid $black-30;
+    border-bottom: 1px solid $black-30;
+    text-align: center;
+
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  tr:nth-child(even) td {
+    background: $black-20;
+  }
+  tr:last-child td {
+    border-bottom: none;
   }
 }
 
@@ -94,29 +126,10 @@ code {
     }
   }
 }
-.table-grid-info {
-  border: 1px solid $black-30;
-  border-radius: $form-border-radius;
-  border-collapse: separate;
-  margin: 20px 0;
 
-  th {
-    background: $black-40;
-    font-weight: bold;
-  }
-
+.docs-table-grid {
   th, td {
-    padding: 8px 16px;
-    border-left: 1px solid $black-30;
     width: 33.3%;
-    text-align: center;
-
-    &:first-child {
-      border-left: 0;
-    }
-  }
-  tr:nth-child(even) td {
-    background: $black-20;
   }
 }
 
@@ -215,7 +228,12 @@ code {
   }
 }
 
-.example-custom-dropdown {
-
+.docs-table-visibility tr {
+  td.cell-visible {
+    background-color: $color-success-message;
+  }
+  td.cell-hidden {
+    background-color: $color-error-message;
+  }
 }
 
