@@ -14,17 +14,12 @@ module.exports = function(grunt) {
         uglify: loadConfig("uglify"),
         sass: loadConfig("sass"),
         copy: loadConfig("copy"),
-        watch: {
-            files: ['src/scss/**/*.scss', 'src/js/**/*.js','docs/index.html', 'docs/css/*.scss'],
-            tasks: ["dist"],
-            options: {
-                livereload: true
-            }
-        }
+        watch: loadConfig("watch"),
+        pleeease: loadConfig("pleeease")
     });
 
     grunt.registerTask("build", ["sass", "webpack", "copy"]);
-    grunt.registerTask("dist", ["sass", "webpack", "uglify", "copy"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy"]);
 
     grunt.registerTask("default", ["dist"]);
 
