@@ -39,6 +39,15 @@
 <h1>ShowCar UI Library Docs</h1>
 
 <ul class="docs-navigation">
+    <li>
+        <a href="#variables">Variables</a>
+        <ul>
+            <li><a href="#variables-colors">Colors</a></li>
+            <li><a href="#variable-spacings">Spacings</a></li>
+            <li><a href="#variable-viewports">Viewports</a></li>
+
+        </ul>
+    </li>
     <li><a href="#content-container">Content container</a></li>
     <li><a href="#grid">Grid</a></li>
     <li><a href="#buttons">Buttons</a></li>
@@ -82,6 +91,315 @@
 </ul>
 
 <hr>
+<div>
+    <a name="variables"></a>
+    <h2>Variables</h2>
+    <p>If you need to write some custom scss code there are several scss variables you should use.</p>
+    <p>
+        To use the variables in your scss code you just need to import the specific file based on your directory structure:
+    </p>
+
+    <pre><code class="css">
+@import "variables";
+    </code></pre>
+
+
+    <a name="variable-colors"></a>
+    <h3>Colors</h3>
+    <p>The following color variables are defined by the UX-Designer. </p>
+    <div class="table-var-wrapper clearfix">
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+                <tr>
+                    <th>variable</th>
+                    <th>value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$black-100</code></td>
+                    <td class="text-white" style="background-color: #333;">#333</td>
+                </tr>
+                <tr>
+                    <td><code>$black-90</code></td>
+                    <td class="text-white" style="background-color: #4c4c4c;">#4c4c4c</td>
+                </tr>
+                <tr>
+                    <td><code>$black-80</code></td>
+                    <td class="text-white" style="background-color: #646464;">#646464</td>
+                </tr>
+                <tr>
+                    <td><code>$black-70</code></td>
+                    <td class="text-white" style="background-color: #7c7c7c;">#7c7c7c</td>
+                </tr>
+                <tr>
+                    <td><code>$black-60</code></td>
+                    <td style="background-color: #949494;">#949494</td>
+                </tr>
+                <tr>
+                    <td><code>$black-50</code></td>
+                    <td style="background-color: #acacac;">#acacac</td>
+                </tr>
+                <tr>
+                    <td><code>$black-40</code></td>
+                    <td style="background-color: #c4c4c4;">#c4c4c4</td>
+                </tr>
+                <tr>
+                    <td><code>$black-30</code></td>
+                    <td style="background-color: #dcdcdc;">#dcdcdc</td>
+                </tr>
+                <tr>
+                    <td><code>$black-20</code></td>
+                    <td style="background-color: #f4f4f4;">#f4f4f4</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$blue-100</code></td>
+                    <td class="text-white" style="background-color: #003468;">#003468</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-90</code></td>
+                    <td class="text-white" style="background-color: #1e4c7a;">#1e4c7a</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-80</code></td>
+                    <td class="text-white" style="background-color: #3d648c;">#3d648c</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-70</code></td>
+                    <td class="text-white" style="background-color: #5b7c9e;">#5b7c9e</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-60</code></td>
+                    <td style="background-color: #7995b0;">#7995b0</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-50</code></td>
+                    <td style="background-color: #97adc1;">#97adc1</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-40</code></td>
+                    <td style="background-color: #b6c5d3;">#b6c5d3</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-30</code></td>
+                    <td style="background-color: #d4dde5;">#d4dde5</td>
+                </tr>
+                <tr>
+                    <td><code>$blue-20</code></td>
+                    <td style="background-color: #f2f5f7;">#f2f5f7</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$orange-100</code></td>
+                    <td style="background-color: #ff7500;">#ff7500</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-90</code></td>
+                    <td style="background-color: #ff9133;">#ff9133</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-80</code></td>
+                    <td style="background-color: #ff9a4c;">#ff9a4c</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-70</code></td>
+                    <td style="background-color: #ffac66;">#ffac66</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-60</code></td>
+                    <td style="background-color: #ffba80;">#ffba80</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-50</code></td>
+                    <td style="background-color: #ffc899;">#ffc899</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-40</code></td>
+                    <td style="background-color: #ffd5b0;">#ffd5b0</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-30</code></td>
+                    <td style="background-color: #ffe3cc;">#ffe3cc</td>
+                </tr>
+                <tr>
+                    <td><code>$orange-20</code></td>
+                    <td style="background-color: #fff1e5;">#fff1e5</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$white</code></td>
+                    <td style="background-color: #fff;">#fff</td>
+                </tr>
+                <tr>
+                    <td><code>$green-light</code></td>
+                    <td style="background-color: #e6f5cf;">#e6f5cf</td>
+                </tr>
+                <tr>
+                    <td><code>$color-link</code></td>
+                    <td style="background-color: #007CCA;">#007CCA</td>
+                </tr>
+                <tr>
+                    <td><code>$color-error</code></td>
+                    <td class="text-white" style="background-color: #B80000;">#B80000</td>
+                </tr>
+                <tr>
+                    <td><code>$color-error-message</code></td>
+                    <td style="background-color: #ffdddc;">#ffdddc</td>
+                </tr>
+                <tr>
+                    <td><code>$color-success</code></td>
+                    <td class="text-white" style="background-color: #196600;">#196600</td>
+                </tr>
+                <tr>
+                    <td><code>$color-success-message</code></td>
+                    <td style="background-color: #e6f5cf;">#e6f5cf</td>
+                </tr>
+                <tr>
+                    <td><code>$color-info</code></td>
+                    <td class="text-white" style="background-color: #853900;">#853900</td>
+                </tr>
+                <tr>
+                    <td><code>$color-info-message</code></td>
+                    <td style="background-color: #fff1c0;">#fff1c0</td>
+                </tr>
+                <tr>
+                    <td><code>$color-tip</code></td>
+                    <td class="text-white" style="background-color: #264c83;">#264c83</td>
+                </tr>
+                <tr>
+                    <td><code>$color-tip-message</code></td>
+                    <td style="background-color: #e4eeff;">#e4eeff</td>
+                </tr>
+                <tr>
+                    <td><code>$color-highlight-info</code></td>
+                    <td style="background-color: #33aadd;">#33aadd</td>
+                </tr>
+                <tr>
+                    <td><code>$color-error-text</code></td>
+                    <td class="text-white" style="background-color: #d51500;">#d51500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a name="variable-spacings"></a>
+    <h3>Spacings</h3>
+    <p>
+        There are several variables that should be used for the spacing inside and between elements.
+        Use the variables only for the spacing and not for other properties like e.g. font-sizes.
+    </p>
+    <div class="table-var-wrapper clearfix">
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$XS</code></td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>$S</code></td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>$M</code></td>
+                    <td>12px</td>
+                </tr>
+                <tr>
+                    <td><code>$L</code></td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>$XL</code></td>
+                    <td>20px</td>
+                </tr>
+                <tr>
+                    <td><code>$XXL</code></td>
+                    <td>28px</td>
+                </tr>
+                <tr>
+                    <td><code>$XXXL</code></td>
+                    <td>40px</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a name="variable-viewports"></a>
+    <h3>Viewports</h3>
+    <p>
+        All responsive elements that are based on media queries use the following breakpoints. These dimension should
+        be usefull in most of the cases.
+    </p>
+    <p>
+        Use the following variables <span class="text-bold">instead</span> of variables previously known from showcar-styles
+        (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)
+    </p>
+    <div class="table-var-wrapper clearfix">
+        <table class="docs-table docs-table-variable-color pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>$viewportS</code></td>
+                    <td>480px</td>
+                </tr>
+                <tr>
+                    <td><code>$viewportM</code></td>
+                    <td>768px</td>
+                </tr>
+                <tr>
+                    <td><code>$viewportL</code></td>
+                    <td>1024px</td>
+                </tr>
+                <tr>
+                    <td><code>$viewportXL</code></td>
+                    <td>1400px</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
 <div>
     <a name="content-container"></a>
     <h2>Content container</h2>

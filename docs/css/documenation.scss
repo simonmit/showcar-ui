@@ -34,6 +34,23 @@ code {
   }
 }
 
+pre {
+  border: 1px solid $black-30;
+  border-radius: $form-border-radius;
+
+  code {
+    border: 0;
+
+    &:before {
+      content: 'Code:';
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: $black-70;
+    }
+  }
+}
+
 .docs-navigation {
   margin: 0.5em;
 
@@ -96,18 +113,26 @@ code {
     margin-bottom: 10px;
 
     code {
-      border: 0;
-
-      &:before {
-        content: 'Code:';
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: $black-70;
-      }
+      border-radius: 0;
     }
   }
 }
+
+.table-var-wrapper {
+  margin: 0 -10px;
+
+  .docs-table-variable-color {
+    margin: 10px;
+
+    th {
+      width: 200px;
+    }
+    .text-white {
+      color: #fff;
+    }
+  }
+}
+
 
 .example-content-container {
   .content-container {
