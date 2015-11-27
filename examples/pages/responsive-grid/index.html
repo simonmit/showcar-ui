@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ShowCar UI Library Examples - Responsive Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../../examples.css">
+</head>
+<body>
+<h2>ShowCar UI Library Examples - Responsive Grid</h2>
+
+<!-- example start -->
+<div>
+    <div class="rapper">
+        <div class="grid-row hidden-m">
+            <div class="grid-col-4"></div>
+            <div class="grid-col-4">wertsteigernd</div>
+            <div class="grid-col-4">wertmindernd</div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-4 grid-col-m-12">Vorbesitzer</div>
+            <div class="hidden visible-m grid-col-m-6">wertsteigernd</div>
+            <div class="grid-col-4 grid-col-m-6">wenige (maximal 3)</div>
+            <div class="hidden visible-m grid-col-m-6">wertmindernd</div>
+            <div class="grid-col-4 grid-col-m-6">viele (mehr als 3)</div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-4 grid-col-m-12">Scheckheftgepflegt</div>
+            <div class="hidden visible-m grid-col-m-6">wertsteigernd</div>
+            <div class="grid-col-4 grid-col-m-6">ja</div>
+            <div class="hidden visible-m grid-col-m-6">wertmindernd</div>
+            <div class="grid-col-4 grid-col-m-6">nein</div>
+        </div>
+    </div>
+</div>
+<!-- example end -->
+
+<script src="../../../dist/showcar-ui.min.js"></script>
+<script async src="../../../dist/polyfills/webfontloader.js" data-font-source="../../../dist/fonts.css"></script>
+</body>
+</html>

@@ -11,11 +11,18 @@ module.exports = (function() {
                 'vendor/susy/sass/susy'
             ]
         },
-        files: {
-            'dist/fonts.css': 'src/scss/font-faces.scss',
-            'dist/showcar-ui.css': 'src/scss/showcar-ui.scss',
-            'dist/showcar-ui-namespaced.css': 'src/scss/showcar-ui-namespaced.scss',
-            'docs/css/documenation.css': 'docs/css/documenation.scss'
-        }
+        files: [
+            {dest: 'dist/fonts.css', src: 'src/scss/font-faces.scss'},
+            {dest: 'dist/showcar-ui.css', src: 'src/scss/showcar-ui.scss'},
+            {dest: 'dist/showcar-ui-namespaced.css', src: 'src/scss/showcar-ui-namespaced.scss'},
+            {dest: 'docs/css/documenation.css', src: 'docs/css/documenation.scss'},
+            {
+                expand: true,
+                cwd: 'examples/',
+                src: ['**/*.scss'],
+                dest: './examples',
+                ext: '.css'
+            }
+        ]
     }
 })();
