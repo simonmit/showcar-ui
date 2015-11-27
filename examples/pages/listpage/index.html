@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Showcar Demo</title>
+
+    <!-- include external libraries -->
+    <link rel="stylesheet" href="../../../dist/showcar-ui.css">
+    <script src="../../../dist/showcar-ui.min.js"></script>
+
+
+    <script src="vendor/icanhaz/ICanHaz.min.js"></script>
+
+    <script src="classifieds.js"></script>
+    <script src="main.js"></script>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- our main container with multiple rows -->
+<div class="grid-container">
+    <!-- first row: breadcrumbs, navigation -->
+    <div class="grid-row row-breadcrumbs">
+        <div class="grid-col-12 breadcrumbs">
+            <ul>
+                <li><a href="#">breadcrumbs</a></li>
+                <li><a href="#">navigation</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- second row: header, result counter, etc. -->
+    <div class="grid-row row-header">
+        <div class="grid-col-4">
+            <h1 class="font-xl">2,362,479 Results</h1>
+        </div>
+        <div class="grid-col-4"></div>
+        <div class="grid-col-4">
+            <select name="foo" id="bar">
+                <option value="0">Foo</option>
+                <option value="1">Bar</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- third row: main content with filter and list -->
+    <div class="grid-row">
+        <div class="grid-col-4 col-filter">
+
+            <!-- nested grid for layout -->
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-col-6 font-l">Filter</div>
+                    <div class="grid-col-6 text-right">
+                        <a href="#">Reset</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- filter section: mocks of form elements -->
+            <form action="#">
+                <label for="make">Make</label>
+                <select id="make">
+                    <option>All</option>
+                    <option>BMW</option>
+                </select>
+
+                <label for="model">Model</label>
+                <select id="model">
+                    <option>All</option>
+                </select>
+
+                <label for="version">Version</label>
+                <input type="text" id="version" placeholder="Version">
+
+                <label for="bodytype">Body Type</label>
+                <select id="bodytype">
+                    <option>All</option>
+                </select>
+
+                <label>Price (€)</label>
+                <div class="input-group">
+                    <select id="price-from">
+                        <option>from</option>
+                    </select>
+                    <select id="price-to">
+                        <option>to</option>
+                    </select>
+                </div>
+
+                <div class="element-container">
+                    <input id="vat" type="checkbox">
+                    <label for="vat">VAT</label>
+                </div>
+
+                <hr>
+
+                <label>First Registration</label>
+                <div class="input-group">
+                    <select id="reg-from">
+                        <option>from</option>
+                    </select>
+                    <select id="reg-to">
+                        <option>to</option>
+                    </select>
+                </div>
+
+                <label>Mileage</label>
+                <div class="input-group">
+                    <select id="mileage-from">
+                        <option>from</option>
+                    </select>
+                    <select id="mileage-to">
+                        <option>to</option>
+                    </select>
+                </div>
+
+                <label for="fuel">Fuel Type</label>
+                <select id="fuel">
+                    <option>All</option>
+                </select>
+
+                <label for="transmission">Gear Transmission</label>
+                <select id="transmission">
+                    <option>All</option>
+                </select>
+
+                <label>Power</label>
+                <div class="grid-row">
+                    <div class="grid-col-6">
+                        <div class="input-group-radio">
+                            <input name="power" id="power-kw" type="radio"><label for="power-kw">kW</label>
+                            <input name="power" id="power-hp" type="radio"><label for="power-hp">HP</label>
+                        </div>
+                    </div>
+                    <div class="grid-col-6">
+                        <div class="input-group">
+                            <input id="power-from" type="number" placeholder="from">
+                            <input id="power-to" type="number" placeholder="to">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <label for="countries">Countries</label>
+                <select id="countries">
+                    <option>Entire Europe</option>
+                    <option>Not Entire Europe</option>
+                </select>
+
+                <hr>
+
+                <div class="text-center"><a href="#">More Search Criteria</a></div>
+
+                <hr>
+
+                <button class="btn-bob-l btn-block" data-sticky-button="btn">2,362,479 cars</button>
+                <div data-sticky-button-dock></div>
+                <button class="btn-ross-l btn-block">Save this search</button>
+            </form>
+        </div>
+
+        <!-- result list: the actual list and the pagination-->
+        <div class="grid-col-8 col-list">
+            <ul id="list" class="list grid-container">
+
+                <!-- list items are rendered via ICanHaz frontend templating -->
+                <script id="classified" type="text/html">
+                    <li><a title="{{ name }}" href="{{ url }}" class="grid-row">
+                        <img class="grid-col-4" src="{{ thumbnail }}">
+                        <div class="grid-col-7 description">
+                            <h2 class="font-l text-nowrap">{{ name }}</h2>
+                            <table>
+                                <tr>
+                                    <td>{{ price }}</td>
+                                    <td>{{ mileage }}</td>
+                                    <td>{{ power }}</td>
+                                    <td>{{ firstRegistration }}</td>
+                                </tr>
+                            </table>
+                            <div class="envkv font-silent">{{ envkv }}</div>
+                        </div>
+                        <div class="grid-col-1 heart font-silent font-xxl">&#x2764;</div>
+                    </a></li>
+                </script>
+            </ul>
+
+            <!-- static pagination as example -->
+            <div class="pagination grid-container">
+                <div class="grid-row">
+                    <div class="grid-col-4 text-left"><a href="#">prev</a></div>
+                    <div class="grid-col-4 text-center">
+                        <a href="#">1</a>
+                        <a href="#" class="current">2</a>
+                        <a href="#">&hellip;</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                    </div>
+                    <div class="grid-col-4 text-right"><a href="#">next</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
