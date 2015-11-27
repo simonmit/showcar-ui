@@ -26,6 +26,8 @@ module.exports = function() {
                 dockPos = dockEl.offset().top;
             }
 
+            console.log('u', undockPos, 'd', dockPos);
+
             // if element is within scrolling area, scroll, else don't
             if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
                 stickyEl.addClass('sticky');

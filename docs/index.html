@@ -85,7 +85,7 @@
         <ul>
             <li><a href="#collapse">Collapse</a></li>
             <li><a href="#custom-dropdown">Custom Dropdown</a></li>
-            <li><a href="#sticky-button">Sticky Button</a></li>
+            <li><a href="#sticky">Sticky Element</a></li>
             <li><a href="#rotating-arrow">Rotating Arrow</a></li>
         </ul>
     </li>
@@ -1327,20 +1327,41 @@ formatCode(`<div class="grid-row">
 </custom-dropdown>`, '#code-custom-dropdown');
     </script>
 
-    <a name="sticky-button"></a>
-    <h3>Sticky Butotn</h3>
-    <div class="example example-sticky-button">
-        <div data-sticky-undock="myBtn"></div>
-        <div style="height: 1000px; border: 1px solid black;">
+    <a name="sticky"></a>
+    <h3>Sticky Element</h3>
 
+    <p>A sticky element represents any HTML element that keeps in view even if you scroll.</p>
+    <p>A sticky element consists
+    of three parts:
+        <ul class="sticky-list">
+            <li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier.</li>
+            <li>A marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as value.</li>
+            <li>And a marker where it docks (stops scrolling), identified by a <code>data-sticky-dock</code> attribute with the identifier as value.</li>
+        </ul>
+    </p>
+    <p>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
+
+    <div class="example example-sticky">
+        <div data-sticky-undock="myBtn"></div>
+        <div class="spacer">
+            Sticky Spacer
         </div>
         <div data-sticky-dock="myBtn"></div>
         <div data-sticky="myBtn" class="text-center"><button class="btn-bob-l">Sticky Button</button></div>
     </div>
+    <pre><code class="html" id="code-sticky"></code></pre>
+    <script>
+        formatCode(`<div data-sticky-undock="myBtn"></div>
+...
+<div data-sticky-dock="myBtn"></div>
+<div data-sticky="myBtn">
+    <button class="btn-bob-l">Sticky Button</button>
+</div>`, '#code-sticky');
+</script>
+
 
     <a name="rotating-arrow"></a>
     <h3>Rotating Arrow</h3>
-
 
     <div id="rotating-arrow" >
         <span class="font-bold">Some Text</span><span data-toggle="arrow" data-target="#rotating-arrow" class="pull-right"></span>
