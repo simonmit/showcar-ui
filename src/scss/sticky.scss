@@ -1,0 +1,5 @@
+@import "mixins/sticky";
+
+.sticky {
+  @include sticky();
+}

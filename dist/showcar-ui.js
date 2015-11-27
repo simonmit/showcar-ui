@@ -60,6 +60,7 @@
 	
 	__webpack_require__(14)();
 	__webpack_require__(15);
+	__webpack_require__(16)();
 	
 	$(function () {
 	    var dataFontSource = $('[data-font-source]');
@@ -2536,6 +2537,68 @@
 	    document.addEventListener('mousedown', closeAllDropdowns);
 	    attachEventListeners = function () {}; // so that we only attach at most once
 	}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function () {
+	    function handleStickies() {
+	        var scrollPos = $(window).scrollTop();
+	
+	        var stickyButtons = $('[data-sticky]');
+	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
+	            var stickyEl = $(stickyButton);
+	            var id = stickyEl.attr('data-sticky');
+	            var undockEl = $('[data-sticky-undock="' + id + '"]');
+	            var dockEl = $('[data-sticky-dock="' + id + '"]');
+	
+	            // if there is no dock and undock element leave sticky class
+	            if (undockEl.length === 0 && dockEl.length === 0) {
+	                stickyEl.addClass('sticky');
+	            }
+	
+	            // get undock position
+	            var undockPos = 0;
+	            if (undockEl.length > 0) {
+	                undockPos = undockEl.offset().top;
+	            }
+	
+	            // get dock position
+	            var dockPos = $(document).height();
+	            if (dockEl.length > 0) {
+	                dockPos = dockEl.offset().top;
+	            }
+	
+	            // if element is within scrolling area, scroll, else don't
+	            if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
+	                stickyEl.addClass('sticky');
+	            } else {
+	                stickyEl.removeClass('sticky');
+	            }
+	        });
+	    }
+	
+	    handleStickies();
+	
+	    window.addEventListener("deviceorientation", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("resize", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("pageSizeChanged", function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('scroll', function () {
+	        handleStickies();
+	    });
+	};
 
 /***/ }
 /******/ ]);

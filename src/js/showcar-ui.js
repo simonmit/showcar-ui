@@ -13,6 +13,7 @@ window.Storage = require('../../vendor/showcar-storage/src/storage.js');
 
 require('./components/rotating-arrow.js')();
 require('./components/custom-dropdown.js');
+require('./components/sticky.js')();
 
 $(function () {
     var dataFontSource = $('[data-font-source]');
