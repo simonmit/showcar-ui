@@ -5,7 +5,9 @@
   @extend %color-selector-#{to-upper_case($size)};
 }
 
-@mixin color-selector-color($color, $checkedColor:"333333") {
+@mixin color-selector-color($color, $checkedColor:"#333333") {
+  $checkedColor: str-slice(inspect($checkedColor), 2);
+
   & + label {
     &:before {
       background: $color;

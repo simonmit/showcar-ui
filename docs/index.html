@@ -857,7 +857,7 @@ formatCode(`<div class="grid-row">
         We created a special type of radio buttons and check boxes for you to easily implement a color selection.
         In this case you have to write a little custom scss to define the background color of the elements. You can also
         choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background
-        color as first argument and the checkmark color as a second one.
+        color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
     </p>
     <div class="example example-color-picker">
         <div class="color-selector">
@@ -905,7 +905,7 @@ formatCode(`<div class="grid-row">
 .color-selector {
     input {
         &.red {
-            @include color-selector-color(#ff0000, fff);
+            @include color-selector-color(#ff0000, #fff);
         }
     -- gradient support --
         &.gold {

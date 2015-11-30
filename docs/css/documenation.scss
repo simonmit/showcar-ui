@@ -226,22 +226,22 @@ pre {
 .color-selector {
   input {
     &.red {
-      @include color-selector-color(#ff0000, fff);
+      @include color-selector-color(#ff0000, #fff);
     }
     &.yellow {
       @include color-selector-color(yellow);
     }
     &.green {
-      @include color-selector-color(green, fff);
+      @include color-selector-color(green, #fff);
     }
     &.gold {
       @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
     }
     &.blue {
-      @include color-selector-color(blue, fff);
+      @include color-selector-color(blue, #fff);
     }
     &.orange {
-      @include color-selector-color(orange, fff);
+      @include color-selector-color(orange, #fff);
     }
   }
 }
