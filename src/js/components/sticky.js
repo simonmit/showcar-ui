@@ -6,8 +6,8 @@ module.exports = function() {
         Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
             var stickyEl = $(stickyButton);
             var id = stickyEl.attr('data-sticky');
-            var undockEl = $(`[data-sticky-undock="${id}"]`);
-            var dockEl = $(`[data-sticky-dock="${id}"]`);
+            var undockEl = $('[data-sticky-undock="${id}"]');
+            var dockEl = $('[data-sticky-dock="${id}"]');
 
             // if there is no dock and undock element leave sticky class
             if (undockEl.length === 0 && dockEl.length === 0) {
