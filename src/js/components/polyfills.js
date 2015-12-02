@@ -16,6 +16,7 @@ module.exports = function(callback) {
         && 'trim' in String.prototype;
 
     require('document-register-element/build/document-register-element.js');
+    require('picturefill/dist/picturefill.js');
 
     if (!isDom4Browser) {
         require('dom4/build/dom4.js');
@@ -34,8 +35,6 @@ module.exports = function(callback) {
         callback();
     }
     return;
-
-
 
     var polyfills = [];
 
