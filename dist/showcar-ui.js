@@ -2412,8 +2412,6 @@
 	
 	            var _ref$expires = _ref.expires;
 	            var expires = _ref$expires === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : _ref$expires;
-	            var _ref$path = _ref.path;
-	            var path = _ref$path === undefined ? "/" : _ref$path;
 	
 	            // support expires in seconds
 	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
@@ -2425,7 +2423,7 @@
 	                expires = expires.toUTCString();
 	            }
 	
-	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=" + path].join("; ");
+	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=/"].join("; ");
 	        }
 	    }, {
 	        key: "has",
