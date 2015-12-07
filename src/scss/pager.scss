@@ -1,0 +1,5 @@
+@import 'mixins/pager';
+
+.pagination {
+  @include pagination();
+}

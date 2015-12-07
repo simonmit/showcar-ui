@@ -1,0 +1,97 @@
+@import "../variables";
+@import "links";
+
+@mixin pagination() {
+  margin-top: $L;
+
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    line-height: $XXXL;
+    height: $XXXL;
+    width: $XXXL;
+    border: 1px solid $black-20;
+    display: none;
+    margin-right: -5px;
+
+    &.previous-page, &.next-page {
+      display: inline-block;
+      width: 3*$XXXL;
+
+      a.disabled {
+        svg {
+          fill: $black-40;
+        }
+      }
+    }
+
+    &.previous-page {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.next-page {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.info-page {
+      display: inline-block;
+      width: calc(100% - 6*#{$XXXL});
+    }
+
+    @include mqmin($viewportM) {
+      display: inline-block;
+
+      &.info-page {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    @include link(M);
+    text-decoration: none;
+    display: block;
+    transition: .3s background-color;
+    cursor: default;
+    border-bottom: 1px solid $black-30;
+    background-color: $white;
+
+    &:hover {
+      background-color: $black-30;
+    }
+
+    &.active {
+      pointer-events: none;
+      color: $black-100;
+      background-color: $black-40;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: $black-40;
+    }
+
+    &.info {
+      pointer-events: none;
+      color: $black-100;
+    }
+
+    svg {
+      position: relative;
+      bottom: 2px;
+      fill: $color-link;
+      width: 13px;
+      height: 7px;
+    }
+  }
+}
+
