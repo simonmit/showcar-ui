@@ -50,6 +50,7 @@
     </li>
     <li><a href="#content-container">Content container</a></li>
     <li><a href="#grid">Grid</a></li>
+    <li><a href="#images">Responsive Images</a></li>
     <li><a href="#buttons">Buttons</a></li>
     <li>
         <a href="#typography">Typography</a>
@@ -650,6 +651,39 @@ formatCode(`<div class="grid-row">
     <div class="grid-col-3 grid-col-s-12 grid-col-m-4">...</div>
 </div>`, '#code-grid-2');
     </script>
+</div>
+
+<div>
+    <a name="images"></a>
+    <h2>Responsive Images</h2>
+
+    <p>
+        The way to go for responsive images in Showcar is the html <code>&lt;picture&gt;</code> tag. Unfortunately, it is not yet sufficiently supported by the browsers.
+        Another, more supported way, is the srcset attribute of the <code>&lt;img&gt;</code> tag.
+        In any case, we included <a href="https://github.com/scottjehl/picturefill" target="_blank">picturefill</a> to polyfill the missing functionality for unsupported browsers.
+    </p>
+    <p>
+        Here an example with the <code>&lt;picture&gt;</code> tag:
+    </p>
+    <picture>
+        <source srcset="http://placehold.it/468x150" media="(max-width: 468px)">
+        <source srcset="http://placehold.it/780x150" media="(max-width: 780px)">
+        <source srcset="http://placehold.it/1024x150" media="(max-width: 1024px)">
+        <source srcset="http://placehold.it/1400x150">
+        <img srcset="http://placehold.it/1400x150" alt="My default image">
+    </picture>
+
+    <pre><code class="html" id="responsive-images"></code></pre>
+    <script>
+        formatCode(`<picture>
+    <source srcset="http://placehold.it/468x150" media="(max-width: 468px)">
+    <source srcset="http://placehold.it/780x150" media="(max-width: 780px)">
+    <source srcset="http://placehold.it/1024x150" media="(max-width: 1024px)">
+    <source srcset="http://placehold.it/1400x150">
+    <img srcset="http://placehold.it/1400x150" alt="My default image">
+</picture>`, '#responsive-images');
+    </script>
+
 </div>
 
 <div>
