@@ -2,22 +2,21 @@
 @import "links";
 
 @mixin pagination() {
-  margin-top: $L;
-
   ul {
     list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+    display: inline-block;
+    font-size: 0;
+    border-top: 1px solid $black-20;
+    border-bottom: 1px solid $black-30;
   }
 
   li {
+    text-align: center;
     line-height: $XXXL;
     height: $XXXL;
     width: $XXXL;
-    border: 1px solid $black-20;
-    display: none;
-    margin-right: -5px;
+
+    display: inline-block;
 
     &.previous-page, &.next-page {
       display: inline-block;
@@ -37,6 +36,7 @@
     }
 
     &.next-page {
+      border-right: 1px solid $black-20;
       svg {
         transform: rotate(-90deg);
       }
@@ -58,21 +58,21 @@
 
   a {
     @include link(M);
-    text-decoration: none;
     display: block;
     transition: .3s background-color;
-    cursor: default;
-    border-bottom: 1px solid $black-30;
     background-color: $white;
+    border-left: 1px solid $black-20;
 
     &:hover {
       background-color: $black-30;
+      border-left: 1px solid $black-30;
     }
 
     &.active {
       pointer-events: none;
       color: $black-100;
       background-color: $black-40;
+      border-left: 1px solid $black-30;
     }
 
     &.disabled {

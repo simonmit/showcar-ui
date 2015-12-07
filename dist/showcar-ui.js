@@ -3824,134 +3824,50 @@
 	    cookie: __webpack_require__(15)
 	};
 	
-	var Storage = (function () {
-	    /**
-	     * @constructor
-	     * @param {string} type The store backend to use
-	     * @param {boolean} [silent=false] Whether to throw exceptions or fail silently returning false
-	     */
-	
+	module.exports = (function () {
 	    function Storage(type) {
-	        var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-	
-	        var _ref$silent = _ref.silent;
-	        var silent = _ref$silent === undefined ? false : _ref$silent;
-	
 	        _classCallCheck(this, Storage);
 	
 	        if (!(type in stores)) {
-	            this.fail('Storage: Unsupported type ' + type);
+	            throw new Error('Unsupported type ' + type);
 	        }
 	
-	        this.silent = !!silent;
 	        this.store = new stores[type]();
 	    }
-	
-	    /**
-	     * Gets the stored value for a specified key
-	     * @param {string} key The key to look up
-	     * @param defaultValue Return this if no value has been found
-	     * @throws {Error} If not silent
-	     * @returns {string} The stored value or defaultValue
-	     */
 	
 	    _createClass(Storage, [{
 	        key: 'get',
 	        value: function get(key) {
 	            var defaultValue = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
 	
-	            try {
-	                var result = this.store.get(key);
+	            var result = this.store.get(key);
 	
-	                if (null === result) {
-	                    return defaultValue;
-	                }
-	                return result;
-	            } catch (e) {
-	                return this.fail(e);
+	            if (null === result) {
+	                return defaultValue;
 	            }
+	            return result;
 	        }
-	
-	        /**
-	         * Writes a value to the store under the specified key
-	         * @param {string} key The key to use when storing
-	         * @param {string} value The value to store
-	         * @param {object} [options] A map of options. See the respective backends.
-	         * @throws {Error} If not silent
-	         * @returns {Storage|boolean} If silent, returns false on error. Returns this on success.
-	         */
-	
 	    }, {
 	        key: 'set',
 	        value: function set(key, value, options) {
-	            try {
-	                this.store.set(key, value, options);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	            this.store.set(key, value, options);
+	            return this;
 	        }
-	
-	        /**
-	         * Checks whether the store knows about the specified key
-	         * @param {string} key The key to check for existance
-	         * @throws {Error} If not silent
-	         * @returns {boolean} If silent, returns false on error (!!)
-	         */
-	
 	    }, {
 	        key: 'has',
 	        value: function has(key) {
-	            try {
-	                return this.store.has(key);
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	            return this.store.has(key);
 	        }
-	
-	        /**
-	         * Deletes the specified key and its value from the store
-	         * @param {string} key The key to delete
-	         * @returns {Storage|boolean} If silent, returns false on error
-	         */
-	
 	    }, {
 	        key: 'remove',
 	        value: function remove(key) {
-	            try {
-	                this.store.remove(key);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
-	        }
-	
-	        /**
-	         * Wrapper for error handling
-	         * @private
-	         * @param {Error|string} reason What is happening?
-	         * @returns {boolean}
-	         */
-	
-	    }, {
-	        key: 'fail',
-	        value: function fail(reason) {
-	            if (this.silent) {
-	                return false;
-	            }
-	
-	            if (!reason instanceof Error) {
-	                reason = new Error(reason);
-	            }
-	
-	            throw reason;
+	            this.store.remove(key);
+	            return this;
 	        }
 	    }]);
 	
 	    return Storage;
 	})();
-	
-	module.exports = Storage;
 
 /***/ },
 /* 13 */
@@ -4070,6 +3986,8 @@
 	
 	            var _ref$expires = _ref.expires;
 	            var expires = _ref$expires === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : _ref$expires;
+	            var _ref$path = _ref.path;
+	            var path = _ref$path === undefined ? "/" : _ref$path;
 	
 	            // support expires in seconds
 	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
@@ -4081,7 +3999,7 @@
 	                expires = expires.toUTCString();
 	            }
 	
-	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=/"].join("; ");
+	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=" + path].join("; ");
 	        }
 	    }, {
 	        key: "has",

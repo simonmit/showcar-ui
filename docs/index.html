@@ -73,7 +73,7 @@
     <li>
         <a href="#utility">Utility classes</a>
         <ul>
-            <li><a href="#floats">floats</a></li>
+            <li><a href="#floats">Floats</a></li>
             <li><a href="#text-alignment">Text alignment</a></li>
             <li><a href="#center-blocks">Center content blocks</a></li>
             <li><a href="#horizontal-line">Horizontal line</a></li>
@@ -88,6 +88,7 @@
             <li><a href="#custom-dropdown">Custom Dropdown</a></li>
             <li><a href="#sticky">Sticky Element</a></li>
             <li><a href="#rotating-arrow">Rotating Arrow</a></li>
+            <li><a href="#pager">Pager</a></li>
         </ul>
     </li>
 </ul>
@@ -1428,15 +1429,15 @@ formatCode(`<div class="grid-row">
             <ul>
                 <li class="previous-page">
                     <a class="disabled" href="">
-                        <as24-icon type="arrow"> Previous
+                        <as24-icon type="arrow"></as24-icon> Previous
                     </a>
                 </li>
                 <li class="info-page">
                     <a class="info" href="">1 / 20</a>
                 </li>
-                <li><a class="active" href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
+                <li><a href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
                 <li><a href="/classified-list?make=9&amp;page=2&amp;size=20">2</a></li>
-                <li><a href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
+                <li><a class="active" href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
                 <li><a href="/classified-list?make=9&amp;page=4&amp;size=20">4</a></li>
                 <li><a href="/classified-list?make=9&amp;page=5&amp;size=20">5</a></li>
                 <li><a href="/classified-list?make=9&amp;page=6&amp;size=20">6</a></li>
@@ -1445,18 +1446,18 @@ formatCode(`<div class="grid-row">
                 <li><a href="/classified-list?make=9&amp;page=20&amp;size=20">20</a></li>
                 <li class="next-page">
                     <a href="/classified-list?make=9&amp;page=2&amp;size=20">
-                        Next <as24-icon type="arrow">
+                        Next <as24-icon type="arrow"></as24-icon>
                     </a>
                 </li>
             </ul>
         </div>
-        <pre><code class="html" id="code-pager"></code></pre>
+        <pre style="margin-top:20px;"><code class="html" id="code-pager"></code></pre>
         <script>
             formatCode(`<div class="pagination">
     <ul>
         <li class="previous-page">
             <a class="disabled" href="">
-                <as24-icon type="arrow"> Previous
+                <as24-icon type="arrow"></as24-icon> Previous
             </a>
         </li>
         <li class="info-page">
