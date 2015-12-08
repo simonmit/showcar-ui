@@ -15,7 +15,7 @@
     height: $XXXL;
     width: $XXXL;
 
-    display: inline-block;
+    display: none;
 
     &.previous-page, &.next-page {
       display: inline-block;
@@ -44,6 +44,9 @@
     &.info-page {
       display: inline-block;
       width: calc(100% - 6*#{$XXXL});
+      a {
+        padding: 0 10px;
+      }
     }
 
     @include mqmin($viewportM) {
