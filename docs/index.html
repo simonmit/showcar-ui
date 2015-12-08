@@ -1425,55 +1425,51 @@ formatCode(`<div class="grid-row">
     <div class="example example-custom-dropdown">
         <h3>Pager</h3>
 
-        <div class="pagination">
-            <ul>
-                <li class="previous-page">
-                    <a class="disabled" href="">
-                        <as24-icon type="arrow"></as24-icon> Previous
-                    </a>
-                </li>
-                <li class="info-page">
-                    <a class="info" href="">1 / 20</a>
-                </li>
-                <li><a href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
-                <li><a href="/classified-list?make=9&amp;page=2&amp;size=20">2</a></li>
-                <li><a class="active" href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
-                <li><a href="/classified-list?make=9&amp;page=4&amp;size=20">4</a></li>
-                <li><a href="/classified-list?make=9&amp;page=5&amp;size=20">5</a></li>
-                <li><a href="/classified-list?make=9&amp;page=6&amp;size=20">6</a></li>
-                <li><a href="/classified-list?make=9&amp;page=7&amp;size=20">7</a></li>
-                <li><a class="disabled" href="">...</a></li>
-                <li><a href="/classified-list?make=9&amp;page=20&amp;size=20">20</a></li>
-                <li class="next-page">
-                    <a href="/classified-list?make=9&amp;page=2&amp;size=20">
-                        Next <as24-icon type="arrow"></as24-icon>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="pagination">
+            <li class="previous-page">
+                <a class="disabled" href="">
+                    <as24-icon type="arrow"></as24-icon> Previous
+                </a>
+            </li>
+            <li class="info-page">
+                <a class="info" href="">1 / 20</a>
+            </li>
+            <li><a href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
+            <li><a href="/classified-list?make=9&amp;page=2&amp;size=20">2</a></li>
+            <li><a class="active" href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
+            <li><a href="/classified-list?make=9&amp;page=4&amp;size=20">4</a></li>
+            <li><a href="/classified-list?make=9&amp;page=5&amp;size=20">5</a></li>
+            <li><a href="/classified-list?make=9&amp;page=6&amp;size=20">6</a></li>
+            <li><a href="/classified-list?make=9&amp;page=7&amp;size=20">7</a></li>
+            <li><a class="disabled" href="">...</a></li>
+            <li><a href="/classified-list?make=9&amp;page=20&amp;size=20">20</a></li>
+            <li class="next-page">
+                <a href="/classified-list?make=9&amp;page=2&amp;size=20">
+                    Next <as24-icon type="arrow"></as24-icon>
+                </a>
+            </li>
+        </ul>
         <pre style="margin-top:20px;"><code class="html" id="code-pager"></code></pre>
         <script>
-            formatCode(`<div class="pagination">
-    <ul>
-        <li class="previous-page">
-            <a class="disabled" href="">
-                <as24-icon type="arrow"></as24-icon> Previous
-            </a>
-        </li>
-        <li class="info-page">
-            <a class="info" href="">1 / 20</a>
-        </li>
-        <li><a class="active" href="...">1</a></li>
-        <li><a href="...">2</a></li>
-        <li><a class="disabled" href="">...</a></li>
-        <li><a href="...">20</a></li>
-        <li class="next-page">
-            <a href="...">
-                Next <as24-icon type="arrow"></as24-icon>
-            </a>
-        </li>
-    </ul>
-</div>`, '#code-pager');
+            formatCode(`<ul class="pagination">
+    <li class="previous-page">
+        <a class="disabled" href="">
+            <as24-icon type="arrow"></as24-icon> Previous
+        </a>
+    </li>
+    <li class="info-page">
+        <a class="info" href="">1 / 20</a>
+    </li>
+    <li><a class="active" href="...">1</a></li>
+    <li><a href="...">2</a></li>
+    <li><a class="disabled" href="">...</a></li>
+    <li><a href="...">20</a></li>
+    <li class="next-page">
+        <a href="...">
+            Next <as24-icon type="arrow"></as24-icon>
+        </a>
+    </li>
+</ul>`, '#code-pager');
         </script>
     </div>
 
