@@ -17,31 +17,10 @@ $susy: (
   @include container;
   position: relative;
 
-  // 1270px
-  @include mqmin($grid-max-width + $gap-between-ad-and-grid + $side-ad-width) {
-    float: left;
-    width: 100%;
-
-
-  }
-
-  // 1440px
-  @include mqmin($grid-max-width + 2 * $side-ad-width + 2 * $gap-between-ad-and-grid) {
-    float: none;
-    width: auto;
-  }
-}
-
-.ad-container {
-  display: none;
-
-  // 1270px
-  @include mqmin($grid-max-width + $gap-between-ad-and-grid + $side-ad-width) {
-    display: block;
-    width: 160px;
-    position: absolute;
-    top: 0;
-    right: -$side-ad-width - $gap-between-ad-and-grid;
+  // 1100px - 1440px
+  @include mqminmax($grid-max-width, $grid-max-width + 2 * $side-ad-width + 2 * $gap-between-ad-and-grid) {
+    //width: 100%;
+    margin: 0;
   }
 }
 
