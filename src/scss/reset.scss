@@ -29,5 +29,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+hr {
+  margin-top: $M;
+  margin-bottom: $M;
+  border: 0;
+  border-top: 1px solid $black-30;
+}
+
 @import "reset/buttons";
 @import "reset/images";
