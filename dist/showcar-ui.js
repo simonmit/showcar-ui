@@ -848,12 +848,12 @@
 	(function (e, t, n, r) {
 	  "use strict";
 	  function rt(e, t) {
-	    for (var n = 0, r = e.length; n < r; n++) vt(e[n], t);
+	    for (var n = 0, r = e.length; n < r; n++) dt(e[n], t);
 	  }function it(e) {
 	    for (var t = 0, n = e.length, r; t < n; t++) r = e[t], nt(r, b[ot(r)]);
 	  }function st(e) {
 	    return function (t) {
-	      j(t) && (vt(t, e), rt(t.querySelectorAll(w), e));
+	      j(t) && (dt(t, e), rt(t.querySelectorAll(w), e));
 	    };
 	  }function ot(e) {
 	    var t = e.getAttribute("is"),
@@ -865,7 +865,7 @@
 	    var t = e.currentTarget,
 	        n = e.attrChange,
 	        r = e.attrName,
-	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" & e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
+	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
 	  }function ft(e) {
 	    var t = st(e);return function (e) {
 	      X.push(t, e.target);
@@ -877,10 +877,8 @@
 	  }function ht(e, t) {
 	    D(e, t), et ? et.observe(e, z) : (J && (e.setAttribute = ct, e[i] = Z(e), e.addEventListener(p, G)), e.addEventListener(c, at)), e.createdCallback && Q && (e.created = !0, e.createdCallback(), e.created = !1);
 	  }function pt() {
-	    for (var e, t = 0, n = F.length; t < n; t++) e = F[t], E.contains(e) || (n--, F.splice(t--, 1), vt(e, o));
-	  }function dt(e) {
-	    throw new Error("A " + e + " type is already registered");
-	  }function vt(e, t) {
+	    for (var e, t = 0, n = F.length; t < n; t++) e = F[t], E.contains(e) || (F.splice(t, 1), dt(e, o));
+	  }function dt(e, t) {
 	    var n,
 	        r = ot(e);-1 < r && (tt(e, b[r]), r = 0, t === s && !e[s] ? (e[o] = !1, e[s] = !0, r = 1, B && S.call(F, e) < 0 && F.push(e)) : t === o && !e[o] && (e[s] = !1, e[o] = !0, r = 1), r && (n = e[t + "Callback"]) && n.call(e));
 	  }if (r in t) return;var i = "__" + r + (Math.random() * 1e5 >> 0),
@@ -913,8 +911,8 @@
 	      A = n.getPrototypeOf,
 	      O = n.setPrototypeOf,
 	      M = !!n.__proto__,
-	      _ = n.create || function mt(e) {
-	    return e ? (mt.prototype = e, new mt()) : this;
+	      _ = n.create || function vt(e) {
+	    return e ? (vt.prototype = e, new vt()) : this;
 	  },
 	      D = O || (M ? function (e, t) {
 	    return e.__proto__ = t, e;
@@ -994,11 +992,11 @@
 	  }, Z = function (e) {
 	    for (var t, n, r = {}, i = e.attributes, s = 0, o = i.length; s < o; s++) t = i[s], n = t.name, n !== "setAttribute" && (r[n] = t.value);return r;
 	  })), t[r] = function (n, r) {
-	    c = n.toUpperCase(), $ || ($ = !0, P ? (et = (function (e, t) {
+	    p = n.toUpperCase(), $ || ($ = !0, P ? (et = (function (e, t) {
 	      function n(e, t) {
 	        for (var n = 0, r = e.length; n < r; t(e[n++]));
 	      }return new P(function (r) {
-	        for (var i, s, o, u = 0, a = r.length; u < a; u++) i = r[u], i.type === "childList" ? (n(i.addedNodes, e), n(i.removedNodes, t)) : (s = i.target, Q && s.attributeChangedCallback && i.attributeName !== "style" && (o = s.getAttribute(i.attributeName), o !== i.oldValue && s.attributeChangedCallback(i.attributeName, i.oldValue, o)));
+	        for (var i, s, o = 0, u = r.length; o < u; o++) i = r[o], i.type === "childList" ? (n(i.addedNodes, e), n(i.removedNodes, t)) : (s = i.target, Q && s.attributeChangedCallback && i.attributeName !== "style" && s.attributeChangedCallback(i.attributeName, i.oldValue, s.getAttribute(i.attributeName)));
 	      });
 	    })(st(s), st(o)), et.observe(t, { childList: !0, subtree: !0 })) : (X = [], V(function E() {
 	      while (X.length) X.shift().call(null, X.shift());V(E);
@@ -1010,14 +1008,14 @@
 	    }, H.cloneNode = function (e) {
 	      var t = I.call(this, !!e),
 	          n = ot(t);return -1 < n && nt(t, b[n]), e && it(t.querySelectorAll(w)), t;
-	    }), -2 < S.call(y, v + c) + S.call(y, d + c) && dt(n);if (!m.test(c) || -1 < S.call(g, c)) throw new Error("The type " + n + " is invalid");var i = function i() {
-	      return f ? t.createElement(l, c) : t.createElement(l);
+	    });if (-2 < S.call(y, v + p) + S.call(y, d + p)) throw new Error("A " + n + " type is already registered");if (!m.test(p) || -1 < S.call(g, p)) throw new Error("The type " + n + " is invalid");var i = function i() {
+	      return f ? t.createElement(l, p) : t.createElement(l);
 	    },
 	        a = r || x,
 	        f = T.call(a, u),
-	        l = f ? r[u].toUpperCase() : c,
-	        c,
-	        p;return f && -1 < S.call(y, d + l) && dt(l), p = y.push((f ? v : d) + c) - 1, w = w.concat(w.length ? "," : "", f ? l + '[is="' + n.toLowerCase() + '"]' : l), i.prototype = b[p] = T.call(a, "prototype") ? a.prototype : _(H), rt(t.querySelectorAll(w), s), i;
+	        l = f ? r[u].toUpperCase() : p,
+	        c = y.push((f ? v : d) + p) - 1,
+	        p;return w = w.concat(w.length ? "," : "", f ? l + '[is="' + n.toLowerCase() + '"]' : l), i.prototype = b[c] = T.call(a, "prototype") ? a.prototype : _(H), rt(t.querySelectorAll(w), s), i;
 	  };
 	})(window, document, Object, "registerElement");
 
@@ -3826,134 +3824,50 @@
 	    cookie: __webpack_require__(15)
 	};
 	
-	var Storage = (function () {
-	    /**
-	     * @constructor
-	     * @param {string} type The store backend to use
-	     * @param {boolean} [silent=false] Whether to throw exceptions or fail silently returning false
-	     */
-	
+	module.exports = (function () {
 	    function Storage(type) {
-	        var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-	
-	        var _ref$silent = _ref.silent;
-	        var silent = _ref$silent === undefined ? false : _ref$silent;
-	
 	        _classCallCheck(this, Storage);
 	
 	        if (!(type in stores)) {
-	            this.fail('Storage: Unsupported type ' + type);
+	            throw new Error('Unsupported type ' + type);
 	        }
 	
-	        this.silent = !!silent;
 	        this.store = new stores[type]();
 	    }
-	
-	    /**
-	     * Gets the stored value for a specified key
-	     * @param {string} key The key to look up
-	     * @param defaultValue Return this if no value has been found
-	     * @throws {Error} If not silent
-	     * @returns {string} The stored value or defaultValue
-	     */
 	
 	    _createClass(Storage, [{
 	        key: 'get',
 	        value: function get(key) {
 	            var defaultValue = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
 	
-	            try {
-	                var result = this.store.get(key);
+	            var result = this.store.get(key);
 	
-	                if (null === result) {
-	                    return defaultValue;
-	                }
-	                return result;
-	            } catch (e) {
-	                return this.fail(e);
+	            if (null === result) {
+	                return defaultValue;
 	            }
+	            return result;
 	        }
-	
-	        /**
-	         * Writes a value to the store under the specified key
-	         * @param {string} key The key to use when storing
-	         * @param {string} value The value to store
-	         * @param {object} [options] A map of options. See the respective backends.
-	         * @throws {Error} If not silent
-	         * @returns {Storage|boolean} If silent, returns false on error. Returns this on success.
-	         */
-	
 	    }, {
 	        key: 'set',
 	        value: function set(key, value, options) {
-	            try {
-	                this.store.set(key, value, options);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	            this.store.set(key, value, options);
+	            return this;
 	        }
-	
-	        /**
-	         * Checks whether the store knows about the specified key
-	         * @param {string} key The key to check for existance
-	         * @throws {Error} If not silent
-	         * @returns {boolean} If silent, returns false on error (!!)
-	         */
-	
 	    }, {
 	        key: 'has',
 	        value: function has(key) {
-	            try {
-	                return this.store.has(key);
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	            return this.store.has(key);
 	        }
-	
-	        /**
-	         * Deletes the specified key and its value from the store
-	         * @param {string} key The key to delete
-	         * @returns {Storage|boolean} If silent, returns false on error
-	         */
-	
 	    }, {
 	        key: 'remove',
 	        value: function remove(key) {
-	            try {
-	                this.store.remove(key);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
-	        }
-	
-	        /**
-	         * Wrapper for error handling
-	         * @private
-	         * @param {Error|string} reason What is happening?
-	         * @returns {boolean}
-	         */
-	
-	    }, {
-	        key: 'fail',
-	        value: function fail(reason) {
-	            if (this.silent) {
-	                return false;
-	            }
-	
-	            if (!reason instanceof Error) {
-	                reason = new Error(reason);
-	            }
-	
-	            throw reason;
+	            this.store.remove(key);
+	            return this;
 	        }
 	    }]);
 	
 	    return Storage;
 	})();
-	
-	module.exports = Storage;
 
 /***/ },
 /* 13 */
