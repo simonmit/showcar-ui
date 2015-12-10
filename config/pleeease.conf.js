@@ -1,10 +1,14 @@
-module.exports = {
+module.exports = (function() {
+    var grunt = require("grunt");
+    var DEBUG = !!grunt.option('dbg');
 
-    options: {
-        autoprefixer: {'browsers': ['last 2 versions', '> 5%']},
-        minifier: true
-    },
-    files: {
-        'dist/': 'dist/*.css'
-    }
-};
+    return {
+        options: {
+            autoprefixer: {'browsers': ['last 2 versions', '> 5%']},
+            minifier: !DEBUG
+        },
+        files: {
+            'dist/': 'dist/*.css'
+        }
+    };
+})();
