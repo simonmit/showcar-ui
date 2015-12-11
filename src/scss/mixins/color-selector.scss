@@ -52,9 +52,7 @@
   }
 
   &:checked + label:before {
-    //replace with tick
     text-align: center;
-    //background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
   }
 }
