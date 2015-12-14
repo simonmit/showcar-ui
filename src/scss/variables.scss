@@ -60,11 +60,12 @@ $XXXL: 40px;
 
 // viewports
 // ----------------------------
-$viewportXS: 0; // 0 - 319
-$viewportS: 320px; // 320 - 767
+$viewportXS: 0; // 0 - 320
+$viewportS: 321px; // 321 - 767
 $viewportM: 768px; // 768 - 1023
 $viewportL: 1024px; // 1024 - 1099
-$viewportXL: 1100px; // 1100 - ∞
+$viewportXL: 1100px; // 1100 - 1269
+$viewportXXL: 1270px; // 1270 - ∞
 
 //old viewport variables for compatibility, please use $viewportX instead
 $mobile: $viewportS;
