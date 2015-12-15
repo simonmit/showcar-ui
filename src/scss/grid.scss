@@ -2,17 +2,6 @@
 @import "mixins/utils";
 @import "variables";
 
-$susy: (
-  columns: 12,
-  global-box-sizing: border-box,
-  gutters: $gutter-width / $grid-column-width,
-  gutter-position: split,
-  container: $grid-max-width,
-  debug: (
-    image: $susy-grid-background,
-  )
-);
-
 .content-container {
   @include container;
   position: relative;
