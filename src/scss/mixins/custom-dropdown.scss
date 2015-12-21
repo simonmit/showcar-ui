@@ -22,11 +22,24 @@
 
         & > p {
             @include avoid-selection();
-            @extend %icon-dropdown-arrow-down;
+
             @include ellipsis();
 
-            background-position: right center;
-            padding-right: 18px;
+            padding-right: 26px;
+            overflow: hidden;
+
+            &:after {
+                @extend %icon-dropdown-arrow-down;
+                background-color: #fff;
+                background-position: 4px center;
+
+                position: absolute;
+                top: $form-border-radius;
+                bottom: $form-border-radius;
+                right: $form-border-radius;
+                content: '';
+                width: 34px;
+            }
         }
     }
 
