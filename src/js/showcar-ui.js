@@ -15,16 +15,9 @@ require('./components/rotating-arrow.js')();
 require('./components/custom-dropdown.js');
 require('./components/sticky.js')();
 
-$(function () {
-    var dataFontSource = $('[data-font-source]');
-
-    if (dataFontSource.length > 0) {
-        window.WebFontConfig = {
-            custom: {
-                families: ['Source Sans Pro'],
-                urls: [dataFontSource.attr('data-font-source')]
-            }
-        };
-    }
+var FontFaceObserver = require('fontfaceobserver');
+var observer = new FontFaceObserver('Source Sans Pro');
+observer.check().then(function () {
+    $('body').addClass('font-loaded');
 });
 
