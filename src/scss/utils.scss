@@ -82,4 +82,6 @@
   }
 }
 
-
+.box-spacing {
+  @extend %box-spacing;
+}

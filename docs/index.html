@@ -79,6 +79,7 @@
             <li><a href="#horizontal-line">Horizontal line</a></li>
             <li><a href="#ellipsis">Ellipsis</a></li>
             <li><a href="#visibility">Visibility</a></li>
+            <li><a href="#box-spacing">Box spacing</a></li>
         </ul>
     </li>
     <li>
@@ -1228,6 +1229,24 @@ formatCode(`<div class="grid-row">
         </tr>
         </tbody>
     </table>
+
+    <a name="box-spacing"></a>
+    <h3>Box spacing</h3>
+    <p>
+        To get a consistent spacing between content boxes, e.g. cms boxes on the home page use the css extendable
+        <code>%box-spacing</code> or the predefined class <code>box-spacing</code>
+    </p>
+    <div class="example example-box-spacing">
+        <div class="box-spacing">Box 1</div>
+        <div class="box-spacing">Box 2</div>
+        <div class="box-spacing">Box 3</div>
+    </div>
+    <pre><code class="html" id="code-box-sizing"></code></pre>
+    <script>
+        formatCode(`<div class="box-spacing">...</div>
+<div class="box-spacing">...</div>
+        `, '#code-box-sizing');
+    </script>
 </div>
 <div>
     <a name="components"></a>
@@ -1303,7 +1322,7 @@ formatCode(`<div class="grid-row">
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons</label>
-        <custom-dropdown class="icon" checkboxgroup>
+        <custom-dropdown class="icon" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
@@ -1501,7 +1520,10 @@ formatCode(`<div class="grid-row">
     </div>
 
 
-
+<div class="container-non-smoking-vehicle">
+    <input type="checkbox" id="nonSmokingVehicle" name="eq" value="110">
+    <label for="nonSmokingVehicle">Non-smoking Vehicle</label>
+</div>
 
 
 

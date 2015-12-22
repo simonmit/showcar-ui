@@ -30,3 +30,15 @@
         @content;
     }
 }
+
+%box-spacing {
+    margin-bottom: 40px;
+
+    @include mqmin($viewportS) {
+        margin-bottom: 60px;
+    }
+
+    @include mqmin($viewportL) {
+        margin-bottom: 80px;
+    }
+}
