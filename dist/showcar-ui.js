@@ -62,7 +62,7 @@
 	__webpack_require__(17);
 	__webpack_require__(18)();
 	
-	var FontFaceObserver = __webpack_require__(19);
+	var FontFaceObserver = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fontfaceobserver\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var observer = new FontFaceObserver('Source Sans Pro');
 	observer.check().then(function () {
 	    $('body').addClass('font-loaded');
@@ -841,12 +841,12 @@
 	(function (e, t, n, r) {
 	  "use strict";
 	  function rt(e, t) {
-	    for (var n = 0, r = e.length; n < r; n++) dt(e[n], t);
+	    for (var n = 0, r = e.length; n < r; n++) vt(e[n], t);
 	  }function it(e) {
 	    for (var t = 0, n = e.length, r; t < n; t++) r = e[t], nt(r, b[ot(r)]);
 	  }function st(e) {
 	    return function (t) {
-	      j(t) && (dt(t, e), rt(t.querySelectorAll(w), e));
+	      j(t) && (vt(t, e), rt(t.querySelectorAll(w), e));
 	    };
 	  }function ot(e) {
 	    var t = e.getAttribute("is"),
@@ -858,7 +858,7 @@
 	    var t = e.currentTarget,
 	        n = e.attrChange,
 	        r = e.attrName,
-	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
+	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" & e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
 	  }function ft(e) {
 	    var t = st(e);return function (e) {
 	      X.push(t, e.target);
@@ -870,8 +870,10 @@
 	  }function ht(e, t) {
 	    D(e, t), et ? et.observe(e, z) : (J && (e.setAttribute = ct, e[i] = Z(e), e.addEventListener(p, G)), e.addEventListener(c, at)), e.createdCallback && Q && (e.created = !0, e.createdCallback(), e.created = !1);
 	  }function pt() {
-	    for (var e, t = 0, n = F.length; t < n; t++) e = F[t], E.contains(e) || (F.splice(t, 1), dt(e, o));
-	  }function dt(e, t) {
+	    for (var e, t = 0, n = F.length; t < n; t++) e = F[t], E.contains(e) || (n--, F.splice(t--, 1), vt(e, o));
+	  }function dt(e) {
+	    throw new Error("A " + e + " type is already registered");
+	  }function vt(e, t) {
 	    var n,
 	        r = ot(e);-1 < r && (tt(e, b[r]), r = 0, t === s && !e[s] ? (e[o] = !1, e[s] = !0, r = 1, B && S.call(F, e) < 0 && F.push(e)) : t === o && !e[o] && (e[s] = !1, e[o] = !0, r = 1), r && (n = e[t + "Callback"]) && n.call(e));
 	  }if (r in t) return;var i = "__" + r + (Math.random() * 1e5 >> 0),
@@ -904,8 +906,8 @@
 	      A = n.getPrototypeOf,
 	      O = n.setPrototypeOf,
 	      M = !!n.__proto__,
-	      _ = n.create || function vt(e) {
-	    return e ? (vt.prototype = e, new vt()) : this;
+	      _ = n.create || function mt(e) {
+	    return e ? (mt.prototype = e, new mt()) : this;
 	  },
 	      D = O || (M ? function (e, t) {
 	    return e.__proto__ = t, e;
@@ -985,11 +987,11 @@
 	  }, Z = function (e) {
 	    for (var t, n, r = {}, i = e.attributes, s = 0, o = i.length; s < o; s++) t = i[s], n = t.name, n !== "setAttribute" && (r[n] = t.value);return r;
 	  })), t[r] = function (n, r) {
-	    p = n.toUpperCase(), $ || ($ = !0, P ? (et = (function (e, t) {
+	    c = n.toUpperCase(), $ || ($ = !0, P ? (et = (function (e, t) {
 	      function n(e, t) {
 	        for (var n = 0, r = e.length; n < r; t(e[n++]));
 	      }return new P(function (r) {
-	        for (var i, s, o = 0, u = r.length; o < u; o++) i = r[o], i.type === "childList" ? (n(i.addedNodes, e), n(i.removedNodes, t)) : (s = i.target, Q && s.attributeChangedCallback && i.attributeName !== "style" && s.attributeChangedCallback(i.attributeName, i.oldValue, s.getAttribute(i.attributeName)));
+	        for (var i, s, o, u = 0, a = r.length; u < a; u++) i = r[u], i.type === "childList" ? (n(i.addedNodes, e), n(i.removedNodes, t)) : (s = i.target, Q && s.attributeChangedCallback && i.attributeName !== "style" && (o = s.getAttribute(i.attributeName), o !== i.oldValue && s.attributeChangedCallback(i.attributeName, i.oldValue, o)));
 	      });
 	    })(st(s), st(o)), et.observe(t, { childList: !0, subtree: !0 })) : (X = [], V(function E() {
 	      while (X.length) X.shift().call(null, X.shift());V(E);
@@ -1001,14 +1003,14 @@
 	    }, H.cloneNode = function (e) {
 	      var t = I.call(this, !!e),
 	          n = ot(t);return -1 < n && nt(t, b[n]), e && it(t.querySelectorAll(w)), t;
-	    });if (-2 < S.call(y, v + p) + S.call(y, d + p)) throw new Error("A " + n + " type is already registered");if (!m.test(p) || -1 < S.call(g, p)) throw new Error("The type " + n + " is invalid");var i = function i() {
-	      return f ? t.createElement(l, p) : t.createElement(l);
+	    }), -2 < S.call(y, v + c) + S.call(y, d + c) && dt(n);if (!m.test(c) || -1 < S.call(g, c)) throw new Error("The type " + n + " is invalid");var i = function i() {
+	      return f ? t.createElement(l, c) : t.createElement(l);
 	    },
 	        a = r || x,
 	        f = T.call(a, u),
-	        l = f ? r[u].toUpperCase() : p,
-	        c = y.push((f ? v : d) + p) - 1,
-	        p;return w = w.concat(w.length ? "," : "", f ? l + '[is="' + n.toLowerCase() + '"]' : l), i.prototype = b[c] = T.call(a, "prototype") ? a.prototype : _(H), rt(t.querySelectorAll(w), s), i;
+	        l = f ? r[u].toUpperCase() : c,
+	        c,
+	        p;return f && -1 < S.call(y, d + l) && dt(l), p = y.push((f ? v : d) + c) - 1, w = w.concat(w.length ? "," : "", f ? l + '[is="' + n.toLowerCase() + '"]' : l), i.prototype = b[p] = T.call(a, "prototype") ? a.prototype : _(H), rt(t.querySelectorAll(w), s), i;
 	  };
 	})(window, document, Object, "registerElement");
 
@@ -3817,50 +3819,134 @@
 	    cookie: __webpack_require__(15)
 	};
 	
-	module.exports = (function () {
+	var Storage = (function () {
+	    /**
+	     * @constructor
+	     * @param {string} type The store backend to use
+	     * @param {boolean} [silent=false] Whether to throw exceptions or fail silently returning false
+	     */
+	
 	    function Storage(type) {
+	        var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	
+	        var _ref$silent = _ref.silent;
+	        var silent = _ref$silent === undefined ? false : _ref$silent;
+	
 	        _classCallCheck(this, Storage);
 	
 	        if (!(type in stores)) {
-	            throw new Error('Unsupported type ' + type);
+	            this.fail('Storage: Unsupported type ' + type);
 	        }
 	
+	        this.silent = !!silent;
 	        this.store = new stores[type]();
 	    }
+	
+	    /**
+	     * Gets the stored value for a specified key
+	     * @param {string} key The key to look up
+	     * @param defaultValue Return this if no value has been found
+	     * @throws {Error} If not silent
+	     * @returns {string} The stored value or defaultValue
+	     */
 	
 	    _createClass(Storage, [{
 	        key: 'get',
 	        value: function get(key) {
 	            var defaultValue = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
 	
-	            var result = this.store.get(key);
+	            try {
+	                var result = this.store.get(key);
 	
-	            if (null === result) {
-	                return defaultValue;
+	                if (null === result) {
+	                    return defaultValue;
+	                }
+	                return result;
+	            } catch (e) {
+	                return this.fail(e);
 	            }
-	            return result;
 	        }
+	
+	        /**
+	         * Writes a value to the store under the specified key
+	         * @param {string} key The key to use when storing
+	         * @param {string} value The value to store
+	         * @param {object} [options] A map of options. See the respective backends.
+	         * @throws {Error} If not silent
+	         * @returns {Storage|boolean} If silent, returns false on error. Returns this on success.
+	         */
+	
 	    }, {
 	        key: 'set',
 	        value: function set(key, value, options) {
-	            this.store.set(key, value, options);
-	            return this;
+	            try {
+	                this.store.set(key, value, options);
+	                return this;
+	            } catch (e) {
+	                return this.fail(e);
+	            }
 	        }
+	
+	        /**
+	         * Checks whether the store knows about the specified key
+	         * @param {string} key The key to check for existance
+	         * @throws {Error} If not silent
+	         * @returns {boolean} If silent, returns false on error (!!)
+	         */
+	
 	    }, {
 	        key: 'has',
 	        value: function has(key) {
-	            return this.store.has(key);
+	            try {
+	                return this.store.has(key);
+	            } catch (e) {
+	                return this.fail(e);
+	            }
 	        }
+	
+	        /**
+	         * Deletes the specified key and its value from the store
+	         * @param {string} key The key to delete
+	         * @returns {Storage|boolean} If silent, returns false on error
+	         */
+	
 	    }, {
 	        key: 'remove',
 	        value: function remove(key) {
-	            this.store.remove(key);
-	            return this;
+	            try {
+	                this.store.remove(key);
+	                return this;
+	            } catch (e) {
+	                return this.fail(e);
+	            }
+	        }
+	
+	        /**
+	         * Wrapper for error handling
+	         * @private
+	         * @param {Error|string} reason What is happening?
+	         * @returns {boolean}
+	         */
+	
+	    }, {
+	        key: 'fail',
+	        value: function fail(reason) {
+	            if (this.silent) {
+	                return false;
+	            }
+	
+	            if (!reason instanceof Error) {
+	                reason = new Error(reason);
+	            }
+	
+	            throw reason;
 	        }
 	    }]);
 	
 	    return Storage;
 	})();
+	
+	module.exports = Storage;
 
 /***/ },
 /* 13 */
@@ -4166,85 +4252,6 @@
 	        handleStickies();
 	    });
 	};
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	(function () {
-	  'use strict';
-	  function h(a) {
-	    document.body ? a() : document.addEventListener("DOMContentLoaded", a);
-	  };function k(a) {
-	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.g = document.createElement("span");this.f = -1;this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	    this.g.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.g);this.a.appendChild(this.b);this.a.appendChild(this.c);
-	  }
-	  function w(a, b) {
-	    a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
-	  }function x(a) {
-	    var b = a.a.offsetWidth,
-	        c = b + 100;a.g.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.f !== b ? (a.f = b, !0) : !1;
-	  }
-	  function y(a, b) {
-	    a.b.addEventListener("scroll", function () {
-	      x(a) && null !== a.a.parentNode && b(a.f);
-	    }, !1);a.c.addEventListener("scroll", function () {
-	      x(a) && null !== a.a.parentNode && b(a.f);
-	    }, !1);x(a);
-	  };function z(a, b) {
-	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
-	  }var A = null,
-	      B = null,
-	      F = !!window.FontFace;function G() {
-	    if (null === B) {
-	      var a = document.createElement("div");a.style.font = "condensed 100px sans-serif";B = "" !== a.style.font;
-	    }return B;
-	  }function H(a, b) {
-	    return [a.style, a.weight, G() ? a.stretch : "", "100px", b].join(" ");
-	  }
-	  z.prototype.a = function (a, b) {
-	    var c = this,
-	        q = a || "BESbswy",
-	        C = b || 3E3,
-	        D = Date.now();return new Promise(function (a, b) {
-	      if (F) {
-	        var p = function p() {
-	          Date.now() - D >= C ? b(c) : document.fonts.load(H(c, c.family), q).then(function (b) {
-	            1 <= b.length ? a(c) : setTimeout(p, 25);
-	          }).catch(function () {
-	            b(c);
-	          });
-	        };p();
-	      } else h(function () {
-	        function r() {
-	          var b;if (b = -1 != e && -1 != f || -1 != e && -1 != g || -1 != f && -1 != g) (b = e != f && e != g && f != g) || (null === A && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), A = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = A && (e == t && f == t && g == t || e == u && f == u && g == u || e == v && f == v && g == v)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(E), a(c));
-	        }function p() {
-	          if (Date.now() - D >= C) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
-	            var a = document.hidden;if (!0 === a || void 0 === a) e = l.a.offsetWidth, f = m.a.offsetWidth, g = n.a.offsetWidth, r();E = setTimeout(p, 50);
-	          }
-	        }var l = new k(q),
-	            m = new k(q),
-	            n = new k(q),
-	            e = -1,
-	            f = -1,
-	            g = -1,
-	            t = -1,
-	            u = -1,
-	            v = -1,
-	            d = document.createElement("div"),
-	            E = 0;d.dir = "ltr";w(l, H(c, "sans-serif"));w(m, H(c, "serif"));w(n, H(c, "monospace"));d.appendChild(l.a);d.appendChild(m.a);d.appendChild(n.a);document.body.appendChild(d);t = l.a.offsetWidth;u = m.a.offsetWidth;v = n.a.offsetWidth;p();y(l, function (a) {
-	          e = a;r();
-	        });w(l, H(c, '"' + c.family + '",sans-serif'));y(m, function (a) {
-	          f = a;r();
-	        });w(m, H(c, '"' + c.family + '",serif'));y(n, function (a) {
-	          g = a;r();
-	        });w(n, H(c, '"' + c.family + '",monospace'));
-	      });
-	    });
-	  };window.FontFaceObserver = z;window.FontFaceObserver.prototype.check = z.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
-	})();
 
 /***/ }
 /******/ ]);

@@ -9,6 +9,8 @@ collapse();
 require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 
 window.Storage = require('../../vendor/showcar-storage/src/storage.js');
+var tracking = require('../../vendor/showcar-tracking/src/index.js');
+window.ut = tracking.ut || [];
 
 
 require('./components/rotating-arrow.js')();
