@@ -28,5 +28,11 @@
     "load-grunt-tasks": "^3.3.0",
     "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "amp-index-of": "^1.1.0",
+    "amp-is-date": "^1.0.1",
+    "amp-merge": "^1.0.0",
+    "cookies-js": "^1.2.1"
   }
 }
