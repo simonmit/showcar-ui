@@ -1,0 +1,33 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'aws-sdk-core'
+
+SERVICE = 'showcar-ui-docs'
+REGION = ENV['REGION'] || 'eu-west-1'
+S3_ARTIFACTS_BUCKET = "as24-showcar-ui-docs"
+
+Aws.config = { region: REGION }
+
+desc "publish"
+task :publish do
+  Dir.chdir('../')
+  dist = Dir['dist/*'].select { |f| File.file?(f) }
+  docs = Dir['docs/**/*'].select { |f| File.file?(f) }
+  artifacts = dist + docs
+
+  s3 = Aws::S3::Client.new
+
+  artifacts.each {
+      |filename| s3.put_object(bucket: S3_ARTIFACTS_BUCKET,
+                  key: filename,
+                  body: File.read(filename),
+                  acl: 'bucket-owner-full-control')
+
+    puts "Copied file: #{filename}"
+  }
+end
+
+def log(str)
+  $stdout.puts str
+  $stdout.flush
+end
