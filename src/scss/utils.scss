@@ -1,3 +1,4 @@
+@import "variables";
 @import "mixins/utils";
 @import "mixins/ellipsis";
 
@@ -27,7 +28,6 @@
 .text-nowrap {
   white-space: nowrap;
 }
-
 
 .block-center {
   display: block;
@@ -83,5 +83,13 @@
 }
 
 .box-spacing {
-  @extend %box-spacing;
+  margin-bottom: 40px;
+
+  @include mqmin($viewportS) {
+      margin-bottom: 60px;
+  }
+
+  @include mqmin($viewportL) {
+      margin-bottom: 80px;
+  }
 }
