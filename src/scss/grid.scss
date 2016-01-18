@@ -2,7 +2,7 @@
 @import "mixins/utils";
 @import "variables";
 
-.content-container {
+.sc-content-container {
   @include container;
   position: relative;
 
@@ -12,7 +12,7 @@
   }
 }
 
-.grid-row {
+.sc-grid-row {
   @include clearfix;
   $negativMargin: percentage(map-get($susy, gutters) / susy-sum(map-get($susy, columns), map-get($susy, gutters), wide)) / 2;
   margin-left: -$negativMargin;
@@ -23,31 +23,31 @@
   }
 
   @for $i from 1 through 12 {
-    .grid-col-#{$i} {
+    .sc-grid-col-#{$i} {
       @include span($i);
     }
 
     //xl viewport
     @include mqmin($viewportXL) {
-      .grid-col-xl-#{$i} {
+      .sc-grid-col-xl-#{$i} {
         @include span($i);
       }
     }
     //l viewport
     @include mqmax($viewportXL - 1) {
-      .grid-col-l-#{$i} {
+      .sc-grid-col-l-#{$i} {
         @include span($i);
       }
     }
     //m viewport
     @include mqmax($viewportL - 1) {
-      .grid-col-m-#{$i} {
+      .sc-grid-col-m-#{$i} {
         @include span($i);
       }
     }
     //s viewport
     @include mqmax($viewportM - 1) {
-      .grid-col-s-#{$i} {
+      .sc-grid-col-s-#{$i} {
         @include span($i);
       }
     }
