@@ -1,33 +1,33 @@
 @import "mixins/fonts";
 
-.font-s {
+.sc-font-s {
   @include font(S);
 }
 
-.font-m {
+.sc-font-m {
   @include font(M);
 }
 
-.font-l {
+.sc-font-l {
   @include font(L);
 }
 
-.font-xl {
+.sc-font-xl {
   @include font(XL);
 }
 
-.font-xxl {
+.sc-font-xxl {
   @include font(XXL);
 }
 
-.font-xxxl {
+.sc-font-xxxl {
   @include font(XXXL);
 }
 
-.font-silent {
+.sc-font-silent {
   @include font-silent;
 }
 
-.font-bold {
+.sc-font-bold {
   @include font-bold;
 }
