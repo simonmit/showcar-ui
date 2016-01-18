@@ -1,22 +1,22 @@
 @import "mixins/buttons";
 
-.btn-bob-l {
+.sc-btn-bob-l {
   @include button(bob, l);
 }
 
-.btn-bob-m {
+.sc-btn-bob-m {
   @include button(bob, m);
 }
 
-.btn-ross-l {
+.sc-btn-ross-l {
   @include button(ross, l);
 }
 
-.btn-ross-m {
+.sc-btn-ross-m {
   @include button(ross, m);
 }
 
-.btn-block {
+.sc-btn-block {
   display: block;
   width: 100%;
 }
