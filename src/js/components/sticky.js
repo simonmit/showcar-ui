@@ -28,9 +28,9 @@ module.exports = function() {
 
             // if element is within scrolling area, scroll, else don't
             if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
-                stickyEl.addClass('sticky');
+                stickyEl.addClass('sc-sticky');
             } else {
-                stickyEl.removeClass('sticky');
+                stickyEl.removeClass('sc-sticky');
             }
         });
     }
