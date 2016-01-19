@@ -1037,7 +1037,7 @@ formatCode(`<div class="sc-grid-row">
     <pre><code class="html" id="code-groups"></code></pre>
     <script>
         formatCode(`<div class="sc-input-group">
-    <input type="text">
+    <input class="sc-input" type="text">
     ...
 </div>
 
@@ -1060,56 +1060,61 @@ formatCode(`<div class="sc-grid-row">
     <a name="floats"></a>
     <h3>Floats</h3>
     <div class="example example-floats">
-        <div class="clearfix">
-            <div class="pull-left"></div>
-            <div class="pull-left"></div>
-            <div class="pull-left"></div>
+        <div class="sc-clearfix">
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
         </div>
         <hr>
-        <div class="clearfix">
-            <div class="pull-right"></div>
-            <div class="pull-right"></div>
-            <div class="pull-right"></div>
+        <div class="sc-clearfix">
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
         </div>
     </div>
     <pre><code class="html" id="code-floats"></code></pre>
     <script>
-        formatCode(`<div class="clearfix">...</div>
-
-<div class="pull-left">...</div>
-<div class="pull-right">...</div>`, '#code-floats');
+        formatCode(`<div class="sc-clearfix">
+    <div class="sc-pull-left">...</div>
+    <div class="sc-pull-right">...</div>
+</div>`, '#code-floats');
     </script>
 
     <a name="text-alignment"></a>
     <h3>Text alignment</h3>
     <div class="example example-text-alignment">
-        <p class="text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text aligned left</strong>
+        <p class="sc-text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text aligned right</strong>
+        <p class="sc-text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Centered text</strong>
+        <p class="sc-text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Justified text</strong>
+        <p class="sc-text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text without wrapping</strong>
+        <p class="sc-text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
     <pre><code class="html" id="code-text-alignment"></code></pre>
     <script>
-        formatCode(`<p class="text-left">...</p>
-<p class="text-right">...</p>
-<p class="text-center">...</p>
-<p class="text-justify">...</p>
-<p class="text-nowrap">...</p>`, '#code-text-alignment');
+        formatCode(`<p class="sc-text-left">...</p>
+<p class="sc-text-right">...</p>
+<p class="sc-text-center">...</p>
+<p class="sc-text-justify">...</p>
+<p class="sc-text-nowrap">...</p>`, '#code-text-alignment');
     </script>
 
     <a name="center-blocks"></a>
     <h3>Center content blocks</h3>
     <div class="example example-block-center">
-        <div class="block-center">.block-center</div>
+        <div class="sc-block-center">.sc-block-center</div>
     </div>
     <pre><code class="html" id="code-block-center"></code></pre>
     <script>
-        formatCode(`<div class="block-center">...</div>`, '#code-block-center');
+        formatCode(`<div class="sc-block-center">...</div>`, '#code-block-center');
     </script>
 
     <a name="horizontal-line"></a>
@@ -1129,11 +1134,11 @@ formatCode(`<div class="sc-grid-row">
     <h3>Ellipsis</h3>
     <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
     <div class="example example-ellipsis">
-        <div class="ellipsis" title="My very long text">My very long text</div>
+        <div class="sc-ellipsis" title="My very long text">My very long text</div>
     </div>
     <pre><code class="html" id="code-ellipsis"></code></pre>
     <script>
-        formatCode(`<div class="ellipsis" title="...">...</div>`, '#code-ellipsis');
+        formatCode(`<div class="sc-ellipsis" title="...">...</div>`, '#code-ellipsis');
     </script>
 
     <a name="visibility"></a>

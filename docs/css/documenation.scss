@@ -2,280 +2,280 @@
 
 
 body {
-  padding: 20px 40px;
+    padding: 20px 40px;
 }
 
 h1 {
-  font-size: 4rem;
-  margin: 20px 0 10px;
+    font-size: 4rem;
+    margin: 20px 0 10px;
 }
 h2 {
-  font-size: 2rem;
-  margin: 20px 0 10px;
+    font-size: 2rem;
+    margin: 20px 0 10px;
 }
 h3 {
-  font-size: 1.6rem;
-  margin: 20px 0 10px;
+    font-size: 1.6rem;
+    margin: 20px 0 10px;
 }
 p {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 code {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  background-color: #f9f2f4 !important;
-  color: #c7254e;
-  padding: 2px 4px;
-  font-size: 90%;
-  border-radius: $form-border-radius;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    background-color: #f9f2f4 !important;
+    color: #c7254e;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: $form-border-radius;
 
-  .hljs-value {
-    color: #c7254e !important;
-  }
+    .hljs-value {
+        color: #c7254e !important;
+    }
 }
 
 pre {
-  border: 1px solid $black-30;
-  border-radius: $form-border-radius;
+    border: 1px solid $black-30;
+    border-radius: $form-border-radius;
 
-  code {
-    border: 0;
+    code {
+        border: 0;
 
-    &:before {
-      content: 'Code:';
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: $black-70;
+        &:before {
+            content: 'Code:';
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: $black-70;
+        }
     }
-  }
 }
 
 .docs-navigation {
-  margin: 0.5em;
+    margin: 0.5em;
 
-  ul {
-    margin-left: 30px;
-  }
+    ul {
+        margin-left: 30px;
+    }
 }
 
 .docs-table {
-  border: 1px solid $black-30;
-  border-radius: $form-border-radius;
-  border-collapse: separate;
-  margin: 20px 0;
+    border: 1px solid $black-30;
+    border-radius: $form-border-radius;
+    border-collapse: separate;
+    margin: 20px 0;
 
-  th {
-    background: $black-40;
-    font-weight: bold;
-  }
-
-  th, td {
-    padding: 8px 16px;
-    border-left: 1px solid $black-30;
-    border-bottom: 1px solid $black-30;
-    text-align: center;
-
-    &:first-child {
-      border-left: 0;
+    th {
+        background: $black-40;
+        font-weight: bold;
     }
-  }
-  tr:nth-child(even) td {
-    background: $black-20;
-  }
-  tr:last-child td {
-    border-bottom: none;
-  }
+
+    th, td {
+        padding: 8px 16px;
+        border-left: 1px solid $black-30;
+        border-bottom: 1px solid $black-30;
+        text-align: center;
+
+        &:first-child {
+            border-left: 0;
+        }
+    }
+    tr:nth-child(even) td {
+        background: $black-20;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
 }
 
 .example {
-  border: 1px solid $black-30;
-  border-radius: $form-border-radius;
-  padding: 20px 0.5em;
-  margin-top: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-
-  &:before {
-    content: 'Example:';
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: $black-70;
-  }
-
-  & + pre {
     border: 1px solid $black-30;
-    border-top: 0;
     border-radius: $form-border-radius;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    margin-bottom: 10px;
+    padding: 20px 0.5em;
+    margin-top: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
-    code {
-      border-radius: 0;
+    &:before {
+        content: 'Example:';
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $black-70;
     }
-  }
+
+    & + pre {
+        border: 1px solid $black-30;
+        border-top: 0;
+        border-radius: $form-border-radius;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-bottom: 10px;
+
+        code {
+            border-radius: 0;
+        }
+    }
 }
 
 .table-var-wrapper {
-  margin: 0 -10px;
+    margin: 0 -10px;
 
-  .docs-table-variable-color {
-    margin: 10px;
+    .docs-table-variable-color {
+        margin: 10px;
 
-    th {
-      width: 200px;
+        th {
+            width: 200px;
+        }
+        .text-white {
+            color: #fff;
+        }
     }
-    .text-white {
-      color: #fff;
-    }
-  }
 }
 
 
 .example-content-container {
-  .sc-content-container {
-    border: 1px solid $black-70;
-  }
+    .sc-content-container {
+        border: 1px solid $black-70;
+    }
 }
 
 .example-grid {
-  .sc-grid-row {
-    //margin: 2.5px 0;
+    .sc-grid-row {
+        //margin: 2.5px 0;
 
-    > div {
-      background: $black-20;
-      margin-bottom: 5px;
-      padding: 5px;
+        > div {
+            background: $black-20;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
     }
-  }
 }
 
 .docs-table-grid {
-  th, td {
-    width: 33.3%;
-  }
+    th, td {
+        width: 33.3%;
+    }
 }
 
 .example-buttons {
-  button {
-    margin: 5px 0;
-  }
+    button {
+        margin: 5px 0;
+    }
 }
 .example-body-copy {
-  p {
-    margin: 20px 0;
-  }
+    p {
+        margin: 20px 0;
+    }
 }
 .example-inputs {
-  & > * {
-    margin: 5px 0;
-  }
+    & > * {
+        margin: 5px 0;
+    }
 }
 .example-groups {
-  .sc-input-group,
-  .sc-input-group-radio {
-    margin: 10px 0;
-    width: 80%;
-    max-width: 600px;
-  }
-  .input-group-emission-badge {
-    max-width: 400px;
-
-    as24-icon svg {
-        width: 24px;
-        height: 24px;
+    .sc-input-group,
+    .sc-input-group-radio {
+        margin: 10px 0;
+        width: 80%;
+        max-width: 600px;
     }
-  }
+    .input-group-emission-badge {
+        max-width: 400px;
+
+        as24-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
 }
 .example-selects {
-  select {
-    margin: 5px 0;
-  }
+    select {
+        margin: 5px 0;
+    }
 }
 .example-floats {
-  .pull-left,
-  .pull-right {
-    width: 100px;
-    height: 100px;
-    background: $orange-100;
-    margin: 10px;
-  }
+    .sc-pull-left,
+    .sc-pull-right {
+        width: 100px;
+        height: 100px;
+        background: $orange-100;
+        margin: 10px;
+    }
 }
 .example-text-alignment {
-  overflow: hidden;
+    overflow: hidden;
 }
 .example-block-center {
-  .block-center {
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    background: $orange-100;
-  }
+    .sc-block-center {
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        background: $orange-100;
+    }
 }
 
 .example-horizontal-line {
-  padding: 0;
-  p {
-    padding: 0.5em;
-  }
+    padding: 0;
+    p {
+        padding: 0.5em;
+    }
 }
 
 .example-box-spacing {
-  div {
-    background-color: $orange-100;
-  }
+    div {
+        background-color: $orange-100;
+    }
 }
 
 @import "../../src/scss/mixins/color-selector";
 .sc-color-selector {
-  input {
-    &.red {
-      @include color-selector-color(#ff0000, #fff);
+    input {
+        &.red {
+            @include color-selector-color(#ff0000, #fff);
+        }
+        &.yellow {
+            @include color-selector-color(yellow);
+        }
+        &.green {
+            @include color-selector-color(green, #fff);
+        }
+        &.gold {
+            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+        }
+        &.blue {
+            @include color-selector-color(blue, #fff);
+        }
+        &.orange {
+            @include color-selector-color(orange, #fff);
+        }
     }
-    &.yellow {
-      @include color-selector-color(yellow);
-    }
-    &.green {
-      @include color-selector-color(green, #fff);
-    }
-    &.gold {
-      @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
-    }
-    &.blue {
-      @include color-selector-color(blue, #fff);
-    }
-    &.orange {
-      @include color-selector-color(orange, #fff);
-    }
-  }
 }
 
 .example-ellipsis {
-  .ellipsis {
-    width: 50px;
-    border: 1px solid black;
-  }
+    .sc-ellipsis {
+        width: 50px;
+        border: 1px solid black;
+    }
 }
 
 .docs-table-visibility tr {
-  td.cell-visible {
-    background-color: $color-success-message;
-  }
-  td.cell-hidden {
-    background-color: $color-error-message;
-  }
+    td.cell-visible {
+        background-color: $color-success-message;
+    }
+    td.cell-hidden {
+        background-color: $color-error-message;
+    }
 }
 
 .example-sticky {
-  .spacer {
-    height: 200px;
-    border: 1px solid black;
-  }
+    .spacer {
+        height: 200px;
+        border: 1px solid black;
+    }
 }
 
 .sticky-list {
-  list-style-type: disc;
-  margin-left: 40px;
+    list-style-type: disc;
+    margin-left: 40px;
 }

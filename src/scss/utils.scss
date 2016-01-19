@@ -2,87 +2,87 @@
 @import "mixins/utils";
 @import "mixins/ellipsis";
 
-.clearfix {
+.sc-clearfix {
   @include clearfix;
 }
 
-.pull-right {
+.sc-pull-right {
   float: right !important;
 }
-.pull-left {
+.sc-pull-left {
   float: left !important;
 }
 
-.text-left {
+.sc-text-left {
   text-align: left;
 }
-.text-right {
+.sc-text-right {
   text-align: right;
 }
-.text-center {
+.sc-text-center {
   text-align: center;
 }
-.text-justify {
+.sc-text-justify {
   text-align: justify;
 }
-.text-nowrap {
+.sc-text-nowrap {
   white-space: nowrap;
 }
 
-.block-center {
+.sc-block-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.ellipsis {
+.sc-ellipsis {
   @include ellipsis();
 }
 
-.hidden {
+.sc-hidden {
   display: none;
 }
-.visible {
+.sc-visible {
   display: initial;
 }
 //xl viewport
 @include mqmin($viewportXL) {
-  .hidden-xl {
+  .sc-hidden-xl {
     display: none;
   }
-  .visible-xl {
+  .sc-visible-xl {
     display: initial;
   }
 }
 //l viewport
 @include mqmax($viewportXL - 1) {
-  .hidden-l {
+  .sc-hidden-l {
     display: none;
   }
-  .visible-l {
+  .sc-visible-l {
     display: initial;
   }
 }
 //m viewport
 @include mqmax($viewportL - 1) {
-  .hidden-m {
+  .sc-hidden-m {
     display: none;
   }
-  .visible-m {
+  .sc-visible-m {
     display: initial;
   }
 }
 //s viewport
 @include mqmax($viewportM - 1) {
-  .hidden-s {
+  .sc-hidden-s {
     display: none;
   }
-  .visible-s {
+  .sc-visible-s {
     display: initial;
   }
 }
 
-.box-spacing {
+.sc-box-spacing {
   margin-bottom: 40px;
 
   @include mqmin($viewportS) {
