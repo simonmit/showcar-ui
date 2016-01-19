@@ -6,6 +6,7 @@
     @include avoid-selection();
     @include font($bold: true);
 
+    -webkit-appearance: none;
     border: none;
     border-radius: $form-border-radius;
     color: #fff;
