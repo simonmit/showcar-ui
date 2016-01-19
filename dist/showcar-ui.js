@@ -5098,34 +5098,34 @@
 	});
 	
 	function createdCallback() {
-	    this.classList.remove('open');
+	    var el = $(this);
+	    var titleElement = el.find('p');
+	    var defaultTitle = titleElement.text();
 	
-	    this.addEventListener('touchstart', function (e) {
+	    el.removeClass('sc-open');
+	    el.on('touchstart, mousedown', function (e) {
 	        e.stopPropagation();
 	    });
-	    this.addEventListener('mousedown', function (e) {
-	        e.stopPropagation();
-	    });
 	
-	    if (this.hasAttribute('checkboxgroup')) {
-	        var el = this;
-	        var titleElement = el.querySelector('p');
-	        var defaultTitle = titleElement.textContent;
-	        var updateCaption = function updateCaption() {
-	            var checkboxes = el.querySelectorAll('[type=checkbox]:checked');
-	            var texts = [];
-	            for (var i = 0, l = checkboxes.length; i < l; i++) {
-	                texts.push(checkboxes[i].nextElementSibling.innerHTML);
-	            }
-	
-	            var title = texts.join(', ') || defaultTitle;
-	            titleElement.innerHTML = title;
-	        };
-	
-	        el.addEventListener('change', updateCaption);
-	
-	        updateCaption();
+	    if (null === el.attr('checkboxgroup')) {
+	        return;
 	    }
+	
+	    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
+	    var updateCaption = function updateCaption() {
+	        var box;
+	        var checkboxes = el.find('[type=checkbox]:checked');
+	        var texts = [];
+	        checkboxes.filter(":checked").forEach(function (element) {
+	            texts.push(element.nextElementSibling.innerHTML);
+	        });
+	
+	        var title = texts.join(', ') || defaultTitle;
+	        titleElement.html(title);
+	    };
+	
+	    el.on('change', updateCaption);
+	    updateCaption();
 	}
 	
 	function attachedCallback() {
@@ -5133,7 +5133,7 @@
 	
 	    el.querySelector('p').addEventListener('mousedown', function (e) {
 	        closeAllDropdowns(el);
-	        el.classList.toggle('open');
+	        el.classList.toggle('sc-open');
 	    });
 	
 	    attachEventListeners();
@@ -5143,7 +5143,7 @@
 	    var allCds = document.querySelectorAll(tagName);
 	    for (var i = 0, l = allCds.length; i < l; i++) {
 	        if (allCds[i] !== exceptThisOne) {
-	            allCds[i].classList.remove('open');
+	            allCds[i].classList.remove('sc-open');
 	        }
 	    }
 	}
