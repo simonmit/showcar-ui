@@ -1485,27 +1485,23 @@ formatCode(`<div class="sc-grid-row">
     <h3>Pager</h3>
     <div class="example example-custom-dropdown">
 
-        <ul class="pagination">
+        <ul class="sc-pagination">
             <li class="previous-page">
                 <a class="disabled" href="">
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
-            <li class="info-page">
-                <a class="info" href="">1 / 20</a>
-            </li>
-            <li><a href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
-            <li><a href="/classified-list?make=9&amp;page=2&amp;size=20">2</a></li>
-            <li><a class="active" href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
-            <li><a href="/classified-list?make=9&amp;page=4&amp;size=20">4</a></li>
-            <li><a href="/classified-list?make=9&amp;page=5&amp;size=20">5</a></li>
-            <li><a href="/classified-list?make=9&amp;page=6&amp;size=20">6</a></li>
-            <li><a href="/classified-list?make=9&amp;page=7&amp;size=20">7</a></li>
+            <li><a href="javascript:void(0)">1</a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li><a class="active" href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li><a href="javascript:void(0)">6</a></li>
+            <li><a href="javascript:void(0)">7</a></li>
             <li><a class="disabled" href="">...</a></li>
-            <li><a href="/classified-list?make=9&amp;page=20&amp;size=20">20</a></li>
+            <li><a href="javascript:void(0)">20</a></li>
             <li class="next-page">
-                <a href="/classified-list?make=9&amp;page=2&amp;size=20">
-                    Next <as24-icon type="arrow"></as24-icon>
+                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
             </li>
         </ul>
@@ -1533,15 +1529,7 @@ formatCode(`<div class="sc-grid-row">
         </script>
     </div>
 
-
-<div class="container-non-smoking-vehicle">
-    <input type="checkbox" id="nonSmokingVehicle" name="eq" value="110">
-    <label for="nonSmokingVehicle">Non-smoking Vehicle</label>
-</div>
-
-
-
-<script src="js/livereload.js?host=localhost"></script>
 <script src="../dist/showcar-ui.min.js"></script>
+<script src="js/pager.js"></script>
 </body>
 </html>
