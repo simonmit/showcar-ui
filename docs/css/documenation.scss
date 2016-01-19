@@ -174,8 +174,8 @@ pre {
   }
 }
 .example-groups {
-  .input-group,
-  .input-group-radio {
+  .sc-input-group,
+  .sc-input-group-radio {
     margin: 10px 0;
     width: 80%;
     max-width: 600px;
@@ -229,7 +229,7 @@ pre {
 }
 
 @import "../../src/scss/mixins/color-selector";
-.color-selector {
+.sc-color-selector {
   input {
     &.red {
       @include color-selector-color(#ff0000, #fff);
@@ -278,7 +278,4 @@ pre {
 .sticky-list {
   list-style-type: disc;
   margin-left: 40px;
-}
-.pagination {
-
 }

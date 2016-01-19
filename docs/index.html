@@ -810,55 +810,53 @@ formatCode(`<div class="sc-grid-row">
     <h3>Inputs / Textareas</h3>
 
     <div class="example example-inputs">
-        <input type="text" placeholder="default (.input-m)">
-        <input type="text" placeholder=".input-l" class="input-l">
-
-        <input type="text" placeholder="disabled" disabled>
-        <input type="text" placeholder=".info" class="info">
-        <input type="text" placeholder=".success" class="success">
-        <input type="text" placeholder=".error" class="error">
-
-        <textarea readonly>textarea</textarea>
+        <input type="text" placeholder=".sc-input" class="sc-input">
+        <input type="text" placeholder=".sc-input sc-input-l" class="sc-input sc-input-l">
+        <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
+        <input type="text" placeholder=".sc-input .info" class="sc-input info">
+        <input type="text" placeholder=".sc-input .success" class="sc-input success">
+        <input type="text" placeholder=".sc-input .error" class="sc-input error">
+        <textarea class="sc-input" placeholder="sc-input" readonly>textarea</textarea>
     </div>
     <pre><code class="html" id="code-inputs"></code></pre>
     <script>
-        formatCode(`<input type="text">
-<input type="text" class="input-l">
-<input type="text" disabled>
-<input type="text" class="info">
-<input type="text" class="success">
-<input type="text" class="error">
-<textarea>...</textarea>`, '#code-inputs');
+        formatCode(`<input type="text" class="sc-input">
+<input type="text" class="sc-input sc-input-l">
+<input type="text" class="sc-input" disabled>
+<input type="text" class="sc-input info">
+<input type="text" class="sc-input success">
+<input type="text" class="sc-input error">
+<textarea class="sc-input">...</textarea>`, '#code-inputs');
     </script>
 
     <a name="selects"></a>
     <h3>Select Boxes</h3>
     <div class="example example-selects">
-        <select name="as24-select-1">
-            <option>default (.input-m)</option>
+        <select class="sc-input" name="as24-select-1">
+            <option>default (.sc-input-m)</option>
             <option>Option 2</option>
             <option>Option 3</option>
         </select>
-        <select name="as24-select-2" class="input-l">
+        <select name="as24-select-2" class="sc-input sc-input-l">
             <option>.input-l</option>
             <option>Option 2</option>
             <option>Option 3</option>
         </select>
-        <select name="as24-select-3" class="input-l" disabled>
+        <select name="as24-select-3" class="sc-input sc-input-l" disabled>
             <option>disabled</option>
         </select>
     </div>
     <pre><code class="html" id="code-selects"></code></pre>
     <script>
-        formatCode(`<select>
+        formatCode(`<select class="sc-input">
     <option>...</option>
 </select>
 
-<select class="input-l">
+<select class="sc-input sc-input-l">
     ...
 </select>
 
-<select class="input-l" disabled>
+<select class="sc-input sc-input-l" disabled>
     ...
 </select>`, '#code-selects');
     </script>
@@ -867,32 +865,32 @@ formatCode(`<div class="sc-grid-row">
     <h3>Radio Buttons</h3>
     <div class="example example-radios">
         <div>
-            <input id="as24-radio-1" type="radio" name="example-radios-1">
+            <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
             <label for="as24-radio-1">Radio 1</label>
 
-            <input id="as24-radio-2" type="radio" name="example-radios-1">
+            <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
             <label for="as24-radio-2">Radio 2</label>
 
-            <input id="as24-radio-3" type="radio" disabled name="example-radios-1">
+            <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
             <label for="as24-radio-3">Radio 3 (disabled)</label>
         </div>
         <div>
-            <input id="as24-radio-4" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input" id="as24-radio-4" class="input-l" type="radio" name="example-radios-2">
             <label for="as24-radio-4">Radio 1</label>
 
-            <input id="as24-radio-5" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input" id="as24-radio-5" class="input-l" type="radio" name="example-radios-2">
             <label for="as24-radio-5">Radio 2</label>
 
-            <input id="as24-radio-6" class="input-l" type="radio" disabled name="example-radios-2">
+            <input class="sc-input" id="as24-radio-6" class="input-l" type="radio" disabled name="example-radios-2">
             <label for="as24-radio-6">Radio 3 (disabled)</label>
         </div>
     </div>
     <pre><code class="html" id="code-radios"></code></pre>
     <script>
-        formatCode(`<input id="radio1" type="radio">
+        formatCode(`<input class="sc-input" id="radio1" type="radio">
 <label for="radio1">...</label>
 
-<input id="radio2" type="radio" disabled>
+<input class="sc-input" id="radio2" type="radio" disabled>
 <label for="radio2">...</label>`, '#code-radios');
     </script>
 
@@ -900,32 +898,31 @@ formatCode(`<div class="sc-grid-row">
     <h3>Checkboxes</h3>
     <div class="example example-checkboxes">
         <div>
-            <input id="as24-checkbox-1" type="checkbox">
+            <input class="sc-input" id="as24-checkbox-1" type="checkbox">
             <label for="as24-checkbox-1">Checkbox</label>
 
-            <input id="as24-checkbox-2" type="checkbox" disabled>
+            <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled>
             <label for="as24-checkbox-2">Checkbox (disabled)</label>
         </div>
         <div>
-            <input id="as24-checkbox-3" type="checkbox" class="input-l">
+            <input class="sc-input" id="as24-checkbox-3" type="checkbox" class="input-l">
             <label for="as24-checkbox-3">Checkbox</label>
 
-            <input id="as24-checkbox-4" type="checkbox" disabled class="input-l">
+            <input class="sc-input" id="as24-checkbox-4" type="checkbox" disabled class="input-l">
             <label for="as24-checkbox-4">Checkbox (disabled)</label>
         </div>
     </div>
     <pre><code class="html" id="code-checkboxes"></code></pre>
     <script>
-        formatCode(`<input id="cb1" type="checkbox">
+        formatCode(`<input class="sc-input" id="cb1" type="checkbox">
 <label for="cb1">...</label>
 
-<input id="cb2" type="checkbox" disabled>
+<input class="sc-input" id="cb2" type="checkbox" disabled>
 <label for="cb2">...</label>
 
-<input id="cb3" type="checkbox" class="input-l">
+<input class="sc-input" id="cb3" type="checkbox" class="sc-input sc-input-l">
 <label for="cb3">...</label>`, '#code-checkboxes');
     </script>
-
 
     <a name="color-selector"></a>
     <h3>Color Selectors</h3>
@@ -936,50 +933,50 @@ formatCode(`<div class="sc-grid-row">
         color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
     </p>
     <div class="example example-color-picker">
-        <div class="color-selector">
-            <input id="as24-cb-cp-1" type="radio" name="xx" class="red">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
             <label for="as24-cb-cp-1">red</label>
 
-            <input id="as24-cb-cp-2" type="radio" name="xx" class="yellow">
+            <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
             <label for="as24-cb-cp-2">yellow</label>
 
-            <input id="as24-cb-cp-7" type="radio" name="xx" class="green">
+            <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
             <label for="as24-cb-cp-7">green</label>
 
-            <input id="as24-cb-cp-8" type="radio" name="xx" class="gold">
+            <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
             <label for="as24-cb-cp-8">gold</label>
         </div>
-        <div class="color-selector">
-            <input id="as24-cb-cp-3" type="radio" name="xx" class="input-l blue">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
             <label for="as24-cb-cp-3">radio</label>
 
-            <input id="as24-cb-cp-4" type="radio" name="xx" class="input-l orange">
+            <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l orange">
             <label for="as24-cb-cp-4">radio</label>
         </div>
-        <div class="color-selector">
-            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="input-l blue">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
             <label for="as24-cb-cp-5">radio</label>
 
-            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="input-l orange">
+            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l orange">
             <label for="as24-cb-cp-6">radio</label>
         </div>
     </div>
     <pre><code class="html" id="code-color-selector"></code></pre>
     <script>
-        formatCode(`<div class="color-selector">
-    <input id="cs1" type="radio" name="cs1" class="red">
+        formatCode(`<div class="sc-color-selector">
+    <input id="cs1" type="radio" name="cs1" class="sc-input red">
     <label for="cs1">red</label>
 
-    <input id="cs2" type="radio" name="cs1" class="yellow">
+    <input id="cs2" type="radio" name="cs1" class="sc-input yellow">
     <label for="cs2">yellow</label>
 
-    <input id="cs3" type="radio" name="cs1" class="green">
+    <input id="cs3" type="radio" name="cs1" class="sc-input green">
     <label for="cs4">green</label>
 </div>
 -- additional scss --
 @import "path/to/mixins/color-selector";
-.color-selector {
-    input {
+.sc-color-selector {
+    input.sc-input {
         &.red {
             @include color-selector-color(#ff0000, #fff);
         }
@@ -991,14 +988,14 @@ formatCode(`<div class="sc-grid-row">
 }
 
 -- radio buttons --
-<div class="color-selector">
-    <input id="..." type="radio" name="...">
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="radio" name="...">
     <label for="...">...</label>
 </div>
 
 -- checkboxes --
-<div class="color-selector">
-    <input id="..." type="checkbox" name="...">
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="checkbox" name="...">
     <label for="...">...</label>
 </div>
 `, '#code-color-selector');
@@ -1007,51 +1004,51 @@ formatCode(`<div class="sc-grid-row">
     <a name="input-groups"></a>
     <h3>Input Groups</h3>
     <div class="example example-groups">
-        <div class="input-group">
-            <input type="text" placeholder="Text input 1">
-            <input type="text" placeholder="Text input 2">
-            <button class="btn-bob-m">Submit</button>
+        <div class="sc-input-group">
+            <input class="sc-input" type="text" placeholder="Text input 1">
+            <input class="sc-input" type="text" placeholder="Text input 2">
+            <button class="sc-btn-bob-m">Submit</button>
         </div>
 
-        <div class="input-group-radio">
-            <input id="as24-radio-7" name="as24-radio" type="radio">
+        <div class="sc-input-group-radio">
+            <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
             <label for="as24-radio-7">Option 1</label>
 
-            <input id="as24-radio-8" name="as24-radio" type="radio" checked>
+            <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked>
             <label for="as24-radio-8">Option 2</label>
 
-            <input id="as24-radio-9" name="as24-radio" type="radio">
+            <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
             <label for="as24-radio-9">Option 3</label>
         </div>
-        <div class="input-group-radio input-group-emission-badge">
-            <input id="example-groups-3-1" name="example-groups-3" type="radio">
+        <div class="sc-input-group-radio input-group-emission-badge">
+            <input class="sc-input" id="example-groups-3-1" name="example-groups-3" type="radio">
             <label for="example-groups-3-1">Alle</label>
 
-            <input id="example-groups-3-2" name="example-groups-3" type="radio" checked>
+            <input class="sc-input" id="example-groups-3-2" name="example-groups-3" type="radio" checked>
             <label for="example-groups-3-2"><as24-icon type="emission-badge-2"></as24-icon></label>
 
-            <input id="example-groups-3-3" name="example-groups-3" type="radio">
+            <input class="sc-input" id="example-groups-3-3" name="example-groups-3" type="radio">
             <label for="example-groups-3-3"><as24-icon type="emission-badge-3"></as24-icon></label>
 
-            <input id="example-groups-3-4" name="example-groups-3" type="radio">
+            <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
             <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
         </div>
     </div>
     <pre><code class="html" id="code-groups"></code></pre>
     <script>
-        formatCode(`<div class="input-group">
+        formatCode(`<div class="sc-input-group">
     <input type="text">
     ...
 </div>
 
-<div class="input-group-radio">
-    <input id="radio" type="radio">
+<div class="sc-input-group-radio">
+    <input class="sc-input" id="radio" type="radio">
     <label for="radio">...</label>
     ...
 </div>
-<div class="input-group-radio" >
+<div class="sc-input-group-radio" >
     ...
-    <input id="radio" type="radio">
+    <input class="sc-input" id="radio" type="radio">
     <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
     ...
 </div>`, '#code-groups');

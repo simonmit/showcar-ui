@@ -35,14 +35,13 @@
     > label {
         position: relative;
         width: 100%;
-        padding: 5px 14px!important;
 
         as24-icon {
             line-height: 0;
             display: block;
         }
         &:before {
-            background-image: none!important;
+            backgroud: none!important;
         }
     }
 }
