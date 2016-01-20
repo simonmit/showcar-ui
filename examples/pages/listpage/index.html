@@ -1,207 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Showcar Demo</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Showcar Demo</title>
+        <!-- include external libraries -->
+        <link rel="stylesheet" href="../../../dist/showcar-ui.css">
+        <script src="../../../dist/showcar-ui.min.js"></script>
+        <script src="../../../docs/js/pager.js"></script>
+        <script src="../../vendor/icanhaz/ICanHaz.min.js"></script>
+        <script src="classifieds.js"></script>
+        <script src="main.js"></script>
+        <link href="./style.css" rel="stylesheet">
+    </head>
 
-    <!-- include external libraries -->
-    <link rel="stylesheet" href="../../../dist/showcar-ui.css">
-    <script src="../../../dist/showcar-ui.min.js"></script>
-
-
-    <script src="../../vendor/icanhaz/ICanHaz.min.js"></script>
-
-    <script src="classifieds.js"></script>
-    <script src="main.js"></script>
-    <link href="./style.css" rel="stylesheet">
-</head>
-
-<body>
-<!-- our main container with multiple rows -->
-<div class="grid-container">
-    <!-- first row: breadcrumbs, navigation -->
-    <div class="grid-row row-breadcrumbs">
-        <div class="grid-col-12 breadcrumbs">
-            <ul>
-                <li><a href="#">breadcrumbs</a></li>
-                <li><a href="#">navigation</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- second row: header, result counter, etc. -->
-    <div class="grid-row row-header">
-        <div class="grid-col-4">
-            <h1 class="font-xl">2,362,479 Results</h1>
-        </div>
-        <div class="grid-col-4"></div>
-        <div class="grid-col-4">
-            <select name="foo" id="bar">
-                <option value="0">Foo</option>
-                <option value="1">Bar</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- third row: main content with filter and list -->
-    <div class="grid-row">
-        <div class="grid-col-4 col-filter">
-
-            <!-- nested grid for layout -->
-            <div class="grid-container">
-                <div class="grid-row">
-                    <div class="grid-col-6 font-l">Filter</div>
-                    <div class="grid-col-6 text-right">
-                        <a href="#">Reset</a>
-                    </div>
+    <body>
+        <!-- our main container with multiple rows -->
+        <div class="sc-content-container">
+            <h1><strong class="sc-font-bold">List</strong> Page</h1>
+            <!-- first row: breadcrumbs, navigation -->
+            <div class="sc-grid-row sc-row-breadcrumbs">
+                <div class="sc-grid-col-12 sc-breadcrumbs">
+                    <ul>
+                        <li><a href="#">breadcrumbs</a></li>
+                        <li><a href="#">navigation</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- filter section: mocks of form elements -->
-            <form action="#">
-                <label for="make">Make</label>
-                <select id="make">
-                    <option>All</option>
-                    <option>BMW</option>
-                </select>
-
-                <label for="model">Model</label>
-                <select id="model">
-                    <option>All</option>
-                </select>
-
-                <label for="version">Version</label>
-                <input type="text" id="version" placeholder="Version">
-
-                <label for="bodytype">Body Type</label>
-                <select id="bodytype">
-                    <option>All</option>
-                </select>
-
-                <label>Price (€)</label>
-                <div class="input-group">
-                    <select id="price-from">
-                        <option>from</option>
-                    </select>
-                    <select id="price-to">
-                        <option>to</option>
+            <!-- second row: header, result counter, etc. -->
+            <div class="sc-grid-row row-header">
+                <div class="sc-grid-col-4">
+                    <h1 class="sc-font-xl">2,362,479 Results</h1>
+                </div>
+                <div class="sc-grid-col-4"></div>
+                <div class="sc-grid-col-4">
+                    <select class="sc-input" name="foo" id="bar">
+                        <option value="0">Foo</option>
+                        <option value="1">Bar</option>
                     </select>
                 </div>
+            </div>
 
-                <div class="element-container">
-                    <input id="vat" type="checkbox">
-                    <label for="vat">VAT</label>
-                </div>
+            <!-- third row: main content with filter and list -->
+            <div class="sc-grid-row">
+                <div class="sc-grid-col-4 col-filter">
 
-                <hr>
-
-                <label>First Registration</label>
-                <div class="input-group">
-                    <select id="reg-from">
-                        <option>from</option>
-                    </select>
-                    <select id="reg-to">
-                        <option>to</option>
-                    </select>
-                </div>
-
-                <label>Mileage</label>
-                <div class="input-group">
-                    <select id="mileage-from">
-                        <option>from</option>
-                    </select>
-                    <select id="mileage-to">
-                        <option>to</option>
-                    </select>
-                </div>
-
-                <label for="fuel">Fuel Type</label>
-                <select id="fuel">
-                    <option>All</option>
-                </select>
-
-                <label for="transmission">Gear Transmission</label>
-                <select id="transmission">
-                    <option>All</option>
-                </select>
-
-                <label>Power</label>
-                <div class="grid-row">
-                    <div class="grid-col-6">
-                        <div class="input-group-radio">
-                            <input name="power" id="power-kw" type="radio"><label for="power-kw">kW</label>
-                            <input name="power" id="power-hp" type="radio"><label for="power-hp">HP</label>
+                    <!-- nested grid for layout -->
+                    <div class="sc-grid-container">
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-6 font-l">Filter</div>
+                            <div class="sc-grid-col-6 text-right">
+                                <a href="#">Reset</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="grid-col-6">
-                        <div class="input-group">
-                            <input id="power-from" type="number" placeholder="from">
-                            <input id="power-to" type="number" placeholder="to">
+
+                    <!-- filter section: mocks of form elements -->
+                    <form action="#">
+                        <label for="make">Make</label>
+                        <select class="sc-input" id="make">
+                            <option>All</option>
+                            <option>BMW</option>
+                        </select>
+
+                        <label for="model">Model</label>
+                        <select class="sc-input" id="model">
+                            <option>All</option>
+                        </select>
+
+                        <label for="version">Version</label>
+                        <input class="sc-input" type="text" id="version" placeholder="Version">
+
+                        <label for="bodytype">Body Type</label>
+                        <select class="sc-input" id="bodytype">
+                            <option>All</option>
+                        </select>
+
+                        <label>Price (€)</label>
+                        <div class="sc-input-group">
+                            <select class="sc-input" id="price-from">
+                                <option>from</option>
+                            </select>
+                            <select class="sc-input" id="price-to">
+                                <option>to</option>
+                            </select>
                         </div>
-                    </div>
+
+                        <div class="element-container">
+                            <input checked class="sc-input" id="vat" type="checkbox">
+                            <label for="vat">VAT</label>
+                        </div>
+
+                        <hr>
+
+                        <label>First Registration</label>
+                        <div class="sc-input-group">
+                            <select class="sc-input" id="reg-from">
+                                <option>from</option>
+                            </select>
+                            <select class="sc-input" id="reg-to">
+                                <option>to</option>
+                            </select>
+                        </div>
+
+                        <label>Mileage</label>
+                        <div class="sc-input-group">
+                            <select class="sc-input" id="mileage-from">
+                                <option>from</option>
+                            </select>
+                            <select class="sc-input" id="mileage-to">
+                                <option>to</option>
+                            </select>
+                        </div>
+
+                        <label for="fuel">Fuel Type</label>
+                        <select class="sc-input" id="fuel">
+                            <option>All</option>
+                        </select>
+
+                        <label for="transmission">Gear Transmission</label>
+                        <select class="sc-input" id="transmission">
+                            <option>All</option>
+                        </select>
+
+                        <label>Power</label>
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-6">
+                                <div class="sc-input-group-radio">
+                                    <input selected class="sc-input" name="power" id="power-kw" type="radio"><label for="power-kw">kW</label>
+                                    <input class="sc-input" name="power" id="power-hp" type="radio"><label for="power-hp">HP</label>
+                                </div>
+                            </div>
+                            <div class="sc-grid-col-6">
+                                <div class="sc-input-group">
+                                    <input class="sc-input" id="power-from" type="number" placeholder="from">
+                                    <input class="sc-input" id="power-to" type="number" placeholder="to">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <label for="countries">Countries</label>
+                        <select class="sc-input" id="countries">
+                            <option>Entire Europe</option>
+                            <option>Not Entire Europe</option>
+                        </select>
+
+                        <hr>
+
+                        <div class="sc-text-center"><a href="#">More Search Criteria</a></div>
+
+                        <hr>
+
+                        <button class="sc-btn-bob-l sc-btn-block" data-sticky-button="btn">2,362,479 cars</button>
+                        <div data-sticky-button-dock></div>
+                        <button class="sc-btn-ross-l sc-btn-block">Save this search</button>
+                    </form>
                 </div>
 
-                <hr>
+                <!-- result list: the actual list and the pagination-->
+                <div class="sc-grid-col-8 col-list">
+                    <ul id="list" class="list sc-grid-container">
+                        <!-- list items are rendered via ICanHaz frontend templating -->
+                        <script id="classified" type="text/html">
+                        <li>
+                            <a title="{{ name }}" href="{{ url }}" class="sc-grid-row">
+                                <img class="sc-grid-col-4" src="{{ thumbnail }}">
+                                <div class="sc-grid-col-7 description">
+                                    <h2 class="sc-font-l sc-text-nowrap">{{ name }}</h2>
+                                    <table>
+                                        <tr>
+                                            <td>{{ price }}</td>
+                                            <td>{{ mileage }}</td>
+                                            <td>{{ power }}</td>
+                                            <td>{{ firstRegistration }}</td>
+                                        </tr>
+                                    </table>
+                                    <div class="envkv font-silent">{{ envkv }}</div>
+                                </div>
+                                <div class="sc-grid-col-1 heart sc-font-silent sc-font-xxl">&#x2764;</div>
+                            </a>
+                        </li>
+                        </script>
+                    </ul>
 
-                <label for="countries">Countries</label>
-                <select id="countries">
-                    <option>Entire Europe</option>
-                    <option>Not Entire Europe</option>
-                </select>
-
-                <hr>
-
-                <div class="text-center"><a href="#">More Search Criteria</a></div>
-
-                <hr>
-
-                <button class="btn-bob-l btn-block" data-sticky-button="btn">2,362,479 cars</button>
-                <div data-sticky-button-dock></div>
-                <button class="btn-ross-l btn-block">Save this search</button>
-            </form>
-        </div>
-
-        <!-- result list: the actual list and the pagination-->
-        <div class="grid-col-8 col-list">
-            <ul id="list" class="list grid-container">
-
-                <!-- list items are rendered via ICanHaz frontend templating -->
-                <script id="classified" type="text/html">
-                    <li><a title="{{ name }}" href="{{ url }}" class="grid-row">
-                        <img class="grid-col-4" src="{{ thumbnail }}">
-                        <div class="grid-col-7 description">
-                            <h2 class="font-l text-nowrap">{{ name }}</h2>
-                            <table>
-                                <tr>
-                                    <td>{{ price }}</td>
-                                    <td>{{ mileage }}</td>
-                                    <td>{{ power }}</td>
-                                    <td>{{ firstRegistration }}</td>
-                                </tr>
-                            </table>
-                            <div class="envkv font-silent">{{ envkv }}</div>
-                        </div>
-                        <div class="grid-col-1 heart font-silent font-xxl">&#x2764;</div>
-                    </a></li>
-                </script>
-            </ul>
-
-            <!-- static pagination as example -->
-            <div class="pagination grid-container">
-                <div class="grid-row">
-                    <div class="grid-col-4 text-left"><a href="#">prev</a></div>
-                    <div class="grid-col-4 text-center">
-                        <a href="#">1</a>
-                        <a href="#" class="current">2</a>
-                        <a href="#">&hellip;</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                    </div>
-                    <div class="grid-col-4 text-right"><a href="#">next</a></div>
+                    <!-- static pagination as example -->
+                    <ul class="sc-pagination">
+                        <li class="previous-page">
+                            <a class="disabled" href="javascript:void(0)">
+                                <as24-icon type="arrow"></as24-icon> Previous
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a class="active" href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li><a href="javascript:void(0)">6</a></li>
+                        <li><a href="javascript:void(0)">7</a></li>
+                        <li><a class="sc-disabled" href="">...</a></li>
+                        <li><a href="javascript:void(0)">20</a></li>
+                        <li class="next-page">
+                            <a href="javascript:void(0)">
+                                Next <as24-icon type="arrow"></as24-icon>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
