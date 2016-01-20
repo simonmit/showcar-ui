@@ -904,10 +904,10 @@ formatCode(`<div class="sc-grid-row">
             <label for="as24-checkbox-2">Checkbox (disabled)</label>
         </div>
         <div>
-            <input class="sc-input" id="as24-checkbox-3" type="checkbox" class="input-l">
+            <input class="sc-input sc-input-l" id="as24-checkbox-3" type="checkbox">
             <label for="as24-checkbox-3">Checkbox</label>
 
-            <input class="sc-input" id="as24-checkbox-4" type="checkbox" disabled class="input-l">
+            <input class="sc-input sc-input-l" id="as24-checkbox-4" type="checkbox" disabled>
             <label for="as24-checkbox-4">Checkbox (disabled)</label>
         </div>
     </div>
@@ -919,8 +919,11 @@ formatCode(`<div class="sc-grid-row">
 <input class="sc-input" id="cb2" type="checkbox" disabled>
 <label for="cb2">...</label>
 
-<input class="sc-input" id="cb3" type="checkbox" class="sc-input sc-input-l">
-<label for="cb3">...</label>`, '#code-checkboxes');
+<input class="sc-input sc-input-l" id="cb3" type="checkbox">
+<label for="cb3">...</label>
+
+<input class="sc-input sc-input-l" id="cb4" type="checkbox" disabled>
+<label for="cb4">...</label>`, '#code-checkboxes');
     </script>
 
     <a name="color-selector"></a>
