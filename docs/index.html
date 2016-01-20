@@ -874,13 +874,13 @@ formatCode(`<div class="sc-grid-row">
             <label for="as24-radio-3">Radio 3 (disabled)</label>
         </div>
         <div>
-            <input class="sc-input" id="as24-radio-4" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-4" type="radio" name="example-radios-2">
             <label for="as24-radio-4">Radio 1</label>
 
-            <input class="sc-input" id="as24-radio-5" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-5" type="radio" name="example-radios-2">
             <label for="as24-radio-5">Radio 2</label>
 
-            <input class="sc-input" id="as24-radio-6" class="input-l" type="radio" disabled name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-6" type="radio" disabled name="example-radios-2">
             <label for="as24-radio-6">Radio 3 (disabled)</label>
         </div>
     </div>
@@ -890,7 +890,13 @@ formatCode(`<div class="sc-grid-row">
 <label for="radio1">...</label>
 
 <input class="sc-input" id="radio2" type="radio" disabled>
-<label for="radio2">...</label>`, '#code-radios');
+<label for="radio2">...</label>
+
+<input class="sc-input sc-input-l" id="radio3" type="radio">
+<label for="radio3">...</label>
+
+<input class="sc-input sc-input-l" id="radio4" type="radio" disabled>
+<label for="radio4">...</label>`, '#code-radios');
     </script>
 
     <a name="checkboxes"></a>
