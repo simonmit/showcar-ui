@@ -4,6 +4,6 @@ a {
   @include link;
 }
 
-.inline-link {
+.sc-inline-link {
   @include link($variant: black)
 }

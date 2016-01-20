@@ -2,7 +2,17 @@ body {
   background-color: #f4f4f4;
 }
 
-div.grid-row + div.grid-row {
+h1 {
+    font-size: 2rem;
+    margin: 20px auto 40px;
+}
+
+.sc-row-breadcrumbs {
+    background-color: white;
+    padding: 5px;
+}
+
+.sc-grid-row + .sc-grid-row {
   margin-top: 16px;
 }
 
@@ -25,7 +35,8 @@ div.col-list {
   padding: 0;
   ul.list {
     > li {
-      background: #ffffff;
+      background-color: #ffffff;
+      transition: background-color .5s ease-in-out;
       a {
         color: #000000;
         div {
@@ -39,6 +50,9 @@ div.col-list {
       }
       + li {
         margin-top: 8px;
+      }
+      &:hover {
+          background-color: #fafafa;
       }
     }
   }

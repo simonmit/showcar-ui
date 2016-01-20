@@ -1,19 +1,27 @@
 @import "./mixins/color-selector";
 
-.color-selector {
-  input[type="radio"], input[type="checkbox"] {
-    @include color-selector(M);
+.sc-color-selector {
+    input[type="radio"], input[type="checkbox"] {
+        &.sc-input {
+            @include color-selector(M);
 
-    &.input-l {
-      @include color-selector(L);
+            &.sc-input-m {
+                @include color-selector(M);
+            }
+
+            &.sc-input-l {
+                @include color-selector(L);
+            }
+        }
     }
-  }
-  input[type="checkbox"] {
-    & + label {
-      &:before,
-      &:after {
-        border-radius: $form-border-radius !important;
-      }
+    input[type="checkbox"] {
+        &.sc-input {
+            & + label {
+                &:before,
+                &:after {
+                    border-radius: $form-border-radius !important;
+                }
+            }
+        }
     }
-  }
 }

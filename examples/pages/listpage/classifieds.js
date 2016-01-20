@@ -3,7 +3,7 @@ var showcarDemoData = showcarDemoData || {};
 showcarDemoData["classifieds"] = [
     {
         url: "/offers/opel-corsa-joy-gasoline-blue-279328991",
-        thumbnail: "http://pic.autoscout24.net/images/991/328/0279328991001.jpg?c9bbc4237c94154ab66c6b0a2ba48a4a",
+        thumbnail: "http://placehold.it/400x300",
         name: "Opel Corsa Joy",
         price: "€ 1,-",
         mileage: "194,360 km",
@@ -13,7 +13,7 @@ showcarDemoData["classifieds"] = [
     },
     {
         url: "/offers/jaguar-xj-gasoline-blue-279799115",
-        thumbnail: "http://pic.autoscout24.net/images/115/799/0279799115001.jpg?1c370be7e32ea649687459de219ce8eb",
+        thumbnail: "http://placehold.it/400x300",
         name: "Jaguar XJ",
         price: "€ 1,-",
         mileage: "90,000 km",
@@ -23,7 +23,7 @@ showcarDemoData["classifieds"] = [
     },
     {
         url: "/offers/abarth-695-14-turbo-t-jet-biposto-gasoline-grey-279737105",
-        thumbnail: "http://pic.autoscout24.net/images/105/737/0279737105001.jpg?ee18cb21b7695602fe0847c64f658074",
+        thumbnail: "http://placehold.it/400x300",
         name: "Abarth 695 1.4 Turbo T-Jet biposto",
         price: "€ 1,-",
         mileage: "0 km",
@@ -33,7 +33,7 @@ showcarDemoData["classifieds"] = [
     },
     {
         url: "/offers/alfa-romeo-giulietta-20-jtdm-2-150-cv-distinctive-diesel-white-280009043",
-        thumbnail: "http://pic.autoscout24.net/images/043/009/0280009043001.jpg?b3c2edfbcdbac99b09aad3d16207e362",
+        thumbnail: "http://placehold.it/400x300",
         name: "Alfa Romeo Giulietta 2.0 JTDm-2 150 CV Distinctive",
         price: "€ 1,-",
         mileage: "0 km",
@@ -43,7 +43,7 @@ showcarDemoData["classifieds"] = [
     },
     {
         url: "/offers/renault-alpine-v6-28-v6-gt-gasoline-black-279953396",
-        thumbnail: "http://pic.autoscout24.net/images/396/953/0279953396001.jpg?fc5b99241862d9785dd7928f4199a727",
+        thumbnail: "http://placehold.it/400x300",
         name: "Renault Alpine V6 2.8 V6 GT",
         price: "€ 1,-",
         mileage: "190,000 km",

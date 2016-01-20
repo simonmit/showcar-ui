@@ -1,5 +1,5 @@
 module.exports = function() {
-    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="collapse"]'), function (collapsable) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), function (collapsable) {
         collapsable.onclick = function () {
             var targetAttr = collapsable.getAttribute('data-target');
             var targets = document.querySelectorAll(targetAttr);

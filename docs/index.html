@@ -5,11 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>ShowCar UI Library Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="../dist/showcar-ui.css">
     <link rel="stylesheet" href="css/highlight.css">
     <link rel="stylesheet" href="./css/documenation.css">
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
@@ -18,17 +17,17 @@
 
         function encodeEntities(value) {
             return value.
-                    replace(/&/g, '&amp;').
-                    replace(SURROGATE_PAIR_REGEXP, function(value) {
-                        var hi = value.charCodeAt(0);
-                        var low = value.charCodeAt(1);
-                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
-                    }).
-                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
-                        return '&#' + value.charCodeAt(0) + ';';
-                    }).
-                    replace(/</g, '&lt;').
-                    replace(/>/g, '&gt;');
+                replace(/&/g, '&amp;').
+                replace(SURROGATE_PAIR_REGEXP, function(value) {
+                    var hi = value.charCodeAt(0);
+                    var low = value.charCodeAt(1);
+                    return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+                }).
+            replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+                return '&#' + value.charCodeAt(0) + ';';
+            }).
+            replace(/</g, '&lt;').
+                replace(/>/g, '&gt;');
         }
         function formatCode (code, target) {
             document.querySelector(target).innerHTML = encodeEntities(code);
@@ -111,8 +110,8 @@
     <a name="variable-colors"></a>
     <h3>Colors</h3>
     <p>The following color variables are defined by the UX-Designer. </p>
-    <div class="table-var-wrapper clearfix">
-        <table class="docs-table docs-table-variable-color pull-left">
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
                 <tr>
                     <th>variable</th>
@@ -159,7 +158,7 @@
 
             </tbody>
         </table>
-        <table class="docs-table docs-table-variable-color pull-left">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
             <tr>
                 <th>variable</th>
@@ -206,7 +205,7 @@
 
             </tbody>
         </table>
-        <table class="docs-table docs-table-variable-color pull-left">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
             <tr>
                 <th>variable</th>
@@ -252,7 +251,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="docs-table docs-table-variable-color pull-left">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
             <tr>
                 <th>variable</th>
@@ -322,8 +321,8 @@
         There are several variables that should be used for the spacing inside and between elements.
         Use the variables only for the spacing and not for other properties like e.g. font-sizes.
     </p>
-    <div class="table-var-wrapper clearfix">
-        <table class="docs-table docs-table-variable-color pull-left">
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
             <tr>
                 <th>variable</th>
@@ -373,8 +372,8 @@
         Use the following variables <span class="text-bold">instead</span> of variables previously known from showcar-styles
         (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)
     </p>
-    <div class="table-var-wrapper clearfix">
-        <table class="docs-table docs-table-variable-color pull-left">
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
             <thead>
             <tr>
                 <th>variable</th>
@@ -453,160 +452,162 @@
     </table>
 
     <div class="example example-content-container">
-        <div class="content-container">Your Content goes here</div>
+        <div class="sc-content-container">Your Content goes here</div>
         <div class="clearfix"></div>
     </div>
     <pre><code class="html" id="code-content-container"></code></pre>
     <script>
-        formatCode(`<div class="content-container">...</div>`, '#code-content-container');
+        formatCode(`<div class="sc-content-container">...</div>`, '#code-content-container');
     </script>
 
 </div>
 <div>
     <a name="grid"></a>
     <h2>Grid</h2>
-    <p>ShowCar UI includes the responsive <a href="http://susydocs.oddbird.net" target="_blank">Susy</a> grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.</p>
-    <p>Every grid row has to be placed within a <code>.grid-row</code> container. Every grid cell is a <code>.grid-col-*</code> container.</p>
+    <p>ShowCar UI includes the responsive <a href="http://susydocs.oddbird.net" target="_blank">Susy</a> grid system.
+        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.</p>
+    <p>Every grid row has to be placed within a <code>.sc-grid-row</code> container. Every grid cell is a
+        <code>.sc-grid-col-*</code> container.</p>
 
     <div class="example example-grid">
-        <div class="grid-row">
-            <div class="grid-col-12">
-                .grid-col-12
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-12">
+                .sc-grid-col-12
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-6">
-                .grid-col-6
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-6">
+                .sc-grid-col-6
             </div>
-            <div class="grid-col-6">
-                .grid-col-6
-            </div>
-        </div>
-        <div class="grid-row">
-            <div class="grid-col-4">
-                .grid-col-4
-            </div>
-            <div class="grid-col-4">
-                .grid-col-4
-            </div>
-            <div class="grid-col-4">
-                .grid-col-4
+            <div class="sc-grid-col-6">
+                .sc-grid-col-6
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-3">
-                .grid-col-3
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-4">
+                .sc-grid-col-4
             </div>
-            <div class="grid-col-3">
-                .grid-col-3
+            <div class="sc-grid-col-4">
+                .sc-grid-col-4
             </div>
-            <div class="grid-col-3">
-                .grid-col-3
-            </div>
-            <div class="grid-col-3">
-                .grid-col-3
+            <div class="sc-grid-col-4">
+                .sc-grid-col-4
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-2">
-                .grid-col-2
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
             </div>
-            <div class="grid-col-2">
-                .grid-col-2
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
             </div>
-            <div class="grid-col-2">
-                .grid-col-2
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
             </div>
-            <div class="grid-col-2">
-                .grid-col-2
-            </div>
-            <div class="grid-col-2">
-                .grid-col-2
-            </div>
-            <div class="grid-col-2">
-                .grid-col-2
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-1">
-                .grid-col-1
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
-            <div class="grid-col-1">
-                .grid-col-1
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
-            <div class="grid-col-1">
-                .grid-col-1
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
-            <div class="grid-col-1">
-                .grid-col-1
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
-            <div class="grid-col-1">
-                .grid-col-1
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
-            </div>
-            <div class="grid-col-1">
-                .grid-col-1
+            <div class="sc-grid-col-2">
+                .sc-grid-col-2
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-8">
-                .grid-col-8
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
             </div>
-            <div class="grid-col-4">
-                .grid-col-4
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
+            </div>
+            <div class="sc-grid-col-1">
+                .sc-grid-col-1
             </div>
         </div>
-        <div class="grid-row">
-            <div class="grid-col-3">
-                .grid-col-3
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-8">
+                .sc-grid-col-8
             </div>
-            <div class="grid-col-6">
-                .grid-col-6
+            <div class="sc-grid-col-4">
+                .sc-grid-col-4
             </div>
-            <div class="grid-col-3">
-                .grid-col-3
+        </div>
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
+            </div>
+            <div class="sc-grid-col-6">
+                .sc-grid-col-6
+            </div>
+            <div class="sc-grid-col-3">
+                .sc-grid-col-3
             </div>
         </div>
     </div>
     <pre><code class="html" id="code-grid"></code></pre>
     <script>
-        formatCode(`<div class="grid-row">
-    <div class="grid-col-6">.grid-col-6</div>
-    <div class="grid-col-6">.grid-col-6</div>
+        formatCode(`<div class="sc-grid-row">
+    <div class="sc-grid-col-6">.sc-grid-col-6</div>
+    <div class="sc-grid-col-6">.sc-grid-col-6</div>
 </div>
-<div class="grid-row">
-    <div class="grid-col-3">.grid-col-3</div>
-    <div class="grid-col-3">.grid-col-3</div>
-    <div class="grid-col-3">.grid-col-3</div>
-    <div class="grid-col-3">.grid-col-3</div>
+<div class="sc-grid-row">
+    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    <div class="sc-grid-col-3">.sc-grid-col-3</div>
 </div>`, '#code-grid');
     </script>
 
     <h3>Responsive Grids</h3>
     <p>
-        The above example of the <code>.grid-col-*</code> classes describe the general usage of the grid system.
+        The above example of the <code>.sc-grid-col-*</code> classes describe the general usage of the grid system.
     </p>
     <p>
         In case you need some responsive grid functionality, you need to use the responsive grid classes additionally.
-        The best practice is to use the general <code>.grid-col-*</code> class first and override it, depending on
-        your needs with the necessary viewport specific grid class <code>.grid-col-*-*</code>.<br>
+        The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on
+        your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>
         Always keep in mind, that smaller viewport grid classes override bigger ones.
     </p>
     <table class="docs-table docs-table-grid">
@@ -619,28 +620,28 @@
         </thead>
         <tbody>
             <tr>
-                <td><code>.grid-col-*</code><br>(default)</td>
+                <td><code>.sc-grid-col-*</code><br>(default)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td><code>.grid-col-xl-*</code></td>
+                <td><code>.sc-grid-col-xl-*</code></td>
                 <td>1100px</td>
                 <td>∞</td>
             </tr>
             <tr>
-                <td><code>.grid-col-l-*</code></td>
+                <td><code>.sc-grid-col-l-*</code></td>
                 <td></td>
                 <td>1099px</td>
             </tr>
 
             <tr>
-                <td><code>.grid-col-m-*</code></td>
+                <td><code>.sc-grid-col-m-*</code></td>
                 <td></td>
                 <td>1023px</td>
             </tr>
             <tr>
-                <td><code>.grid-col-s-*</code></td>
+                <td><code>.sc-grid-col-s-*</code></td>
                 <td></td>
                 <td>767px</td>
             </tr>
@@ -648,36 +649,36 @@
     </table>
     <p>
         With the responsive grid column classes, you are able, to set the column width in dependency to the viewport.
-        For Example if you define a grid with the classes <code>grid-col-4 grid-col-m-6 grid-col-s-12</code> it will
-        be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns
-        wide in devices with S-Viewport.
+        For Example if you define a grid with the classes <code>sc-grid-col-4 sc-grid-col-m-6 sc-grid-col-s-12</code>
+        it will be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12
+        columns wide in devices with S-Viewport.
     </p>
     <p>
         You can simply check the behavior of the grid by resizing the current page.
     </p>
     <div class="example example-grid">
-        <div class="grid-row">
-            <div class="grid-col-3 grid-col-s-12 grid-col-m-12">
-                .grid-col-3 .grid-col-s-12 .grid-col-m-12
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12">
+                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12
             </div>
-            <div class="grid-col-3 grid-col-s-6 grid-col-m-4">
-                .grid-col-3 .grid-col-s-6 .grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">
+                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4
             </div>
-            <div class="grid-col-3 grid-col-s-6 grid-col-m-4">
-                .grid-col-3 .grid-col-s-6 .grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">
+                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4
             </div>
-            <div class="grid-col-3 grid-col-s-12 grid-col-m-4">
-                .grid-col-3 .grid-col-s-12 .grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4">
+                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4
             </div>
         </div>
     </div>
     <pre><code class="html" id="code-grid-2"></code></pre>
     <script>
-formatCode(`<div class="grid-row">
-    <div class="grid-col-3 grid-col-s-12 grid-col-m-12">...</div>
-    <div class="grid-col-3 grid-col-s-6 grid-col-m-4">...</div>
-    <div class="grid-col-3 grid-col-s-6 grid-col-m-4">...</div>
-    <div class="grid-col-3 grid-col-s-12 grid-col-m-4">...</div>
+formatCode(`<div class="sc-grid-row">
+    <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12">...</div>
+    <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">...</div>
+    <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">...</div>
+    <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4">...</div>
 </div>`, '#code-grid-2');
     </script>
 </div>
@@ -718,38 +719,38 @@ formatCode(`<div class="grid-row">
 <div>
     <a name="buttons"></a>
     <h2>Buttons</h2>
-    <p>ShowCar uses two types of buttons <code>.btn-bob-&lt;size&gt;</code> and <code>.btn-ross-&lt;size&gt;</code> in two different sizes (<code>l</code>and <code>m</code>)</p>
+    <p>ShowCar uses two types of buttons <code>.sc-btn-bob-&lt;size&gt;</code> and <code>.sc-btn-ross-&lt;size&gt;</code> in two different sizes (<code>l</code>and <code>m</code>)</p>
     <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element</p>
-    <p><code>.btn-block</code> adds block style to a button, which stretches the button to full width.</p>
+    <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
 
     <div class="example example-buttons">
         <div>
-            <button class="btn-bob-m">.btn-bob-m</button>
-            <button class="btn-ross-m">.btn-ross-m</button>
+            <button class="sc-btn-bob-m">.sc-btn-bob-m</button>
+            <button class="sc-btn-ross-m">.sc-btn-ross-m</button>
         </div>
         <div>
-            <button class="btn-bob-l">.btn-bob-l</button>
-            <button class="btn-ross-l">.btn-ross-l</button>
+            <button class="sc-btn-bob-l">.sc-btn-bob-l</button>
+            <button class="sc-btn-ross-l">.sc-btn-ross-l</button>
         </div>
         <div>
-            <button class="btn-bob-m" disabled>disabled</button>
-            <button class="btn-ross-m" disabled>disabled</button>
+            <button class="sc-btn-bob-m" disabled>disabled</button>
+            <button class="sc-btn-ross-m" disabled>disabled</button>
         </div>
         <div>
-            <button class="btn-bob-m btn-block">.btn-bob-m.btn-block</button>
-            <button class="btn-ross-l btn-block">.btn-ross-l.btn-block</button>
+            <button class="sc-btn-bob-m sc-btn-block">.sc-btn-bob-m.sc-btn-block</button>
+            <button class="sc-btn-ross-l sc-btn-block">.sc-btn-ross-l.sc-btn-block</button>
         </div>
     </div>
     <pre><code class="html" id="code-buttons"></code></pre>
     <script>
-        formatCode(`<button class="btn-bob-m">.btn-bob-m</button>
-<button class="btn-ross-m">.btn-ross-m</button>
-<button class="btn-bob-l">.btn-bob-l</button>
-<button class="btn-ross-l">.btn-ross-l</button>
-<button class="btn-bob-m" disabled>disabled</button>
-<button class="btn-ross-m" disabled>disabled</button>
-<button class="btn-bob-m btn-block">.btn-bob-m.btn-block</button>
-<button class="btn-ross-l btn-block">.btn-ross-l.btn-block</button>`, '#code-buttons');
+        formatCode(`<button class="sc-btn-bob-m">.sc-btn-bob-m</button>
+<button class="sc-btn-ross-m">.sc-btn-ross-m</button>
+<button class="sc-btn-bob-l">.sc-btn-bob-l</button>
+<button class="sc-btn-ross-l">.sc-btn-ross-l</button>
+<button class="sc-btn-bob-m" disabled>disabled</button>
+<button class="sc-btn-ross-m" disabled>disabled</button>
+<button class="sc-btn-bob-m sc-btn-block">.sc-btn-bob-m.sc-btn-block</button>
+<button class="sc-btn-ross-l sc-btn-block">.sc-btn-ross-l.sc-btn-block</button>`, '#code-buttons');
     </script>
 </div>
 
@@ -759,28 +760,29 @@ formatCode(`<div class="grid-row">
     <a name="body-copy"></a>
     <h3>Body copy</h3>
     <p>
-        ShowCars default <code>font-family</code> is <span class="font-bold">Source Sans Pro</span>. Please use the predefined classes to increase or decrease the font size. You should not define explicit font sizes.
-        To use Source Sans Pro, you have to include <code>webfontloader</code>. The process necessary is documented in the README.md file of the ShowCar UI library.
+        ShowCars default <code>font-family</code> is <span class="sc-font-bold">Source Sans Pro</span>. Please use the
+        predefined classes to increase or decrease the font size. You should not define explicit font sizes.
+        To use Source Sans Pro, you have to include <code>webfontloader</code>. The process necessary is documented in
+        the README.md file of the ShowCar UI library.
     </p>
     <div class="example example-body-copy">
-        <p class="font-m">.font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-s">.font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-l">.font-l<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-xl">.font-xl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-xxl">.font-xxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-xxxl">.font-xxxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-        <p class="font-silent">.font-silent<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        <p class="font-bold">.font-bold<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-m">.sc-font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-l">.sc-font-l<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xl">.sc-font-xl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xxl">.sc-font-xxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xxxl">.sc-font-xxxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-silent">.sc-font-silent<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-bold">.sc-font-bold<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
     </div>
     <pre><code class="html" id="code-typography"></code></pre>
     <script>
-        formatCode(`<p class="font-m">...</p>
-<p class="font-s">...</p>
-<p class="font-l">...</p>
-<p class="font-xl">...</p>
-<p class="font-silent">...</p>
-<p class="font-bold">...</p>
+        formatCode(`<p class="sc-font-m">...</p>
+<p class="sc-font-s">...</p>
+<p class="sc-font-l">...</p>
+<p class="sc-font-xl">...</p>
+<p class="sc-font-silent">...</p>
+<p class="sc-font-bold">...</p>
         `, '#code-typography');
     </script>
 
@@ -791,13 +793,13 @@ formatCode(`<div class="grid-row">
             <a>Default Link</a>
         </div>
         <div>
-            <a class="inline-link">Inline Link</a>
+            <a class="sc-inline-link">Inline Link</a>
         </div>
     </div>
     <pre><code class="html" id="code-links"></code></pre>
     <script>
         formatCode(`<a href="...">...</a>
-<a href="..." class="inline-link">...</a>`,'#code-links');
+<a href="..." class="sc-inline-link">...</a>`,'#code-links');
     </script>
 </div>
 <div>
@@ -807,55 +809,53 @@ formatCode(`<div class="grid-row">
     <h3>Inputs / Textareas</h3>
 
     <div class="example example-inputs">
-        <input type="text" placeholder="default (.input-m)">
-        <input type="text" placeholder=".input-l" class="input-l">
-
-        <input type="text" placeholder="disabled" disabled>
-        <input type="text" placeholder=".info" class="info">
-        <input type="text" placeholder=".success" class="success">
-        <input type="text" placeholder=".error" class="error">
-
-        <textarea readonly>textarea</textarea>
+        <input type="text" placeholder=".sc-input" class="sc-input">
+        <input type="text" placeholder=".sc-input .sc-input-l" class="sc-input sc-input-l">
+        <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
+        <input type="text" placeholder=".sc-input .info" class="sc-input info">
+        <input type="text" placeholder=".sc-input .success" class="sc-input success">
+        <input type="text" placeholder=".sc-input .error" class="sc-input error">
+        <textarea class="sc-input" placeholder="sc-input" readonly>textarea.sc-input</textarea>
     </div>
     <pre><code class="html" id="code-inputs"></code></pre>
     <script>
-        formatCode(`<input type="text">
-<input type="text" class="input-l">
-<input type="text" disabled>
-<input type="text" class="info">
-<input type="text" class="success">
-<input type="text" class="error">
-<textarea>...</textarea>`, '#code-inputs');
+        formatCode(`<input type="text" class="sc-input">
+<input type="text" class="sc-input sc-input-l">
+<input type="text" class="sc-input" disabled>
+<input type="text" class="sc-input info">
+<input type="text" class="sc-input success">
+<input type="text" class="sc-input error">
+<textarea class="sc-input">...</textarea>`, '#code-inputs');
     </script>
 
     <a name="selects"></a>
     <h3>Select Boxes</h3>
     <div class="example example-selects">
-        <select name="as24-select-1">
-            <option>default (.input-m)</option>
+        <select class="sc-input" name="as24-select-1">
+            <option>default (.sc-input-m)</option>
             <option>Option 2</option>
             <option>Option 3</option>
         </select>
-        <select name="as24-select-2" class="input-l">
+        <select name="as24-select-2" class="sc-input sc-input-l">
             <option>.input-l</option>
             <option>Option 2</option>
             <option>Option 3</option>
         </select>
-        <select name="as24-select-3" class="input-l" disabled>
+        <select name="as24-select-3" class="sc-input sc-input-l" disabled>
             <option>disabled</option>
         </select>
     </div>
     <pre><code class="html" id="code-selects"></code></pre>
     <script>
-        formatCode(`<select>
+        formatCode(`<select class="sc-input">
     <option>...</option>
 </select>
 
-<select class="input-l">
+<select class="sc-input sc-input-l">
     ...
 </select>
 
-<select class="input-l" disabled>
+<select class="sc-input sc-input-l" disabled>
     ...
 </select>`, '#code-selects');
     </script>
@@ -864,65 +864,73 @@ formatCode(`<div class="grid-row">
     <h3>Radio Buttons</h3>
     <div class="example example-radios">
         <div>
-            <input id="as24-radio-1" type="radio" name="example-radios-1">
+            <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
             <label for="as24-radio-1">Radio 1</label>
 
-            <input id="as24-radio-2" type="radio" name="example-radios-1">
+            <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
             <label for="as24-radio-2">Radio 2</label>
 
-            <input id="as24-radio-3" type="radio" disabled name="example-radios-1">
+            <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
             <label for="as24-radio-3">Radio 3 (disabled)</label>
         </div>
         <div>
-            <input id="as24-radio-4" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-4" type="radio" name="example-radios-2">
             <label for="as24-radio-4">Radio 1</label>
 
-            <input id="as24-radio-5" class="input-l" type="radio" name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-5" type="radio" name="example-radios-2">
             <label for="as24-radio-5">Radio 2</label>
 
-            <input id="as24-radio-6" class="input-l" type="radio" disabled name="example-radios-2">
+            <input class="sc-input sc-input-l" id="as24-radio-6" type="radio" disabled name="example-radios-2">
             <label for="as24-radio-6">Radio 3 (disabled)</label>
         </div>
     </div>
     <pre><code class="html" id="code-radios"></code></pre>
     <script>
-        formatCode(`<input id="radio1" type="radio">
+        formatCode(`<input class="sc-input" id="radio1" type="radio">
 <label for="radio1">...</label>
 
-<input id="radio2" type="radio" disabled>
-<label for="radio2">...</label>`, '#code-radios');
+<input class="sc-input" id="radio2" type="radio" disabled>
+<label for="radio2">...</label>
+
+<input class="sc-input sc-input-l" id="radio3" type="radio">
+<label for="radio3">...</label>
+
+<input class="sc-input sc-input-l" id="radio4" type="radio" disabled>
+<label for="radio4">...</label>`, '#code-radios');
     </script>
 
     <a name="checkboxes"></a>
     <h3>Checkboxes</h3>
     <div class="example example-checkboxes">
         <div>
-            <input id="as24-checkbox-1" type="checkbox">
+            <input class="sc-input" id="as24-checkbox-1" type="checkbox">
             <label for="as24-checkbox-1">Checkbox</label>
 
-            <input id="as24-checkbox-2" type="checkbox" disabled>
+            <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled>
             <label for="as24-checkbox-2">Checkbox (disabled)</label>
         </div>
         <div>
-            <input id="as24-checkbox-3" type="checkbox" class="input-l">
+            <input class="sc-input sc-input-l" id="as24-checkbox-3" type="checkbox">
             <label for="as24-checkbox-3">Checkbox</label>
 
-            <input id="as24-checkbox-4" type="checkbox" disabled class="input-l">
+            <input class="sc-input sc-input-l" id="as24-checkbox-4" type="checkbox" disabled>
             <label for="as24-checkbox-4">Checkbox (disabled)</label>
         </div>
     </div>
     <pre><code class="html" id="code-checkboxes"></code></pre>
     <script>
-        formatCode(`<input id="cb1" type="checkbox">
+        formatCode(`<input class="sc-input" id="cb1" type="checkbox">
 <label for="cb1">...</label>
 
-<input id="cb2" type="checkbox" disabled>
+<input class="sc-input" id="cb2" type="checkbox" disabled>
 <label for="cb2">...</label>
 
-<input id="cb3" type="checkbox" class="input-l">
-<label for="cb3">...</label>`, '#code-checkboxes');
-    </script>
+<input class="sc-input sc-input-l" id="cb3" type="checkbox">
+<label for="cb3">...</label>
 
+<input class="sc-input sc-input-l" id="cb4" type="checkbox" disabled>
+<label for="cb4">...</label>`, '#code-checkboxes');
+    </script>
 
     <a name="color-selector"></a>
     <h3>Color Selectors</h3>
@@ -933,50 +941,50 @@ formatCode(`<div class="grid-row">
         color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
     </p>
     <div class="example example-color-picker">
-        <div class="color-selector">
-            <input id="as24-cb-cp-1" type="radio" name="xx" class="red">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
             <label for="as24-cb-cp-1">red</label>
 
-            <input id="as24-cb-cp-2" type="radio" name="xx" class="yellow">
+            <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
             <label for="as24-cb-cp-2">yellow</label>
 
-            <input id="as24-cb-cp-7" type="radio" name="xx" class="green">
+            <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
             <label for="as24-cb-cp-7">green</label>
 
-            <input id="as24-cb-cp-8" type="radio" name="xx" class="gold">
+            <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
             <label for="as24-cb-cp-8">gold</label>
         </div>
-        <div class="color-selector">
-            <input id="as24-cb-cp-3" type="radio" name="xx" class="input-l blue">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
             <label for="as24-cb-cp-3">radio</label>
 
-            <input id="as24-cb-cp-4" type="radio" name="xx" class="input-l orange">
+            <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l orange">
             <label for="as24-cb-cp-4">radio</label>
         </div>
-        <div class="color-selector">
-            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="input-l blue">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
             <label for="as24-cb-cp-5">radio</label>
 
-            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="input-l orange">
+            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l orange">
             <label for="as24-cb-cp-6">radio</label>
         </div>
     </div>
     <pre><code class="html" id="code-color-selector"></code></pre>
     <script>
-        formatCode(`<div class="color-selector">
-    <input id="cs1" type="radio" name="cs1" class="red">
+        formatCode(`<div class="sc-color-selector">
+    <input id="cs1" type="radio" name="cs1" class="sc-input red">
     <label for="cs1">red</label>
 
-    <input id="cs2" type="radio" name="cs1" class="yellow">
+    <input id="cs2" type="radio" name="cs1" class="sc-input yellow">
     <label for="cs2">yellow</label>
 
-    <input id="cs3" type="radio" name="cs1" class="green">
+    <input id="cs3" type="radio" name="cs1" class="sc-input green">
     <label for="cs4">green</label>
 </div>
 -- additional scss --
 @import "path/to/mixins/color-selector";
-.color-selector {
-    input {
+.sc-color-selector {
+    input.sc-input {
         &.red {
             @include color-selector-color(#ff0000, #fff);
         }
@@ -988,14 +996,14 @@ formatCode(`<div class="grid-row">
 }
 
 -- radio buttons --
-<div class="color-selector">
-    <input id="..." type="radio" name="...">
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="radio" name="...">
     <label for="...">...</label>
 </div>
 
 -- checkboxes --
-<div class="color-selector">
-    <input id="..." type="checkbox" name="...">
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="checkbox" name="...">
     <label for="...">...</label>
 </div>
 `, '#code-color-selector');
@@ -1004,51 +1012,51 @@ formatCode(`<div class="grid-row">
     <a name="input-groups"></a>
     <h3>Input Groups</h3>
     <div class="example example-groups">
-        <div class="input-group">
-            <input type="text" placeholder="Text input 1">
-            <input type="text" placeholder="Text input 2">
-            <button class="btn-bob-m">Submit</button>
+        <div class="sc-input-group">
+            <input class="sc-input" type="text" placeholder="Text input 1">
+            <input class="sc-input" type="text" placeholder="Text input 2">
+            <button class="sc-btn-bob-m">Submit</button>
         </div>
 
-        <div class="input-group-radio">
-            <input id="as24-radio-7" name="as24-radio" type="radio">
+        <div class="sc-input-group-radio">
+            <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
             <label for="as24-radio-7">Option 1</label>
 
-            <input id="as24-radio-8" name="as24-radio" type="radio" checked>
+            <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked>
             <label for="as24-radio-8">Option 2</label>
 
-            <input id="as24-radio-9" name="as24-radio" type="radio">
+            <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
             <label for="as24-radio-9">Option 3</label>
         </div>
-        <div class="input-group-radio input-group-emission-badge">
-            <input id="example-groups-3-1" name="example-groups-3" type="radio">
+        <div class="sc-input-group-radio input-group-emission-badge">
+            <input class="sc-input" id="example-groups-3-1" name="example-groups-3" type="radio">
             <label for="example-groups-3-1">Alle</label>
 
-            <input id="example-groups-3-2" name="example-groups-3" type="radio" checked>
+            <input class="sc-input" id="example-groups-3-2" name="example-groups-3" type="radio" checked>
             <label for="example-groups-3-2"><as24-icon type="emission-badge-2"></as24-icon></label>
 
-            <input id="example-groups-3-3" name="example-groups-3" type="radio">
+            <input class="sc-input" id="example-groups-3-3" name="example-groups-3" type="radio">
             <label for="example-groups-3-3"><as24-icon type="emission-badge-3"></as24-icon></label>
 
-            <input id="example-groups-3-4" name="example-groups-3" type="radio">
+            <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
             <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
         </div>
     </div>
     <pre><code class="html" id="code-groups"></code></pre>
     <script>
-        formatCode(`<div class="input-group">
-    <input type="text">
+        formatCode(`<div class="sc-input-group">
+    <input class="sc-input" type="text">
     ...
 </div>
 
-<div class="input-group-radio">
-    <input id="radio" type="radio">
+<div class="sc-input-group-radio">
+    <input class="sc-input" id="radio" type="radio">
     <label for="radio">...</label>
     ...
 </div>
-<div class="input-group-radio" >
+<div class="sc-input-group-radio" >
     ...
-    <input id="radio" type="radio">
+    <input class="sc-input" id="radio" type="radio">
     <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
     ...
 </div>`, '#code-groups');
@@ -1060,56 +1068,61 @@ formatCode(`<div class="grid-row">
     <a name="floats"></a>
     <h3>Floats</h3>
     <div class="example example-floats">
-        <div class="clearfix">
-            <div class="pull-left"></div>
-            <div class="pull-left"></div>
-            <div class="pull-left"></div>
+        <div class="sc-clearfix">
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
         </div>
         <hr>
-        <div class="clearfix">
-            <div class="pull-right"></div>
-            <div class="pull-right"></div>
-            <div class="pull-right"></div>
+        <div class="sc-clearfix">
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
         </div>
     </div>
     <pre><code class="html" id="code-floats"></code></pre>
     <script>
-        formatCode(`<div class="clearfix">...</div>
-
-<div class="pull-left">...</div>
-<div class="pull-right">...</div>`, '#code-floats');
+        formatCode(`<div class="sc-clearfix">
+    <div class="sc-pull-left">...</div>
+    <div class="sc-pull-right">...</div>
+</div>`, '#code-floats');
     </script>
 
     <a name="text-alignment"></a>
     <h3>Text alignment</h3>
     <div class="example example-text-alignment">
-        <p class="text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text aligned left</strong>
+        <p class="sc-text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text aligned right</strong>
+        <p class="sc-text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Centered text</strong>
+        <p class="sc-text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Justified text</strong>
+        <p class="sc-text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <hr>
-        <p class="text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <strong>Text without wrapping</strong>
+        <p class="sc-text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
     <pre><code class="html" id="code-text-alignment"></code></pre>
     <script>
-        formatCode(`<p class="text-left">...</p>
-<p class="text-right">...</p>
-<p class="text-center">...</p>
-<p class="text-justify">...</p>
-<p class="text-nowrap">...</p>`, '#code-text-alignment');
+        formatCode(`<p class="sc-text-left">...</p>
+<p class="sc-text-right">...</p>
+<p class="sc-text-center">...</p>
+<p class="sc-text-justify">...</p>
+<p class="sc-text-nowrap">...</p>`, '#code-text-alignment');
     </script>
 
     <a name="center-blocks"></a>
     <h3>Center content blocks</h3>
     <div class="example example-block-center">
-        <div class="block-center">.block-center</div>
+        <div class="sc-block-center">.sc-block-center</div>
     </div>
     <pre><code class="html" id="code-block-center"></code></pre>
     <script>
-        formatCode(`<div class="block-center">...</div>`, '#code-block-center');
+        formatCode(`<div class="sc-block-center">...</div>`, '#code-block-center');
     </script>
 
     <a name="horizontal-line"></a>
@@ -1129,11 +1142,11 @@ formatCode(`<div class="grid-row">
     <h3>Ellipsis</h3>
     <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
     <div class="example example-ellipsis">
-        <div class="ellipsis" title="My very long text">My very long text</div>
+        <div class="sc-ellipsis" title="My very long text">My very long text</div>
     </div>
     <pre><code class="html" id="code-ellipsis"></code></pre>
     <script>
-        formatCode(`<div class="ellipsis" title="...">...</div>`, '#code-ellipsis');
+        formatCode(`<div class="sc-ellipsis" title="...">...</div>`, '#code-ellipsis');
     </script>
 
     <a name="visibility"></a>
@@ -1158,70 +1171,70 @@ formatCode(`<div class="grid-row">
         </thead>
         <tbody>
         <tr>
-            <td><code>.visible</code></td>
+            <td><code>.sc-visible</code></td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
         </tr>
         <tr>
-            <td><code>.visible-xl</code></td>
+            <td><code>.sc-visible-xl</code></td>
             <td></td>
             <td></td>
             <td></td>
             <td class="cell-visible">Visible</td>
         </tr>
         <tr>
-            <td><code>.visible-l</code></td>
+            <td><code>.sc-visible-l</code></td>
             <td></td>
             <td></td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
         </tr>
         <tr>
-            <td><code>.visible-m</code></td>
+            <td><code>.sc-visible-m</code></td>
             <td></td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
         </tr>
         <tr>
-            <td><code>.visible-s</code></td>
+            <td><code>.sc-visible-s</code></td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
             <td class="cell-visible">Visible</td>
         </tr>
         <tr>
-            <td><code>.hidden</code></td>
+            <td><code>.sc-hidden</code></td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
         </tr>
         <tr>
-            <td><code>.hidden-xl</code></td>
+            <td><code>.sc-hidden-xl</code></td>
             <td></td>
             <td></td>
             <td></td>
             <td class="cell-hidden">Hidden</td>
         </tr>
         <tr>
-            <td><code>.hidden-l</code></td>
+            <td><code>.sc-hidden-l</code></td>
             <td></td>
             <td></td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
         </tr>
         <tr>
-            <td><code>.hidden-m</code></td>
+            <td><code>.sc-hidden-m</code></td>
             <td></td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
         </tr>
         <tr>
-            <td><code>.hidden-s</code></td>
+            <td><code>.sc-hidden-s</code></td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
             <td class="cell-hidden">Hidden</td>
@@ -1234,17 +1247,17 @@ formatCode(`<div class="grid-row">
     <h3>Box spacing</h3>
     <p>
         To get a consistent spacing between content boxes, e.g. cms boxes on the home page use the css extendable
-        <code>%box-spacing</code> or the predefined class <code>box-spacing</code>
+        <code>%box-spacing</code> or the predefined class <code>sc-box-spacing</code>
     </p>
     <div class="example example-box-spacing">
-        <div class="box-spacing">Box 1</div>
-        <div class="box-spacing">Box 2</div>
-        <div class="box-spacing">Box 3</div>
+        <div class="sc-box-spacing">Box 1</div>
+        <div class="sc-box-spacing">Box 2</div>
+        <div class="sc-box-spacing">Box 3</div>
     </div>
     <pre><code class="html" id="code-box-sizing"></code></pre>
     <script>
-        formatCode(`<div class="box-spacing">...</div>
-<div class="box-spacing">...</div>
+        formatCode(`<div class="sc-box-spacing">...</div>
+<div class="sc-box-spacing">...</div>
         `, '#code-box-sizing');
     </script>
 </div>
@@ -1255,50 +1268,58 @@ formatCode(`<div class="grid-row">
     <a name="collapse"></a>
     <h3>Collapse</h3>
     <div class="example example-collapse">
-        <button class="btn-ross-m" data-toggle="collapse" data-target="#collapse-target-1">Collapse Toggle</button>
-        <div id="collapse-target-1" class="collapse">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <button class="sc-btn-ross-m" data-toggle="sc-collapse" data-target="#collapse-target-1">Collapse Toggle</button>
+        <div id="collapse-target-1" class="sc-collapse">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet.
         </div>
         <hr>
-        <button class="btn-ross-m collapse collapse-target in" data-toggle="collapse" data-target=".collapse-target">Collapse Show</button>
-        <div class="collapse collapse-target">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <button class="sc-btn-ross-m sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Collapse Show</button>
+        <div class="sc-collapse sc-collapse-target">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <button data-toggle="collapse" data-target=".collapse-target" class="btn-ross-m collapse collapse-target">
+        <button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-btn-ross-m sc-collapse sc-collapse-target">
             Collapse Hide
         </button>
     </div>
 
     <pre><code class="html" id="code-collapse"></code></pre>
     <script>
-        formatCode(`<button data-toggle="collapse" data-target="#collapse">...</button>
-<div id="collapse" class="collapse">...</div>
+        formatCode(`<button data-toggle="sc-collapse" data-target="#collapse">...</button>
+<div id="collapse" class="sc-collapse">...</div>
 
-<button class="collapse collapse-target in" data-toggle="collapse" data-target=".collapse-target">Show</button>
-<div class="collapse collapse-target">
+<button class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Show</button>
+<div class="sc-collapse sc-collapse-target">
     ...
 </div>
-<button data-toggle="collapse" data-target=".collapse-target" class="collapse collapse-target">Hide</button>`, '#code-collapse');
+<button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">Hide</button>`, '#code-collapse');
     </script>
 
     <a name="breadcrumbs"></a>
     <h3>Breadcrumbs</h3>
     <div class="example example-breadcrumbs">
-        <div class="breadcrumbs">
+        <div class="sc-breadcrumbs">
             <ul>
-                <li><a href="/url/to/home" data-breadcrumb="home">Home page</a></li>
-                <li><a href="/url/to/list" data-breadcrumb="list">List results</a></li>
-                <li><a href="/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+                <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+                <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+                <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
             </ul>
         </div>
     </div>
     <pre><code class="html" id="code-breadcrumbs"></code></pre>
     <script>
-        formatCode(`<div class="breadcrumbs">
+        formatCode(`<div class="sc-breadcrumbs">
     <ul>
-        <li><a href="/url/to/home" data-breadcrumb="home">Home page</a></li>
-        <li><a href="/url/to/list" data-breadcrumb="list">List results</a></li>
-        <li><a href="/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+        <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+        <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
     </ul>
 </div>`, '#code-breadcrumbs');
     </script>
@@ -1307,7 +1328,7 @@ formatCode(`<div class="grid-row">
     <h3>Custom Dropdown</h3>
     <div class="example example-custom-dropdown">
         <label>Custom Dropdown</label>
-        <custom-dropdown checkboxgroup>
+        <custom-dropdown class="sc-input" checkboxgroup>
             <div>
                 <p>All</p>
             </div>
@@ -1322,7 +1343,7 @@ formatCode(`<div class="grid-row">
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons</label>
-        <custom-dropdown class="icon" checkboxgroup style="max-width: 300px;">
+        <custom-dropdown class="sc-input icon" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
@@ -1422,14 +1443,12 @@ formatCode(`<div class="grid-row">
     <h3>Sticky Element</h3>
 
     <p>A sticky element represents any HTML element that keeps in view even if you scroll.</p>
-    <p>A sticky element consists
-    of three parts:
-        <ul class="sticky-list">
-            <li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier for the element as value.</li>
-            <li>A marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as value.</li>
-            <li>And a marker where it docks (stops scrolling), identified by a <code>data-sticky-dock</code> attribute with the identifier as value.</li>
-        </ul>
-    </p>
+    <p>A sticky element consists of three parts:
+    <ul class="sticky-list">
+        <li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier for the element as value.</li>
+        <li>A marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as value.</li>
+        <li>And a marker where it docks (stops scrolling), identified by a <code>data-sticky-dock</code> attribute with the identifier as value.</li>
+    </ul>
     <p>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
 
     <div class="example example-sticky">
@@ -1438,7 +1457,9 @@ formatCode(`<div class="grid-row">
             Sticky Spacer
         </div>
         <div data-sticky-dock="myBtn"></div>
-        <div data-sticky="myBtn" class="text-center"><button class="btn-bob-l">Sticky Button</button></div>
+        <div data-sticky="myBtn" class="sc-text-center">
+            <button class="sc-btn-bob-l">Sticky Button</button>
+        </div>
     </div>
     <pre><code class="html" id="code-sticky"></code></pre>
     <script>
@@ -1446,7 +1467,7 @@ formatCode(`<div class="grid-row">
 ...
 <div data-sticky-dock="myBtn"></div>
 <div data-sticky="myBtn">
-    <button class="btn-bob-l">Sticky Button</button>
+    <button class="sc-btn-bob-l">Sticky Button</button>
 </div>`, '#code-sticky');
 </script>
 
@@ -1454,15 +1475,16 @@ formatCode(`<div class="grid-row">
     <a name="rotating-arrow"></a>
     <h3>Rotating Arrow</h3>
 
-    <div id="rotating-arrow" >
-        <span class="font-bold">Some Text</span><span data-toggle="arrow" data-target="#rotating-arrow" class="pull-right"></span>
-        <hr/>
+    <div class="example example-rotating-arrow">
+        <div id="rotating-arrow" >
+            <span class="sc-font-bold">Look at the arrow right of me!</span>
+            <span data-toggle="arrow" data-target="#rotating-arrow"></span>
+        </div>
     </div>
     <pre><code class="html" id="code-rotating-arrow"></code></pre>
     <script>
         formatCode(`<div id="myId">
-    Your Text here
-    <span data-toggle="arrow" data-target="#myId"></span>
+    Look at the arrow right of me! <span data-toggle="arrow" data-target="#myId"></span>
 </div>`, '#code-rotating-arrow');
     </script>
 </div>
@@ -1471,33 +1493,29 @@ formatCode(`<div class="grid-row">
     <h3>Pager</h3>
     <div class="example example-custom-dropdown">
 
-        <ul class="pagination">
+        <ul class="sc-pagination">
             <li class="previous-page">
                 <a class="disabled" href="">
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
-            <li class="info-page">
-                <a class="info" href="">1 / 20</a>
-            </li>
-            <li><a href="/classified-list?make=9&amp;page=1&amp;size=20">1</a></li>
-            <li><a href="/classified-list?make=9&amp;page=2&amp;size=20">2</a></li>
-            <li><a class="active" href="/classified-list?make=9&amp;page=3&amp;size=20">3</a></li>
-            <li><a href="/classified-list?make=9&amp;page=4&amp;size=20">4</a></li>
-            <li><a href="/classified-list?make=9&amp;page=5&amp;size=20">5</a></li>
-            <li><a href="/classified-list?make=9&amp;page=6&amp;size=20">6</a></li>
-            <li><a href="/classified-list?make=9&amp;page=7&amp;size=20">7</a></li>
+            <li><a href="javascript:void(0)">1</a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li><a class="active" href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li><a href="javascript:void(0)">6</a></li>
+            <li><a href="javascript:void(0)">7</a></li>
             <li><a class="disabled" href="">...</a></li>
-            <li><a href="/classified-list?make=9&amp;page=20&amp;size=20">20</a></li>
+            <li><a href="javascript:void(0)">20</a></li>
             <li class="next-page">
-                <a href="/classified-list?make=9&amp;page=2&amp;size=20">
-                    Next <as24-icon type="arrow"></as24-icon>
+                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
             </li>
         </ul>
         <pre style="margin-top:20px;"><code class="html" id="code-pager"></code></pre>
         <script>
-            formatCode(`<ul class="pagination">
+            formatCode(`<ul class="sc-pagination">
     <li class="previous-page">
         <a class="disabled" href="">
             <as24-icon type="arrow"></as24-icon> Previous
@@ -1519,15 +1537,7 @@ formatCode(`<div class="grid-row">
         </script>
     </div>
 
-
-<div class="container-non-smoking-vehicle">
-    <input type="checkbox" id="nonSmokingVehicle" name="eq" value="110">
-    <label for="nonSmokingVehicle">Non-smoking Vehicle</label>
-</div>
-
-
-
-<script src="js/livereload.js?host=localhost"></script>
-<script src="../dist/showcar-ui.min.js"></script>
+    <script src="../dist/showcar-ui.min.js"></script>
+    <script src="js/pager.js"></script>
 </body>
 </html>
