@@ -1475,16 +1475,16 @@ formatCode(`<div class="sc-grid-row">
     <a name="rotating-arrow"></a>
     <h3>Rotating Arrow</h3>
 
-    <div id="rotating-arrow" >
-        <span class="sc-font-bold">Look at the arrow right of me!</span>
-        <span data-toggle="arrow" data-target="#rotating-arrow"></span>
-        <hr/>
+    <div class="example example-rotating-arrow">
+        <div id="rotating-arrow" >
+            <span class="sc-font-bold">Look at the arrow right of me!</span>
+            <span data-toggle="arrow" data-target="#rotating-arrow"></span>
+        </div>
     </div>
     <pre><code class="html" id="code-rotating-arrow"></code></pre>
     <script>
         formatCode(`<div id="myId">
-    Your Text here
-    <span data-toggle="arrow" data-target="#myId"></span>
+    Look at the arrow right of me! <span data-toggle="arrow" data-target="#myId"></span>
 </div>`, '#code-rotating-arrow');
     </script>
 </div>
