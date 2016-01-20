@@ -50,13 +50,15 @@
                         <div class="sc-grid-row">
                             <div class="sc-grid-col-6 font-l">Filter</div>
                             <div class="sc-grid-col-6 text-right">
-                                <a href="#">Reset</a>
+                                <a href="javascript:document.getElementById('filter-form').reset()">
+                                    Reset
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- filter section: mocks of form elements -->
-                    <form action="#">
+                    <form action="#" id="filter-form">
                         <label for="make">Make</label>
                         <select class="sc-input" id="make">
                             <option>All</option>
