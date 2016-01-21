@@ -1,6 +1,3 @@
-var tracking = require('../../vendor/showcar-tracking/src/index.js');
-window.ut = tracking.ut || [];
-
 require('../../vendor/zepto/zepto.min.js');
 
 var polyfills = require('./components/polyfills.js');
