@@ -15,7 +15,8 @@ module.exports = function(grunt) {
         sass: loadConfig("sass"),
         copy: loadConfig("copy"),
         watch: loadConfig("watch"),
-        pleeease: loadConfig("pleeease")
+        pleeease: loadConfig("pleeease"),
+        assemble: loadConfig("assemble")
     });
 
     grunt.registerTask("build", ["sass", "webpack", "copy"]);
