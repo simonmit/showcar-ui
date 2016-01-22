@@ -904,7 +904,7 @@
 	    var t = e.currentTarget,
 	        n = e.attrChange,
 	        r = e.attrName,
-	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" & e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
+	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" && e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
 	  }function ft(e) {
 	    var t = st(e);return function (e) {
 	      X.push(t, e.target);
@@ -3720,6 +3720,11 @@
 	            Array.prototype.forEach.call(targets, function (target) {
 	                target.classList.toggle('in');
 	            });
+	
+	            var event = new CustomEvent('collapse', {
+	                bubbles: true
+	            });
+	            document.dispatchEvent(event);
 	        };
 	    });
 	};
@@ -3731,28 +3736,28 @@
 	"use strict";
 	
 	!function (c) {
-	  function s(v) {
-	    if (l[v]) return l[v].exports;var t = l[v] = { exports: {}, id: v, loaded: !1 };return c[v].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
-	  }var l = {};return s.m = c, s.c = l, s.p = "", s(0);
-	}([function (c, s, l) {
-	  var v = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
-	      t = {};v.forEach(function (c) {
-	    t[c.toLowerCase()] = l(1)("./" + c + ".svg");
+	  function s(l) {
+	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
+	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
+	}([function (c, s, v) {
+	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
+	      t = {};l.forEach(function (c) {
+	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
 	  });var h = Object.create(HTMLElement.prototype);h.createdCallback = function () {
 	    this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()];
-	  }, h.attributeChangedCallback = function (c, s, l) {
+	  }, h.attributeChangedCallback = function (c, s, v) {
 	    "type" === c && (this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()]);
-	  }, document.registerElement("as24-icon", { prototype: h }), window.showcarIconNames = v;
-	}, function (c, s, l) {
-	  function v(c) {
-	    return l(t(c));
+	  }, document.registerElement("as24-icon", { prototype: h }), window.showcarIconNames = l;
+	}, function (c, s, v) {
+	  function l(c) {
+	    return v(t(c));
 	  }function t(c) {
 	    return h[c] || function () {
 	      throw new Error("Cannot find module '" + c + "'.");
 	    }();
-	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./phone.svg": 58, "./pin.svg": 59, "./pinCar.svg": 60, "./pinMoto.svg": 61, "./pinterest.svg": 62, "./search.svg": 63, "./sharing.svg": 64, "./star-half.svg": 65, "./star.svg": 66, "./t-online.svg": 67, "./tip.svg": 68, "./twitter.svg": 69, "./whatsapp.svg": 70, "./youtube.svg": 71 };v.keys = function () {
+	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./navigation/car.svg": 58, "./navigation/caravan.svg": 59, "./phone.svg": 60, "./pin.svg": 61, "./pinCar.svg": 62, "./pinMoto.svg": 63, "./pinterest.svg": 64, "./search.svg": 65, "./sharing.svg": 66, "./star-half.svg": 67, "./star.svg": 68, "./t-online.svg": 69, "./tip.svg": 70, "./twitter.svg": 71, "./whatsapp.svg": 72, "./youtube.svg": 73 };l.keys = function () {
 	    return Object.keys(h);
-	  }, v.resolve = t, c.exports = v, v.id = 1;
+	  }, l.resolve = t, c.exports = l, l.id = 1;
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22"><path d="M6.2 1.7h.1c.1 0 .1-.1.1-.1L5.4 0h-.1c-.1 0-.1.1-.1.1l1 1.6zM11.7 1.7h-.1c-.1 0-.1-.1-.1-.1L12.6 0h.1c.1 0 .1.1.1.1l-1.1 1.6zM9 2.7C3.3 2.7 3 8 3 8h12s-.4-5.3-6-5.3zM6.4 6.4c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zm5.1 0c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zM2 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM18 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM7 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6zM12 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6z"/><path d="M15 17c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v7z"/></svg>';
 	}, function (c, s) {
@@ -3865,6 +3870,10 @@
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/><path d="M17.7 11H20V9h-2.3c-.2-3.1-2.4-5.2-5.2-6.2-.2 0-.4-.1-.5-.2-.5-.1-.5-.2-1-.2V0H9v2.4c-2.8.2-4.8 1.9-6 4.4-.3.8-.5 1.2-.7 2.2H0v2h2.3c.1.7.2 1 .5 1.7.2.3.3.7.5 1 .2.3.3.5.5.8 1.3 1.8 2.9 3 5.2 3.2V20h2v-2.3c3.8-.4 6.3-2.9 6.7-6.7zM10 16.5c-2 0-3.8-.9-5-2.3-.2-.3-.5-.7-.7-1-.5-.9-.8-2-.8-3.1 0-.7.1-1.3.3-2 .2-.6.4-1.3.9-1.9.4-.6 1-1.2 1.6-1.6 1-.8 2.3-1.2 3.7-1.2h.8c1.9.2 3.5 1.3 4.6 2.8l.3.6c.3.4.4.9.5 1.2.2.6.3 1.2.3 2v.7c0 .4-.1.8-.2 1.2-.8 2.6-3.3 4.6-6.3 4.6z"/></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 11.9l-9-6v7.5c0 .9.7 1.6 1.6 1.6h14.7c.9 0 1.6-.7 1.6-1.6V6v-.2L9 11.9zm0-1.6l8.5-5.9c-.3-.2-.9-.4-1.3-.4H1.8c-.4 0-1 .2-1.3.4L9 10.3z" fill-rule="evenodd" clip-rule="evenodd"/></svg>';
+	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 15"><path d="M6 9c-1.656 0-3 1.343-3 3s1.344 3 3 3 3-1.343 3-3-1.344-3-3-3zm0 4.8c-.993 0-1.8-.807-1.8-1.8s.807-1.8 1.8-1.8 1.8.807 1.8 1.8-.807 1.8-1.8 1.8z"/><path d="M1.604 13.5c-.066 0-.104-.898-.104-1.225C1.5 9.79 3.515 7.637 6 7.637s4.5 2.196 4.5 4.68c0 .347-.047.183-.12 1.183h13.24c-.073-1-.12-.905-.12-1.25 0-2.485 2.015-4.625 4.5-4.625s4.5 2.202 4.5 4.688c0 .345-.047.188-.12 1.188h.466C33.482 12.5 34 11.208 34 10c0-2.092-1.32-3.58-2.496-3.842l-7.03-1.377S18.978.5 15.713.5H9.098C4 .5 0 6.273 0 9.463c0 1.7.172 2.037.953 4.037h.65zm3.238-8L6.25 3.18c.99-1.56 3.012-1.68 4.844-1.68h1.075l.478 4H4.842zm9.238 0l-.478-4h2.11c2.38 0 7.07 4 7.07 4H14.08z"/><path d="M28 9c-1.656 0-3 1.343-3 3s1.344 3 3 3 3-1.343 3-3-1.344-3-3-3zm0 4.8c-.993 0-1.8-.807-1.8-1.8s.807-1.8 1.8-1.8 1.8.807 1.8 1.8-.807 1.8-1.8 1.8z"/></svg>';
+	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 20"><path d="M26.742 11.596c-.973 0-1.528-.47-1.528-1.528V7.775h2.292c.55 0 1.182.31 1.528.764l2.426 3.056h-4.718zm6.57.955L29.44 7.745c-.52-.705-1.36-1.115-2.303-1.115H23.686c-.632 0-1.146.513-1.146 1.145V18.47h3.155c-.062-.244-.1-.498-.1-.763 0-1.688 1.37-3.056 3.057-3.056s3.057 1.37 3.057 3.057c0 .265-.038.52-.102.764h1.724c.384-.47.668-1.144.668-1.908v-1.634c0-.73-.2-1.697-.69-2.377z"/><path d="M30.332 1.86l-.685-.394c-.548-.312-1.51-.568-2.142-.568H21.01c-.63 0-1.63.177-2.222.393L15.662 2.43H1.53C.687 2.428 0 3.115 0 3.955v12.988c0 .842.688 1.528 1.53 1.528h2.29c.033 0 .062-.006.096-.01v.01h2.68c-.064-.244-.102-.498-.102-.763 0-1.688 1.37-3.056 3.057-3.056s3.058 1.37 3.058 3.057c0 .265-.037.52-.1.764h9.268V7.776c0-1.053.857-1.91 1.91-1.91H28.653l1.68-.96c.547-.31.994-.998.994-1.522 0-.527-.448-1.212-.995-1.524zM6.494 9.302c0 .63-.516 1.146-1.145 1.146H3.82c-.63 0-1.146-.517-1.146-1.147V7.775c0-.63.517-1.146 1.146-1.146h1.53c.63 0 1.145.515 1.145 1.145v1.528zm12.608 0c0 .63-.516 1.146-1.146 1.146h-4.2c-.632 0-1.147-.517-1.147-1.147V7.775c0-.63.515-1.146 1.145-1.146h4.2c.632 0 1.147.515 1.147 1.145v1.528z"/><path d="M10.697 17.708c0 .633-.514 1.146-1.146 1.146s-1.145-.513-1.145-1.146.514-1.146 1.146-1.146 1.147.513 1.147 1.146zM9.55 15.416c-1.265 0-2.29 1.025-2.29 2.292C7.26 18.974 8.284 20 9.55 20s2.294-1.026 2.294-2.292c0-1.267-1.028-2.292-2.293-2.292zM29.8 17.708c0 .633-.515 1.146-1.147 1.146s-1.146-.513-1.146-1.146.514-1.146 1.146-1.146 1.146.513 1.146 1.146zm-1.148-2.292c-1.266 0-2.293 1.025-2.293 2.292 0 1.266 1.026 2.292 2.292 2.292s2.292-1.026 2.292-2.292c0-1.267-1.026-2.292-2.292-2.292z"/></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 27 27"><path d="M6.8 1l1.9.5s1 .3.7 1.3l.4 5.3s0 .8-.8 1.1l-1.3.5s-.9.6-.3 1.4c.5.9 4.1 6.5 4.1 6.5s.3.4.8.4c.2 0 .4-.1.6-.2l1-.7s.3-.2.6-.2c.1 0 .2 0 .3.1.4.2 3.7 1.9 3.7 1.9s.8.4.5 1.4c-.3 1-.7 2.5-.7 2.5S16.9 24 15.8 24h-.3c-1.1-.3-14.2-4.4-11-21.1C4.7 1.8 6.8 1 6.8 1"/></svg>';
 	}, function (c, s) {
@@ -4342,6 +4351,10 @@
 	    });
 	
 	    document.addEventListener('scroll', function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('collapse', function () {
 	        handleStickies();
 	    });
 	};
