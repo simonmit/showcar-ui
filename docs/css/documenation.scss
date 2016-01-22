@@ -145,10 +145,14 @@ pre {
 .table-var-wrapper {
     margin: 0 -10px;
 
+    table {
+        table-layout: fixed;
+    }
+
     .docs-table-variable-color {
         margin: 10px;
 
-        th {
+        th,td {
             width: 200px;
         }
         .text-white {
