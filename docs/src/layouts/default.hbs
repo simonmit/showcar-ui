@@ -6,10 +6,17 @@
     {{> head }}
 </head>
 <body {{#if site-class}}class="{{site-class}}"{{/if}}>
-{{> header}}
-{{> nav}}
-{{> body}}
-{{> footer}}
-{{> foot }}
+    <div class="sc-content-container">
+        {{> header}}
+        <div class="docs-container">
+            {{> nav}}
+            <div class="docs-content">
+                {{> body}}
+            </div>
+        </div>
+
+        {{> footer}}
+    </div>
+    {{> foot }}
 </body>
 </html>
