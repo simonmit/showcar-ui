@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShowCar UI Library Docs - Typography</title>
+    <!-- IMPORTANT: always change the *.hbs files within docs/src -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/documenation.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body >
+    <div class="sc-content-container">
+        <h1>ShowCar UI Library Docs - Typography</h1>
+        <div class="docs-container">
+            <ul class="docs-navigation">
+                <li>
+                    <a href="../index.html"></a>
+                </li>
+                <li>
+                    <a href="variables.html">Variables</a>
+                    <ul>
+                        <li><a href="variables.html#colors">Colors</a></li>
+                        <li><a href="variables.html#spacings">Spacings</a></li>
+                        <li><a href="variables.html#viewports">Viewports</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="content-container.html">Content container</a>
+                </li>
+                <li>
+                    <a href="grid.html">Grid</a>
+                </li>
+                <li>
+                    <a href="responsive-images.html">Responsive Images</a>
+                </li>
+                <li>
+                    <a href="buttons.html">Buttons</a>
+                </li>
+                <li>
+                    <a href="typography.html">Typography</a>
+                    <ul>
+                        <li><a href="typography.html#body-copy">Body copy</a></li>
+                        <li><a href="typography.html#links">Links</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="forms.html">Forms</a>
+                    <ul>
+                        <li><a href="forms.html#inputs-textareas">Inputs Textareas</a></li>
+                        <li><a href="forms.html#select-boxes">Select Boxes</a></li>
+                        <li><a href="forms.html#radio-buttons">Radio Buttons</a></li>
+                        <li><a href="forms.html#checkboxes">Checkboxes</a></li>
+                        <li><a href="forms.html#color-selectors">Color Selectors</a></li>
+                        <li><a href="forms.html#input-groups">Input Groups</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="utility.html">Utility classes</a>
+                    <ul>
+                        <li><a href="utility.html#floats">Floats</a></li>
+                        <li><a href="utility.html#text-alignment">Text alignment</a></li>
+                        <li><a href="utility.html#center-content-blocks">Center content blocks</a></li>
+                        <li><a href="utility.html#horizontal-line">Horizontal line</a></li>
+                        <li><a href="utility.html#ellipsis">Ellipsis</a></li>
+                        <li><a href="utility.html#visibility">Visibility</a></li>
+                        <li><a href="utility.html#box-spacing">Box spacing</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="components.html">Components</a>
+                    <ul>
+                        <li><a href="components.html#collapse">Collapse</a></li>
+                        <li><a href="components.html#custom-dropdown">Custom Dropdown</a></li>
+                        <li><a href="components.html#sticky-element">Sticky Element</a></li>
+                        <li><a href="components.html#rotating-arrow">Rotating Arrow</a></li>
+                        <li><a href="components.html#pager">Pager</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="docs-content">
+                
+<div>
+    <a name="typography"></a>
+    <h2>Typography</h2>
+    <a name="body-copy"></a>
+    <h3>Body copy</h3>
+    <p>
+        ShowCars default <code>font-family</code> is <span class="sc-font-bold">Source Sans Pro</span>. Please use the
+        predefined classes to increase or decrease the font size. You should not define explicit font sizes.
+        To use Source Sans Pro, you have to include <code>webfontloader</code>. The process necessary is documented in
+        the README.md file of the ShowCar UI library.
+    </p>
+    <div class="example example-body-copy">
+        <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-m">.sc-font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-l">.sc-font-l<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xl">.sc-font-xl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xxl">.sc-font-xxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-xxxl">.sc-font-xxxl<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-silent">.sc-font-silent<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p class="sc-font-bold">.sc-font-bold<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<p class="sc-font-m">...</p>
+<p class="sc-font-s">...</p>
+<p class="sc-font-l">...</p>
+<p class="sc-font-xl">...</p>
+<p class="sc-font-silent">...</p>
+<p class="sc-font-bold">...</p>
+-->
+    </code></pre>
+
+    <a name="links"></a>
+    <h3>Links</h3>
+    <div class="example example-links">
+        <div>
+            <a>Default Link</a>
+        </div>
+        <div>
+            <a class="sc-inline-link">Inline Link</a>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<a href="...">...</a>
+<a href="..." class="sc-inline-link">...</a>
+-->
+    </code></pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
+    
+        function encodeEntities(value) {
+            return value.
+                    replace(/&/g, '&amp;').
+                    replace(SURROGATE_PAIR_REGEXP, function(value) {
+                        var hi = value.charCodeAt(0);
+                        var low = value.charCodeAt(1);
+                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+                    }).
+                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+                        return '&#' + value.charCodeAt(0) + ';';
+                    }).
+                    replace(/</g, '&lt;').
+                    replace(/>/g, '&gt;');
+        }
+        function formatCode (target) {
+            var elements = document.querySelectorAll(target);
+            for (i = 0; i < elements.length; i++) {
+                var content = elements[i].innerHTML;
+                if (content) {
+                    content = content.trim();
+                    if (content.indexOf('<!--') === 0 && content.lastIndexOf('-->') === (content.length - 3)) {
+                        content = content.substring(4);
+                        content = content.substring(0, content.length - 3);
+                        content.trim();
+                    }
+                    elements[i].innerHTML = encodeEntities(content);
+                }
+            }
+        }
+        formatCode('.js-format-code');
+    </script>
+    <script src="../../dist/showcar-ui.js"></script>
+    <script src="../js/pager.js"></script>
+</body>
+</html>
