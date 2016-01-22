@@ -52,4 +52,8 @@ module.exports = function() {
     document.addEventListener('scroll', function () {
         handleStickies();
     });
+
+    document.addEventListener('collapse', function () {
+        handleStickies();
+    });
 };
