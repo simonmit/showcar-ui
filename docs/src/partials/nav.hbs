@@ -1,72 +1,15 @@
 <ul class="docs-navigation">
+{{#withSort pages "data.nav-index"}}
     <li>
-        <a href="#variables">Variables</a>
-        <ul>
-            <li><a href="#variables-colors">Colors</a></li>
-            <li><a href="#variable-spacings">Spacings</a></li>
-            <li><a href="#variable-viewports">Viewports</a></li>
-
-        </ul>
-    </li>
-    <li><a href="#content-container">Content container</a></li>
-    <li><a href="#grid">Grid</a></li>
-    <li><a href="#images">Responsive Images</a></li>
-    <li><a href="#buttons">Buttons</a></li>
-    <li>
-        <a href="#typography">Typography</a>
-        <ul>
-            <li><a href="#body-copy">Body copy</a></li>
-            <li><a href="#links">Links</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#forms">Forms</a>
-        <ul>
-            <li><a href="#inputs-textareas">Inputs</a></li>
-            <li><a href="#selects">Select Boxes</a></li>
-            <li><a href="#radios">Radio Buttons</a></li>
-            <li><a href="#checkboxes">Checkboxes</a></li>
-            <li><a href="#color-selector">Color Selectors</a></li>
-            <li><a href="#input-groups">Input Groups</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#utility">Utility classes</a>
-        <ul>
-            <li><a href="#floats">Floats</a></li>
-            <li><a href="#text-alignment">Text alignment</a></li>
-            <li><a href="#center-blocks">Center content blocks</a></li>
-            <li><a href="#horizontal-line">Horizontal line</a></li>
-            <li><a href="#ellipsis">Ellipsis</a></li>
-            <li><a href="#visibility">Visibility</a></li>
-            <li><a href="#box-spacing">Box spacing</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#components">Components</a>
-        <ul>
-            <li><a href="#collapse">Collapse</a></li>
-            <li><a href="#custom-dropdown">Custom Dropdown</a></li>
-            <li><a href="#sticky">Sticky Element</a></li>
-            <li><a href="#rotating-arrow">Rotating Arrow</a></li>
-            <li><a href="#pager">Pager</a></li>
-        </ul>
-    </li>
-</ul>
-
-Generated Nav
-<ul>
-{{#each pages }}
-    <li>
-        <a href="{{dest}}">{{data.title }}</a>
+        <a href="{{relative ../page.dest this.dest}}">{{data.title}}</a>
         {{#if data.sub-nav}}
         <ul>
         {{#each data.sub-nav}}
-            <li><a href="{{../dest}}#{{dashify (lowercase this) }}"></a>{{this}}</li>
+            <li><a href="{{relative ../../../page.dest ../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a></li>
         {{/each}}
         </ul>
         {{/if}}
     </li>
-{{/each}}
+{{/withSort}}
 </ul>
 <hr>

@@ -23,6 +23,7 @@ module.exports = function(grunt) {
     grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy"]);
 
     grunt.registerTask("default", ["dist"]);
+    grunt.registerTask("docs", ["assemble"]);
 
     require('load-grunt-tasks')(grunt, {
         pattern: ['grunt-*', "!grunt-cli"]
