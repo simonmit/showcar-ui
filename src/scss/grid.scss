@@ -15,10 +15,8 @@
 .sc-grid-row {
   @include clearfix;
   $negativMargin: percentage(map-get($susy, gutters) / susy-sum(map-get($susy, columns), map-get($susy, gutters), wide)) / 2;
-  //margin-left: -$negativMargin;
-  //margin-right: -$negativMargin;
-  margin-left: -($gutter-width/2);
-  margin-right: -($gutter-width/2);
+  margin-left: -$negativMargin;
+  margin-right: -$negativMargin;
 
   > *:empty {
     min-height: 1px;
@@ -26,11 +24,8 @@
 
   @for $i from 1 through 12 {
     .sc-grid-col-#{$i} {
-      padding-left: ($gutter-width/2);
-      padding-right: ($gutter-width/2);
-      width: percentage(100 * $i/12);
+      @include span($i);
     }
-
 
     //xl viewport
     @include mqmin($viewportXL) {
@@ -38,7 +33,6 @@
         @include span($i);
       }
     }
-
     //l viewport
     @include mqmax($viewportXL - 1) {
       .sc-grid-col-l-#{$i} {
