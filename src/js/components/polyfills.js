@@ -1,6 +1,20 @@
 module.exports = function(callback) {
     'use strict';
 
+    var loadJs = function(polyfill) {
+        var script = document.createElement('script');
+        script.src = cdnPaths[polyfill];
+        document.body.appendChild(script);
+    };
+
+    var cdnPaths = {
+        'document-register-element' : '//cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js',
+        'picturefill': '//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js',
+        'dom4': '//cdnjs.cloudflare.com/ajax/libs/dom4/1.6.0/dom4.js',
+        'es5-shim': '//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.4.1/es5-shim.min.js',
+        'placeholders': '//cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js',
+    };
+
     // intermediate solution
     var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
 
@@ -15,72 +29,22 @@ module.exports = function(callback) {
         && 'keys' in Object
         && 'trim' in String.prototype;
 
-    require('document-register-element/build/document-register-element.js');
-    require('picturefill/dist/picturefill.js');
+    loadJs('document-register-element');
+    loadJs('picturefill');
 
     if (!isDom4Browser) {
-        require('dom4/build/dom4.js');
+        loadJs('dom4');
     }
 
     if (!isEs5Browser) {
-        require('es5-shim/es5-shim.min.js');
+        loadJs('es5-shim');
     }
 
     if (needsPlaceholderPolyfill) {
-        require('placeholders/dist/placeholders.min.js');
+        loadJs('placeholders');
     }
-
 
     if (callback && typeof callback === 'function') {
         callback();
-    }
-    return;
-
-    var polyfills = [];
-
-    var sjs = require('scriptjs');
-
-    function getPolyfillPath() {
-        var src = document.querySelector('script[src*="showcar-ui.min.js"]').src;
-        src = src.split('?')[0];
-        return src.substr(0, src.lastIndexOf('/')) + '/polyfills/';
-    }
-
-    var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
-
-    var isDom4Browser = document.head
-        && ('matches' in document.head)
-        && ('classList' in document.head)
-        && 'CustomEvent' in window;
-
-    var isEs5Browser = 'map' in Array.prototype
-        && 'isArray' in Array
-        && 'bind' in Function.prototype
-        && 'keys' in Object
-        && 'trim' in String.prototype;
-
-    if (!isDom4Browser) {
-        polyfills.push(getPolyfillPath() + 'dom4.js');
-    }
-
-    if (!isEs5Browser) {
-        polyfills.push(getPolyfillPath() + 'es5-shim.min.js');
-    }
-
-    if (needsPlaceholderPolyfill) {
-        polyfills.push(getPolyfillPath() + 'placeholders.min.js');
-    }
-
-    if (polyfills.length) {
-        sjs(polyfills, start);
-    } else {
-        start();
-    }
-
-    function start() {
-        require('document-register-element/build/document-register-element.js');
-        if (callback && typeof callback === 'function') {
-            callback();
-        }
     }
 };
