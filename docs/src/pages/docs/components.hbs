@@ -1,0 +1,289 @@
+---
+title: Components
+nav-index: 8
+sub-nav:
+- Collapse
+- Custom Dropdown
+- Sticky Element
+- Rotating Arrow
+- Pager
+---
+<div>
+    <a name="components"></a>
+    <h2>Components</h2>
+
+    <a name="collapse"></a>
+    <h3>Collapse</h3>
+    <div class="example example-collapse">
+        <button class="sc-btn-ross-m" data-toggle="sc-collapse" data-target="#collapse-target-1">Collapse Toggle</button>
+        <div id="collapse-target-1" class="sc-collapse">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet.
+        </div>
+        <hr>
+        <button class="sc-btn-ross-m sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Collapse Show</button>
+        <div class="sc-collapse sc-collapse-target">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet.
+        </div>
+        <button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-btn-ross-m sc-collapse sc-collapse-target">
+            Collapse Hide
+        </button>
+    </div>
+
+    <pre><code class="html js-format-code">
+<!--
+<button data-toggle="sc-collapse" data-target="#collapse">...</button>
+<div id="collapse" class="sc-collapse">...</div>
+
+<button class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Show</button>
+<div class="sc-collapse sc-collapse-target">
+    ...
+</div>
+<button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">Hide</button>
+-->
+    </code></pre>
+
+    <a name="breadcrumbs"></a>
+    <h3>Breadcrumbs</h3>
+    <div class="example example-breadcrumbs">
+        <div class="sc-breadcrumbs">
+            <ul>
+                <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+                <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+                <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+            </ul>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-breadcrumbs">
+    <ul>
+        <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+        <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+    </ul>
+</div>
+-->
+    </code></pre>
+
+    <a name="custom-dropdown"></a>
+    <h3>Custom Dropdown</h3>
+    <div class="example example-custom-dropdown">
+        <label>Custom Dropdown</label>
+        <custom-dropdown class="sc-input" checkboxgroup>
+            <div>
+                <p>All</p>
+            </div>
+            <div>
+                <input type="checkbox" id="cd1"/>
+                <label for="cd1">Value1</label>
+                <input type="checkbox" id="cd2"/>
+                <label for="cd2">Value2</label>
+                <input type="checkbox" id="cd3"/>
+                <label for="cd3">Value3</label>
+            </div>
+        </custom-dropdown>
+        <hr/>
+        <label>Custom Dropdown with Icons</label>
+        <custom-dropdown class="sc-input icon" checkboxgroup style="max-width: 300px;">
+            <div>
+                <p>All</p>
+            </div>
+            <div>
+                <input type="checkbox" id="cabrio"/>
+                <label for="cabrio">
+                    <as24-icon type="bodytypes/roadster"></as24-icon>
+                    <span>
+                        Cabrio
+                    </span>
+                </label>
+                <input type="checkbox" id="coupe"/>
+                <label for="coupe">
+                    <as24-icon type="bodytypes/sports"></as24-icon>
+                    <span>
+                        Coupé
+                    </span>
+                </label>
+                <input type="checkbox" id="compact"/>
+                <label for="compact">
+                    <as24-icon type="bodytypes/compact"></as24-icon>
+                    <span>
+                        Kleinwagen
+                    </span>
+                </label>
+                <input type="checkbox" id="station"/>
+                <label for="station">
+                    <as24-icon type="bodytypes/station"></as24-icon>
+                    <span>
+                        Kombi
+                    </span>
+                </label>
+                <input type="checkbox" id="limousine"/>
+                <label for="limousine">
+                    <as24-icon type="bodytypes/limousine"></as24-icon>
+                    <span>
+                        Limousine
+                    </span>
+                </label>
+                <input type="checkbox" id="offroad"/>
+                <label for="offroad">
+                    <as24-icon type="bodytypes/offroad"></as24-icon>
+                    <span>
+                        SUV/Geländewagen
+                    </span>
+                </label>
+                <input type="checkbox" id="delivery"/>
+                <label for="delivery">
+                    <as24-icon type="bodytypes/delivery"></as24-icon>
+                    <span>
+                        Transporter
+                    </span>
+                </label>
+                <input type="checkbox" id="van"/>
+                <label for="van">
+                    <as24-icon type="bodytypes/van"></as24-icon>
+                    <span>
+                        Van
+                    </span>
+                </label>
+            </div>
+        </custom-dropdown>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<label>Custom Dropdown</label>
+<custom-dropdown checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="myId"/>
+        <label for="myId">My Label</label>
+        ...
+    </div>
+</custom-dropdown>
+
+<label>Custom Dropdown with Icons</label>
+<custom-dropdown class="icon" checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="myId"/>
+        <label for="myId">
+            <as24-icon type="..."></as24-icon>
+    <span>
+        ...
+    </span>
+        </label>
+        ...
+    </div>
+</custom-dropdown>
+-->
+    </code></pre>
+
+    <a name="sticky"></a>
+    <h3>Sticky Element</h3>
+
+    <p>A sticky element represents any HTML element that keeps in view even if you scroll.</p>
+    <p>A sticky element consists of three parts:
+    <ul class="sticky-list">
+        <li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier for the element as value.</li>
+        <li>A marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as value.</li>
+        <li>And a marker where it docks (stops scrolling), identified by a <code>data-sticky-dock</code> attribute with the identifier as value.</li>
+    </ul>
+    <p>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
+
+    <div class="example example-sticky">
+        <div data-sticky-undock="myBtn"></div>
+        <div class="spacer">
+            Sticky Spacer
+        </div>
+        <div data-sticky-dock="myBtn"></div>
+        <div data-sticky="myBtn" class="sc-text-center">
+            <button class="sc-btn-bob-l">Sticky Button</button>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div data-sticky-undock="myBtn"></div>
+...
+<div data-sticky-dock="myBtn"></div>
+<div data-sticky="myBtn">
+    <button class="sc-btn-bob-l">Sticky Button</button>
+</div>
+-->
+    </code></pre>
+
+    <a name="rotating-arrow"></a>
+    <h3>Rotating Arrow</h3>
+
+    <div class="example example-rotating-arrow">
+        <div id="rotating-arrow" >
+            <span class="sc-font-bold">Look at the arrow right of me!</span>
+            <span data-toggle="arrow" data-target="#rotating-arrow"></span>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div id="myId">
+    Look at the arrow right of me! <span data-toggle="arrow" data-target="#myId"></span>
+</div>
+-->
+    </code></pre>
+
+    <a name="pager"></a>
+    <h3>Pager</h3>
+    <div class="example example-custom-dropdown">
+        <ul class="sc-pagination">
+            <li class="previous-page">
+                <a class="disabled" href="">
+                    <as24-icon type="arrow"></as24-icon> Previous
+                </a>
+            </li>
+            <li><a href="javascript:void(0)">1</a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li><a class="active" href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li><a href="javascript:void(0)">6</a></li>
+            <li><a href="javascript:void(0)">7</a></li>
+            <li><a class="disabled" href="">...</a></li>
+            <li><a href="javascript:void(0)">20</a></li>
+            <li class="next-page">
+                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<ul class="sc-pagination">
+    <li class="previous-page">
+        <a class="disabled" href="">
+            <as24-icon type="arrow"></as24-icon> Previous
+        </a>
+    </li>
+    <li class="info-page">
+        <a class="info" href="">1 / 20</a>
+    </li>
+    <li><a class="active" href="...">1</a></li>
+    <li><a href="...">2</a></li>
+    <li><a class="disabled" href="">...</a></li>
+    <li><a href="...">20</a></li>
+    <li class="next-page">
+        <a href="...">
+            Next <as24-icon type="arrow"></as24-icon>
+        </a>
+    </li>
+</ul>
+-->
+    </code></pre>
+</div>

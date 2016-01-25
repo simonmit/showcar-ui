@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShowCar UI Library Docs - Variables</title>
+    <!-- IMPORTANT: always change the *.hbs files within docs/src -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/documenation.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body >
+    <div class="sc-content-container">
+        <h1>ShowCar UI Library Docs</h1>
+        <div class="docs-container">
+            <ul class="docs-navigation">
+                <li>
+                    <a href="../index.html"></a>
+                </li>
+                <li>
+                    <a href="variables.html">Variables</a>
+                    <ul>
+                        <li><a href="variables.html#colors">Colors</a></li>
+                        <li><a href="variables.html#spacings">Spacings</a></li>
+                        <li><a href="variables.html#viewports">Viewports</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="content-container.html">Content container</a>
+                </li>
+                <li>
+                    <a href="grid.html">Grid</a>
+                </li>
+                <li>
+                    <a href="responsive-images.html">Responsive Images</a>
+                </li>
+                <li>
+                    <a href="buttons.html">Buttons</a>
+                </li>
+                <li>
+                    <a href="typography.html">Typography</a>
+                    <ul>
+                        <li><a href="typography.html#body-copy">Body copy</a></li>
+                        <li><a href="typography.html#links">Links</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="forms.html">Forms</a>
+                    <ul>
+                        <li><a href="forms.html#inputs-textareas">Inputs Textareas</a></li>
+                        <li><a href="forms.html#select-boxes">Select Boxes</a></li>
+                        <li><a href="forms.html#radio-buttons">Radio Buttons</a></li>
+                        <li><a href="forms.html#checkboxes">Checkboxes</a></li>
+                        <li><a href="forms.html#color-selectors">Color Selectors</a></li>
+                        <li><a href="forms.html#input-groups">Input Groups</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="utility.html">Utility classes</a>
+                    <ul>
+                        <li><a href="utility.html#floats">Floats</a></li>
+                        <li><a href="utility.html#text-alignment">Text alignment</a></li>
+                        <li><a href="utility.html#center-content-blocks">Center content blocks</a></li>
+                        <li><a href="utility.html#horizontal-line">Horizontal line</a></li>
+                        <li><a href="utility.html#ellipsis">Ellipsis</a></li>
+                        <li><a href="utility.html#visibility">Visibility</a></li>
+                        <li><a href="utility.html#box-spacing">Box spacing</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="components.html">Components</a>
+                    <ul>
+                        <li><a href="components.html#collapse">Collapse</a></li>
+                        <li><a href="components.html#custom-dropdown">Custom Dropdown</a></li>
+                        <li><a href="components.html#sticky-element">Sticky Element</a></li>
+                        <li><a href="components.html#rotating-arrow">Rotating Arrow</a></li>
+                        <li><a href="components.html#pager">Pager</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="docs-content">
+                
+<div>
+    <a name="variables"></a>
+    <h2>Variables</h2>
+    <p>If you need to write some custom scss code there are several scss variables you should use.</p>
+    <p>
+        To use the variables in your scss code you just need to import the specific file based on your directory structure:
+    </p>
+
+    <pre><code class="css js-format-code">
+@import "variables";
+    </code></pre>
+
+    <a name="colors"></a>
+    <h3>Colors</h3>
+    <p>The following color variables are defined by the UX-Designer. </p>
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$black-100</code></td>
+                <td class="text-white" style="background-color: #333;">#333</td>
+            </tr>
+            <tr>
+                <td><code>$black-90</code></td>
+                <td class="text-white" style="background-color: #4c4c4c;">#4c4c4c</td>
+            </tr>
+            <tr>
+                <td><code>$black-80</code></td>
+                <td class="text-white" style="background-color: #646464;">#646464</td>
+            </tr>
+            <tr>
+                <td><code>$black-70</code></td>
+                <td class="text-white" style="background-color: #7c7c7c;">#7c7c7c</td>
+            </tr>
+            <tr>
+                <td><code>$black-60</code></td>
+                <td style="background-color: #949494;">#949494</td>
+            </tr>
+            <tr>
+                <td><code>$black-50</code></td>
+                <td style="background-color: #acacac;">#acacac</td>
+            </tr>
+            <tr>
+                <td><code>$black-40</code></td>
+                <td style="background-color: #c4c4c4;">#c4c4c4</td>
+            </tr>
+            <tr>
+                <td><code>$black-30</code></td>
+                <td style="background-color: #dcdcdc;">#dcdcdc</td>
+            </tr>
+            <tr>
+                <td><code>$black-20</code></td>
+                <td style="background-color: #f4f4f4;">#f4f4f4</td>
+            </tr>
+
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$blue-100</code></td>
+                <td class="text-white" style="background-color: #003468;">#003468</td>
+            </tr>
+            <tr>
+                <td><code>$blue-90</code></td>
+                <td class="text-white" style="background-color: #1e4c7a;">#1e4c7a</td>
+            </tr>
+            <tr>
+                <td><code>$blue-80</code></td>
+                <td class="text-white" style="background-color: #3d648c;">#3d648c</td>
+            </tr>
+            <tr>
+                <td><code>$blue-70</code></td>
+                <td class="text-white" style="background-color: #5b7c9e;">#5b7c9e</td>
+            </tr>
+            <tr>
+                <td><code>$blue-60</code></td>
+                <td style="background-color: #7995b0;">#7995b0</td>
+            </tr>
+            <tr>
+                <td><code>$blue-50</code></td>
+                <td style="background-color: #97adc1;">#97adc1</td>
+            </tr>
+            <tr>
+                <td><code>$blue-40</code></td>
+                <td style="background-color: #b6c5d3;">#b6c5d3</td>
+            </tr>
+            <tr>
+                <td><code>$blue-30</code></td>
+                <td style="background-color: #d4dde5;">#d4dde5</td>
+            </tr>
+            <tr>
+                <td><code>$blue-20</code></td>
+                <td style="background-color: #f2f5f7;">#f2f5f7</td>
+            </tr>
+
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$orange-100</code></td>
+                <td style="background-color: #ff7500;">#ff7500</td>
+            </tr>
+            <tr>
+                <td><code>$orange-90</code></td>
+                <td style="background-color: #ff9133;">#ff9133</td>
+            </tr>
+            <tr>
+                <td><code>$orange-80</code></td>
+                <td style="background-color: #ff9a4c;">#ff9a4c</td>
+            </tr>
+            <tr>
+                <td><code>$orange-70</code></td>
+                <td style="background-color: #ffac66;">#ffac66</td>
+            </tr>
+            <tr>
+                <td><code>$orange-60</code></td>
+                <td style="background-color: #ffba80;">#ffba80</td>
+            </tr>
+            <tr>
+                <td><code>$orange-50</code></td>
+                <td style="background-color: #ffc899;">#ffc899</td>
+            </tr>
+            <tr>
+                <td><code>$orange-40</code></td>
+                <td style="background-color: #ffd5b0;">#ffd5b0</td>
+            </tr>
+            <tr>
+                <td><code>$orange-30</code></td>
+                <td style="background-color: #ffe3cc;">#ffe3cc</td>
+            </tr>
+            <tr>
+                <td><code>$orange-20</code></td>
+                <td style="background-color: #fff1e5;">#fff1e5</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$white</code></td>
+                <td style="background-color: #fff;">#fff</td>
+            </tr>
+            <tr>
+                <td><code>$green-light</code></td>
+                <td style="background-color: #e6f5cf;">#e6f5cf</td>
+            </tr>
+            <tr>
+                <td><code>$color-link</code></td>
+                <td style="background-color: #007CCA;">#007CCA</td>
+            </tr>
+            <tr>
+                <td><code>$color-error</code></td>
+                <td class="text-white" style="background-color: #B80000;">#B80000</td>
+            </tr>
+            <tr>
+                <td><code>$color-error-message</code></td>
+                <td style="background-color: #ffdddc;">#ffdddc</td>
+            </tr>
+            <tr>
+                <td><code>$color-success</code></td>
+                <td class="text-white" style="background-color: #196600;">#196600</td>
+            </tr>
+            <tr>
+                <td><code>$color-success-message</code></td>
+                <td style="background-color: #e6f5cf;">#e6f5cf</td>
+            </tr>
+            <tr>
+                <td><code>$color-info</code></td>
+                <td class="text-white" style="background-color: #853900;">#853900</td>
+            </tr>
+            <tr>
+                <td><code>$color-info-message</code></td>
+                <td style="background-color: #fff1c0;">#fff1c0</td>
+            </tr>
+            <tr>
+                <td><code>$color-tip</code></td>
+                <td class="text-white" style="background-color: #264c83;">#264c83</td>
+            </tr>
+            <tr>
+                <td><code>$color-tip-message</code></td>
+                <td style="background-color: #e4eeff;">#e4eeff</td>
+            </tr>
+            <tr>
+                <td><code>$color-highlight-info</code></td>
+                <td style="background-color: #33aadd;">#33aadd</td>
+            </tr>
+            <tr>
+                <td><code>$color-error-text</code></td>
+                <td class="text-white" style="background-color: #d51500;">#d51500</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a name="spacings"></a>
+    <h3>Spacings</h3>
+    <p>
+        There are several variables that should be used for the spacing inside and between elements.
+        Use the variables only for the spacing and not for other properties like e.g. font-sizes.
+    </p>
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$XS</code></td>
+                <td>4px</td>
+            </tr>
+            <tr>
+                <td><code>$S</code></td>
+                <td>8px</td>
+            </tr>
+            <tr>
+                <td><code>$M</code></td>
+                <td>12px</td>
+            </tr>
+            <tr>
+                <td><code>$L</code></td>
+                <td>16px</td>
+            </tr>
+            <tr>
+                <td><code>$XL</code></td>
+                <td>20px</td>
+            </tr>
+            <tr>
+                <td><code>$XXL</code></td>
+                <td>28px</td>
+            </tr>
+            <tr>
+                <td><code>$XXXL</code></td>
+                <td>40px</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a name="viewports"></a>
+    <h3>Viewports</h3>
+    <p>
+        All responsive elements that are based on media queries use the following breakpoints. These dimension should
+        be usefull in most of the cases.
+    </p>
+    <p>
+        Use the following variables <span class="text-bold">instead</span> of variables previously known from showcar-styles
+        (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)
+    </p>
+    <div class="table-var-wrapper sc-clearfix">
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+                <th>size, from/to</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$viewportXS</code></td>
+                <td>0</td>
+                <td>0 - 320px</td>
+            </tr>
+            <tr>
+                <td><code>$viewportS</code></td>
+                <td>321px</td>
+                <td>321px - 767px</td>
+            </tr>
+            <tr>
+                <td><code>$viewportM</code></td>
+                <td>768px</td>
+                <td>768px - 1023px</td>
+            </tr>
+            <tr>
+                <td><code>$viewportL</code></td>
+                <td>1024px</td>
+                <td>1024px - 1099px</td>
+            </tr>
+            <tr>
+                <td><code>$viewportXL</code></td>
+                <td>1100px</td>
+                <td>1100px - 1269px</td>
+            </tr>
+            <tr>
+                <td><code>$viewportXXL</code></td>
+                <td>1270px</td>
+                <td>1270px - ∞</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
+    
+        function encodeEntities(value) {
+            return value.
+                    replace(/&/g, '&amp;').
+                    replace(SURROGATE_PAIR_REGEXP, function(value) {
+                        var hi = value.charCodeAt(0);
+                        var low = value.charCodeAt(1);
+                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+                    }).
+                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+                        return '&#' + value.charCodeAt(0) + ';';
+                    }).
+                    replace(/</g, '&lt;').
+                    replace(/>/g, '&gt;');
+        }
+        function formatCode (target) {
+            var elements = document.querySelectorAll(target);
+            for (i = 0; i < elements.length; i++) {
+                var content = elements[i].innerHTML;
+                if (content) {
+                    content = content.trim();
+                    if (content.indexOf('<!--') === 0 && content.lastIndexOf('-->') === (content.length - 3)) {
+                        content = content.substring(4);
+                        content = content.substring(0, content.length - 3);
+                        content.trim();
+                    }
+                    elements[i].innerHTML = encodeEntities(content);
+                }
+            }
+        }
+        formatCode('.js-format-code');
+    </script>
+    <script src="../../dist/showcar-ui.js"></script>
+    <script src="../js/pager.js"></script>
+</body>
+</html>

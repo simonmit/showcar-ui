@@ -1,0 +1,14 @@
+<ul class="docs-navigation">
+{{#withSort pages "data.nav-index"}}
+    <li>
+        <a href="{{relative ../page.dest this.dest}}">{{data.title}}</a>
+        {{#if data.sub-nav}}
+        <ul>
+        {{#each data.sub-nav}}
+            <li><a href="{{relative ../../../page.dest ../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a></li>
+        {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+{{/withSort}}
+</ul>

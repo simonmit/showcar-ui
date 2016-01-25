@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShowCar UI Library Docs{{#if title}} - {{title}}{{/if}}</title>
+    <!-- IMPORTANT: always change the *.hbs files within docs/src -->
+    {{> head }}
+</head>
+<body {{#if site-class}}class="{{site-class}}"{{/if}}>
+    <div class="sc-content-container">
+        {{> header}}
+        <div class="docs-container">
+            {{> nav}}
+            <div class="docs-content">
+                {{> body}}
+            </div>
+        </div>
+
+        {{> footer}}
+    </div>
+    {{> foot }}
+</body>
+</html>

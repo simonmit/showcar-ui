@@ -15,13 +15,15 @@ module.exports = function(grunt) {
         sass: loadConfig("sass"),
         copy: loadConfig("copy"),
         watch: loadConfig("watch"),
-        pleeease: loadConfig("pleeease")
+        pleeease: loadConfig("pleeease"),
+        assemble: loadConfig("assemble")
     });
 
     grunt.registerTask("build", ["sass", "webpack", "copy"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy","assemble"]);
 
     grunt.registerTask("default", ["dist"]);
+    grunt.registerTask("docs", ["assemble"]);
 
     require('load-grunt-tasks')(grunt, {
         pattern: ['grunt-*', "!grunt-cli"]
