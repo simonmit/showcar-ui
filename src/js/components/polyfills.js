@@ -8,11 +8,11 @@ module.exports = function(callback) {
     };
 
     var cdnPaths = {
-        'document-register-element' : '//cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js',
-        'picturefill': '//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js',
-        'dom4': '//cdnjs.cloudflare.com/ajax/libs/dom4/1.6.0/dom4.js',
-        'es5-shim': '//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.4.1/es5-shim.min.js',
-        'placeholders': '//cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js',
+        'document-register-element' : 'https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js',
+        'picturefill': 'https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js',
+        'dom4': 'https://cdnjs.cloudflare.com/ajax/libs/dom4/1.6.0/dom4.js',
+        'es5-shim': 'https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.4.1/es5-shim.min.js',
+        'placeholders': 'https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js',
     };
 
     // intermediate solution
