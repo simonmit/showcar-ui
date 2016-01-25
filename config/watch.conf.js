@@ -2,8 +2,9 @@ module.exports = {
     files: [
         'src/scss/**/*.scss',
         'src/js/**/*.js',
-        'docs/index.html',
+        'docs/src/**/*.hbs',
         'docs/css/*.scss',
+        'docs/js/*.js',
         'examples/**/*',
         '!examples/**/*.css'
     ],
