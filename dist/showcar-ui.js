@@ -74,10 +74,10 @@
 
 	"use strict";
 	
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 	
 	/* Zepto v1.1.6 - zepto event ajax form ie - zeptojs.com/license */
-	var Zepto = function () {
+	var Zepto = (function () {
 	  function L(t) {
 	    return null == t ? String(t) : j[S.call(t)] || "object";
 	  }function Z(t) {
@@ -111,9 +111,7 @@
 	      return 1 == t.nodeType ? t : void 0;
 	    });
 	  }function B(n, i, r) {
-	    for (e in i) {
-	      r && (M(i[e]) || A(i[e])) ? (M(i[e]) && !M(n[e]) && (n[e] = {}), A(i[e]) && !A(n[e]) && (n[e] = []), B(n[e], i[e], r)) : i[e] !== t && (n[e] = i[e]);
-	    }
+	    for (e in i) r && (M(i[e]) || A(i[e])) ? (M(i[e]) && !M(n[e]) && (n[e] = {}), A(i[e]) && !A(n[e]) && (n[e] = []), B(n[e], i[e], r)) : i[e] !== t && (n[e] = i[e]);
 	  }function U(t, e) {
 	    return null == e ? n(t) : n(t).filter(e);
 	  }function J(t, e, n, i) {
@@ -130,9 +128,7 @@
 	      return t;
 	    }
 	  }function G(t, e) {
-	    e(t);for (var n = 0, i = t.childNodes.length; i > n; n++) {
-	      G(t.childNodes[n], e);
-	    }
+	    e(t);for (var n = 0, i = t.childNodes.length; i > n; n++) G(t.childNodes[n], e);
 	  }var t,
 	      e,
 	      n,
@@ -169,11 +165,11 @@
 	    if (!e || !t || 1 !== t.nodeType) return !1;var n = t.webkitMatchesSelector || t.mozMatchesSelector || t.oMatchesSelector || t.matchesSelector;if (n) return n.call(t, e);var i,
 	        r = t.parentNode,
 	        o = !r;return o && (r = O).appendChild(t), i = ~T.qsa(r, e).indexOf(t), o && O.removeChild(t), i;
-	  }, C = function C(t) {
+	  }, C = function (t) {
 	    return t.replace(/-+(.)?/g, function (t, e) {
 	      return e ? e.toUpperCase() : "";
 	    });
-	  }, N = function N(t) {
+	  }, N = function (t) {
 	    return s.call(t, function (e, n) {
 	      return t.indexOf(e) == n;
 	    });
@@ -188,16 +184,14 @@
 	  }, T.isZ = function (t) {
 	    return t instanceof T.Z;
 	  }, T.init = function (e, i) {
-	    var r;if (!e) return T.Z();if ("string" == typeof e) {
-	      if (e = e.trim(), "<" == e[0] && l.test(e)) r = T.fragment(e, RegExp.$1, i), e = null;else {
-	        if (i !== t) return n(i).find(e);r = T.qsa(a, e);
-	      }
+	    var r;if (!e) return T.Z();if ("string" == typeof e) if ((e = e.trim(), "<" == e[0] && l.test(e))) r = T.fragment(e, RegExp.$1, i), e = null;else {
+	      if (i !== t) return n(i).find(e);r = T.qsa(a, e);
 	    } else {
 	      if (Z(e)) return n(a).ready(e);if (T.isZ(e)) return e;if (A(e)) r = k(e);else if (D(e)) r = [e], e = null;else if (l.test(e)) r = T.fragment(e.trim(), RegExp.$1, i), e = null;else {
 	        if (i !== t) return n(i).find(e);r = T.qsa(a, e);
 	      }
 	    }return T.Z(r, e);
-	  }, n = function n(t, e) {
+	  }, n = function (t, e) {
 	    return T.init(t, e);
 	  }, n.extend = function (t) {
 	    var e,
@@ -213,13 +207,9 @@
 	  }, n.contains = a.documentElement.contains ? function (t, e) {
 	    return t !== e && t.contains(e);
 	  } : function (t, e) {
-	    for (; e && (e = e.parentNode);) {
-	      if (e === t) return !0;
-	    }return !1;
+	    for (; e && (e = e.parentNode);) if (e === t) return !0;return !1;
 	  }, n.type = L, n.isFunction = Z, n.isWindow = _, n.isArray = A, n.isPlainObject = M, n.isEmptyObject = function (t) {
-	    var e;for (e in t) {
-	      return !1;
-	    }return !0;
+	    var e;for (e in t) return !1;return !0;
 	  }, n.inArray = function (t, e, n) {
 	    return r.indexOf.call(e, t, n);
 	  }, n.camelCase = C, n.trim = function (t) {
@@ -228,19 +218,11 @@
 	    var n,
 	        r,
 	        o,
-	        i = [];if (R(t)) for (r = 0; r < t.length; r++) {
-	      n = e(t[r], r), null != n && i.push(n);
-	    } else for (o in t) {
-	      n = e(t[o], o), null != n && i.push(n);
-	    }return z(i);
+	        i = [];if (R(t)) for (r = 0; r < t.length; r++) n = e(t[r], r), null != n && i.push(n);else for (o in t) n = e(t[o], o), null != n && i.push(n);return z(i);
 	  }, n.each = function (t, e) {
 	    var n, i;if (R(t)) {
-	      for (n = 0; n < t.length; n++) {
-	        if (e.call(t[n], n, t[n]) === !1) return t;
-	      }
-	    } else for (i in t) {
-	      if (e.call(t[i], i, t[i]) === !1) return t;
-	    }return t;
+	      for (n = 0; n < t.length; n++) if (e.call(t[n], n, t[n]) === !1) return t;
+	    } else for (i in t) if (e.call(t[i], i, t[i]) === !1) return t;return t;
 	  }, n.grep = function (t, e) {
 	    return s.call(t, e);
 	  }, window.JSON && (n.parseJSON = JSON.parse), n.each("Boolean Number String Function Array Date RegExp Object Error".split(" "), function (t, e) {
@@ -306,15 +288,11 @@
 	      }) : n();
 	    }, closest: function closest(t, e) {
 	      var i = this[0],
-	          r = !1;for ("object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (r = n(t)); i && !(r ? r.indexOf(i) >= 0 : T.matches(i, t));) {
-	        i = i !== e && !$(i) && i.parentNode;
-	      }return n(i);
+	          r = !1;for ("object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (r = n(t)); i && !(r ? r.indexOf(i) >= 0 : T.matches(i, t));) i = i !== e && !$(i) && i.parentNode;return n(i);
 	    }, parents: function parents(t) {
-	      for (var e = [], i = this; i.length > 0;) {
-	        i = n.map(i, function (t) {
-	          return (t = t.parentNode) && !$(t) && e.indexOf(t) < 0 ? (e.push(t), t) : void 0;
-	        });
-	      }return U(e, t);
+	      for (var e = [], i = this; i.length > 0;) i = n.map(i, function (t) {
+	        return (t = t.parentNode) && !$(t) && e.indexOf(t) < 0 ? (e.push(t), t) : void 0;
+	      });return U(e, t);
 	    }, parent: function parent(t) {
 	      return U(N(this.pluck("parentNode")), t);
 	    }, children: function children(t) {
@@ -352,9 +330,7 @@
 	      });
 	    }, wrapAll: function wrapAll(t) {
 	      if (this[0]) {
-	        n(this[0]).before(t = n(t));for (var e; (e = t.children()).length;) {
-	          t = e.first();
-	        }n(t).append(this);
+	        n(this[0]).before(t = n(t));for (var e; (e = t.children()).length;) t = e.first();n(t).append(this);
 	      }return this;
 	    }, wrapInner: function wrapInner(t) {
 	      var e = Z(t);return this.each(function (i) {
@@ -390,9 +366,7 @@
 	      }) : 0 in this ? this[0].textContent : null;
 	    }, attr: function attr(n, i) {
 	      var r;return "string" != typeof n || 1 in arguments ? this.each(function (t) {
-	        if (1 === this.nodeType) if (D(n)) for (e in n) {
-	          X(this, e, n[e]);
-	        } else X(this, n, J(this, i, t, this.getAttribute(n)));
+	        if (1 === this.nodeType) if (D(n)) for (e in n) X(this, e, n[e]);else X(this, n, J(this, i, t, this.getAttribute(n)));
 	      }) : this.length && 1 === this[0].nodeType ? !(r = this[0].getAttribute(n)) && n in this[0] ? this[0][n] : r : t;
 	    }, removeAttr: function removeAttr(t) {
 	      return this.each(function () {
@@ -423,18 +397,16 @@
 	    }, css: function css(t, i) {
 	      if (arguments.length < 2) {
 	        var r,
-	            o = this[0];if (!o) return;if (r = getComputedStyle(o, ""), "string" == typeof t) return o.style[C(t)] || r.getPropertyValue(t);if (A(t)) {
+	            o = this[0];if (!o) return;if ((r = getComputedStyle(o, ""), "string" == typeof t)) return o.style[C(t)] || r.getPropertyValue(t);if (A(t)) {
 	          var s = {};return n.each(t, function (t, e) {
 	            s[e] = o.style[C(e)] || r.getPropertyValue(e);
 	          }), s;
 	        }
 	      }var a = "";if ("string" == L(t)) i || 0 === i ? a = F(t) + ":" + H(t, i) : this.each(function () {
 	        this.style.removeProperty(F(t));
-	      });else for (e in t) {
-	        t[e] || 0 === t[e] ? a += F(e) + ":" + H(e, t[e]) + ";" : this.each(function () {
-	          this.style.removeProperty(F(e));
-	        });
-	      }return this.each(function () {
+	      });else for (e in t) t[e] || 0 === t[e] ? a += F(e) + ":" + H(e, t[e]) + ";" : this.each(function () {
+	        this.style.removeProperty(F(e));
+	      });return this.each(function () {
 	        this.style.cssText += ";" + a;
 	      });
 	    }, index: function index(t) {
@@ -492,9 +464,7 @@
 	      }
 	    }, offsetParent: function offsetParent() {
 	      return this.map(function () {
-	        for (var t = this.offsetParent || a.body; t && !d.test(t.nodeName) && "static" == n(t).css("position");) {
-	          t = t.offsetParent;
-	        }return t;
+	        for (var t = this.offsetParent || a.body; t && !d.test(t.nodeName) && "static" == n(t).css("position");) t = t.offsetParent;return t;
 	      });
 	    } }, n.fn.detach = n.fn.remove, ["width", "height"].forEach(function (e) {
 	    var i = e.replace(/./, function (t) {
@@ -523,11 +493,11 @@
 	      return n(e)[t](this), this;
 	    };
 	  }), T.Z.prototype = n.fn, T.uniq = N, T.deserializeValue = Y, n.zepto = T, n;
-	}();window.Zepto = Zepto, void 0 === window.$ && (window.$ = Zepto), function (t) {
+	})();window.Zepto = Zepto, void 0 === window.$ && (window.$ = Zepto), (function (t) {
 	  function l(t) {
 	    return t._zid || (t._zid = e++);
 	  }function h(t, e, n, i) {
-	    if (e = p(e), e.ns) var r = d(e.ns);return (s[l(t)] || []).filter(function (t) {
+	    if ((e = p(e), e.ns)) var r = d(e.ns);return (s[l(t)] || []).filter(function (t) {
 	      return !(!t || e.e && t.e != e.e || e.ns && !r.test(t.ns) || n && l(t.fn) !== l(n) || i && t.sel != i);
 	    });
 	  }function p(t) {
@@ -541,10 +511,10 @@
 	  }function v(e, i, r, o, a, u, f) {
 	    var h = l(e),
 	        d = s[h] || (s[h] = []);i.split(/\s/).forEach(function (i) {
-	      if ("ready" == i) return t(document).ready(r);var s = p(i);s.fn = r, s.sel = a, s.e in c && (r = function r(e) {
+	      if ("ready" == i) return t(document).ready(r);var s = p(i);s.fn = r, s.sel = a, s.e in c && (r = function (e) {
 	        var n = e.relatedTarget;return !n || n !== this && !t.contains(this, n) ? s.fn.apply(this, arguments) : void 0;
 	      }), s.del = u;var l = u || r;s.proxy = function (t) {
-	        if (t = j(t), !t.isImmediatePropagationStopped()) {
+	        if ((t = j(t), !t.isImmediatePropagationStopped())) {
 	          t.data = o;var i = l.apply(e, t._args == n ? [t] : [t].concat(t._args));return i === !1 && (t.preventDefault(), t.stopPropagation()), i;
 	        }
 	      }, s.i = d.length, d.push(s), "addEventListener" in e && e.addEventListener(g(s.e), s.proxy, m(s, f));
@@ -563,9 +533,7 @@
 	    }), (i.defaultPrevented !== n ? i.defaultPrevented : "returnValue" in i ? i.returnValue === !1 : i.getPreventDefault && i.getPreventDefault()) && (e.isDefaultPrevented = x)), e;
 	  }function S(t) {
 	    var e,
-	        i = { originalEvent: t };for (e in t) {
-	      w.test(e) || t[e] === n || (i[e] = t[e]);
-	    }return j(i, t);
+	        i = { originalEvent: t };for (e in t) w.test(e) || t[e] === n || (i[e] = t[e]);return j(i, t);
 	  }var n,
 	      e = 1,
 	      i = Array.prototype.slice,
@@ -610,9 +578,9 @@
 	        h = this;return e && !o(e) ? (t.each(e, function (t, e) {
 	      h.on(t, s, a, e, f);
 	    }), h) : (o(s) || r(u) || u === !1 || (u = a, a = s, s = n), (r(a) || a === !1) && (u = a, a = n), u === !1 && (u = b), h.each(function (n, r) {
-	      f && (c = function c(t) {
+	      f && (c = function (t) {
 	        return y(r, t.type, u), u.apply(this, arguments);
-	      }), s && (l = function l(e) {
+	      }), s && (l = function (e) {
 	        var n,
 	            o = t(e.target).closest(s, r).get(0);return o && o !== r ? (n = t.extend(S(e), { currentTarget: o, liveFired: r }), (c || u).apply(o, [n].concat(i.call(arguments, 1)))) : void 0;
 	      }), v(r, e, u, a, s, l || c);
@@ -639,11 +607,9 @@
 	    };
 	  }), t.Event = function (t, e) {
 	    o(t) || (e = t, t = e.type);var n = document.createEvent(a[t] || "Events"),
-	        i = !0;if (e) for (var r in e) {
-	      "bubbles" == r ? i = !!e[r] : n[r] = e[r];
-	    }return n.initEvent(t, i, !0), j(n);
+	        i = !0;if (e) for (var r in e) "bubbles" == r ? i = !!e[r] : n[r] = e[r];return n.initEvent(t, i, !0), j(n);
 	  };
-	}(Zepto), function (t) {
+	})(Zepto), (function (t) {
 	  function h(e, n, i) {
 	    var r = t.Event(n);return t(e).trigger(r, i), !r.isDefaultPrevented();
 	  }function p(t, e, i, r) {
@@ -707,10 +673,8 @@
 	    }, accepts: { script: "text/javascript, application/javascript, application/x-javascript", json: u, xml: "application/xml, text/xml", html: f, text: "text/plain" }, crossDomain: !1, timeout: 0, processData: !0, cache: !0 }, t.ajax = function (e) {
 	    var a,
 	        o = t.extend({}, e || {}),
-	        s = t.Deferred && t.Deferred();for (i in t.ajaxSettings) {
-	      void 0 === o[i] && (o[i] = t.ajaxSettings[i]);
-	    }d(o), o.crossDomain || (a = n.createElement("a"), a.href = o.url, a.href = a.href, o.crossDomain = l.protocol + "//" + l.host != a.protocol + "//" + a.host), o.url || (o.url = window.location.toString()), j(o);var u = o.dataType,
-	        f = /\?.+=\?/.test(o.url);if (f && (u = "jsonp"), o.cache !== !1 && (e && e.cache === !0 || "script" != u && "jsonp" != u) || (o.url = E(o.url, "_=" + Date.now())), "jsonp" == u) return f || (o.url = E(o.url, o.jsonp ? o.jsonp + "=?" : o.jsonp === !1 ? "" : "callback=?")), t.ajaxJSONP(o, s);var C,
+	        s = t.Deferred && t.Deferred();for (i in t.ajaxSettings) void 0 === o[i] && (o[i] = t.ajaxSettings[i]);d(o), o.crossDomain || (a = n.createElement("a"), a.href = o.url, a.href = a.href, o.crossDomain = l.protocol + "//" + l.host != a.protocol + "//" + a.host), o.url || (o.url = window.location.toString()), j(o);var u = o.dataType,
+	        f = /\?.+=\?/.test(o.url);if ((f && (u = "jsonp"), o.cache !== !1 && (e && e.cache === !0 || "script" != u && "jsonp" != u) || (o.url = E(o.url, "_=" + Date.now())), "jsonp" == u)) return f || (o.url = E(o.url, o.jsonp ? o.jsonp + "=?" : o.jsonp === !1 ? "" : "callback=?")), t.ajaxJSONP(o, s);var C,
 	        h = o.accepts[u],
 	        p = {},
 	        m = function m(t, e) {
@@ -718,9 +682,7 @@
 	    },
 	        x = /^([\w-]+:)\/\//.test(o.url) ? RegExp.$1 : window.location.protocol,
 	        S = o.xhr(),
-	        T = S.setRequestHeader;if (s && s.promise(S), o.crossDomain || m("X-Requested-With", "XMLHttpRequest"), m("Accept", h || "*/*"), (h = o.mimeType || h) && (h.indexOf(",") > -1 && (h = h.split(",", 2)[0]), S.overrideMimeType && S.overrideMimeType(h)), (o.contentType || o.contentType !== !1 && o.data && "GET" != o.type.toUpperCase()) && m("Content-Type", o.contentType || "application/x-www-form-urlencoded"), o.headers) for (r in o.headers) {
-	      m(r, o.headers[r]);
-	    }if (S.setRequestHeader = m, S.onreadystatechange = function () {
+	        T = S.setRequestHeader;if ((s && s.promise(S), o.crossDomain || m("X-Requested-With", "XMLHttpRequest"), m("Accept", h || "*/*"), (h = o.mimeType || h) && (h.indexOf(",") > -1 && (h = h.split(",", 2)[0]), S.overrideMimeType && S.overrideMimeType(h)), (o.contentType || o.contentType !== !1 && o.data && "GET" != o.type.toUpperCase()) && m("Content-Type", o.contentType || "application/x-www-form-urlencoded"), o.headers)) for (r in o.headers) m(r, o.headers[r]);if ((S.setRequestHeader = m, S.onreadystatechange = function () {
 	      if (4 == S.readyState) {
 	        S.onreadystatechange = b, clearTimeout(C);var e,
 	            n = !1;if (S.status >= 200 && S.status < 300 || 304 == S.status || 0 == S.status && "file:" == x) {
@@ -731,11 +693,7 @@
 	          }n ? y(n, "parsererror", S, o, s) : v(e, S, o, s);
 	        } else y(S.statusText || null, S.status ? "error" : "abort", S, o, s);
 	      }
-	    }, g(S, o) === !1) return S.abort(), y(null, "abort", S, o, s), S;if (o.xhrFields) for (r in o.xhrFields) {
-	      S[r] = o.xhrFields[r];
-	    }var N = "async" in o ? o.async : !0;S.open(o.type, o.url, N, o.username, o.password);for (r in p) {
-	      T.apply(S, p[r]);
-	    }return o.timeout > 0 && (C = setTimeout(function () {
+	    }, g(S, o) === !1)) return S.abort(), y(null, "abort", S, o, s), S;if (o.xhrFields) for (r in o.xhrFields) S[r] = o.xhrFields[r];var N = "async" in o ? o.async : !0;S.open(o.type, o.url, N, o.username, o.password);for (r in p) T.apply(S, p[r]);return o.timeout > 0 && (C = setTimeout(function () {
 	      S.onreadystatechange = b, S.abort(), y(null, "timeout", S, o, s);
 	    }, o.timeout)), S.send(o.data ? o.data : null), S;
 	  }, t.get = function () {
@@ -757,7 +715,7 @@
 	      t.isFunction(n) && (n = n()), null == n && (n = ""), this.push(T(e) + "=" + T(n));
 	    }, C(i, e, n), i.join("&").replace(/%20/g, "+");
 	  };
-	}(Zepto), function (t) {
+	})(Zepto), (function (t) {
 	  t.fn.serializeArray = function () {
 	    var e,
 	        n,
@@ -776,7 +734,7 @@
 	      var n = t.Event("submit");this.eq(0).trigger(n), n.isDefaultPrevented() || this.get(0).submit();
 	    }return this;
 	  };
-	}(Zepto), function (t) {
+	})(Zepto), (function (t) {
 	  "__proto__" in {} || t.extend(t.zepto, { Z: function Z(e, n) {
 	      return e = e || [], t.extend(e, t.fn), e.selector = n || "", e.__Z = !0, e;
 	    }, isZ: function isZ(e) {
@@ -792,7 +750,7 @@
 	      }
 	    };
 	  }
-	}(Zepto);
+	})(Zepto);
 
 /***/ },
 /* 2 */
@@ -874,29 +832,29 @@
 
 	"use strict";
 	
-	!function (c) {
-	  function s(v) {
-	    if (l[v]) return l[v].exports;var t = l[v] = { exports: {}, id: v, loaded: !1 };return c[v].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
-	  }var l = {};return s.m = c, s.c = l, s.p = "", s(0);
-	}([function (c, s, l) {
-	  var v = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
-	      t = {};v.forEach(function (c) {
-	    t[c.toLowerCase()] = l(1)("./" + c + ".svg");
+	!(function (c) {
+	  function s(l) {
+	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
+	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
+	})([function (c, s, v) {
+	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
+	      t = {};l.forEach(function (c) {
+	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
 	  });var h = Object.create(HTMLElement.prototype);h.createdCallback = function () {
 	    this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()];
-	  }, h.attributeChangedCallback = function (c, s, l) {
+	  }, h.attributeChangedCallback = function (c, s, v) {
 	    "type" === c && (this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()]);
-	  }, document.registerElement("as24-icon", { prototype: h }), window.showcarIconNames = v;
-	}, function (c, s, l) {
-	  function v(c) {
-	    return l(t(c));
+	  }, document.registerElement("as24-icon", { prototype: h }), window.showcarIconNames = l;
+	}, function (c, s, v) {
+	  function l(c) {
+	    return v(t(c));
 	  }function t(c) {
-	    return h[c] || function () {
+	    return h[c] || (function () {
 	      throw new Error("Cannot find module '" + c + "'.");
-	    }();
-	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./phone.svg": 58, "./pin.svg": 59, "./pinCar.svg": 60, "./pinMoto.svg": 61, "./pinterest.svg": 62, "./search.svg": 63, "./sharing.svg": 64, "./star-half.svg": 65, "./star.svg": 66, "./t-online.svg": 67, "./tip.svg": 68, "./twitter.svg": 69, "./whatsapp.svg": 70, "./youtube.svg": 71 };v.keys = function () {
+	    })();
+	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./navigation/car.svg": 58, "./navigation/caravan.svg": 59, "./phone.svg": 60, "./pin.svg": 61, "./pinCar.svg": 62, "./pinMoto.svg": 63, "./pinterest.svg": 64, "./search.svg": 65, "./sharing.svg": 66, "./star-half.svg": 67, "./star.svg": 68, "./t-online.svg": 69, "./tip.svg": 70, "./twitter.svg": 71, "./whatsapp.svg": 72, "./youtube.svg": 73 };l.keys = function () {
 	    return Object.keys(h);
-	  }, v.resolve = t, c.exports = v, v.id = 1;
+	  }, l.resolve = t, c.exports = l, l.id = 1;
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22"><path d="M6.2 1.7h.1c.1 0 .1-.1.1-.1L5.4 0h-.1c-.1 0-.1.1-.1.1l1 1.6zM11.7 1.7h-.1c-.1 0-.1-.1-.1-.1L12.6 0h.1c.1 0 .1.1.1.1l-1.1 1.6zM9 2.7C3.3 2.7 3 8 3 8h12s-.4-5.3-6-5.3zM6.4 6.4c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zm5.1 0c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zM2 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM18 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM7 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6zM12 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6z"/><path d="M15 17c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v7z"/></svg>';
 	}, function (c, s) {
@@ -1010,6 +968,10 @@
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 11.9l-9-6v7.5c0 .9.7 1.6 1.6 1.6h14.7c.9 0 1.6-.7 1.6-1.6V6v-.2L9 11.9zm0-1.6l8.5-5.9c-.3-.2-.9-.4-1.3-.4H1.8c-.4 0-1 .2-1.3.4L9 10.3z" fill-rule="evenodd" clip-rule="evenodd"/></svg>';
 	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 15"><path d="M6 9c-1.656 0-3 1.343-3 3s1.344 3 3 3 3-1.343 3-3-1.344-3-3-3zm0 4.8c-.993 0-1.8-.807-1.8-1.8s.807-1.8 1.8-1.8 1.8.807 1.8 1.8-.807 1.8-1.8 1.8z"/><path d="M1.604 13.5c-.066 0-.104-.898-.104-1.225C1.5 9.79 3.515 7.637 6 7.637s4.5 2.196 4.5 4.68c0 .347-.047.183-.12 1.183h13.24c-.073-1-.12-.905-.12-1.25 0-2.485 2.015-4.625 4.5-4.625s4.5 2.202 4.5 4.688c0 .345-.047.188-.12 1.188h.466C33.482 12.5 34 11.208 34 10c0-2.092-1.32-3.58-2.496-3.842l-7.03-1.377S18.978.5 15.713.5H9.098C4 .5 0 6.273 0 9.463c0 1.7.172 2.037.953 4.037h.65zm3.238-8L6.25 3.18c.99-1.56 3.012-1.68 4.844-1.68h1.075l.478 4H4.842zm9.238 0l-.478-4h2.11c2.38 0 7.07 4 7.07 4H14.08z"/><path d="M28 9c-1.656 0-3 1.343-3 3s1.344 3 3 3 3-1.343 3-3-1.344-3-3-3zm0 4.8c-.993 0-1.8-.807-1.8-1.8s.807-1.8 1.8-1.8 1.8.807 1.8 1.8-.807 1.8-1.8 1.8z"/></svg>';
+	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 20"><path d="M26.742 11.596c-.973 0-1.528-.47-1.528-1.528V7.775h2.292c.55 0 1.182.31 1.528.764l2.426 3.056h-4.718zm6.57.955L29.44 7.745c-.52-.705-1.36-1.115-2.303-1.115H23.686c-.632 0-1.146.513-1.146 1.145V18.47h3.155c-.062-.244-.1-.498-.1-.763 0-1.688 1.37-3.056 3.057-3.056s3.057 1.37 3.057 3.057c0 .265-.038.52-.102.764h1.724c.384-.47.668-1.144.668-1.908v-1.634c0-.73-.2-1.697-.69-2.377z"/><path d="M30.332 1.86l-.685-.394c-.548-.312-1.51-.568-2.142-.568H21.01c-.63 0-1.63.177-2.222.393L15.662 2.43H1.53C.687 2.428 0 3.115 0 3.955v12.988c0 .842.688 1.528 1.53 1.528h2.29c.033 0 .062-.006.096-.01v.01h2.68c-.064-.244-.102-.498-.102-.763 0-1.688 1.37-3.056 3.057-3.056s3.058 1.37 3.058 3.057c0 .265-.037.52-.1.764h9.268V7.776c0-1.053.857-1.91 1.91-1.91H28.653l1.68-.96c.547-.31.994-.998.994-1.522 0-.527-.448-1.212-.995-1.524zM6.494 9.302c0 .63-.516 1.146-1.145 1.146H3.82c-.63 0-1.146-.517-1.146-1.147V7.775c0-.63.517-1.146 1.146-1.146h1.53c.63 0 1.145.515 1.145 1.145v1.528zm12.608 0c0 .63-.516 1.146-1.146 1.146h-4.2c-.632 0-1.147-.517-1.147-1.147V7.775c0-.63.515-1.146 1.145-1.146h4.2c.632 0 1.147.515 1.147 1.145v1.528z"/><path d="M10.697 17.708c0 .633-.514 1.146-1.146 1.146s-1.145-.513-1.145-1.146.514-1.146 1.146-1.146 1.147.513 1.147 1.146zM9.55 15.416c-1.265 0-2.29 1.025-2.29 2.292C7.26 18.974 8.284 20 9.55 20s2.294-1.026 2.294-2.292c0-1.267-1.028-2.292-2.293-2.292zM29.8 17.708c0 .633-.515 1.146-1.147 1.146s-1.146-.513-1.146-1.146.514-1.146 1.146-1.146 1.146.513 1.146 1.146zm-1.148-2.292c-1.266 0-2.293 1.025-2.293 2.292 0 1.266 1.026 2.292 2.292 2.292s2.292-1.026 2.292-2.292c0-1.267-1.026-2.292-2.292-2.292z"/></svg>';
+	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 27 27"><path d="M6.8 1l1.9.5s1 .3.7 1.3l.4 5.3s0 .8-.8 1.1l-1.3.5s-.9.6-.3 1.4c.5.9 4.1 6.5 4.1 6.5s.3.4.8.4c.2 0 .4-.1.6-.2l1-.7s.3-.2.6-.2c.1 0 .2 0 .3.1.4.2 3.7 1.9 3.7 1.9s.8.4.5 1.4c-.3 1-.7 2.5-.7 2.5S16.9 24 15.8 24h-.3c-1.1-.3-14.2-4.4-11-21.1C4.7 1.8 6.8 1 6.8 1"/></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 43"><path d="M27 7.2c-2-3.4-5.1-5.8-8.8-6.7C17 .2 15.7 0 14.5 0 7.7 0 1.9 4.6.4 11.2c-1 4.3.3 8.3 1.7 11.5C5 29.4 9 35.3 12.6 40.2c.3.4.6.8 1 1.3l1 1.2.4-.6c.5-.7 1.1-1.5 1.6-2.2 1.1-1.6 2.2-3.1 3.3-4.6 3.4-5.1 6.9-10.7 8.7-17 .9-3.8.4-7.7-1.6-11.1zM14.5 21.5c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7z"/></svg>';
@@ -1046,7 +1008,7 @@
 
 	"use strict";
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -1056,7 +1018,7 @@
 	    cookie: __webpack_require__(8)
 	};
 	
-	var Storage = function () {
+	var Storage = (function () {
 	    /**
 	     * @constructor
 	     * @param {string} type The store backend to use
@@ -1181,7 +1143,7 @@
 	    }]);
 	
 	    return Storage;
-	}();
+	})();
 	
 	module.exports = Storage;
 
@@ -1191,11 +1153,11 @@
 
 	"use strict";
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = function () {
+	module.exports = (function () {
 	    function LocalStore() {
 	        _classCallCheck(this, LocalStore);
 	    }
@@ -1223,7 +1185,7 @@
 	    }]);
 	
 	    return LocalStore;
-	}();
+	})();
 
 /***/ },
 /* 7 */
@@ -1231,11 +1193,11 @@
 
 	"use strict";
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = function () {
+	module.exports = (function () {
 	    function SessionStore() {
 	        _classCallCheck(this, SessionStore);
 	    }
@@ -1263,7 +1225,7 @@
 	    }]);
 	
 	    return SessionStore;
-	}();
+	})();
 
 /***/ },
 /* 8 */
@@ -1271,11 +1233,11 @@
 
 	"use strict";
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = function () {
+	module.exports = (function () {
 	    function CookieStore() {
 	        _classCallCheck(this, CookieStore);
 	    }
@@ -1337,7 +1299,7 @@
 	    }]);
 	
 	    return CookieStore;
-	}();
+	})();
 
 /***/ },
 /* 9 */
@@ -1425,7 +1387,7 @@
 	    // when the first of this element gets attached
 	    document.addEventListener('touchstart', closeAllDropdowns);
 	    document.addEventListener('mousedown', closeAllDropdowns);
-	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
+	    attachEventListeners = function () {}; // so that we only attach at most once
 	}
 
 /***/ },
