@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask("build", ["sass", "webpack", "copy"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy","assemble"]);
 
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);
