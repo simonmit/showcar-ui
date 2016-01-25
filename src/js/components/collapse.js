@@ -7,7 +7,11 @@ module.exports = function() {
             Array.prototype.forEach.call(targets, function (target) {
                 target.classList.toggle('in');
             });
+
+            var event = new CustomEvent('collapse', {
+                bubbles: true
+            });
+            document.dispatchEvent(event);
         }
     });
 };
-
