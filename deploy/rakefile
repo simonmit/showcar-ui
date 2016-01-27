@@ -12,7 +12,7 @@ Aws.config = { region: REGION }
 desc "publish"
 task :publish do
   Dir.chdir('../')
-  dist = Dir['dist/*'].select { |f| File.file?(f) }
+  dist = Dir['dist/**/*'].select { |f| File.file?(f) }
   docs = Dir['docs/**/*'].select { |f| File.file?(f) }
   artifacts = dist + docs
 
