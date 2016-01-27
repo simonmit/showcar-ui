@@ -14,9 +14,13 @@ custom-dropdown {
   div:last-child {
     span {
       padding-left: $M;
+      vertical-align: middle;
+      margin-top: -12px;
+      display: inline-block;
     }
   }
   svg {
     width: 22px;
+    height: 22px;
   }
 }
