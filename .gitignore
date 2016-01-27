@@ -3,3 +3,5 @@ node_modules
 vendor
 bower_components
 .bundle
+atlassian-ide-plugin.xml
+.gitignore.swp

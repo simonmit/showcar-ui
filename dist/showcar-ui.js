@@ -51,18 +51,18 @@
 	var polyfills = __webpack_require__(2);
 	polyfills();
 	
-	var collapse = __webpack_require__(3);
+	var collapse = __webpack_require__(7);
 	collapse();
 	
-	__webpack_require__(4);
+	__webpack_require__(8);
 	
-	window.Storage = __webpack_require__(5);
+	window.Storage = __webpack_require__(9);
 	
-	__webpack_require__(9)();
-	__webpack_require__(10);
-	__webpack_require__(11)();
+	__webpack_require__(13)();
+	__webpack_require__(14);
+	__webpack_require__(15)();
 	
-	var FontFaceObserver = __webpack_require__(12);
+	var FontFaceObserver = __webpack_require__(16);
 	var observer = new FontFaceObserver('Source Sans Pro');
 	observer.check().then(function () {
 	    $('body').addClass('font-loaded');
@@ -74,10 +74,10 @@
 
 	"use strict";
 	
-	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
 	/* Zepto v1.1.6 - zepto event ajax form ie - zeptojs.com/license */
-	var Zepto = (function () {
+	var Zepto = function () {
 	  function L(t) {
 	    return null == t ? String(t) : j[S.call(t)] || "object";
 	  }function Z(t) {
@@ -111,7 +111,9 @@
 	      return 1 == t.nodeType ? t : void 0;
 	    });
 	  }function B(n, i, r) {
-	    for (e in i) r && (M(i[e]) || A(i[e])) ? (M(i[e]) && !M(n[e]) && (n[e] = {}), A(i[e]) && !A(n[e]) && (n[e] = []), B(n[e], i[e], r)) : i[e] !== t && (n[e] = i[e]);
+	    for (e in i) {
+	      r && (M(i[e]) || A(i[e])) ? (M(i[e]) && !M(n[e]) && (n[e] = {}), A(i[e]) && !A(n[e]) && (n[e] = []), B(n[e], i[e], r)) : i[e] !== t && (n[e] = i[e]);
+	    }
 	  }function U(t, e) {
 	    return null == e ? n(t) : n(t).filter(e);
 	  }function J(t, e, n, i) {
@@ -128,7 +130,9 @@
 	      return t;
 	    }
 	  }function G(t, e) {
-	    e(t);for (var n = 0, i = t.childNodes.length; i > n; n++) G(t.childNodes[n], e);
+	    e(t);for (var n = 0, i = t.childNodes.length; i > n; n++) {
+	      G(t.childNodes[n], e);
+	    }
 	  }var t,
 	      e,
 	      n,
@@ -165,11 +169,11 @@
 	    if (!e || !t || 1 !== t.nodeType) return !1;var n = t.webkitMatchesSelector || t.mozMatchesSelector || t.oMatchesSelector || t.matchesSelector;if (n) return n.call(t, e);var i,
 	        r = t.parentNode,
 	        o = !r;return o && (r = O).appendChild(t), i = ~T.qsa(r, e).indexOf(t), o && O.removeChild(t), i;
-	  }, C = function (t) {
+	  }, C = function C(t) {
 	    return t.replace(/-+(.)?/g, function (t, e) {
 	      return e ? e.toUpperCase() : "";
 	    });
-	  }, N = function (t) {
+	  }, N = function N(t) {
 	    return s.call(t, function (e, n) {
 	      return t.indexOf(e) == n;
 	    });
@@ -184,14 +188,16 @@
 	  }, T.isZ = function (t) {
 	    return t instanceof T.Z;
 	  }, T.init = function (e, i) {
-	    var r;if (!e) return T.Z();if ("string" == typeof e) if ((e = e.trim(), "<" == e[0] && l.test(e))) r = T.fragment(e, RegExp.$1, i), e = null;else {
-	      if (i !== t) return n(i).find(e);r = T.qsa(a, e);
+	    var r;if (!e) return T.Z();if ("string" == typeof e) {
+	      if (e = e.trim(), "<" == e[0] && l.test(e)) r = T.fragment(e, RegExp.$1, i), e = null;else {
+	        if (i !== t) return n(i).find(e);r = T.qsa(a, e);
+	      }
 	    } else {
 	      if (Z(e)) return n(a).ready(e);if (T.isZ(e)) return e;if (A(e)) r = k(e);else if (D(e)) r = [e], e = null;else if (l.test(e)) r = T.fragment(e.trim(), RegExp.$1, i), e = null;else {
 	        if (i !== t) return n(i).find(e);r = T.qsa(a, e);
 	      }
 	    }return T.Z(r, e);
-	  }, n = function (t, e) {
+	  }, n = function n(t, e) {
 	    return T.init(t, e);
 	  }, n.extend = function (t) {
 	    var e,
@@ -207,9 +213,13 @@
 	  }, n.contains = a.documentElement.contains ? function (t, e) {
 	    return t !== e && t.contains(e);
 	  } : function (t, e) {
-	    for (; e && (e = e.parentNode);) if (e === t) return !0;return !1;
+	    for (; e && (e = e.parentNode);) {
+	      if (e === t) return !0;
+	    }return !1;
 	  }, n.type = L, n.isFunction = Z, n.isWindow = _, n.isArray = A, n.isPlainObject = M, n.isEmptyObject = function (t) {
-	    var e;for (e in t) return !1;return !0;
+	    var e;for (e in t) {
+	      return !1;
+	    }return !0;
 	  }, n.inArray = function (t, e, n) {
 	    return r.indexOf.call(e, t, n);
 	  }, n.camelCase = C, n.trim = function (t) {
@@ -218,11 +228,19 @@
 	    var n,
 	        r,
 	        o,
-	        i = [];if (R(t)) for (r = 0; r < t.length; r++) n = e(t[r], r), null != n && i.push(n);else for (o in t) n = e(t[o], o), null != n && i.push(n);return z(i);
+	        i = [];if (R(t)) for (r = 0; r < t.length; r++) {
+	      n = e(t[r], r), null != n && i.push(n);
+	    } else for (o in t) {
+	      n = e(t[o], o), null != n && i.push(n);
+	    }return z(i);
 	  }, n.each = function (t, e) {
 	    var n, i;if (R(t)) {
-	      for (n = 0; n < t.length; n++) if (e.call(t[n], n, t[n]) === !1) return t;
-	    } else for (i in t) if (e.call(t[i], i, t[i]) === !1) return t;return t;
+	      for (n = 0; n < t.length; n++) {
+	        if (e.call(t[n], n, t[n]) === !1) return t;
+	      }
+	    } else for (i in t) {
+	      if (e.call(t[i], i, t[i]) === !1) return t;
+	    }return t;
 	  }, n.grep = function (t, e) {
 	    return s.call(t, e);
 	  }, window.JSON && (n.parseJSON = JSON.parse), n.each("Boolean Number String Function Array Date RegExp Object Error".split(" "), function (t, e) {
@@ -288,11 +306,15 @@
 	      }) : n();
 	    }, closest: function closest(t, e) {
 	      var i = this[0],
-	          r = !1;for ("object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (r = n(t)); i && !(r ? r.indexOf(i) >= 0 : T.matches(i, t));) i = i !== e && !$(i) && i.parentNode;return n(i);
+	          r = !1;for ("object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (r = n(t)); i && !(r ? r.indexOf(i) >= 0 : T.matches(i, t));) {
+	        i = i !== e && !$(i) && i.parentNode;
+	      }return n(i);
 	    }, parents: function parents(t) {
-	      for (var e = [], i = this; i.length > 0;) i = n.map(i, function (t) {
-	        return (t = t.parentNode) && !$(t) && e.indexOf(t) < 0 ? (e.push(t), t) : void 0;
-	      });return U(e, t);
+	      for (var e = [], i = this; i.length > 0;) {
+	        i = n.map(i, function (t) {
+	          return (t = t.parentNode) && !$(t) && e.indexOf(t) < 0 ? (e.push(t), t) : void 0;
+	        });
+	      }return U(e, t);
 	    }, parent: function parent(t) {
 	      return U(N(this.pluck("parentNode")), t);
 	    }, children: function children(t) {
@@ -330,7 +352,9 @@
 	      });
 	    }, wrapAll: function wrapAll(t) {
 	      if (this[0]) {
-	        n(this[0]).before(t = n(t));for (var e; (e = t.children()).length;) t = e.first();n(t).append(this);
+	        n(this[0]).before(t = n(t));for (var e; (e = t.children()).length;) {
+	          t = e.first();
+	        }n(t).append(this);
 	      }return this;
 	    }, wrapInner: function wrapInner(t) {
 	      var e = Z(t);return this.each(function (i) {
@@ -366,7 +390,9 @@
 	      }) : 0 in this ? this[0].textContent : null;
 	    }, attr: function attr(n, i) {
 	      var r;return "string" != typeof n || 1 in arguments ? this.each(function (t) {
-	        if (1 === this.nodeType) if (D(n)) for (e in n) X(this, e, n[e]);else X(this, n, J(this, i, t, this.getAttribute(n)));
+	        if (1 === this.nodeType) if (D(n)) for (e in n) {
+	          X(this, e, n[e]);
+	        } else X(this, n, J(this, i, t, this.getAttribute(n)));
 	      }) : this.length && 1 === this[0].nodeType ? !(r = this[0].getAttribute(n)) && n in this[0] ? this[0][n] : r : t;
 	    }, removeAttr: function removeAttr(t) {
 	      return this.each(function () {
@@ -397,16 +423,18 @@
 	    }, css: function css(t, i) {
 	      if (arguments.length < 2) {
 	        var r,
-	            o = this[0];if (!o) return;if ((r = getComputedStyle(o, ""), "string" == typeof t)) return o.style[C(t)] || r.getPropertyValue(t);if (A(t)) {
+	            o = this[0];if (!o) return;if (r = getComputedStyle(o, ""), "string" == typeof t) return o.style[C(t)] || r.getPropertyValue(t);if (A(t)) {
 	          var s = {};return n.each(t, function (t, e) {
 	            s[e] = o.style[C(e)] || r.getPropertyValue(e);
 	          }), s;
 	        }
 	      }var a = "";if ("string" == L(t)) i || 0 === i ? a = F(t) + ":" + H(t, i) : this.each(function () {
 	        this.style.removeProperty(F(t));
-	      });else for (e in t) t[e] || 0 === t[e] ? a += F(e) + ":" + H(e, t[e]) + ";" : this.each(function () {
-	        this.style.removeProperty(F(e));
-	      });return this.each(function () {
+	      });else for (e in t) {
+	        t[e] || 0 === t[e] ? a += F(e) + ":" + H(e, t[e]) + ";" : this.each(function () {
+	          this.style.removeProperty(F(e));
+	        });
+	      }return this.each(function () {
 	        this.style.cssText += ";" + a;
 	      });
 	    }, index: function index(t) {
@@ -464,7 +492,9 @@
 	      }
 	    }, offsetParent: function offsetParent() {
 	      return this.map(function () {
-	        for (var t = this.offsetParent || a.body; t && !d.test(t.nodeName) && "static" == n(t).css("position");) t = t.offsetParent;return t;
+	        for (var t = this.offsetParent || a.body; t && !d.test(t.nodeName) && "static" == n(t).css("position");) {
+	          t = t.offsetParent;
+	        }return t;
 	      });
 	    } }, n.fn.detach = n.fn.remove, ["width", "height"].forEach(function (e) {
 	    var i = e.replace(/./, function (t) {
@@ -493,11 +523,11 @@
 	      return n(e)[t](this), this;
 	    };
 	  }), T.Z.prototype = n.fn, T.uniq = N, T.deserializeValue = Y, n.zepto = T, n;
-	})();window.Zepto = Zepto, void 0 === window.$ && (window.$ = Zepto), (function (t) {
+	}();window.Zepto = Zepto, void 0 === window.$ && (window.$ = Zepto), function (t) {
 	  function l(t) {
 	    return t._zid || (t._zid = e++);
 	  }function h(t, e, n, i) {
-	    if ((e = p(e), e.ns)) var r = d(e.ns);return (s[l(t)] || []).filter(function (t) {
+	    if (e = p(e), e.ns) var r = d(e.ns);return (s[l(t)] || []).filter(function (t) {
 	      return !(!t || e.e && t.e != e.e || e.ns && !r.test(t.ns) || n && l(t.fn) !== l(n) || i && t.sel != i);
 	    });
 	  }function p(t) {
@@ -511,10 +541,10 @@
 	  }function v(e, i, r, o, a, u, f) {
 	    var h = l(e),
 	        d = s[h] || (s[h] = []);i.split(/\s/).forEach(function (i) {
-	      if ("ready" == i) return t(document).ready(r);var s = p(i);s.fn = r, s.sel = a, s.e in c && (r = function (e) {
+	      if ("ready" == i) return t(document).ready(r);var s = p(i);s.fn = r, s.sel = a, s.e in c && (r = function r(e) {
 	        var n = e.relatedTarget;return !n || n !== this && !t.contains(this, n) ? s.fn.apply(this, arguments) : void 0;
 	      }), s.del = u;var l = u || r;s.proxy = function (t) {
-	        if ((t = j(t), !t.isImmediatePropagationStopped())) {
+	        if (t = j(t), !t.isImmediatePropagationStopped()) {
 	          t.data = o;var i = l.apply(e, t._args == n ? [t] : [t].concat(t._args));return i === !1 && (t.preventDefault(), t.stopPropagation()), i;
 	        }
 	      }, s.i = d.length, d.push(s), "addEventListener" in e && e.addEventListener(g(s.e), s.proxy, m(s, f));
@@ -533,7 +563,9 @@
 	    }), (i.defaultPrevented !== n ? i.defaultPrevented : "returnValue" in i ? i.returnValue === !1 : i.getPreventDefault && i.getPreventDefault()) && (e.isDefaultPrevented = x)), e;
 	  }function S(t) {
 	    var e,
-	        i = { originalEvent: t };for (e in t) w.test(e) || t[e] === n || (i[e] = t[e]);return j(i, t);
+	        i = { originalEvent: t };for (e in t) {
+	      w.test(e) || t[e] === n || (i[e] = t[e]);
+	    }return j(i, t);
 	  }var n,
 	      e = 1,
 	      i = Array.prototype.slice,
@@ -578,9 +610,9 @@
 	        h = this;return e && !o(e) ? (t.each(e, function (t, e) {
 	      h.on(t, s, a, e, f);
 	    }), h) : (o(s) || r(u) || u === !1 || (u = a, a = s, s = n), (r(a) || a === !1) && (u = a, a = n), u === !1 && (u = b), h.each(function (n, r) {
-	      f && (c = function (t) {
+	      f && (c = function c(t) {
 	        return y(r, t.type, u), u.apply(this, arguments);
-	      }), s && (l = function (e) {
+	      }), s && (l = function l(e) {
 	        var n,
 	            o = t(e.target).closest(s, r).get(0);return o && o !== r ? (n = t.extend(S(e), { currentTarget: o, liveFired: r }), (c || u).apply(o, [n].concat(i.call(arguments, 1)))) : void 0;
 	      }), v(r, e, u, a, s, l || c);
@@ -607,9 +639,11 @@
 	    };
 	  }), t.Event = function (t, e) {
 	    o(t) || (e = t, t = e.type);var n = document.createEvent(a[t] || "Events"),
-	        i = !0;if (e) for (var r in e) "bubbles" == r ? i = !!e[r] : n[r] = e[r];return n.initEvent(t, i, !0), j(n);
+	        i = !0;if (e) for (var r in e) {
+	      "bubbles" == r ? i = !!e[r] : n[r] = e[r];
+	    }return n.initEvent(t, i, !0), j(n);
 	  };
-	})(Zepto), (function (t) {
+	}(Zepto), function (t) {
 	  function h(e, n, i) {
 	    var r = t.Event(n);return t(e).trigger(r, i), !r.isDefaultPrevented();
 	  }function p(t, e, i, r) {
@@ -673,8 +707,10 @@
 	    }, accepts: { script: "text/javascript, application/javascript, application/x-javascript", json: u, xml: "application/xml, text/xml", html: f, text: "text/plain" }, crossDomain: !1, timeout: 0, processData: !0, cache: !0 }, t.ajax = function (e) {
 	    var a,
 	        o = t.extend({}, e || {}),
-	        s = t.Deferred && t.Deferred();for (i in t.ajaxSettings) void 0 === o[i] && (o[i] = t.ajaxSettings[i]);d(o), o.crossDomain || (a = n.createElement("a"), a.href = o.url, a.href = a.href, o.crossDomain = l.protocol + "//" + l.host != a.protocol + "//" + a.host), o.url || (o.url = window.location.toString()), j(o);var u = o.dataType,
-	        f = /\?.+=\?/.test(o.url);if ((f && (u = "jsonp"), o.cache !== !1 && (e && e.cache === !0 || "script" != u && "jsonp" != u) || (o.url = E(o.url, "_=" + Date.now())), "jsonp" == u)) return f || (o.url = E(o.url, o.jsonp ? o.jsonp + "=?" : o.jsonp === !1 ? "" : "callback=?")), t.ajaxJSONP(o, s);var C,
+	        s = t.Deferred && t.Deferred();for (i in t.ajaxSettings) {
+	      void 0 === o[i] && (o[i] = t.ajaxSettings[i]);
+	    }d(o), o.crossDomain || (a = n.createElement("a"), a.href = o.url, a.href = a.href, o.crossDomain = l.protocol + "//" + l.host != a.protocol + "//" + a.host), o.url || (o.url = window.location.toString()), j(o);var u = o.dataType,
+	        f = /\?.+=\?/.test(o.url);if (f && (u = "jsonp"), o.cache !== !1 && (e && e.cache === !0 || "script" != u && "jsonp" != u) || (o.url = E(o.url, "_=" + Date.now())), "jsonp" == u) return f || (o.url = E(o.url, o.jsonp ? o.jsonp + "=?" : o.jsonp === !1 ? "" : "callback=?")), t.ajaxJSONP(o, s);var C,
 	        h = o.accepts[u],
 	        p = {},
 	        m = function m(t, e) {
@@ -682,7 +718,9 @@
 	    },
 	        x = /^([\w-]+:)\/\//.test(o.url) ? RegExp.$1 : window.location.protocol,
 	        S = o.xhr(),
-	        T = S.setRequestHeader;if ((s && s.promise(S), o.crossDomain || m("X-Requested-With", "XMLHttpRequest"), m("Accept", h || "*/*"), (h = o.mimeType || h) && (h.indexOf(",") > -1 && (h = h.split(",", 2)[0]), S.overrideMimeType && S.overrideMimeType(h)), (o.contentType || o.contentType !== !1 && o.data && "GET" != o.type.toUpperCase()) && m("Content-Type", o.contentType || "application/x-www-form-urlencoded"), o.headers)) for (r in o.headers) m(r, o.headers[r]);if ((S.setRequestHeader = m, S.onreadystatechange = function () {
+	        T = S.setRequestHeader;if (s && s.promise(S), o.crossDomain || m("X-Requested-With", "XMLHttpRequest"), m("Accept", h || "*/*"), (h = o.mimeType || h) && (h.indexOf(",") > -1 && (h = h.split(",", 2)[0]), S.overrideMimeType && S.overrideMimeType(h)), (o.contentType || o.contentType !== !1 && o.data && "GET" != o.type.toUpperCase()) && m("Content-Type", o.contentType || "application/x-www-form-urlencoded"), o.headers) for (r in o.headers) {
+	      m(r, o.headers[r]);
+	    }if (S.setRequestHeader = m, S.onreadystatechange = function () {
 	      if (4 == S.readyState) {
 	        S.onreadystatechange = b, clearTimeout(C);var e,
 	            n = !1;if (S.status >= 200 && S.status < 300 || 304 == S.status || 0 == S.status && "file:" == x) {
@@ -693,7 +731,11 @@
 	          }n ? y(n, "parsererror", S, o, s) : v(e, S, o, s);
 	        } else y(S.statusText || null, S.status ? "error" : "abort", S, o, s);
 	      }
-	    }, g(S, o) === !1)) return S.abort(), y(null, "abort", S, o, s), S;if (o.xhrFields) for (r in o.xhrFields) S[r] = o.xhrFields[r];var N = "async" in o ? o.async : !0;S.open(o.type, o.url, N, o.username, o.password);for (r in p) T.apply(S, p[r]);return o.timeout > 0 && (C = setTimeout(function () {
+	    }, g(S, o) === !1) return S.abort(), y(null, "abort", S, o, s), S;if (o.xhrFields) for (r in o.xhrFields) {
+	      S[r] = o.xhrFields[r];
+	    }var N = "async" in o ? o.async : !0;S.open(o.type, o.url, N, o.username, o.password);for (r in p) {
+	      T.apply(S, p[r]);
+	    }return o.timeout > 0 && (C = setTimeout(function () {
 	      S.onreadystatechange = b, S.abort(), y(null, "timeout", S, o, s);
 	    }, o.timeout)), S.send(o.data ? o.data : null), S;
 	  }, t.get = function () {
@@ -715,7 +757,7 @@
 	      t.isFunction(n) && (n = n()), null == n && (n = ""), this.push(T(e) + "=" + T(n));
 	    }, C(i, e, n), i.join("&").replace(/%20/g, "+");
 	  };
-	})(Zepto), (function (t) {
+	}(Zepto), function (t) {
 	  t.fn.serializeArray = function () {
 	    var e,
 	        n,
@@ -734,7 +776,7 @@
 	      var n = t.Event("submit");this.eq(0).trigger(n), n.isDefaultPrevented() || this.get(0).submit();
 	    }return this;
 	  };
-	})(Zepto), (function (t) {
+	}(Zepto), function (t) {
 	  "__proto__" in {} || t.extend(t.zepto, { Z: function Z(e, n) {
 	      return e = e || [], t.extend(e, t.fn), e.selector = n || "", e.__Z = !0, e;
 	    }, isZ: function isZ(e) {
@@ -750,60 +792,1974 @@
 	      }
 	    };
 	  }
-	})(Zepto);
+	}(Zepto);
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	module.exports = function (callback) {
 	    'use strict';
 	
-	    var loadJs = function loadJs(polyfill) {
-	        var script = document.createElement('script');
-	        script.src = cdnPaths[polyfill];
-	        document.body.appendChild(script);
-	    };
-	
-	    var cdnPaths = {
-	        'document-register-element': 'https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js',
-	        'picturefill': 'https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js',
-	        'dom4': 'https://cdnjs.cloudflare.com/ajax/libs/dom4/1.6.0/dom4.js',
-	        'es5-shim': 'https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.4.1/es5-shim.min.js',
-	        'placeholders': 'https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js'
-	    };
-	
 	    // intermediate solution
+	
+	    var polyfills = [];
+	
+	    var sjs = __webpack_require__(3);
+	
+	    function getPolyfillPath() {
+	        var src = document.querySelector('script[src*="showcar-ui.js"]').src;
+	        src = src.split('?')[0];
+	        return src.substr(0, src.lastIndexOf('/')) + '/polyfills/';
+	    }
+	
 	    var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
 	
 	    var isDom4Browser = document.head && 'matches' in document.head && 'classList' in document.head && 'CustomEvent' in window;
 	
 	    var isEs5Browser = 'map' in Array.prototype && 'isArray' in Array && 'bind' in Function.prototype && 'keys' in Object && 'trim' in String.prototype;
 	
-	    loadJs('document-register-element');
-	    loadJs('picturefill');
+	    __webpack_require__(4);
+	    __webpack_require__(5);
 	
 	    if (!isDom4Browser) {
-	        loadJs('dom4');
+	        polyfills.push(getPolyfillPath() + 'dom4.js');
 	    }
 	
 	    if (!isEs5Browser) {
-	        loadJs('es5-shim');
+	        polyfills.push(getPolyfillPath() + 'es5-shim.min.js');
 	    }
 	
 	    if (needsPlaceholderPolyfill) {
-	        loadJs('placeholders');
+	        polyfills.push(getPolyfillPath() + 'placeholders.min.js');
 	    }
 	
-	    if (callback && typeof callback === 'function') {
-	        callback();
+	    if (polyfills.length) {
+	        sjs(polyfills, start);
+	    } else {
+	        start();
+	    }
+	
+	    function start() {
+	        if (callback && typeof callback === 'function') {
+	            callback();
+	        }
 	    }
 	};
 
 /***/ },
 /* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+	
+	/*!
+	  * $script.js JS loader & dependency manager
+	  * https://github.com/ded/script.js
+	  * (c) Dustin Diaz 2014 | License MIT
+	  */
+	
+	(function (name, definition) {
+	  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) !(__WEBPACK_AMD_DEFINE_FACTORY__ = (definition), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else this[name] = definition();
+	})('$script', function () {
+	  var doc = document,
+	      head = doc.getElementsByTagName('head')[0],
+	      s = 'string',
+	      f = false,
+	      push = 'push',
+	      readyState = 'readyState',
+	      onreadystatechange = 'onreadystatechange',
+	      list = {},
+	      ids = {},
+	      delay = {},
+	      scripts = {},
+	      scriptpath,
+	      urlArgs;
+	
+	  function every(ar, fn) {
+	    for (var i = 0, j = ar.length; i < j; ++i) {
+	      if (!fn(ar[i])) return f;
+	    }return 1;
+	  }
+	  function each(ar, fn) {
+	    every(ar, function (el) {
+	      return !fn(el);
+	    });
+	  }
+	
+	  function $script(paths, idOrDone, optDone) {
+	    paths = paths[push] ? paths : [paths];
+	    var idOrDoneIsDone = idOrDone && idOrDone.call,
+	        done = idOrDoneIsDone ? idOrDone : optDone,
+	        id = idOrDoneIsDone ? paths.join('') : idOrDone,
+	        queue = paths.length;
+	    function loopFn(item) {
+	      return item.call ? item() : list[item];
+	    }
+	    function callback() {
+	      if (! --queue) {
+	        list[id] = 1;
+	        done && done();
+	        for (var dset in delay) {
+	          every(dset.split('|'), loopFn) && !each(delay[dset], loopFn) && (delay[dset] = []);
+	        }
+	      }
+	    }
+	    setTimeout(function () {
+	      each(paths, function loading(path, force) {
+	        if (path === null) return callback();
+	
+	        if (!force && !/^https?:\/\//.test(path) && scriptpath) {
+	          path = path.indexOf('.js') === -1 ? scriptpath + path + '.js' : scriptpath + path;
+	        }
+	
+	        if (scripts[path]) {
+	          if (id) ids[id] = 1;
+	          return scripts[path] == 2 ? callback() : setTimeout(function () {
+	            loading(path, true);
+	          }, 0);
+	        }
+	
+	        scripts[path] = 1;
+	        if (id) ids[id] = 1;
+	        create(path, callback);
+	      });
+	    }, 0);
+	    return $script;
+	  }
+	
+	  function create(path, fn) {
+	    var el = doc.createElement('script'),
+	        loaded;
+	    el.onload = el.onerror = el[onreadystatechange] = function () {
+	      if (el[readyState] && !/^c|loade/.test(el[readyState]) || loaded) return;
+	      el.onload = el[onreadystatechange] = null;
+	      loaded = 1;
+	      scripts[path] = 2;
+	      fn();
+	    };
+	    el.async = 1;
+	    el.src = urlArgs ? path + (path.indexOf('?') === -1 ? '?' : '&') + urlArgs : path;
+	    head.insertBefore(el, head.lastChild);
+	  }
+	
+	  $script.get = create;
+	
+	  $script.order = function (scripts, id, done) {
+	    (function callback(s) {
+	      s = scripts.shift();
+	      !scripts.length ? $script(s, id, done) : $script(s, callback);
+	    })();
+	  };
+	
+	  $script.path = function (p) {
+	    scriptpath = p;
+	  };
+	  $script.urlArgs = function (str) {
+	    urlArgs = str;
+	  };
+	  $script.ready = function (deps, ready, req) {
+	    deps = deps[push] ? deps : [deps];
+	    var missing = [];
+	    !each(deps, function (dep) {
+	      list[dep] || missing[push](dep);
+	    }) && every(deps, function (dep) {
+	      return list[dep];
+	    }) ? ready() : !function (key) {
+	      delay[key] = delay[key] || [];
+	      delay[key][push](ready);
+	      req && req(missing);
+	    }(deps.join('|'));
+	    return $script;
+	  };
+	
+	  $script.done = function (idOrDone) {
+	    $script([null], idOrDone);
+	  };
+	
+	  return $script;
+	});
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	/*! (C) WebReflection Mit Style License */
+	(function (e, t, n, r) {
+	  "use strict";
+	  function rt(e, t) {
+	    for (var n = 0, r = e.length; n < r; n++) {
+	      vt(e[n], t);
+	    }
+	  }function it(e) {
+	    for (var t = 0, n = e.length, r; t < n; t++) {
+	      r = e[t], nt(r, b[ot(r)]);
+	    }
+	  }function st(e) {
+	    return function (t) {
+	      j(t) && (vt(t, e), rt(t.querySelectorAll(w), e));
+	    };
+	  }function ot(e) {
+	    var t = e.getAttribute("is"),
+	        n = e.nodeName.toUpperCase(),
+	        r = S.call(y, t ? v + t.toUpperCase() : d + n);return t && -1 < r && !ut(n, t) ? -1 : r;
+	  }function ut(e, t) {
+	    return -1 < w.indexOf(e + '[is="' + t + '"]');
+	  }function at(e) {
+	    var t = e.currentTarget,
+	        n = e.attrChange,
+	        r = e.attrName,
+	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" && e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
+	  }function ft(e) {
+	    var t = st(e);return function (e) {
+	      X.push(t, e.target);
+	    };
+	  }function lt(e) {
+	    K && (K = !1, e.currentTarget.removeEventListener(h, lt)), rt((e.target || t).querySelectorAll(w), e.detail === o ? o : s), B && pt();
+	  }function ct(e, t) {
+	    var n = this;q.call(n, e, t), G.call(n, { target: n });
+	  }function ht(e, t) {
+	    D(e, t), et ? et.observe(e, z) : (J && (e.setAttribute = ct, e[i] = Z(e), e.addEventListener(p, G)), e.addEventListener(c, at)), e.createdCallback && Q && (e.created = !0, e.createdCallback(), e.created = !1);
+	  }function pt() {
+	    for (var e, t = 0, n = F.length; t < n; t++) {
+	      e = F[t], E.contains(e) || (n--, F.splice(t--, 1), vt(e, o));
+	    }
+	  }function dt(e) {
+	    throw new Error("A " + e + " type is already registered");
+	  }function vt(e, t) {
+	    var n,
+	        r = ot(e);-1 < r && (tt(e, b[r]), r = 0, t === s && !e[s] ? (e[o] = !1, e[s] = !0, r = 1, B && S.call(F, e) < 0 && F.push(e)) : t === o && !e[o] && (e[s] = !1, e[o] = !0, r = 1), r && (n = e[t + "Callback"]) && n.call(e));
+	  }if (r in t) return;var i = "__" + r + (Math.random() * 1e5 >> 0),
+	      s = "attached",
+	      o = "detached",
+	      u = "extends",
+	      a = "ADDITION",
+	      f = "MODIFICATION",
+	      l = "REMOVAL",
+	      c = "DOMAttrModified",
+	      h = "DOMContentLoaded",
+	      p = "DOMSubtreeModified",
+	      d = "<",
+	      v = "=",
+	      m = /^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$/,
+	      g = ["ANNOTATION-XML", "COLOR-PROFILE", "FONT-FACE", "FONT-FACE-SRC", "FONT-FACE-URI", "FONT-FACE-FORMAT", "FONT-FACE-NAME", "MISSING-GLYPH"],
+	      y = [],
+	      b = [],
+	      w = "",
+	      E = t.documentElement,
+	      S = y.indexOf || function (e) {
+	    for (var t = this.length; t-- && this[t] !== e;) {}return t;
+	  },
+	      x = n.prototype,
+	      T = x.hasOwnProperty,
+	      N = x.isPrototypeOf,
+	      C = n.defineProperty,
+	      k = n.getOwnPropertyDescriptor,
+	      L = n.getOwnPropertyNames,
+	      A = n.getPrototypeOf,
+	      O = n.setPrototypeOf,
+	      M = !!n.__proto__,
+	      _ = n.create || function mt(e) {
+	    return e ? (mt.prototype = e, new mt()) : this;
+	  },
+	      D = O || (M ? function (e, t) {
+	    return e.__proto__ = t, e;
+	  } : L && k ? function () {
+	    function e(e, t) {
+	      for (var n, r = L(t), i = 0, s = r.length; i < s; i++) {
+	        n = r[i], T.call(e, n) || C(e, n, k(t, n));
+	      }
+	    }return function (t, n) {
+	      do {
+	        e(t, n);
+	      } while ((n = A(n)) && !N.call(n, t));return t;
+	    };
+	  }() : function (e, t) {
+	    for (var n in t) {
+	      e[n] = t[n];
+	    }return e;
+	  }),
+	      P = e.MutationObserver || e.WebKitMutationObserver,
+	      H = (e.HTMLElement || e.Element || e.Node).prototype,
+	      B = !N.call(H, E),
+	      j = B ? function (e) {
+	    return e.nodeType === 1;
+	  } : function (e) {
+	    return N.call(H, e);
+	  },
+	      F = B && [],
+	      I = H.cloneNode,
+	      q = H.setAttribute,
+	      R = H.removeAttribute,
+	      U = t.createElement,
+	      z = P && { attributes: !0, characterData: !0, attributeOldValue: !0 },
+	      W = P || function (e) {
+	    J = !1, E.removeEventListener(c, W);
+	  },
+	      X,
+	      V = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+	    setTimeout(e, 10);
+	  },
+	      $ = !1,
+	      J = !0,
+	      K = !0,
+	      Q = !0,
+	      G,
+	      Y,
+	      Z,
+	      et,
+	      tt,
+	      nt;O || M ? (tt = function tt(e, t) {
+	    N.call(t, e) || ht(e, t);
+	  }, nt = ht) : (tt = function tt(e, t) {
+	    e[i] || (e[i] = n(!0), ht(e, t));
+	  }, nt = tt), B ? (J = !1, function () {
+	    var e = k(H, "addEventListener"),
+	        t = e.value,
+	        n = function n(e) {
+	      var t = new CustomEvent(c, { bubbles: !0 });t.attrName = e, t.prevValue = this.getAttribute(e), t.newValue = null, t[l] = t.attrChange = 2, R.call(this, e), this.dispatchEvent(t);
+	    },
+	        r = function r(e, t) {
+	      var n = this.hasAttribute(e),
+	          r = n && this.getAttribute(e),
+	          i = new CustomEvent(c, { bubbles: !0 });q.call(this, e, t), i.attrName = e, i.prevValue = n ? r : null, i.newValue = t, n ? i[f] = i.attrChange = 1 : i[a] = i.attrChange = 0, this.dispatchEvent(i);
+	    },
+	        s = function s(e) {
+	      var t = e.currentTarget,
+	          n = t[i],
+	          r = e.propertyName,
+	          s;n.hasOwnProperty(r) && (n = n[r], s = new CustomEvent(c, { bubbles: !0 }), s.attrName = n.name, s.prevValue = n.value || null, s.newValue = n.value = t[r] || null, s.prevValue == null ? s[a] = s.attrChange = 0 : s[f] = s.attrChange = 1, t.dispatchEvent(s));
+	    };e.value = function (e, o, u) {
+	      e === c && this.attributeChangedCallback && this.setAttribute !== r && (this[i] = { className: { name: "class", value: this.className } }, this.setAttribute = r, this.removeAttribute = n, t.call(this, "propertychange", s)), t.call(this, e, o, u);
+	    }, C(H, "addEventListener", e);
+	  }()) : P || (E.addEventListener(c, W), E.setAttribute(i, 1), E.removeAttribute(i), J && (G = function G(e) {
+	    var t = this,
+	        n,
+	        r,
+	        s;if (t === e.target) {
+	      n = t[i], t[i] = r = Z(t);for (s in r) {
+	        if (!(s in n)) return Y(0, t, s, n[s], r[s], a);if (r[s] !== n[s]) return Y(1, t, s, n[s], r[s], f);
+	      }for (s in n) {
+	        if (!(s in r)) return Y(2, t, s, n[s], r[s], l);
+	      }
+	    }
+	  }, Y = function Y(e, t, n, r, i, s) {
+	    var o = { attrChange: e, currentTarget: t, attrName: n, prevValue: r, newValue: i };o[s] = e, at(o);
+	  }, Z = function Z(e) {
+	    for (var t, n, r = {}, i = e.attributes, s = 0, o = i.length; s < o; s++) {
+	      t = i[s], n = t.name, n !== "setAttribute" && (r[n] = t.value);
+	    }return r;
+	  })), t[r] = function (n, r) {
+	    c = n.toUpperCase(), $ || ($ = !0, P ? (et = function (e, t) {
+	      function n(e, t) {
+	        for (var n = 0, r = e.length; n < r; t(e[n++])) {}
+	      }return new P(function (r) {
+	        for (var i, s, o, u = 0, a = r.length; u < a; u++) {
+	          i = r[u], i.type === "childList" ? (n(i.addedNodes, e), n(i.removedNodes, t)) : (s = i.target, Q && s.attributeChangedCallback && i.attributeName !== "style" && (o = s.getAttribute(i.attributeName), o !== i.oldValue && s.attributeChangedCallback(i.attributeName, i.oldValue, o)));
+	        }
+	      });
+	    }(st(s), st(o)), et.observe(t, { childList: !0, subtree: !0 })) : (X = [], V(function E() {
+	      while (X.length) {
+	        X.shift().call(null, X.shift());
+	      }V(E);
+	    }), t.addEventListener("DOMNodeInserted", ft(s)), t.addEventListener("DOMNodeRemoved", ft(o))), t.addEventListener(h, lt), t.addEventListener("readystatechange", lt), t.createElement = function (e, n) {
+	      var r = U.apply(t, arguments),
+	          i = "" + e,
+	          s = S.call(y, (n ? v : d) + (n || i).toUpperCase()),
+	          o = -1 < s;return n && (r.setAttribute("is", n = n.toLowerCase()), o && (o = ut(i.toUpperCase(), n))), Q = !t.createElement.innerHTMLHelper, o && nt(r, b[s]), r;
+	    }, H.cloneNode = function (e) {
+	      var t = I.call(this, !!e),
+	          n = ot(t);return -1 < n && nt(t, b[n]), e && it(t.querySelectorAll(w)), t;
+	    }), -2 < S.call(y, v + c) + S.call(y, d + c) && dt(n);if (!m.test(c) || -1 < S.call(g, c)) throw new Error("The type " + n + " is invalid");var i = function i() {
+	      return f ? t.createElement(l, c) : t.createElement(l);
+	    },
+	        a = r || x,
+	        f = T.call(a, u),
+	        l = f ? r[u].toUpperCase() : c,
+	        c,
+	        p;return f && -1 < S.call(y, d + l) && dt(l), p = y.push((f ? v : d) + c) - 1, w = w.concat(w.length ? "," : "", f ? l + '[is="' + n.toLowerCase() + '"]' : l), i.prototype = b[p] = T.call(a, "prototype") ? a.prototype : _(H), rt(t.querySelectorAll(w), s), i;
+	  };
+	})(window, document, Object, "registerElement");
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {"use strict";
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	/*! Picturefill - v3.0.1 - 2015-09-30
+	 * http://scottjehl.github.io/picturefill
+	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+	 */
+	/*! Gecko-Picture - v1.0
+	 * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
+	 * Firefox's early picture implementation (prior to FF41) is static and does
+	 * not react to viewport changes. This tiny module fixes this.
+	 */
+	(function (window) {
+		/*jshint eqnull:true */
+		var ua = navigator.userAgent;
+	
+		if (window.HTMLPictureElement && /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 41) {
+			addEventListener("resize", function () {
+				var timer;
+	
+				var dummySrc = document.createElement("source");
+	
+				var fixRespimg = function fixRespimg(img) {
+					var source, sizes;
+					var picture = img.parentNode;
+	
+					if (picture.nodeName.toUpperCase() === "PICTURE") {
+						source = dummySrc.cloneNode();
+	
+						picture.insertBefore(source, picture.firstElementChild);
+						setTimeout(function () {
+							picture.removeChild(source);
+						});
+					} else if (!img._pfLastSize || img.offsetWidth > img._pfLastSize) {
+						img._pfLastSize = img.offsetWidth;
+						sizes = img.sizes;
+						img.sizes += ",100vw";
+						setTimeout(function () {
+							img.sizes = sizes;
+						});
+					}
+				};
+	
+				var findPictureImgs = function findPictureImgs() {
+					var i;
+					var imgs = document.querySelectorAll("picture > img, img[srcset][sizes]");
+					for (i = 0; i < imgs.length; i++) {
+						fixRespimg(imgs[i]);
+					}
+				};
+				var onResize = function onResize() {
+					clearTimeout(timer);
+					timer = setTimeout(findPictureImgs, 99);
+				};
+				var mq = window.matchMedia && matchMedia("(orientation: landscape)");
+				var init = function init() {
+					onResize();
+	
+					if (mq && mq.addListener) {
+						mq.addListener(onResize);
+					}
+				};
+	
+				dummySrc.srcset = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+	
+				if (/^[c|i]|d$/.test(document.readyState || "")) {
+					init();
+				} else {
+					document.addEventListener("DOMContentLoaded", init);
+				}
+	
+				return onResize;
+			}());
+		}
+	})(window);
+	
+	/*! Picturefill - v3.0.1
+	 * http://scottjehl.github.io/picturefill
+	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
+	 *  License: MIT
+	 */
+	
+	(function (window, document, undefined) {
+		// Enable strict mode
+		"use strict";
+	
+		// HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
+	
+		document.createElement("picture");
+	
+		var warn, eminpx, alwaysCheckWDescriptor, evalId;
+		// local object for method references and testing exposure
+		var pf = {};
+		var noop = function noop() {};
+		var image = document.createElement("img");
+		var getImgAttr = image.getAttribute;
+		var setImgAttr = image.setAttribute;
+		var removeImgAttr = image.removeAttribute;
+		var docElem = document.documentElement;
+		var types = {};
+		var cfg = {
+			//resource selection:
+			algorithm: ""
+		};
+		var srcAttr = "data-pfsrc";
+		var srcsetAttr = srcAttr + "set";
+		// ua sniffing is done for undetectable img loading features,
+		// to do some non crucial perf optimizations
+		var ua = navigator.userAgent;
+		var supportAbort = /rident/.test(ua) || /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 > 35;
+		var curSrcProp = "currentSrc";
+		var regWDesc = /\s+\+?\d+(e\d+)?w/;
+		var regSize = /(\([^)]+\))?\s*(.+)/;
+		var setOptions = window.picturefillCFG;
+		/**
+	  * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+	  */
+		// baseStyle also used by getEmValue (i.e.: width: 1em is important)
+		var baseStyle = "position:absolute;left:0;visibility:hidden;display:block;padding:0;border:none;font-size:1em;width:1em;overflow:hidden;clip:rect(0px, 0px, 0px, 0px)";
+		var fsCss = "font-size:100%!important;";
+		var isVwDirty = true;
+	
+		var cssCache = {};
+		var sizeLengthCache = {};
+		var DPR = window.devicePixelRatio;
+		var units = {
+			px: 1,
+			"in": 96
+		};
+		var anchor = document.createElement("a");
+		/**
+	  * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
+	  * @type {boolean}
+	  */
+		var alreadyRun = false;
+	
+		// Reusable, non-"g" Regexes
+	
+		// (Don't use \s, to avoid matching non-breaking space.)
+		var regexLeadingSpaces = /^[ \t\n\r\u000c]+/,
+		    regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/,
+		    regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
+		    regexTrailingCommas = /[,]+$/,
+		    regexNonNegativeInteger = /^\d+$/,
+		   
+	
+		// ( Positive or negative or unsigned integers or decimals, without or without exponents.
+		// Must include at least one digit.
+		// According to spec tests any decimal point must be followed by a digit.
+		// No leading plus sign is allowed.)
+		// https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number
+		regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
+	
+		var on = function on(obj, evt, fn, capture) {
+			if (obj.addEventListener) {
+				obj.addEventListener(evt, fn, capture || false);
+			} else if (obj.attachEvent) {
+				obj.attachEvent("on" + evt, fn);
+			}
+		};
+	
+		/**
+	  * simple memoize function:
+	  */
+	
+		var memoize = function memoize(fn) {
+			var cache = {};
+			return function (input) {
+				if (!(input in cache)) {
+					cache[input] = fn(input);
+				}
+				return cache[input];
+			};
+		};
+	
+		// UTILITY FUNCTIONS
+	
+		// Manual is faster than RegEx
+		// http://jsperf.com/whitespace-character/5
+		function isSpace(c) {
+			return c === " " || // space
+			c === "\t" || // horizontal tab
+			c === "\n" || // new line
+			c === "\f" || // form feed
+			c === "\r"; // carriage return
+		}
+	
+		/**
+	  * gets a mediaquery and returns a boolean or gets a css length and returns a number
+	  * @param css mediaqueries or css length
+	  * @returns {boolean|number}
+	  *
+	  * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
+	  */
+		var evalCSS = function () {
+	
+			var regLength = /^([\d\.]+)(em|vw|px)$/;
+			var replace = function replace() {
+				var args = arguments,
+				    index = 0,
+				    string = args[0];
+				while (++index in args) {
+					string = string.replace(args[index], args[++index]);
+				}
+				return string;
+			};
+	
+			var buildStr = memoize(function (css) {
+	
+				return "return " + replace((css || "").toLowerCase(),
+				// interpret `and`
+				/\band\b/g, "&&",
+	
+				// interpret `,`
+				/,/g, "||",
+	
+				// interpret `min-` as >=
+				/min-([a-z-\s]+):/g, "e.$1>=",
+	
+				// interpret `max-` as <=
+				/max-([a-z-\s]+):/g, "e.$1<=",
+	
+				//calc value
+				/calc([^)]+)/g, "($1)",
+	
+				// interpret css values
+				/(\d+[\.]*[\d]*)([a-z]+)/g, "($1 * e.$2)",
+				//make eval less evil
+				/^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, "") + ";";
+			});
+	
+			return function (css, length) {
+				var parsedLength;
+				if (!(css in cssCache)) {
+					cssCache[css] = false;
+					if (length && (parsedLength = css.match(regLength))) {
+						cssCache[css] = parsedLength[1] * units[parsedLength[2]];
+					} else {
+						/*jshint evil:true */
+						try {
+							cssCache[css] = new Function("e", buildStr(css))(units);
+						} catch (e) {}
+						/*jshint evil:false */
+					}
+				}
+				return cssCache[css];
+			};
+		}();
+	
+		var setResolution = function setResolution(candidate, sizesattr) {
+			if (candidate.w) {
+				// h = means height: || descriptor.type === 'h' do not handle yet...
+				candidate.cWidth = pf.calcListLength(sizesattr || "100vw");
+				candidate.res = candidate.w / candidate.cWidth;
+			} else {
+				candidate.res = candidate.d;
+			}
+			return candidate;
+		};
+	
+		/**
+	  *
+	  * @param opt
+	  */
+		var picturefill = function picturefill(opt) {
+			var elements, i, plen;
+	
+			var options = opt || {};
+	
+			if (options.elements && options.elements.nodeType === 1) {
+				if (options.elements.nodeName.toUpperCase() === "IMG") {
+					options.elements = [options.elements];
+				} else {
+					options.context = options.elements;
+					options.elements = null;
+				}
+			}
+	
+			elements = options.elements || pf.qsa(options.context || document, options.reevaluate || options.reselect ? pf.sel : pf.selShort);
+	
+			if (plen = elements.length) {
+	
+				pf.setupRun(options);
+				alreadyRun = true;
+	
+				// Loop through all elements
+				for (i = 0; i < plen; i++) {
+					pf.fillImg(elements[i], options);
+				}
+	
+				pf.teardownRun(options);
+			}
+		};
+	
+		/**
+	  * outputs a warning for the developer
+	  * @param {message}
+	  * @type {Function}
+	  */
+		warn = window.console && console.warn ? function (message) {
+			console.warn(message);
+		} : noop;
+	
+		if (!(curSrcProp in image)) {
+			curSrcProp = "src";
+		}
+	
+		// Add support for standard mime types.
+		types["image/jpeg"] = true;
+		types["image/gif"] = true;
+		types["image/png"] = true;
+	
+		function detectTypeSupport(type, typeUri) {
+			// based on Modernizr's lossless img-webp test
+			// note: asynchronous
+			var image = new window.Image();
+			image.onerror = function () {
+				types[type] = false;
+				picturefill();
+			};
+			image.onload = function () {
+				types[type] = image.width === 1;
+				picturefill();
+			};
+			image.src = typeUri;
+			return "pending";
+		}
+	
+		// test svg support
+		types["image/svg+xml"] = document.implementation.hasFeature("http://wwwindow.w3.org/TR/SVG11/feature#Image", "1.1");
+	
+		/**
+	  * updates the internal vW property with the current viewport width in px
+	  */
+		function updateMetrics() {
+	
+			isVwDirty = false;
+			DPR = window.devicePixelRatio;
+			cssCache = {};
+			sizeLengthCache = {};
+	
+			pf.DPR = DPR || 1;
+	
+			units.width = Math.max(window.innerWidth || 0, docElem.clientWidth);
+			units.height = Math.max(window.innerHeight || 0, docElem.clientHeight);
+	
+			units.vw = units.width / 100;
+			units.vh = units.height / 100;
+	
+			evalId = [units.height, units.width, DPR].join("-");
+	
+			units.em = pf.getEmValue();
+			units.rem = units.em;
+		}
+	
+		function chooseLowRes(lowerValue, higherValue, dprValue, isCached) {
+			var bonusFactor, tooMuch, bonus, meanDensity;
+	
+			//experimental
+			if (cfg.algorithm === "saveData") {
+				if (lowerValue > 2.7) {
+					meanDensity = dprValue + 1;
+				} else {
+					tooMuch = higherValue - dprValue;
+					bonusFactor = Math.pow(lowerValue - 0.6, 1.5);
+	
+					bonus = tooMuch * bonusFactor;
+	
+					if (isCached) {
+						bonus += 0.1 * bonusFactor;
+					}
+	
+					meanDensity = lowerValue + bonus;
+				}
+			} else {
+				meanDensity = dprValue > 1 ? Math.sqrt(lowerValue * higherValue) : lowerValue;
+			}
+	
+			return meanDensity > dprValue;
+		}
+	
+		function applyBestCandidate(img) {
+			var srcSetCandidates;
+			var matchingSet = pf.getSet(img);
+			var evaluated = false;
+			if (matchingSet !== "pending") {
+				evaluated = evalId;
+				if (matchingSet) {
+					srcSetCandidates = pf.setRes(matchingSet);
+					pf.applySetCandidate(srcSetCandidates, img);
+				}
+			}
+			img[pf.ns].evaled = evaluated;
+		}
+	
+		function ascendingSort(a, b) {
+			return a.res - b.res;
+		}
+	
+		function setSrcToCur(img, src, set) {
+			var candidate;
+			if (!set && src) {
+				set = img[pf.ns].sets;
+				set = set && set[set.length - 1];
+			}
+	
+			candidate = getCandidateForSrc(src, set);
+	
+			if (candidate) {
+				src = pf.makeUrl(src);
+				img[pf.ns].curSrc = src;
+				img[pf.ns].curCan = candidate;
+	
+				if (!candidate.res) {
+					setResolution(candidate, candidate.set.sizes);
+				}
+			}
+			return candidate;
+		}
+	
+		function getCandidateForSrc(src, set) {
+			var i, candidate, candidates;
+			if (src && set) {
+				candidates = pf.parseSet(set);
+				src = pf.makeUrl(src);
+				for (i = 0; i < candidates.length; i++) {
+					if (src === pf.makeUrl(candidates[i].url)) {
+						candidate = candidates[i];
+						break;
+					}
+				}
+			}
+			return candidate;
+		}
+	
+		function getAllSourceElements(picture, candidates) {
+			var i, len, source, srcset;
+	
+			// SPEC mismatch intended for size and perf:
+			// actually only source elements preceding the img should be used
+			// also note: don't use qsa here, because IE8 sometimes doesn't like source as the key part in a selector
+			var sources = picture.getElementsByTagName("source");
+	
+			for (i = 0, len = sources.length; i < len; i++) {
+				source = sources[i];
+				source[pf.ns] = true;
+				srcset = source.getAttribute("srcset");
+	
+				// if source does not have a srcset attribute, skip
+				if (srcset) {
+					candidates.push({
+						srcset: srcset,
+						media: source.getAttribute("media"),
+						type: source.getAttribute("type"),
+						sizes: source.getAttribute("sizes")
+					});
+				}
+			}
+		}
+	
+		/**
+	  * Srcset Parser
+	  * By Alex Bell |  MIT License
+	  *
+	  * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
+	  *
+	  * Based super duper closely on the reference algorithm at:
+	  * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
+	  */
+	
+		// 1. Let input be the value passed to this algorithm.
+		// (TO-DO : Explain what "set" argument is here. Maybe choose a more
+		// descriptive & more searchable name.  Since passing the "set" in really has
+		// nothing to do with parsing proper, I would prefer this assignment eventually
+		// go in an external fn.)
+		function parseSrcset(input, set) {
+	
+			function collectCharacters(regEx) {
+				var chars,
+				    match = regEx.exec(input.substring(pos));
+				if (match) {
+					chars = match[0];
+					pos += chars.length;
+					return chars;
+				}
+			}
+	
+			var inputLength = input.length,
+			    url,
+			    descriptors,
+			    currentDescriptor,
+			    state,
+			    c,
+			   
+	
+			// 2. Let position be a pointer into input, initially pointing at the start
+			//    of the string.
+			pos = 0,
+			   
+	
+			// 3. Let candidates be an initially empty source set.
+			candidates = [];
+	
+			/**
+	  * Adds descriptor properties to a candidate, pushes to the candidates array
+	  * @return undefined
+	  */
+			// (Declared outside of the while loop so that it's only created once.
+			// (This fn is defined before it is used, in order to pass JSHINT.
+			// Unfortunately this breaks the sequencing of the spec comments. :/ )
+			function parseDescriptors() {
+	
+				// 9. Descriptor parser: Let error be no.
+				var pError = false,
+				   
+	
+				// 10. Let width be absent.
+				// 11. Let density be absent.
+				// 12. Let future-compat-h be absent. (We're implementing it now as h)
+				w,
+				    d,
+				    h,
+				    i,
+				    candidate = {},
+				    desc,
+				    lastChar,
+				    value,
+				    intVal,
+				    floatVal;
+	
+				// 13. For each descriptor in descriptors, run the appropriate set of steps
+				// from the following list:
+				for (i = 0; i < descriptors.length; i++) {
+					desc = descriptors[i];
+	
+					lastChar = desc[desc.length - 1];
+					value = desc.substring(0, desc.length - 1);
+					intVal = parseInt(value, 10);
+					floatVal = parseFloat(value);
+	
+					// If the descriptor consists of a valid non-negative integer followed by
+					// a U+0077 LATIN SMALL LETTER W character
+					if (regexNonNegativeInteger.test(value) && lastChar === "w") {
+	
+						// If width and density are not both absent, then let error be yes.
+						if (w || d) {
+							pError = true;
+						}
+	
+						// Apply the rules for parsing non-negative integers to the descriptor.
+						// If the result is zero, let error be yes.
+						// Otherwise, let width be the result.
+						if (intVal === 0) {
+							pError = true;
+						} else {
+							w = intVal;
+						}
+	
+						// If the descriptor consists of a valid floating-point number followed by
+						// a U+0078 LATIN SMALL LETTER X character
+					} else if (regexFloatingPoint.test(value) && lastChar === "x") {
+	
+							// If width, density and future-compat-h are not all absent, then let error
+							// be yes.
+							if (w || d || h) {
+								pError = true;
+							}
+	
+							// Apply the rules for parsing floating-point number values to the descriptor.
+							// If the result is less than zero, let error be yes. Otherwise, let density
+							// be the result.
+							if (floatVal < 0) {
+								pError = true;
+							} else {
+								d = floatVal;
+							}
+	
+							// If the descriptor consists of a valid non-negative integer followed by
+							// a U+0068 LATIN SMALL LETTER H character
+						} else if (regexNonNegativeInteger.test(value) && lastChar === "h") {
+	
+								// If height and density are not both absent, then let error be yes.
+								if (h || d) {
+									pError = true;
+								}
+	
+								// Apply the rules for parsing non-negative integers to the descriptor.
+								// If the result is zero, let error be yes. Otherwise, let future-compat-h
+								// be the result.
+								if (intVal === 0) {
+									pError = true;
+								} else {
+									h = intVal;
+								}
+	
+								// Anything else, Let error be yes.
+							} else {
+									pError = true;
+								}
+				} // (close step 13 for loop)
+	
+				// 15. If error is still no, then append a new image source to candidates whose
+				// URL is url, associated with a width width if not absent and a pixel
+				// density density if not absent. Otherwise, there is a parse error.
+				if (!pError) {
+					candidate.url = url;
+	
+					if (w) {
+						candidate.w = w;
+					}
+					if (d) {
+						candidate.d = d;
+					}
+					if (h) {
+						candidate.h = h;
+					}
+					if (!h && !d && !w) {
+						candidate.d = 1;
+					}
+					if (candidate.d === 1) {
+						set.has1x = true;
+					}
+					candidate.set = set;
+	
+					candidates.push(candidate);
+				}
+			} // (close parseDescriptors fn)
+	
+			/**
+	  * Tokenizes descriptor properties prior to parsing
+	  * Returns undefined.
+	  * (Again, this fn is defined before it is used, in order to pass JSHINT.
+	  * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
+	  */
+			function tokenize() {
+	
+				// 8.1. Descriptor tokeniser: Skip whitespace
+				collectCharacters(regexLeadingSpaces);
+	
+				// 8.2. Let current descriptor be the empty string.
+				currentDescriptor = "";
+	
+				// 8.3. Let state be in descriptor.
+				state = "in descriptor";
+	
+				while (true) {
+	
+					// 8.4. Let c be the character at position.
+					c = input.charAt(pos);
+	
+					//  Do the following depending on the value of state.
+					//  For the purpose of this step, "EOF" is a special character representing
+					//  that position is past the end of input.
+	
+					// In descriptor
+					if (state === "in descriptor") {
+						// Do the following, depending on the value of c:
+	
+						// Space character
+						// If current descriptor is not empty, append current descriptor to
+						// descriptors and let current descriptor be the empty string.
+						// Set state to after descriptor.
+						if (isSpace(c)) {
+							if (currentDescriptor) {
+								descriptors.push(currentDescriptor);
+								currentDescriptor = "";
+								state = "after descriptor";
+							}
+	
+							// U+002C COMMA (,)
+							// Advance position to the next character in input. If current descriptor
+							// is not empty, append current descriptor to descriptors. Jump to the step
+							// labeled descriptor parser.
+						} else if (c === ",") {
+								pos += 1;
+								if (currentDescriptor) {
+									descriptors.push(currentDescriptor);
+								}
+								parseDescriptors();
+								return;
+	
+								// U+0028 LEFT PARENTHESIS (()
+								// Append c to current descriptor. Set state to in parens.
+							} else if (c === "(") {
+									currentDescriptor = currentDescriptor + c;
+									state = "in parens";
+	
+									// EOF
+									// If current descriptor is not empty, append current descriptor to
+									// descriptors. Jump to the step labeled descriptor parser.
+								} else if (c === "") {
+										if (currentDescriptor) {
+											descriptors.push(currentDescriptor);
+										}
+										parseDescriptors();
+										return;
+	
+										// Anything else
+										// Append c to current descriptor.
+									} else {
+											currentDescriptor = currentDescriptor + c;
+										}
+						// (end "in descriptor"
+	
+						// In parens
+					} else if (state === "in parens") {
+	
+							// U+0029 RIGHT PARENTHESIS ())
+							// Append c to current descriptor. Set state to in descriptor.
+							if (c === ")") {
+								currentDescriptor = currentDescriptor + c;
+								state = "in descriptor";
+	
+								// EOF
+								// Append current descriptor to descriptors. Jump to the step labeled
+								// descriptor parser.
+							} else if (c === "") {
+									descriptors.push(currentDescriptor);
+									parseDescriptors();
+									return;
+	
+									// Anything else
+									// Append c to current descriptor.
+								} else {
+										currentDescriptor = currentDescriptor + c;
+									}
+	
+							// After descriptor
+						} else if (state === "after descriptor") {
+	
+								// Do the following, depending on the value of c:
+								// Space character: Stay in this state.
+								if (isSpace(c)) {
+	
+									// EOF: Jump to the step labeled descriptor parser.
+								} else if (c === "") {
+										parseDescriptors();
+										return;
+	
+										// Anything else
+										// Set state to in descriptor. Set position to the previous character in input.
+									} else {
+											state = "in descriptor";
+											pos -= 1;
+										}
+							}
+	
+					// Advance position to the next character in input.
+					pos += 1;
+	
+					// Repeat this step.
+				} // (close while true loop)
+			}
+	
+			// 4. Splitting loop: Collect a sequence of characters that are space
+			//    characters or U+002C COMMA characters. If any U+002C COMMA characters
+			//    were collected, that is a parse error.
+			while (true) {
+				collectCharacters(regexLeadingCommasOrSpaces);
+	
+				// 5. If position is past the end of input, return candidates and abort these steps.
+				if (pos >= inputLength) {
+					return candidates; // (we're done, this is the sole return path)
+				}
+	
+				// 6. Collect a sequence of characters that are not space characters,
+				//    and let that be url.
+				url = collectCharacters(regexLeadingNotSpaces);
+	
+				// 7. Let descriptors be a new empty list.
+				descriptors = [];
+	
+				// 8. If url ends with a U+002C COMMA character (,), follow these substeps:
+				//		(1). Remove all trailing U+002C COMMA characters from url. If this removed
+				//         more than one character, that is a parse error.
+				if (url.slice(-1) === ",") {
+					url = url.replace(regexTrailingCommas, "");
+					// (Jump ahead to step 9 to skip tokenization and just push the candidate).
+					parseDescriptors();
+	
+					//	Otherwise, follow these substeps:
+				} else {
+						tokenize();
+					} // (close else of step 8)
+	
+				// 16. Return to the step labeled splitting loop.
+			} // (Close of big while loop.)
+		}
+	
+		/*
+	  * Sizes Parser
+	  *
+	  * By Alex Bell |  MIT License
+	  *
+	  * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
+	  *
+	  * Reference algorithm at:
+	  * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
+	  *
+	  * Most comments are copied in directly from the spec
+	  * (except for comments in parens).
+	  *
+	  * Grammar is:
+	  * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
+	  * <source-size> = <media-condition> <source-size-value>
+	  * <source-size-value> = <length>
+	  * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
+	  *
+	  * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
+	  * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
+	  *
+	  * Returns the first valid <css-length> with a media condition that evaluates to true,
+	  * or "100vw" if all valid media conditions evaluate to false.
+	  *
+	  */
+	
+		function parseSizes(strValue) {
+	
+			// (Percentage CSS lengths are not allowed in this case, to avoid confusion:
+			// https://html.spec.whatwg.org/multipage/embedded-content.html#valid-source-size-list
+			// CSS allows a single optional plus or minus sign:
+			// http://www.w3.org/TR/CSS2/syndata.html#numbers
+			// CSS is ASCII case-insensitive:
+			// http://www.w3.org/TR/CSS2/syndata.html#characters )
+			// Spec allows exponential notation for <number> type:
+			// http://dev.w3.org/csswg/css-values/#numbers
+			var regexCssLengthWithUnits = /^(?:[+-]?[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?(?:ch|cm|em|ex|in|mm|pc|pt|px|rem|vh|vmin|vmax|vw)$/i;
+	
+			// (This is a quick and lenient test. Because of optional unlimited-depth internal
+			// grouping parens and strict spacing rules, this could get very complicated.)
+			var regexCssCalc = /^calc\((?:[0-9a-z \.\+\-\*\/\(\)]+)\)$/i;
+	
+			var i;
+			var unparsedSizesList;
+			var unparsedSizesListLength;
+			var unparsedSize;
+			var lastComponentValue;
+			var size;
+	
+			// UTILITY FUNCTIONS
+	
+			//  (Toy CSS parser. The goals here are:
+			//  1) expansive test coverage without the weight of a full CSS parser.
+			//  2) Avoiding regex wherever convenient.
+			//  Quick tests: http://jsfiddle.net/gtntL4gr/3/
+			//  Returns an array of arrays.)
+			function parseComponentValues(str) {
+				var chrctr;
+				var component = "";
+				var componentArray = [];
+				var listArray = [];
+				var parenDepth = 0;
+				var pos = 0;
+				var inComment = false;
+	
+				function pushComponent() {
+					if (component) {
+						componentArray.push(component);
+						component = "";
+					}
+				}
+	
+				function pushComponentArray() {
+					if (componentArray[0]) {
+						listArray.push(componentArray);
+						componentArray = [];
+					}
+				}
+	
+				// (Loop forwards from the beginning of the string.)
+				while (true) {
+					chrctr = str.charAt(pos);
+	
+					if (chrctr === "") {
+						// ( End of string reached.)
+						pushComponent();
+						pushComponentArray();
+						return listArray;
+					} else if (inComment) {
+						if (chrctr === "*" && str[pos + 1] === "/") {
+							// (At end of a comment.)
+							inComment = false;
+							pos += 2;
+							pushComponent();
+							continue;
+						} else {
+							pos += 1; // (Skip all characters inside comments.)
+							continue;
+						}
+					} else if (isSpace(chrctr)) {
+						// (If previous character in loop was also a space, or if
+						// at the beginning of the string, do not add space char to
+						// component.)
+						if (str.charAt(pos - 1) && isSpace(str.charAt(pos - 1)) || !component) {
+							pos += 1;
+							continue;
+						} else if (parenDepth === 0) {
+							pushComponent();
+							pos += 1;
+							continue;
+						} else {
+							// (Replace any space character with a plain space for legibility.)
+							chrctr = " ";
+						}
+					} else if (chrctr === "(") {
+						parenDepth += 1;
+					} else if (chrctr === ")") {
+						parenDepth -= 1;
+					} else if (chrctr === ",") {
+						pushComponent();
+						pushComponentArray();
+						pos += 1;
+						continue;
+					} else if (chrctr === "/" && str.charAt(pos + 1) === "*") {
+						inComment = true;
+						pos += 2;
+						continue;
+					}
+	
+					component = component + chrctr;
+					pos += 1;
+				}
+			}
+	
+			function isValidNonNegativeSourceSizeValue(s) {
+				if (regexCssLengthWithUnits.test(s) && parseFloat(s) >= 0) {
+					return true;
+				}
+				if (regexCssCalc.test(s)) {
+					return true;
+				}
+				// ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
+				// "-0 is equivalent to 0 and is not a negative number." which means that
+				// unitless zero and unitless negative zero must be accepted as special cases.)
+				if (s === "0" || s === "-0" || s === "+0") {
+					return true;
+				}
+				return false;
+			}
+	
+			// When asked to parse a sizes attribute from an element, parse a
+			// comma-separated list of component values from the value of the element's
+			// sizes attribute (or the empty string, if the attribute is absent), and let
+			// unparsed sizes list be the result.
+			// http://dev.w3.org/csswg/css-syntax/#parse-comma-separated-list-of-component-values
+	
+			unparsedSizesList = parseComponentValues(strValue);
+			unparsedSizesListLength = unparsedSizesList.length;
+	
+			// For each unparsed size in unparsed sizes list:
+			for (i = 0; i < unparsedSizesListLength; i++) {
+				unparsedSize = unparsedSizesList[i];
+	
+				// 1. Remove all consecutive <whitespace-token>s from the end of unparsed size.
+				// ( parseComponentValues() already omits spaces outside of parens. )
+	
+				// If unparsed size is now empty, that is a parse error; continue to the next
+				// iteration of this algorithm.
+				// ( parseComponentValues() won't push an empty array. )
+	
+				// 2. If the last component value in unparsed size is a valid non-negative
+				// <source-size-value>, let size be its value and remove the component value
+				// from unparsed size. Any CSS function other than the calc() function is
+				// invalid. Otherwise, there is a parse error; continue to the next iteration
+				// of this algorithm.
+				// http://dev.w3.org/csswg/css-syntax/#parse-component-value
+				lastComponentValue = unparsedSize[unparsedSize.length - 1];
+	
+				if (isValidNonNegativeSourceSizeValue(lastComponentValue)) {
+					size = lastComponentValue;
+					unparsedSize.pop();
+				} else {
+					continue;
+				}
+	
+				// 3. Remove all consecutive <whitespace-token>s from the end of unparsed
+				// size. If unparsed size is now empty, return size and exit this algorithm.
+				// If this was not the last item in unparsed sizes list, that is a parse error.
+				if (unparsedSize.length === 0) {
+					return size;
+				}
+	
+				// 4. Parse the remaining component values in unparsed size as a
+				// <media-condition>. If it does not parse correctly, or it does parse
+				// correctly but the <media-condition> evaluates to false, continue to the
+				// next iteration of this algorithm.
+				// (Parsing all possible compound media conditions in JS is heavy, complicated,
+				// and the payoff is unclear. Is there ever an situation where the
+				// media condition parses incorrectly but still somehow evaluates to true?
+				// Can we just rely on the browser/polyfill to do it?)
+				unparsedSize = unparsedSize.join(" ");
+				if (!pf.matchesMedia(unparsedSize)) {
+					continue;
+				}
+	
+				// 5. Return size and exit this algorithm.
+				return size;
+			}
+	
+			// If the above algorithm exhausts unparsed sizes list without returning a
+			// size value, return 100vw.
+			return "100vw";
+		}
+	
+		// namespace
+		pf.ns = ("pf" + new Date().getTime()).substr(0, 9);
+	
+		// srcset support test
+		pf.supSrcset = "srcset" in image;
+		pf.supSizes = "sizes" in image;
+		pf.supPicture = !!window.HTMLPictureElement;
+	
+		if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
+			(function (image2) {
+				image.srcset = "data:,a";
+				image2.src = "data:,a";
+				pf.supSrcset = image.complete === image2.complete;
+				pf.supPicture = pf.supSrcset && pf.supPicture;
+			})(document.createElement("img"));
+		}
+	
+		// using pf.qsa instead of dom traversing does scale much better,
+		// especially on sites mixing responsive and non-responsive images
+		pf.selShort = "picture>img,img[srcset]";
+		pf.sel = pf.selShort;
+		pf.cfg = cfg;
+	
+		if (pf.supSrcset) {
+			pf.sel += ",img[" + srcsetAttr + "]";
+		}
+	
+		/**
+	  * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
+	  */
+		pf.DPR = DPR || 1;
+		pf.u = units;
+	
+		// container of supported mime types that one might need to qualify before using
+		pf.types = types;
+	
+		alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
+	
+		pf.setSize = noop;
+	
+		/**
+	  * Gets a string and returns the absolute URL
+	  * @param src
+	  * @returns {String} absolute URL
+	  */
+	
+		pf.makeUrl = memoize(function (src) {
+			anchor.href = src;
+			return anchor.href;
+		});
+	
+		/**
+	  * Gets a DOM element or document and a selctor and returns the found matches
+	  * Can be extended with jQuery/Sizzle for IE7 support
+	  * @param context
+	  * @param sel
+	  * @returns {NodeList}
+	  */
+		pf.qsa = function (context, sel) {
+			return context.querySelectorAll(sel);
+		};
+	
+		/**
+	  * Shortcut method for matchMedia ( for easy overriding in tests )
+	  * wether native or pf.mMQ is used will be decided lazy on first call
+	  * @returns {boolean}
+	  */
+		pf.matchesMedia = function () {
+			if (window.matchMedia && (matchMedia("(min-width: 0.1em)") || {}).matches) {
+				pf.matchesMedia = function (media) {
+					return !media || matchMedia(media).matches;
+				};
+			} else {
+				pf.matchesMedia = pf.mMQ;
+			}
+	
+			return pf.matchesMedia.apply(this, arguments);
+		};
+	
+		/**
+	  * A simplified matchMedia implementation for IE8 and IE9
+	  * handles only min-width/max-width with px or em values
+	  * @param media
+	  * @returns {boolean}
+	  */
+		pf.mMQ = function (media) {
+			return media ? evalCSS(media) : true;
+		};
+	
+		/**
+	  * Returns the calculated length in css pixel from the given sourceSizeValue
+	  * http://dev.w3.org/csswg/css-values-3/#length-value
+	  * intended Spec mismatches:
+	  * * Does not check for invalid use of CSS functions
+	  * * Does handle a computed length of 0 the same as a negative and therefore invalid value
+	  * @param sourceSizeValue
+	  * @returns {Number}
+	  */
+		pf.calcLength = function (sourceSizeValue) {
+	
+			var value = evalCSS(sourceSizeValue, true) || false;
+			if (value < 0) {
+				value = false;
+			}
+	
+			return value;
+		};
+	
+		/**
+	  * Takes a type string and checks if its supported
+	  */
+	
+		pf.supportsType = function (type) {
+			return type ? types[type] : true;
+		};
+	
+		/**
+	  * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
+	  * @param sourceSizeStr
+	  * @returns {*}
+	  */
+		pf.parseSize = memoize(function (sourceSizeStr) {
+			var match = (sourceSizeStr || "").match(regSize);
+			return {
+				media: match && match[1],
+				length: match && match[2]
+			};
+		});
+	
+		pf.parseSet = function (set) {
+			if (!set.cands) {
+				set.cands = parseSrcset(set.srcset, set);
+			}
+			return set.cands;
+		};
+	
+		/**
+	  * returns 1em in css px for html/body default size
+	  * function taken from respondjs
+	  * @returns {*|number}
+	  */
+		pf.getEmValue = function () {
+			var body;
+			if (!eminpx && (body = document.body)) {
+				var div = document.createElement("div"),
+				    originalHTMLCSS = docElem.style.cssText,
+				    originalBodyCSS = body.style.cssText;
+	
+				div.style.cssText = baseStyle;
+	
+				// 1em in a media query is the value of the default font size of the browser
+				// reset docElem and body to ensure the correct value is returned
+				docElem.style.cssText = fsCss;
+				body.style.cssText = fsCss;
+	
+				body.appendChild(div);
+				eminpx = div.offsetWidth;
+				body.removeChild(div);
+	
+				//also update eminpx before returning
+				eminpx = parseFloat(eminpx, 10);
+	
+				// restore the original values
+				docElem.style.cssText = originalHTMLCSS;
+				body.style.cssText = originalBodyCSS;
+			}
+			return eminpx || 16;
+		};
+	
+		/**
+	  * Takes a string of sizes and returns the width in pixels as a number
+	  */
+		pf.calcListLength = function (sourceSizeListStr) {
+			// Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
+			//
+			//                           or (min-width:30em) calc(30% - 15px)
+			if (!(sourceSizeListStr in sizeLengthCache) || cfg.uT) {
+				var winningLength = pf.calcLength(parseSizes(sourceSizeListStr));
+	
+				sizeLengthCache[sourceSizeListStr] = !winningLength ? units.width : winningLength;
+			}
+	
+			return sizeLengthCache[sourceSizeListStr];
+		};
+	
+		/**
+	  * Takes a candidate object with a srcset property in the form of url/
+	  * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
+	  *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
+	  *     "images/pic-small.png"
+	  * Get an array of image candidates in the form of
+	  *      {url: "/foo/bar.png", resolution: 1}
+	  * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
+	  * If sizes is specified, res is calculated
+	  */
+		pf.setRes = function (set) {
+			var candidates;
+			if (set) {
+	
+				candidates = pf.parseSet(set);
+	
+				for (var i = 0, len = candidates.length; i < len; i++) {
+					setResolution(candidates[i], set.sizes);
+				}
+			}
+			return candidates;
+		};
+	
+		pf.setRes.res = setResolution;
+	
+		pf.applySetCandidate = function (candidates, img) {
+			if (!candidates.length) {
+				return;
+			}
+			var candidate, i, j, length, bestCandidate, curSrc, curCan, candidateSrc, abortCurSrc;
+	
+			var imageData = img[pf.ns];
+			var dpr = pf.DPR;
+	
+			curSrc = imageData.curSrc || img[curSrcProp];
+	
+			curCan = imageData.curCan || setSrcToCur(img, curSrc, candidates[0].set);
+	
+			// if we have a current source, we might either become lazy or give this source some advantage
+			if (curCan && curCan.set === candidates[0].set) {
+	
+				// if browser can abort image request and the image has a higher pixel density than needed
+				// and this image isn't downloaded yet, we skip next part and try to save bandwidth
+				abortCurSrc = supportAbort && !img.complete && curCan.res - 0.1 > dpr;
+	
+				if (!abortCurSrc) {
+					curCan.cached = true;
+	
+					// if current candidate is "best", "better" or "okay",
+					// set it to bestCandidate
+					if (curCan.res >= dpr) {
+						bestCandidate = curCan;
+					}
+				}
+			}
+	
+			if (!bestCandidate) {
+	
+				candidates.sort(ascendingSort);
+	
+				length = candidates.length;
+				bestCandidate = candidates[length - 1];
+	
+				for (i = 0; i < length; i++) {
+					candidate = candidates[i];
+					if (candidate.res >= dpr) {
+						j = i - 1;
+	
+						// we have found the perfect candidate,
+						// but let's improve this a little bit with some assumptions ;-)
+						if (candidates[j] && (abortCurSrc || curSrc !== pf.makeUrl(candidate.url)) && chooseLowRes(candidates[j].res, candidate.res, dpr, candidates[j].cached)) {
+	
+							bestCandidate = candidates[j];
+						} else {
+							bestCandidate = candidate;
+						}
+						break;
+					}
+				}
+			}
+	
+			if (bestCandidate) {
+	
+				candidateSrc = pf.makeUrl(bestCandidate.url);
+	
+				imageData.curSrc = candidateSrc;
+				imageData.curCan = bestCandidate;
+	
+				if (candidateSrc !== curSrc) {
+					pf.setSrc(img, bestCandidate);
+				}
+				pf.setSize(img);
+			}
+		};
+	
+		pf.setSrc = function (img, bestCandidate) {
+			var origWidth;
+			img.src = bestCandidate.url;
+	
+			// although this is a specific Safari issue, we don't want to take too much different code paths
+			if (bestCandidate.set.type === "image/svg+xml") {
+				origWidth = img.style.width;
+				img.style.width = img.offsetWidth + 1 + "px";
+	
+				// next line only should trigger a repaint
+				// if... is only done to trick dead code removal
+				if (img.offsetWidth + 1) {
+					img.style.width = origWidth;
+				}
+			}
+		};
+	
+		pf.getSet = function (img) {
+			var i, set, supportsType;
+			var match = false;
+			var sets = img[pf.ns].sets;
+	
+			for (i = 0; i < sets.length && !match; i++) {
+				set = sets[i];
+	
+				if (!set.srcset || !pf.matchesMedia(set.media) || !(supportsType = pf.supportsType(set.type))) {
+					continue;
+				}
+	
+				if (supportsType === "pending") {
+					set = supportsType;
+				}
+	
+				match = set;
+				break;
+			}
+	
+			return match;
+		};
+	
+		pf.parseSets = function (element, parent, options) {
+			var srcsetAttribute, imageSet, isWDescripor, srcsetParsed;
+	
+			var hasPicture = parent && parent.nodeName.toUpperCase() === "PICTURE";
+			var imageData = element[pf.ns];
+	
+			if (imageData.src === undefined || options.src) {
+				imageData.src = getImgAttr.call(element, "src");
+				if (imageData.src) {
+					setImgAttr.call(element, srcAttr, imageData.src);
+				} else {
+					removeImgAttr.call(element, srcAttr);
+				}
+			}
+	
+			if (imageData.srcset === undefined || options.srcset || !pf.supSrcset || element.srcset) {
+				srcsetAttribute = getImgAttr.call(element, "srcset");
+				imageData.srcset = srcsetAttribute;
+				srcsetParsed = true;
+			}
+	
+			imageData.sets = [];
+	
+			if (hasPicture) {
+				imageData.pic = true;
+				getAllSourceElements(parent, imageData.sets);
+			}
+	
+			if (imageData.srcset) {
+				imageSet = {
+					srcset: imageData.srcset,
+					sizes: getImgAttr.call(element, "sizes")
+				};
+	
+				imageData.sets.push(imageSet);
+	
+				isWDescripor = (alwaysCheckWDescriptor || imageData.src) && regWDesc.test(imageData.srcset || "");
+	
+				// add normal src as candidate, if source has no w descriptor
+				if (!isWDescripor && imageData.src && !getCandidateForSrc(imageData.src, imageSet) && !imageSet.has1x) {
+					imageSet.srcset += ", " + imageData.src;
+					imageSet.cands.push({
+						url: imageData.src,
+						d: 1,
+						set: imageSet
+					});
+				}
+			} else if (imageData.src) {
+				imageData.sets.push({
+					srcset: imageData.src,
+					sizes: null
+				});
+			}
+	
+			imageData.curCan = null;
+			imageData.curSrc = undefined;
+	
+			// if img has picture or the srcset was removed or has a srcset and does not support srcset at all
+			// or has a w descriptor (and does not support sizes) set support to false to evaluate
+			imageData.supported = !(hasPicture || imageSet && !pf.supSrcset || isWDescripor);
+	
+			if (srcsetParsed && pf.supSrcset && !imageData.supported) {
+				if (srcsetAttribute) {
+					setImgAttr.call(element, srcsetAttr, srcsetAttribute);
+					element.srcset = "";
+				} else {
+					removeImgAttr.call(element, srcsetAttr);
+				}
+			}
+	
+			if (imageData.supported && !imageData.srcset && (!imageData.src && element.src || element.src !== pf.makeUrl(imageData.src))) {
+				if (imageData.src === null) {
+					element.removeAttribute("src");
+				} else {
+					element.src = imageData.src;
+				}
+			}
+	
+			imageData.parsed = true;
+		};
+	
+		pf.fillImg = function (element, options) {
+			var imageData;
+			var extreme = options.reselect || options.reevaluate;
+	
+			// expando for caching data on the img
+			if (!element[pf.ns]) {
+				element[pf.ns] = {};
+			}
+	
+			imageData = element[pf.ns];
+	
+			// if the element has already been evaluated, skip it
+			// unless `options.reevaluate` is set to true ( this, for example,
+			// is set to true when running `picturefill` on `resize` ).
+			if (!extreme && imageData.evaled === evalId) {
+				return;
+			}
+	
+			if (!imageData.parsed || options.reevaluate) {
+				pf.parseSets(element, element.parentNode, options);
+			}
+	
+			if (!imageData.supported) {
+				applyBestCandidate(element);
+			} else {
+				imageData.evaled = evalId;
+			}
+		};
+	
+		pf.setupRun = function () {
+			if (!alreadyRun || isVwDirty || DPR !== window.devicePixelRatio) {
+				updateMetrics();
+			}
+		};
+	
+		// If picture is supported, well, that's awesome.
+		if (pf.supPicture) {
+			picturefill = noop;
+			pf.fillImg = noop;
+		} else {
+	
+			// Set up picture polyfill by polling the document
+			(function () {
+				var isDomReady;
+				var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
+	
+				var run = function run() {
+					var readyState = document.readyState || "";
+	
+					timerId = setTimeout(run, readyState === "loading" ? 200 : 999);
+					if (document.body) {
+						pf.fillImgs();
+						isDomReady = isDomReady || regReady.test(readyState);
+						if (isDomReady) {
+							clearTimeout(timerId);
+						}
+					}
+				};
+	
+				var timerId = setTimeout(run, document.body ? 9 : 99);
+	
+				// Also attach picturefill on resize and readystatechange
+				// http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
+				var debounce = function debounce(func, wait) {
+					var timeout, timestamp;
+					var later = function later() {
+						var last = new Date() - timestamp;
+	
+						if (last < wait) {
+							timeout = setTimeout(later, wait - last);
+						} else {
+							timeout = null;
+							func();
+						}
+					};
+	
+					return function () {
+						timestamp = new Date();
+	
+						if (!timeout) {
+							timeout = setTimeout(later, wait);
+						}
+					};
+				};
+				var lastClientWidth = docElem.clientHeight;
+				var onResize = function onResize() {
+					isVwDirty = Math.max(window.innerWidth || 0, docElem.clientWidth) !== units.width || docElem.clientHeight !== lastClientWidth;
+					lastClientWidth = docElem.clientHeight;
+					if (isVwDirty) {
+						pf.fillImgs();
+					}
+				};
+	
+				on(window, "resize", debounce(onResize, 99));
+				on(document, "readystatechange", run);
+			})();
+		}
+	
+		pf.picturefill = picturefill;
+		//use this internally for easy monkey patching/performance testing
+		pf.fillImgs = picturefill;
+		pf.teardownRun = noop;
+	
+		/* expose methods for testing */
+		picturefill._ = pf;
+	
+		window.picturefillCFG = {
+			pf: pf,
+			push: function push(args) {
+				var name = args.shift();
+				if (typeof pf[name] === "function") {
+					pf[name].apply(pf, args);
+				} else {
+					cfg[name] = args[0];
+					if (alreadyRun) {
+						pf.fillImgs({ reselect: true });
+					}
+				}
+			}
+		};
+	
+		while (setOptions && setOptions.length) {
+			window.picturefillCFG.push(setOptions.shift());
+		}
+	
+		/* expose picturefill */
+		window.picturefill = picturefill;
+	
+		/* expose picturefill */
+		if (( false ? "undefined" : _typeof(module)) === "object" && _typeof(module.exports) === "object") {
+			// CommonJS, just export
+			module.exports = picturefill;
+		} else if (true) {
+			// AMD support
+			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return picturefill;
+			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		}
+	
+		// IE8 evals this sync, so it must be the last thing we do
+		if (!pf.supPicture) {
+			types["image/webp"] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");
+		}
+	})(window, document);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	module.exports = function (module) {
+		if (!module.webpackPolyfill) {
+			module.deprecate = function () {};
+			module.paths = [];
+			// module.parent = undefined by default
+			module.children = [];
+			module.webpackPolyfill = 1;
+		}
+		return module;
+	};
+
+/***/ },
+/* 7 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -827,16 +2783,16 @@
 	};
 
 /***/ },
-/* 4 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
-	!(function (c) {
+	!function (c) {
 	  function s(l) {
 	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
 	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
-	})([function (c, s, v) {
+	}([function (c, s, v) {
 	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
 	      t = {};l.forEach(function (c) {
 	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
@@ -849,9 +2805,9 @@
 	  function l(c) {
 	    return v(t(c));
 	  }function t(c) {
-	    return h[c] || (function () {
+	    return h[c] || function () {
 	      throw new Error("Cannot find module '" + c + "'.");
-	    })();
+	    }();
 	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./navigation/car.svg": 58, "./navigation/caravan.svg": 59, "./phone.svg": 60, "./pin.svg": 61, "./pinCar.svg": 62, "./pinMoto.svg": 63, "./pinterest.svg": 64, "./search.svg": 65, "./sharing.svg": 66, "./star-half.svg": 67, "./star.svg": 68, "./t-online.svg": 69, "./tip.svg": 70, "./twitter.svg": 71, "./whatsapp.svg": 72, "./youtube.svg": 73 };l.keys = function () {
 	    return Object.keys(h);
 	  }, l.resolve = t, c.exports = l, l.id = 1;
@@ -1003,22 +2959,22 @@
 	//# sourceMappingURL=showcar-icons.min.js.map
 
 /***/ },
-/* 5 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var stores = {
-	    local: __webpack_require__(6),
-	    session: __webpack_require__(7),
-	    cookie: __webpack_require__(8)
+	    local: __webpack_require__(10),
+	    session: __webpack_require__(11),
+	    cookie: __webpack_require__(12)
 	};
 	
-	var Storage = (function () {
+	var Storage = function () {
 	    /**
 	     * @constructor
 	     * @param {string} type The store backend to use
@@ -1143,21 +3099,21 @@
 	    }]);
 	
 	    return Storage;
-	})();
+	}();
 	
 	module.exports = Storage;
 
 /***/ },
-/* 6 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = (function () {
+	module.exports = function () {
 	    function LocalStore() {
 	        _classCallCheck(this, LocalStore);
 	    }
@@ -1185,19 +3141,19 @@
 	    }]);
 	
 	    return LocalStore;
-	})();
+	}();
 
 /***/ },
-/* 7 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = (function () {
+	module.exports = function () {
 	    function SessionStore() {
 	        _classCallCheck(this, SessionStore);
 	    }
@@ -1225,19 +3181,19 @@
 	    }]);
 	
 	    return SessionStore;
-	})();
+	}();
 
 /***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = (function () {
+	module.exports = function () {
 	    function CookieStore() {
 	        _classCallCheck(this, CookieStore);
 	    }
@@ -1299,10 +3255,10 @@
 	    }]);
 	
 	    return CookieStore;
-	})();
+	}();
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1317,7 +3273,7 @@
 	};
 
 /***/ },
-/* 10 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1387,11 +3343,11 @@
 	    // when the first of this element gets attached
 	    document.addEventListener('touchstart', closeAllDropdowns);
 	    document.addEventListener('mousedown', closeAllDropdowns);
-	    attachEventListeners = function () {}; // so that we only attach at most once
+	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
 	}
 
 /***/ },
-/* 11 */
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1457,7 +3413,7 @@
 	};
 
 /***/ },
-/* 12 */
+/* 16 */
 /***/ function(module, exports) {
 
 	"use strict";
