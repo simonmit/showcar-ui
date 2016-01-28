@@ -1,86 +1,130 @@
-module.exports = function () {
 
-    var toggleMenu = function(menuItem, navigationNode)  {
-        var openElement;
+class Navigation {
 
-        var titleElm = menuItem.querySelector('span.title');
-        if(titleElm) {
-            openElement = navigationNode.querySelector('.open');
-            if(openElement) {
-                openElement.classList.remove('open');
-            }
+    constructor(root) {
+        this.rootElement = root;
+        this.menuBtn     = this.rootElement.querySelector('.sc-btn-mobile-menu');
 
-            if(menuItem !== openElement) {
-                menuItem.classList.add('open');
-            }
-        }
-    };
-
-    var showMenu = function(e, navigationNode) {
-        var elm = e.elm;
-        var openElement;
-        var selectedLink;
-
-        if (elm && elm.nodeName.toLowerCase() === 'span') {
-            if(elm.classList.contains('title')) {
-                openElement = navigationNode.querySelector('.open');
-                if(openElement) {
-                    selectedLink = openElement.querySelector('span.title');
-                }
-
-                if(elm !== selectedLink) {
-                    elm.parentNode.classList.add('open');
-                }
-                e.stopPropagation();
-            }
-        }
-    };
-
-    var getPageName = function() {
-        if(dataLayer) {
-            for(var i=0;dataLayer.length;i++) {
-                if(dataLayer[i].common_pageName) {
-                    return dataLayer[i].common_pageName;
-                }
-            }
-            return '';
-        }
-    };
-
-    Array.prototype.forEach.call(document.querySelectorAll('.sc-navigation'), function (node) {
-        if (node) {
-            setupNavigation(node);
-        }
-    });
-
-    function setupNavigation(node) {
-        node.querySelector('.sc-btn-mobile-menu').addEventListener('click', function () {
-            node.classList.toggle('open');
-        });
-
-        node.addEventListener('click', function (e) {
-            var elm = e.elm || e.srcElement;
-
-            if (elm.nodeName.toLowerCase() === 'li') {
-                toggleMenu(elm, node);
-                e.stopPropagation();
-            } else if (elm.nodeName.toLowerCase() === 'span' || elm.classList.contains('title')) {
-                toggleMenu(elm.parentNode, node);
-                e.stopPropagation();
-            }
-        });
-
-        node.addEventListener('keydown', function(e) {
-            if (e.keyCode == 13) toggleMenu(e, node); //enter key
-            if (e.keyCode == 9) showMenu(e, node); //tab key
-        });
-
-        document.body.addEventListener('click', function(e) {
-            var openElement = node.querySelector('.open');
-            if(openElement) {
-                openElement.classList.remove('open');
-            }
-        });
+        this.initEvents();
     }
 
-};
+    initEvents() {
+        this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
+        this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
+        document.body.addEventListener('keyup', this.onKeyUp.bind(this));
+    }
+
+    toggleMenuItem(element) {
+        element.classList.toggle('open');
+    }
+
+    clickMenuItem(event) {
+        let open           = this.rootElement.querySelector('.open'),
+            activeMenuItem = this.rootElement.querySelector('li.open li.active-item'),
+            element        = event.target || event.srcElement;
+
+        if (element.classList.contains('title') || 'span' === element.nodeName.toLowerCase()) {
+            element = element.parentNode;
+        }
+
+        if (activeMenuItem) {
+            this.toggleActiveMenuItem(activeMenuItem);
+        }
+
+        if (open) {
+            this.toggleMenuItem(open);
+        }
+        if ('li' === element.nodeName.toLowerCase() && open !== element) {
+            this.toggleMenuItem(element);
+        }
+
+        event.stopPropagation();
+    }
+
+    toggleMenu() {
+        this.rootElement.classList.toggle('open');
+    }
+
+    onKeyUp(event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        let keyCode = event.which,
+            activeMenuItem = this.rootElement.querySelector('li.open li.active-item');
+
+        switch(keyCode) {
+            case 9: // tab
+                this.handleKeyTab(activeMenuItem);
+                break;
+            case 38: // top
+                this.handleKeyTop(activeMenuItem);
+                break;
+            case 40: // bottom
+                this.handleKeyBottom(event, activeMenuItem);
+                break;
+            case 37: // left
+
+                break;
+            case 39: // right
+                document.activeElement = event.srcElement.parentNode.nextElementSibling;
+                this.handleKeyRight();
+                break;
+        }
+    }
+
+    toggleActiveMenuItem(element) {
+        element.classList.toggle('active-item');
+    }
+
+    handleKeyTab(activeMenuItem) {
+        if (activeMenuItem) { // close previous menu
+            this.toggleActiveMenuItem(activeMenuItem);
+            this.toggleMenuItem(this.rootElement.querySelector('li.open'));
+        }
+    }
+
+    handleKeyTop(activeMenuItem) {
+        if (activeMenuItem) {
+            let previousMenuItem = activeMenuItem.previousElementSibling;
+            if (previousMenuItem) {
+                this.toggleActiveMenuItem(activeMenuItem);
+                this.toggleActiveMenuItem(previousMenuItem);
+            } else {
+                this.toggleActiveMenuItem(activeMenuItem);
+                this.toggleMenuItem(this.rootElement.querySelector('li.open'));
+            }
+        }
+    }
+
+    handleKeyBottom(event, activeMenuItem) {
+        let element = event.target || event.srcElement;
+
+        if (!activeMenuItem) {
+            this.clickMenuItem(event);
+            this.toggleActiveMenuItem(element.nextElementSibling.querySelector('ul > li'));
+        } else {
+            let nextMenuItem = activeMenuItem.nextElementSibling;
+            if (nextMenuItem) {
+                this.toggleActiveMenuItem(activeMenuItem);
+                this.toggleActiveMenuItem(nextMenuItem);
+            }
+        }
+    }
+
+    handleKeyLeft() {
+
+    }
+
+    handleKeyRight() {
+
+    }
+
+}
+
+let navigationElement = document.querySelector('.sc-navigation'),
+    navigation        = null;
+if (navigationElement) {
+    navigation = new Navigation(navigationElement);
+}
+
+module.exports = navigation;

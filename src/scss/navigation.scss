@@ -266,7 +266,7 @@
                     display: inline-block;
                     padding: 24px 48px 24px 24px;
 
-                    a:hover, a:active, a:focus {
+                    a:hover, a:active, a:focus, li.active-item > a {
                         color: $orange-100;
                     }
                 }
