@@ -1,4 +1,3 @@
-
 class Navigation {
 
     constructor(root) {
@@ -11,6 +10,7 @@ class Navigation {
     initEvents() {
         this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
         this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
+        document.addEventListener('keydown', this.onKeyDown.bind(this));
         document.body.addEventListener('keyup', this.onKeyUp.bind(this));
     }
 
@@ -23,7 +23,7 @@ class Navigation {
             activeMenuItem = this.rootElement.querySelector('li.open li.active-item'),
             element        = event.target || event.srcElement;
 
-        if (element.classList.contains('title') || 'span' === element.nodeName.toLowerCase()) {
+        if (this.isTablableElementOfNavigation(element)) {
             element = element.parentNode;
         }
 
@@ -45,11 +45,29 @@ class Navigation {
         this.rootElement.classList.toggle('open');
     }
 
-    onKeyUp(event) {
-        event.preventDefault();
-        event.stopImmediatePropagation();
+    isTablableElementOfNavigation(element) {
+        return element.classList.contains('title') || 'span' === element.nodeName.toLowerCase();
+    }
 
-        let keyCode = event.which,
+    /**
+     * Prevent scrolling
+     *
+     *      @param event
+     * @returns {boolean}
+     */
+    onKeyDown(event) {
+        let element = event.target || event.srcElement;
+
+        if ([38, 40].indexOf(event.which) > -1 && this.isTablableElementOfNavigation(element)) {
+            event.preventDefault();
+            return false;
+        }
+
+        return true;
+    }
+
+    onKeyUp(event) {
+        let keyCode        = event.which,
             activeMenuItem = this.rootElement.querySelector('li.open li.active-item');
 
         switch(keyCode) {
@@ -61,13 +79,6 @@ class Navigation {
                 break;
             case 40: // bottom
                 this.handleKeyBottom(event, activeMenuItem);
-                break;
-            case 37: // left
-
-                break;
-            case 39: // right
-                document.activeElement = event.srcElement.parentNode.nextElementSibling;
-                this.handleKeyRight();
                 break;
         }
     }
@@ -99,9 +110,13 @@ class Navigation {
     handleKeyBottom(event, activeMenuItem) {
         let element = event.target || event.srcElement;
 
+        if (!element || !this.isTablableElementOfNavigation(element)) {
+            return false;
+        }
+
         if (!activeMenuItem) {
             this.clickMenuItem(event);
-            this.toggleActiveMenuItem(element.nextElementSibling.querySelector('ul > li'));
+            this.toggleActiveMenuItem(element.nextElementSibling.querySelector('ul:not(.submenu) > li:not(.subheadline)'));
         } else {
             let nextMenuItem = activeMenuItem.nextElementSibling;
             if (nextMenuItem) {
@@ -109,14 +124,6 @@ class Navigation {
                 this.toggleActiveMenuItem(nextMenuItem);
             }
         }
-    }
-
-    handleKeyLeft() {
-
-    }
-
-    handleKeyRight() {
-
     }
 
 }
