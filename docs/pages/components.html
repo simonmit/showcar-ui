@@ -76,6 +76,7 @@
                         <li><a href="components.html#custom-dropdown">Custom Dropdown</a></li>
                         <li><a href="components.html#sticky-element">Sticky Element</a></li>
                         <li><a href="components.html#rotating-arrow">Rotating Arrow</a></li>
+                        <li><a href="components.html#navigation">Navigation</a></li>
                         <li><a href="components.html#pager">Pager</a></li>
                     </ul>
                 </li>
@@ -313,6 +314,160 @@
 -->
     </code></pre>
 
+
+    <a name="navigation"></a>
+    <h3>Navigation</h3>
+
+    <div class="example">
+
+        <div class="sc-navigation">
+            <div class="bar">
+                <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <span class="title" tabindex="1">Menu 1</span>
+                        <ul>
+                            <li><a href="http://google.de/" target="_blank">Menu 1 Link to Google</a></li>
+                            <li><a href="http://microsoft.de/">Menu 1 Link to Microsoft</a></li>
+                            <li><a href="http://apple.com/de">Menu 1 Link to Apple</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="title" tabindex="2">Menu 2</span>
+                        <ul>
+                            <li><a href="#navigation">Menu 2 Link 1</a></li>
+                            <li><a href="#navigation">Menu 2 Link 2</a></li>
+                            <li><a href="#navigation">Menu 2 Link 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="title" tabindex="3">Menu 3</span>
+                        <ul class="submenu">
+                            <li>
+                                <ul>
+                                    <li class="subheadline">Submenu 1</li>
+                                    <li><a href="#navigation">Submenu 1 Link 1</a></li>
+                                    <li><a href="#navigation">Submenu 1 Link 2</a></li>
+                                    <li><a href="#navigation">Submenu 1 Link 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="subheadline">Submenu 2</li>
+                                    <li><a href="#navigation">Submenu 2 Link 1</a></li>
+                                    <li><a href="#navigation">Submenu 2 Link 2</a></li>
+                                    <li><a href="#navigation">Submenu 2 Link 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="subheadline">Submenu 3</li>
+                                    <li><a href="#navigation">Submenu 3 Link 1</a></li>
+                                    <li><a href="#navigation">Submenu 3 Link 2</a></li>
+                                    <li><a href="#navigation">Submenu 3 Link 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <ul class="right">
+                    <li>
+                        <span class="title" tabindex="4">My Menu</span>
+                        <ul>
+                            <li><a href="#navigation">My Menu Link 1</a></li>
+                            <li>
+                                <button class="sc-btn-ross-m sc-btn-block">Login</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-navigation">
+<div class="bar">
+    <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+</div>
+<nav>
+    <ul>
+        <li>
+            <span class="title" tabindex="1">Menu 1</span>
+            <ul>
+                <li><a href="http://google.de/" target="_blank">Menu 1 Link to Google</a></li>
+                <li><a href="http://microsoft.de/">Menu 1 Link to Microsoft</a></li>
+                <li><a href="http://apple.com/de">Menu 1 Link to Apple</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="title" tabindex="2">Menu 2</span>
+            <ul>
+                <li><a href="#navigation">Menu 2 Link 1</a></li>
+                <li><a href="#navigation">Menu 2 Link 2</a></li>
+                <li><a href="#navigation">Menu 2 Link 3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="title" tabindex="3">Menu 3</span>
+            <ul class="submenu">
+                <li>
+                    <ul>
+                        <li class="subheadline">Submenu 1</li>
+                        <li><a href="#navigation">Submenu 1 Link 1</a></li>
+                        <li><a href="#navigation">Submenu 1 Link 2</a></li>
+                        <li><a href="#navigation">Submenu 1 Link 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="subheadline">Submenu 2</li>
+                        <li><a href="#navigation">Submenu 2 Link 1</a></li>
+                        <li><a href="#navigation">Submenu 2 Link 2</a></li>
+                        <li><a href="#navigation">Submenu 2 Link 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="subheadline">Submenu 3</li>
+                        <li><a href="#navigation">Submenu 3 Link 1</a></li>
+                        <li><a href="#navigation">Submenu 3 Link 2</a></li>
+                        <li><a href="#navigation">Submenu 3 Link 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <ul class="right">
+        <li>
+            <span class="title" tabindex="4">My Menu</span>
+            <ul>
+                <li><a href="#navigation">My Menu Link 1</a></li>
+                <li>
+                    <button class="sc-btn-ross-m sc-btn-block">Login</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+-->
+    </code></pre>
+
+
     <a name="pager"></a>
     <h3>Pager</h3>
     <div class="example example-custom-dropdown">
@@ -360,6 +515,7 @@
 </ul>
 -->
     </code></pre>
+
 </div>
 
             </div>
