@@ -3341,7 +3341,6 @@
 	function attachEventListeners() {
 	    // this should only be done at most once
 	    // when the first of this element gets attached
-	    document.addEventListener('touchstart', closeAllDropdowns);
 	    document.addEventListener('mousedown', closeAllDropdowns);
 	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
 	}
