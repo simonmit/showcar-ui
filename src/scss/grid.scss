@@ -5,11 +5,6 @@
 .sc-content-container {
   @include container;
   position: relative;
-
-  // 1100px - 1440px
-  @include mqminmax($grid-max-width, $grid-max-width + 2 * $side-ad-width + 2 * $gap-between-ad-and-grid) {
-    margin: 0;
-  }
 }
 
 .sc-grid-row {
