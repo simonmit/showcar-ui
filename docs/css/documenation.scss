@@ -178,6 +178,10 @@ pre {
             padding: 5px;
         }
     }
+
+    [class*='sc-grid-col-'] {
+        word-break: break-all;
+    }
 }
 
 .docs-table-grid {
