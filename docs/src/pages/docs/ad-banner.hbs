@@ -1,0 +1,42 @@
+---
+title: Ad Banner
+nav-index: 9
+---
+<div>
+    <a name="ad-banner"></a>
+    <h2>Ad Banner</h2>
+
+    <p>The ad banner are consisting of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
+
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-content-container">
+        <div class="sc-skyscraper-left"></div>
+        <div class="sc-superbanner"></div>
+        <div class="sc-skyscraper-right"></div>
+            This is inside the sc-content-container
+        </div>
+        -->
+    </code></pre>
+    <script language="JavaScript">
+        var banners = [], i = 1, color = 'red';
+
+        banners.push(
+            document.getElementsByClassName('sc-skyscraper-left')[0],
+            document.getElementsByClassName('sc-superbanner')[0],
+            document.getElementsByClassName('sc-skyscraper-right')[0]
+        );
+
+        banners.forEach(function (el) {
+            if (i % 2 == 0) {
+                color = 'blue';
+            } else {
+                color = 'red';
+            }
+            el.style.background = color;
+
+            i++;
+        });
+
+    </script>
+</div>

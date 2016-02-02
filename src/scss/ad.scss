@@ -1,0 +1,40 @@
+@import "mixins/ad";
+
+// viewports
+// ----------------------------
+//$viewportXS: 0; // 0 - 320
+//$viewportS: 321px; // 321 - 767
+//$viewportM: 768px; // 768 - 1023
+//$viewportL: 1024px; // 1024 - 1099
+//$viewportXL: 1100px; // 1100 - 1269
+//$viewportXXL: 1270px; // 1270 - ∞
+
+.sc-superbanner {
+    @include sc-topbanner();
+
+    // m viewport <= 768px
+    @include mqmax($viewportM) {
+        display: none;
+    }
+}
+
+.sc-skyscraper-left {
+    @include sc-skyscraper();
+    left: -170px;
+
+    // xxl viewport 1270 (+ 9 because acceptance criteria was < 1280px
+    @include mqmax($viewportXXL + 9) {
+        display: none;
+    }
+}
+
+.sc-skyscraper-right {
+    @include sc-skyscraper();
+    right: -170px;
+    display: block;
+
+    // <=
+    @include mqmax($viewportXL - 1) {
+        display: none;
+    }
+}
