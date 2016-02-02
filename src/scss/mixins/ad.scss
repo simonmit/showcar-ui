@@ -1,6 +1,6 @@
 @mixin sc-topbanner {
     width: 1120px;
-    line-height: 0;
+    height: 90px;
     text-align: center;
     position: relative;
     left: -10px;
@@ -11,7 +11,6 @@
 
 @mixin sc-skyscraper () {
     min-height: 600px;
-    line-height: 0;
     width: 160px;
     display: block;
     position: absolute;
