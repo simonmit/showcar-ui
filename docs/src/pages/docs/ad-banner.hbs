@@ -6,37 +6,24 @@ nav-index: 9
     <a name="ad-banner"></a>
     <h2>Ad Banner</h2>
 
-    <p>The ad banner are consisting of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
+    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
 
     <pre><code class="html js-format-code">
         <!--
         <div class="sc-content-container">
-        <div class="sc-skyscraper-left"></div>
-        <div class="sc-superbanner"></div>
-        <div class="sc-skyscraper-right"></div>
+            <div class="sc-skyscraper-left"></div>
+            <div class="sc-superbanner"></div>
+            <div class="sc-skyscraper-right"></div>
             This is inside the sc-content-container
         </div>
         -->
     </code></pre>
     <script language="JavaScript">
-        var banners = [], i = 1, color = 'red';
+        var placeholderSky = '<img src="https://placehold.it/160x600/ff7500/ffffff" />',
+            placeholderTop = '<img src="https://placehold.it/1120x90/ff7500/ffffff" />';
 
-        banners.push(
-            document.getElementsByClassName('sc-skyscraper-left')[0],
-            document.getElementsByClassName('sc-superbanner')[0],
-            document.getElementsByClassName('sc-skyscraper-right')[0]
-        );
-
-        banners.forEach(function (el) {
-            if (i % 2 == 0) {
-                color = 'blue';
-            } else {
-                color = 'red';
-            }
-            el.style.background = color;
-
-            i++;
-        });
-
+        document.getElementsByClassName('sc-skyscraper-left')[0].innerHTML = placeholderSky;
+        document.getElementsByClassName('sc-superbanner')[0].innerHTML = placeholderTop;
+        document.getElementsByClassName('sc-skyscraper-right')[0].innerHTML = placeholderSky;
     </script>
 </div>
