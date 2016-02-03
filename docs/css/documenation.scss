@@ -60,7 +60,8 @@ pre {
     padding: $M;
     background: $black-30;
     border-radius: $form-border-radius;
-    word-break: break-all;
+    word-break: normal;
+    word-wrap: normal;
 
     ul {
         margin-left: 30px;
