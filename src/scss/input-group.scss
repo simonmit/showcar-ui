@@ -27,11 +27,6 @@
             z-index: 2;
         }
     }
-    input[type=button], input[type=submit], input[type=search], button {
-        //width: auto;
-    }
-
-
 }
 .sc-input-group-radio {
     @include input-group-radio;
