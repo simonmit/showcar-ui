@@ -60,6 +60,7 @@ pre {
     padding: $M;
     background: $black-30;
     border-radius: $form-border-radius;
+    word-break: break-all;
 
     ul {
         margin-left: 30px;
@@ -95,10 +96,11 @@ pre {
     }
 
     th, td {
-        padding: 8px 16px;
+        padding: 8px;
         border-left: 1px solid $black-30;
         border-bottom: 1px solid $black-30;
         text-align: center;
+        word-break: break-all;
 
         &:first-child {
             border-left: 0;
