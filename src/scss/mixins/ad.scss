@@ -1,0 +1,22 @@
+@mixin sc-topbanner {
+    width: 1120px;
+    line-height: 0;
+    text-align: center;
+    position: relative;
+    left: -10px;
+    z-index: 50;
+    display: block;
+    overflow: visible;
+}
+
+@mixin sc-skyscraper () {
+    min-height: 600px;
+    line-height: 0;
+    width: 160px;
+    display: block;
+    position: absolute;
+    z-index: 990;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+}

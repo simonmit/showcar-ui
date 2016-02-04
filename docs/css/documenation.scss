@@ -3,15 +3,7 @@
 
 
 body {
-    padding: 20px 40px;
-
-    @media screen and (max-width: 700px) {
-        padding: 20px 20px;
-    }
-
-    @media screen and (max-width: 480px) {
-        padding: 20px 10px;
-    }
+    //padding: 20px 40px;
 }
 
 h1 {
@@ -135,7 +127,6 @@ pre {
     margin-top: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    overflow: auto;
 
     &:before {
         content: 'Example:';

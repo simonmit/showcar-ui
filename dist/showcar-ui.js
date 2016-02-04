@@ -67,6 +67,8 @@
 	var observer = new FontFaceObserver('Source Sans Pro');
 	observer.check().then(function () {
 	    $('body').addClass('font-loaded');
+	}, function () {
+	    // do nothing if font is not existing
 	});
 
 /***/ },

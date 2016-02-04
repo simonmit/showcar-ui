@@ -3,7 +3,7 @@
     position: relative;
     z-index: 3;
     border-bottom: 1px solid $black-30;
-    background-color: #fff;
+    background-color: $white;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
 
@@ -172,9 +172,14 @@
     }
 
     .bar {
-        padding: 9px 0 7px 0;
+        margin: 9px 0 7px;
         text-align: center;
         height: 51px;
+        .icon-auto24 svg {
+            width: 85px;
+            height: 40px;
+            background-size: contain;
+        }
     }
 
     @media screen and (max-width: 922px) {
@@ -219,8 +224,8 @@
 
         .bar {
             text-align: left;
-            padding: 15px $L;
-            .icon-auto24 {
+            margin: 15px $L;
+            .icon-auto24 svg {
                 width: 85px;
                 height: 40px;
                 background-size: contain;
@@ -231,7 +236,6 @@
             position: relative;
             max-height: 1px;
             overflow: visible;
-            padding-left: 144px;
 
             & > ul {
                 padding: 0;
@@ -254,9 +258,9 @@
 
             ul {
                 position: absolute;
-                top: -70px;
+                top: -82px;
                 border: none;
-                margin-left: -24px;
+                margin-left: 120px;
                 max-height: 0;
                 ul {
                     transition: none;
