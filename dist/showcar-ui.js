@@ -61,8 +61,9 @@
 	__webpack_require__(13)();
 	__webpack_require__(14);
 	__webpack_require__(15)();
+	__webpack_require__(16);
 	
-	var FontFaceObserver = __webpack_require__(16);
+	var FontFaceObserver = __webpack_require__(17);
 	var observer = new FontFaceObserver('Source Sans Pro');
 	observer.check().then(function () {
 	    $('body').addClass('font-loaded');
@@ -3337,7 +3338,6 @@
 	function attachEventListeners() {
 	    // this should only be done at most once
 	    // when the first of this element gets attached
-	    document.addEventListener('touchstart', closeAllDropdowns);
 	    document.addEventListener('mousedown', closeAllDropdowns);
 	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
 	}
@@ -3410,6 +3410,175 @@
 
 /***/ },
 /* 16 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Navigation = function () {
+	    function Navigation(root) {
+	        _classCallCheck(this, Navigation);
+	
+	        this.rootElement = root;
+	        this.menuBtn = this.rootElement.querySelector('.sc-btn-mobile-menu');
+	
+	        this.initEvents();
+	    }
+	
+	    _createClass(Navigation, [{
+	        key: 'initEvents',
+	        value: function initEvents() {
+	            this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
+	            this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
+	            document.addEventListener('keydown', this.onKeyDown.bind(this));
+	            document.body.addEventListener('keyup', this.onKeyUp.bind(this));
+	        }
+	    }, {
+	        key: 'toggleMenuItem',
+	        value: function toggleMenuItem(element) {
+	            element.classList.toggle('open');
+	        }
+	    }, {
+	        key: 'clickMenuItem',
+	        value: function clickMenuItem(event) {
+	            var open = this.rootElement.querySelector('.open'),
+	                activeMenuItem = this.rootElement.querySelector('li.open li.active-item'),
+	                element = event.target || event.srcElement;
+	
+	            if (this.isTablableElementOfNavigation(element)) {
+	                element = element.parentNode;
+	            }
+	
+	            if (activeMenuItem) {
+	                this.toggleActiveMenuItem(activeMenuItem);
+	            }
+	
+	            if (open) {
+	                this.toggleMenuItem(open);
+	            }
+	            if ('li' === element.nodeName.toLowerCase() && open !== element) {
+	                this.toggleMenuItem(element);
+	            }
+	
+	            event.stopPropagation();
+	        }
+	    }, {
+	        key: 'toggleMenu',
+	        value: function toggleMenu() {
+	            this.rootElement.classList.toggle('open');
+	        }
+	    }, {
+	        key: 'isTablableElementOfNavigation',
+	        value: function isTablableElementOfNavigation(element) {
+	            return element.classList.contains('title') || 'span' === element.nodeName.toLowerCase();
+	        }
+	
+	        /**
+	         * Prevent scrolling
+	         *
+	         *      @param event
+	         * @returns {boolean}
+	         */
+	
+	    }, {
+	        key: 'onKeyDown',
+	        value: function onKeyDown(event) {
+	            var element = event.target || event.srcElement;
+	
+	            if ([38, 40].indexOf(event.which) > -1 && this.isTablableElementOfNavigation(element)) {
+	                event.preventDefault();
+	                return false;
+	            }
+	
+	            return true;
+	        }
+	    }, {
+	        key: 'onKeyUp',
+	        value: function onKeyUp(event) {
+	            var keyCode = event.which,
+	                activeMenuItem = this.rootElement.querySelector('li.open li.active-item');
+	
+	            switch (keyCode) {
+	                case 9:
+	                    // tab
+	                    this.handleKeyTab(activeMenuItem);
+	                    break;
+	                case 38:
+	                    // top
+	                    this.handleKeyTop(activeMenuItem);
+	                    break;
+	                case 40:
+	                    // bottom
+	                    this.handleKeyBottom(event, activeMenuItem);
+	                    break;
+	            }
+	        }
+	    }, {
+	        key: 'toggleActiveMenuItem',
+	        value: function toggleActiveMenuItem(element) {
+	            element.classList.toggle('active-item');
+	        }
+	    }, {
+	        key: 'handleKeyTab',
+	        value: function handleKeyTab(activeMenuItem) {
+	            if (activeMenuItem) {
+	                // close previous menu
+	                this.toggleActiveMenuItem(activeMenuItem);
+	                this.toggleMenuItem(this.rootElement.querySelector('li.open'));
+	            }
+	        }
+	    }, {
+	        key: 'handleKeyTop',
+	        value: function handleKeyTop(activeMenuItem) {
+	            if (activeMenuItem) {
+	                var previousMenuItem = activeMenuItem.previousElementSibling;
+	                if (previousMenuItem) {
+	                    this.toggleActiveMenuItem(activeMenuItem);
+	                    this.toggleActiveMenuItem(previousMenuItem);
+	                } else {
+	                    this.toggleActiveMenuItem(activeMenuItem);
+	                    this.toggleMenuItem(this.rootElement.querySelector('li.open'));
+	                }
+	            }
+	        }
+	    }, {
+	        key: 'handleKeyBottom',
+	        value: function handleKeyBottom(event, activeMenuItem) {
+	            var element = event.target || event.srcElement;
+	
+	            if (!element || !this.isTablableElementOfNavigation(element)) {
+	                return false;
+	            }
+	
+	            if (!activeMenuItem) {
+	                this.clickMenuItem(event);
+	                this.toggleActiveMenuItem(element.nextElementSibling.querySelector('ul:not(.submenu) > li:not(.subheadline)'));
+	            } else {
+	                var nextMenuItem = activeMenuItem.nextElementSibling;
+	                if (nextMenuItem) {
+	                    this.toggleActiveMenuItem(activeMenuItem);
+	                    this.toggleActiveMenuItem(nextMenuItem);
+	                }
+	            }
+	        }
+	    }]);
+	
+	    return Navigation;
+	}();
+	
+	var navigationElement = document.querySelector('.sc-navigation'),
+	    navigation = null;
+	if (navigationElement) {
+	    navigation = new Navigation(navigationElement);
+	}
+	
+	module.exports = navigation;
+
+/***/ },
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
