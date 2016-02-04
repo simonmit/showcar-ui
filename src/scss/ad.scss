@@ -14,31 +14,31 @@
 }
 
 .sc-superbanner {
-    @include sc-topbanner();
+    display: none;
 
-    // m viewport <= 768px
-    @include mqmax($viewportM) {
-        display: none;
+    // show whole fireplace at 1440px
+    @include mqmin($viewportFireplace) {
+        @include sc-topbanner();
     }
 }
 
 .sc-skyscraper-left {
-    @include sc-skyscraper();
-    left: -170px;
+    display: none;
 
-    // xxl viewport 1270 (+ 9 because acceptance criteria was < 1280px
-    @include mqmax($viewportXXL + 9) {
-        display: none;
+    // show whole fireplace at 1440px
+    @include mqmin($viewportFireplace) {
+        @include sc-skyscraper();
+        left: -170px;
     }
 }
 
 .sc-skyscraper-right {
-    @include sc-skyscraper();
-    right: -170px;
-    display: block;
+    display: none;
 
-    // <=
-    @include mqmax($viewportXL - 1) {
-        display: none;
+    // show whole fireplace at 1440px
+    @include mqmin($viewportFireplace) {
+        @include sc-skyscraper();
+        right: -170px;
+        display: block;
     }
 }
