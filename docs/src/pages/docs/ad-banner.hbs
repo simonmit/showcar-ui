@@ -1,0 +1,86 @@
+---
+title: Ad Banner
+nav-index: 9
+---
+<div>
+    <a name="ad-banner"></a>
+    <h2>Ad Banner</h2>
+
+    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
+
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-content-container">
+            <div class="sc-skyscraper-left"></div>
+            <div class="sc-superbanner"></div>
+            <div class="sc-skyscraper-right"></div>
+            This is inside the sc-content-container
+        </div>
+        -->
+    </code></pre>
+
+    <p>Here you can test all variants. You can switch on the ...</p>
+
+    <div class="example example-checkboxes">
+        <div>
+            <input class="sc-input" id="as24-sky-left" type="checkbox" checked>
+            <label for="as24-sky-left">Skyscraper on the left side</label>
+
+            <input class="sc-input" id="as24-superbanner" type="checkbox" checked>
+            <label for="as24-superbanner">Superbanner</label>
+
+            <input class="sc-input" id="as24-sky-right" type="checkbox" checked>
+            <label for="as24-sky-right">Skyscraper on the right side</label>
+        </div>
+    </div>
+
+
+    <script language="JavaScript">
+        var placeholderSky = '<img src="https://placehold.it/160x600/ff7508/ffffff" />',
+            placeholderTop = '<img src="https://placehold.it/1120x90/ff7508/ffffff" />',
+            skyLeft = document.getElementsByClassName('sc-skyscraper-left')[0],
+            skyRight = document.getElementsByClassName('sc-skyscraper-right')[0],
+            superBanner = document.getElementsByClassName('sc-superbanner')[0],
+            cbSkyLeft = document.querySelector('#as24-sky-left'),
+            cbSkyRight = document.querySelector('#as24-sky-right'),
+            cbSuperBanner = document.querySelector('#as24-superbanner'),
+            contentContainer = document.querySelector('.sc-content-container');
+
+        //init placeholders
+        skyLeft.innerHTML = placeholderSky;
+        skyRight.innerHTML = placeholderSky;
+        superBanner.innerHTML = placeholderTop;
+        contentContainer.classList.add('has-ad-skyscraper-left');
+        contentContainer.classList.add('has-ad-skyscraper-right');
+        contentContainer.classList.add('has-ad-superbanner');
+
+        //listen to changes
+        cbSkyLeft.onchange = function () {
+            if (this.checked) {
+                skyLeft.innerHTML = placeholderSky;
+                contentContainer.classList.add('has-ad-skyscraper-left');
+            } else {
+                skyLeft.innerHTML = '';
+                contentContainer.classList.remove('has-ad-skyscraper-left');
+            }
+        };
+
+        cbSkyRight.onchange = function () {
+            if (this.checked) {
+                skyRight.innerHTML = placeholderSky;
+                contentContainer.classList.add('has-ad-skyscraper-right');
+            } else {
+                skyRight.innerHTML = '';
+                contentContainer.classList.remove('has-ad-skyscraper-right');
+            }
+        };
+
+        cbSuperBanner.onchange = function () {
+            if (this.checked) {
+                superBanner.innerHTML = placeholderTop;
+            } else {
+                superBanner.innerHTML = '';
+            }
+        }
+    </script>
+</div>

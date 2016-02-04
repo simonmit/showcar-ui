@@ -1,12 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <title>ShowCar UI Library Docs - Responsive Images</title>
+    <title>ShowCar UI Library Docs - Ad Banner</title>
     <!-- IMPORTANT: always change the *.hbs files within docs/src -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../../dist/showcar-ui.css">
     <link rel="stylesheet" href="../css/highlight.css">
     <link rel="stylesheet" href="../css/documenation.css">
@@ -52,7 +51,7 @@
                     <ul>
                         <li><a href="utility.html#floats">Floats</a></li>
                         <li><a href="utility.html#text-alignment">Text alignment</a></li>
-                        <li><a href="utility.html#center-blocks">Center blocks</a></li>
+                        <li><a href="utility.html#center-content-blocks">Center content blocks</a></li>
                         <li><a href="utility.html#horizontal-line">Horizontal line</a></li>
                         <li><a href="utility.html#ellipsis">Ellipsis</a></li>
                         <li><a href="utility.html#visibility">Visibility</a></li>
@@ -91,36 +90,87 @@
             <div class="docs-content">
                 
 <div>
-    <a name="images"></a>
-    <h2>Responsive Images</h2>
+    <a name="ad-banner"></a>
+    <h2>Ad Banner</h2>
 
-    <p>
-        The way to go for responsive images in Showcar is the html <code>&lt;picture&gt;</code> tag. Unfortunately, it is not yet sufficiently supported by the browsers.
-        Another, more supported way, is the srcset attribute of the <code>&lt;img&gt;</code> tag.
-        In any case, we included <a href="https://github.com/scottjehl/picturefill" target="_blank">picturefill</a> to polyfill the missing functionality for unsupported browsers.
-    </p>
-    <p>
-        Here an example with the <code>&lt;picture&gt;</code> tag:
-    </p>
-    <picture>
-        <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
-        <source srcset="https://placehold.it/780x150" media="(max-width: 780px)">
-        <source srcset="https://placehold.it/1024x150" media="(max-width: 1024px)">
-        <source srcset="https://placehold.it/1400x150">
-        <img srcset="https://placehold.it/1400x150" alt="My default image">
-    </picture>
+    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
 
     <pre><code class="html js-format-code">
-<!--
-<picture>
-    <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
-    <source srcset="https://placehold.it/780x150" media="(max-width: 780px)">
-    <source srcset="https://placehold.it/1024x150" media="(max-width: 1024px)">
-    <source srcset="https://placehold.it/1400x150">
-    <img srcset="https://placehold.it/1400x150" alt="My default image">
-</picture>
--->
+        <!--
+        <div class="sc-content-container">
+            <div class="sc-skyscraper-left"></div>
+            <div class="sc-superbanner"></div>
+            <div class="sc-skyscraper-right"></div>
+            This is inside the sc-content-container
+        </div>
+        -->
     </code></pre>
+
+    <p>Here you can test all variants. You can switch on the ...</p>
+
+    <div class="example example-checkboxes">
+        <div>
+            <input class="sc-input" id="as24-sky-left" type="checkbox" checked>
+            <label for="as24-sky-left">Skyscraper on the left side</label>
+
+            <input class="sc-input" id="as24-superbanner" type="checkbox" checked>
+            <label for="as24-superbanner">Superbanner</label>
+
+            <input class="sc-input" id="as24-sky-right" type="checkbox" checked>
+            <label for="as24-sky-right">Skyscraper on the right side</label>
+        </div>
+    </div>
+
+
+    <script language="JavaScript">
+        var placeholderSky = '<img src="https://placehold.it/160x600/ff7508/ffffff" />',
+            placeholderTop = '<img src="https://placehold.it/1120x90/ff7508/ffffff" />',
+            skyLeft = document.getElementsByClassName('sc-skyscraper-left')[0],
+            skyRight = document.getElementsByClassName('sc-skyscraper-right')[0],
+            superBanner = document.getElementsByClassName('sc-superbanner')[0],
+            cbSkyLeft = document.querySelector('#as24-sky-left'),
+            cbSkyRight = document.querySelector('#as24-sky-right'),
+            cbSuperBanner = document.querySelector('#as24-superbanner'),
+            contentContainer = document.querySelector('.sc-content-container');
+
+        //init placeholders
+        skyLeft.innerHTML = placeholderSky;
+        skyRight.innerHTML = placeholderSky;
+        superBanner.innerHTML = placeholderTop;
+        contentContainer.classList.add('has-ad-skyscraper-left');
+        contentContainer.classList.add('has-ad-skyscraper-right');
+        contentContainer.classList.add('has-ad-superbanner');
+
+        //listen to changes
+        cbSkyLeft.onchange = function () {
+            if (this.checked) {
+                skyLeft.innerHTML = placeholderSky;
+                contentContainer.classList.add('has-ad-skyscraper-left');
+            } else {
+                skyLeft.innerHTML = '';
+                contentContainer.classList.remove('has-ad-skyscraper-left');
+            }
+        };
+
+        cbSkyRight.onchange = function () {
+            if (this.checked) {
+                skyRight.innerHTML = placeholderSky;
+                contentContainer.classList.add('has-ad-skyscraper-right');
+            } else {
+                skyRight.innerHTML = '';
+                contentContainer.classList.remove('has-ad-skyscraper-right');
+            }
+        };
+
+        cbSuperBanner.onchange = function () {
+            if (this.checked) {
+                superBanner.innerHTML = placeholderTop;
+            } else {
+                superBanner.innerHTML = '';
+            }
+        }
+    </script>
+
 </div>
 
             </div>
