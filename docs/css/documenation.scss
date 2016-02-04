@@ -35,11 +35,12 @@ p {
 }
 
 code {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: 'Inconsolata', monospace;
     background-color: #f9f2f4 !important;
     color: #c7254e;
     padding: 2px 4px;
-    font-size: 90%;
+    font-size: 1rem;
+    line-height: 1rem;
     border-radius: $form-border-radius;
 
     .hljs-value {
@@ -72,6 +73,8 @@ pre {
     padding: $M;
     background: $black-30;
     border-radius: $form-border-radius;
+    word-break: normal;
+    word-wrap: normal;
 
     ul {
         margin-left: 30px;
@@ -107,10 +110,11 @@ pre {
     }
 
     th, td {
-        padding: 8px 16px;
+        padding: 8px;
         border-left: 1px solid $black-30;
         border-bottom: 1px solid $black-30;
         text-align: center;
+        word-break: break-all;
 
         &:first-child {
             border-left: 0;
@@ -223,7 +227,6 @@ pre {
     .sc-input-group-radio {
         margin: 10px 0;
         width: 80%;
-        max-width: 600px;
     }
     .input-group-emission-badge {
         max-width: 400px;
