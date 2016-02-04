@@ -330,7 +330,6 @@ pre {
 
 .example-pagination {
 
-    border-bottom: 1px solid lightblue;
     padding-bottom: 15px;
     margin-bottom: 25px;
 
@@ -386,6 +385,10 @@ pre {
         &.version-mobile-320 {
             display: none;
         }
+    }
+
+    h4 {
+        border-bottom: 1px solid lightblue;
     }
 
 }
