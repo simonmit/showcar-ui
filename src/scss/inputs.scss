@@ -153,15 +153,7 @@ input[type="radio"] {
 
 input[type="checkbox"] {
     &.sc-input {
-        @include checkbox(M);
-
-        &.sc-input-m {
-            @include checkbox(M);
-        }
-
-        &.sc-input-l {
-            @include checkbox(L);
-        }
+        @include checkbox(L);
     }
 }
 
