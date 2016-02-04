@@ -18,6 +18,10 @@ h3 {
     font-size: 1.6rem;
     margin: 20px 0 10px;
 }
+h4 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+}
 p {
     margin: 5px 0;
 }
@@ -313,4 +317,69 @@ pre {
 .sticky-list {
     list-style-type: disc;
     margin-left: 40px;
+}
+
+.example-pagination {
+
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    &.version-normal {
+        width: 768px;
+    }
+
+    &.version-desktop {
+        width: 715.016px;
+    }
+
+    &.version-tablet {
+        width: 759.469px;
+    }
+
+    &.version-mobile-480 {
+        width: 480px;
+    }
+
+    &.version-mobile-320 {
+        width: 320px;
+    }
+
+    &.version-mobile-240 {
+        width: 240px;
+    }
+
+    @media screen and (max-width: 768px) {
+        &.version-normal {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 715.016px) {
+        &.version-desktop {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 759.469px) {
+        &.version-tablet {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        &.version-mobile-480 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        &.version-mobile-320 {
+            display: none;
+        }
+    }
+
+    h4 {
+        border-bottom: 1px solid lightblue;
+    }
+
 }

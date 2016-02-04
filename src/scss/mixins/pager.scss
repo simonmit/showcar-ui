@@ -3,23 +3,32 @@
 
 @mixin pagination() {
 
-  list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-size: 0;
-  border-top: 1px solid $black-20;
-  border-bottom: 1px solid $black-30;
+
+  /* CSS Hack, target IE10 and IE11 */
+  @media all and (-ms-high-contrast:none) {
+    justify-content: flex-start;
+  }
 
   li {
     text-align: center;
-    line-height: $XXXL;
-    height: $XXXL;
-    width: $XXXL;
+    line-height: 48px;
+    min-height: 48px;
+    min-width: 48px;
+    max-width: 52px;
+    list-style: none;
+    flex: 1 1 auto;
+    border-top: 1px solid $black-20;
+    border-bottom: 1px solid $black-30;
 
-    display: none;
+
 
     &.previous-page, &.next-page {
-      display: inline-block;
-      width: 3*$XXXL;
+      min-width: 120px;
+      max-width: 140px;
 
       a.disabled {
         svg {
@@ -42,8 +51,8 @@
     }
 
     &.info-page {
-      display: inline-block;
-      width: calc(100% - 6*#{$XXXL});
+      display: block;
+      max-width: 124px;
       a {
         padding: 0 10px;
       }
