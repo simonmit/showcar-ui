@@ -79,7 +79,8 @@ task :publish do
   Dir.chdir('../')
   dist = Dir['dist/**/*'].select { |f| File.file?(f) }
   docs = Dir['docs/**/*'].select { |f| File.file?(f) }
-  artifacts = dist + docs
+  examples = Dir['examples/**/*'].select { |f| File.file?(f) }
+  artifacts = dist + docs + examples
 
   s3 = Aws::S3::Client.new
 
