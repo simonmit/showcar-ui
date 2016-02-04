@@ -3,9 +3,6 @@ require('../../vendor/zepto/zepto.min.js');
 var polyfills = require('./components/polyfills.js');
 polyfills();
 
-//var promise = require('../../vendor/promise-js/promise.js');
-//promise();
-
 var collapse = require('./components/collapse.js');
 collapse();
 
@@ -21,7 +18,7 @@ require('./components/navigation.js');
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
 observer.check().then(function () {
-    document.body.classList.add('font-loaded');
+    $('body').addClass('font-loaded');
 }, function () {
     // do nothing if font is not existing
 });
