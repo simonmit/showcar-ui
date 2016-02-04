@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
-  "Description" : "Tatsu service template",
+  "Description" : "Showcar ui delivery pipeline",
 
   "Parameters" : {
 
@@ -39,6 +39,19 @@
         "BucketName" : { "Ref" : "S3ArtifactsBucket" },
         "WebsiteConfiguration" : {
           "IndexDocument" : "index.html"
+        }
+      }
+    },
+
+    "BucketDomain" : {
+      "Type" : "AWS::Route53::RecordSet",
+      "Properties" : {
+        "Type" : "A",
+        "HostedZoneName" : "aws.autoscout24.com.",
+        "Name" : { "Ref" : "S3ArtifactsBucket" },
+        "AliasTarget" : {
+          "HostedZoneId" : "Z1BKCTXD74EZPE",
+          "DNSName" : "s3-website-eu-west-1.amazonaws.com."
         }
       }
     }

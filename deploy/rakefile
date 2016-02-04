@@ -10,7 +10,7 @@ Aws.use_bundled_cert!
 
 SERVICE = 'showcar-ui'
 REGION = ENV['REGION'] || 'eu-west-1'
-S3_ARTIFACTS_BUCKET = "as24-showcar-ui"
+S3_ARTIFACTS_BUCKET = (ENV['SANDBOX'] || "as24") + "-showcar-ui.aws.autoscout24.com"
 VERSION  = ENV['VERSION'] || ENV['GO_PIPELINE_LABEL']
 SANDBOX  = ENV['SANDBOX'] || ENV['GO_JOB_NAME'].nil? && `whoami`.strip
 STACK    = SANDBOX ? "#{SANDBOX}-#{SERVICE}" : SERVICE
@@ -41,6 +41,11 @@ end
 desc 'delete stack'
 task :delete do
   Stacker.delete_stack(STACK)
+end
+
+desc 'echoes the parameters'
+task :params do
+  puts "S3_ARTIFACTS_BUCKET=" + S3_ARTIFACTS_BUCKET
 end
 
 desc 'run integration tests'
