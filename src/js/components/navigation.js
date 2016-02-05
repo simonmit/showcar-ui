@@ -12,11 +12,21 @@ class Navigation {
         this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
         document.addEventListener('keydown', this.onKeyDown.bind(this));
         document.body.addEventListener('keyup', this.onKeyUp.bind(this));
+        document.addEventListener('click', this.closeMenuItem);
     }
 
     toggleMenuItem(element) {
         element.classList.toggle('open');
     }
+
+    closeMenuItem() {
+        var openMenuItem = document.querySelector('.open', this);
+        if (null === openMenuItem) {
+            return;
+        }
+        openMenuItem.classList.toggle('open', false)
+    }
+
 
     clickMenuItem(event) {
         let open           = this.rootElement.querySelector('.open'),
