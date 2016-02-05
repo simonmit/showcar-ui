@@ -1,0 +1,21 @@
+@import "mixins/notification";
+
+.sc-notification {
+  padding: $L $L $L $XXL+$L;
+
+  &.success {
+    @include notification($success);
+  }
+
+  &.info {
+    @include notification($information);
+  }
+
+  &.tip {
+    @include notification($tip);
+  }
+
+  &.error {
+    @include notification($error);
+  }
+}
