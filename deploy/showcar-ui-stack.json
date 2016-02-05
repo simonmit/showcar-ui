@@ -35,7 +35,7 @@
     "ShowCarUiBucket" : {
       "Type" : "AWS::S3::Bucket",
       "Properties" : {
-        "AccessControl" : "PublicRead",
+        "AccessControl" : "Private",
         "BucketName" : { "Ref" : "S3ArtifactsBucket" },
         "WebsiteConfiguration" : {
           "IndexDocument" : "index.html"
