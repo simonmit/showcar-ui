@@ -6,6 +6,7 @@
     background-color: $white;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
+    height: 70px;
 
     .sc-btn-mobile-menu {
         position: absolute;
@@ -256,11 +257,14 @@
                 display: none;
             }
 
+            > ul {
+                margin-left: 120px;
+            }
+
             ul {
                 position: absolute;
                 top: -82px;
                 border: none;
-                margin-left: 120px;
                 max-height: 0;
                 ul {
                     transition: none;
