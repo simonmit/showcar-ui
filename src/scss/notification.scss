@@ -1,21 +1,37 @@
 @import "mixins/notification";
 
-.sc-notification {
-  padding: $L $L $L $XXL+$L;
+as24-notification {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-height: 0;
+  transition: 0.4s ease;
+  z-index: 9999;
 
-  &.success {
-    @include notification($success);
+  &.show {
+    padding: $XXL + $XS;
+    max-height: 150px;
   }
 
-  &.info {
-    @include notification($information);
+  @each $name, $value in $types {
+    &[type=#{$name}] {
+      @include notification($value);
+
+      &.icon, .icon {
+        @include notification-icon($value);
+      }
+    }
   }
 
-  &.tip {
-    @include notification($tip);
+  h3 {
+    padding: 0;
+    margin: 0;
   }
 
-  &.error {
-    @include notification($error);
+  p {
+    margin: 0;
+    padding-left: $XXL + $L;
   }
 }
