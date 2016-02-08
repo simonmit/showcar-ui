@@ -127,6 +127,7 @@ pre {
     margin-top: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    overflow: hidden;
 
     &:before {
         content: 'Example:';
