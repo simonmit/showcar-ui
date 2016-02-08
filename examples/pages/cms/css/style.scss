@@ -69,10 +69,6 @@ hr {
 
 /*======================================*/
 
-body {
-    padding: $XL;
-}
-
 @media(min-width: $viewportM) {
     .upper, .lower {
         padding: $XL;
@@ -80,7 +76,7 @@ body {
 }
 @media(max-width: $viewportM) {
     .upper, .lower {
-        padding: $L 0 0 $L;
+        padding: $L $M $L;
     }
 }
 
@@ -106,11 +102,6 @@ as24-icon[type="arrow"] svg {
 as24-icon[type="t-online"] svg {
     height: $XL;
 }
-
- // .sc-navigation as24-icon > svg {
- //     height: 40px;
- //              background-size: contain;
- // }
 
 .lower {
     overflow: hidden;
