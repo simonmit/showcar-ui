@@ -606,7 +606,7 @@ sub-nav:
 
     <h4>Demo:</h4>
     <div class="example example-notification">
-        <as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2000">
+        <as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2500">
             Go to <a href="#">my watchlist</a>.
         </as24-notification>
         <as24-notification type="information" id="info1" title="Information for you">
@@ -623,18 +623,60 @@ sub-nav:
     </div>
     <pre><code class="html js-format-code">
 <!--
-<as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." hidden>
+<as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2500">
     Go to <a href="#">my watchlist</a>.
 </as24-notification>
 
-<as24-notification type="information" id="info1" title="Information for you" hidden>
+<as24-notification type="information" id="info1" title="Information for you">
     Information here...
 </as24-notification>
 
-<as24-notification type="error" id="succ1" title="Error occurred" hidden>
+<as24-notification type="error" id="succ1" title="Error occurred">
     Error here...
 </as24-notification>
 -->
     </code></pre>
+
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-6 sc-grid-col-m-5 sc-grid-col-s-12">
+            <h4>Attributes for a notification</h4>
+            <table class="docs-table docs-table-visibility">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>type</td>
+                    <td>Allowed types are: success, information, error</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Notification title</td>
+                </tr>
+                <tr>
+                    <td>timeout</td>
+                    <td>close the notification after [timeout] sec</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="sc-grid-col-6 sc-grid-col-m-7 sc-grid-col-s-12">
+            <h4>Activate a notification with javascript</h4>
+
+            <div class="example example-notification">
+                Add the class "show" to a as24-notification tag:
+            </div>
+            <pre><code class="js-format-code">
+<!--
+var notification = document.querySelector('#succ1');
+notification.classList.toggle('show');
+-->
+            </code></pre>
+        </div>
+        <hr>
+    </div>
 
 </div>
