@@ -22,12 +22,7 @@ class Notification {
         this._body = value;
     }
 
-    show() {
-        this.element.classList.add('show');
-    }
-
     hide() {
-        this.element.setAttribute('hidden', '');
         this.element.classList.remove('show');
     }
 
@@ -47,9 +42,8 @@ class Notification {
      */
     update(attribute, value) {
         switch(attribute) {
-            case 'hidden':
-                if (this.timeout && null === value) {
-                    this.show();
+            case 'class':
+                if ('show' == value && this.timeout) {
                     window.setTimeout(this.hide.bind(this), this.timeout);
                 }
                 break;
