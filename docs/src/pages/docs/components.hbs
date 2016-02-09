@@ -606,102 +606,34 @@ sub-nav:
 
     <h4>Demo:</h4>
     <div class="example example-notification">
-        <as24-notification type="success">
-            <div class="sc-content-container">
-                <h3 class="sc-font-m sc-font-bold icon">Vehicle is added to watchlist.</h3>
-                <p>
-                    Go to <a href="#">my watchlist</a>.
-                </p>
-            </div>
+        <as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2000" hidden>
+            Go to <a href="#">my watchlist</a>.
         </as24-notification>
-        <as24-notification type="information">
-            <div class="sc-content-container">
-                <h3 class="sc-font-m sc-font-bold icon">Information</h3>
-                <p>
-                    This is a example information.
-                </p>
-            </div>
+        <as24-notification type="information" id="info1" title="Information for you" hidden>
+            Information here...
         </as24-notification>
-        <as24-notification type="error">
-            <div class="sc-content-container">
-                <h3 class="sc-font-m sc-font-bold icon">Error occurred</h3>
-                <p>
-                    Please help me.
-                </p>
-            </div>
+        <as24-notification type="error" id="error1" title="Error occurred" hidden>
+            Error here...
         </as24-notification>
         <div class="sc-text-center">
-            <button class="notification-demo sc-btn-bob-m" data-type="success">Show/Hide success notification</button>&nbsp;
-            <button class="notification-demo sc-btn-ross-m" data-type="information">Show/Hide info notification</button>&nbsp;
-            <button class="notification-demo sc-btn-bob-m" data-type="error">Show/Hide error notification</button>
+            <button class="notification-demo sc-btn-bob-m" data-id="succ1">Show/Hide success notification</button>&nbsp;
+            <button class="notification-demo sc-btn-ross-m" data-id="info1">Show/Hide info notification</button>&nbsp;
+            <button class="notification-demo sc-btn-bob-m" data-id="error1">Show/Hide error notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
 <!--
-<as24-notification type="success">
-    <div class="sc-content-container">
-        <h3 class="sc-font-m sc-font-bold icon">Success</h3>
-        <p>...</p>
-    </div>
+<as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." hidden>
+    Go to <a href="#">my watchlist</a>.
 </as24-notification>
 
-<as24-notification type="information">
-    <div class="sc-content-container">
-        <h3 class="sc-font-m sc-font-bold icon">Information</h3>
-        <p>...</p>
-    </div>
+<as24-notification type="information" id="info1" title="Information for you" hidden>
+    Information here...
 </as24-notification>
 
-<as24-notification type="error">
-    <div class="sc-content-container">
-        <h3 class="sc-font-m sc-font-bold icon">Error</h3>
-        <p>...</p>
-    </div>
+<as24-notification type="error" id="succ1" title="Error occurred" hidden>
+    Error here...
 </as24-notification>
--->
-    </code></pre>
-
-    <h4>Use the JavaScript API for notifications</h4>
-
-    <div class="example example-notification">
-        <div class="sc-text-center">
-            <button class="notification-demo sc-btn-bob-m" onclick="notification.show('success', true, 2000);">
-                Show a notification and close after 2sec
-            </button>
-            &nbsp;
-            <button class="notification-demo sc-btn-ross-m" onclick="notification.show('success', false);">
-                Show notification
-            </button>
-            &nbsp;
-            <button class="notification-demo sc-btn-ross-m" onclick="notification.hide('success');">
-                Hide notification
-            </button>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-// Show a success notification and close it automatically after 2 seconds
-notification.show(/* type */ 'success', /* autoClose */ true, /* timeout */ 2000);
-
-// Hide a success notificiation
-notification.hide('success');
-
-// Modify title and body text
-notification.setTitle('success', 'Other title');
-notification.setBodyText('success', 'New body with <a href="#">link</a>.');
-
-// Example buttons
-<button class="notification-demo sc-btn-bob-m" onclick="notification.show('success', true, 2000);">
-    Show a notification and close after 2sec
-</button>
-
-<button class="notification-demo sc-btn-ross-m" onclick="notification.show('success', false);">
-    Show notification
-</button>
-
-<button class="notification-demo sc-btn-ross-m" onclick="notification.hide('success');">
-    Hide notification
-</button>
 -->
     </code></pre>
 

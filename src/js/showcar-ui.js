@@ -14,7 +14,8 @@ require('./components/rotating-arrow.js')();
 require('./components/custom-dropdown.js');
 require('./components/sticky.js')();
 require('./components/navigation.js');
-require('./components/notification.js');
+
+window.notification = require('./components/notification.js');
 
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');

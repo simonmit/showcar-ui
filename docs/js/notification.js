@@ -1,5 +1,12 @@
 !function($) {
     $('.notification-demo').click(function(event) {
-        $('[type=' + this.getAttribute('data-type') + ']').toggleClass('show');
+        var id = this.getAttribute('data-id');
+        var el = document.querySelector('#' + id);
+
+        if (el.hasAttribute('hidden')) {
+            el.removeAttribute('hidden');
+        } else {
+            el.setAttribute('hidden', '');
+        }
     });
 }(window.Zepto);
