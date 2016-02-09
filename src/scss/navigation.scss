@@ -6,7 +6,6 @@
     background-color: $white;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-    height: 70px;
 
     .sc-btn-mobile-menu {
         position: absolute;
@@ -83,6 +82,11 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height .3s ease-out;
+
+            .subheadline {
+                color: $black-60;
+                font-size: 0.75rem;
+            }
         }
 
         li.open ul {
@@ -104,11 +108,9 @@
                 margin-top: 6px;
                 width: 12px;
                 height: 12px;
-                background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E");
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width=%2211px%22%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2011%207%22%20height=%227px%22%3E%3Cg%20fill-rule=%22evenodd%22%20fill=%22none%22%3E%3Cg%20stroke=%22#949494%22%20stroke-width=%222%22%20transform=%22translate(-350%20-54)%22%3E%3Cg%20id=%22Arrow-active-down%22%20transform=%22translate(351%2055)%22%3E%3Cpath%20id=%22Arrow%22%20d=%22m0%200l5%204%204-4%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
                 background-position: center center;
                 background-repeat: no-repeat;
-                transform: rotate(0deg);
-                transition: transform .4s;
                 color: $orange-100;
             }
         }
@@ -126,9 +128,7 @@
                 span.title {
                     color: $orange-100;
                     &:after{
-                        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E");
-                        transform: rotate(180deg);
-                        transition: transform .4s;
+                        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width=%2211px%22%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2011%207%22%20height=%227px%22%3E%3Cg%20fill-rule=%22evenodd%22%20fill=%22none%22%3E%3Cg%20stroke=%22#949494%22%20stroke-width=%222%22%20transform=%22translate(-350%20-54)%22%3E%3Cg%20id=%22Arrow-active-down%22%20transform=%22translate(351%2055)%22%3E%3Cpath%20id=%22Arrow%22%20d=%22m0%200l5%204%204-4%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
                     }
                 }
             }
@@ -140,7 +140,7 @@
                 span.title {
                     color: $orange-100;
                     &:after {
-                        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E");
+                        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width=%2211px%22%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2011%207%22%20height=%227px%22%3E%3Cg%20fill-rule=%22evenodd%22%20fill=%22none%22%3E%3Cg%20stroke=%22#949494%22%20stroke-width=%222%22%20transform=%22translate(-350%20-54)%22%3E%3Cg%20id=%22Arrow-active-down%22%20transform=%22translate(351%2055)%22%3E%3Cpath%20id=%22Arrow%22%20d=%22m0%200l5%204%204-4%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
                     }
                 }
             }
@@ -214,11 +214,25 @@
     }
 }
 
+@media screen and (min-width: 923px) and (max-width: $viewportXL) {
+    .sc-navigation nav ul li.open ul.submenu {
+        white-space: normal;
+    }
+}
+
+@media screen and (min-width: $viewportXL) {
+    .sc-navigation nav ul li.open ul.submenu {
+        white-space: nowrap;
+    }
+}
+
 @media screen and (min-width: 923px) {
     .sc-navigation  {
+        height: 70px;
         width: 100%;
         overflow: visible;
         display: inline-block;
+
         .sc-btn-mobile-menu {
             display: none;
         }
@@ -332,7 +346,6 @@
                     }
 
                     ul.submenu {
-                        white-space: nowrap;
                         > li {
                             ul {
                                 position: static;
@@ -346,8 +359,8 @@
                             }
                             vertical-align: top;
                             display: inline-block;
-                            margin-left: 20px;
-                            padding-right: 20px;
+                            margin-left: 15px;
+                            padding-right: 15px;
                         }
                     }
                 }
