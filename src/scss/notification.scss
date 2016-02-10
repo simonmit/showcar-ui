@@ -14,10 +14,6 @@ as24-notification {
     max-height: 71px;
   }
 
-  @media screen and (min-width: 923px) {
-
-  }
-
   @each $name, $value in $types {
     &[type=#{$name}] {
       @include notification($value);
