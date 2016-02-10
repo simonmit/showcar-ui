@@ -1,12 +1,11 @@
 @mixin sc-topbanner {
     width: 1120px;
-    height: 90px;
     line-height: 0;
     text-align: right;
     position: relative;
     left: -10px;
     display: block;
-    overflow: visible;
+    overflow: hidden;
 }
 
 @mixin sc-skyscraper () {
