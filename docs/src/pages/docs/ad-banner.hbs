@@ -36,8 +36,8 @@ nav-index: 9
 
 
     <script language="JavaScript">
-        var placeholderSky = '<img src="https://placehold.it/160x600/ff7508/ffffff" />',
-            placeholderTop = '<img src="https://placehold.it/1120x90/ff7508/ffffff" />',
+        var placeholderSky = '<img width="160" height="600" src="https://placehold.it/160x600/ff7508/ffffff" />',
+            placeholderTop = '<img width="1120" height="90" src="https://placehold.it/1120x90/ff7508/ffffff" />',
             skyLeft = document.getElementsByClassName('sc-skyscraper-left')[0],
             skyRight = document.getElementsByClassName('sc-skyscraper-right')[0],
             superBanner = document.getElementsByClassName('sc-superbanner')[0],
@@ -47,6 +47,7 @@ nav-index: 9
             contentContainer = document.querySelector('.sc-content-container');
 
         //init placeholders
+        document.body.style.setProperty('overflow-x', 'hidden');
         skyLeft.innerHTML = placeholderSky;
         skyRight.innerHTML = placeholderSky;
         superBanner.innerHTML = placeholderTop;
