@@ -15,6 +15,8 @@ require('./components/custom-dropdown.js');
 require('./components/sticky.js')();
 require('./components/navigation.js');
 
+window.notification = require('./components/notification.js');
+
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
 try {

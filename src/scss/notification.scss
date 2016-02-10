@@ -1,0 +1,36 @@
+@import "mixins/notification";
+
+as24-notification {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-height: 0;
+  transition: 0.4s ease;
+  z-index: 9999;
+
+  &.show {
+    max-height: 71px;
+  }
+
+  @each $name, $value in $types {
+    &[type=#{$name}] {
+      @include notification($value);
+
+      .icon {
+        @include notification-icon($value);
+      }
+    }
+  }
+
+  > div {
+    padding: $M $M $M ($XXL + $L);
+
+    > h3 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+}

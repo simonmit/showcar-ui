@@ -1,0 +1,36 @@
+@import "../variables";
+
+$types: (
+  'success': (
+          color: $color-success,
+          background-position-y: $M,
+          background-color: $color-success-message,
+          background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Cpath%20fill%3D%22%23196600%22%20d%3D%22M8.3%2039.5l13.2-13.3-1.6-1.7L8.3%2036.2l-5.2-5.3-1.6%201.7z%22%2F%3E%3C%2Fsvg%3E')
+  ),
+  'information': (
+          color: $color-info,
+          background-position-y: $L,
+          background-color: $color-info-message,
+          background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2239%22%20r%3D%222.5%22%20fill%3D%22%23853900%22%2F%3E%3Cpath%20fill%3D%22%23853900%22%20d%3D%22M13.5%2033.5h-3l-1-11%201-1h2.9l1.1%201.1z%22%2F%3E%3C%2Fsvg%3E'),
+  ),
+  'error': (
+          color: $color-error,
+          background-position-y: $L,
+          background-color: $color-error-message,
+          background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2239%22%20r%3D%222.5%22%20fill%3D%22%23B80000%22%2F%3E%3Cpath%20fill%3D%22%23B80000%22%20d%3D%22M13.5%2033.5h-3l-1-11%201-1h2.9l1.1%201.1z%22%2F%3E%3C%2Fsvg%3E'),
+  )
+);
+
+@mixin notification($type) {
+  color: map-get($type, color);
+  border-top: 1px solid $black-30;
+  border-bottom: 1px solid $black-30;
+  background-color: map-get($type, background-color);
+}
+
+@mixin notification-icon($type) {
+  background-image: map-get($type, background-image);
+  background-repeat: no-repeat;
+  background-position-x: $L;
+  background-position-y: map-get($type, background-position-y);
+}
