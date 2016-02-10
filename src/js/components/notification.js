@@ -31,8 +31,8 @@ class Notification {
      */
     create() {
         this.element.innerHTML = '';
-        let container = this.createElement('div', '', ['sc-content-container'], this.element);
-        this.createElement('h3', this.title, ['sc-font-m', 'sc-font-bold', 'icon'], container);
+        let container = this.createElement('div', '', ['sc-content-container', 'icon'], this.element);
+        this.createElement('h3', this.title, ['sc-font-m', 'sc-font-bold'], container);
         this.createElement('div', this.body, [], container);
     }
 

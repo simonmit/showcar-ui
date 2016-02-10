@@ -11,27 +11,34 @@ as24-notification {
   z-index: 9999;
 
   &.show {
-    padding: $XXL + $XS;
-    max-height: 150px;
+    max-height: 71px;
+  }
+
+  @media screen and (min-width: 923px) {
+
   }
 
   @each $name, $value in $types {
     &[type=#{$name}] {
       @include notification($value);
 
-      &.icon, .icon {
+      .icon {
         @include notification-icon($value);
       }
     }
   }
 
-  h3 {
-    padding: 0;
-    margin: 0;
+  > div {
+    padding: $M $M $M ($XXL + $L);
+
+    > h3 {
+      padding: 0;
+      margin: 0;
+    }
+
+    > div {
+      margin: 0;
+    }
   }
 
-  div {
-    margin: 0;
-    padding-left: $XXL + $L;
-  }
 }
