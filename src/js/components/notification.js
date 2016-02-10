@@ -31,9 +31,9 @@ class Notification {
      */
     create() {
         this.element.innerHTML = '';
-        let container = this.createElement('div', '', ['sc-content-container', 'icon'], this.element);
-        this.createElement('h3', this.title, ['sc-font-m', 'sc-font-bold'], container);
-        this.createElement('div', this.body, [], container);
+        let container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+        this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+        this.createElement('div', container, this.body);
     }
 
     /**
@@ -41,12 +41,8 @@ class Notification {
      * @param {String} value
      */
     update(attribute, value) {
-        switch(attribute) {
-            case 'class':
-                if ('show' == value && this.timeout) {
-                    window.setTimeout(this.hide.bind(this), this.timeout);
-                }
-                break;
+        if ('class' === attribute && 'show' === value && this.timeout) {
+            window.setTimeout(this.hide.bind(this), this.timeout);
         }
     }
 
@@ -57,8 +53,9 @@ class Notification {
      * @param {HTMLElement} parent
      * @returns {Element}
      */
-    createElement(name, body, classes, parent) {
+    createElement(name, parent, body, classes = []) {
         let element = document.createElement(name);
+
         classes.forEach(function(cls) {
             element.classList.add(cls);
         });
