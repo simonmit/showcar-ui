@@ -1,17 +1,6 @@
 module.exports = function(callback) {
     'use strict';
 
-    // intermediate solution
-    var polyfills = [];
-
-    var sjs = require('scriptjs');
-
-    function getPolyfillPath() {
-        var src = document.querySelector('script[src*="showcar-ui.js"]').src;
-        src = src.split('?')[0];
-        return src.substr(0, src.lastIndexOf('/')) + '/polyfills/';
-    }
-
     var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
 
     var isDom4Browser = document.head
@@ -29,23 +18,18 @@ module.exports = function(callback) {
     require('picturefill/dist/picturefill.js');
 
     if (!isDom4Browser) {
-        polyfills.push(getPolyfillPath() + 'dom4.js');
-
+        require('dom4/build/dom4.js');
     }
-
     if (!isEs5Browser) {
-        polyfills.push(getPolyfillPath() + 'es5-shim.min.js');
+        require('es5-shim/es5-shim.min.js');
     }
-
     if (needsPlaceholderPolyfill) {
-        polyfills.push(getPolyfillPath() + 'placeholders.min.js');
+        //check if this is required anymore and can be dropped - midler, 09.02.2016
+        //needed only for IE9 support
+        require('placeholders/dist/placeholders.min.js');
     }
 
-    if (polyfills.length) {
-        sjs(polyfills, start);
-    } else {
-        start();
-    }
+    start();
 
     function start() {
         if (callback && typeof callback === 'function') {

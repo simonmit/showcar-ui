@@ -19,8 +19,14 @@ window.notification = require('./components/notification.js');
 
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
-observer.check().then(function () {
-    $('body').addClass('font-loaded');
-}, function () {
-    // do nothing if font is not existing
-});
+try {
+    observer.check().then(function () {
+        $('body').addClass('font-loaded');
+    }, function () {
+        // do nothing if font is not existing
+    });
+} catch (e) {
+    if (console) {
+        console.log('Failed to use FontFaceObserver', e);
+    }
+}
