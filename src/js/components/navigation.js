@@ -172,6 +172,7 @@ class Navigation {
         element = $(element);
         !element.hasClass('active-item') && element.addClass('active-item');
         this.activeItem = element[0];
+        $('a', element).focus();
     }
 
     unsetInactiveMenuItems() {
