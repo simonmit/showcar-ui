@@ -53,7 +53,6 @@ class Navigation {
 
         if (this.activeMenu && this.menuIsOpen) {
             this.closeMenu();
-            this.items = [];
             if (clickedMenu[0] === this.activeMenu[0]) {
                 return;
             }
@@ -120,6 +119,8 @@ class Navigation {
                 this.handleJumpUp();
                 break;
             case this.KEY_TAB:
+                !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+                break;
             case this.KEY_RIGHT:
                 this.handleJumpRight();
                 break;
