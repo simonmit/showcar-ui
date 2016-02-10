@@ -63,7 +63,9 @@
 	__webpack_require__(17)();
 	__webpack_require__(18);
 	
-	var FontFaceObserver = __webpack_require__(19);
+	window.notification = __webpack_require__(19);
+	
+	var FontFaceObserver = __webpack_require__(20);
 	var observer = new FontFaceObserver('Source Sans Pro');
 	try {
 	    observer.check().then(function () {
@@ -827,7 +829,7 @@
 	    var t = e.currentTarget,
 	        n = e.attrChange,
 	        r = e.attrName,
-	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" & e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
+	        i = e.target;Q && (!i || i === t) && t.attributeChangedCallback && r !== "style" && e.prevValue !== e.newValue && t.attributeChangedCallback(r, n === e[a] ? null : e.prevValue, n === e[l] ? null : e.newValue);
 	  }function ft(e) {
 	    var t = st(e);return function (e) {
 	      X.push(t, e.target);
@@ -4348,62 +4350,181 @@
 /* 19 */
 /***/ function(module, exports) {
 
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Notification = (function () {
+	    function Notification(element) {
+	        _classCallCheck(this, Notification);
+	
+	        this.element = element;
+	        this._body = '';
+	        this.body = this.element.innerHTML;
+	    }
+	
+	    _createClass(Notification, [{
+	        key: 'hide',
+	        value: function hide() {
+	            this.element.classList.remove('show');
+	        }
+	
+	        /**
+	         * Create the html structure of the notification element
+	         */
+	
+	    }, {
+	        key: 'create',
+	        value: function create() {
+	            this.element.innerHTML = '';
+	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+	            this.createElement('div', container, this.body);
+	        }
+	
+	        /**
+	         * @param {String} attribute
+	         * @param {String} value
+	         */
+	
+	    }, {
+	        key: 'update',
+	        value: function update(attribute, value) {
+	            if ('class' === attribute && 'show' === value && this.timeout) {
+	                window.setTimeout(this.hide.bind(this), this.timeout);
+	            }
+	        }
+	
+	        /**
+	         * @param {String} name
+	         * @param {String} body
+	         * @param {Array} classes
+	         * @param {HTMLElement} parent
+	         * @returns {Element}
+	         */
+	
+	    }, {
+	        key: 'createElement',
+	        value: function createElement(name, parent, body) {
+	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
+	
+	            var element = document.createElement(name);
+	
+	            classes.forEach(function (cls) {
+	                element.classList.add(cls);
+	            });
+	            element.innerHTML = body;
+	
+	            parent.appendChild(element);
+	
+	            return element;
+	        }
+	    }, {
+	        key: 'title',
+	        get: function get() {
+	            return this.element.getAttribute('title');
+	        }
+	    }, {
+	        key: 'timeout',
+	        get: function get() {
+	            return this.element.getAttribute('timeout');
+	        }
+	    }, {
+	        key: 'body',
+	        get: function get() {
+	            return this._body;
+	        },
+	        set: function set(value) {
+	            this._body = value;
+	        }
+	    }]);
+	
+	    return Notification;
+	})();
+	
+	function onElementCreated() {
+	    this.notification = new Notification(this);
+	    this.notification.create();
+	}
+	
+	function onElementChanged(attributeName, previousValue, value) {
+	    this.notification.update(attributeName, value);
+	}
+	
+	var tagName = 'as24-notification';
+	
+	module.exports = document.registerElement(tagName, {
+	    prototype: Object.create(HTMLElement.prototype, {
+	        createdCallback: { value: onElementCreated },
+	        attributeChangedCallback: { value: onElementChanged }
+	    })
+	});
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
 	"use strict";
 	
 	(function () {
 	  'use strict';
-	  function h(a) {
-	    document.body ? a() : document.addEventListener("DOMContentLoaded", a);
-	  };function k(a) {
-	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.g = document.createElement("span");this.f = -1;this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	    this.g.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.g);this.a.appendChild(this.b);this.a.appendChild(this.c);
-	  }
-	  function w(a, b) {
-	    a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
-	  }function x(a) {
-	    var b = a.a.offsetWidth,
-	        c = b + 100;a.g.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.f !== b ? (a.f = b, !0) : !1;
+	  var h = !!document.addEventListener;function k(a, b) {
+	    h ? a.addEventListener("scroll", b, !1) : a.attachEvent("scroll", b);
+	  }function w(a) {
+	    document.body ? a() : h ? document.addEventListener("DOMContentLoaded", a) : document.onreadystatechange = function () {
+	      "interactive" == document.readyState && a();
+	    };
+	  };function x(a) {
+	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.f = document.createElement("span");this.g = -1;this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+	    this.f.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c);
 	  }
 	  function y(a, b) {
-	    a.b.addEventListener("scroll", function () {
-	      x(a) && null !== a.a.parentNode && b(a.f);
-	    }, !1);a.c.addEventListener("scroll", function () {
-	      x(a) && null !== a.a.parentNode && b(a.f);
-	    }, !1);x(a);
-	  };function z(a, b) {
+	    a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
+	  }function z(a) {
+	    var b = a.a.offsetWidth,
+	        c = b + 100;a.f.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.g !== b ? (a.g = b, !0) : !1;
+	  }function A(a, b) {
+	    function c() {
+	      var a = l;z(a) && null !== a.a.parentNode && b(a.g);
+	    }var l = a;k(a.b, c);k(a.c, c);z(a);
+	  };function B(a, b) {
 	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
-	  }var A = null,
-	      B = null,
-	      F = !!window.FontFace;function G() {
-	    if (null === B) {
-	      var a = document.createElement("div");a.style.font = "condensed 100px sans-serif";B = "" !== a.style.font;
-	    }return B;
-	  }function H(a, b) {
-	    return [a.style, a.weight, G() ? a.stretch : "", "100px", b].join(" ");
+	  }var C = null,
+	      D = null,
+	      H = !!window.FontFace;function I() {
+	    if (null === D) {
+	      var a = document.createElement("div");try {
+	        a.style.font = "condensed 100px sans-serif";
+	      } catch (b) {}D = "" !== a.style.font;
+	    }return D;
+	  }function J(a, b) {
+	    return [a.style, a.weight, I() ? a.stretch : "", "100px", b].join(" ");
 	  }
-	  z.prototype.a = function (a, b) {
+	  B.prototype.a = function (a, b) {
 	    var c = this,
-	        q = a || "BESbswy",
-	        C = b || 3E3,
-	        D = Date.now();return new Promise(function (a, b) {
-	      if (F) {
-	        var p = function p() {
-	          Date.now() - D >= C ? b(c) : document.fonts.load(H(c, c.family), q).then(function (b) {
-	            1 <= b.length ? a(c) : setTimeout(p, 25);
-	          }).catch(function () {
+	        l = a || "BESbswy",
+	        E = b || 3E3,
+	        F = new Date().getTime();return new Promise(function (a, b) {
+	      if (H) {
+	        var q = function q() {
+	          new Date().getTime() - F >= E ? b(c) : document.fonts.load(J(c, c.family), l).then(function (b) {
+	            1 <= b.length ? a(c) : setTimeout(q, 25);
+	          }, function () {
 	            b(c);
 	          });
-	        };p();
-	      } else h(function () {
+	        };q();
+	      } else w(function () {
 	        function r() {
-	          var b;if (b = -1 != e && -1 != f || -1 != e && -1 != g || -1 != f && -1 != g) (b = e != f && e != g && f != g) || (null === A && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), A = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = A && (e == t && f == t && g == t || e == u && f == u && g == u || e == v && f == v && g == v)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(E), a(c));
-	        }function p() {
-	          if (Date.now() - D >= C) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
-	            var a = document.hidden;if (!0 === a || void 0 === a) e = l.a.offsetWidth, f = m.a.offsetWidth, g = n.a.offsetWidth, r();E = setTimeout(p, 50);
+	          var b;if (b = -1 != e && -1 != f || -1 != e && -1 != g || -1 != f && -1 != g) (b = e != f && e != g && f != g) || (null === C && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), C = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = C && (e == t && f == t && g == t || e == u && f == u && g == u || e == v && f == v && g == v)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(G), a(c));
+	        }function q() {
+	          if (new Date().getTime() - F >= E) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
+	            var a = document.hidden;if (!0 === a || void 0 === a) e = m.a.offsetWidth, f = n.a.offsetWidth, g = p.a.offsetWidth, r();G = setTimeout(q, 50);
 	          }
-	        }var l = new k(q),
-	            m = new k(q),
-	            n = new k(q),
+	        }var m = new x(l),
+	            n = new x(l),
+	            p = new x(l),
 	            e = -1,
 	            f = -1,
 	            g = -1,
@@ -4411,16 +4532,16 @@
 	            u = -1,
 	            v = -1,
 	            d = document.createElement("div"),
-	            E = 0;d.dir = "ltr";w(l, H(c, "sans-serif"));w(m, H(c, "serif"));w(n, H(c, "monospace"));d.appendChild(l.a);d.appendChild(m.a);d.appendChild(n.a);document.body.appendChild(d);t = l.a.offsetWidth;u = m.a.offsetWidth;v = n.a.offsetWidth;p();y(l, function (a) {
+	            G = 0;d.dir = "ltr";y(m, J(c, "sans-serif"));y(n, J(c, "serif"));y(p, J(c, "monospace"));d.appendChild(m.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);t = m.a.offsetWidth;u = n.a.offsetWidth;v = p.a.offsetWidth;q();A(m, function (a) {
 	          e = a;r();
-	        });w(l, H(c, '"' + c.family + '",sans-serif'));y(m, function (a) {
+	        });y(m, J(c, '"' + c.family + '",sans-serif'));A(n, function (a) {
 	          f = a;r();
-	        });w(m, H(c, '"' + c.family + '",serif'));y(n, function (a) {
+	        });y(n, J(c, '"' + c.family + '",serif'));A(p, function (a) {
 	          g = a;r();
-	        });w(n, H(c, '"' + c.family + '",monospace'));
+	        });y(p, J(c, '"' + c.family + '",monospace'));
 	      });
 	    });
-	  };window.FontFaceObserver = z;window.FontFaceObserver.prototype.check = z.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
+	  };window.FontFaceObserver = B;window.FontFaceObserver.prototype.check = B.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
 	})();
 
 /***/ }
