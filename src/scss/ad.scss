@@ -10,35 +10,42 @@
 //$viewportXXL: 1270px; // 1270 - ∞
 
 .has-ad-skyscraper-right {
-    //margin-right: 300px;
+    @include mqminmax($viewportXXL, 1440px) {
+        margin-right: 170px;
+    }
 }
 
+// Show superbanner first
 .sc-superbanner {
     display: none;
 
-    // show whole fireplace at 1440px
-    @include mqmin($viewportFireplace) {
+    // show superbanner at 728px
+    @include mqmin($viewportM - 40) {
         @include sc-topbanner();
     }
 }
 
+// show right skyscraper as second
+.sc-skyscraper-right {
+    display: none;
+
+    // show skyscraper at 1121px
+    @include mqmin($viewportXL + 10) {
+        @include sc-skyscraper();
+        //display: block;
+        right: -170px;
+    }
+}
+
+// show left skyscraper as third
 .sc-skyscraper-left {
     display: none;
 
-    // show whole fireplace at 1440px
-    @include mqmin($viewportFireplace) {
+    // show skyscraper at 1281px
+    @include mqmin($viewportXXL) {
         @include sc-skyscraper();
         left: -170px;
     }
 }
 
-.sc-skyscraper-right {
-    display: none;
 
-    // show whole fireplace at 1440px
-    @include mqmin($viewportFireplace) {
-        @include sc-skyscraper();
-        right: -170px;
-        display: block;
-    }
-}

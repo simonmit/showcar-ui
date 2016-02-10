@@ -5,6 +5,11 @@
 .sc-content-container {
   @include container;
   position: relative;
+  margin-left: auto;
+
+    @include mqmax($viewportXXL) {
+        margin-left: 0px;
+    }
 }
 
 .sc-grid-row {
