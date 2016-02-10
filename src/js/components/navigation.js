@@ -1,74 +1,106 @@
 class Navigation {
 
+    get KEY_DOWN() {
+      return 40;
+    }
+
+    get KEY_UP() {
+      return 38;
+    }
+
+    get KEY_LEFT() {
+      return 37;
+    }
+
+    get KEY_RIGHT() {
+      return  39;
+    }
+
+    get KEY_TAB() {
+       return 9;
+    }
+
+    get KEY_RETURN() {
+        return 13;
+    }
+
+    get KEY_ESCAPE() {
+        return 27;
+    }
+
     constructor(root) {
-        this.rootElement = root;
-        this.menuBtn     = this.rootElement.querySelector('.sc-btn-mobile-menu');
+        this.rootElement = $(root);
+        this.menuBtn     = $('.sc-btn-mobile-menu', root);
+        this.activeMenu  = null;
+        this.menuIsOpen  = false;
+        this.document    = $(document);
+        this.items       = [];
+        this.activeItem  = null;
 
         this.initEvents();
     }
 
     initEvents() {
-        this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
-        this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
-        document.addEventListener('keydown', this.onKeyDown.bind(this));
-        document.body.addEventListener('keyup', this.onKeyUp.bind(this));
-        document.addEventListener('click', this.closeMenuItem);
+        this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
+        this.document.on('click', $.proxy(this.escapeMenu, this));
+        this.document.on('keydown', $.proxy(this.onKeyDown, this));
+        this.document.on('keyup', $.proxy(this.onKeyUp, this));
+        // this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
+        // this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
     }
 
-    toggleMenuItem(element) {
-        element.classList.toggle('open');
-    }
-
-    closeMenuItem() {
-        var openMenuItem = document.querySelector('.open', this);
-        if (null === openMenuItem) {
-            return;
-        }
-        openMenuItem.classList.toggle('open', false)
-    }
-
-
-    clickMenuItem(event) {
-        let open           = this.rootElement.querySelector('.open'),
-            activeMenuItem = this.rootElement.querySelector('li.open li.active-item'),
-            element        = event.target || event.srcElement;
-
-        if (this.isTablableElementOfNavigation(element)) {
-            element = element.parentNode;
-        }
-
-        if (activeMenuItem) {
-            this.toggleActiveMenuItem(activeMenuItem);
-        }
-
-        if (open) {
-            this.toggleMenuItem(open);
-        }
-        if ('li' === element.nodeName.toLowerCase() && open !== element) {
-            this.toggleMenuItem(element);
-        }
-
+    toggleMenu(event) {
         event.stopPropagation();
+        let clickedMenu = $(event.target).closest('li');
+
+        if (this.activeMenu && this.menuIsOpen) {
+            this.closeMenu();
+            this.items = [];
+            if (clickedMenu[0] === this.activeMenu[0]) {
+                return;
+            }
+        }
+
+        this.setActiveMenu(clickedMenu);
+        this.openMenu();
     }
 
-    toggleMenu() {
-        this.rootElement.classList.toggle('open');
+    setActiveMenu(element) {
+        this.activeMenu = $(element);
     }
 
-    isTablableElementOfNavigation(element) {
-        return element.classList.contains('title') || 'span' === element.nodeName.toLowerCase();
+    closeMenu() {
+        this.activeMenu.removeClass('open');
+        this.unsetInactiveMenuItems();
+        this.items = [];
+        this.menuIsOpen = false;
     }
 
-    /**
-     * Prevent scrolling
-     *
-     *      @param event
-     * @returns {boolean}
-     */
+    openMenu() {
+        this.activeMenu.addClass('open');
+        this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
+        this.menuIsOpen = true;
+    }
+
+    escapeMenu(event) {
+        this.activeMenu && this.menuIsOpen && this.closeMenu();
+    }
+
+    isNavigationKey(keyCode) {
+        return [
+            this.KEY_DOWN,
+            this.KEY_LEFT,
+            this.KEY_RIGHT,
+            this.KEY_UP,
+            this.KEY_TAB
+        ].indexOf(keyCode) > -1;
+    }
+
+    // Prevent scrolling
     onKeyDown(event) {
-        let element = event.target || event.srcElement;
+        let keyCode = event.which;
 
-        if ([38, 40].indexOf(event.which) > -1 && this.isTablableElementOfNavigation(element)) {
+        if (this.menuIsOpen && this.isNavigationKey(keyCode)) {
             event.preventDefault();
             return false;
         }
@@ -77,65 +109,92 @@ class Navigation {
     }
 
     onKeyUp(event) {
-        let keyCode        = event.which,
-            activeMenuItem = this.rootElement.querySelector('li.open li.active-item');
+        let keyCode = event.which;
 
-        switch(keyCode) {
-            case 9: // tab
-                this.handleKeyTab(activeMenuItem);
+        switch (keyCode) {
+            case this.KEY_ESCAPE:
+                this.escapeMenu();
                 break;
-            case 38: // top
-                this.handleKeyTop(activeMenuItem);
+            case this.KEY_DOWN:
+                this.handleJumpDown();
                 break;
-            case 40: // bottom
-                this.handleKeyBottom(event, activeMenuItem);
+            case this.KEY_UP:
+                this.handleJumpUp();
+                break;
+            case this.KEY_TAB:
+            case this.KEY_RIGHT:
+                this.handleJumpRight();
+                break;
+            case this.KEY_LEFT:
+                this.handleJumpLeft();
                 break;
         }
+
+        event.preventDefault();
+        return false;
     }
 
-    toggleActiveMenuItem(element) {
-        element.classList.toggle('active-item');
-    }
-
-    handleKeyTab(activeMenuItem) {
-        if (activeMenuItem) { // close previous menu
-            this.toggleActiveMenuItem(activeMenuItem);
-            this.toggleMenuItem(this.rootElement.querySelector('li.open'));
+    handleJumpDown() {
+        // Expand the menu if closed
+        if (false === this.menuIsOpen) {
+            this.openMenu();
+            this.selectFirstItem();
+            return;
         }
+        let position = this.items.indexOf(this.activeItem);
+        this.items.length - 1 > position && position++;
+        this.setActiveMenuItem(this.items[position]);
     }
 
-    handleKeyTop(activeMenuItem) {
-        if (activeMenuItem) {
-            let previousMenuItem = activeMenuItem.previousElementSibling;
-            if (previousMenuItem) {
-                this.toggleActiveMenuItem(activeMenuItem);
-                this.toggleActiveMenuItem(previousMenuItem);
-            } else {
-                this.toggleActiveMenuItem(activeMenuItem);
-                this.toggleMenuItem(this.rootElement.querySelector('li.open'));
-            }
+    handleJumpUp() {
+        if (false === this.menuIsOpen) {
+            return;
         }
+        let position = this.items.indexOf(this.activeItem);
+        0 === position && this.closeMenu();
+        0 < position && position--;
+        this.setActiveMenuItem(this.items[position]);
     }
 
-    handleKeyBottom(event, activeMenuItem) {
-        let element = event.target || event.srcElement;
-
-        if (!element || !this.isTablableElementOfNavigation(element)) {
-            return false;
-        }
-
-        if (!activeMenuItem) {
-            this.clickMenuItem(event);
-            this.toggleActiveMenuItem(element.nextElementSibling.querySelector('ul:not(.submenu) > li:not(.subheadline)'));
+    handleJumpRight() {
+        let menu;
+        if (false === this.menuIsOpen) {
+            menu = this.rootElement.find('ul > li').first();
         } else {
-            let nextMenuItem = activeMenuItem.nextElementSibling;
-            if (nextMenuItem) {
-                this.toggleActiveMenuItem(activeMenuItem);
-                this.toggleActiveMenuItem(nextMenuItem);
-            }
+            menu = this.activeMenu.next('li');
         }
+        return this.selectMenu(menu);
     }
 
+    handleJumpLeft() {
+        return this.selectMenu(this.activeMenu.prev('li'));
+    }
+
+    setActiveMenuItem(element) {
+        this.unsetInactiveMenuItems();
+        element = $(element);
+        !element.hasClass('active-item') && element.addClass('active-item');
+        this.activeItem = element[0];
+    }
+
+    unsetInactiveMenuItems() {
+        this.rootElement.find('.active-item').removeClass('active-item');
+        this.activeItem = null;
+    }
+
+    selectFirstItem() {
+        this.setActiveMenuItem(this.items[0]);
+    }
+
+    selectMenu(element) {
+        if (1 !== element.length) {
+            return;
+        }
+        this.menuIsOpen && this.closeMenu();
+        this.setActiveMenu(element);
+        this.openMenu();
+        this.selectFirstItem();
+    }
 }
 
 let navigationElement = document.querySelector('.sc-navigation'),
