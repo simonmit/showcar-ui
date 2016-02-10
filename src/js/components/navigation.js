@@ -45,8 +45,6 @@ class Navigation {
         this.document.on('click', $.proxy(this.escapeMenu, this));
         this.document.on('keydown', $.proxy(this.onKeyDown, this));
         this.document.on('keyup', $.proxy(this.onKeyUp, this));
-        // this.rootElement.addEventListener('click', this.clickMenuItem.bind(this));
-        // this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
     }
 
     toggleMenu(event) {
@@ -157,17 +155,15 @@ class Navigation {
     }
 
     handleJumpRight() {
-        let menu;
-        if (false === this.menuIsOpen) {
-            menu = this.rootElement.find('ul > li').first();
-        } else {
-            menu = this.activeMenu.next('li');
-        }
-        return this.selectMenu(menu);
+        let menu = (false === this.menuIsOpen)
+            ?  this.rootElement.find('ul > li').first()
+            : this.activeMenu.next('li');
+
+        this.selectMenu(menu);
     }
 
     handleJumpLeft() {
-        return this.selectMenu(this.activeMenu.prev('li'));
+        this.selectMenu(this.activeMenu.prev('li'));
     }
 
     setActiveMenuItem(element) {
