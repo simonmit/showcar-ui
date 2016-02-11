@@ -97,16 +97,21 @@
     <a name="ad-banner"></a>
     <h2>Ad Banner</h2>
 
-    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
+    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div. There are also
+    the following additional classes which need to be integrated as needed in the <code>sc-content-container</code> div: <code>sc-skyscraper-left</code>,
+    <code>sc-skyscraper-right</code> and <code>sc-superbanner</code></p>
+    <p><div class="attention-block">Be sure to add an <code>overflow-x: hidden</code> to the body tag, so that there is no possibility of horizontal scrolling!</div></p>
 
     <pre><code class="html js-format-code">
         <!--
-        <div class="sc-content-container">
+    <body style="overflow-x: hidden;">
+        <div class="sc-content-container sc-skyscraper-left sc-skyscraper-right sc-superbanner">
             <div class="sc-skyscraper-left"></div>
             <div class="sc-superbanner"></div>
             <div class="sc-skyscraper-right"></div>
             This is inside the sc-content-container
         </div>
+    </body>
         -->
     </code></pre>
 
