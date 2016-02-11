@@ -10,8 +10,15 @@
 //$viewportXXL: 1270px; // 1270 - ∞
 
 .has-ad-skyscraper-right {
+
+    // 1270 - 1440
     @include mqminmax($viewportXXL, 1440px) {
         margin-right: 170px;
+    }
+
+    // 1100 - 1270
+    @include mqminmax($viewportXL, $viewportXXL) {
+        margin-left: 0;
     }
 }
 
@@ -32,7 +39,6 @@
     // show skyscraper at 1121px
     @include mqmin($viewportXL + 10) {
         @include sc-skyscraper();
-        //display: block;
         right: -170px;
     }
 }
@@ -41,7 +47,7 @@
 .sc-skyscraper-left {
     display: none;
 
-    // show skyscraper at 1281px
+    // show skyscraper at 1271px
     @include mqmin($viewportXXL) {
         @include sc-skyscraper();
         left: -170px;
