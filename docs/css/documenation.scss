@@ -122,7 +122,7 @@ pre {
     margin-top: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    overflow: hidden;
+
 
     &:before {
         content: 'Example:';
@@ -149,18 +149,28 @@ pre {
 .table-var-wrapper {
     margin: 0 -10px;
 
-    table {
+    .docs-table {
         table-layout: fixed;
+        margin: 10px;
+
+        .text-white {
+            color: #fff;
+        }
     }
 
-    .docs-table-variable-color {
+    .docs-table-variable-color,
+    .docs-table-variable-spacings {
+        width: calc(50% - 20px);
         margin: 10px;
 
         th,td {
-            width: 200px;
+            width: 50%;
         }
-        .text-white {
-            color: #fff;
+    }
+
+    .docs-table-variable-viewports {
+        th, td {
+            width: 200px;
         }
     }
 }
