@@ -263,6 +263,14 @@ pre {
     }
 }
 
+.attention-block {
+    background-color: $color-info-message;
+    border: 1px solid $black-30;
+    border-radius: $form-border-radius;
+    display: block;
+    padding: 10px;
+}
+
 @import "../../src/scss/mixins/color-selector";
 .sc-color-selector {
     input {

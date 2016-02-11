@@ -6,16 +6,19 @@ nav-index: 9
     <a name="ad-banner"></a>
     <h2>Ad Banner</h2>
 
-    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div:</p>
+    <p>The ad banner (fireplace) consists of three <code>div</code> elements which must be placed inside the <code>sc-content-container</code> div.</p>
+    <p><div class="attention-block">Be sure to add an <code>overflow-x: hidden</code> to the body tag, so that there is no possibility of horizontal scrolling!</div></p>
 
     <pre><code class="html js-format-code">
         <!--
+    <body style="overflow-x: hidden;">
         <div class="sc-content-container">
             <div class="sc-skyscraper-left"></div>
             <div class="sc-superbanner"></div>
             <div class="sc-skyscraper-right"></div>
             This is inside the sc-content-container
         </div>
+    </body>
         -->
     </code></pre>
 
