@@ -97,6 +97,7 @@ pre {
     }
 
     th, td {
+        width: 200px;
         padding: 8px;
         border-left: 1px solid $black-30;
         border-bottom: 1px solid $black-30;
@@ -167,14 +168,7 @@ pre {
             width: 50%;
         }
     }
-
-    .docs-table-variable-viewports {
-        th, td {
-            width: 200px;
-        }
-    }
 }
-
 
 .example-content-container {
     .sc-content-container {
@@ -195,12 +189,6 @@ pre {
 
     [class*='sc-grid-col-'] {
         word-break: break-all;
-    }
-}
-
-.docs-table-grid {
-    th, td {
-        width: 33.3%;
     }
 }
 
