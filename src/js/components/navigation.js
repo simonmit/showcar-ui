@@ -56,10 +56,16 @@ class Navigation {
             clickedMenu = this.rootElement;
         }
 
-        if (this.activeMenu && this.menuIsOpen && this.activeMenu != this.rootElement) {
-            this.closeMenu();
-            if (clickedMenu[0] === this.activeMenu[0]) {
+        if (this.activeMenu && this.menuIsOpen) {
+
+            if (this.activeMenu[0] == clickedMenu[0]) {
+                this.closeMenu();
                 return;
+            } else if (this.rootElement[0] == clickedMenu[0]) {
+                this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
+                return;
+            } else if (this.activeMenu[0] != this.rootElement[0]) {
+                this.closeMenu();
             }
         }
 
@@ -71,8 +77,9 @@ class Navigation {
         this.activeMenu = $(element);
     }
 
-    closeMenu() {
-        this.activeMenu.removeClass('open');
+    closeMenu(menu) {
+        let closeTarget = menu || this.activeMenu;
+        closeTarget.removeClass('open');
         this.unsetInactiveMenuItems();
         this.items = [];
         this.menuIsOpen = false;
