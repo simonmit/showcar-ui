@@ -42,6 +42,7 @@ class Navigation {
 
     initEvents() {
         this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
+        this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
         this.document.on('click', $.proxy(this.escapeMenu, this));
         this.document.on('keydown', $.proxy(this.onKeyDown, this));
         this.document.on('keyup', $.proxy(this.onKeyUp, this));
@@ -51,7 +52,11 @@ class Navigation {
         event.stopPropagation();
         let clickedMenu = $(event.target).closest('li');
 
-        if (this.activeMenu && this.menuIsOpen) {
+        if ($(event.target).closest('li').length === 0) {
+            clickedMenu = this.rootElement;
+        }
+
+        if (this.activeMenu && this.menuIsOpen && this.activeMenu != this.rootElement) {
             this.closeMenu();
             if (clickedMenu[0] === this.activeMenu[0]) {
                 return;
