@@ -51,19 +51,22 @@
     }
 
     &.info-page {
-      display: block;
-      max-width: 124px;
-      a {
-        padding: 0 10px;
-      }
+      display: none;
+    }
+
+    @include mqminmax($viewportS - 1, 420) {
+        &.info-page {
+            display: inline-block;
+
+            a {
+                padding: 0 10px;
+                white-space: nowrap;
+            }
+        }
     }
 
     @include mqmin($viewportM) {
       display: inline-block;
-
-      &.info-page {
-        display: none;
-      }
     }
   }
 

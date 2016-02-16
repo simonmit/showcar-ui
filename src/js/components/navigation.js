@@ -29,19 +29,20 @@ class Navigation {
     }
 
     constructor(root) {
+        this.document    = $(document);
         this.rootElement = $(root);
-        this.menuBtn     = $('.sc-btn-mobile-menu', root);
+        this.menuBtn     = $('.sc-btn-mobile-menu', this.rootElement);
+        this.activeItem  = null;
         this.activeMenu  = null;
         this.menuIsOpen  = false;
-        this.document    = $(document);
+        this.menus       = $('nav > ul > li', this.rootElement);
         this.items       = [];
-        this.activeItem  = null;
-
         this.initEvents();
     }
 
     initEvents() {
         this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
+        this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
         this.document.on('click', $.proxy(this.escapeMenu, this));
         this.document.on('keydown', $.proxy(this.onKeyDown, this));
         this.document.on('keyup', $.proxy(this.onKeyUp, this));
@@ -51,11 +52,20 @@ class Navigation {
         event.stopPropagation();
         let clickedMenu = $(event.target).closest('li');
 
+        if ($(event.target).closest('li').length === 0) {
+            clickedMenu = this.rootElement;
+        }
+
         if (this.activeMenu && this.menuIsOpen) {
-            this.closeMenu();
-            this.items = [];
-            if (clickedMenu[0] === this.activeMenu[0]) {
+
+            if (this.activeMenu[0] == clickedMenu[0]) {
+                this.closeMenu();
                 return;
+            } else if (this.rootElement[0] == clickedMenu[0]) {
+                this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
+                return;
+            } else if (this.activeMenu[0] != this.rootElement[0]) {
+                this.closeMenu();
             }
         }
 
@@ -67,8 +77,9 @@ class Navigation {
         this.activeMenu = $(element);
     }
 
-    closeMenu() {
-        this.activeMenu.removeClass('open');
+    closeMenu(menu) {
+        let closeTarget = menu || this.activeMenu;
+        closeTarget.removeClass('open');
         this.unsetInactiveMenuItems();
         this.items = [];
         this.menuIsOpen = false;
@@ -120,6 +131,8 @@ class Navigation {
                 this.handleJumpUp();
                 break;
             case this.KEY_TAB:
+                !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+                break;
             case this.KEY_RIGHT:
                 this.handleJumpRight();
                 break;
@@ -155,15 +168,15 @@ class Navigation {
     }
 
     handleJumpRight() {
-        let menu = (false === this.menuIsOpen)
-            ?  this.rootElement.find('ul > li').first()
-            : this.activeMenu.next('li');
-
-        this.selectMenu(menu);
+        let current = this.menus.indexOf(this.activeMenu[0]);
+        let newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
+        this.selectMenu(this.menus[newMenuIdx]);
     }
 
     handleJumpLeft() {
-        this.selectMenu(this.activeMenu.prev('li'));
+        let current = this.menus.indexOf(this.activeMenu[0]);
+        let newMenuIdx = (0 < current) ? current - 1 : this.menus.length - 1;
+        this.selectMenu(this.menus[newMenuIdx]);
     }
 
     setActiveMenuItem(element) {
@@ -171,6 +184,7 @@ class Navigation {
         element = $(element);
         !element.hasClass('active-item') && element.addClass('active-item');
         this.activeItem = element[0];
+        $('a', element).focus();
     }
 
     unsetInactiveMenuItems() {
@@ -183,7 +197,7 @@ class Navigation {
     }
 
     selectMenu(element) {
-        if (1 !== element.length) {
+        if ('object' !== typeof element) {
             return;
         }
         this.menuIsOpen && this.closeMenu();

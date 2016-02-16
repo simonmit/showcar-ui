@@ -5,6 +5,8 @@ require('./components/navigation.js');
 require('./components/polyfills.js')();
 require('./components/collapse.js')();
 
+window.notification = require('./components/notification.js');
+
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
 var warn = function (msg) {

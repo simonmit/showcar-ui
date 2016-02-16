@@ -3,7 +3,7 @@
 
 
 body {
-    //padding: 20px 40px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -75,11 +75,6 @@ pre {
         margin-left: 0;
     }
 
-    @include mqmin($viewportM + 1) {
-        position: absolute;
-        top: 0;
-        max-width: 200px;
-    }
     @include mqmax($viewportM) {
         border-bottom: 1px solid $black-30;
     }
@@ -102,6 +97,7 @@ pre {
     }
 
     th, td {
+        width: 200px;
         padding: 8px;
         border-left: 1px solid $black-30;
         border-bottom: 1px solid $black-30;
@@ -128,6 +124,7 @@ pre {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 
+
     &:before {
         content: 'Example:';
         display: block;
@@ -153,22 +150,25 @@ pre {
 .table-var-wrapper {
     margin: 0 -10px;
 
-    table {
+    .docs-table {
         table-layout: fixed;
-    }
-
-    .docs-table-variable-color {
         margin: 10px;
 
-        th,td {
-            width: 200px;
-        }
         .text-white {
             color: #fff;
         }
     }
-}
 
+    .docs-table-variable-color,
+    .docs-table-variable-spacings {
+        width: calc(50% - 20px);
+        margin: 10px;
+
+        th,td {
+            width: 50%;
+        }
+    }
+}
 
 .example-content-container {
     .sc-content-container {
@@ -189,12 +189,6 @@ pre {
 
     [class*='sc-grid-col-'] {
         word-break: break-all;
-    }
-}
-
-.docs-table-grid {
-    th, td {
-        width: 33.3%;
     }
 }
 
@@ -265,6 +259,14 @@ pre {
     div {
         background-color: $orange-100;
     }
+}
+
+.attention-block {
+    background-color: $color-info-message;
+    border: 1px solid $black-30;
+    border-radius: $form-border-radius;
+    display: block;
+    padding: 10px;
 }
 
 @import "../../src/scss/mixins/color-selector";
@@ -342,6 +344,9 @@ pre {
 
     &.version-mobile-320 {
         width: 320px;
+        .info-page {
+            display: inline;
+        }
     }
 
     &.version-mobile-240 {

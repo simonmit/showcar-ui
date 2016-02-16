@@ -7,7 +7,8 @@ sub-nav:
 - Sticky Element
 - Rotating Arrow
 - Navigation
-- Pager
+- Pagination
+- Notifications
 ---
 <div>
     <a name="components"></a>
@@ -395,9 +396,8 @@ sub-nav:
 -->
     </code></pre>
 
-
-    <a name="pager"></a>
-    <h3>Pager</h3>
+    <a name="pagination"></a>
+    <h3>Pagination</h3>
 
     <div class="example">
         <ul class="sc-pagination">
@@ -406,6 +406,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a href="javascript:void(0)">2</a></li>
             <li><a class="active" href="javascript:void(0)">3</a></li>
@@ -431,6 +432,7 @@ sub-nav:
             <as24-icon type="arrow"></as24-icon> Previous
         </a>
     </li>
+    <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
     <li><a href="javascript:void(0)">1</a></li>
     <li><a href="javascript:void(0)">2</a></li>
     <li><a class="active" href="javascript:void(0)">3</a></li>
@@ -461,6 +463,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a href="javascript:void(0)">2</a></li>
             <li><a href="javascript:void(0)">3</a></li>
@@ -487,6 +490,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a href="javascript:void(0)">2</a></li>
             <li><a href="javascript:void(0)">3</a></li>
@@ -511,6 +515,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a href="javascript:void(0)">2</a></li>
             <li><a href="javascript:void(0)">3</a></li>
@@ -536,6 +541,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a href="javascript:void(0)">2</a></li>
             <li><a class="active" href="javascript:void(0)">3</a></li>
@@ -558,6 +564,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li><a href="javascript:void(0)">1</a></li>
             <li><a class="active" href="javascript:void(0)">2</a></li>
             <li><a href="javascript:void(0)">3</a></li>
@@ -578,9 +585,7 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
-            <li class="info-page">
-                <a class="disabled" href="">3 / 20</a>
-            </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li class="next-page">
                 <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
@@ -596,11 +601,90 @@ sub-nav:
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
+            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li class="next-page">
                 <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
             </li>
         </ul>
+    </div>
+
+    <a name="notifications"></a>
+    <h3>Notifications</h3>
+
+    <h4>Demo:</h4>
+    <div class="example example-notification">
+        <as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2500">
+            Go to <a href="#">my watchlist</a>.
+        </as24-notification>
+        <as24-notification type="information" id="info1" title="Information for you">
+            Information here...
+        </as24-notification>
+        <as24-notification type="error" id="error1" title="Error occurred">
+            Error here...
+        </as24-notification>
+        <div class="sc-text-center">
+            <button class="notification-demo sc-btn-bob-m" data-id="succ1">Show success notification with timeout</button>&nbsp;
+            <button class="notification-demo sc-btn-ross-m" data-id="info1">Toggle info notification</button>&nbsp;
+            <button class="notification-demo sc-btn-bob-m" data-id="error1">Toggle error notification</button>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<as24-notification type="success" id="succ1" title="Vehicle is added to watchlist." timeout="2500">
+    Go to <a href="#">my watchlist</a>.
+</as24-notification>
+
+<as24-notification type="information" id="info1" title="Information for you">
+    Information here...
+</as24-notification>
+
+<as24-notification type="error" id="succ1" title="Error occurred">
+    Error here...
+</as24-notification>
+-->
+    </code></pre>
+
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-6 sc-grid-col-m-5 sc-grid-col-s-12">
+            <h4>Attributes for a notification</h4>
+            <table class="docs-table docs-table-visibility">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>type</td>
+                    <td>Allowed types are: success, information, error</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Notification title</td>
+                </tr>
+                <tr>
+                    <td>timeout</td>
+                    <td>close the notification after [timeout] ms</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="sc-grid-col-6 sc-grid-col-m-7 sc-grid-col-s-12">
+            <h4>Show a notification with javascript</h4>
+
+            <div class="example example-notification">
+                Add the class "show" to a as24-notification tag:
+            </div>
+            <pre><code class="js-format-code">
+<!--
+var notification = document.querySelector('#succ1');
+notification.classList.toggle('show');
+-->
+            </code></pre>
+        </div>
+        <hr>
     </div>
 
 </div>
