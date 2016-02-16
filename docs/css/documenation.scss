@@ -344,6 +344,9 @@ pre {
 
     &.version-mobile-320 {
         width: 320px;
+        .info-page {
+            display: inline;
+        }
     }
 
     &.version-mobile-240 {
