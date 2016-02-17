@@ -34,14 +34,11 @@ if (!window.storage) {
     warn('window.storage is already registered.');
 }
 
-if (!isRegistered('as24-icon')) {
-    require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
-}
-
 if (!isRegistered('custom-dropdown')) {
     require('./components/custom-dropdown.js');
 }
 
+require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 require('./components/navigation.js');
 require('./components/rotating-arrow.js')();
 require('./components/sticky.js')();
