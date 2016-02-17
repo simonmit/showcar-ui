@@ -25,6 +25,7 @@ body {
 
 *[class^="sc-grid-col"] {
   margin-top: $grid-gutter-width;
+  min-width: 0;
 }
 
 .sc-stripe {
