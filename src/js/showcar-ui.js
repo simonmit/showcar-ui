@@ -15,15 +15,17 @@ var warn = function (msg) {
     }
     window.console.warn(msg);
 };
+var isRegistered = function(name) {
+    return document.createElement(name).constructor !== HTMLElement;
+};
 
-
-if (!document.getElementsByTagName('as24-icon')) {
+if (!isRegistered('as24-icon')) {
     require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 } else {
     warn('as24-icon is already registered.');
 }
 
-if (!document.getElementsByTagName('custom-dropdown')) {
+if (!isRegistered('custom-dropdown')) {
     require('./components/custom-dropdown.js');
 } else {
     warn('custom-dropdown is already registered.');
