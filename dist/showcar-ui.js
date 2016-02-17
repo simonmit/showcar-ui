@@ -47,36 +47,55 @@
 	'use strict';
 	
 	__webpack_require__(1);
+	__webpack_require__(2)();
+	__webpack_require__(3)();
+	__webpack_require__(4);
+	__webpack_require__(5)();
+	__webpack_require__(12)();
 	
-	var polyfills = __webpack_require__(2);
-	polyfills();
+	window.notification = __webpack_require__(13);
 	
-	var collapse = __webpack_require__(9);
-	collapse();
-	
-	__webpack_require__(10);
-	
-	window.Storage = __webpack_require__(11);
-	
-	__webpack_require__(15)();
-	__webpack_require__(16);
-	__webpack_require__(17)();
-	__webpack_require__(18);
-	
-	window.notification = __webpack_require__(19);
-	
-	var FontFaceObserver = __webpack_require__(20);
+	var FontFaceObserver = __webpack_require__(14);
 	var observer = new FontFaceObserver('Source Sans Pro');
+	var warn = function warn(msg) {
+	    if (!window || !window.console) {
+	        return;
+	    }
+	    window.console.warn(msg);
+	};
+	
+	if (!document.getElementsByTagName('as24-icon')) {
+	    __webpack_require__(15);
+	} else {
+	    warn('as24-icon is already registered.');
+	}
+	
+	if (!document.getElementsByTagName('custom-dropdown')) {
+	    __webpack_require__(16);
+	} else {
+	    warn('custom-dropdown is already registered.');
+	}
+	
+	if (!window.storage) {
+	    window.Storage = __webpack_require__(17);
+	} else {
+	    warn('window.storage is already registered.');
+	}
+	
+	if (!window.notification) {
+	    window.notification = __webpack_require__(13);
+	} else {
+	    warn('window.notification is already registered.');
+	}
+	
 	try {
 	    observer.check().then(function () {
 	        $('body').addClass('font-loaded');
 	    }, function () {
-	        // do nothing if font is not existing
+	        warn('Cannot load font.');
 	    });
 	} catch (e) {
-	    if (console) {
-	        console.log('Failed to use FontFaceObserver', e);
-	    }
+	    warn('Failed to use FontFaceObserver', e);
 	}
 
 /***/ },
@@ -807,6 +826,343 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function () {
+	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="arrow"]'), function (arrow) {
+	        var arrowEl = $(arrow);
+	        $(arrowEl.data('target')).on('click', function () {
+	            return arrowEl.toggleClass('open');
+	        });
+	    });
+	};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function () {
+	    function handleStickies() {
+	        var scrollPos = $(window).scrollTop();
+	
+	        var stickyButtons = $('[data-sticky]');
+	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
+	            var stickyEl = $(stickyButton);
+	            var id = stickyEl.attr('data-sticky');
+	            var undockEl = $('[data-sticky-undock="' + id + '"]');
+	            var dockEl = $('[data-sticky-dock="' + id + '"]');
+	
+	            // if there is no dock and undock element leave sticky class
+	            if (undockEl.length === 0 && dockEl.length === 0) {
+	                stickyEl.addClass('sticky');
+	            }
+	
+	            // get undock position
+	            var undockPos = 0;
+	            if (undockEl.length > 0) {
+	                undockPos = undockEl.offset().top;
+	            }
+	
+	            // get dock position
+	            var dockPos = $(document).height();
+	            if (dockEl.length > 0) {
+	                dockPos = dockEl.offset().top;
+	            }
+	
+	            // if element is within scrolling area, scroll, else don't
+	            if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
+	                stickyEl.addClass('sc-sticky');
+	            } else {
+	                stickyEl.removeClass('sc-sticky');
+	            }
+	        });
+	    }
+	
+	    handleStickies();
+	
+	    window.addEventListener("deviceorientation", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("resize", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("pageSizeChanged", function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('scroll', function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('collapse', function () {
+	        handleStickies();
+	    });
+	};
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Navigation = function () {
+	    _createClass(Navigation, [{
+	        key: 'KEY_DOWN',
+	        get: function get() {
+	            return 40;
+	        }
+	    }, {
+	        key: 'KEY_UP',
+	        get: function get() {
+	            return 38;
+	        }
+	    }, {
+	        key: 'KEY_LEFT',
+	        get: function get() {
+	            return 37;
+	        }
+	    }, {
+	        key: 'KEY_RIGHT',
+	        get: function get() {
+	            return 39;
+	        }
+	    }, {
+	        key: 'KEY_TAB',
+	        get: function get() {
+	            return 9;
+	        }
+	    }, {
+	        key: 'KEY_RETURN',
+	        get: function get() {
+	            return 13;
+	        }
+	    }, {
+	        key: 'KEY_ESCAPE',
+	        get: function get() {
+	            return 27;
+	        }
+	    }]);
+	
+	    function Navigation(root) {
+	        _classCallCheck(this, Navigation);
+	
+	        this.document = $(document);
+	        this.rootElement = $(root);
+	        this.menuBtn = $('.sc-btn-mobile-menu', this.rootElement);
+	        this.activeItem = null;
+	        this.activeMenu = null;
+	        this.menuIsOpen = false;
+	        this.menus = $('nav > ul > li', this.rootElement);
+	        this.items = [];
+	        this.initEvents();
+	    }
+	
+	    _createClass(Navigation, [{
+	        key: 'initEvents',
+	        value: function initEvents() {
+	            this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
+	            this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
+	            this.document.on('click', $.proxy(this.escapeMenu, this));
+	            this.document.on('keydown', $.proxy(this.onKeyDown, this));
+	            this.document.on('keyup', $.proxy(this.onKeyUp, this));
+	        }
+	    }, {
+	        key: 'toggleMenu',
+	        value: function toggleMenu(event) {
+	            event.stopPropagation();
+	            var clickedMenu = $(event.target).closest('li');
+	
+	            if ($(event.target).closest('li').length === 0) {
+	                clickedMenu = this.rootElement;
+	            }
+	
+	            if (this.activeMenu && this.menuIsOpen) {
+	
+	                if (this.activeMenu[0] == clickedMenu[0]) {
+	                    this.closeMenu();
+	                    return;
+	                } else if (this.rootElement[0] == clickedMenu[0]) {
+	                    this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
+	                    return;
+	                } else if (this.activeMenu[0] != this.rootElement[0]) {
+	                    this.closeMenu();
+	                }
+	            }
+	
+	            this.setActiveMenu(clickedMenu);
+	            this.openMenu();
+	        }
+	    }, {
+	        key: 'setActiveMenu',
+	        value: function setActiveMenu(element) {
+	            this.activeMenu = $(element);
+	        }
+	    }, {
+	        key: 'closeMenu',
+	        value: function closeMenu(menu) {
+	            var closeTarget = menu || this.activeMenu;
+	            closeTarget.removeClass('open');
+	            this.unsetInactiveMenuItems();
+	            this.items = [];
+	            this.menuIsOpen = false;
+	        }
+	    }, {
+	        key: 'openMenu',
+	        value: function openMenu() {
+	            this.activeMenu.addClass('open');
+	            this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
+	            this.menuIsOpen = true;
+	        }
+	    }, {
+	        key: 'escapeMenu',
+	        value: function escapeMenu(event) {
+	            this.activeMenu && this.menuIsOpen && this.closeMenu();
+	        }
+	    }, {
+	        key: 'isNavigationKey',
+	        value: function isNavigationKey(keyCode) {
+	            return [this.KEY_DOWN, this.KEY_LEFT, this.KEY_RIGHT, this.KEY_UP, this.KEY_TAB].indexOf(keyCode) > -1;
+	        }
+	
+	        // Prevent scrolling
+	
+	    }, {
+	        key: 'onKeyDown',
+	        value: function onKeyDown(event) {
+	            var keyCode = event.which;
+	
+	            if (this.menuIsOpen && this.isNavigationKey(keyCode)) {
+	                event.preventDefault();
+	                return false;
+	            }
+	
+	            return true;
+	        }
+	    }, {
+	        key: 'onKeyUp',
+	        value: function onKeyUp(event) {
+	            var keyCode = event.which;
+	
+	            switch (keyCode) {
+	                case this.KEY_ESCAPE:
+	                    this.escapeMenu();
+	                    break;
+	                case this.KEY_DOWN:
+	                    this.handleJumpDown();
+	                    break;
+	                case this.KEY_UP:
+	                    this.handleJumpUp();
+	                    break;
+	                case this.KEY_TAB:
+	                    !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+	                    break;
+	                case this.KEY_RIGHT:
+	                    this.handleJumpRight();
+	                    break;
+	                case this.KEY_LEFT:
+	                    this.handleJumpLeft();
+	                    break;
+	            }
+	
+	            event.preventDefault();
+	            return false;
+	        }
+	    }, {
+	        key: 'handleJumpDown',
+	        value: function handleJumpDown() {
+	            // Expand the menu if closed
+	            if (false === this.menuIsOpen) {
+	                this.openMenu();
+	                this.selectFirstItem();
+	                return;
+	            }
+	            var position = this.items.indexOf(this.activeItem);
+	            this.items.length - 1 > position && position++;
+	            this.setActiveMenuItem(this.items[position]);
+	        }
+	    }, {
+	        key: 'handleJumpUp',
+	        value: function handleJumpUp() {
+	            if (false === this.menuIsOpen) {
+	                return;
+	            }
+	            var position = this.items.indexOf(this.activeItem);
+	            0 === position && this.closeMenu();
+	            0 < position && position--;
+	            this.setActiveMenuItem(this.items[position]);
+	        }
+	    }, {
+	        key: 'handleJumpRight',
+	        value: function handleJumpRight() {
+	            var current = this.menus.indexOf(this.activeMenu[0]);
+	            var newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
+	            this.selectMenu(this.menus[newMenuIdx]);
+	        }
+	    }, {
+	        key: 'handleJumpLeft',
+	        value: function handleJumpLeft() {
+	            var current = this.menus.indexOf(this.activeMenu[0]);
+	            var newMenuIdx = 0 < current ? current - 1 : this.menus.length - 1;
+	            this.selectMenu(this.menus[newMenuIdx]);
+	        }
+	    }, {
+	        key: 'setActiveMenuItem',
+	        value: function setActiveMenuItem(element) {
+	            this.unsetInactiveMenuItems();
+	            element = $(element);
+	            !element.hasClass('active-item') && element.addClass('active-item');
+	            this.activeItem = element[0];
+	            $('a', element).focus();
+	        }
+	    }, {
+	        key: 'unsetInactiveMenuItems',
+	        value: function unsetInactiveMenuItems() {
+	            this.rootElement.find('.active-item').removeClass('active-item');
+	            this.activeItem = null;
+	        }
+	    }, {
+	        key: 'selectFirstItem',
+	        value: function selectFirstItem() {
+	            this.setActiveMenuItem(this.items[0]);
+	        }
+	    }, {
+	        key: 'selectMenu',
+	        value: function selectMenu(element) {
+	            if ('object' !== (typeof element === 'undefined' ? 'undefined' : _typeof(element))) {
+	                return;
+	            }
+	            this.menuIsOpen && this.closeMenu();
+	            this.setActiveMenu(element);
+	            this.openMenu();
+	            this.selectFirstItem();
+	        }
+	    }]);
+	
+	    return Navigation;
+	}();
+	
+	var navigationElement = document.querySelector('.sc-navigation'),
+	    navigation = null;
+	if (navigationElement) {
+	    navigation = new Navigation(navigationElement);
+	}
+	
+	module.exports = navigation;
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -820,19 +1176,19 @@
 	
 	    var isEs5Browser = 'map' in Array.prototype && 'isArray' in Array && 'bind' in Function.prototype && 'keys' in Object && 'trim' in String.prototype;
 	
-	    __webpack_require__(3);
-	    __webpack_require__(4);
+	    __webpack_require__(6);
+	    __webpack_require__(7);
 	
 	    if (!isDom4Browser) {
-	        __webpack_require__(6);
+	        __webpack_require__(9);
 	    }
 	    if (!isEs5Browser) {
-	        __webpack_require__(7);
+	        __webpack_require__(10);
 	    }
 	    if (needsPlaceholderPolyfill) {
 	        //check if this is required anymore and can be dropped - midler, 09.02.2016
 	        //needed only for IE9 support
-	        __webpack_require__(8);
+	        __webpack_require__(11);
 	    }
 	
 	    start();
@@ -845,7 +1201,7 @@
 	};
 
 /***/ },
-/* 3 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1048,16 +1404,16 @@
 	})(window, document, Object, "registerElement");
 
 /***/ },
-/* 4 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {"use strict";
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	/*! Picturefill - v3.0.1 - 2015-09-30
-	 * http://scottjehl.github.io/picturefill
-	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+	/*! picturefill - v3.0.2 - 2016-02-12
+	 * https://scottjehl.github.io/picturefill/
+	 * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
 	 */
 	/*! Gecko-Picture - v1.0
 	 * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
@@ -1068,7 +1424,7 @@
 		/*jshint eqnull:true */
 		var ua = navigator.userAgent;
 	
-		if (window.HTMLPictureElement && /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 41) {
+		if (window.HTMLPictureElement && /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45) {
 			addEventListener("resize", function () {
 				var timer;
 	
@@ -1128,7 +1484,7 @@
 		}
 	})(window);
 	
-	/*! Picturefill - v3.0.1
+	/*! Picturefill - v3.0.2
 	 * http://scottjehl.github.io/picturefill
 	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
 	 *  License: MIT
@@ -1145,6 +1501,7 @@
 		var warn, eminpx, alwaysCheckWDescriptor, evalId;
 		// local object for method references and testing exposure
 		var pf = {};
+		var isSupportTestReady = false;
 		var noop = function noop() {};
 		var image = document.createElement("img");
 		var getImgAttr = image.getAttribute;
@@ -1317,6 +1674,11 @@
 	  * @param opt
 	  */
 		var picturefill = function picturefill(opt) {
+	
+			if (!isSupportTestReady) {
+				return;
+			}
+	
 			var elements, i, plen;
 	
 			var options = opt || {};
@@ -1381,7 +1743,7 @@
 		}
 	
 		// test svg support
-		types["image/svg+xml"] = document.implementation.hasFeature("http://wwwindow.w3.org/TR/SVG11/feature#Image", "1.1");
+		types["image/svg+xml"] = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
 	
 		/**
 	  * updates the internal vW property with the current viewport width in px
@@ -2064,6 +2426,8 @@
 		pf.supSizes = "sizes" in image;
 		pf.supPicture = !!window.HTMLPictureElement;
 	
+		// UC browser does claim to support srcset and picture, but not sizes,
+		// this extended test reveals the browser does support nothing
 		if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
 			(function (image2) {
 				image.srcset = "data:,a";
@@ -2073,15 +2437,43 @@
 			})(document.createElement("img"));
 		}
 	
+		// Safari9 has basic support for sizes, but does't expose the `sizes` idl attribute
+		if (pf.supSrcset && !pf.supSizes) {
+	
+			(function () {
+				var width2 = "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
+				var width1 = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+				var img = document.createElement("img");
+				var test = function test() {
+					var width = img.width;
+	
+					if (width === 2) {
+						pf.supSizes = true;
+					}
+	
+					alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
+	
+					isSupportTestReady = true;
+					// force async
+					setTimeout(picturefill);
+				};
+	
+				img.onload = test;
+				img.onerror = test;
+				img.setAttribute("sizes", "9px");
+	
+				img.srcset = width1 + " 1w," + width2 + " 9w";
+				img.src = width1;
+			})();
+		} else {
+			isSupportTestReady = true;
+		}
+	
 		// using pf.qsa instead of dom traversing does scale much better,
 		// especially on sites mixing responsive and non-responsive images
 		pf.selShort = "picture>img,img[srcset]";
 		pf.sel = pf.selShort;
 		pf.cfg = cfg;
-	
-		if (pf.supSrcset) {
-			pf.sel += ",img[" + srcsetAttr + "]";
-		}
 	
 		/**
 	  * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
@@ -2091,8 +2483,6 @@
 	
 		// container of supported mime types that one might need to qualify before using
 		pf.types = types;
-	
-		alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
 	
 		pf.setSize = noop;
 	
@@ -2112,10 +2502,10 @@
 	  * Can be extended with jQuery/Sizzle for IE7 support
 	  * @param context
 	  * @param sel
-	  * @returns {NodeList}
+	  * @returns {NodeList|Array}
 	  */
 		pf.qsa = function (context, sel) {
-			return context.querySelectorAll(sel);
+			return "querySelector" in context ? context.querySelectorAll(sel) : [];
 		};
 	
 		/**
@@ -2435,7 +2825,7 @@
 	
 			// if img has picture or the srcset was removed or has a srcset and does not support srcset at all
 			// or has a w descriptor (and does not support sizes) set support to false to evaluate
-			imageData.supported = !(hasPicture || imageSet && !pf.supSrcset || isWDescripor);
+			imageData.supported = !(hasPicture || imageSet && !pf.supSrcset || isWDescripor && !pf.supSizes);
 	
 			if (srcsetParsed && pf.supSrcset && !imageData.supported) {
 				if (srcsetAttribute) {
@@ -2601,10 +2991,10 @@
 			types["image/webp"] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");
 		}
 	})(window, document);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)(module)))
 
 /***/ },
-/* 5 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2621,7 +3011,7 @@
 	};
 
 /***/ },
-/* 6 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2771,7 +3161,7 @@
 	})(window);
 
 /***/ },
-/* 7 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -3415,7 +3805,7 @@
 	//# sourceMappingURL=es5-shim.map
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3544,7 +3934,7 @@
 	}(undefined);
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3568,7 +3958,205 @@
 	};
 
 /***/ },
-/* 10 */
+/* 13 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Notification = function () {
+	    function Notification(element) {
+	        _classCallCheck(this, Notification);
+	
+	        this.element = element;
+	        this._body = '';
+	        this.body = this.element.innerHTML;
+	    }
+	
+	    _createClass(Notification, [{
+	        key: 'hide',
+	        value: function hide() {
+	            this.element.classList.remove('show');
+	        }
+	
+	        /**
+	         * Create the html structure of the notification element
+	         */
+	
+	    }, {
+	        key: 'create',
+	        value: function create() {
+	            this.element.innerHTML = '';
+	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+	            this.createElement('div', container, this.body);
+	        }
+	
+	        /**
+	         * @param {String} attribute
+	         * @param {String} value
+	         */
+	
+	    }, {
+	        key: 'update',
+	        value: function update(attribute, value) {
+	            if ('class' === attribute && 'show' === value && this.timeout) {
+	                window.setTimeout(this.hide.bind(this), this.timeout);
+	            }
+	        }
+	
+	        /**
+	         * @param {String} name
+	         * @param {String} body
+	         * @param {Array} classes
+	         * @param {HTMLElement} parent
+	         * @returns {Element}
+	         */
+	
+	    }, {
+	        key: 'createElement',
+	        value: function createElement(name, parent, body) {
+	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
+	
+	            var element = document.createElement(name);
+	
+	            classes.forEach(function (cls) {
+	                element.classList.add(cls);
+	            });
+	            element.innerHTML = body;
+	
+	            parent.appendChild(element);
+	
+	            return element;
+	        }
+	    }, {
+	        key: 'title',
+	        get: function get() {
+	            return this.element.getAttribute('title');
+	        }
+	    }, {
+	        key: 'timeout',
+	        get: function get() {
+	            return this.element.getAttribute('timeout');
+	        }
+	    }, {
+	        key: 'body',
+	        get: function get() {
+	            return this._body;
+	        },
+	        set: function set(value) {
+	            this._body = value;
+	        }
+	    }]);
+	
+	    return Notification;
+	}();
+	
+	function onElementCreated() {
+	    this.notification = new Notification(this);
+	    this.notification.create();
+	}
+	
+	function onElementChanged(attributeName, previousValue, value) {
+	    this.notification.update(attributeName, value);
+	}
+	
+	var tagName = 'as24-notification';
+	
+	module.exports = document.registerElement(tagName, {
+	    prototype: Object.create(HTMLElement.prototype, {
+	        createdCallback: { value: onElementCreated },
+	        attributeChangedCallback: { value: onElementChanged }
+	    })
+	});
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	(function () {
+	  'use strict';
+	  var h = !!document.addEventListener;function k(a, b) {
+	    h ? a.addEventListener("scroll", b, !1) : a.attachEvent("scroll", b);
+	  }function w(a) {
+	    document.body ? a() : h ? document.addEventListener("DOMContentLoaded", a) : document.onreadystatechange = function () {
+	      "interactive" == document.readyState && a();
+	    };
+	  };function x(a) {
+	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.f = document.createElement("span");this.g = -1;this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+	    this.f.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c);
+	  }
+	  function y(a, b) {
+	    a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
+	  }function z(a) {
+	    var b = a.a.offsetWidth,
+	        c = b + 100;a.f.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.g !== b ? (a.g = b, !0) : !1;
+	  }function A(a, b) {
+	    function c() {
+	      var a = l;z(a) && null !== a.a.parentNode && b(a.g);
+	    }var l = a;k(a.b, c);k(a.c, c);z(a);
+	  };function B(a, b) {
+	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
+	  }var C = null,
+	      D = null,
+	      H = !!window.FontFace;function I() {
+	    if (null === D) {
+	      var a = document.createElement("div");try {
+	        a.style.font = "condensed 100px sans-serif";
+	      } catch (b) {}D = "" !== a.style.font;
+	    }return D;
+	  }function J(a, b) {
+	    return [a.style, a.weight, I() ? a.stretch : "", "100px", b].join(" ");
+	  }
+	  B.prototype.a = function (a, b) {
+	    var c = this,
+	        l = a || "BESbswy",
+	        E = b || 3E3,
+	        F = new Date().getTime();return new Promise(function (a, b) {
+	      if (H) {
+	        var q = function q() {
+	          new Date().getTime() - F >= E ? b(c) : document.fonts.load(J(c, c.family), l).then(function (b) {
+	            1 <= b.length ? a(c) : setTimeout(q, 25);
+	          }, function () {
+	            b(c);
+	          });
+	        };q();
+	      } else w(function () {
+	        function r() {
+	          var b;if (b = -1 != e && -1 != f || -1 != e && -1 != g || -1 != f && -1 != g) (b = e != f && e != g && f != g) || (null === C && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), C = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = C && (e == t && f == t && g == t || e == u && f == u && g == u || e == v && f == v && g == v)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(G), a(c));
+	        }function q() {
+	          if (new Date().getTime() - F >= E) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
+	            var a = document.hidden;if (!0 === a || void 0 === a) e = m.a.offsetWidth, f = n.a.offsetWidth, g = p.a.offsetWidth, r();G = setTimeout(q, 50);
+	          }
+	        }var m = new x(l),
+	            n = new x(l),
+	            p = new x(l),
+	            e = -1,
+	            f = -1,
+	            g = -1,
+	            t = -1,
+	            u = -1,
+	            v = -1,
+	            d = document.createElement("div"),
+	            G = 0;d.dir = "ltr";y(m, J(c, "sans-serif"));y(n, J(c, "serif"));y(p, J(c, "monospace"));d.appendChild(m.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);t = m.a.offsetWidth;u = n.a.offsetWidth;v = p.a.offsetWidth;q();A(m, function (a) {
+	          e = a;r();
+	        });y(m, J(c, '"' + c.family + '",sans-serif'));A(n, function (a) {
+	          f = a;r();
+	        });y(n, J(c, '"' + c.family + '",serif'));A(p, function (a) {
+	          g = a;r();
+	        });y(p, J(c, '"' + c.family + '",monospace'));
+	      });
+	    });
+	  };window.FontFaceObserver = B;window.FontFaceObserver.prototype.check = B.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
+	})();
+
+/***/ },
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3727,7 +4315,7 @@
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1C4.6 1 1 4.6 1 9c0 3.3 2 6.1 4.8 7.3 0-.6 0-1.2.1-1.8l1-4.4s-.3-.5-.3-1.3c0-1.2.7-2.1 1.5-2.1.9.1 1.2.6 1.2 1.3 0 .7-.5 1.8-.7 2.8-.2.9.4 1.5 1.3 1.5 1.5 0 2.5-1.9 2.5-4.3 0-1.7-1.2-3.1-3.3-3.1-2.4 0-3.9 1.8-3.9 3.8 0 .7.2 1.2.5 1.6.2.2.2.2.1.5l-.2.6c-.1.2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.7-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.7 5.5-4.3 5.5-.9 0-1.7-.5-2-1 0 0-.5 1.8-.6 2.2-.2.6-.5 1.2-.8 1.7.8.4 1.5.5 2.3.5 4.4 0 8-3.6 8-8s-3.6-8-8-8z"/></svg>';
 	}, function (c, s) {
-	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.2 20.8l-3.9-5.7c-.8.8-1.6 1.2-2.7 1.6l4.2 6.5s.3.8 1.2.8c.9 0 2-.7 2-1.6 0-.3-.8-1.6-.8-1.6zM18.2 8c0-4.4-3.6-8-8.1-8S2 3.6 2 8s3.6 8 8.1 8 8.1-3.6 8.1-8zm-8.1 6.5c-3.6 0-6.6-2.9-6.6-6.5s2.9-6.5 6.6-6.5 6.6 2.9 6.6 6.5-3 6.5-6.6 6.5z"/></svg>';
+	  c.exports = '<svg viewBox="0 0 17 20" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M7 2.2c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5m0 12c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7M16.146 16.824l-2.96-3.808c-.803.855-1.774 1.547-2.87 2.012l3.06 3.933c.287.613.904 1.04 1.625 1.04.994 0 1.8-.806 1.8-1.8 0-.556-.257-1.046-.653-1.376"/></g></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 16c-1.1 0-2 .5-2.7 1.3l-8.9-4.1c.1-.3.1-.5.1-.7 0-.2 0-.4-.1-.6l8.9-4.2c.7.8 1.6 1.3 2.7 1.3C21.4 9 23 7.4 23 5.5S21.4 2 19.5 2 16 3.6 16 5.5c0 .2 0 .4.1.6l-8.9 4.1C6.5 9.5 5.6 9 4.5 9 2.6 9 1 10.6 1 12.5S2.6 16 4.5 16c1.1 0 2-.5 2.7-1.3l8.9 4.2c0 .2-.1.4-.1.6 0 1.9 1.6 3.5 3.5 3.5s3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"/></svg>';
 	}, function (c, s) {
@@ -3748,7 +4336,80 @@
 	//# sourceMappingURL=showcar-icons.min.js.map
 
 /***/ },
-/* 11 */
+/* 16 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var tagName = 'custom-dropdown';
+	
+	module.exports = document.registerElement(tagName, {
+	    prototype: Object.create(HTMLElement.prototype, {
+	        createdCallback: { value: createdCallback },
+	        attachedCallback: { value: attachedCallback }
+	    })
+	});
+	
+	function createdCallback() {
+	    var el = $(this);
+	    var titleElement = el.find('p');
+	    var defaultTitle = titleElement.text();
+	
+	    el.removeClass('sc-open');
+	    el.on('touchstart, mousedown', function (e) {
+	        e.stopPropagation();
+	    });
+	
+	    if (null === el.attr('checkboxgroup')) {
+	        return;
+	    }
+	
+	    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
+	    var updateCaption = function updateCaption() {
+	        var box;
+	        var checkboxes = el.find('[type=checkbox]:checked');
+	        var texts = [];
+	        checkboxes.filter(":checked").forEach(function (element) {
+	            texts.push(element.nextElementSibling.innerHTML);
+	        });
+	
+	        var title = texts.join(', ') || defaultTitle;
+	        titleElement.html(title);
+	    };
+	
+	    el.on('change', updateCaption);
+	    updateCaption();
+	}
+	
+	function attachedCallback() {
+	    var el = this;
+	
+	    el.querySelector('p').addEventListener('mousedown', function (e) {
+	        closeAllDropdowns(el);
+	        el.classList.toggle('sc-open');
+	    });
+	
+	    attachEventListeners();
+	}
+	
+	function closeAllDropdowns(exceptThisOne) {
+	    var allCds = document.querySelectorAll(tagName);
+	    for (var i = 0, l = allCds.length; i < l; i++) {
+	        if (allCds[i] !== exceptThisOne) {
+	            allCds[i].classList.remove('sc-open');
+	        }
+	    }
+	}
+	
+	function attachEventListeners() {
+	    // this should only be done at most once
+	    // when the first of this element gets attached
+	    document.addEventListener('mousedown', closeAllDropdowns);
+	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
+	}
+
+/***/ },
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3758,9 +4419,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var stores = {
-	    local: __webpack_require__(12),
-	    session: __webpack_require__(13),
-	    cookie: __webpack_require__(14)
+	    local: __webpack_require__(18),
+	    session: __webpack_require__(19),
+	    cookie: __webpack_require__(20)
 	};
 	
 	var Storage = function () {
@@ -3893,7 +4554,7 @@
 	module.exports = Storage;
 
 /***/ },
-/* 12 */
+/* 18 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3933,7 +4594,7 @@
 	}();
 
 /***/ },
-/* 13 */
+/* 19 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3973,7 +4634,7 @@
 	}();
 
 /***/ },
-/* 14 */
+/* 20 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4045,614 +4706,6 @@
 	
 	    return CookieStore;
 	}();
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function () {
-	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="arrow"]'), function (arrow) {
-	        var arrowEl = $(arrow);
-	        $(arrowEl.data('target')).on('click', function () {
-	            return arrowEl.toggleClass('open');
-	        });
-	    });
-	};
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var tagName = 'custom-dropdown';
-	
-	module.exports = document.registerElement(tagName, {
-	    prototype: Object.create(HTMLElement.prototype, {
-	        createdCallback: { value: createdCallback },
-	        attachedCallback: { value: attachedCallback }
-	    })
-	});
-	
-	function createdCallback() {
-	    var el = $(this);
-	    var titleElement = el.find('p');
-	    var defaultTitle = titleElement.text();
-	
-	    el.removeClass('sc-open');
-	    el.on('touchstart, mousedown', function (e) {
-	        e.stopPropagation();
-	    });
-	
-	    if (null === el.attr('checkboxgroup')) {
-	        return;
-	    }
-	
-	    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
-	    var updateCaption = function updateCaption() {
-	        var box;
-	        var checkboxes = el.find('[type=checkbox]:checked');
-	        var texts = [];
-	        checkboxes.filter(":checked").forEach(function (element) {
-	            texts.push(element.nextElementSibling.innerHTML);
-	        });
-	
-	        var title = texts.join(', ') || defaultTitle;
-	        titleElement.html(title);
-	    };
-	
-	    el.on('change', updateCaption);
-	    updateCaption();
-	}
-	
-	function attachedCallback() {
-	    var el = this;
-	
-	    el.querySelector('p').addEventListener('mousedown', function (e) {
-	        closeAllDropdowns(el);
-	        el.classList.toggle('sc-open');
-	    });
-	
-	    attachEventListeners();
-	}
-	
-	function closeAllDropdowns(exceptThisOne) {
-	    var allCds = document.querySelectorAll(tagName);
-	    for (var i = 0, l = allCds.length; i < l; i++) {
-	        if (allCds[i] !== exceptThisOne) {
-	            allCds[i].classList.remove('sc-open');
-	        }
-	    }
-	}
-	
-	function attachEventListeners() {
-	    // this should only be done at most once
-	    // when the first of this element gets attached
-	    document.addEventListener('mousedown', closeAllDropdowns);
-	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
-	}
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function () {
-	    function handleStickies() {
-	        var scrollPos = $(window).scrollTop();
-	
-	        var stickyButtons = $('[data-sticky]');
-	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
-	            var stickyEl = $(stickyButton);
-	            var id = stickyEl.attr('data-sticky');
-	            var undockEl = $('[data-sticky-undock="' + id + '"]');
-	            var dockEl = $('[data-sticky-dock="' + id + '"]');
-	
-	            // if there is no dock and undock element leave sticky class
-	            if (undockEl.length === 0 && dockEl.length === 0) {
-	                stickyEl.addClass('sticky');
-	            }
-	
-	            // get undock position
-	            var undockPos = 0;
-	            if (undockEl.length > 0) {
-	                undockPos = undockEl.offset().top;
-	            }
-	
-	            // get dock position
-	            var dockPos = $(document).height();
-	            if (dockEl.length > 0) {
-	                dockPos = dockEl.offset().top;
-	            }
-	
-	            // if element is within scrolling area, scroll, else don't
-	            if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
-	                stickyEl.addClass('sc-sticky');
-	            } else {
-	                stickyEl.removeClass('sc-sticky');
-	            }
-	        });
-	    }
-	
-	    handleStickies();
-	
-	    window.addEventListener("deviceorientation", function () {
-	        handleStickies();
-	    });
-	
-	    window.addEventListener("resize", function () {
-	        handleStickies();
-	    });
-	
-	    window.addEventListener("pageSizeChanged", function () {
-	        handleStickies();
-	    });
-	
-	    document.addEventListener('scroll', function () {
-	        handleStickies();
-	    });
-	
-	    document.addEventListener('collapse', function () {
-	        handleStickies();
-	    });
-	};
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var Navigation = function () {
-	    _createClass(Navigation, [{
-	        key: 'KEY_DOWN',
-	        get: function get() {
-	            return 40;
-	        }
-	    }, {
-	        key: 'KEY_UP',
-	        get: function get() {
-	            return 38;
-	        }
-	    }, {
-	        key: 'KEY_LEFT',
-	        get: function get() {
-	            return 37;
-	        }
-	    }, {
-	        key: 'KEY_RIGHT',
-	        get: function get() {
-	            return 39;
-	        }
-	    }, {
-	        key: 'KEY_TAB',
-	        get: function get() {
-	            return 9;
-	        }
-	    }, {
-	        key: 'KEY_RETURN',
-	        get: function get() {
-	            return 13;
-	        }
-	    }, {
-	        key: 'KEY_ESCAPE',
-	        get: function get() {
-	            return 27;
-	        }
-	    }]);
-	
-	    function Navigation(root) {
-	        _classCallCheck(this, Navigation);
-	
-	        this.document = $(document);
-	        this.rootElement = $(root);
-	        this.menuBtn = $('.sc-btn-mobile-menu', this.rootElement);
-	        this.activeItem = null;
-	        this.activeMenu = null;
-	        this.menuIsOpen = false;
-	        this.menus = $('nav > ul > li', this.rootElement);
-	        this.items = [];
-	        this.initEvents();
-	    }
-	
-	    _createClass(Navigation, [{
-	        key: 'initEvents',
-	        value: function initEvents() {
-	            this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
-	            this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
-	            this.document.on('click', $.proxy(this.escapeMenu, this));
-	            this.document.on('keydown', $.proxy(this.onKeyDown, this));
-	            this.document.on('keyup', $.proxy(this.onKeyUp, this));
-	        }
-	    }, {
-	        key: 'toggleMenu',
-	        value: function toggleMenu(event) {
-	            event.stopPropagation();
-	            var clickedMenu = $(event.target).closest('li');
-	
-	            if ($(event.target).closest('li').length === 0) {
-	                clickedMenu = this.rootElement;
-	            }
-	
-	            if (this.activeMenu && this.menuIsOpen) {
-	
-	                if (this.activeMenu[0] == clickedMenu[0]) {
-	                    this.closeMenu();
-	                    return;
-	                } else if (this.rootElement[0] == clickedMenu[0]) {
-	                    this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
-	                    return;
-	                } else if (this.activeMenu[0] != this.rootElement[0]) {
-	                    this.closeMenu();
-	                }
-	            }
-	
-	            this.setActiveMenu(clickedMenu);
-	            this.openMenu();
-	        }
-	    }, {
-	        key: 'setActiveMenu',
-	        value: function setActiveMenu(element) {
-	            this.activeMenu = $(element);
-	        }
-	    }, {
-	        key: 'closeMenu',
-	        value: function closeMenu(menu) {
-	            var closeTarget = menu || this.activeMenu;
-	            closeTarget.removeClass('open');
-	            this.unsetInactiveMenuItems();
-	            this.items = [];
-	            this.menuIsOpen = false;
-	        }
-	    }, {
-	        key: 'openMenu',
-	        value: function openMenu() {
-	            this.activeMenu.addClass('open');
-	            this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
-	            this.menuIsOpen = true;
-	        }
-	    }, {
-	        key: 'escapeMenu',
-	        value: function escapeMenu(event) {
-	            this.activeMenu && this.menuIsOpen && this.closeMenu();
-	        }
-	    }, {
-	        key: 'isNavigationKey',
-	        value: function isNavigationKey(keyCode) {
-	            return [this.KEY_DOWN, this.KEY_LEFT, this.KEY_RIGHT, this.KEY_UP, this.KEY_TAB].indexOf(keyCode) > -1;
-	        }
-	
-	        // Prevent scrolling
-	
-	    }, {
-	        key: 'onKeyDown',
-	        value: function onKeyDown(event) {
-	            var keyCode = event.which;
-	
-	            if (this.menuIsOpen && this.isNavigationKey(keyCode)) {
-	                event.preventDefault();
-	                return false;
-	            }
-	
-	            return true;
-	        }
-	    }, {
-	        key: 'onKeyUp',
-	        value: function onKeyUp(event) {
-	            var keyCode = event.which;
-	
-	            switch (keyCode) {
-	                case this.KEY_ESCAPE:
-	                    this.escapeMenu();
-	                    break;
-	                case this.KEY_DOWN:
-	                    this.handleJumpDown();
-	                    break;
-	                case this.KEY_UP:
-	                    this.handleJumpUp();
-	                    break;
-	                case this.KEY_TAB:
-	                    !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
-	                    break;
-	                case this.KEY_RIGHT:
-	                    this.handleJumpRight();
-	                    break;
-	                case this.KEY_LEFT:
-	                    this.handleJumpLeft();
-	                    break;
-	            }
-	
-	            event.preventDefault();
-	            return false;
-	        }
-	    }, {
-	        key: 'handleJumpDown',
-	        value: function handleJumpDown() {
-	            // Expand the menu if closed
-	            if (false === this.menuIsOpen) {
-	                this.openMenu();
-	                this.selectFirstItem();
-	                return;
-	            }
-	            var position = this.items.indexOf(this.activeItem);
-	            this.items.length - 1 > position && position++;
-	            this.setActiveMenuItem(this.items[position]);
-	        }
-	    }, {
-	        key: 'handleJumpUp',
-	        value: function handleJumpUp() {
-	            if (false === this.menuIsOpen) {
-	                return;
-	            }
-	            var position = this.items.indexOf(this.activeItem);
-	            0 === position && this.closeMenu();
-	            0 < position && position--;
-	            this.setActiveMenuItem(this.items[position]);
-	        }
-	    }, {
-	        key: 'handleJumpRight',
-	        value: function handleJumpRight() {
-	            var current = this.menus.indexOf(this.activeMenu[0]);
-	            var newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
-	            this.selectMenu(this.menus[newMenuIdx]);
-	        }
-	    }, {
-	        key: 'handleJumpLeft',
-	        value: function handleJumpLeft() {
-	            var current = this.menus.indexOf(this.activeMenu[0]);
-	            var newMenuIdx = 0 < current ? current - 1 : this.menus.length - 1;
-	            this.selectMenu(this.menus[newMenuIdx]);
-	        }
-	    }, {
-	        key: 'setActiveMenuItem',
-	        value: function setActiveMenuItem(element) {
-	            this.unsetInactiveMenuItems();
-	            element = $(element);
-	            !element.hasClass('active-item') && element.addClass('active-item');
-	            this.activeItem = element[0];
-	            $('a', element).focus();
-	        }
-	    }, {
-	        key: 'unsetInactiveMenuItems',
-	        value: function unsetInactiveMenuItems() {
-	            this.rootElement.find('.active-item').removeClass('active-item');
-	            this.activeItem = null;
-	        }
-	    }, {
-	        key: 'selectFirstItem',
-	        value: function selectFirstItem() {
-	            this.setActiveMenuItem(this.items[0]);
-	        }
-	    }, {
-	        key: 'selectMenu',
-	        value: function selectMenu(element) {
-	            if ('object' !== (typeof element === 'undefined' ? 'undefined' : _typeof(element))) {
-	                return;
-	            }
-	            this.menuIsOpen && this.closeMenu();
-	            this.setActiveMenu(element);
-	            this.openMenu();
-	            this.selectFirstItem();
-	        }
-	    }]);
-	
-	    return Navigation;
-	}();
-	
-	var navigationElement = document.querySelector('.sc-navigation'),
-	    navigation = null;
-	if (navigationElement) {
-	    navigation = new Navigation(navigationElement);
-	}
-	
-	module.exports = navigation;
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var Notification = function () {
-	    function Notification(element) {
-	        _classCallCheck(this, Notification);
-	
-	        this.element = element;
-	        this._body = '';
-	        this.body = this.element.innerHTML;
-	    }
-	
-	    _createClass(Notification, [{
-	        key: 'hide',
-	        value: function hide() {
-	            this.element.classList.remove('show');
-	        }
-	
-	        /**
-	         * Create the html structure of the notification element
-	         */
-	
-	    }, {
-	        key: 'create',
-	        value: function create() {
-	            this.element.innerHTML = '';
-	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
-	            this.createElement('div', container, this.body);
-	        }
-	
-	        /**
-	         * @param {String} attribute
-	         * @param {String} value
-	         */
-	
-	    }, {
-	        key: 'update',
-	        value: function update(attribute, value) {
-	            if ('class' === attribute && 'show' === value && this.timeout) {
-	                window.setTimeout(this.hide.bind(this), this.timeout);
-	            }
-	        }
-	
-	        /**
-	         * @param {String} name
-	         * @param {String} body
-	         * @param {Array} classes
-	         * @param {HTMLElement} parent
-	         * @returns {Element}
-	         */
-	
-	    }, {
-	        key: 'createElement',
-	        value: function createElement(name, parent, body) {
-	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
-	
-	            var element = document.createElement(name);
-	
-	            classes.forEach(function (cls) {
-	                element.classList.add(cls);
-	            });
-	            element.innerHTML = body;
-	
-	            parent.appendChild(element);
-	
-	            return element;
-	        }
-	    }, {
-	        key: 'title',
-	        get: function get() {
-	            return this.element.getAttribute('title');
-	        }
-	    }, {
-	        key: 'timeout',
-	        get: function get() {
-	            return this.element.getAttribute('timeout');
-	        }
-	    }, {
-	        key: 'body',
-	        get: function get() {
-	            return this._body;
-	        },
-	        set: function set(value) {
-	            this._body = value;
-	        }
-	    }]);
-	
-	    return Notification;
-	}();
-	
-	function onElementCreated() {
-	    this.notification = new Notification(this);
-	    this.notification.create();
-	}
-	
-	function onElementChanged(attributeName, previousValue, value) {
-	    this.notification.update(attributeName, value);
-	}
-	
-	var tagName = 'as24-notification';
-	
-	module.exports = document.registerElement(tagName, {
-	    prototype: Object.create(HTMLElement.prototype, {
-	        createdCallback: { value: onElementCreated },
-	        attributeChangedCallback: { value: onElementChanged }
-	    })
-	});
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	(function () {
-	  'use strict';
-	  var h = !!document.addEventListener;function k(a, b) {
-	    h ? a.addEventListener("scroll", b, !1) : a.attachEvent("scroll", b);
-	  }function w(a) {
-	    document.body ? a() : h ? document.addEventListener("DOMContentLoaded", a) : document.onreadystatechange = function () {
-	      "interactive" == document.readyState && a();
-	    };
-	  };function x(a) {
-	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.f = document.createElement("span");this.g = -1;this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	    this.f.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c);
-	  }
-	  function y(a, b) {
-	    a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
-	  }function z(a) {
-	    var b = a.a.offsetWidth,
-	        c = b + 100;a.f.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.g !== b ? (a.g = b, !0) : !1;
-	  }function A(a, b) {
-	    function c() {
-	      var a = l;z(a) && null !== a.a.parentNode && b(a.g);
-	    }var l = a;k(a.b, c);k(a.c, c);z(a);
-	  };function B(a, b) {
-	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
-	  }var C = null,
-	      D = null,
-	      H = !!window.FontFace;function I() {
-	    if (null === D) {
-	      var a = document.createElement("div");try {
-	        a.style.font = "condensed 100px sans-serif";
-	      } catch (b) {}D = "" !== a.style.font;
-	    }return D;
-	  }function J(a, b) {
-	    return [a.style, a.weight, I() ? a.stretch : "", "100px", b].join(" ");
-	  }
-	  B.prototype.a = function (a, b) {
-	    var c = this,
-	        l = a || "BESbswy",
-	        E = b || 3E3,
-	        F = new Date().getTime();return new Promise(function (a, b) {
-	      if (H) {
-	        var q = function q() {
-	          new Date().getTime() - F >= E ? b(c) : document.fonts.load(J(c, c.family), l).then(function (b) {
-	            1 <= b.length ? a(c) : setTimeout(q, 25);
-	          }, function () {
-	            b(c);
-	          });
-	        };q();
-	      } else w(function () {
-	        function r() {
-	          var b;if (b = -1 != e && -1 != f || -1 != e && -1 != g || -1 != f && -1 != g) (b = e != f && e != g && f != g) || (null === C && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), C = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = C && (e == t && f == t && g == t || e == u && f == u && g == u || e == v && f == v && g == v)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(G), a(c));
-	        }function q() {
-	          if (new Date().getTime() - F >= E) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
-	            var a = document.hidden;if (!0 === a || void 0 === a) e = m.a.offsetWidth, f = n.a.offsetWidth, g = p.a.offsetWidth, r();G = setTimeout(q, 50);
-	          }
-	        }var m = new x(l),
-	            n = new x(l),
-	            p = new x(l),
-	            e = -1,
-	            f = -1,
-	            g = -1,
-	            t = -1,
-	            u = -1,
-	            v = -1,
-	            d = document.createElement("div"),
-	            G = 0;d.dir = "ltr";y(m, J(c, "sans-serif"));y(n, J(c, "serif"));y(p, J(c, "monospace"));d.appendChild(m.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);t = m.a.offsetWidth;u = n.a.offsetWidth;v = p.a.offsetWidth;q();A(m, function (a) {
-	          e = a;r();
-	        });y(m, J(c, '"' + c.family + '",sans-serif'));A(n, function (a) {
-	          f = a;r();
-	        });y(n, J(c, '"' + c.family + '",serif'));A(p, function (a) {
-	          g = a;r();
-	        });y(p, J(c, '"' + c.family + '",monospace'));
-	      });
-	    });
-	  };window.FontFaceObserver = B;window.FontFaceObserver.prototype.check = B.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
-	})();
 
 /***/ }
 /******/ ]);
