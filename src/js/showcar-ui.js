@@ -3,6 +3,22 @@ require('./components/polyfills.js')();
 
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
+var warn = function (msg) {
+    if (!window || !window.console) {
+        return;
+    }
+    window.console.warn(msg);
+};
+var isRegistered = function(name) {
+    var registered = document.createElement(name).__proto__ !== HTMLElement.prototype;
+
+    if (registered) {
+        warn('CustomElement "' + name + '" is already registered.');
+    }
+
+    return registered;
+};
+
 try {
     observer.check().then(function () {
         $('body').addClass('font-loaded');
@@ -13,20 +29,6 @@ try {
     warn('Failed to use FontFaceObserver', e);
 }
 
-var warn = function (msg) {
-    if (!window || !window.console) {
-        return;
-    }
-    window.console.warn(msg);
-};
-
-var isRegistered = function(name) {
-    var registered = document.createElement(name).constructor !== HTMLElement;
-    if (registered) {
-        warn('CustomElement "' + name + '" is already registered.');
-    }
-    return registered;
-};
 
 if (!window.storage) {
     window.Storage = require('../../vendor/showcar-storage/src/storage.js');
@@ -49,5 +51,3 @@ if (!window.notification) {
 } else {
     warn('window.notification is already registered.');
 }
-
-
