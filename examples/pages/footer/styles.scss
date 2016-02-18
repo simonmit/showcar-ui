@@ -14,6 +14,11 @@ footer.sc-content-container {
 
     h2 {
       padding: $L;
+
+      @include mqmin($viewportL) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     @include mqmin($viewportL) {
@@ -35,10 +40,12 @@ footer.sc-content-container {
 
           > a {
             font-size: 1rem;
-            color: $black-100;
-            transition: color .2s;
             text-decoration: none;
-            cursor: pointer;
+            color: $black-100;
+
+            &:hover {
+              color: $orange-90;
+            }
           }
         }
 
@@ -47,6 +54,10 @@ footer.sc-content-container {
             display: inline-block;
 
             > a {
+              cursor: pointer;
+              background: none;
+              color: $black-100;
+              transition: color .2s;
               display: inline-block;
               padding: 7px 9px 6px 9px;
               margin-right: 8px;
