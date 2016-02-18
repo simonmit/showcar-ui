@@ -19,8 +19,12 @@ custom-dropdown {
       display: inline-block;
     }
   }
-  svg {
-    width: 22px;
-    height: 22px;
+  as24-icon {
+    width: auto;
+    height: auto;
+    svg {
+      width: 22px;
+      height: 22px;
+    }
   }
 }
