@@ -48,14 +48,8 @@
 	
 	__webpack_require__(1);
 	__webpack_require__(2)();
-	__webpack_require__(3)();
-	__webpack_require__(4);
-	__webpack_require__(5)();
-	__webpack_require__(12)();
 	
-	window.notification = __webpack_require__(13);
-	
-	var FontFaceObserver = __webpack_require__(14);
+	var FontFaceObserver = __webpack_require__(9);
 	var observer = new FontFaceObserver('Source Sans Pro');
 	var warn = function warn(msg) {
 	    if (!window || !window.console) {
@@ -63,30 +57,15 @@
 	    }
 	    window.console.warn(msg);
 	};
+	var isRegistered = function isRegistered(name) {
+	    var registered = document.createElement(name).__proto__ !== HTMLElement.prototype;
 	
-	if (!document.getElementsByTagName('as24-icon')) {
-	    __webpack_require__(15);
-	} else {
-	    warn('as24-icon is already registered.');
-	}
+	    if (registered) {
+	        warn('CustomElement "' + name + '" is already registered.');
+	    }
 	
-	if (!document.getElementsByTagName('custom-dropdown')) {
-	    __webpack_require__(16);
-	} else {
-	    warn('custom-dropdown is already registered.');
-	}
-	
-	if (!window.storage) {
-	    window.Storage = __webpack_require__(17);
-	} else {
-	    warn('window.storage is already registered.');
-	}
-	
-	if (!window.notification) {
-	    window.notification = __webpack_require__(13);
-	} else {
-	    warn('window.notification is already registered.');
-	}
+	    return registered;
+	};
 	
 	try {
 	    observer.check().then(function () {
@@ -96,6 +75,28 @@
 	    });
 	} catch (e) {
 	    warn('Failed to use FontFaceObserver', e);
+	}
+	
+	if (!window.storage) {
+	    window.Storage = __webpack_require__(10);
+	} else {
+	    warn('window.storage is already registered.');
+	}
+	
+	if (!isRegistered('custom-dropdown')) {
+	    __webpack_require__(14);
+	}
+	
+	__webpack_require__(15);
+	__webpack_require__(16);
+	__webpack_require__(17)();
+	__webpack_require__(18)();
+	__webpack_require__(19)();
+	
+	if (!window.notification) {
+	    window.notification = __webpack_require__(20);
+	} else {
+	    warn('window.notification is already registered.');
 	}
 
 /***/ },
@@ -826,343 +827,6 @@
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function () {
-	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="arrow"]'), function (arrow) {
-	        var arrowEl = $(arrow);
-	        $(arrowEl.data('target')).on('click', function () {
-	            return arrowEl.toggleClass('open');
-	        });
-	    });
-	};
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function () {
-	    function handleStickies() {
-	        var scrollPos = $(window).scrollTop();
-	
-	        var stickyButtons = $('[data-sticky]');
-	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
-	            var stickyEl = $(stickyButton);
-	            var id = stickyEl.attr('data-sticky');
-	            var undockEl = $('[data-sticky-undock="' + id + '"]');
-	            var dockEl = $('[data-sticky-dock="' + id + '"]');
-	
-	            // if there is no dock and undock element leave sticky class
-	            if (undockEl.length === 0 && dockEl.length === 0) {
-	                stickyEl.addClass('sticky');
-	            }
-	
-	            // get undock position
-	            var undockPos = 0;
-	            if (undockEl.length > 0) {
-	                undockPos = undockEl.offset().top;
-	            }
-	
-	            // get dock position
-	            var dockPos = $(document).height();
-	            if (dockEl.length > 0) {
-	                dockPos = dockEl.offset().top;
-	            }
-	
-	            // if element is within scrolling area, scroll, else don't
-	            if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
-	                stickyEl.addClass('sc-sticky');
-	            } else {
-	                stickyEl.removeClass('sc-sticky');
-	            }
-	        });
-	    }
-	
-	    handleStickies();
-	
-	    window.addEventListener("deviceorientation", function () {
-	        handleStickies();
-	    });
-	
-	    window.addEventListener("resize", function () {
-	        handleStickies();
-	    });
-	
-	    window.addEventListener("pageSizeChanged", function () {
-	        handleStickies();
-	    });
-	
-	    document.addEventListener('scroll', function () {
-	        handleStickies();
-	    });
-	
-	    document.addEventListener('collapse', function () {
-	        handleStickies();
-	    });
-	};
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var Navigation = function () {
-	    _createClass(Navigation, [{
-	        key: 'KEY_DOWN',
-	        get: function get() {
-	            return 40;
-	        }
-	    }, {
-	        key: 'KEY_UP',
-	        get: function get() {
-	            return 38;
-	        }
-	    }, {
-	        key: 'KEY_LEFT',
-	        get: function get() {
-	            return 37;
-	        }
-	    }, {
-	        key: 'KEY_RIGHT',
-	        get: function get() {
-	            return 39;
-	        }
-	    }, {
-	        key: 'KEY_TAB',
-	        get: function get() {
-	            return 9;
-	        }
-	    }, {
-	        key: 'KEY_RETURN',
-	        get: function get() {
-	            return 13;
-	        }
-	    }, {
-	        key: 'KEY_ESCAPE',
-	        get: function get() {
-	            return 27;
-	        }
-	    }]);
-	
-	    function Navigation(root) {
-	        _classCallCheck(this, Navigation);
-	
-	        this.document = $(document);
-	        this.rootElement = $(root);
-	        this.menuBtn = $('.sc-btn-mobile-menu', this.rootElement);
-	        this.activeItem = null;
-	        this.activeMenu = null;
-	        this.menuIsOpen = false;
-	        this.menus = $('nav > ul > li', this.rootElement);
-	        this.items = [];
-	        this.initEvents();
-	    }
-	
-	    _createClass(Navigation, [{
-	        key: 'initEvents',
-	        value: function initEvents() {
-	            this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
-	            this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
-	            this.document.on('click', $.proxy(this.escapeMenu, this));
-	            this.document.on('keydown', $.proxy(this.onKeyDown, this));
-	            this.document.on('keyup', $.proxy(this.onKeyUp, this));
-	        }
-	    }, {
-	        key: 'toggleMenu',
-	        value: function toggleMenu(event) {
-	            event.stopPropagation();
-	            var clickedMenu = $(event.target).closest('li');
-	
-	            if ($(event.target).closest('li').length === 0) {
-	                clickedMenu = this.rootElement;
-	            }
-	
-	            if (this.activeMenu && this.menuIsOpen) {
-	
-	                if (this.activeMenu[0] == clickedMenu[0]) {
-	                    this.closeMenu();
-	                    return;
-	                } else if (this.rootElement[0] == clickedMenu[0]) {
-	                    this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
-	                    return;
-	                } else if (this.activeMenu[0] != this.rootElement[0]) {
-	                    this.closeMenu();
-	                }
-	            }
-	
-	            this.setActiveMenu(clickedMenu);
-	            this.openMenu();
-	        }
-	    }, {
-	        key: 'setActiveMenu',
-	        value: function setActiveMenu(element) {
-	            this.activeMenu = $(element);
-	        }
-	    }, {
-	        key: 'closeMenu',
-	        value: function closeMenu(menu) {
-	            var closeTarget = menu || this.activeMenu;
-	            closeTarget.removeClass('open');
-	            this.unsetInactiveMenuItems();
-	            this.items = [];
-	            this.menuIsOpen = false;
-	        }
-	    }, {
-	        key: 'openMenu',
-	        value: function openMenu() {
-	            this.activeMenu.addClass('open');
-	            this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
-	            this.menuIsOpen = true;
-	        }
-	    }, {
-	        key: 'escapeMenu',
-	        value: function escapeMenu(event) {
-	            this.activeMenu && this.menuIsOpen && this.closeMenu();
-	        }
-	    }, {
-	        key: 'isNavigationKey',
-	        value: function isNavigationKey(keyCode) {
-	            return [this.KEY_DOWN, this.KEY_LEFT, this.KEY_RIGHT, this.KEY_UP, this.KEY_TAB].indexOf(keyCode) > -1;
-	        }
-	
-	        // Prevent scrolling
-	
-	    }, {
-	        key: 'onKeyDown',
-	        value: function onKeyDown(event) {
-	            var keyCode = event.which;
-	
-	            if (this.menuIsOpen && this.isNavigationKey(keyCode)) {
-	                event.preventDefault();
-	                return false;
-	            }
-	
-	            return true;
-	        }
-	    }, {
-	        key: 'onKeyUp',
-	        value: function onKeyUp(event) {
-	            var keyCode = event.which;
-	
-	            switch (keyCode) {
-	                case this.KEY_ESCAPE:
-	                    this.escapeMenu();
-	                    break;
-	                case this.KEY_DOWN:
-	                    this.handleJumpDown();
-	                    break;
-	                case this.KEY_UP:
-	                    this.handleJumpUp();
-	                    break;
-	                case this.KEY_TAB:
-	                    !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
-	                    break;
-	                case this.KEY_RIGHT:
-	                    this.handleJumpRight();
-	                    break;
-	                case this.KEY_LEFT:
-	                    this.handleJumpLeft();
-	                    break;
-	            }
-	
-	            event.preventDefault();
-	            return false;
-	        }
-	    }, {
-	        key: 'handleJumpDown',
-	        value: function handleJumpDown() {
-	            // Expand the menu if closed
-	            if (false === this.menuIsOpen) {
-	                this.openMenu();
-	                this.selectFirstItem();
-	                return;
-	            }
-	            var position = this.items.indexOf(this.activeItem);
-	            this.items.length - 1 > position && position++;
-	            this.setActiveMenuItem(this.items[position]);
-	        }
-	    }, {
-	        key: 'handleJumpUp',
-	        value: function handleJumpUp() {
-	            if (false === this.menuIsOpen) {
-	                return;
-	            }
-	            var position = this.items.indexOf(this.activeItem);
-	            0 === position && this.closeMenu();
-	            0 < position && position--;
-	            this.setActiveMenuItem(this.items[position]);
-	        }
-	    }, {
-	        key: 'handleJumpRight',
-	        value: function handleJumpRight() {
-	            var current = this.menus.indexOf(this.activeMenu[0]);
-	            var newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
-	            this.selectMenu(this.menus[newMenuIdx]);
-	        }
-	    }, {
-	        key: 'handleJumpLeft',
-	        value: function handleJumpLeft() {
-	            var current = this.menus.indexOf(this.activeMenu[0]);
-	            var newMenuIdx = 0 < current ? current - 1 : this.menus.length - 1;
-	            this.selectMenu(this.menus[newMenuIdx]);
-	        }
-	    }, {
-	        key: 'setActiveMenuItem',
-	        value: function setActiveMenuItem(element) {
-	            this.unsetInactiveMenuItems();
-	            element = $(element);
-	            !element.hasClass('active-item') && element.addClass('active-item');
-	            this.activeItem = element[0];
-	            $('a', element).focus();
-	        }
-	    }, {
-	        key: 'unsetInactiveMenuItems',
-	        value: function unsetInactiveMenuItems() {
-	            this.rootElement.find('.active-item').removeClass('active-item');
-	            this.activeItem = null;
-	        }
-	    }, {
-	        key: 'selectFirstItem',
-	        value: function selectFirstItem() {
-	            this.setActiveMenuItem(this.items[0]);
-	        }
-	    }, {
-	        key: 'selectMenu',
-	        value: function selectMenu(element) {
-	            if ('object' !== (typeof element === 'undefined' ? 'undefined' : _typeof(element))) {
-	                return;
-	            }
-	            this.menuIsOpen && this.closeMenu();
-	            this.setActiveMenu(element);
-	            this.openMenu();
-	            this.selectFirstItem();
-	        }
-	    }]);
-	
-	    return Navigation;
-	}();
-	
-	var navigationElement = document.querySelector('.sc-navigation'),
-	    navigation = null;
-	if (navigationElement) {
-	    navigation = new Navigation(navigationElement);
-	}
-	
-	module.exports = navigation;
-
-/***/ },
-/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1176,19 +840,19 @@
 	
 	    var isEs5Browser = 'map' in Array.prototype && 'isArray' in Array && 'bind' in Function.prototype && 'keys' in Object && 'trim' in String.prototype;
 	
-	    __webpack_require__(6);
-	    __webpack_require__(7);
+	    __webpack_require__(3);
+	    __webpack_require__(4);
 	
 	    if (!isDom4Browser) {
-	        __webpack_require__(9);
+	        __webpack_require__(6);
 	    }
 	    if (!isEs5Browser) {
-	        __webpack_require__(10);
+	        __webpack_require__(7);
 	    }
 	    if (needsPlaceholderPolyfill) {
 	        //check if this is required anymore and can be dropped - midler, 09.02.2016
 	        //needed only for IE9 support
-	        __webpack_require__(11);
+	        __webpack_require__(8);
 	    }
 	
 	    start();
@@ -1201,7 +865,7 @@
 	};
 
 /***/ },
-/* 6 */
+/* 3 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1404,16 +1068,16 @@
 	})(window, document, Object, "registerElement");
 
 /***/ },
-/* 7 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {"use strict";
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	/*! picturefill - v3.0.2 - 2016-02-12
-	 * https://scottjehl.github.io/picturefill/
-	 * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+	/*! Picturefill - v3.0.1 - 2015-09-30
+	 * http://scottjehl.github.io/picturefill
+	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
 	 */
 	/*! Gecko-Picture - v1.0
 	 * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
@@ -1424,7 +1088,7 @@
 		/*jshint eqnull:true */
 		var ua = navigator.userAgent;
 	
-		if (window.HTMLPictureElement && /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45) {
+		if (window.HTMLPictureElement && /ecko/.test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 41) {
 			addEventListener("resize", function () {
 				var timer;
 	
@@ -1484,7 +1148,7 @@
 		}
 	})(window);
 	
-	/*! Picturefill - v3.0.2
+	/*! Picturefill - v3.0.1
 	 * http://scottjehl.github.io/picturefill
 	 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
 	 *  License: MIT
@@ -1501,7 +1165,6 @@
 		var warn, eminpx, alwaysCheckWDescriptor, evalId;
 		// local object for method references and testing exposure
 		var pf = {};
-		var isSupportTestReady = false;
 		var noop = function noop() {};
 		var image = document.createElement("img");
 		var getImgAttr = image.getAttribute;
@@ -1674,11 +1337,6 @@
 	  * @param opt
 	  */
 		var picturefill = function picturefill(opt) {
-	
-			if (!isSupportTestReady) {
-				return;
-			}
-	
 			var elements, i, plen;
 	
 			var options = opt || {};
@@ -1743,7 +1401,7 @@
 		}
 	
 		// test svg support
-		types["image/svg+xml"] = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+		types["image/svg+xml"] = document.implementation.hasFeature("http://wwwindow.w3.org/TR/SVG11/feature#Image", "1.1");
 	
 		/**
 	  * updates the internal vW property with the current viewport width in px
@@ -2426,8 +2084,6 @@
 		pf.supSizes = "sizes" in image;
 		pf.supPicture = !!window.HTMLPictureElement;
 	
-		// UC browser does claim to support srcset and picture, but not sizes,
-		// this extended test reveals the browser does support nothing
 		if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
 			(function (image2) {
 				image.srcset = "data:,a";
@@ -2437,43 +2093,15 @@
 			})(document.createElement("img"));
 		}
 	
-		// Safari9 has basic support for sizes, but does't expose the `sizes` idl attribute
-		if (pf.supSrcset && !pf.supSizes) {
-	
-			(function () {
-				var width2 = "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
-				var width1 = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-				var img = document.createElement("img");
-				var test = function test() {
-					var width = img.width;
-	
-					if (width === 2) {
-						pf.supSizes = true;
-					}
-	
-					alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
-	
-					isSupportTestReady = true;
-					// force async
-					setTimeout(picturefill);
-				};
-	
-				img.onload = test;
-				img.onerror = test;
-				img.setAttribute("sizes", "9px");
-	
-				img.srcset = width1 + " 1w," + width2 + " 9w";
-				img.src = width1;
-			})();
-		} else {
-			isSupportTestReady = true;
-		}
-	
 		// using pf.qsa instead of dom traversing does scale much better,
 		// especially on sites mixing responsive and non-responsive images
 		pf.selShort = "picture>img,img[srcset]";
 		pf.sel = pf.selShort;
 		pf.cfg = cfg;
+	
+		if (pf.supSrcset) {
+			pf.sel += ",img[" + srcsetAttr + "]";
+		}
 	
 		/**
 	  * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
@@ -2483,6 +2111,8 @@
 	
 		// container of supported mime types that one might need to qualify before using
 		pf.types = types;
+	
+		alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
 	
 		pf.setSize = noop;
 	
@@ -2502,10 +2132,10 @@
 	  * Can be extended with jQuery/Sizzle for IE7 support
 	  * @param context
 	  * @param sel
-	  * @returns {NodeList|Array}
+	  * @returns {NodeList}
 	  */
 		pf.qsa = function (context, sel) {
-			return "querySelector" in context ? context.querySelectorAll(sel) : [];
+			return context.querySelectorAll(sel);
 		};
 	
 		/**
@@ -2825,7 +2455,7 @@
 	
 			// if img has picture or the srcset was removed or has a srcset and does not support srcset at all
 			// or has a w descriptor (and does not support sizes) set support to false to evaluate
-			imageData.supported = !(hasPicture || imageSet && !pf.supSrcset || isWDescripor && !pf.supSizes);
+			imageData.supported = !(hasPicture || imageSet && !pf.supSrcset || isWDescripor);
 	
 			if (srcsetParsed && pf.supSrcset && !imageData.supported) {
 				if (srcsetAttribute) {
@@ -2991,10 +2621,10 @@
 			types["image/webp"] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");
 		}
 	})(window, document);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)(module)))
 
 /***/ },
-/* 8 */
+/* 5 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3011,7 +2641,7 @@
 	};
 
 /***/ },
-/* 9 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3161,7 +2791,7 @@
 	})(window);
 
 /***/ },
-/* 10 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -3805,7 +3435,7 @@
 	//# sourceMappingURL=es5-shim.map
 
 /***/ },
-/* 11 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3934,147 +3564,7 @@
 	}(undefined);
 
 /***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function () {
-	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), function (collapsable) {
-	        collapsable.onclick = function () {
-	            var targetAttr = collapsable.getAttribute('data-target');
-	            var targets = document.querySelectorAll(targetAttr);
-	
-	            Array.prototype.forEach.call(targets, function (target) {
-	                target.classList.toggle('in');
-	            });
-	
-	            var event = new CustomEvent('collapse', {
-	                bubbles: true
-	            });
-	            document.dispatchEvent(event);
-	        };
-	    });
-	};
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var Notification = function () {
-	    function Notification(element) {
-	        _classCallCheck(this, Notification);
-	
-	        this.element = element;
-	        this._body = '';
-	        this.body = this.element.innerHTML;
-	    }
-	
-	    _createClass(Notification, [{
-	        key: 'hide',
-	        value: function hide() {
-	            this.element.classList.remove('show');
-	        }
-	
-	        /**
-	         * Create the html structure of the notification element
-	         */
-	
-	    }, {
-	        key: 'create',
-	        value: function create() {
-	            this.element.innerHTML = '';
-	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
-	            this.createElement('div', container, this.body);
-	        }
-	
-	        /**
-	         * @param {String} attribute
-	         * @param {String} value
-	         */
-	
-	    }, {
-	        key: 'update',
-	        value: function update(attribute, value) {
-	            if ('class' === attribute && 'show' === value && this.timeout) {
-	                window.setTimeout(this.hide.bind(this), this.timeout);
-	            }
-	        }
-	
-	        /**
-	         * @param {String} name
-	         * @param {String} body
-	         * @param {Array} classes
-	         * @param {HTMLElement} parent
-	         * @returns {Element}
-	         */
-	
-	    }, {
-	        key: 'createElement',
-	        value: function createElement(name, parent, body) {
-	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
-	
-	            var element = document.createElement(name);
-	
-	            classes.forEach(function (cls) {
-	                element.classList.add(cls);
-	            });
-	            element.innerHTML = body;
-	
-	            parent.appendChild(element);
-	
-	            return element;
-	        }
-	    }, {
-	        key: 'title',
-	        get: function get() {
-	            return this.element.getAttribute('title');
-	        }
-	    }, {
-	        key: 'timeout',
-	        get: function get() {
-	            return this.element.getAttribute('timeout');
-	        }
-	    }, {
-	        key: 'body',
-	        get: function get() {
-	            return this._body;
-	        },
-	        set: function set(value) {
-	            this._body = value;
-	        }
-	    }]);
-	
-	    return Notification;
-	}();
-	
-	function onElementCreated() {
-	    this.notification = new Notification(this);
-	    this.notification.create();
-	}
-	
-	function onElementChanged(attributeName, previousValue, value) {
-	    this.notification.update(attributeName, value);
-	}
-	
-	var tagName = 'as24-notification';
-	
-	module.exports = document.registerElement(tagName, {
-	    prototype: Object.create(HTMLElement.prototype, {
-	        createdCallback: { value: onElementCreated },
-	        attributeChangedCallback: { value: onElementChanged }
-	    })
-	});
-
-/***/ },
-/* 14 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4156,24 +3646,400 @@
 	})();
 
 /***/ },
-/* 15 */
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var stores = {
+	    local: __webpack_require__(11),
+	    session: __webpack_require__(12),
+	    cookie: __webpack_require__(13)
+	};
+	
+	var Storage = function () {
+	    /**
+	     * @constructor
+	     * @param {string} type The store backend to use
+	     * @param {boolean} [silent=false] Whether to throw exceptions or fail silently returning false
+	     */
+	
+	    function Storage(type) {
+	        var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	
+	        var _ref$silent = _ref.silent;
+	        var silent = _ref$silent === undefined ? false : _ref$silent;
+	
+	        _classCallCheck(this, Storage);
+	
+	        if (!(type in stores)) {
+	            this.fail('Storage: Unsupported type ' + type);
+	        }
+	
+	        this.silent = !!silent;
+	        this.store = new stores[type]();
+	    }
+	
+	    /**
+	     * Gets the stored value for a specified key
+	     * @param {string} key The key to look up
+	     * @param defaultValue Return this if no value has been found
+	     * @throws {Error} If not silent
+	     * @returns {string} The stored value or defaultValue
+	     */
+	
+	    _createClass(Storage, [{
+	        key: 'get',
+	        value: function get(key) {
+	            var defaultValue = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
+	
+	            try {
+	                var result = this.store.get(key);
+	
+	                if (null === result) {
+	                    return defaultValue;
+	                }
+	                return result;
+	            } catch (e) {
+	                return this.fail(e);
+	            }
+	        }
+	
+	        /**
+	         * Writes a value to the store under the specified key
+	         * @param {string} key The key to use when storing
+	         * @param {string} value The value to store
+	         * @param {object} [options] A map of options. See the respective backends.
+	         * @throws {Error} If not silent
+	         * @returns {Storage|boolean} If silent, returns false on error. Returns this on success.
+	         */
+	
+	    }, {
+	        key: 'set',
+	        value: function set(key, value, options) {
+	            try {
+	                this.store.set(key, value, options);
+	                return this;
+	            } catch (e) {
+	                return this.fail(e);
+	            }
+	        }
+	
+	        /**
+	         * Checks whether the store knows about the specified key
+	         * @param {string} key The key to check for existance
+	         * @throws {Error} If not silent
+	         * @returns {boolean} If silent, returns false on error (!!)
+	         */
+	
+	    }, {
+	        key: 'has',
+	        value: function has(key) {
+	            try {
+	                return this.store.has(key);
+	            } catch (e) {
+	                return this.fail(e);
+	            }
+	        }
+	
+	        /**
+	         * Deletes the specified key and its value from the store
+	         * @param {string} key The key to delete
+	         * @returns {Storage|boolean} If silent, returns false on error
+	         */
+	
+	    }, {
+	        key: 'remove',
+	        value: function remove(key) {
+	            try {
+	                this.store.remove(key);
+	                return this;
+	            } catch (e) {
+	                return this.fail(e);
+	            }
+	        }
+	
+	        /**
+	         * Wrapper for error handling
+	         * @private
+	         * @param {Error|string} reason What is happening?
+	         * @returns {boolean}
+	         */
+	
+	    }, {
+	        key: 'fail',
+	        value: function fail(reason) {
+	            if (this.silent) {
+	                return false;
+	            }
+	
+	            if (!reason instanceof Error) {
+	                reason = new Error(reason);
+	            }
+	
+	            throw reason;
+	        }
+	    }]);
+	
+	    return Storage;
+	}();
+	
+	module.exports = Storage;
+
+/***/ },
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	module.exports = function () {
+	    function LocalStore() {
+	        _classCallCheck(this, LocalStore);
+	    }
+	
+	    _createClass(LocalStore, [{
+	        key: "get",
+	        value: function get(key) {
+	            return localStorage.getItem(key);
+	        }
+	    }, {
+	        key: "set",
+	        value: function set(key, value) {
+	            localStorage.setItem(key, value);
+	        }
+	    }, {
+	        key: "has",
+	        value: function has(key) {
+	            return null !== localStorage.getItem(key);
+	        }
+	    }, {
+	        key: "remove",
+	        value: function remove(key) {
+	            localStorage.removeItem(key);
+	        }
+	    }]);
+	
+	    return LocalStore;
+	}();
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	module.exports = function () {
+	    function SessionStore() {
+	        _classCallCheck(this, SessionStore);
+	    }
+	
+	    _createClass(SessionStore, [{
+	        key: "get",
+	        value: function get(key) {
+	            return sessionStorage.getItem(key);
+	        }
+	    }, {
+	        key: "set",
+	        value: function set(key, value) {
+	            sessionStorage.setItem(key, value);
+	        }
+	    }, {
+	        key: "has",
+	        value: function has(key) {
+	            return null !== sessionStorage.getItem(key);
+	        }
+	    }, {
+	        key: "remove",
+	        value: function remove(key) {
+	            sessionStorage.removeItem(key);
+	        }
+	    }]);
+	
+	    return SessionStore;
+	}();
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	module.exports = function () {
+	    function CookieStore() {
+	        _classCallCheck(this, CookieStore);
+	    }
+	
+	    _createClass(CookieStore, [{
+	        key: "get",
+	        value: function get(key) {
+	            var matchedCookie = this.matchSingleCookie(document.cookie, key);
+	
+	            if (matchedCookie instanceof Array && matchedCookie[1] !== undefined) {
+	                try {
+	                    return decodeURIComponent(matchedCookie[1]);
+	                } catch (e) {
+	                    return matchedCookie[1];
+	                }
+	            }
+	
+	            return null;
+	        }
+	    }, {
+	        key: "set",
+	        value: function set(key, value) {
+	            var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+	
+	            var _ref$expires = _ref.expires;
+	            var expires = _ref$expires === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : _ref$expires;
+	            var _ref$path = _ref.path;
+	            var path = _ref$path === undefined ? "/" : _ref$path;
+	
+	            // support expires in seconds
+	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
+	                expires = new Date(Date.now() + parseInt(expires) * 1000).toUTCString();
+	            }
+	
+	            // support expires as date-object
+	            if (expires instanceof Date) {
+	                expires = expires.toUTCString();
+	            }
+	
+	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=" + path].join("; ");
+	        }
+	    }, {
+	        key: "has",
+	        value: function has(key) {
+	            return null !== this.get(key);
+	        }
+	    }, {
+	        key: "remove",
+	        value: function remove(key) {
+	            this.set(key, "", "Thu, 01 Jan 1970 00:00:00 GMT");
+	        }
+	    }, {
+	        key: "matchSingleCookie",
+	        value: function matchSingleCookie(cookies, key) {
+	            var saneKey = encodeURIComponent(key).replace(/[-\.+\*]/g, "$&");
+	            var regExp = new RegExp("(?:(?:^|.*;)s*" + saneKey + "s*=s*([^;]*).*$)|^.*$");
+	            return cookies.match(regExp);
+	        }
+	    }]);
+	
+	    return CookieStore;
+	}();
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var tagName = 'custom-dropdown';
+	
+	module.exports = document.registerElement(tagName, {
+	    prototype: Object.create(HTMLElement.prototype, {
+	        createdCallback: { value: createdCallback },
+	        attachedCallback: { value: attachedCallback }
+	    })
+	});
+	
+	function createdCallback() {
+	    var el = $(this);
+	    var titleElement = el.find('p');
+	    var defaultTitle = titleElement.text();
+	
+	    el.removeClass('sc-open');
+	    el.on('touchstart, mousedown', function (e) {
+	        e.stopPropagation();
+	    });
+	
+	    if (null === el.attr('checkboxgroup')) {
+	        return;
+	    }
+	
+	    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
+	    var updateCaption = function updateCaption() {
+	        var box;
+	        var checkboxes = el.find('[type=checkbox]:checked');
+	        var texts = [];
+	        checkboxes.filter(":checked").forEach(function (element) {
+	            texts.push(element.nextElementSibling.innerHTML);
+	        });
+	
+	        var title = texts.join(', ') || defaultTitle;
+	        titleElement.html(title);
+	    };
+	
+	    el.on('change', updateCaption);
+	    updateCaption();
+	}
+	
+	function attachedCallback() {
+	    var el = this;
+	
+	    el.querySelector('p').addEventListener('mousedown', function (e) {
+	        closeAllDropdowns(el);
+	        el.classList.toggle('sc-open');
+	    });
+	
+	    attachEventListeners();
+	}
+	
+	function closeAllDropdowns(exceptThisOne) {
+	    var allCds = document.querySelectorAll(tagName);
+	    for (var i = 0, l = allCds.length; i < l; i++) {
+	        if (allCds[i] !== exceptThisOne) {
+	            allCds[i].classList.remove('sc-open');
+	        }
+	    }
+	}
+	
+	function attachEventListeners() {
+	    // this should only be done at most once
+	    // when the first of this element gets attached
+	    document.addEventListener('mousedown', closeAllDropdowns);
+	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
+	}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	'use strict';
 	
 	!function (c) {
 	  function s(l) {
 	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
 	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
 	}([function (c, s, v) {
-	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
-	      t = {};l.forEach(function (c) {
-	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
-	  });var h = Object.create(HTMLElement.prototype);h.createdCallback = function () {
-	    this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()];
-	  }, h.attributeChangedCallback = function (c, s, v) {
-	    "type" === c && (this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()]);
-	  }, document.registerElement("as24-icon", { prototype: h }), window.showcarIconNames = l;
+	  var l = function l(c) {
+	    var s = document.createElement(c).__proto__ !== HTMLElement.prototype;return s && window && window.console && window.console.warn('CustomElement "' + c + '" is already registered.'), s;
+	  };if (!l("as24-icon")) {
+	    var t = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
+	        h = {};t.forEach(function (c) {
+	      h[c.toLowerCase()] = v(1)("./" + c + ".svg");
+	    });var e = Object.create(HTMLElement.prototype);e.createdCallback = function () {
+	      this.innerHTML = h[("" + this.getAttribute("type")).toLowerCase()];
+	    }, e.attributeChangedCallback = function (c, s, v) {
+	      "type" === c && (this.innerHTML = h[("" + this.getAttribute("type")).toLowerCase()]);
+	    }, document.registerElement("as24-icon", { prototype: e }), window.showcarIconNames = t;
+	  }
 	}, function (c, s, v) {
 	  function l(c) {
 	    return v(t(c));
@@ -4341,371 +4207,476 @@
 
 	'use strict';
 	
-	var tagName = 'custom-dropdown';
-	
-	module.exports = document.registerElement(tagName, {
-	    prototype: Object.create(HTMLElement.prototype, {
-	        createdCallback: { value: createdCallback },
-	        attachedCallback: { value: attachedCallback }
-	    })
-	});
-	
-	function createdCallback() {
-	    var el = $(this);
-	    var titleElement = el.find('p');
-	    var defaultTitle = titleElement.text();
-	
-	    el.removeClass('sc-open');
-	    el.on('touchstart, mousedown', function (e) {
-	        e.stopPropagation();
-	    });
-	
-	    if (null === el.attr('checkboxgroup')) {
-	        return;
-	    }
-	
-	    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
-	    var updateCaption = function updateCaption() {
-	        var box;
-	        var checkboxes = el.find('[type=checkbox]:checked');
-	        var texts = [];
-	        checkboxes.filter(":checked").forEach(function (element) {
-	            texts.push(element.nextElementSibling.innerHTML);
-	        });
-	
-	        var title = texts.join(', ') || defaultTitle;
-	        titleElement.html(title);
-	    };
-	
-	    el.on('change', updateCaption);
-	    updateCaption();
-	}
-	
-	function attachedCallback() {
-	    var el = this;
-	
-	    el.querySelector('p').addEventListener('mousedown', function (e) {
-	        closeAllDropdowns(el);
-	        el.classList.toggle('sc-open');
-	    });
-	
-	    attachEventListeners();
-	}
-	
-	function closeAllDropdowns(exceptThisOne) {
-	    var allCds = document.querySelectorAll(tagName);
-	    for (var i = 0, l = allCds.length; i < l; i++) {
-	        if (allCds[i] !== exceptThisOne) {
-	            allCds[i].classList.remove('sc-open');
-	        }
-	    }
-	}
-	
-	function attachEventListeners() {
-	    // this should only be done at most once
-	    // when the first of this element gets attached
-	    document.addEventListener('mousedown', closeAllDropdowns);
-	    attachEventListeners = function attachEventListeners() {}; // so that we only attach at most once
-	}
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var stores = {
-	    local: __webpack_require__(18),
-	    session: __webpack_require__(19),
-	    cookie: __webpack_require__(20)
-	};
-	
-	var Storage = function () {
-	    /**
-	     * @constructor
-	     * @param {string} type The store backend to use
-	     * @param {boolean} [silent=false] Whether to throw exceptions or fail silently returning false
-	     */
-	
-	    function Storage(type) {
-	        var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-	
-	        var _ref$silent = _ref.silent;
-	        var silent = _ref$silent === undefined ? false : _ref$silent;
-	
-	        _classCallCheck(this, Storage);
-	
-	        if (!(type in stores)) {
-	            this.fail('Storage: Unsupported type ' + type);
+	var Navigation = function () {
+	    _createClass(Navigation, [{
+	        key: 'KEY_DOWN',
+	        get: function get() {
+	            return 40;
 	        }
-	
-	        this.silent = !!silent;
-	        this.store = new stores[type]();
-	    }
-	
-	    /**
-	     * Gets the stored value for a specified key
-	     * @param {string} key The key to look up
-	     * @param defaultValue Return this if no value has been found
-	     * @throws {Error} If not silent
-	     * @returns {string} The stored value or defaultValue
-	     */
-	
-	    _createClass(Storage, [{
-	        key: 'get',
-	        value: function get(key) {
-	            var defaultValue = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
-	
-	            try {
-	                var result = this.store.get(key);
-	
-	                if (null === result) {
-	                    return defaultValue;
-	                }
-	                return result;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
-	        }
-	
-	        /**
-	         * Writes a value to the store under the specified key
-	         * @param {string} key The key to use when storing
-	         * @param {string} value The value to store
-	         * @param {object} [options] A map of options. See the respective backends.
-	         * @throws {Error} If not silent
-	         * @returns {Storage|boolean} If silent, returns false on error. Returns this on success.
-	         */
-	
 	    }, {
-	        key: 'set',
-	        value: function set(key, value, options) {
-	            try {
-	                this.store.set(key, value, options);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	        key: 'KEY_UP',
+	        get: function get() {
+	            return 38;
 	        }
-	
-	        /**
-	         * Checks whether the store knows about the specified key
-	         * @param {string} key The key to check for existance
-	         * @throws {Error} If not silent
-	         * @returns {boolean} If silent, returns false on error (!!)
-	         */
-	
 	    }, {
-	        key: 'has',
-	        value: function has(key) {
-	            try {
-	                return this.store.has(key);
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	        key: 'KEY_LEFT',
+	        get: function get() {
+	            return 37;
 	        }
-	
-	        /**
-	         * Deletes the specified key and its value from the store
-	         * @param {string} key The key to delete
-	         * @returns {Storage|boolean} If silent, returns false on error
-	         */
-	
 	    }, {
-	        key: 'remove',
-	        value: function remove(key) {
-	            try {
-	                this.store.remove(key);
-	                return this;
-	            } catch (e) {
-	                return this.fail(e);
-	            }
+	        key: 'KEY_RIGHT',
+	        get: function get() {
+	            return 39;
 	        }
-	
-	        /**
-	         * Wrapper for error handling
-	         * @private
-	         * @param {Error|string} reason What is happening?
-	         * @returns {boolean}
-	         */
-	
 	    }, {
-	        key: 'fail',
-	        value: function fail(reason) {
-	            if (this.silent) {
-	                return false;
-	            }
-	
-	            if (!reason instanceof Error) {
-	                reason = new Error(reason);
-	            }
-	
-	            throw reason;
+	        key: 'KEY_TAB',
+	        get: function get() {
+	            return 9;
+	        }
+	    }, {
+	        key: 'KEY_RETURN',
+	        get: function get() {
+	            return 13;
+	        }
+	    }, {
+	        key: 'KEY_ESCAPE',
+	        get: function get() {
+	            return 27;
 	        }
 	    }]);
 	
-	    return Storage;
+	    function Navigation(root) {
+	        _classCallCheck(this, Navigation);
+	
+	        this.document = $(document);
+	        this.rootElement = $(root);
+	        this.menuBtn = $('.sc-btn-mobile-menu', this.rootElement);
+	        this.activeItem = null;
+	        this.activeMenu = null;
+	        this.menuIsOpen = false;
+	        this.menus = $('nav > ul > li', this.rootElement);
+	        this.items = [];
+	        this.initEvents();
+	    }
+	
+	    _createClass(Navigation, [{
+	        key: 'initEvents',
+	        value: function initEvents() {
+	            this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
+	            this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
+	            this.document.on('click', $.proxy(this.escapeMenu, this));
+	            this.document.on('keydown', $.proxy(this.onKeyDown, this));
+	            this.document.on('keyup', $.proxy(this.onKeyUp, this));
+	        }
+	    }, {
+	        key: 'toggleMenu',
+	        value: function toggleMenu(event) {
+	            event.stopPropagation();
+	            var clickedMenu = $(event.target).closest('li');
+	
+	            if ($(event.target).closest('li').length === 0) {
+	                clickedMenu = this.rootElement;
+	            }
+	
+	            if (this.activeMenu && this.menuIsOpen) {
+	
+	                if (this.activeMenu[0] == clickedMenu[0]) {
+	                    this.closeMenu();
+	                    return;
+	                } else if (this.rootElement[0] == clickedMenu[0]) {
+	                    this.closeMenu(this.rootElement.find('.open').add(this.rootElement));
+	                    return;
+	                } else if (this.activeMenu[0] != this.rootElement[0]) {
+	                    this.closeMenu();
+	                }
+	            }
+	
+	            this.setActiveMenu(clickedMenu);
+	            this.openMenu();
+	        }
+	    }, {
+	        key: 'setActiveMenu',
+	        value: function setActiveMenu(element) {
+	            this.activeMenu = $(element);
+	        }
+	    }, {
+	        key: 'closeMenu',
+	        value: function closeMenu(menu) {
+	            var closeTarget = menu || this.activeMenu;
+	            closeTarget.removeClass('open');
+	            this.unsetInactiveMenuItems();
+	            this.items = [];
+	            this.menuIsOpen = false;
+	        }
+	    }, {
+	        key: 'openMenu',
+	        value: function openMenu() {
+	            this.activeMenu.addClass('open');
+	            this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
+	            this.menuIsOpen = true;
+	        }
+	    }, {
+	        key: 'escapeMenu',
+	        value: function escapeMenu(event) {
+	            this.activeMenu && this.menuIsOpen && this.closeMenu();
+	        }
+	    }, {
+	        key: 'isNavigationKey',
+	        value: function isNavigationKey(keyCode) {
+	            return [this.KEY_DOWN, this.KEY_LEFT, this.KEY_RIGHT, this.KEY_UP, this.KEY_TAB].indexOf(keyCode) > -1;
+	        }
+	
+	        // Prevent scrolling
+	
+	    }, {
+	        key: 'onKeyDown',
+	        value: function onKeyDown(event) {
+	            var keyCode = event.which;
+	
+	            if (this.menuIsOpen && this.isNavigationKey(keyCode)) {
+	                event.preventDefault();
+	                return false;
+	            }
+	
+	            return true;
+	        }
+	    }, {
+	        key: 'onKeyUp',
+	        value: function onKeyUp(event) {
+	            var keyCode = event.which;
+	
+	            switch (keyCode) {
+	                case this.KEY_ESCAPE:
+	                    this.escapeMenu();
+	                    break;
+	                case this.KEY_DOWN:
+	                    this.handleJumpDown();
+	                    break;
+	                case this.KEY_UP:
+	                    this.handleJumpUp();
+	                    break;
+	                case this.KEY_TAB:
+	                    !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+	                    break;
+	                case this.KEY_RIGHT:
+	                    this.handleJumpRight();
+	                    break;
+	                case this.KEY_LEFT:
+	                    this.handleJumpLeft();
+	                    break;
+	            }
+	
+	            event.preventDefault();
+	            return false;
+	        }
+	    }, {
+	        key: 'handleJumpDown',
+	        value: function handleJumpDown() {
+	            // Expand the menu if closed
+	            if (false === this.menuIsOpen) {
+	                this.openMenu();
+	                this.selectFirstItem();
+	                return;
+	            }
+	            var position = this.items.indexOf(this.activeItem);
+	            this.items.length - 1 > position && position++;
+	            this.setActiveMenuItem(this.items[position]);
+	        }
+	    }, {
+	        key: 'handleJumpUp',
+	        value: function handleJumpUp() {
+	            if (false === this.menuIsOpen) {
+	                return;
+	            }
+	            var position = this.items.indexOf(this.activeItem);
+	            0 === position && this.closeMenu();
+	            0 < position && position--;
+	            this.setActiveMenuItem(this.items[position]);
+	        }
+	    }, {
+	        key: 'handleJumpRight',
+	        value: function handleJumpRight() {
+	            var current = this.menus.indexOf(this.activeMenu[0]);
+	            var newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
+	            this.selectMenu(this.menus[newMenuIdx]);
+	        }
+	    }, {
+	        key: 'handleJumpLeft',
+	        value: function handleJumpLeft() {
+	            var current = this.menus.indexOf(this.activeMenu[0]);
+	            var newMenuIdx = 0 < current ? current - 1 : this.menus.length - 1;
+	            this.selectMenu(this.menus[newMenuIdx]);
+	        }
+	    }, {
+	        key: 'setActiveMenuItem',
+	        value: function setActiveMenuItem(element) {
+	            this.unsetInactiveMenuItems();
+	            element = $(element);
+	            !element.hasClass('active-item') && element.addClass('active-item');
+	            this.activeItem = element[0];
+	            $('a', element).focus();
+	        }
+	    }, {
+	        key: 'unsetInactiveMenuItems',
+	        value: function unsetInactiveMenuItems() {
+	            this.rootElement.find('.active-item').removeClass('active-item');
+	            this.activeItem = null;
+	        }
+	    }, {
+	        key: 'selectFirstItem',
+	        value: function selectFirstItem() {
+	            this.setActiveMenuItem(this.items[0]);
+	        }
+	    }, {
+	        key: 'selectMenu',
+	        value: function selectMenu(element) {
+	            if ('object' !== (typeof element === 'undefined' ? 'undefined' : _typeof(element))) {
+	                return;
+	            }
+	            this.menuIsOpen && this.closeMenu();
+	            this.setActiveMenu(element);
+	            this.openMenu();
+	            this.selectFirstItem();
+	        }
+	    }]);
+	
+	    return Navigation;
 	}();
 	
-	module.exports = Storage;
+	var navigationElement = document.querySelector('.sc-navigation'),
+	    navigation = null;
+	if (navigationElement) {
+	    navigation = new Navigation(navigationElement);
+	}
+	
+	module.exports = navigation;
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function () {
+	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="arrow"]'), function (arrow) {
+	        var arrowEl = $(arrow);
+	        $(arrowEl.data('target')).on('click', function () {
+	            return arrowEl.toggleClass('open');
+	        });
+	    });
+	};
 
 /***/ },
 /* 18 */
 /***/ function(module, exports) {
 
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	'use strict';
 	
 	module.exports = function () {
-	    function LocalStore() {
-	        _classCallCheck(this, LocalStore);
+	    function handleStickies() {
+	        var scrollPos = $(window).scrollTop();
+	
+	        var stickyButtons = $('[data-sticky]');
+	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
+	            var stickyEl = $(stickyButton);
+	            var id = stickyEl.attr('data-sticky');
+	            var undockEl = $('[data-sticky-undock="' + id + '"]');
+	            var dockEl = $('[data-sticky-dock="' + id + '"]');
+	
+	            // if there is no dock and undock element leave sticky class
+	            if (undockEl.length === 0 && dockEl.length === 0) {
+	                stickyEl.addClass('sticky');
+	            }
+	
+	            // get undock position
+	            var undockPos = 0;
+	            if (undockEl.length > 0) {
+	                undockPos = undockEl.offset().top;
+	            }
+	
+	            // get dock position
+	            var dockPos = $(document).height();
+	            if (dockEl.length > 0) {
+	                dockPos = dockEl.offset().top;
+	            }
+	
+	            // if element is within scrolling area, scroll, else don't
+	            if (scrollPos + $(window).height() > undockPos && scrollPos < dockPos - $(window).height() + stickyEl.height() * 1.5) {
+	                stickyEl.addClass('sc-sticky');
+	            } else {
+	                stickyEl.removeClass('sc-sticky');
+	            }
+	        });
 	    }
 	
-	    _createClass(LocalStore, [{
-	        key: "get",
-	        value: function get(key) {
-	            return localStorage.getItem(key);
-	        }
-	    }, {
-	        key: "set",
-	        value: function set(key, value) {
-	            localStorage.setItem(key, value);
-	        }
-	    }, {
-	        key: "has",
-	        value: function has(key) {
-	            return null !== localStorage.getItem(key);
-	        }
-	    }, {
-	        key: "remove",
-	        value: function remove(key) {
-	            localStorage.removeItem(key);
-	        }
-	    }]);
+	    handleStickies();
 	
-	    return LocalStore;
-	}();
+	    window.addEventListener("deviceorientation", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("resize", function () {
+	        handleStickies();
+	    });
+	
+	    window.addEventListener("pageSizeChanged", function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('scroll', function () {
+	        handleStickies();
+	    });
+	
+	    document.addEventListener('collapse', function () {
+	        handleStickies();
+	    });
+	};
 
 /***/ },
 /* 19 */
 /***/ function(module, exports) {
 
-	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	'use strict';
 	
 	module.exports = function () {
-	    function SessionStore() {
-	        _classCallCheck(this, SessionStore);
-	    }
+	    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), function (collapsable) {
+	        collapsable.onclick = function () {
+	            var targetAttr = collapsable.getAttribute('data-target');
+	            var targets = document.querySelectorAll(targetAttr);
 	
-	    _createClass(SessionStore, [{
-	        key: "get",
-	        value: function get(key) {
-	            return sessionStorage.getItem(key);
-	        }
-	    }, {
-	        key: "set",
-	        value: function set(key, value) {
-	            sessionStorage.setItem(key, value);
-	        }
-	    }, {
-	        key: "has",
-	        value: function has(key) {
-	            return null !== sessionStorage.getItem(key);
-	        }
-	    }, {
-	        key: "remove",
-	        value: function remove(key) {
-	            sessionStorage.removeItem(key);
-	        }
-	    }]);
+	            Array.prototype.forEach.call(targets, function (target) {
+	                target.classList.toggle('in');
+	            });
 	
-	    return SessionStore;
-	}();
+	            var event = new CustomEvent('collapse', {
+	                bubbles: true
+	            });
+	            document.dispatchEvent(event);
+	        };
+	    });
+	};
 
 /***/ },
 /* 20 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	module.exports = function () {
-	    function CookieStore() {
-	        _classCallCheck(this, CookieStore);
+	var Notification = function () {
+	    function Notification(element) {
+	        _classCallCheck(this, Notification);
+	
+	        this.element = element;
+	        this._body = '';
+	        this.body = this.element.innerHTML;
 	    }
 	
-	    _createClass(CookieStore, [{
-	        key: "get",
-	        value: function get(key) {
-	            var matchedCookie = this.matchSingleCookie(document.cookie, key);
+	    _createClass(Notification, [{
+	        key: 'hide',
+	        value: function hide() {
+	            this.element.classList.remove('show');
+	        }
 	
-	            if (matchedCookie instanceof Array && matchedCookie[1] !== undefined) {
-	                try {
-	                    return decodeURIComponent(matchedCookie[1]);
-	                } catch (e) {
-	                    return matchedCookie[1];
-	                }
+	        /**
+	         * Create the html structure of the notification element
+	         */
+	
+	    }, {
+	        key: 'create',
+	        value: function create() {
+	            this.element.innerHTML = '';
+	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+	            this.createElement('div', container, this.body);
+	        }
+	
+	        /**
+	         * @param {String} attribute
+	         * @param {String} value
+	         */
+	
+	    }, {
+	        key: 'update',
+	        value: function update(attribute, value) {
+	            if ('class' === attribute && 'show' === value && this.timeout) {
+	                window.setTimeout(this.hide.bind(this), this.timeout);
 	            }
+	        }
 	
-	            return null;
+	        /**
+	         * @param {String} name
+	         * @param {String} body
+	         * @param {Array} classes
+	         * @param {HTMLElement} parent
+	         * @returns {Element}
+	         */
+	
+	    }, {
+	        key: 'createElement',
+	        value: function createElement(name, parent, body) {
+	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
+	
+	            var element = document.createElement(name);
+	
+	            classes.forEach(function (cls) {
+	                element.classList.add(cls);
+	            });
+	            element.innerHTML = body;
+	
+	            parent.appendChild(element);
+	
+	            return element;
 	        }
 	    }, {
-	        key: "set",
-	        value: function set(key, value) {
-	            var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-	
-	            var _ref$expires = _ref.expires;
-	            var expires = _ref$expires === undefined ? "Fri, 31 Dec 9999 23:59:59 GMT" : _ref$expires;
-	            var _ref$path = _ref.path;
-	            var path = _ref$path === undefined ? "/" : _ref$path;
-	
-	            // support expires in seconds
-	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
-	                expires = new Date(Date.now() + parseInt(expires) * 1000).toUTCString();
-	            }
-	
-	            // support expires as date-object
-	            if (expires instanceof Date) {
-	                expires = expires.toUTCString();
-	            }
-	
-	            document.cookie = [encodeURIComponent(key) + "=" + encodeURIComponent(value), "expires=" + expires, "path=" + path].join("; ");
+	        key: 'title',
+	        get: function get() {
+	            return this.element.getAttribute('title');
 	        }
 	    }, {
-	        key: "has",
-	        value: function has(key) {
-	            return null !== this.get(key);
+	        key: 'timeout',
+	        get: function get() {
+	            return this.element.getAttribute('timeout');
 	        }
 	    }, {
-	        key: "remove",
-	        value: function remove(key) {
-	            this.set(key, "", "Thu, 01 Jan 1970 00:00:00 GMT");
-	        }
-	    }, {
-	        key: "matchSingleCookie",
-	        value: function matchSingleCookie(cookies, key) {
-	            var saneKey = encodeURIComponent(key).replace(/[-\.+\*]/g, "$&");
-	            var regExp = new RegExp("(?:(?:^|.*;)s*" + saneKey + "s*=s*([^;]*).*$)|^.*$");
-	            return cookies.match(regExp);
+	        key: 'body',
+	        get: function get() {
+	            return this._body;
+	        },
+	        set: function set(value) {
+	            this._body = value;
 	        }
 	    }]);
 	
-	    return CookieStore;
+	    return Notification;
 	}();
+	
+	function onElementCreated() {
+	    this.notification = new Notification(this);
+	    this.notification.create();
+	}
+	
+	function onElementChanged(attributeName, previousValue, value) {
+	    this.notification.update(attributeName, value);
+	}
+	
+	var tagName = 'as24-notification';
+	
+	module.exports = document.registerElement(tagName, {
+	    prototype: Object.create(HTMLElement.prototype, {
+	        createdCallback: { value: onElementCreated },
+	        attributeChangedCallback: { value: onElementChanged }
+	    })
+	});
 
 /***/ }
 /******/ ]);
