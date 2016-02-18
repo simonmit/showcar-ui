@@ -35,6 +35,7 @@ body {
   margin-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
   text-align: center;
+  @include clearfix();
 }
 
 .sc-stripe-transparent {
@@ -66,7 +67,7 @@ body {
 }
 
 .sc-content {
-  padding: $grid-gutter-width;
+  padding: 4px $grid-gutter-width;
 }
 
 hr {
@@ -84,7 +85,9 @@ hr {
     margin-right: 0 - $grid-gutter-width;
   }
   .sc-card {
-    border: 0 none;
+    border-right: 0 none;
+    border-left: 0 none;
+    border-top: 0 none;
   }
 }
 
