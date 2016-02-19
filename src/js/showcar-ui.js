@@ -1,6 +1,13 @@
 require('../../vendor/zepto/zepto.min.js');
 require('./components/polyfills.js')();
 
+var warn = function (msg) {
+    if (!window || !window.console) {
+        return;
+    }
+    window.console.warn(msg);
+};
+
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
 
