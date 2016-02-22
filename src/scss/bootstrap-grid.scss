@@ -59,5 +59,19 @@ $grid-gutter-width:          1.875rem !default; // 30px
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";
-
 @import "grid";
+
+.sc-content-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  max-width: $viewportXXL;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+*[class^="sc-grid-col"] {
+  margin-top: $grid-gutter-width;
+  min-width: 0; // Firefox fix
+}

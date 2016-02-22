@@ -5,29 +5,6 @@ body {
   background-color: $black-20;
 }
 
-.sc-content-container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $white;
-  max-width: $viewportXXL;
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
-}
-
-/* Fixes for showcar ui */
-.sc-navigation {
-  border: 0 none;
-  & nav ul li {
-    vertical-align: middle;
-  }
-}
-
-*[class^="sc-grid-col"] {
-  margin-top: $grid-gutter-width;
-  min-width: 0;
-}
-
 .sc-stripe {
   background-color: $orange-40;
   margin-left: 0 - $grid-gutter-width;
@@ -83,8 +60,6 @@ hr {
   .sc-card {
     margin-left: 0 - $grid-gutter-width;
     margin-right: 0 - $grid-gutter-width;
-  }
-  .sc-card {
     border-right: 0 none;
     border-left: 0 none;
     border-top: 0 none;
