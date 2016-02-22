@@ -9,7 +9,7 @@
   font-size: 0;
 
   /* CSS Hack, target IE10 and IE11 */
-  @media all and (-ms-high-contrast:none) {
+  @media all and (-ms-high-contrast: none) {
     justify-content: flex-start;
   }
 
@@ -23,8 +23,6 @@
     flex: 1 1 auto;
     border-top: 1px solid $black-20;
     border-bottom: 1px solid $black-30;
-
-
 
     &.previous-page, &.next-page {
       min-width: 120px;
@@ -54,57 +52,63 @@
       display: none;
     }
 
+    a {
+      @include link(M);
+      display: block;
+      transition: .3s background-color;
+      background-color: $white;
+      border-left: 1px solid $black-20;
+
+      &:hover {
+        background-color: $black-30;
+        border-left: 1px solid $black-30;
+      }
+
+      &.active {
+        pointer-events: none;
+        color: $black-100;
+        background-color: $black-40;
+        border-left: 1px solid $black-30;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        color: $black-40;
+      }
+
+      &.info {
+        pointer-events: none;
+        color: $black-100;
+      }
+
+      as24-icon {
+        position: relative;
+        bottom: 2px;
+        fill: $color-link;
+        width: 13px;
+        height: 7px;
+      }
+    }
+
     @include mqminmax($viewportS - 1, 420) {
-        &.info-page {
-            display: inline-block;
+      display: none;
 
-            a {
-                padding: 0 10px;
-                white-space: nowrap;
-            }
+      &.info-page, &.previous-page, &.next-page {
+        display: inline-block;
+
+        a {
+          padding: 0 10px;
+          white-space: nowrap;
         }
+      }
     }
 
-    @include mqmin($viewportM) {
-      display: inline-block;
-    }
-  }
+    @include mqmax($viewportS - 2) {
+      display: none;
 
-  a {
-    @include link(M);
-    display: block;
-    transition: .3s background-color;
-    background-color: $white;
-    border-left: 1px solid $black-20;
-
-    &:hover {
-      background-color: $black-30;
-      border-left: 1px solid $black-30;
-    }
-
-    &.active {
-      pointer-events: none;
-      color: $black-100;
-      background-color: $black-40;
-      border-left: 1px solid $black-30;
-    }
-
-    &.disabled {
-      pointer-events: none;
-      color: $black-40;
-    }
-
-    &.info {
-      pointer-events: none;
-      color: $black-100;
-    }
-
-    svg {
-      position: relative;
-      bottom: 2px;
-      fill: $color-link;
-      width: 13px;
-      height: 7px;
+      &.previous-page, &.next-page {
+        display: inline-block;
+      }
     }
   }
 }

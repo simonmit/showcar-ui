@@ -1,32 +1,36 @@
 require('../../vendor/zepto/zepto.min.js');
+require('./components/polyfills.js')();
 
-var polyfills = require('./components/polyfills.js');
-polyfills();
-
-var collapse = require('./components/collapse.js');
-collapse();
-
-require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
-
-window.Storage = require('../../vendor/showcar-storage/src/storage.js');
-
-require('./components/rotating-arrow.js')();
-require('./components/custom-dropdown.js');
-require('./components/sticky.js')();
-require('./components/navigation.js');
-
-window.notification = require('./components/notification.js');
+var warn = function (msg) {
+    if (!window || !window.console) {
+        return;
+    }
+    window.console.warn(msg);
+};
 
 var FontFaceObserver = require('fontfaceobserver');
 var observer = new FontFaceObserver('Source Sans Pro');
+
 try {
     observer.check().then(function () {
         $('body').addClass('font-loaded');
     }, function () {
-        // do nothing if font is not existing
+        warn('Cannot load font.');
     });
 } catch (e) {
-    if (console) {
-        console.log('Failed to use FontFaceObserver', e);
-    }
+    warn('Failed to use FontFaceObserver', e);
+}
+
+window.Storage = require('../../vendor/showcar-storage/src/storage.js');
+
+require('./components/custom-dropdown.js');
+require('./components/navigation.js');
+require('./components/rotating-arrow.js')();
+require('./components/sticky.js')();
+require('./components/collapse.js')();
+
+if (!window.notification) {
+    window.notification = require('./components/notification.js');
+} else {
+    warn('window.notification is already registered.');
 }

@@ -63,6 +63,7 @@ pre {
 }
 .docs-navigation {
     padding: $M;
+    margin-bottom: $L;
     background: $black-30;
     border-radius: $form-border-radius;
     word-break: normal;
@@ -216,9 +217,10 @@ pre {
     .input-group-emission-badge {
         max-width: 400px;
 
-        as24-icon svg {
+        as24-icon {
             width: 24px;
             height: 24px;
+            margin: 0 auto;
         }
     }
 }

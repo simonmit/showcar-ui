@@ -1,12 +1,17 @@
 var tagName = 'custom-dropdown';
 
-module.exports = document.registerElement(tagName, {
-    prototype: Object.create(HTMLElement.prototype, {
-        createdCallback: { value: createdCallback },
-        attachedCallback: { value: attachedCallback }
-    })
-});
-
+try {
+    document.registerElement(tagName, {
+        prototype: Object.create(HTMLElement.prototype, {
+            createdCallback: { value: createdCallback },
+            attachedCallback: { value: attachedCallback }
+        })
+    });
+} catch (e) {
+    if (window && window.console) {
+        window.console.warn('Failed to register CustomElement "' + tagName + '".', e);
+    }
+}
 
 function createdCallback() {
     var el = $(this);
