@@ -99,13 +99,10 @@
 
         span.title {
             cursor: pointer;
-            display: inline-block;
-            outline: 0;
             padding: $S 0;
             position: relative;
             &:after {
                 content: '';
-                outline: 0;
                 position: absolute;
                 right: 0;
                 margin-top: 6px;
@@ -126,11 +123,13 @@
             margin: 0 16px;
         }
 
-        li.open {
-            span.title {
-                color: $orange-100;
-                &:after{
-                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%20height%3D%227px%22%3E%3Cg%20fill-rule%3D%22evenodd%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23ff7500%22%20stroke-width%3D%222%22%20transform%3D%22translate%28-350%20-54%29%22%3E%3Cg%20id%3D%22Arrow-active-down%22%20transform%3D%22translate%28351%2055%29%22%3E%3Cpath%20id%3D%22Arrow%22%20d%3D%22m0%200l5%204%204-4%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        ul{
+            li.open {
+                span.title {
+                    color: $orange-100;
+                    &:after{
+                        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%207%22%20height%3D%227px%22%3E%3Cg%20fill-rule%3D%22evenodd%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23ff7500%22%20stroke-width%3D%222%22%20transform%3D%22translate%28-350%20-54%29%22%3E%3Cg%20id%3D%22Arrow-active-down%22%20transform%3D%22translate%28351%2055%29%22%3E%3Cpath%20id%3D%22Arrow%22%20d%3D%22m0%200l5%204%204-4%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                    }
                 }
             }
         }
@@ -291,6 +290,78 @@
 
                     a:hover, a:active, a:focus, li.active-item > a {
                         color: $orange-100;
+                    }
+                }
+
+                li.open {
+                    box-sizing: border-box;
+                    border: 1px solid $black-30;
+                    border-width: 0 1px;
+                    position: relative;
+                    margin: 0 -1px;
+
+                    .login-teaser {
+                        position: absolute;
+                        max-width: 100px;
+                    }
+
+                    .btn-login {
+                        margin-top: $XXXL;
+                    }
+
+                    span.title {
+                        color: $orange-100;
+                    }
+
+                    &:before {
+                        content: '';
+                        height: 2px;
+                        background-color: white;
+                        width: 100%;
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        z-index: 100;
+                    }
+
+                    > ul {
+                        transition: max-height 1s ease-out;
+                        max-height: 1000px;
+                        background-color: white;
+                        top: 70px;
+                        border: 1px solid $black-30;
+                        left: 0;
+                        margin-left: -1px;
+                        margin-right: -1px;
+                        padding: 12px 24px;
+                        li {
+                            float: none;
+                            display: block;
+                            padding: 0;
+                            a {
+                                white-space: nowrap;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    ul.submenu {
+                        > li {
+                            ul {
+                                position: static;
+                                a {
+                                    margin-left: 0;
+                                }
+
+                                li:first-child {
+                                    padding: 8px 0;
+                                }
+                            }
+                            vertical-align: top;
+                            display: inline-block;
+                            margin-left: 0px;
+                            padding-right: 24px;
+                        }
                     }
                 }
             }
