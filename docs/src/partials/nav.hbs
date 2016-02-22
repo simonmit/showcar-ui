@@ -1,14 +1,35 @@
 <ul class="docs-navigation">
-{{#withSort pages "data.nav-index"}}
+    {{#withSort pages "data.nav-index"}}
+        <li>
+            <a href="{{relative ../page.dest this.dest}}">{{data.title}}</a>
+            {{#if data.sub-nav}}
+                <ul>
+                    {{#each data.sub-nav}}
+                        <li><a href="{{relative ../../../page.dest ../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a></li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </li>
+    {{/withSort}}
+</ul>
+
+<ul class="docs-navigation">
+    <h5 class="sc-font-bold">Showcar Repositories</h5>
     <li>
-        <a href="{{relative ../page.dest this.dest}}">{{data.title}}</a>
-        {{#if data.sub-nav}}
-        <ul>
-        {{#each data.sub-nav}}
-            <li><a href="{{relative ../../../page.dest ../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a></li>
-        {{/each}}
-        </ul>
-        {{/if}}
+        <a href="https://github.com/AutoScout24/showcar-ui" target="_blank">showcar-ui</a>
+        (<a href="http://as24-showcar-ui.aws.autoscout24.com/docs/" target="_blank">docs</a>)
     </li>
-{{/withSort}}
+    <li>
+        <a href="https://github.com/AutoScout24/showcar-icons" target="_blank">showcar-icons</a>
+        (<a href="http://as24-showcar-icons.aws.autoscout24.com/docs/" target="_blank">docs</a>)
+    </li>
+    <li>
+        <a href="https://github.com/AutoScout24/showcar-gallery" target="_blank">showcar-gallery</a>
+    </li>
+    <li>
+        <a href="https://github.com/AutoScout24/showcar-tracking" target="_blank">showcar-tracking</a>
+    </li>
+    <li>
+        <a href="https://github.com/AutoScout24/showcar-storage" target="_blank">showcar-storage</a>
+    </li>
 </ul>
