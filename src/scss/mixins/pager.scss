@@ -20,13 +20,13 @@
     min-width: 48px;
     max-width: 52px;
     list-style: none;
-    flex: 1 1 auto;
+    flex: auto;
     border-top: 1px solid $black-20;
     border-bottom: 1px solid $black-30;
 
     &.previous-page, &.next-page {
       min-width: 120px;
-      max-width: 140px;
+      max-width: 160px;
 
       a.disabled {
         svg {
@@ -90,7 +90,14 @@
       }
     }
 
-    @include mqminmax($viewportS - 1, 420) {
+    @include mqminmax(421, 767) {
+      &.info-page, &.previous-page, &.next-page {
+        display: inline-block;
+
+      }
+    }
+
+    @include mqminmax($viewportS, 420) {
       display: none;
 
       &.info-page, &.previous-page, &.next-page {
@@ -103,7 +110,7 @@
       }
     }
 
-    @include mqmax($viewportS - 2) {
+    @include mqmax($viewportS - 1) {
       display: none;
 
       &.previous-page, &.next-page {
