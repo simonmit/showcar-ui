@@ -290,6 +290,9 @@
                 li {
                     display: inline-block;
                     padding: 24px 48px 24px 24px;
+                    border: 1px solid transparent;
+                    border-width: 0 1px;
+                    margin: 0 -1px;
 
                     a:hover, a:active, a:focus, li.active-item > a {
                         color: $orange-100;
