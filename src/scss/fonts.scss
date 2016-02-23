@@ -35,7 +35,7 @@
 
 h1.sc-font {
   padding: 0 $L;
-  @include font(XXL);
+  font-size: 1.75rem;
 
   @include mqmax($viewportL) {
     @include font(XL);
