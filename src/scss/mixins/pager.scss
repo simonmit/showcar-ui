@@ -76,11 +76,6 @@
         color: $black-40;
       }
 
-      &.info {
-        pointer-events: none;
-        color: $black-100;
-      }
-
       as24-icon {
         position: relative;
         bottom: 2px;
@@ -90,27 +85,16 @@
       }
     }
 
-    @include mqminmax(421, 767) {
-      &.info-page, &.previous-page, &.next-page {
-        display: inline-block;
-
-      }
-    }
-
-    @include mqminmax($viewportS, 420) {
+    @include mqminmax($viewportS - 1, 714) {
       display: none;
 
       &.info-page, &.previous-page, &.next-page {
         display: inline-block;
 
-        a {
-          padding: 0 10px;
-          white-space: nowrap;
-        }
       }
     }
 
-    @include mqmax($viewportS - 1) {
+    @include mqmax($viewportS - 2) {
       display: none;
 
       &.previous-page, &.next-page {
