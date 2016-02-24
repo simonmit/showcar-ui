@@ -1,28 +1,27 @@
 @import "../../src/scss/variables";
 @import "../../src/scss/utils";
 
-
 body {
     overflow-x: hidden;
 }
 
-h1 {
+h1:not(.sc-font) {
     font-size: 4rem;
     margin: 20px 0 10px;
 }
-h2 {
+h2:not(.sc-font) {
     font-size: 2rem;
     margin: 20px 0 10px;
 }
-h3 {
+h3:not(.sc-font) {
     font-size: 1.6rem;
     margin: 20px 0 10px;
 }
-h4 {
+h4:not(.sc-font) {
     font-size: 1.2rem;
     margin: 20px 0 10px;
 }
-p {
+p:not(.sc-font) {
     margin: 5px 0;
 }
 
@@ -333,15 +332,15 @@ pre {
     }
 
     &.version-desktop {
-        width: 715.016px;
+        width: 715px;
     }
 
     &.version-tablet {
-        width: 759.469px;
+        width: 760px;
     }
 
-    &.version-mobile-480 {
-        width: 480px;
+    &.version-mobile-715 {
+        width: 714px;
     }
 
     &.version-mobile-320 {
@@ -361,26 +360,20 @@ pre {
         }
     }
 
-    @media screen and (max-width: 715.016px) {
+    @media screen and (max-width: 760px) {
+      &.version-tablet {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 714px) {
         &.version-desktop {
             display: none;
         }
     }
 
-    @media screen and (max-width: 759.469px) {
-        &.version-tablet {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        &.version-mobile-480 {
-            display: none;
-        }
-    }
-
     @media screen and (max-width: 320px) {
-        &.version-mobile-320 {
+        &.version-mobile-715 {
             display: none;
         }
     }

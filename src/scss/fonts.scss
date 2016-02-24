@@ -1,4 +1,5 @@
 @import "mixins/fonts";
+@import "mixins/utils";
 
 .sc-font-s {
   @include font(S);
@@ -30,4 +31,13 @@
 
 .sc-font-bold {
   @include font-bold;
+}
+
+h1.sc-font {
+  padding: 0 $L;
+  font-size: 1.75rem;
+
+  @include mqmax($viewportL) {
+    @include font(XL);
+  }
 }

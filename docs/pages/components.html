@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../../dist/showcar-ui.css">
     <link rel="stylesheet" href="../css/highlight.css">
-    <link rel="stylesheet" href="../css/documenation.css">
+    <link rel="stylesheet" href="../css/documentation.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 <body >
@@ -44,6 +44,7 @@
                         <li>
                             <a href="typography.html">Typography</a>
                                 <ul>
+                                        <li><a href="typography.html#headlines">Headlines</a></li>
                                         <li><a href="typography.html#body-copy">Body copy</a></li>
                                         <li><a href="typography.html#links">Links</a></li>
                                 </ul>
@@ -159,25 +160,39 @@
 
     <a name="breadcrumbs"></a>
     <h3>Breadcrumbs</h3>
+    <h4>Single Breadcrumb</h4>
     <div class="example example-breadcrumbs">
-        <div class="sc-breadcrumbs">
-            <ul>
+        <ul class="sc-breadcrumbs">
+            <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        </ul>
+    </div>
+    <pre><code class="html js-format-code">
+    <!--
+    <div>
+        <ul class="sc-breadcrumbs">
+            <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        </ul>
+    </div>
+    -->
+    </code></pre>
+    <h4>Multiple Breadcrumbs</h4>
+    <div class="example example-breadcrumbs">
+        <ul class="sc-breadcrumbs">
+            <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+            <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+            <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+        </ul>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div>
+            <ul class="sc-breadcrumbs">
                 <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
                 <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
                 <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
             </ul>
         </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<div class="sc-breadcrumbs">
-    <ul>
-        <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
-        <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
-        <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
-    </ul>
-</div>
--->
+        -->
     </code></pre>
 
     <a name="custom-dropdown"></a>
@@ -561,7 +576,7 @@
     <h3>More Examples</h3>
 
     <div class="example-pagination version-normal">
-        <h4>Normal Version: 768px</h4>
+        <h4>Normal Version: 768px (will be centered if less pages)</h4>
         <ul class="sc-pagination">
             <li class="previous-page">
                 <a class="disabled" href="">
@@ -587,33 +602,8 @@
         </ul>
     </div>
 
-    <div class="example-pagination version-desktop">
-        <h4>Desktop Version: 715.016px</h4>
-        <ul class="sc-pagination">
-            <li class="previous-page">
-                <a class="disabled" href="">
-                    <as24-icon type="arrow"></as24-icon> Previous
-                </a>
-            </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-            <li><a href="javascript:void(0)">1</a></li>
-            <li><a href="javascript:void(0)">2</a></li>
-            <li><a href="javascript:void(0)">3</a></li>
-            <li><a href="javascript:void(0)">4</a></li>
-            <li><a class="active" href="javascript:void(0)">5</a></li>
-            <li><a href="javascript:void(0)">6</a></li>
-            <li><a href="javascript:void(0)">7</a></li>
-            <li><a class="disabled" href="">...</a></li>
-            <li><a href="javascript:void(0)">20</a></li>
-            <li class="next-page">
-                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
-                </a>
-            </li>
-        </ul>
-    </div>
-
     <div class="example-pagination version-tablet">
-        <h4>Tablet Version: 759.469px</h4>
+        <h4>Tablet Version: &gt; 760px (will be centered if less pages)</h4>
         <ul class="sc-pagination">
             <li class="previous-page">
                 <a class="disabled" href="">
@@ -638,8 +628,8 @@
         </ul>
     </div>
 
-    <div class="example-pagination version-tablet">
-        <h4>Tablet Version: 759.469px centered</h4>
+    <div class="example-pagination version-desktop">
+        <h4>Tablet Version: &GreaterEqual; 715px centered</h4>
         <ul class="sc-pagination">
             <li class="previous-page">
                 <a class="disabled" href="">
@@ -661,20 +651,15 @@
         </ul>
     </div>
 
-    <div class="example-pagination version-mobile-480">
-        <h4>Mobile Version: 480px</h4>
+    <div class="example-pagination version-mobile-715">
+        <h4>Mobile Version: 320px - 714px centered</h4>
         <ul class="sc-pagination">
             <li class="previous-page">
-                <a class="disabled" href="">
+                <a href="javascript:void(0);">
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-            <li><a href="javascript:void(0)">1</a></li>
-            <li><a class="active" href="javascript:void(0)">2</a></li>
-            <li><a href="javascript:void(0)">3</a></li>
-            <li><a class="disabled" href="">...</a></li>
-            <li><a href="javascript:void(0)">20</a></li>
+            <li class="info-page" style="display: inline-block;"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li class="next-page">
                 <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
@@ -683,30 +668,13 @@
     </div>
 
     <div class="example-pagination version-mobile-320">
-        <h4>Mobile Version: 320px</h4>
+        <h4>Mobile Version: &lt; 320px</h4>
         <ul class="sc-pagination">
             <li class="previous-page">
                 <a href="javascript:void(0);">
                     <as24-icon type="arrow"></as24-icon> Previous
                 </a>
             </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-            <li class="next-page">
-                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="example-pagination version-mobile-240">
-        <h4>Mobile Version: 240px</h4>
-        <ul class="sc-pagination">
-            <li class="previous-page">
-                <a href="javascript:void(0);">
-                    <as24-icon type="arrow"></as24-icon> Previous
-                </a>
-            </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
             <li class="next-page">
                 <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
                 </a>
