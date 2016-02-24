@@ -7,10 +7,10 @@ body {
 
 .sc-stripe {
   background-color: $orange-40;
-  margin-left: 0 - $grid-gutter-width;
-  margin-right: 0 - $grid-gutter-width;
-  margin-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+  margin-left: 0 - $gutter-width;
+  margin-right: 0 - $gutter-width;
+  margin-top: $gutter-width;
+  padding-bottom: $gutter-width;
   text-align: center;
   @include clearfix();
 }
@@ -21,12 +21,13 @@ body {
 
 .sc-card {
   border: 1px solid rgba(0, 0, 0, .1);
-  padding-bottom: $grid-gutter-width;
+  padding-bottom: $gutter-width;
   text-align: center;
   height: 100%;
 
+
   &.padding {
-    padding: $grid-gutter-width;
+    padding: $gutter-width;
     text-align: justify;
   }
 
@@ -44,7 +45,7 @@ body {
 }
 
 .sc-content {
-  padding: 4px $grid-gutter-width;
+  padding: 4px $gutter-width;
 }
 
 hr {
@@ -58,8 +59,8 @@ hr {
     background-color: $blue-40;
   }
   .sc-card {
-    margin-left: 0 - $grid-gutter-width;
-    margin-right: 0 - $grid-gutter-width;
+    margin-left: 0 - $gutter-width;
+    margin-right: 0 - $gutter-width;
     border-right: 0 none;
     border-left: 0 none;
     border-top: 0 none;
@@ -69,5 +70,5 @@ hr {
 as24-icon[type="arrow"] svg {
   transform: rotate(180deg);
   height: .5em;
-  margin-left: $grid-gutter-width;
+  margin-left: $gutter-width;
 }
