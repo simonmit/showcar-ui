@@ -7,10 +7,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../../dist/showcar-ui.css">
-    <link rel="stylesheet" href="../css/highlight.css">
-    <link rel="stylesheet" href="../css/documenation.css">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../../docs/../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../../docs/css/highlight.css">
+    <link rel="stylesheet" href="../../docs/css/documenation.css">
+    <link rel="icon" type="image/x-icon" href="../../docs/favicon.ico">
 </head>
 <body >
     <div class="sc-content-container">
@@ -44,6 +44,7 @@
                         <li>
                             <a href="typography.html">Typography</a>
                                 <ul>
+                                        <li><a href="typography.html#headlines">Headlines</a></li>
                                         <li><a href="typography.html#body-copy">Body copy</a></li>
                                         <li><a href="typography.html#links">Links</a></li>
                                 </ul>
@@ -72,7 +73,7 @@
                                 </ul>
                         </li>
                         <li>
-                            <a href="../index.html"></a>
+                            <a href="../../docs/index.html"></a>
                         </li>
                         <li>
                             <a href="components.html">Components</a>
@@ -118,14 +119,26 @@
 <div>
     <a name="typography"></a>
     <h2>Typography</h2>
-    <a name="body-copy"></a>
-    <h3>Body copy</h3>
     <p>
         ShowCars default <code>font-family</code> is <span class="sc-font-bold">Source Sans Pro</span>. Please use the
         predefined classes to increase or decrease the font size. You should not define explicit font sizes.
-        To use Source Sans Pro, you have to include <code>webfontloader</code>. The process necessary is documented in
-        the README.md file of the ShowCar UI library.
+        To use the Source Sans Pro font, you don't have to do anything. It is loaded with the showcar-ui library using a technic called
+        <a href="https://www.npmjs.com/package/fontfaceobserver" target="_blank">font-face observer</a>.
     </p>
+    <a name="headlines"></a>
+    <h3>Headlines</h3>
+    <div class="example example-body-copy">
+        <h1 class="sc-font">Lorem ipsum dolor sit amet (h1.sc-font)</h1>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<h1 class="sc-font">...</h1>
+-->
+    </code></pre>
+
+    <a name="body-copy"></a>
+    <h3>Body copy</h3>
+
     <div class="example example-body-copy">
         <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         <p class="sc-font-m">.sc-font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -170,7 +183,7 @@
 
     </div>
     <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
-    <script src="../js/highlight.pack.js"></script>
+    <script src="../../docs/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
         SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
@@ -207,8 +220,8 @@
         }
         formatCode('.js-format-code');
     </script>
-    <script src="../../dist/showcar-ui.js"></script>
-    <script src="../js/pager.js"></script>
-    <script src="../js/notification.js"></script>
+    <script src="../../docs/../dist/showcar-ui.js"></script>
+    <script src="../../docs/js/pager.js"></script>
+    <script src="../../docs/js/notification.js"></script>
 </body>
 </html>

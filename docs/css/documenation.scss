@@ -1,28 +1,27 @@
 @import "../../src/scss/variables";
 @import "../../src/scss/utils";
 
-
 body {
     overflow-x: hidden;
 }
 
-h1 {
+h1:not(.sc-font) {
     font-size: 4rem;
     margin: 20px 0 10px;
 }
-h2 {
+h2:not(.sc-font) {
     font-size: 2rem;
     margin: 20px 0 10px;
 }
-h3 {
+h3:not(.sc-font) {
     font-size: 1.6rem;
     margin: 20px 0 10px;
 }
-h4 {
+h4:not(.sc-font) {
     font-size: 1.2rem;
     margin: 20px 0 10px;
 }
-p {
+p:not(.sc-font) {
     margin: 5px 0;
 }
 

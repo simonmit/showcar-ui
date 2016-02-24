@@ -2,20 +2,33 @@
 title: Typography
 nav-index: 6
 sub-nav:
+- Headlines
 - Body copy
 - Links
 ---
 <div>
     <a name="typography"></a>
     <h2>Typography</h2>
-    <a name="body-copy"></a>
-    <h3>Body copy</h3>
     <p>
         ShowCars default <code>font-family</code> is <span class="sc-font-bold">Source Sans Pro</span>. Please use the
         predefined classes to increase or decrease the font size. You should not define explicit font sizes.
-        To use Source Sans Pro, you have to include <code>webfontloader</code>. The process necessary is documented in
-        the README.md file of the ShowCar UI library.
+        To use the Source Sans Pro font, you don't have to do anything. It is loaded with the showcar-ui library using a technic called
+        <a href="https://www.npmjs.com/package/fontfaceobserver" target="_blank">font-face observer</a>.
     </p>
+    <a name="headlines"></a>
+    <h3>Headlines</h3>
+    <div class="example example-body-copy">
+        <h1 class="sc-font">Lorem ipsum dolor sit amet (h1.sc-font)</h1>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<h1 class="sc-font">...</h1>
+-->
+    </code></pre>
+
+    <a name="body-copy"></a>
+    <h3>Body copy</h3>
+
     <div class="example example-body-copy">
         <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         <p class="sc-font-m">.sc-font-m (default)<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>

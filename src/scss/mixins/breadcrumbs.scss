@@ -3,26 +3,30 @@
   display: inline-block;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%227%22%20height%3D%2213%22%3E%3Cpath%20fill%3D%22%23007cca%22%20fill-rule%3D%22evenodd%22%20d%3D%22M.5%2013l-.5-.5%206-6L0%20.6.5%200%207%206.5z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
-  width: 12px;
+  width: 7px;
   height: 13px;
   margin-top: 5px;
+  margin-right: $S;
   float: left;
 
   @if $direction == 'left' {
     transform: rotate(180deg);
-    margin-right: $S;
-    margin-left: -$XS;
+    margin-left: 3px; //adjust to match minimal text offset of following h1
   }
 
   @if $direction == 'right' {
-    margin-left: $M;
-    margin-right: $XS;
+    margin-left: $L;
   }
 }
 
 @mixin breadcrumb() {
+  font-size: 0; //avoid spacing between inline-block li elements
+  padding-left: $L;
+
   li {
     display: none;
+    @include font(M);
+    margin-top: 10px;
   }
 
   li a {
@@ -30,8 +34,8 @@
     display: block;
     float: left;
 
-    padding: 10px;
-    margin: -10px;
+    padding: 10px $S;
+    margin: -10px (-$S);
   }
 
   li:last-child {
@@ -51,7 +55,8 @@
       @include arrow('right');
     }
 
-    li:not(:only-child):last-child:before, li:last-child:after {
+    li:not(:only-child):last-child:before,
+    li:last-child:after {
       content: none;
       float: left;
     }
