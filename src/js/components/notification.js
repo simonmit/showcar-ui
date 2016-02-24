@@ -4,6 +4,8 @@ class Notification {
         this.element = element;
         this._body   = '';
         this.body    = this.element.innerHTML;
+
+        $(document).on('scroll', this.onScroll.bind(this));
     }
 
     get title() {
@@ -22,8 +24,16 @@ class Notification {
         this._body = value;
     }
 
+    get target() {
+        return document.querySelector(this.element.getAttribute('target'));
+    }
+
     hide() {
         this.element.classList.remove('show');
+    }
+
+    isShow() {
+        return this.element.classList.contains('show');
     }
 
     /**
@@ -41,8 +51,12 @@ class Notification {
      * @param {String} value
      */
     update(attribute, value) {
-        if ('class' === attribute && 'show' === value && this.timeout) {
-            window.setTimeout(this.hide.bind(this), this.timeout);
+        if ('class' === attribute && this.isShow()) {
+            this.updatePosition();
+
+            if (this.timeout) {
+                window.setTimeout(this.hide.bind(this), this.timeout);
+            }
         }
     }
 
@@ -66,6 +80,41 @@ class Notification {
         return element;
     }
 
+    /**
+     * Update the position of the notification directly below the target element
+     */
+    updatePosition() {
+        if (!this.target) return;
+
+        let target  = $(this.target);
+        let offset  = target.offset();
+        let width   = target.width();
+        let element = $(this.element);
+
+        if ($(window).scrollTop() > (offset.top + offset.height)) {
+            element.css({
+                position: 'fixed',
+                top: 0,
+                width: width + 'px',
+                left: offset.left + 'px'
+            });
+        } else {
+            let top = (offset.top + offset.height) - $(target).offsetParent().offset().top;
+            element.css({
+                position: 'absolute',
+                width: width + 'px',
+                top: top + 'px',
+                left: this.target.offsetLeft + 'px'
+            });
+        }
+    }
+
+    onScroll() {
+        if (this.element.classList.contains('show')) {
+            this.updatePosition();
+        }
+    }
+
 }
 
 function onElementCreated() {
@@ -73,7 +122,7 @@ function onElementCreated() {
     this.notification.create();
 }
 
-function onElementChanged(attributeName, previousValue, value) {
+function onElementChanged(attributeName, previous, value) {
     this.notification.update(attributeName, value);
 }
 

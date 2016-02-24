@@ -23,14 +23,12 @@ $types: (
 
 @mixin notification($type) {
   color: map-get($type, color);
-  border-top: 1px solid $black-30;
-  border-bottom: 1px solid $black-30;
+  border-bottom: 1px solid map-get($type, color);
   background-color: map-get($type, background-color);
 }
 
 @mixin notification-icon($type) {
   background-image: map-get($type, background-image);
   background-repeat: no-repeat;
-  background-position-x: $L;
-  background-position-y: map-get($type, background-position-y);
+  background-position: $L map-get($type, background-position-y);
 }
