@@ -383,3 +383,9 @@ pre {
     }
 
 }
+
+.example-notification-target {
+    border-bottom: 1px solid $black-60;
+    background-color: $black-30;
+    padding: $L;
+}
