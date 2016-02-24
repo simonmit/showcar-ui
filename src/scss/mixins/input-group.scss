@@ -1,13 +1,13 @@
 @import "../variables";
 
 %input-group {
-    //TODO: include polyfill for flexbox in old ie browser
     display: flex;
     flex-direction: row;
     width: 100%;
 
     > * {
         display: inline-block;
+        min-width: 0;
     }
 }
 
