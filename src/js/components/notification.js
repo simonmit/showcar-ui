@@ -42,7 +42,7 @@ class Notification {
     create() {
         this.element.innerHTML = '';
         let container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-        this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+        this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
         this.createElement('div', container, this.body);
     }
 
