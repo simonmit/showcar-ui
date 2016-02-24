@@ -5,10 +5,22 @@ body {
   background-color: $black-20;
 }
 
+.sc-content-container {
+  background-color: $white;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+*[class^=sc-grid-col] {
+  margin-top: $gutter-width;
+}
+
 .sc-stripe {
   background-color: $orange-40;
-  margin-left: 0 - $gutter-width;
-  margin-right: 0 - $gutter-width;
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
   margin-top: $gutter-width;
   padding-bottom: $gutter-width;
   text-align: center;
@@ -24,7 +36,6 @@ body {
   padding-bottom: $gutter-width;
   text-align: center;
   height: 100%;
-
 
   &.padding {
     padding: $gutter-width;
@@ -44,6 +55,10 @@ body {
   }
 }
 
+.sc-card .sc-content {
+  min-height: 80px;
+}
+
 .sc-content {
   padding: 4px $gutter-width;
 }
@@ -54,9 +69,10 @@ hr {
 
 /*======================================*/
 
-@media(max-width: ($viewportM - 1)) {
-  body {
-    background-color: $blue-40;
+@media(max-width: ($viewportM)) {
+  .sc-content-container {
+    padding-left: 0;
+    padding-right: 0;
   }
   .sc-card {
     margin-left: 0 - $gutter-width;
@@ -64,6 +80,10 @@ hr {
     border-right: 0 none;
     border-left: 0 none;
     border-top: 0 none;
+  }
+  .sc-content {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
 }
 
