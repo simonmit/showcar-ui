@@ -7,10 +7,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../../dist/showcar-ui.css">
-    <link rel="stylesheet" href="../css/highlight.css">
-    <link rel="stylesheet" href="../css/documenation.css">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../../docs/../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../../docs/css/highlight.css">
+    <link rel="stylesheet" href="../../docs/css/documenation.css">
+    <link rel="icon" type="image/x-icon" href="../../docs/favicon.ico">
 </head>
 <body >
     <div class="sc-content-container">
@@ -73,7 +73,7 @@
                                 </ul>
                         </li>
                         <li>
-                            <a href="../index.html"></a>
+                            <a href="../../docs/index.html"></a>
                         </li>
                         <li>
                             <a href="components.html">Components</a>
@@ -167,15 +167,13 @@
         </ul>
     </div>
     <pre><code class="html js-format-code">
-<!--
-<div class="sc-breadcrumbs">
-    <ul>
-        <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
-        <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
-        <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
-    </ul>
-</div>
--->
+    <!--
+    <div>
+        <ul class="sc-breadcrumbs">
+            <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        </ul>
+    </div>
+    -->
     </code></pre>
     <h4>Multiple Breadcrumbs</h4>
     <div class="example example-breadcrumbs">
@@ -187,8 +185,8 @@
     </div>
     <pre><code class="html js-format-code">
         <!--
-        <div class="sc-breadcrumbs">
-            <ul>
+        <div>
+            <ul class="sc-breadcrumbs">
                 <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
                 <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
                 <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
@@ -816,7 +814,7 @@ notification.classList.toggle('show');
 
     </div>
     <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
-    <script src="../js/highlight.pack.js"></script>
+    <script src="../../docs/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
         SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
@@ -853,8 +851,8 @@ notification.classList.toggle('show');
         }
         formatCode('.js-format-code');
     </script>
-    <script src="../../dist/showcar-ui.js"></script>
-    <script src="../js/pager.js"></script>
-    <script src="../js/notification.js"></script>
+    <script src="../../docs/../dist/showcar-ui.js"></script>
+    <script src="../../docs/js/pager.js"></script>
+    <script src="../../docs/js/notification.js"></script>
 </body>
 </html>
