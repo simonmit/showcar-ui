@@ -2,6 +2,7 @@
 @import "utils";
 @import "inputs";
 @import "select";
+
 @mixin custom-dropdown($size) {
     padding: 0;
     position: relative;
@@ -25,8 +26,8 @@
 
             @include ellipsis();
 
-            padding-right: 26px;
             overflow: hidden;
+            padding-right: 26px;
 
             &:after {
                 @extend %icon-dropdown-arrow-down;
@@ -38,28 +39,36 @@
                 bottom: $form-border-radius;
                 right: $form-border-radius;
                 content: '';
-                width: 34px;
+                width: 26px;
             }
         }
     }
 
     &.sc-open {
-        border: none;
-
         div:first-child {
             border: 1px solid $blue-80;
             border-radius: $XS;
+            width: calc(100% + 2px);
+            position: relative;
+            top: -1px;
+            left: -1px;
+
+            & > p:after {
+                margin-top: 2px;
+            }
         }
     }
 
     & > div:last-child {
         display: none;
         position: relative;
+        top: -1px;
+        left: -1px;
         background-color: $white;
         border: 1px solid $blue-80;
         border-radius: 0 0 $XS $XS;
         border-top: 0;
-        width: 100%;
+        width: calc(100% + 2px);
         z-index: 1;
         padding: 7px 11px 11px 11px;
         margin-top: -4px;
