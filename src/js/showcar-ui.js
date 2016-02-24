@@ -23,7 +23,6 @@ try {
 
 window.Storage = require('../../vendor/showcar-storage/src/storage.js');
 
-require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 require('./components/custom-dropdown.js');
 require('./components/navigation.js');
 require('./components/rotating-arrow.js')();
