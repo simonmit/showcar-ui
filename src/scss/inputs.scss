@@ -15,10 +15,6 @@ input[type="text"], input[type="tel"], input[type="number"], input[type="email"]
         outline: none;
         cursor: pointer;
 
-        &.sc-input-l {
-            @include input(L);
-        }
-
         &.error {
             border-color: $color-error;
             background-color: $color-error-message;
@@ -166,9 +162,5 @@ select.sc-input {
 
     &.sc-input-m {
         @include select(M);
-    }
-
-    &.sc-input-l {
-        @include select(L);
     }
 }

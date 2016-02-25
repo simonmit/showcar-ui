@@ -16,18 +16,11 @@
     @extend %radiobutton-checkbox-#{to-upper_case($size)};
 }
 
-%input-L {
-    @include font(L);
-
-    padding: $S $M;
-    height: 48px;
-}
-
 %input-M {
     @include font(M);
 
     padding: $XS 12px;
-    height: 36px;
+    height: 40px;
 }
 
 %radiobutton {

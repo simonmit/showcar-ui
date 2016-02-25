@@ -17,7 +17,6 @@ sub-nav:
 
     <div class="example example-inputs">
         <input type="text" placeholder=".sc-input" class="sc-input">
-        <input type="text" placeholder=".sc-input .sc-input-l" class="sc-input sc-input-l">
         <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
         <input type="text" placeholder=".sc-input .info" class="sc-input info">
         <input type="text" placeholder=".sc-input .success" class="sc-input success">
@@ -27,7 +26,6 @@ sub-nav:
     <pre><code class="html js-format-code">
 <!--
 <input type="text" class="sc-input">
-<input type="text" class="sc-input sc-input-l">
 <input type="text" class="sc-input" disabled>
 <input type="text" class="sc-input info">
 <input type="text" class="sc-input success">
@@ -40,16 +38,11 @@ sub-nav:
     <h3>Select Boxes</h3>
     <div class="example example-selects">
         <select class="sc-input" name="as24-select-1">
-            <option>default (.sc-input-m)</option>
+            <option>default (.sc-input)</option>
             <option>Option 2</option>
             <option>Option 3</option>
         </select>
-        <select name="as24-select-2" class="sc-input sc-input-l">
-            <option>.input-l</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
-        <select name="as24-select-3" class="sc-input sc-input-l" disabled>
+        <select name="as24-select-3" class="sc-input" disabled>
             <option>disabled</option>
         </select>
     </div>
@@ -59,11 +52,7 @@ sub-nav:
     <option>...</option>
 </select>
 
-<select class="sc-input sc-input-l">
-    ...
-</select>
-
-<select class="sc-input sc-input-l" disabled>
+<select class="sc-input" disabled>
     ...
 </select>
 -->
