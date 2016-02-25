@@ -4,16 +4,14 @@
     @extend %input;
 }
 
-@mixin checkbox($size) {
+@mixin checkbox() {
     @extend %checkbox;
     @extend %radiobutton-checkbox;
-    @extend %radiobutton-checkbox-#{to-upper_case($size)};
 }
 
-@mixin radiobutton($size) {
+@mixin radiobutton() {
     @extend %radiobutton;
     @extend %radiobutton-checkbox;
-    @extend %radiobutton-checkbox-#{to-upper_case($size)};
 }
 
 %input {
@@ -25,6 +23,8 @@
 
 %radiobutton {
     & + label {
+        font-size : 16px;
+
         &:before {
             border-radius: 25px;
         }
@@ -55,24 +55,12 @@
     $size: 20px;
 
     & + label {
-        padding-left: 2 * $size;
+        padding-left: 31px;
         padding-top: 3px;
 
         &:before {
             height: $size + $XS;
             width: $size + $XS;
         }
-    }
-}
-
-%radiobutton-checkbox-M {
-    & + label {
-        font-size : 16px;
-    }
-}
-
-%radiobutton-checkbox-L {
-    & + label {
-        font-size : 20px;
     }
 }
