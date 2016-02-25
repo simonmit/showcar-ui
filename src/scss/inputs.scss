@@ -146,9 +146,9 @@ input[type="checkbox"] {
 }
 
 select.sc-input {
-    @include select(M);
+    @include select();
 
     &.sc-input-m {
-        @include select(M);
+        @include select();
     }
 }
