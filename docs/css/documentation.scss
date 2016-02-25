@@ -116,6 +116,11 @@ pre {
     }
 }
 
+.docs-totop {
+    margin-top: $M;
+    margin-bottom: $M;
+}
+
 .example {
     border: 1px solid $black-30;
     border-radius: $form-border-radius;
