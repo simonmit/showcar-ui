@@ -1,14 +1,14 @@
-module.exports = function() {
-    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), function (collapsable) {
-        collapsable.onclick = function () {
-            var targetAttr = collapsable.getAttribute('data-target');
-            var targets = document.querySelectorAll(targetAttr);
+module.exports = () => {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), (collapsable) => {
+        collapsable.onclick = () => {
+            let targetAttr = collapsable.getAttribute('data-target');
+            let targets = document.querySelectorAll(targetAttr);
 
-            Array.prototype.forEach.call(targets, function (target) {
+            Array.prototype.forEach.call(targets, (target) => {
                 target.classList.toggle('in');
             });
 
-            var event = new CustomEvent('collapse', {
+            let event = new CustomEvent('collapse', {
                 bubbles: true
             });
             document.dispatchEvent(event);
