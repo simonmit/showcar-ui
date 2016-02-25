@@ -139,25 +139,13 @@ input[type="radio"], input[type="checkbox"] {
 
 input[type="radio"] {
     &.sc-input {
-        @include radiobutton(M);
-
-        &.sc-input-m {
-            @include radiobutton(M);
-        }
-
-        &.sc-input-l {
-            @include radiobutton(L);
-        }
+        @include radiobutton();
     }
 }
 
 input[type="checkbox"] {
     &.sc-input {
-        @include checkbox(L);
-
-        &.sc-input-m {
-            @include checkbox(M);
-        }
+        @include checkbox();
     }
 }
 
