@@ -1,11 +1,26 @@
 <ul class="docs-navigation">
+        {{#compare basename '!=' 'index'}}
+        <li>
+            <a href="../">Index</a>
+        </li>
+        {{/compare}}
     {{#withSort pages "data.nav-index"}}
         <li>
-            <a href="{{relative ../page.dest this.dest}}">{{data.title}}</a>
+            {{#is ../basename 'index'}}
+                <a href="#{{hyphenate (lowercase data.title)}}">{{data.title}}</a>
+            {{else}}
+                <a href="{{relative ../../page.dest this.dest}}">{{data.title}}</a>
+            {{/is}}
             {{#if data.sub-nav}}
                 <ul>
                     {{#each data.sub-nav}}
-                        <li><a href="{{relative ../../../page.dest ../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a></li>
+                        <li>
+                        {{#is ../../../basename 'index'}}
+                            <a href="#{{hyphenate (lowercase this) }}">{{this}}</a>
+                        {{else}}
+                            <a href="{{relative ../../../../page.dest ../../dest}}#{{hyphenate (lowercase this) }}">{{this}}</a>
+                        {{/is}}
+                        </li>
                     {{/each}}
                 </ul>
             {{/if}}
