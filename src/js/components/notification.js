@@ -44,8 +44,6 @@ class Notification {
      * Create the html structure of the notification element
      */
     create() {
-        this.updatePosition();
-
         this.element.innerHTML = '';
         let container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
         this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
