@@ -1,9 +1,10 @@
 @import "inputs";
 
 @mixin select($size) {
-    @include input($size);
-    @extend %icon-dropdown-arrow-down;
+    @include input();
 
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
     background-position: -100px -100px;
     background-color: $white;
 
@@ -18,9 +19,4 @@
         color: transparent;
         text-shadow: 0 0 0 #000;
     }
-}
-
-%icon-dropdown-arrow-down {
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
 }

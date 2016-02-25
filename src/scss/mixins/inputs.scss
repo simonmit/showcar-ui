@@ -1,7 +1,7 @@
 @import "fonts";
 
-@mixin input($size) {
-    @extend %input-#{to-upper-case($size)};
+@mixin input() {
+    @extend %input;
 }
 
 @mixin checkbox($size) {
@@ -16,7 +16,7 @@
     @extend %radiobutton-checkbox-#{to-upper_case($size)};
 }
 
-%input-M {
+%input {
     @include font(M);
 
     padding: $XS 12px;

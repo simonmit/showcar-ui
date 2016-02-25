@@ -10,12 +10,9 @@
     display: block;
 
     div:first-child {
-        @include input($size);
+        @include input();
         width: 100%;
-
-        @if $size == M {
-            height: 38px;
-        }
+        height: 38px;
 
         & > p {
             @include avoid-selection();
