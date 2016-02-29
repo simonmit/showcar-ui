@@ -28,6 +28,8 @@
     "grunt-pleeease": "^1.4.0",
     "grunt-sass": "^1.1.0",
     "grunt-webpack": "^1.0.11",
+    "handlebars-helper-include": "^0.2.0",
+    "handlebars-helpers": "^0.5.8",
     "load-grunt-tasks": "^3.3.0",
     "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1"

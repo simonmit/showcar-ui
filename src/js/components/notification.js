@@ -1,5 +1,9 @@
 class Notification {
 
+    /**
+     * @event Notification#onScroll
+     * @param {HTMLElement} element
+     */
     constructor(element) {
         this.element = element;
         this._body   = '';
@@ -82,7 +86,7 @@ class Notification {
     createElement(name, parent, body, classes = []) {
         let element = document.createElement(name);
 
-        classes.forEach(function(cls) {
+        classes.forEach((cls) => {
             element.classList.add(cls);
         });
         element.innerHTML = body;

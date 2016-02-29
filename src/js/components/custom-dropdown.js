@@ -1,4 +1,4 @@
-var tagName = 'custom-dropdown';
+let tagName = 'custom-dropdown';
 
 try {
     document.registerElement(tagName, {
@@ -14,12 +14,12 @@ try {
 }
 
 function createdCallback() {
-    var el = $(this);
-    var titleElement = el.find('p');
-    var defaultTitle = titleElement.text();
+    let el = $(this);
+    let titleElement = el.find('p');
+    let defaultTitle = titleElement.text();
 
     el.removeClass('sc-open');
-    el.on('touchstart, mousedown', function(e) {
+    el.on('touchstart, mousedown', (e) => {
         e.stopPropagation();
     });
 
@@ -27,16 +27,15 @@ function createdCallback() {
         return;
     }
 
-    var checkboxes = el.find('[type=checkbox]').addClass('sc-input');
-    var updateCaption = function () {
-        var box;
-        var checkboxes = el.find('[type=checkbox]:checked');
-        var texts = [];
-        checkboxes.filter(":checked").forEach(function (element) {
+    el.find('[type=checkbox]').addClass('sc-input');
+    let updateCaption = () => {
+        let checkboxes = el.find('[type=checkbox]:checked');
+        let texts = [];
+        checkboxes.filter(":checked").forEach((element) => {
             texts.push(element.nextElementSibling.innerHTML);
         });
 
-        var title = texts.join(', ') || defaultTitle;
+        let title = texts.join(', ') || defaultTitle;
         titleElement.html(title);
     };
 
@@ -45,19 +44,20 @@ function createdCallback() {
 }
 
 function attachedCallback() {
-    var el = this;
-
-    el.querySelector('p').addEventListener('mousedown', function (e) {
-        closeAllDropdowns(el);
-        el.classList.toggle('sc-open');
+    this.querySelector('p').addEventListener('mousedown', () => {
+        closeAllDropdowns(this);
+        this.classList.toggle('sc-open');
     });
 
     attachEventListeners();
 }
 
+/**
+ * @param {HTMLElement} exceptThisOne
+ */
 function closeAllDropdowns(exceptThisOne) {
-    var allCds = document.querySelectorAll(tagName);
-    for (var i = 0, l = allCds.length; i < l; i++) {
+    let allCds = document.querySelectorAll(tagName);
+    for (let i = 0, l = allCds.length; i < l; i++) {
         if (allCds[i] !== exceptThisOne) {
             allCds[i].classList.remove('sc-open');
         }
@@ -68,6 +68,5 @@ function attachEventListeners() {
     // this should only be done at most once
     // when the first of this element gets attached
     document.addEventListener('mousedown', closeAllDropdowns);
-    attachEventListeners = function () {
-    }; // so that we only attach at most once
+    attachEventListeners = () => {}; // so that we only attach at most once
 }

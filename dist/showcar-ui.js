@@ -4512,12 +4512,19 @@
 	        this.element = element;
 	        this._body = '';
 	        this.body = this.element.innerHTML;
+	
+	        $(document).on('scroll', this.onScroll.bind(this));
 	    }
 	
 	    _createClass(Notification, [{
 	        key: 'hide',
 	        value: function hide() {
 	            this.element.classList.remove('show');
+	        }
+	    }, {
+	        key: 'isShow',
+	        value: function isShow() {
+	            return this.element.classList.contains('show');
 	        }
 	
 	        /**
@@ -4529,7 +4536,7 @@
 	        value: function create() {
 	            this.element.innerHTML = '';
 	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-	            this.createElement('h3', container, this.title, ['sc-font-m', 'sc-font-bold']);
+	            this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
 	            this.createElement('div', container, this.body);
 	        }
 	
@@ -4541,8 +4548,12 @@
 	    }, {
 	        key: 'update',
 	        value: function update(attribute, value) {
-	            if ('class' === attribute && 'show' === value && this.timeout) {
-	                window.setTimeout(this.hide.bind(this), this.timeout);
+	            if ('class' === attribute && this.isShow()) {
+	                this.updatePosition();
+	
+	                if (this.timeout) {
+	                    window.setTimeout(this.hide.bind(this), this.timeout);
+	                }
 	            }
 	        }
 	
@@ -4570,6 +4581,45 @@
 	
 	            return element;
 	        }
+	
+	        /**
+	         * Update the position of the notification directly below the target element
+	         */
+	
+	    }, {
+	        key: 'updatePosition',
+	        value: function updatePosition() {
+	            if (!this.target) return;
+	
+	            var target = $(this.target);
+	            var offset = target.offset();
+	            var width = target.width();
+	            var element = $(this.element);
+	
+	            if ($(window).scrollTop() > offset.top + offset.height) {
+	                element.css({
+	                    position: 'fixed',
+	                    top: 0,
+	                    width: width + 'px',
+	                    left: offset.left + 'px'
+	                });
+	            } else {
+	                var top = offset.top + offset.height - $(target).offsetParent().offset().top;
+	                element.css({
+	                    position: 'absolute',
+	                    width: width + 'px',
+	                    top: top + 'px',
+	                    left: this.target.offsetLeft + 'px'
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'onScroll',
+	        value: function onScroll() {
+	            if (this.element.classList.contains('show')) {
+	                this.updatePosition();
+	            }
+	        }
 	    }, {
 	        key: 'title',
 	        get: function get() {
@@ -4588,6 +4638,11 @@
 	        set: function set(value) {
 	            this._body = value;
 	        }
+	    }, {
+	        key: 'target',
+	        get: function get() {
+	            return document.querySelector(this.element.getAttribute('target'));
+	        }
 	    }]);
 	
 	    return Notification;
@@ -4598,7 +4653,7 @@
 	    this.notification.create();
 	}
 	
-	function onElementChanged(attributeName, previousValue, value) {
+	function onElementChanged(attributeName, previous, value) {
 	    this.notification.update(attributeName, value);
 	}
 	

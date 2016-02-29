@@ -28,6 +28,9 @@ class Navigation {
         return 27;
     }
 
+    /**
+     * @param {HTMLElement} root
+     */
     constructor(root) {
         this.document    = $(document);
         this.rootElement = $(root);
@@ -40,6 +43,12 @@ class Navigation {
         this.initEvents();
     }
 
+    /**
+     * @event Navigation#toggleMenu
+     * @event Navigation#escapeMenu
+     * @event Navigation#onKeyDown
+     * @event Navigation#onKeyUp
+     */
     initEvents() {
         this.rootElement.on('click', 'ul>li', $.proxy(this.toggleMenu, this));
         this.menuBtn.on('click', $.proxy(this.toggleMenu, this));
@@ -48,6 +57,9 @@ class Navigation {
         this.document.on('keyup', $.proxy(this.onKeyUp, this));
     }
 
+    /**
+     * @param {Object} event
+     */
     toggleMenu(event) {
         event.stopPropagation();
         let clickedMenu = $(event.target).closest('li');
@@ -73,10 +85,16 @@ class Navigation {
         this.openMenu();
     }
 
+    /**
+     * @param {HTMLElement} element
+     */
     setActiveMenu(element) {
         this.activeMenu = $(element);
     }
 
+    /**
+     * @param {HTMLElement} element
+     */
     closeMenu(menu) {
         let closeTarget = menu || this.activeMenu;
         closeTarget.removeClass('open');
@@ -91,10 +109,17 @@ class Navigation {
         this.menuIsOpen = true;
     }
 
+    /**
+     * @param {Object} event
+     */
     escapeMenu(event) {
         this.activeMenu && this.menuIsOpen && this.closeMenu();
     }
 
+    /**
+     * @param {Number} keyCode
+     * @returns {boolean}
+     */
     isNavigationKey(keyCode) {
         return [
             this.KEY_DOWN,
@@ -105,7 +130,12 @@ class Navigation {
         ].indexOf(keyCode) > -1;
     }
 
-    // Prevent scrolling
+    /**
+     * Prevent scrolling
+     *
+     * @param {Object} event
+     * @returns {boolean}
+     */
     onKeyDown(event) {
         let keyCode = event.which;
 
@@ -117,6 +147,10 @@ class Navigation {
         return true;
     }
 
+    /**
+     * @param {Object} event
+     * @returns {boolean}
+     */
     onKeyUp(event) {
         let keyCode = event.which;
 
@@ -179,6 +213,9 @@ class Navigation {
         this.selectMenu(this.menus[newMenuIdx]);
     }
 
+    /**
+     * @param {HTMLElement} element
+     */
     setActiveMenuItem(element) {
         this.unsetInactiveMenuItems();
         element = $(element);
@@ -207,7 +244,7 @@ class Navigation {
     }
 }
 
-Zepto(function($) {
+Zepto(() => {
     let navigationElement = document.querySelector('.sc-navigation'),
         navigation        = null;
     if (navigationElement) {
