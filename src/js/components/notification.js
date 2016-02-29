@@ -20,6 +20,10 @@ class Notification {
         return this.element.getAttribute('timeout');
     }
 
+    get close() {
+        return this.element.getAttribute('close');
+    }
+
     get body() {
         return this._body;
     }
@@ -48,6 +52,14 @@ class Notification {
         let container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
         this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
         this.createElement('div', container, this.body);
+
+        if (this.close) {
+            let close = this.createElement('a', this.element, '');
+            $(close).on('click', this.hide.bind(this));
+
+            let icon  = this.createElement('as24-icon', close, '');
+            icon.setAttribute('type', 'close');
+        }
     }
 
     /**

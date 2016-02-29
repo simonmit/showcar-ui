@@ -18,7 +18,7 @@ sub-nav:
     <a name="collapse"></a>
     <h3>Collapse</h3>
     <div class="example example-collapse">
-        <button class="sc-btn-ross-m" data-toggle="sc-collapse" data-target="#collapse-target-1">Collapse Toggle</button>
+        <button class="sc-btn-ross" data-toggle="sc-collapse" data-target="#collapse-target-1">Collapse Toggle</button>
         <div id="collapse-target-1" class="sc-collapse">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -27,7 +27,7 @@ sub-nav:
             sanctus est Lorem ipsum dolor sit amet.
         </div>
         <hr>
-        <button class="sc-btn-ross-m sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Collapse Show</button>
+        <button class="sc-btn-ross sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Collapse Show</button>
         <div class="sc-collapse sc-collapse-target">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -35,7 +35,7 @@ sub-nav:
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-btn-ross-m sc-collapse sc-collapse-target">
+        <button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-btn-ross sc-collapse sc-collapse-target">
             Collapse Hide
         </button>
     </div>
@@ -225,7 +225,7 @@ sub-nav:
         </div>
         <div data-sticky-dock="myBtn"></div>
         <div data-sticky="myBtn" class="sc-text-center">
-            <button class="sc-btn-bob-l">Sticky Button</button>
+            <button class="sc-btn-bob">Sticky Button</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
@@ -234,7 +234,7 @@ sub-nav:
 ...
 <div data-sticky-dock="myBtn"></div>
 <div data-sticky="myBtn">
-    <button class="sc-btn-bob-l">Sticky Button</button>
+    <button class="sc-btn-bob">Sticky Button</button>
 </div>
 -->
     </code></pre>
@@ -326,7 +326,7 @@ sub-nav:
                         <ul>
                             <li><a href="#navigation">My Menu Link 1</a></li>
                             <li>
-                                <button class="sc-btn-ross-m sc-btn-block">Login</button>
+                                <button class="sc-btn-ross sc-btn-block">Login</button>
                             </li>
                         </ul>
                     </li>
@@ -401,7 +401,7 @@ sub-nav:
             <ul>
                 <li><a href="#navigation">My Menu Link 1</a></li>
                 <li>
-                    <button class="sc-btn-ross-m sc-btn-block">Login</button>
+                    <button class="sc-btn-ross sc-btn-block">Login</button>
                 </li>
             </ul>
         </li>
@@ -595,10 +595,15 @@ sub-nav:
         <as24-notification type="error" id="error1" target="#example-notification-target" title="Error occurred">
             Error here...
         </as24-notification>
+        <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
+            Close me, please.
+        </as24-notification>
         <div class="sc-text-center">
-            <button class="notification-demo sc-btn-bob-m" data-id="succ1">Show success notification with timeout</button>&nbsp;
-            <button class="notification-demo sc-btn-ross-m" data-id="info1">Toggle info notification</button>&nbsp;
-            <button class="notification-demo sc-btn-bob-m" data-id="error1">Toggle error notification</button>
+            <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
+            <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
+            <button class="notification-demo sc-btn-bob" data-id="error1">Toggle error notification</button>
+            <hr>
+            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
@@ -613,6 +618,10 @@ sub-nav:
 
 <as24-notification type="error" id="succ1" target="#example-notification-target" title="Error occurred">
     Error here...
+</as24-notification>
+
+<as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
+    Close me, please.
 </as24-notification>
 -->
     </code></pre>
@@ -634,7 +643,7 @@ sub-nav:
                 </tr>
                 <tr>
                     <td>target</td>
-                    <td>Target element</td>
+                    <td>Target element. The Notification anchers below the target element</td>
                 </tr>
                 <tr>
                     <td>title</td>
@@ -643,6 +652,9 @@ sub-nav:
                 <tr>
                     <td>timeout</td>
                     <td>close the notification after [timeout] ms</td>
+                </tr>
+                    <td>close</td>
+                    <td>Add a close button for the notification</td>
                 </tr>
                 </tbody>
             </table>

@@ -10,16 +10,9 @@
     display: block;
 
     div:first-child {
-        @include input($size);
+        @include input();
         width: 100%;
-
-        @if $size == M {
-            height: 34px;
-        }
-
-        @if $size == L {
-            height: 46px;
-        }
+        height: 38px;
 
         & > p {
             @include avoid-selection();

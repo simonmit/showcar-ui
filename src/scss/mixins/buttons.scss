@@ -4,17 +4,28 @@
 
 %btn {
     @include avoid-selection();
-    @include font($bold: true);
+    @include font(M, $bold: true, $silent: false, $line-height: 1.8);
 
     -webkit-appearance: none;
+    display: inline-block;
     border: none;
     border-radius: $form-border-radius;
     color: #fff;
     transition: 0.1s ease-in;
     text-decoration: none;
     text-align: center;
+    padding: 6px 20px;
+
     &:hover {
         color: #fff;
+    }
+
+    [class^="icon-"] {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-size: contain;
+        position: relative;
     }
 }
 
@@ -50,37 +61,7 @@
     }
 }
 
-%btn-L {
-    @include font(L);
-
-    padding: 9px 20px;
-
-    [class^="icon-"] {
-        width: 22px;
-        height: 22px;
-        display: inline-block;
-        background-size: contain;
-        position: relative;
-        top: $XS;
-    }
-}
-
-%btn-M {
-    @include font(M);
-
-    padding: 6px 20px;
-
-    [class^="icon-"] {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        background-size: contain;
-        position: relative;
-    }
-}
-
-@mixin button($type, $size) {
+@mixin button($type) {
     @extend %btn;
     @extend %btn-#{to-lower-case($type)};
-    @extend %btn-#{to-upper-case($size)};
 }
