@@ -20,8 +20,8 @@ div.col-filter {
   padding: 16px;
   background-color: #ffffff;
   form {
-    > label,
-    > .element-container {
+    label,
+    .element-container {
       margin-top: 16px;
       display: inline-block;
     }
@@ -55,6 +55,13 @@ div.col-list {
           background-color: #fafafa;
       }
     }
+  }
+}
+
+div.sc-collapse {
+  > label:not(:first-child) {
+    margin-top: 16px;
+    display: inline-block;
   }
 }
 

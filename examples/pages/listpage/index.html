@@ -5,11 +5,8 @@
         <title>Showcar Demo</title>
         <!-- include external libraries -->
         <link rel="stylesheet" href="../../../dist/showcar-ui.css">
-        <script src="../../../dist/showcar-ui.min.js"></script>
         <script src="../../../docs/js/pager.js"></script>
-        <script src="../../vendor/icanhaz/ICanHaz.min.js"></script>
         <script src="classifieds.js"></script>
-        <script src="main.js"></script>
         <link href="./style.css" rel="stylesheet">
     </head>
 
@@ -151,7 +148,28 @@
 
                         <hr>
 
-                        <div class="sc-text-center"><a href="#">More Search Criteria</a></div>
+                        <div class="sc-text-center sc-collapse sc-collapse-target in">
+                            <a data-toggle="sc-collapse" data-target=".sc-collapse-target">More Search Criteria</a>
+                        </div>
+                        <div class="sc-collapse sc-collapse-target">
+                            <label for="equipment">Equipment</label>
+                            <select class="sc-input" id="equipment">
+                                <option>None</option>
+                            </select>
+
+                            <label for="bodycolor">Body color</label>
+                            <select class="sc-input" id="bodycolor">
+                                <option>All</option>
+                            </select>
+                            <div class="element-container">
+                                <input checked class="sc-input" id="metallic" type="checkbox">
+                                <label for="metallic">Metallic</label>
+                            </div>
+                        </div>
+                        <div class="sc-text-center sc-collapse sc-collapse-target">
+                            <hr>
+                            <a data-toggle="sc-collapse" data-target=".sc-collapse-target">Less Search Criteria</a>
+                        </div>
 
                         <hr>
 
@@ -217,5 +235,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="../../../dist/showcar-ui.js"></script>
     </body>
 </html>
