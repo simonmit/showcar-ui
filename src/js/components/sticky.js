@@ -1,13 +1,13 @@
-module.exports = function() {
+module.exports = () => {
     function handleStickies() {
-        var scrollPos = $(window).scrollTop();
+        let scrollPos = $(window).scrollTop();
 
-        var stickyButtons = $('[data-sticky]');
-        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
-            var stickyEl = $(stickyButton);
-            var id = stickyEl.attr('data-sticky');
-            var undockEl = $('[data-sticky-undock="' + id + '"]');
-            var dockEl = $('[data-sticky-dock="' + id + '"]');
+        let stickyButtons = $('[data-sticky]');
+        Array.prototype.forEach.call(stickyButtons, (stickyButton) => {
+            let stickyEl = $(stickyButton);
+            let id = stickyEl.attr('data-sticky');
+            let undockEl = $('[data-sticky-undock="' + id + '"]');
+            let dockEl = $('[data-sticky-dock="' + id + '"]');
 
             // if there is no dock and undock element leave sticky class
             if (undockEl.length === 0 && dockEl.length === 0) {
@@ -15,13 +15,13 @@ module.exports = function() {
             }
 
             // get undock position
-            var undockPos = 0;
+            let undockPos = 0;
             if (undockEl.length > 0) {
                 undockPos = undockEl.offset().top;
             }
 
             // get dock position
-            var dockPos = $(document).height();
+            let dockPos = $(document).height();
             if(dockEl.length > 0) {
                 dockPos = dockEl.offset().top;
             }

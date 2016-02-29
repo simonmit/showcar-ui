@@ -1,20 +1,20 @@
 require('../../vendor/zepto/zepto.min.js');
 require('./components/polyfills.js')();
 
-var warn = function (msg) {
+let warn = (msg) => {
     if (!window || !window.console) {
         return;
     }
     window.console.warn(msg);
 };
 
-var FontFaceObserver = require('fontfaceobserver');
-var observer = new FontFaceObserver('Source Sans Pro');
+let FontFaceObserver = require('fontfaceobserver');
+let observer = new FontFaceObserver('Source Sans Pro');
 
 try {
-    observer.check().then(function () {
+    observer.check().then(() => {
         $('body').addClass('font-loaded');
-    }, function () {
+    }, () => {
         warn('Cannot load font.');
     });
 } catch (e) {

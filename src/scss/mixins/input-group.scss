@@ -31,12 +31,14 @@
         }
 
         & + label {
-            padding: 5px 14px;
+            padding: 4px 12px;
             margin: 0;
             border-right: 1px solid $black-60;
             text-align: center;
             cursor: pointer;
             color: $black-100;
+            line-height: 1.8rem;
+            height: 40px;
 
             &:last-of-type {
                 border: none;

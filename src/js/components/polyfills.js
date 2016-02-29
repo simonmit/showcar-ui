@@ -1,14 +1,14 @@
-module.exports = function(callback) {
+module.exports = () => {
     'use strict';
 
-    var needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
+    let needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
 
-    var isDom4Browser = document.head
+    let isDom4Browser = document.head
         && ('matches' in document.head)
         && ('classList' in document.head)
         && 'CustomEvent' in window;
 
-    var isEs5Browser = 'map' in Array.prototype
+    let isEs5Browser = 'map' in Array.prototype
         && 'isArray' in Array
         && 'bind' in Function.prototype
         && 'keys' in Object
@@ -27,13 +27,5 @@ module.exports = function(callback) {
         //check if this is required anymore and can be dropped - midler, 09.02.2016
         //needed only for IE9 support
         require('placeholders/dist/placeholders.min.js');
-    }
-
-    start();
-
-    function start() {
-        if (callback && typeof callback === 'function') {
-            callback();
-        }
     }
 };

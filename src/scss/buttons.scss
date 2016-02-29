@@ -1,22 +1,25 @@
 @import "mixins/buttons";
 
-.sc-btn-bob-l {
-  @include button(bob, l);
+.sc-btn-bob {
+  @include button(bob);
 }
 
-.sc-btn-bob-m {
-  @include button(bob, m);
-}
-
-.sc-btn-ross-l {
-  @include button(ross, l);
-}
-
-.sc-btn-ross-m {
-  @include button(ross, m);
+.sc-btn-ross {
+  @include button(ross);
 }
 
 .sc-btn-block {
   display: block;
   width: 100%;
+}
+
+/**
+ * DEPRECATED: only for compatibility
+ * TODO: remove asap
+ */
+.sc-btn-bob-l, .sc-btn-bob-m {
+  @include button(bob);
+}
+.sc-btn-ross-l, .sc-btn-ross-m {
+  @include button(ross);
 }
