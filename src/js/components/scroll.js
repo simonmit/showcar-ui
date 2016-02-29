@@ -13,17 +13,18 @@ function smoothScroll(el, to, duration) {
 }
 
 Zepto(function($) {
-    $('a[href^="#"]').on('click', function(e) {
-        var targetName, targetSelector,
-            scrollDuration = 300;
+    $('a[href*="#"]').on('click', function(e) {
+        var scrollDuration = 300;
 
-        e.preventDefault();
+        var targetName = $(e.currentTarget).attr('href').split('#');
+        var targetSelector = 'a[name="' + targetName[1] + '"]';
 
-        targetName = $(e.currentTarget).attr('href').replace('#', '');
-        targetSelector = 'a[name="' + targetName + '"]';
         if ($(targetSelector).length === 0) {
             return;
         }
+
+        e.preventDefault();
+
 
         smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
     });
