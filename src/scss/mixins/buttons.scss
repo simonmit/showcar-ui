@@ -11,7 +11,8 @@
     border: none;
     border-radius: $form-border-radius;
     color: #fff;
-    transition: 0.1s ease-in;
+    transition: all $transition-time ease-in;
+    transition-property: color, background-color;
     text-decoration: none;
     text-align: center;
     padding: 6px 20px;

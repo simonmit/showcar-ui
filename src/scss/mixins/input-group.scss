@@ -39,6 +39,7 @@
             color: $black-100;
             line-height: 1.8rem;
             height: 40px;
+            transition: background-color $transition-time ease-in;
 
             &:last-of-type {
                 border: none;

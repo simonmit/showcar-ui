@@ -11,7 +11,7 @@ input[type="text"], input[type="tel"], input[type="number"], input[type="email"]
         color: $black-100;
         width: 100%;
         line-height: 1.5;
-        transition: all 0.2s ease-in;
+        transition: all $transition-time ease-in;
         outline: none;
         cursor: pointer;
 
@@ -110,11 +110,11 @@ input[type="radio"], input[type="checkbox"] {
                 left: 0;
                 top: 2px;
                 border: 1px solid #939393;
-                transition: all 0.1s ease-in;
+                transition: border-color $transition-time ease-in;
             }
 
             &:after {
-                transition: all 0.1s ease-in;
+                transition: border-color $transition-time ease-in;
             }
         }
 
