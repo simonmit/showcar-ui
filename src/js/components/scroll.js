@@ -15,7 +15,6 @@ function smoothScroll(el, to, duration) {
 Zepto(function($) {
     $('a[href*="#"]').on('click', function(e) {
         var scrollDuration = 300;
-
         var targetName = $(e.currentTarget).attr('href').split('#');
         var targetSelector = 'a[name="' + targetName[1] + '"]';
 
@@ -24,7 +23,6 @@ Zepto(function($) {
         }
 
         e.preventDefault();
-
 
         smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
     });
