@@ -4,7 +4,7 @@
 @mixin link($size: null, $variant: blue) {
     cursor: pointer;
     text-decoration: none;
-    transition: color .2s;
+    transition: color $transition-time ease-in;
     background: none;
     border: none;
 
