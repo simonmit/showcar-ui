@@ -1,8 +1,15 @@
 class Pager {
 
+    get ETC() {
+        return '...';
+    }
 
-    set setTotalPages(tp) {
-        this.totalPages = tp;
+    get maxPage() {
+        return this._maxPage;
+    }
+
+    set maxPage(pages) {
+        this._maxPage = pages;
     }
 
     set activeClass(ac) {
@@ -20,11 +27,14 @@ class Pager {
         this.previousButton = $('.previous-page', this.rootElement);
         this.nextButton     = $('.next-page', this.rootElement);
         this.page           = $('li[id]', this.rootElement);
-        this.pageTiles      = $('li[id]', this.rootElement);
+        this.pageTiles      = $('li', this.rootElement).not('[class]');
+
+        console.log(this.pageTiles);
 
         this.elementsPerPage = elementsPerPage;
         this.activePage      = activePage;
         this.totalCount      = totalCount;
+        this.maxPage         = this.calculatePageCount();
 
         this.initEvents();
         this.initPageTiles();
@@ -37,6 +47,49 @@ class Pager {
     }
 
     initPageTiles() {
+        console.log(this.getPageTiles(this.activePage));
+
+        console.log()
+
+    }
+
+    range(from, to, interval = 1) {
+        let range = [];
+        for (let i = from; i <= to; i += interval) {
+            range.push(i);
+        }
+
+        return range;
+    }
+
+    getPageTiles(activePage) {
+        if (this.maxPage < 10) {
+            return Array.from(new Array(this.maxPage), (x, i) => i + 1);
+        }
+
+        if (activePage < 6) {
+            return Array.from(new Array(7), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
+        }
+        if (activePage > (this.maxPage - 5)) {
+            return [1, this.ETC].concat(this.range(this.maxPage - 6, this.maxPage));
+        }
+
+        let leftTiles  = [],
+            rightTiles = [];
+
+        if (activePage > 5 && activePage < (this.maxPage - 4)) {
+            leftTiles  = [1, this.ETC, activePage - 2, activePage - 1];
+            rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
+        }
+
+        return leftTiles.concat([activePage].concat(rightTiles));
+    }
+
+    setPage(number) {
+        let tile;
+    }
+
+    setInfoPage() {
 
     }
 
@@ -58,7 +111,7 @@ class Pager {
     }
 
     calculatePageCount() {
-        let numberOfPages = this.totalCount / this.elementsPerPage;
+        let numberOfPages = Math.ceil(this.totalCount / this.elementsPerPage);
 
         if (numberOfPages >= 20) {
             return 20;
@@ -81,8 +134,8 @@ class Pager {
     let paginationElement = document.querySelector('.sc-pagination'),
         pagination        = null,
         elementsPerPage   = 20,
-        activePage        = 3,
-        totalCount        = 800;
+        activePage        = 1,
+        totalCount        = 150;
 
 
     if (paginationElement) {
