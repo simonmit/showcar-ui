@@ -17,17 +17,105 @@ sub-nav:
     </p>
     <a name="headlines"></a>
     <h3>Headlines</h3>
+    <p>
+        ShowCarUI provides responsive font sizes for headlines <code>h1</code> - <code>h5</code>, you simply need to
+        add the class <code>.sc-font</code> to the corresponding tag. To see the difference between small and larger
+        viewports, simple resize the browser and see the following example.
+    </p>
+    <div class="table-typography-wrapper">
+        <table class="docs-table docs-table-typography-headlines">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>viewport < M (768px)</th>
+                    <th>viewport &#8805; M (768px)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>h1.sc-font</code></td>
+                    <td><code>XL</code> (24px)</td>
+                    <td><code>XXL</code> (32px)</td>
+                </tr>
+                <tr>
+                    <td><code>h2.sc-font</code></td>
+                    <td><code>L</code> (20px), <span class="sc-font-bold">bold</span></td>
+                    <td><code>XL</code> (24px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+                <tr>
+                    <td><code>h3.sc-font</code></td>
+                    <td><code>M</code> (16px), <span class="sc-font-bold">bold</span></td>
+                    <td><code>XL</code> (24px)</td>
+                </tr>
+                <tr>
+                    <td><code>h4.sc-font</code></td>
+                    <td><span class="sc-font-silent">default</span></td>
+                    <td><code>L</code> (20px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+                <tr>
+                    <td><code>h5.sc-font</code></td>
+                    <td><span class="sc-font-silent">default</span></td>
+                    <td><code>M</code> (16px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="example example-body-copy">
         <h1 class="sc-font">Lorem ipsum dolor sit amet (h1.sc-font)</h1>
+        <h2 class="sc-font">Lorem ipsum dolor sit amet (h2.sc-font)</h2>
+        <h3 class="sc-font">Lorem ipsum dolor sit amet (h3.sc-font)</h3>
+        <h4 class="sc-font">Lorem ipsum dolor sit amet (h4.sc-font)</h4>
+        <h5 class="sc-font">Lorem ipsum dolor sit amet (h5.sc-font)</h5>
     </div>
     <pre><code class="html js-format-code">
 <!--
 <h1 class="sc-font">...</h1>
+<h2 class="sc-font">...</h2>
+<h3 class="sc-font">...</h3>
+<h4 class="sc-font">...</h4>
+<h5 class="sc-font">...</h5>
 -->
     </code></pre>
 
     <a name="body-copy"></a>
     <h3>Body copy</h3>
+    <p>several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
+    <div class="table-typography-wrapper sc-clearfix">
+        <table class="docs-table docs-table-typography-fonts">
+            <thead>
+                <tr>
+                    <th>class</th>
+                    <th>font-size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>.sc-font-s</code></td>
+                    <td>0.75rem (12px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-m</code></td>
+                    <td>1rem (16px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-l</code></td>
+                    <td>1.25rem (20px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xl</code></td>
+                    <td>1.5rem (24px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xxl</code></td>
+                    <td>2rem (32px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xxxl</code></td>
+                    <td>2.5rem (40px)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div class="example example-body-copy">
         <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
