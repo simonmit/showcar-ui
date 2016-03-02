@@ -28,3 +28,20 @@
     }
 }
 
+/// @param string $size - default size that is used, use the same variables as font mixin
+/// @param string $sizeM - font size that is used starting at viewportM, use the same variables as font mixin
+/// @param bool $bold - default font weight (true = bold)
+/// @param bool $boldM - font weight that is used starting at viewportM
+@mixin headline($size, $sizeM, $bold: false, $boldM: false) {
+    @include font($size, $bold);
+    @if not $bold {
+        font-weight: normal;
+    }
+
+    @include mqmin($viewportM) {
+        @include font($sizeM, $boldM);
+        @if not $boldM {
+            font-weight: normal;
+        }
+    }
+}
