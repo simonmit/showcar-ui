@@ -179,7 +179,7 @@
         margin: 9px 0 7px;
         text-align: center;
         height: 51px;
-        .icon-auto24 {
+        .icon-auto24, as24-icon {
             width: 85px;
             height: 40px;
             background-size: contain;
@@ -243,11 +243,6 @@
         .bar {
             text-align: left;
             margin: 15px $L;
-            .icon-auto24 as24-icon {
-                width: 85px;
-                height: 40px;
-                background-size: contain;
-            }
         }
 
         nav {
