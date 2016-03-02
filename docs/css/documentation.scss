@@ -202,6 +202,28 @@ pre {
         margin: 5px 0;
     }
 }
+
+.table-typography-wrapper {
+    .docs-table {
+        margin-bottom: 0;
+    }
+
+    .docs-table-typography-headlines {
+        width: 100%;
+
+        th,td {
+            width: 33%;
+        }
+    }
+    .docs-table-typography-fonts {
+        width: 50%;
+
+        th,td {
+            width: 50%;
+        }
+    }
+}
+
 .example-body-copy {
     p {
         margin: 20px 0;
