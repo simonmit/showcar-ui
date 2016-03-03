@@ -853,17 +853,105 @@
     </p>
     <a name="headlines"></a>
     <h3>Headlines</h3>
+    <p>
+        ShowCarUI provides responsive font sizes for headlines <code>h1</code> - <code>h5</code>, you simply need to
+        add the class <code>.sc-font</code> to the corresponding tag. To see the difference between small and larger
+        viewports, simple resize the browser and see the following example.
+    </p>
+    <div class="table-typography-wrapper">
+        <table class="docs-table docs-table-typography-headlines">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>viewport &lt; M (768px)</th>
+                    <th>viewport &#8805; M (768px)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>h1.sc-font</code></td>
+                    <td><code>XL</code> (24px)</td>
+                    <td><code>XXL</code> (32px)</td>
+                </tr>
+                <tr>
+                    <td><code>h2.sc-font</code></td>
+                    <td><code>L</code> (20px), <span class="sc-font-bold">bold</span></td>
+                    <td><code>XL</code> (24px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+                <tr>
+                    <td><code>h3.sc-font</code></td>
+                    <td><code>M</code> (16px), <span class="sc-font-bold">bold</span></td>
+                    <td><code>XL</code> (24px)</td>
+                </tr>
+                <tr>
+                    <td><code>h4.sc-font</code></td>
+                    <td><span class="sc-font-silent">default</span></td>
+                    <td><code>L</code> (20px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+                <tr>
+                    <td><code>h5.sc-font</code></td>
+                    <td><span class="sc-font-silent">default</span></td>
+                    <td><code>M</code> (16px), <span class="sc-font-bold">bold</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="example example-body-copy">
         <h1 class="sc-font">Lorem ipsum dolor sit amet (h1.sc-font)</h1>
+        <h2 class="sc-font">Lorem ipsum dolor sit amet (h2.sc-font)</h2>
+        <h3 class="sc-font">Lorem ipsum dolor sit amet (h3.sc-font)</h3>
+        <h4 class="sc-font">Lorem ipsum dolor sit amet (h4.sc-font)</h4>
+        <h5 class="sc-font">Lorem ipsum dolor sit amet (h5.sc-font)</h5>
     </div>
     <pre><code class="html js-format-code">
 <!--
 <h1 class="sc-font">...</h1>
+<h2 class="sc-font">...</h2>
+<h3 class="sc-font">...</h3>
+<h4 class="sc-font">...</h4>
+<h5 class="sc-font">...</h5>
 -->
     </code></pre>
 
     <a name="body-copy"></a>
     <h3>Body copy</h3>
+    <p>several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
+    <div class="table-typography-wrapper sc-clearfix">
+        <table class="docs-table docs-table-typography-fonts">
+            <thead>
+                <tr>
+                    <th>class</th>
+                    <th>font-size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>.sc-font-s</code></td>
+                    <td>0.75rem (12px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-m</code></td>
+                    <td>1rem (16px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-l</code></td>
+                    <td>1.25rem (20px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xl</code></td>
+                    <td>1.5rem (24px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xxl</code></td>
+                    <td>2rem (32px)</td>
+                </tr>
+                <tr>
+                    <td><code>.sc-font-xxxl</code></td>
+                    <td>2.5rem (40px)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div class="example example-body-copy">
         <p class="sc-font-s">.sc-font-s<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -1358,8 +1446,15 @@
 
     <a name="collapse"></a>
     <h3>Collapse</h3>
+
+    <p>
+        For a realistic example, take a look on our
+        <a href="../examples/pages/listpage/index.html" target="_blank">Listpage-Example</a>.
+    </p>
+
+    <h4>Toggle Example</h4>
     <div class="example example-collapse">
-        <button class="sc-btn-ross" data-toggle="sc-collapse" data-target="#collapse-target-1">Collapse Toggle</button>
+        <a data-toggle="sc-collapse" data-target="#collapse-target-1">Toggle Content</a>
         <div id="collapse-target-1" class="sc-collapse">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -1367,8 +1462,22 @@
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <hr>
-        <button class="sc-btn-ross sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Collapse Show</button>
+    </div>
+
+    <pre><code class="html js-format-code">
+<!--
+<button data-toggle="sc-collapse" data-target="#collapse">
+    Toggle Content
+</button>
+<div id="collapse" class="sc-collapse">...</div>
+-->
+    </code></pre>
+
+    <h4>Show more/less example</h4>
+    <div class="example example-collapse">
+        <a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+            Show content
+        </a>
         <div class="sc-collapse sc-collapse-target">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -1376,21 +1485,22 @@
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-btn-ross sc-collapse sc-collapse-target">
-            Collapse Hide
-        </button>
+        <a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+            Less content
+        </a>
     </div>
 
     <pre><code class="html js-format-code">
 <!--
-<button data-toggle="sc-collapse" data-target="#collapse">...</button>
-<div id="collapse" class="sc-collapse">...</div>
-
-<button class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">Show</button>
+<a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+    More Content
+</a>
 <div class="sc-collapse sc-collapse-target">
     ...
 </div>
-<button data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">Hide</button>
+<a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+    Less Content
+</a>
 -->
     </code></pre>
 
