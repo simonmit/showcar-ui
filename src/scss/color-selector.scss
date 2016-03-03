@@ -2,16 +2,8 @@
 
 .sc-color-selector {
     input[type="radio"], input[type="checkbox"] {
-        &.sc-input {
-            @include color-selector(M);
-
-            &.sc-input-m {
-                @include color-selector(M);
-            }
-
-            &.sc-input-l {
-                @include color-selector(L);
-            }
+        &.sc-input, &.sc-input-m, &.sc-input-l {
+            @include color-selector();
         }
     }
     input[type="checkbox"] {
