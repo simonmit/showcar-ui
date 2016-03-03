@@ -2,17 +2,20 @@ class Pager {
 
     /**
      * @param {HTMLElement|String} root can be a selector
-     * @param {Number} elementsPerPage
+     * @param {Number} itemsPerPage
      * @param {Number} activePage
-     * @param {Number} totalCount
+     * @param {Number} totalItems
+     * @param {String} urlTemplate
      */
-    constructor (root, elementsPerPage, activePage, totalCount) {
-        this.ETC             = '...';
-        this.rootElement     = $(root);
-        this.elementsPerPage = elementsPerPage;
-        this.activePage      = activePage;
-        this.totalCount      = totalCount;
-        this.maxPage         = this.calculatePageCount();
+    constructor (root, itemsPerPage, activePage, totalItems, urlTemplate) {
+
+        this.ETC          = '...';
+        this.rootElement  = $(root);
+        this.itemsPerPage = itemsPerPage;
+        this.activePage   = activePage;
+        this.totalCount   = totalItems;
+        this.urlTemplate  = urlTemplate;
+        this.maxPage      = this.calculatePageCount();
 
         this.prototypeLi   = $('<li>');
         this.prototypeA    = $('<a>');
@@ -44,7 +47,7 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         li.addClass('previous-page');
-        a.attr('href', '#previous-url');
+        a.attr('href', this.getPageUrl(this.activePage - 1));
         a.text(' Previous');
         icon.attr('type', 'arrow');
 
@@ -62,7 +65,7 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         li.addClass('next-page');
-        a.attr('href', '#next-url');
+        a.attr('href', this.getPageUrl(this.activePage + 1));
         a.text('Next ');
         icon.attr('type', 'arrow');
 
@@ -84,7 +87,9 @@ class Pager {
      * @returns {String}
      */
     getPageUrl(pageNumber) {
-        return '#eineUrl';
+        let template = this.urlTemplate.replace('{page}', pageNumber.toString());
+
+        return template.replace('{size}', this.itemsPerPage.toString());
     }
 
     /**
@@ -149,13 +154,13 @@ class Pager {
      * Render the pagination
      */
     render() {
-        let paginationOrder = this.getPageTiles(this.activePage),
+        let pagination = this.getPageTiles(this.activePage),
             collection      = $();
 
         this.rootElement.append(this.previousButton);
         this.rootElement.append(this.infoPage);
 
-        paginationOrder.forEach((page) => {
+        pagination.forEach((page) => {
             collection = collection.add(this.createPage(page));
         });
 
@@ -167,7 +172,7 @@ class Pager {
      * @returns {Number}
      */
     calculatePageCount() {
-        let numberOfPages = Math.ceil(this.totalCount / this.elementsPerPage);
+        let numberOfPages = Math.ceil(this.totalCount / this.itemsPerPage);
 
         if (numberOfPages >= 20) {
             return 20;
@@ -177,17 +182,4 @@ class Pager {
     }
 }
 
-(($) => {
-    let paginationElement = document.querySelector('.sc-pagination'),
-        pagination        = null,
-        elementsPerPage   = 20,
-        activePage        = 17,
-        totalCount        = 800,
-        url               = 'http://www.autoscout24.lol/fim/fam/?blubb=7';
-
-    if (paginationElement) {
-        pagination = new Pager(paginationElement, elementsPerPage, activePage, totalCount);
-    }
-    module.exports = pagination;
-
-})(window.Zepto);
+module.exports = Pager;
