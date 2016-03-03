@@ -1,113 +1,108 @@
 class Pager {
 
-    get ETC() {
-        return '...';
-    }
-
-    get maxPage() {
-        return this._maxPage;
-    }
-
-    set maxPage(pages) {
-        this._maxPage = pages;
-    }
-
-    set previousButton(disabled) {
-        let li = $('<li></li>'),
-            a = $('<a></a>'),
-            icon = $('<as24-icon></as24-icon>');
-
-        li.addClass('previous-page')
-        a.attr('href', '#previous-url');
-        a.text(' Previous');
-        icon.attr('type', 'arrow');
-
-        if (disabled) {
-            a.addClass('disabled');
-        }
-
-        return this._previousButton = li.append(a.prepend(icon));
-    }
-
-    get previousButton() {
-        return this._previousButton;
-    }
-
-    set nextButton(disabled) {
-        let li = $('<li></li>'),
-            a = $('<a></a>'),
-            icon = $('<as24-icon></as24-icon>');
-
-        li.addClass('next-page')
-        a.attr('href', '#next-url');
-        a.text('Next ');
-        icon.attr('type', 'arrow');
-
-        if (disabled) {
-            a.addClass('disabled');
-        }
-
-        return this._nextButton = li.append(a.append(icon));
-    }
-
-    get nextButton() {
-        return this._nextButton;
-    }
-
+    /**
+     * @param {HTMLElement|String} root can be a selector
+     * @param {Number} elementsPerPage
+     * @param {Number} activePage
+     * @param {Number} totalCount
+     */
     constructor (root, elementsPerPage, activePage, totalCount) {
-
+        this.ETC             = '...';
         this.rootElement     = $(root);
         this.elementsPerPage = elementsPerPage;
         this.activePage      = activePage;
         this.totalCount      = totalCount;
         this.maxPage         = this.calculatePageCount();
 
-        this.initAllPageTiles();
-        this.initEvents();
+        this.prototypeLi   = $('<li>');
+        this.prototypeA    = $('<a>');
+        this.prototypeIcon = $('<as24-icon>');
+
+        this.render();
     }
 
-    initEvents() {
-        $('.previous-page').on('click', $.proxy(this.previous, this));
-        $('.next-page').on('click', $.proxy(this.next, this));
-
-        let pages = $('.sc-pagination li').not('.next-page').find('a');
-
-        pages.on('click', $.proxy(this.togglePage, this));
-        this.rootElement.has('id');
+    /**
+     * @returns {Number}
+     */
+    get maxPage() {
+        return this._maxPage;
     }
 
-    initAllPageTiles() {
-        let paginationOrder = this.getPageTiles(this.activePage),
-            collection = $();
-
-        this.togglePrevious();
-        this.rootElement.append(this.previousButton);
-
-        paginationOrder.forEach((page) => {
-            collection = collection.add(this.createNumberTile(page));
-        });
-
-        this.rootElement.append(collection);
-        this.toggleNext();
-        this.rootElement.append(this.nextButton);
+    /**
+     * @param {Number} pages
+     */
+    set maxPage(pages) {
+        this._maxPage = pages;
     }
 
-    createNumberTile(pageNumber) {
-        let tile, a;
+    /**
+     * @returns {Object|Zepto}
+     */
+    get previousButton() {
+        let li   = this.prototypeLi.clone(),
+            a    = this.prototypeA.clone(),
+            icon = this.prototypeIcon.clone();
 
-        tile = $("<li></li>", {
-            id: 'page-' + pageNumber
-        });
+        li.addClass('previous-page');
+        a.attr('href', '#previous-url');
+        a.text(' Previous');
+        icon.attr('type', 'arrow');
 
-        a = $('<a></a>');
-        a.attr('href', '#eineUrl');
+        if (1 === this.activePage) a.addClass('disabled');
 
-        if (typeof pageNumber !== 'number') {
-            tile.attr('id', 'etc');
+        return li.append(a.prepend(icon));
+    }
+
+    /**
+     * @returns {Object|Zepto}
+     */
+    get nextButton() {
+        let li   = this.prototypeLi.clone(),
+            a    = this.prototypeA.clone(),
+            icon = this.prototypeIcon.clone();
+
+        li.addClass('next-page');
+        a.attr('href', '#next-url');
+        a.text('Next ');
+        icon.attr('type', 'arrow');
+
+        if (this.maxPage === this.activePage) a.addClass('disabled');
+
+        return li.append(a.append(icon));
+    }
+
+    get infoPage() {
+        return this.prototypeLi.clone().addClass('info-page').append(
+            this.prototypeA.clone().addClass('disabled').attr('href', 'javascript:void(0)').text(
+                this.activePage + ' / ' + this.maxPage
+            )
+        );
+    }
+
+    /**
+     * @param {Number} pageNumber
+     * @returns {String}
+     */
+    getPageUrl(pageNumber) {
+        return '#eineUrl';
+    }
+
+    /**
+     * Create a single page element
+     *
+     * @param {Number} pageNumber
+     * @returns {Object|Zepto}
+     */
+    createPage(pageNumber) {
+        let tile = this.prototypeLi.clone().data('page', pageNumber),
+            a    = this.prototypeA.clone().attr('href', this.getPageUrl(pageNumber));
+
+        if (this.ETC === pageNumber) {
+            tile.data('page', 'etc');
             a.addClass('disabled');
         }
 
-        if (this.activePage == pageNumber) {
+        if (this.activePage === pageNumber) {
             a.addClass('active');
         }
 
@@ -116,39 +111,17 @@ class Pager {
         return tile.append(a);
     }
 
-    togglePrevious() {
-        if (this.activePage === 1) {
-            this.previousButton = true;
-        } else {
-            this.previousButton = false;
-        }
-    }
-
-    toggleNext() {
-        let pages = this.getPageTiles(this.activePage);
-
-        if (this.activePage === pages[pages.length - 1]) {
-            this.nextButton = true;
-        } else {
-            this.nextButton = false;
-        }
-    }
-
-    togglePage(e) {
-        //this.removeClass('active');
-        $(e.target).addClass('active');
-    }
-
-
-    static range(from, to, interval = 1) {
-        let range = [];
-        for (let i = from; i <= to; i += interval) {
-            range.push(i);
-        }
-
-        return range;
-    }
-
+    /**
+     * Returns a array with all page numbers in the correct order
+     *
+     * Example:
+     * activePage = 17
+     * maxPage    = 20
+     * Returns [1, "...", 14, 15, 16, 17, 18, 19, 20]
+     *
+     * @param {Number} activePage
+     * @returns {Array}
+     */
     getPageTiles(activePage) {
         if (this.maxPage < 10) {
             return Array.from(new Array(this.maxPage), (x, i) => i + 1);
@@ -158,7 +131,7 @@ class Pager {
             return Array.from(new Array(7), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
         }
         if (activePage > (this.maxPage - 5)) {
-            return [1, this.ETC].concat(Pager.range(this.maxPage - 6, this.maxPage));
+            return [1, this.ETC].concat(Array.from(new Array(this.maxPage), (_, i) => i + 1).slice(this.maxPage - 7, this.maxPage));
         }
 
         let leftTiles  = [],
@@ -172,21 +145,27 @@ class Pager {
         return leftTiles.concat([activePage].concat(rightTiles));
     }
 
-    setInfoPage() {
+    /**
+     * Render the pagination
+     */
+    render() {
+        let paginationOrder = this.getPageTiles(this.activePage),
+            collection      = $();
 
+        this.rootElement.append(this.previousButton);
+        this.rootElement.append(this.infoPage);
+
+        paginationOrder.forEach((page) => {
+            collection = collection.add(this.createPage(page));
+        });
+
+        this.rootElement.append(collection);
+        this.rootElement.append(this.nextButton);
     }
 
-
-    previous() {
-        console.log('previous');
-
-
-    }
-
-    next() {
-        console.log('next');
-    }
-
+    /**
+     * @returns {Number}
+     */
     calculatePageCount() {
         let numberOfPages = Math.ceil(this.totalCount / this.elementsPerPage);
 
@@ -202,8 +181,8 @@ class Pager {
     let paginationElement = document.querySelector('.sc-pagination'),
         pagination        = null,
         elementsPerPage   = 20,
-        activePage        = 15,
-        totalCount        = 300,
+        activePage        = 17,
+        totalCount        = 800,
         url               = 'http://www.autoscout24.lol/fim/fam/?blubb=7';
 
     if (paginationElement) {

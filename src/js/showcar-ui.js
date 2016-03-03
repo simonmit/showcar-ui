@@ -30,6 +30,7 @@ require('./components/rotating-arrow.js')();
 require('./components/sticky.js')();
 require('./components/collapse.js')();
 require('./components/scroll.js');
+require('./components/pager.js');
 
 if (!window.notification) {
     window.notification = require('./components/notification.js');
