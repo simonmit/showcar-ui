@@ -12,48 +12,135 @@ class Pager {
         this._maxPage = pages;
     }
 
-    set activeClass(ac) {
-        this.activeElement = ac;
+    set previousButton(disabled) {
+        let li = $('<li></li>'),
+            a = $('<a></a>'),
+            icon = $('<as24-icon></as24-icon>');
+
+        li.addClass('previous-page')
+        a.attr('href', '#previous-url');
+        a.text(' Previous');
+        icon.attr('type', 'arrow');
+
+        if (disabled) {
+            a.addClass('disabled');
+        }
+
+        return this._previousButton = li.append(a.prepend(icon));
     }
 
-    get activeClass() {
-        return this.activeElement;
+    get previousButton() {
+        return this._previousButton;
+    }
+
+    set nextButton(disabled) {
+        let li = $('<li></li>'),
+            a = $('<a></a>'),
+            icon = $('<as24-icon></as24-icon>');
+
+        li.addClass('next-page')
+        a.attr('href', '#next-url');
+        a.text('Next ');
+        icon.attr('type', 'arrow');
+
+        if (disabled) {
+            a.addClass('disabled');
+        }
+
+        return this._nextButton = li.append(a.append(icon));
+    }
+
+    get nextButton() {
+        return this._nextButton;
     }
 
     constructor (root, elementsPerPage, activePage, totalCount) {
 
-        this.document       = $(document);
-        this.rootElement    = $(root);
-        this.previousButton = $('.previous-page', this.rootElement);
-        this.nextButton     = $('.next-page', this.rootElement);
-        this.page           = $('li[id]', this.rootElement);
-        this.pageTiles      = $('li', this.rootElement).not('[class]');
-
-        console.log(this.pageTiles);
-
+        this.rootElement     = $(root);
         this.elementsPerPage = elementsPerPage;
         this.activePage      = activePage;
         this.totalCount      = totalCount;
         this.maxPage         = this.calculatePageCount();
 
+        this.initAllPageTiles();
         this.initEvents();
-        this.initPageTiles();
     }
 
     initEvents() {
-        this.previousButton.on('click', $.proxy(this.previous, this));
-        this.nextButton.on('click', $.proxy(this.next, this));
-        this.page.on('click', $.proxy(this.pageClick, this));
+        $('.previous-page').on('click', $.proxy(this.previous, this));
+        $('.next-page').on('click', $.proxy(this.next, this));
+
+        let pages = $('.sc-pagination li').not('.next-page').find('a');
+
+        pages.on('click', $.proxy(this.togglePage, this));
+        this.rootElement.has('id');
     }
 
-    initPageTiles() {
-        console.log(this.getPageTiles(this.activePage));
+    initAllPageTiles() {
+        let paginationOrder = this.getPageTiles(this.activePage),
+            collection = $();
 
-        console.log()
+        this.togglePrevious();
+        this.rootElement.append(this.previousButton);
 
+        paginationOrder.forEach((page) => {
+            collection = collection.add(this.createNumberTile(page));
+        });
+
+        this.rootElement.append(collection);
+        this.toggleNext();
+        this.rootElement.append(this.nextButton);
     }
 
-    range(from, to, interval = 1) {
+    createNumberTile(pageNumber) {
+        let tile, a;
+
+        tile = $("<li></li>", {
+            id: 'page-' + pageNumber
+        });
+
+        a = $('<a></a>');
+        a.attr('href', '#eineUrl');
+
+        if (typeof pageNumber !== 'number') {
+            tile.attr('id', 'etc');
+            a.addClass('disabled');
+        }
+
+        if (this.activePage == pageNumber) {
+            a.addClass('active');
+        }
+
+        a.text(pageNumber);
+
+        return tile.append(a);
+    }
+
+    togglePrevious() {
+        if (this.activePage === 1) {
+            this.previousButton = true;
+        } else {
+            this.previousButton = false;
+        }
+    }
+
+    toggleNext() {
+        let pages = this.getPageTiles(this.activePage);
+
+        if (this.activePage === pages[pages.length - 1]) {
+            this.nextButton = true;
+        } else {
+            this.nextButton = false;
+        }
+    }
+
+    togglePage(e) {
+        //this.removeClass('active');
+        $(e.target).addClass('active');
+    }
+
+
+    static range(from, to, interval = 1) {
         let range = [];
         for (let i = from; i <= to; i += interval) {
             range.push(i);
@@ -71,7 +158,7 @@ class Pager {
             return Array.from(new Array(7), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
         }
         if (activePage > (this.maxPage - 5)) {
-            return [1, this.ETC].concat(this.range(this.maxPage - 6, this.maxPage));
+            return [1, this.ETC].concat(Pager.range(this.maxPage - 6, this.maxPage));
         }
 
         let leftTiles  = [],
@@ -83,10 +170,6 @@ class Pager {
         }
 
         return leftTiles.concat([activePage].concat(rightTiles));
-    }
-
-    setPage(number) {
-        let tile;
     }
 
     setInfoPage() {
@@ -104,12 +187,6 @@ class Pager {
         console.log('next');
     }
 
-    pageClick() {
-        let tile = this.page;
-
-        console.log(tile);
-    }
-
     calculatePageCount() {
         let numberOfPages = Math.ceil(this.totalCount / this.elementsPerPage);
 
@@ -122,21 +199,12 @@ class Pager {
 }
 
 (($) => {
-    $(function () {
-        let pages = $('.sc-pagination li').not('.next-page').find('a');
-
-        pages.on('click', function (e) {
-            pages.removeClass('active');
-            $(e.target).addClass('active');
-        });
-    });
-
     let paginationElement = document.querySelector('.sc-pagination'),
         pagination        = null,
         elementsPerPage   = 20,
-        activePage        = 1,
-        totalCount        = 150;
-
+        activePage        = 15,
+        totalCount        = 300,
+        url               = 'http://www.autoscout24.lol/fim/fam/?blubb=7';
 
     if (paginationElement) {
         pagination = new Pager(paginationElement, elementsPerPage, activePage, totalCount);
