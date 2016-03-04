@@ -16,6 +16,7 @@ module.exports = () => {
 
     require('document-register-element/build/document-register-element.js');
     require('picturefill/dist/picturefill.js');
+    require('array.from/array-from.js');
 
     if (!isDom4Browser) {
         require('dom4/build/dom4.js');
