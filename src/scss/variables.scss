@@ -69,7 +69,7 @@ $body-blue: #0059b2;
 $body-green: #38a614;
 
 $body-other-stripe-size: 1px;
-$body-other: repeating-linear-gradient(135deg, $white, $white $body-other-stripe-size, $black-100 $body-other-stripe-size, $black-100 (4 * $body-other-stripe-size));
+$body-other: repeating-linear-gradient(135deg, $black-50, $black-50 $body-other-stripe-size, $black-100 $body-other-stripe-size, $black-100 (4 * $body-other-stripe-size));
 
 // spacings
 // ----------------------------
