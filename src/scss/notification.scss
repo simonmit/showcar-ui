@@ -44,7 +44,7 @@ as24-notification {
 
       > svg {
         fill: $black-80;
-        transition: fill 0.2s ease;
+        transition: fill $transition-time ease;
 
         &:hover {
           fill: $black-100;
