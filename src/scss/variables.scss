@@ -2,6 +2,7 @@
 // ----------------------------
 $white: #fff;
 
+$black-120: #000;
 $black-100: #333;
 $black-90: #4c4c4c;
 $black-80: #646464;
@@ -12,6 +13,7 @@ $black-40: #c4c4c4;
 $black-30: #dcdcdc;
 $black-20: #f4f4f4;
 
+$blue-110: #00264d;
 $blue-100: #003468;
 $blue-90: #1e4c7a;
 $blue-80: #3d648c;
@@ -24,6 +26,9 @@ $blue-20: #f2f5f7;
 
 $green-light: #e6f5cf;
 
+$orange-140: #662c00;
+$orange-130: #803700;
+$orange-120: #994200;
 $orange-100: #ff7500;
 $orange-90: #ff9133;
 $orange-80: #ff9a4c;
@@ -36,17 +41,34 @@ $orange-20: #fff1e5;
 
 $color-link: #007CCA;
 
-$color-error: #B80000;
+//use $color-error instead of $color-error-text
+$color-error: #d91a2a;
 $color-error-message: #ffdddc;
-$color-success: #196600;
+$color-success: #217306;
 $color-success-message: #e6f5cf;
-$color-info: #853900;
+$color-info: $orange-120;
 $color-info-message: #fff1c0;
-$color-tip: #264c83;
+$color-tip: #1e4c7a;
 $color-tip-message: #e4eeff;
 
 $color-highlight-info: #33aadd;
-$color-error-text: #d51500;
+
+$body-gold: linear-gradient(#f7e994, #d9a600);
+$body-silver: linear-gradient($black-30, $black-50);
+$body-bronze: linear-gradient(#f7c694, #bf7326);
+$body-black: $black-120;
+$body-gray: $black-60;
+$body-white: $white;
+$body-brown: $orange-120;
+$body-beige: #dbaf6e;
+$body-yellow: #f7c81e;
+$body-orange: $orange-100;
+$body-red: $color-error;
+$body-violet: #991289;
+$body-blue: #0059b2;
+$body-green: #38a614;
+
+$body-other: url('data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHN0eWxlPjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojQzZDNkM2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCl1dPjwvc3R5bGU+PHBhdGggZD0iTTAgMGgzMHYzMEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDAgNDBsNTAtNTBNLTMwIDQwbDUwLTUwTS0yMCA0MGw1MC01ME0tMTAgNDBsNTAtNTBNMCA0MGw1MC01ME0xMCA0MGw1MC01ME0yMCA0MGw1MC01MCIvPjwvc3ZnPg==');
 
 // spacings
 // ----------------------------
