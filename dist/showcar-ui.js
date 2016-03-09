@@ -4798,8 +4798,7 @@
 	    function handleStickies() {
 	        var scrollPos = $(window).scrollTop();
 	
-	        var stickyButtons = $('[data-sticky]');
-	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
+	        Array.prototype.forEach.call($('[data-sticky]'), function (stickyButton) {
 	            var stickyEl = $(stickyButton);
 	            var id = stickyEl.attr('data-sticky');
 	            var undockEl = $('[data-sticky-undock="' + id + '"]');
@@ -4888,14 +4887,15 @@
 	    if (duration < 0) {
 	        return;
 	    }
+	
 	    var difference = to - $(window).scrollTop();
 	    var perTick = difference / duration * 10;
-	    $(this).scrollToTimerCache = setTimeout((function () {
+	    $(this).scrollToTimerCache = setTimeout(function () {
 	        if (!isNaN(parseInt(perTick, 10))) {
 	            window.scrollTo(0, $(window).scrollTop() + perTick);
 	            smoothScroll(el, to, duration - 10);
 	        }
-	    }).bind(this), 10);
+	    }, 10);
 	}
 	
 	Zepto(function ($) {
