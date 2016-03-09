@@ -30,16 +30,16 @@
 
   & + label {
     @include font(M);
-    line-height: $size + $M;
-    min-height: $size + $M;
-    padding-left: 2 * $size;
+    line-height: 32px;
+    padding-left: 40px;
+    padding-right: 8px;
     margin: $M 0;
 
     &:before {
       border: none;
       width: 26px;
       height: 26px;
-      top: 5px;
+      top: 3px;
       left: 3px;
     }
     &:after {
@@ -51,7 +51,7 @@
 
       width: 32px;
       height: 32px;
-      top: 2px;
+      top: 0;
       left: 0;
       border-radius: $size + $M;
     }
