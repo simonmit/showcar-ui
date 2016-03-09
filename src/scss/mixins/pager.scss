@@ -25,7 +25,6 @@
     border-bottom: 1px solid $black-30;
 
     &.previous-page, &.next-page {
-      min-width: 120px;
       max-width: 160px;
 
       a.disabled {
@@ -77,11 +76,18 @@
       }
 
       as24-icon {
-        position: relative;
-        bottom: 2px;
-        fill: $color-link;
-        width: 13px;
-        height: 7px;
+          bottom: 2px;
+          display: inline;
+          position: relative;
+          height: 7px;
+          fill: $color-link;
+          transition: fill $transition-time ease-in;
+          width: 13px;
+
+          svg {
+              width: 13px;
+              height: 7px;
+          }
       }
     }
 
@@ -89,7 +95,7 @@
       display: none;
 
       &.info-page, &.previous-page, &.next-page {
-        display: inline-block;
+        display: inline;
       }
 
       &.info-page {
@@ -101,7 +107,7 @@
       display: none;
 
       &.previous-page, &.next-page {
-        display: inline-block;
+        display: inline;
       }
     }
   }

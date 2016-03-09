@@ -28,7 +28,7 @@ as24-notification {
 
         > svg {
           fill: map-get($value, color);
-          transition: fill 0.2s ease;
+          transition: fill $transition-time ease;
 
           &:hover {
             fill: $black-100;
