@@ -2,8 +2,7 @@ module.exports = () => {
     function handleStickies() {
         let scrollPos = $(window).scrollTop();
 
-        let stickyButtons = $('[data-sticky]');
-        Array.prototype.forEach.call(stickyButtons, (stickyButton) => {
+        Array.prototype.forEach.call($('[data-sticky]'), (stickyButton) => {
             let stickyEl = $(stickyButton);
             let id = stickyEl.attr('data-sticky');
             let undockEl = $('[data-sticky-undock="' + id + '"]');
@@ -37,23 +36,23 @@ module.exports = () => {
 
     handleStickies();
 
-    window.addEventListener("deviceorientation", function () {
+    window.addEventListener("deviceorientation", () => {
         handleStickies();
     });
 
-    window.addEventListener("resize", function () {
+    window.addEventListener("resize", () => {
         handleStickies();
     });
 
-    window.addEventListener("pageSizeChanged", function () {
+    window.addEventListener("pageSizeChanged", () => {
         handleStickies();
     });
 
-    document.addEventListener('scroll', function () {
+    document.addEventListener('scroll', () => {
         handleStickies();
     });
 
-    document.addEventListener('collapse', function () {
+    document.addEventListener('collapse', () => {
         handleStickies();
     });
 };

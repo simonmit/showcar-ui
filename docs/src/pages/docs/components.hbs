@@ -609,12 +609,16 @@ sub-nav:
         <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
             Close me, please.
         </as24-notification>
+        <as24-notification type="tip" id="tip1" target="#example-notification-target" title="Tip for you" close="true">
+            Tip tip...
+        </as24-notification>
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
             <button class="notification-demo sc-btn-bob" data-id="error1">Toggle error notification</button>
             <hr>
-            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>
+            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>&nbsp;
+            <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
@@ -650,7 +654,7 @@ sub-nav:
                 <tbody>
                 <tr>
                     <td>type</td>
-                    <td>Allowed types are: success, information, error</td>
+                    <td>Allowed types are: success, information, error, tip</td>
                 </tr>
                 <tr>
                     <td>target</td>
