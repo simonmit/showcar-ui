@@ -62,19 +62,25 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        name : 'webdriverio test',
-        build :  '1.0',
+        name : 'webdriverio test ie11',
 
         browser_api_name : 'IE11',
         os_api_name : 'Win7x64-Base',
+        screen_resolution : '1024x768',
+        record_video : "true",
+        record_network : "true",
+        browserName : "internet explorer", // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
+    }, {
+        name : 'webdriverio test chrome48',
+
+        browser_api_name : 'Chrome48x64',
+        os_api_name : 'Win7x64-C1',
 
         screen_resolution : '1024x768',
         record_video : "true",
         record_network : "true",
 
-        browserName : "internet explorer", // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
-        username : "mtrieba.ext@autoscout24.com",
-        password : "u32928d5c6d81f47"
+        browserName : "chrome", // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
     }],
     //
     // ===================
@@ -93,10 +99,10 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://as24-showcar-ui.aws.autoscout24.com',
     //
     // Default timeout for all waitForXXX commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 100000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response

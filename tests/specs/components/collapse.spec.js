@@ -2,7 +2,7 @@ describe('Components collapse tests', function(){
 
     beforeEach(function() {
         console.log('beforeEach');
-        browser.url('http://localhost:63342/showcar-ui/docs/pages/components.html');
+        browser.url('/docs/pages/components.html');
     });
 
 
