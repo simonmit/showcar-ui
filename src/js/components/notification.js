@@ -1,5 +1,6 @@
 class Notification {
 
+
     /**
      * @event Notification#onScroll
      * @param {HTMLElement} element
@@ -8,8 +9,6 @@ class Notification {
         this.element = element;
         this._body   = '';
         this.body    = this.element.innerHTML;
-
-        $(document).on('scroll', this.onScroll.bind(this));
     }
 
     get title() {
@@ -33,7 +32,11 @@ class Notification {
     }
 
     get target() {
-        return document.querySelector(this.element.getAttribute('target'));
+        return document.querySelector(this.targetName);
+    }
+
+    get targetName() {
+        return this.element.getAttribute('target');
     }
 
     hide() {
@@ -68,8 +71,6 @@ class Notification {
      */
     update(attribute, value) {
         if ('class' === attribute && this.isShow()) {
-            this.updatePosition();
-
             if (this.timeout) {
                 window.setTimeout(this.hide.bind(this), this.timeout);
             }
@@ -96,9 +97,94 @@ class Notification {
         return element;
     }
 
+}
+
+class NotificationContainerHandler {
+
+    constructor() {
+        this.containers = {};
+    }
+
+    addNotification(notification) {
+        let container;
+        if (!this.hasContainer(notification.targetName)) {
+            container = this.createContainer(notification.targetName);
+        } else {
+            container = this.getContainer(notification.targetName);
+        }
+
+        container.addNotification(notification);
+    }
+
     /**
-     * Update the position of the notification directly below the target element
+     * Create container below the target element
+     *
+     * @param target
      */
+    createContainer(target) {
+        let container = new NotificationContainer(target);
+        this.containers[target] = container;
+
+        return container;
+    }
+
+    /**
+     * @param {String} target
+     * @returns {NotificationContainer}
+     */
+    getContainer(target) {
+        return this.containers[target];
+    }
+
+    /**
+     *
+     * @param {String} name
+     * @returns {boolean}
+     */
+    hasContainer(name) {
+        return this.containers.hasOwnProperty(name);
+    }
+
+}
+
+class NotificationContainer {
+
+    constructor(target) {
+        this.target        = target;
+        this.element       = this.createElement('div', document.body, '', ['sc-notification-container']);
+        this.notifications = [];
+
+        this.updatePosition();
+
+        $(document).on('scroll', this.onScroll.bind(this));
+    }
+
+    addNotification(notification) {
+        this.notifications.push(notification);
+        notification.create();
+        this.element.appendChild(notification.element);
+    }
+
+    /**
+     * @param {String} name
+     * @param {String} body
+     * @param {Array} classes
+     * @param {HTMLElement} parent
+     * @returns {Element}
+     */
+    createElement(name, parent, body, classes = []) {
+        let element = document.createElement(name);
+
+        classes.forEach((cls) => {
+            element.classList.add(cls);
+        });
+        element.innerHTML = body;
+
+        parent.appendChild(element);
+
+        return element;
+    }
+
     updatePosition() {
         if (!this.target) return;
 
@@ -126,16 +212,16 @@ class Notification {
     }
 
     onScroll() {
-        if (this.element.classList.contains('show')) {
-            this.updatePosition();
-        }
+        this.updatePosition();
     }
 
 }
 
+let containerHandler = new NotificationContainerHandler();
+
 function onElementCreated() {
     this.notification = new Notification(this);
-    this.notification.create();
+    containerHandler.addNotification(this.notification);
 }
 
 function onElementChanged(attributeName, previous, value) {
