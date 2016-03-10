@@ -14,23 +14,59 @@ describe('my webdriverio tests', function(){
         var chai = require('chai');
         var chaiAsPromised = require('chai-as-promised');
 
-        chai.use(chaiAsPromised);
-        expect = chai.expect;
         chai.Should();
+        chai.use(chaiAsPromised);
+        chaiAsPromised.transferPromiseness = client.transferPromiseness;
+
     });
 
-    it('Github test',function* () {
-        browser.url('https://github.com/');
+    it('Github test',function(done) {
+        console.log('start Github test');
+
+        return browser
+            .url('https://github.com/')
+            .getTitle().should.equal('GitHub · Where software is built')
+            .getTitle().should.equal('GitHub x· Where software is built')
+        ;
+
+        /*
+        browser
+            .url('https://github.com/')
+            .getTitle().then(function(title) {
+                console.log('title: ', title);
+            })
+            .call(done)
+        ;
+        */
+
+        /*
+         return browser
+         .url('https://github.com/')
+         .getTitle().then(function(title) {
+         console.log('title: ', title);
+         })
+         ;
+         */
+
+        /*
+        yield browser.url('https://github.com/');
+        var title = yield browser.getTitle();
+        console.log('title: ', title);
+        */
+
+
+
+
 /*
         var size = yield browser.getElementSize('.header-logo-wordmarks');
         size.height.should.equal(26);
         size.width.should.equal(890);
-*/
+
         var title = browser.getTitle();
         console.log(title);
         assert.equal(title, 'GitHub asdf· Where software is built');
         //title.should.equal('GitHub asdf· Where software is built');
-/*
+
         var color = yield browser.getCssProperty('a[href="/plan"]', 'color');
         color.value.should.equal('rgba(64,120,192,1)');
 
