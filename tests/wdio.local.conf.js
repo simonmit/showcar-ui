@@ -10,10 +10,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/specs/test.spec.js'
+        './tests/specs/**/*.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
+        './tests/specs/test.spec.js'
         // 'path/to/excluded/files'
     ],
     //
@@ -113,13 +114,22 @@ exports.config = {
     // resolved to continue.
     //
     // Gets executed once before all workers get launched.
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+
+    },
     //
     // Gets executed before test execution begins. At this point you can access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
-    // before: function (capabilties, specs) {
-    // },
+    before: function (capabilties, specs) {
+        console.log('global before');
+
+        var chai = require('chai');
+        //var chaiAsPromised = require('chai-as-promised');
+
+        chai.Should();
+        //chai.use(chaiAsPromised);
+        //chaiAsPromised.transferPromiseness = client.transferPromiseness;
+    },
     //
     // Hook that gets executed before the suite starts
     // beforeSuite: function (suite) {

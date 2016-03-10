@@ -8,8 +8,8 @@ describe('my webdriverio tests', function(){
     var client = {};
 
     before(function(done){
-        //client = webdriverio.remote({ desiredCapabilities: {browserName: 'phantomjs'} });
-        //client.init(done);
+        client = webdriverio.remote({ desiredCapabilities: {browserName: 'phantomjs'} });
+        client.init(done);
 
         var chai = require('chai');
         var chaiAsPromised = require('chai-as-promised');
@@ -23,12 +23,13 @@ describe('my webdriverio tests', function(){
     it('Github test',function(done) {
         console.log('start Github test');
 
-        return browser
+        browser
             .url('https://github.com/')
-            .getTitle().should.equal('GitHub · Where software is built')
-            .getTitle().should.equal('GitHub x· Where software is built')
         ;
+        browser.getTitle().should.equal('GitHub · Where software is built')
+        browser.getTitle().should.not.equal('GitHub x· Where software is built')
 
+        return browser;
         /*
         browser
             .url('https://github.com/')
