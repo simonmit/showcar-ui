@@ -22,6 +22,7 @@ try {
 }
 
 window.Storage = require('../../vendor/showcar-storage/src/storage.js');
+window.Pager = require('./components/pager.js');
 
 require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
 require('./components/custom-dropdown.js');

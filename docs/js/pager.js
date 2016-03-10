@@ -1,10 +1,11 @@
-!function($) {
-    $(function(){
-        var pages = $('.sc-pagination li').not('.next-page').find('a');
+(function ($) {
+    var paginationElement = document.querySelector('.sc-pagination'),
+        itemsPerPage = 20,
+        activePage = 1,
+        totalCount = 800,
+        urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
 
-        pages.on('click', function(e) {
-            pages.removeClass('active');
-            $(e.target).addClass('active');
-        });
-    });
-}(window.Zepto);
+    if (paginationElement) {
+        new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+    }
+})(window.Zepto);

@@ -21,6 +21,20 @@ as24-notification {
       .icon {
         @include notification-icon($value);
       }
+
+      as24-icon[type="close"] {
+        width: 16px;
+        height: 16px;
+
+        > svg {
+          fill: map-get($value, color);
+          transition: fill $transition-time ease;
+
+          &:hover {
+            fill: map-get($value, color-hover);
+          }
+        }
+      }
     }
   }
 
@@ -34,23 +48,9 @@ as24-notification {
   }
 
   > a {
-    position: inherit;
+    position: absolute;
     top: 16px;
     right: 16px;
-
-    > as24-icon[type="close"] {
-      width: 16px;
-      height: 16px;
-
-      > svg {
-        fill: $black-80;
-        transition: fill 0.2s ease;
-
-        &:hover {
-          fill: $black-100;
-        }
-      }
-    }
   }
 
 }
