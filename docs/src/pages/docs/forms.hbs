@@ -2,6 +2,7 @@
 title: Forms
 nav-index: 7
 sub-nav:
+- Buttons
 - Inputs Textareas
 - Select Boxes
 - Radio Buttons
@@ -12,6 +13,40 @@ sub-nav:
 <div>
     <a name="forms"></a>
     <h2>Forms</h2>
+        <a name="buttons"></a>
+        <h3>Buttons</h3>
+        <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
+        <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+        <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
+
+        <div class="example example-buttons">
+            <div>
+                <button class="sc-btn-bob">.sc-btn-bob</button>
+                <button class="sc-btn-ross">.sc-btn-ross</button>
+                <a class="sc-btn-bob">a .sc-btn-ross</a>
+                <a class="sc-btn-ross">a .sc-btn-ross</a>
+            </div>
+            <div>
+                <button class="sc-btn-bob" disabled>disabled</button>
+                <button class="sc-btn-ross" disabled>disabled</button>
+            </div>
+            <div>
+                <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+            </div>
+        </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <button class="sc-btn-bob">.sc-btn-bob</button>
+        <button class="sc-btn-ross">.sc-btn-ross</button>
+        <a class="sc-btn-bob">.sc-btn-ross</a>
+        <a class="sc-btn-ross">.sc-btn-ross</a>
+
+        <button class="sc-btn-bob" disabled>disabled</button>
+        <button class="sc-btn-ross" disabled>disabled</button>
+
+        <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+        -->
+    </code></pre>
     <a name="inputs-textareas"></a>
     <h3>Inputs / Textareas</h3>
 

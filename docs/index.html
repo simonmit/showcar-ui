@@ -22,6 +22,9 @@
             <div class="sc-grid-col-3 sc-grid-col-m-3 sc-grid-col-s-12">
                 <ul class="docs-navigation">
                         <li>
+                                <a href="#"></a>
+                        </li>
+                        <li>
                                 <a href="#variables">Variables</a>
                                 <ul>
                                         <li>
@@ -45,9 +48,6 @@
                                 <a href="#responsive-images">Responsive Images</a>
                         </li>
                         <li>
-                                <a href="#buttons">Buttons</a>
-                        </li>
-                        <li>
                                 <a href="#typography">Typography</a>
                                 <ul>
                                         <li>
@@ -58,6 +58,32 @@
                                         </li>
                                         <li>
                                             <a href="#links">Links</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li>
+                                <a href="#forms">Forms</a>
+                                <ul>
+                                        <li>
+                                            <a href="#buttons">Buttons</a>
+                                        </li>
+                                        <li>
+                                            <a href="#inputs-textareas">Inputs Textareas</a>
+                                        </li>
+                                        <li>
+                                            <a href="#select-boxes">Select Boxes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#radio-buttons">Radio Buttons</a>
+                                        </li>
+                                        <li>
+                                            <a href="#checkboxes">Checkboxes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#color-selectors">Color Selectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="#input-groups">Input Groups</a>
                                         </li>
                                 </ul>
                         </li>
@@ -86,32 +112,6 @@
                                             <a href="#box-spacing">Box spacing</a>
                                         </li>
                                 </ul>
-                        </li>
-                        <li>
-                                <a href="#forms">Forms</a>
-                                <ul>
-                                        <li>
-                                            <a href="#inputs-textareas">Inputs Textareas</a>
-                                        </li>
-                                        <li>
-                                            <a href="#select-boxes">Select Boxes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#radio-buttons">Radio Buttons</a>
-                                        </li>
-                                        <li>
-                                            <a href="#checkboxes">Checkboxes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#color-selectors">Color Selectors</a>
-                                        </li>
-                                        <li>
-                                            <a href="#input-groups">Input Groups</a>
-                                        </li>
-                                </ul>
-                        </li>
-                        <li>
-                                <a href="#"></a>
                         </li>
                         <li>
                                 <a href="#components">Components</a>
@@ -172,6 +172,10 @@
                 </ul>
             </div>
             <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12">
+    
+    <div class="docs-totop">
+        <a href="#top">Jump to Top</a>
+    </div>
     <div>
     <a name="variables"></a>
     <h2>Variables</h2>
@@ -633,9 +637,19 @@
     <a name="grid"></a>
     <h2>Grid</h2>
     <p>ShowCar UI includes the responsive <a href="http://susydocs.oddbird.net" target="_blank">Susy</a> grid system.
-        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.</p>
-    <p>Every grid row has to be placed within a <code>.sc-grid-row</code> container. Every grid cell is a
-        <code>.sc-grid-col-*</code> container.</p>
+        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.
+    </p>
+    <ul>
+        <li>
+            Every grid row should be placed within a <a href="#content-container"><code>.sc-content-container</code></a>.
+        </li>
+        <li>
+            Every grid row is represented as <code>.sc-grid-row</code>.
+        </li>
+        <li>
+            Every grid cell is a <code>.sc-grid-col-*</code> container.
+        </li>
+    </ul>
 
     <div class="example example-grid">
         <div class="sc-grid-row">
@@ -756,15 +770,17 @@
     </div>
     <pre><code class="html js-format-code">
 <!--
-<div class="sc-grid-row">
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-</div>
-<div class="sc-grid-row">
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+<div class="sc-content-container">
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+    </div>
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    </div>
 </div>
 -->
     </code></pre>
@@ -861,9 +877,8 @@
         <a href="#top">Jump to Top</a>
     </div>
     <div>
-    <a name="images"></a>
+    <a name="responsive-images"></a>
     <h2>Responsive Images</h2>
-
     <p>
         The way to go for responsive images in Showcar is the html <code>&lt;picture&gt;</code> tag. Unfortunately, it is not yet sufficiently supported by the browsers.
         Another, more supported way, is the srcset attribute of the <code>&lt;img&gt;</code> tag.
@@ -889,45 +904,6 @@
     <source srcset="https://placehold.it/1400x150">
     <img srcset="https://placehold.it/1400x150" alt="My default image">
 </picture>
--->
-    </code></pre>
-</div>
-    <div class="docs-totop">
-        <a href="#top">Jump to Top</a>
-    </div>
-    <div>
-    <a name="buttons"></a>
-    <h2>Buttons</h2>
-    <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
-    <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
-    <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
-
-    <div class="example example-buttons">
-        <div>
-            <button class="sc-btn-bob">.sc-btn-bob</button>
-            <button class="sc-btn-ross">.sc-btn-ross</button>
-            <a class="sc-btn-bob">a .sc-btn-ross</a>
-            <a class="sc-btn-ross">a .sc-btn-ross</a>
-        </div>
-        <div>
-            <button class="sc-btn-bob" disabled>disabled</button>
-            <button class="sc-btn-ross" disabled>disabled</button>
-        </div>
-        <div>
-            <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<button class="sc-btn-bob">.sc-btn-bob</button>
-<button class="sc-btn-ross">.sc-btn-ross</button>
-<a class="sc-btn-bob">.sc-btn-ross</a>
-<a class="sc-btn-ross">.sc-btn-ross</a>
-
-<button class="sc-btn-bob" disabled>disabled</button>
-<button class="sc-btn-ross" disabled>disabled</button>
-
-<button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
 -->
     </code></pre>
 </div>
@@ -1087,215 +1063,42 @@
         <a href="#top">Jump to Top</a>
     </div>
     <div>
-    <a name="utility"></a>
-    <h2>Utility classes</h2>
-    <a name="floats"></a>
-    <h3>Floats</h3>
-    <div class="example example-floats">
-        <div class="sc-clearfix">
-            <div class="sc-pull-left"></div>
-            <div class="sc-pull-left"></div>
-            <div class="sc-pull-left"></div>
-        </div>
-        <hr>
-        <div class="sc-clearfix">
-            <div class="sc-pull-right"></div>
-            <div class="sc-pull-right"></div>
-            <div class="sc-pull-right"></div>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <div class="sc-clearfix">
-            <div class="sc-pull-left">...</div>
-            <div class="sc-pull-right">...</div>
-        </div>
-        -->
-    </code></pre>
-
-    <a name="text-alignment"></a>
-    <h3>Text alignment</h3>
-    <div class="example example-text-alignment">
-        <strong>Text aligned left</strong>
-        <p class="sc-text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <hr>
-        <strong>Text aligned right</strong>
-        <p class="sc-text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <hr>
-        <strong>Centered text</strong>
-        <p class="sc-text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <hr>
-        <strong>Justified text</strong>
-        <p class="sc-text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <hr>
-        <strong>Text without wrapping</strong>
-        <p class="sc-text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <p class="sc-text-left">...</p>
-        <p class="sc-text-right">...</p>
-        <p class="sc-text-center">...</p>
-        <p class="sc-text-justify">...</p>
-        <p class="sc-text-nowrap">...</p>
-        -->
-    </code></pre>
-
-    <a name="center-blocks"></a>
-    <h3>Center blocks</h3>
-    <div class="example example-block-center">
-        <div class="sc-block-center">.sc-block-center</div>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <div class="sc-block-center">...</div>
-        -->
-    </code></pre>
-
-    <a name="horizontal-line"></a>
-    <h3>Horizontal line</h3>
-    <p>To seperate some content you can use a horizontal line.</p>
-    <div class="example example-horizontal-line">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <hr>
-        -->
-    </code></pre>
-
-    <a name="ellipsis"></a>
-    <h3>Ellipsis</h3>
-    <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
-    <div class="example example-ellipsis">
-        <div class="sc-ellipsis" title="My very long text">My very long text</div>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <div class="sc-ellipsis" title="...">...</div>
-        -->
-    </code></pre>
-
-    <a name="visibility"></a>
-    <h3>Visibility</h3>
-    <p>
-        The ShowCarUI library provides some utility classes to show/hide elements based on the current viewport
-        (media queries).
-    </p>
-    <p>
-        <span class="font-bold">IMPORTANT</span>: Try to use these on a limited basis and avoid creating entirely different
-        versions of the same site. Instead, use them to complement each device's presentation.
-    </p>
-    <table class="docs-table docs-table-visibility">
-        <thead>
-        <tr>
-            <th></th>
-            <th>S Viewport</th>
-            <th>M Viewport</th>
-            <th>L Viewport</th>
-            <th>XL Viewport</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><code>.sc-visible</code></td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-        </tr>
-        <tr>
-            <td><code>.sc-visible-xl</code></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="cell-visible">Visible</td>
-        </tr>
-        <tr>
-            <td><code>.sc-visible-l</code></td>
-            <td></td>
-            <td></td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-        </tr>
-        <tr>
-            <td><code>.sc-visible-m</code></td>
-            <td></td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-        </tr>
-        <tr>
-            <td><code>.sc-visible-s</code></td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-            <td class="cell-visible">Visible</td>
-        </tr>
-        <tr>
-            <td><code>.sc-hidden</code></td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-        </tr>
-        <tr>
-            <td><code>.sc-hidden-xl</code></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="cell-hidden">Hidden</td>
-        </tr>
-        <tr>
-            <td><code>.sc-hidden-l</code></td>
-            <td></td>
-            <td></td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-        </tr>
-        <tr>
-            <td><code>.sc-hidden-m</code></td>
-            <td></td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-        </tr>
-        <tr>
-            <td><code>.sc-hidden-s</code></td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-            <td class="cell-hidden">Hidden</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <a name="box-spacing"></a>
-    <h3>Box spacing</h3>
-    <p>
-        To get a consistent spacing between content boxes, e.g. cms boxes on the home page use the css extendable
-        <code>%box-spacing</code> or the predefined class <code>sc-box-spacing</code>
-    </p>
-    <div class="example example-box-spacing">
-        <div class="sc-box-spacing">Box 1</div>
-        <div class="sc-box-spacing">Box 2</div>
-        <div class="sc-box-spacing">Box 3</div>
-    </div>
-    <pre><code class="html js-format-code">
-        <!--
-        <div class="sc-box-spacing">...</div>
-        <div class="sc-box-spacing">...</div>
-        -->
-    </code></pre>
-</div>
-    <div class="docs-totop">
-        <a href="#top">Jump to Top</a>
-    </div>
-    <div>
     <a name="forms"></a>
     <h2>Forms</h2>
+        <a name="buttons"></a>
+        <h3>Buttons</h3>
+        <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
+        <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+        <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
+
+        <div class="example example-buttons">
+            <div>
+                <button class="sc-btn-bob">.sc-btn-bob</button>
+                <button class="sc-btn-ross">.sc-btn-ross</button>
+                <a class="sc-btn-bob">a .sc-btn-ross</a>
+                <a class="sc-btn-ross">a .sc-btn-ross</a>
+            </div>
+            <div>
+                <button class="sc-btn-bob" disabled>disabled</button>
+                <button class="sc-btn-ross" disabled>disabled</button>
+            </div>
+            <div>
+                <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+            </div>
+        </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <button class="sc-btn-bob">.sc-btn-bob</button>
+        <button class="sc-btn-ross">.sc-btn-ross</button>
+        <a class="sc-btn-bob">.sc-btn-ross</a>
+        <a class="sc-btn-ross">.sc-btn-ross</a>
+
+        <button class="sc-btn-bob" disabled>disabled</button>
+        <button class="sc-btn-ross" disabled>disabled</button>
+
+        <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+        -->
+    </code></pre>
     <a name="inputs-textareas"></a>
     <h3>Inputs / Textareas</h3>
 
@@ -1528,7 +1331,210 @@
     <div class="docs-totop">
         <a href="#top">Jump to Top</a>
     </div>
-    
+    <div>
+    <a name="utility"></a>
+    <h2>Utility classes</h2>
+    <a name="floats"></a>
+    <h3>Floats</h3>
+    <div class="example example-floats">
+        <div class="sc-clearfix">
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+        </div>
+        <hr>
+        <div class="sc-clearfix">
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-clearfix">
+            <div class="sc-pull-left">...</div>
+            <div class="sc-pull-right">...</div>
+        </div>
+        -->
+    </code></pre>
+
+    <a name="text-alignment"></a>
+    <h3>Text alignment</h3>
+    <div class="example example-text-alignment">
+        <strong>Text aligned left</strong>
+        <p class="sc-text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Text aligned right</strong>
+        <p class="sc-text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Centered text</strong>
+        <p class="sc-text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Justified text</strong>
+        <p class="sc-text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Text without wrapping</strong>
+        <p class="sc-text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <p class="sc-text-left">...</p>
+        <p class="sc-text-right">...</p>
+        <p class="sc-text-center">...</p>
+        <p class="sc-text-justify">...</p>
+        <p class="sc-text-nowrap">...</p>
+        -->
+    </code></pre>
+
+    <a name="center-blocks"></a>
+    <h3>Center blocks</h3>
+    <div class="example example-block-center">
+        <div class="sc-block-center">.sc-block-center</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-block-center">...</div>
+        -->
+    </code></pre>
+
+    <a name="horizontal-line"></a>
+    <h3>Horizontal line</h3>
+    <p>To seperate some content you can use a horizontal line.</p>
+    <div class="example example-horizontal-line">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <hr>
+        -->
+    </code></pre>
+
+    <a name="ellipsis"></a>
+    <h3>Ellipsis</h3>
+    <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+    <div class="example example-ellipsis">
+        <div class="sc-ellipsis" title="My very long text">My very long text</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-ellipsis" title="...">...</div>
+        -->
+    </code></pre>
+
+    <a name="visibility"></a>
+    <h3>Visibility</h3>
+    <p>
+        The ShowCarUI library provides some utility classes to show/hide elements based on the current viewport
+        (media queries).
+    </p>
+    <p>
+        <span class="font-bold">IMPORTANT</span>: Try to use these on a limited basis and avoid creating entirely different
+        versions of the same site. Instead, use them to complement each device's presentation.
+    </p>
+    <table class="docs-table docs-table-visibility">
+        <thead>
+        <tr>
+            <th></th>
+            <th>S Viewport</th>
+            <th>M Viewport</th>
+            <th>L Viewport</th>
+            <th>XL Viewport</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><code>.sc-visible</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-m</code></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-s</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-m</code></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-s</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a name="box-spacing"></a>
+    <h3>Box spacing</h3>
+    <p>
+        To get a consistent spacing between content boxes, e.g. cms boxes on the home page use the css extendable
+        <code>%box-spacing</code> or the predefined class <code>sc-box-spacing</code>
+    </p>
+    <div class="example example-box-spacing">
+        <div class="sc-box-spacing">Box 1</div>
+        <div class="sc-box-spacing">Box 2</div>
+        <div class="sc-box-spacing">Box 3</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-box-spacing">...</div>
+        <div class="sc-box-spacing">...</div>
+        -->
+    </code></pre>
+</div>
     <div class="docs-totop">
         <a href="#top">Jump to Top</a>
     </div>
@@ -2334,43 +2340,8 @@ notification.classList.toggle('show');
     <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
-    
-        function encodeEntities(value) {
-            return value.
-                    replace(/&/g, '&amp;').
-                    replace(SURROGATE_PAIR_REGEXP, function(value) {
-                        var hi = value.charCodeAt(0);
-                        var low = value.charCodeAt(1);
-                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
-                    }).
-                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
-                        return '&#' + value.charCodeAt(0) + ';';
-                    }).
-                    replace(/</g, '&lt;').
-                    replace(/>/g, '&gt;');
-        }
-        function formatCode (target) {
-            var elements = document.querySelectorAll(target);
-            for (i = 0; i < elements.length; i++) {
-                var content = elements[i].innerHTML;
-                if (content) {
-                    content = content.trim();
-                    if (content.indexOf('<!--') === 0 && content.lastIndexOf('-->') === (content.length - 3)) {
-                        content = content.substring(4);
-                        content = content.substring(0, content.length - 3);
-                        content.trim();
-                    }
-                    elements[i].innerHTML = encodeEntities(content);
-                }
-            }
-        }
-        formatCode('.js-format-code');
-    </script>
+    <script src="./js/format-code.js"></script>
     <script src="./../dist/showcar-ui.js"></script>
     <script src="./js/notification.js"></script>
-    <script src="./js/pager.js"></script>
-</body>
+    <script src="./js/pager.js"></script></body>
 </html>
