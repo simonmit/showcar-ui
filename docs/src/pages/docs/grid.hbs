@@ -6,9 +6,19 @@ nav-index: 3
     <a name="grid"></a>
     <h2>Grid</h2>
     <p>ShowCar UI includes the responsive <a href="http://susydocs.oddbird.net" target="_blank">Susy</a> grid system.
-        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.</p>
-    <p>Every grid row has to be placed within a <code>.sc-grid-row</code> container. Every grid cell is a
-        <code>.sc-grid-col-*</code> container.</p>
+        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.
+    </p>
+    <ul>
+        <li>
+            Every grid row should be placed within a <a href="#content-container"><code>.sc-content-container</code></a>.
+        </li>
+        <li>
+            Every grid row is represented as <code>.sc-grid-row</code>.
+        </li>
+        <li>
+            Every grid cell is a <code>.sc-grid-col-*</code> container.
+        </li>
+    </ul>
 
     <div class="example example-grid">
         <div class="sc-grid-row">
@@ -129,15 +139,17 @@ nav-index: 3
     </div>
     <pre><code class="html js-format-code">
 <!--
-<div class="sc-grid-row">
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-</div>
-<div class="sc-grid-row">
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+<div class="sc-content-container">
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+    </div>
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    </div>
 </div>
 -->
     </code></pre>

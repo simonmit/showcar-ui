@@ -107,6 +107,7 @@
             display:inline-block;
             outline: 0;
             position: relative;
+            transition: color $transition-time ease;
             &:after {
                 content: '';
                 position: absolute;
