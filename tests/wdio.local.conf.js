@@ -40,7 +40,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    logLevel: 'silent',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -50,7 +50,8 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
-    baseUrl: 'http://as24-showcar-ui.aws.autoscout24.com',
+    //baseUrl: 'http://as24-showcar-ui.aws.autoscout24.com',
+    baseUrl: 'http://127.0.0.1:63342/showcar-ui/',
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 10000,
@@ -121,8 +122,6 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
     before: function (capabilties, specs) {
-        console.log('global before');
-
         var chai = require('chai');
         //var chaiAsPromised = require('chai-as-promised');
 
