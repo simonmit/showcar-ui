@@ -4,8 +4,7 @@ let Container    = require('./Container');
 class ContainerHandler {
 
     constructor() {
-        this.notifications = [];
-        this.containers    = {};
+        this.containers = {};
     }
 
     /**
@@ -13,17 +12,11 @@ class ContainerHandler {
      *
      * @param {HTMLElement} element
      */
-    addNotification(element) {
-        let notification;
-        if (!this.hasNotification(element)) {
-            notification = new Notification(element);
-            element.notification = notification;
-            this.notifications.push(element);
-        } else {
-            notification = this.getNotification(element);
-        }
+    createNotification(element) {
+        let notification = new Notification(element);
+        notification.create();
 
-        this.addNotificationToContainer(notification);
+        element.notification = notification;
     }
 
     /**
@@ -31,14 +24,17 @@ class ContainerHandler {
      *
      * @param {HTMLElement} element
      * @param {String} attribute
-     * @param {String} value
+     * @param {String} previous previous value
+     * @param {String} value new value
      */
-    updateNotification(element, attribute, value) {
-        let notification = this.getNotification(element);
+    updateNotification(element, attribute, previous, value) {
+        let notification = element.notification;
         notification.update(attribute, value);
 
-        if ('target' === attribute) {
+        if ('class' === attribute && 'show' === value) {
             this.addNotificationToContainer(notification);
+        } else if ('target' === attribute) {
+            this.moveNotificationToContainer(notification, attribute, previous, value);
         }
     }
 
@@ -54,6 +50,33 @@ class ContainerHandler {
             container = this.getContainer(notification.targetName);
         }
         container.addNotification(notification);
+    }
+
+    /**
+     * Move a notification to a new container if the target was changed
+     *
+     * @param {Notification} notification
+     * @param {String} attribute
+     * @param {String} previous
+     * @param {String} value
+     */
+    moveNotificationToContainer(notification, attribute, previous, value) {
+        if (previous !== value) {
+            if (this.hasContainer(previous)) {
+                let container = this.getContainer(previous);
+                container.removeNotification(notification);
+            }
+            this.addNotificationToContainer(notification);
+        }
+
+        // cleanup old containers without notifications
+        if (this.hasContainer(previous)) {
+            let container = this.getContainer(previous);
+            if (container.childNodes.length < 2) {
+                container.remove();
+                delete this.containers[previous];
+            }
+        }
     }
 
     /**
@@ -83,22 +106,6 @@ class ContainerHandler {
      */
     hasContainer(name) {
         return this.containers.hasOwnProperty(name);
-    }
-
-    /**
-     * @param {HTMLElement} element
-     * @returns {Notification}
-     */
-    getNotification(element) {
-        return this.notifications[this.notifications.indexOf(element)].notification;
-    }
-
-    /**
-     * @param {HTMLElement} element
-     * @returns {boolean}
-     */
-    hasNotification(element) {
-        return this.notifications.indexOf(element) > -1;
     }
 
 }

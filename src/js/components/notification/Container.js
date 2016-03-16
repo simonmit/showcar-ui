@@ -10,16 +10,47 @@ class Container {
         $(document).on('scroll', this.onScroll.bind(this));
     }
 
-    addNotification(notification) {
-        this.notifications.push(notification);
-        notification.create();
+    /**
+     * @returns {Array}
+     */
+    get childNodes() {
+        return this.element.childNodes;
+    }
+
+    /**
+     * @returns {Node}
+     */
+    remove() {
+        return this.element.remove();
+    }
+
+    addNotificationToTarget(notification) {
         this.element.appendChild(notification.element);
     }
 
-    updateNotification(notification, attribute, value) {
-
+    addNotification(notification) {
+        if (this.notifications.indexOf(notification) < 0) {
+            this.notifications.push(notification);
+        }
+        this.addNotificationToTarget(notification);
     }
 
+    removeNotification(notification) {
+        return this.notifications.splice(this.notifications.indexOf(notification), 1);
+    }
+
+    /**
+     * @param {Notification} notification
+     * @param {String} attribute
+     * @param {String} value
+     */
+    updateNotification(notification, attribute, value) {
+        notification.update(attribute, value);
+
+        if ('target' === attribute || ('class' === attribute && 'show' === value)) {
+            this.addNotification(notification);
+        }
+    }
 
     /**
      * @param {String} name
@@ -62,7 +93,7 @@ class Container {
                 position: 'absolute',
                 width: width + 'px',
                 top: top + 'px',
-                left: this.target.offsetLeft + 'px'
+                left: offset.left + 'px'
             });
         }
     }

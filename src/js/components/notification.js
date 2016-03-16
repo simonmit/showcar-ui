@@ -2,11 +2,11 @@ let ContainerHandler = require('./notification/ContainerHandler');
 let containerHandler = new ContainerHandler();
 
 function onElementCreated() {
-    containerHandler.addNotification(this);
+    containerHandler.createNotification(this);
 }
 
 function onElementChanged(attributeName, previous, value) {
-    containerHandler.updateNotification(this, attributeName, value);
+    containerHandler.updateNotification(this, attributeName, previous, value);
 }
 
 let tagName = 'as24-notification';
