@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ShowCar UI Library Examples - Responsive Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../dist/showcar-ui.css">
+    <link rel="stylesheet" href="../../examples.css">
+</head>
+<body>
+
+<div class="sc-content-container" style="background:lightgreen">
+    <h2>ShowCar UI Library Examples - Responsive Grid</h2>
+    <div class="sc-pagination"></div>
+</div>
+
+<script src="../../../dist/showcar-ui.min.js"></script>
+<script>
+(function ($) {
+    var paginationElement = document.querySelector('.sc-pagination'),
+        itemsPerPage = 20,
+        activePage = 1,
+        totalCount = 60,
+        urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+    if (paginationElement) {
+        new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+    }
+})(window.Zepto);
+</script>
+</body>
+</html>
