@@ -56,11 +56,12 @@
 
     & + label {
         padding-left: 32px;
-        padding-top: 3px;
+        padding-top: 0;
 
         &:before {
             height: $size + $XS;
             width: $size + $XS;
+            top: 0;
         }
     }
 }

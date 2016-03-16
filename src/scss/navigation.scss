@@ -68,7 +68,11 @@
 
         hr {
             margin: $S 0;
+        }
 
+        li {
+            margin-right: -20px;
+            padding-right: 20px;
         }
 
         a {
@@ -103,6 +107,7 @@
             display:inline-block;
             outline: 0;
             position: relative;
+            transition: color $transition-time ease;
             &:after {
                 content: '';
                 position: absolute;

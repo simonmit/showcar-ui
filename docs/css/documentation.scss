@@ -173,6 +173,101 @@ pre {
             width: 50%;
         }
     }
+    .docs-table-variable-color {
+        .example-color- {
+            &white {
+                background: $white;
+            }
+            &green-light {
+                background: $green-light;
+            }
+            &link {
+                background: $color-link;
+            }
+            &error {
+                background: $color-error;
+                color: $white;
+            }
+            &error-message {
+                background: $color-error-message;
+            }
+            &success {
+                background: $color-success;
+                color: $white;
+            }
+            &success-message {
+                background: $color-success-message;
+            }
+            &info {
+                background: $color-info;
+                color: $white;
+            }
+            &info-message {
+                background: $color-info-message;
+            }
+            &tip {
+                background: $color-tip;
+                color: $white;
+            }
+            &tip-message {
+                background: $color-tip-message;
+            }
+            &highlight {
+                background: $color-highlight-info;
+            }
+        }
+        .example-body-color- {
+            &gold {
+                background: $body-gold;
+            }
+            &silver {
+                background: $body-silver;
+            }
+            &bronze {
+                background: $body-bronze;
+            }
+            &black {
+                background: $body-black;
+                color: $white;
+            }
+            &gray {
+                background: $body-gray;
+            }
+            &white {
+                background: $body-white;
+            }
+            &brown {
+                background: $body-brown;
+            }
+            &beige {
+                background: $body-beige;
+            }
+            &yellow {
+                background: $body-yellow;
+            }
+
+            &orange {
+                background: $body-orange;
+            }
+            &red {
+                background: $body-red;
+            }
+            &violet {
+                background: $body-violet;
+                color: $white;
+            }
+            &blue {
+                background: $body-blue;
+                color: $white;
+            }
+            &green {
+                background: $body-green;
+            }
+            &other {
+                background: $body-other;
+            }
+        }
+    }
 }
 
 .example-content-container {
@@ -301,22 +396,25 @@ pre {
 .sc-color-selector {
     input {
         &.red {
-            @include color-selector-color(#ff0000, #fff);
+            @include color-selector-color($body-red, #fff);
         }
         &.yellow {
-            @include color-selector-color(yellow);
+            @include color-selector-color($body-yellow);
         }
         &.green {
-            @include color-selector-color(green, #fff);
+            @include color-selector-color($body-green, #fff);
         }
         &.gold {
-            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+            @include color-selector-color($body-gold, gold);
         }
         &.blue {
-            @include color-selector-color(blue, #fff);
+            @include color-selector-color($body-blue, #fff);
         }
         &.orange {
-            @include color-selector-color(orange, #fff);
+            @include color-selector-color($body-orange, #fff);
+        }
+        &.other {
+            @include color-selector-color($body-other, #fff);
         }
     }
 }

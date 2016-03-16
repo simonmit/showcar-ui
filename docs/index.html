@@ -22,6 +22,9 @@
             <div class="sc-grid-col-3 sc-grid-col-m-3 sc-grid-col-s-12">
                 <ul class="docs-navigation">
                         <li>
+                                <a href="#"></a>
+                        </li>
+                        <li>
                                 <a href="#variables">Variables</a>
                                 <ul>
                                         <li>
@@ -45,9 +48,6 @@
                                 <a href="#responsive-images">Responsive Images</a>
                         </li>
                         <li>
-                                <a href="#buttons">Buttons</a>
-                        </li>
-                        <li>
                                 <a href="#typography">Typography</a>
                                 <ul>
                                         <li>
@@ -58,6 +58,32 @@
                                         </li>
                                         <li>
                                             <a href="#links">Links</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li>
+                                <a href="#forms">Forms</a>
+                                <ul>
+                                        <li>
+                                            <a href="#buttons">Buttons</a>
+                                        </li>
+                                        <li>
+                                            <a href="#inputs-textareas">Inputs Textareas</a>
+                                        </li>
+                                        <li>
+                                            <a href="#select-boxes">Select Boxes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#radio-buttons">Radio Buttons</a>
+                                        </li>
+                                        <li>
+                                            <a href="#checkboxes">Checkboxes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#color-selectors">Color Selectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="#input-groups">Input Groups</a>
                                         </li>
                                 </ul>
                         </li>
@@ -86,32 +112,6 @@
                                             <a href="#box-spacing">Box spacing</a>
                                         </li>
                                 </ul>
-                        </li>
-                        <li>
-                                <a href="#forms">Forms</a>
-                                <ul>
-                                        <li>
-                                            <a href="#inputs-textareas">Inputs Textareas</a>
-                                        </li>
-                                        <li>
-                                            <a href="#select-boxes">Select Boxes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#radio-buttons">Radio Buttons</a>
-                                        </li>
-                                        <li>
-                                            <a href="#checkboxes">Checkboxes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#color-selectors">Color Selectors</a>
-                                        </li>
-                                        <li>
-                                            <a href="#input-groups">Input Groups</a>
-                                        </li>
-                                </ul>
-                        </li>
-                        <li>
-                                <a href="#"></a>
                         </li>
                         <li>
                                 <a href="#components">Components</a>
@@ -172,6 +172,10 @@
                 </ul>
             </div>
             <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12">
+    
+    <div class="docs-totop">
+        <a href="#top">Jump to Top</a>
+    </div>
     <div>
     <a name="variables"></a>
     <h2>Variables</h2>
@@ -196,6 +200,10 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td><code>$black-120</code></td>
+                <td class="text-white" style="background-color: #000;">#000</td>
+            </tr>
             <tr>
                 <td><code>$black-100</code></td>
                 <td class="text-white" style="background-color: #333;">#333</td>
@@ -244,6 +252,10 @@
             </thead>
             <tbody>
             <tr>
+                <td><code>$blue-110</code></td>
+                <td class="text-white" style="background-color: #00264d;">#00264d</td>
+            </tr>
+            <tr>
                 <td><code>$blue-100</code></td>
                 <td class="text-white" style="background-color: #003468;">#003468</td>
             </tr>
@@ -290,6 +302,18 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td><code>$orange-140</code></td>
+                <td class="text-white" style="background-color: #662c00;">#662c00</td>
+            </tr>
+            <tr>
+                <td><code>$orange-130</code></td>
+                <td class="text-white" style="background-color: #803700;">#803700</td>
+            </tr>
+            <tr>
+                <td><code>$orange-120</code></td>
+                <td class="text-white" style="background-color: #994200;">#994200</td>
+            </tr>
             <tr>
                 <td><code>$orange-100</code></td>
                 <td style="background-color: #ff7500;">#ff7500</td>
@@ -338,55 +362,122 @@
             <tbody>
             <tr>
                 <td><code>$white</code></td>
-                <td style="background-color: #fff;">#fff</td>
+                <td class="example-color-white">#fff</td>
             </tr>
             <tr>
                 <td><code>$green-light</code></td>
-                <td style="background-color: #e6f5cf;">#e6f5cf</td>
+                <td class="example-color-green-light">#e6f5cf</td>
             </tr>
             <tr>
                 <td><code>$color-link</code></td>
-                <td style="background-color: #007CCA;">#007CCA</td>
+                <td class="example-color-link">#007CCA</td>
             </tr>
             <tr>
                 <td><code>$color-error</code></td>
-                <td class="text-white" style="background-color: #B80000;">#B80000</td>
+                <td class="example-color-error">#d91a2a</td>
             </tr>
             <tr>
                 <td><code>$color-error-message</code></td>
-                <td style="background-color: #ffdddc;">#ffdddc</td>
+                <td class="example-color-message">#ffdddc</td>
             </tr>
             <tr>
                 <td><code>$color-success</code></td>
-                <td class="text-white" style="background-color: #196600;">#196600</td>
+                <td class="example-color-success">#217306</td>
             </tr>
             <tr>
                 <td><code>$color-success-message</code></td>
-                <td style="background-color: #e6f5cf;">#e6f5cf</td>
+                <td class="example-color-success-message">#e6f5cf</td>
             </tr>
             <tr>
                 <td><code>$color-info</code></td>
-                <td class="text-white" style="background-color: #853900;">#853900</td>
+                <td class="example-color-info">#994200</td>
             </tr>
             <tr>
                 <td><code>$color-info-message</code></td>
-                <td style="background-color: #fff1c0;">#fff1c0</td>
+                <td class="example-color-info-message">#fff1c0</td>
             </tr>
             <tr>
                 <td><code>$color-tip</code></td>
-                <td class="text-white" style="background-color: #264c83;">#264c83</td>
+                <td class="example-color-tip">#1e4c7a</td>
             </tr>
             <tr>
                 <td><code>$color-tip-message</code></td>
-                <td style="background-color: #e4eeff;">#e4eeff</td>
+                <td class="example-color-tip-message">#e4eeff</td>
             </tr>
             <tr>
                 <td><code>$color-highlight-info</code></td>
-                <td style="background-color: #33aadd;">#33aadd</td>
+                <td class="example-color-highlight">#33aadd</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="docs-table docs-table-variable-color sc-pull-left">
+            <thead>
+            <tr>
+                <th>variable</th>
+                <th>value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code>$body-gold</code></td>
+                <td class="example-body-color-gold">#f7e994, #d9a600</td>
             </tr>
             <tr>
-                <td><code>$color-error-text</code></td>
-                <td class="text-white" style="background-color: #d51500;">#d51500</td>
+                <td><code>$body-silver</code></td>
+                <td class="example-body-color-silver">#dcdcdc, #acacac</td>
+            </tr>
+            <tr>
+                <td><code>$body-bronze</code></td>
+                <td class="example-body-color-bronze">#f7c694, #bf7326</td>
+            </tr>
+            <tr>
+                <td><code>$body-black</code></td>
+                <td class="example-body-color-black">#000</td>
+            </tr>
+            <tr>
+                <td><code>$body-gray</code></td>
+                <td class="example-body-color-gray">#949494</td>
+            </tr>
+            <tr>
+                <td><code>$body-white</code></td>
+                <td class="example-body-color-white">#fff</td>
+            </tr>
+            <tr>
+                <td><code>$body-brown</code></td>
+                <td class="example-body-color-brown">#994200</td>
+            </tr>
+            <tr>
+                <td><code>$body-beige</code></td>
+                <td class="example-body-color-beige">#dbaf6e</td>
+            </tr>
+            <tr>
+                <td><code>$body-yellow</code></td>
+                <td class="example-body-color-yellow">#f7c81e</td>
+            </tr>
+            <tr>
+                <td><code>$body-orange</code></td>
+                <td class="example-body-color-orange">#ff7500</td>
+            </tr>
+            <tr>
+                <td><code>$body-red</code></td>
+                <td class="example-body-color-red">#d91a2a</td>
+            </tr>
+            <tr>
+                <td><code>$body-violet</code></td>
+                <td class="example-body-color-violet">#991289</td>
+            </tr>
+            <tr>
+                <td><code>$body-blue</code></td>
+                <td class="example-body-color-blue">#0059b2</td>
+            </tr>
+            <tr>
+                <td><code>$body-green</code></td>
+                <td class="example-body-color-green">#38a614</td>
+            </tr>
+            <tr>
+                <td><code>$body-other</code></td>
+                <td class="example-body-color-other"></td>
             </tr>
             </tbody>
         </table>
@@ -546,9 +637,19 @@
     <a name="grid"></a>
     <h2>Grid</h2>
     <p>ShowCar UI includes the responsive <a href="http://susydocs.oddbird.net" target="_blank">Susy</a> grid system.
-        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.</p>
-    <p>Every grid row has to be placed within a <code>.sc-grid-row</code> container. Every grid cell is a
-        <code>.sc-grid-col-*</code> container.</p>
+        It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.
+    </p>
+    <ul>
+        <li>
+            Every grid row should be placed within a <a href="#content-container"><code>.sc-content-container</code></a>.
+        </li>
+        <li>
+            Every grid row is represented as <code>.sc-grid-row</code>.
+        </li>
+        <li>
+            Every grid cell is a <code>.sc-grid-col-*</code> container.
+        </li>
+    </ul>
 
     <div class="example example-grid">
         <div class="sc-grid-row">
@@ -669,15 +770,17 @@
     </div>
     <pre><code class="html js-format-code">
 <!--
-<div class="sc-grid-row">
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-    <div class="sc-grid-col-6">.sc-grid-col-6</div>
-</div>
-<div class="sc-grid-row">
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
-    <div class="sc-grid-col-3">.sc-grid-col-3</div>
+<div class="sc-content-container">
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+        <div class="sc-grid-col-6">.sc-grid-col-6</div>
+    </div>
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+        <div class="sc-grid-col-3">.sc-grid-col-3</div>
+    </div>
 </div>
 -->
     </code></pre>
@@ -727,6 +830,11 @@
             <td></td>
             <td>767px</td>
         </tr>
+        <tr>
+            <td><code>.sc-grid-col-xs-*</code></td>
+            <td></td>
+            <td>320px</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -740,17 +848,17 @@
     </p>
     <div class="example example-grid">
         <div class="sc-grid-row">
-            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12">
-                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12
+            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3">
+                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
             </div>
-            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">
-                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
+                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
             </div>
-            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4">
-                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
+                .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
             </div>
-            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4">
-                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4
+            <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3">
+                .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
             </div>
         </div>
     </div>
@@ -769,9 +877,8 @@
         <a href="#top">Jump to Top</a>
     </div>
     <div>
-    <a name="images"></a>
+    <a name="responsive-images"></a>
     <h2>Responsive Images</h2>
-
     <p>
         The way to go for responsive images in Showcar is the html <code>&lt;picture&gt;</code> tag. Unfortunately, it is not yet sufficiently supported by the browsers.
         Another, more supported way, is the srcset attribute of the <code>&lt;img&gt;</code> tag.
@@ -797,45 +904,6 @@
     <source srcset="https://placehold.it/1400x150">
     <img srcset="https://placehold.it/1400x150" alt="My default image">
 </picture>
--->
-    </code></pre>
-</div>
-    <div class="docs-totop">
-        <a href="#top">Jump to Top</a>
-    </div>
-    <div>
-    <a name="buttons"></a>
-    <h2>Buttons</h2>
-    <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
-    <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
-    <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
-
-    <div class="example example-buttons">
-        <div>
-            <button class="sc-btn-bob">.sc-btn-bob</button>
-            <button class="sc-btn-ross">.sc-btn-ross</button>
-            <a class="sc-btn-bob">a .sc-btn-ross</a>
-            <a class="sc-btn-ross">a .sc-btn-ross</a>
-        </div>
-        <div>
-            <button class="sc-btn-bob" disabled>disabled</button>
-            <button class="sc-btn-ross" disabled>disabled</button>
-        </div>
-        <div>
-            <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<button class="sc-btn-bob">.sc-btn-bob</button>
-<button class="sc-btn-ross">.sc-btn-ross</button>
-<a class="sc-btn-bob">.sc-btn-ross</a>
-<a class="sc-btn-ross">.sc-btn-ross</a>
-
-<button class="sc-btn-bob" disabled>disabled</button>
-<button class="sc-btn-ross" disabled>disabled</button>
-
-<button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
 -->
     </code></pre>
 </div>
@@ -988,6 +1056,275 @@
 <!--
 <a href="...">...</a>
 <a href="..." class="sc-inline-link">...</a>
+-->
+    </code></pre>
+</div>
+    <div class="docs-totop">
+        <a href="#top">Jump to Top</a>
+    </div>
+    <div>
+    <a name="forms"></a>
+    <h2>Forms</h2>
+        <a name="buttons"></a>
+        <h3>Buttons</h3>
+        <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
+        <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+        <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
+
+        <div class="example example-buttons">
+            <div>
+                <button class="sc-btn-bob">.sc-btn-bob</button>
+                <button class="sc-btn-ross">.sc-btn-ross</button>
+                <a class="sc-btn-bob">a .sc-btn-ross</a>
+                <a class="sc-btn-ross">a .sc-btn-ross</a>
+            </div>
+            <div>
+                <button class="sc-btn-bob" disabled>disabled</button>
+                <button class="sc-btn-ross" disabled>disabled</button>
+            </div>
+            <div>
+                <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+            </div>
+        </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <button class="sc-btn-bob">.sc-btn-bob</button>
+        <button class="sc-btn-ross">.sc-btn-ross</button>
+        <a class="sc-btn-bob">.sc-btn-ross</a>
+        <a class="sc-btn-ross">.sc-btn-ross</a>
+
+        <button class="sc-btn-bob" disabled>disabled</button>
+        <button class="sc-btn-ross" disabled>disabled</button>
+
+        <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+        -->
+    </code></pre>
+    <a name="inputs-textareas"></a>
+    <h3>Inputs / Textareas</h3>
+
+    <div class="example example-inputs">
+        <input type="text" placeholder=".sc-input" class="sc-input">
+        <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
+        <input type="text" placeholder=".sc-input .info" class="sc-input info">
+        <input type="text" placeholder=".sc-input .success" class="sc-input success">
+        <input type="text" placeholder=".sc-input .error" class="sc-input error">
+        <textarea class="sc-input" placeholder="sc-input" readonly>textarea.sc-input</textarea>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<input type="text" class="sc-input">
+<input type="text" class="sc-input" disabled>
+<input type="text" class="sc-input info">
+<input type="text" class="sc-input success">
+<input type="text" class="sc-input error">
+<textarea class="sc-input">...</textarea>
+-->
+    </code></pre>
+
+    <a name="select-boxes"></a>
+    <h3>Select Boxes</h3>
+    <div class="example example-selects">
+        <select class="sc-input" name="as24-select-1">
+            <option>default (.sc-input)</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+        <select name="as24-select-3" class="sc-input" disabled>
+            <option>disabled</option>
+        </select>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<select class="sc-input">
+    <option>...</option>
+</select>
+
+<select class="sc-input" disabled>
+    ...
+</select>
+-->
+    </code></pre>
+
+    <a name="radio-buttons"></a>
+    <h3>Radio Buttons</h3>
+    <div class="example example-radios">
+        <div>
+            <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
+            <label for="as24-radio-1">Radio 1</label>
+
+            <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
+            <label for="as24-radio-2">Radio 2</label>
+
+            <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
+            <label for="as24-radio-3">Radio 3 (disabled)</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div>
+    <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
+    <label for="as24-radio-1">Radio 1</label>
+
+    <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
+    <label for="as24-radio-2">Radio 2</label>
+
+    <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
+    <label for="as24-radio-3">Radio 3 (disabled)</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="checkboxes"></a>
+    <h3>Checkboxes</h3>
+    <div class="example example-checkboxes">
+        <div>
+            <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
+            <label for="as24-checkbox-1">Checkbox</label>
+
+            <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
+            <label for="as24-checkbox-2">Checkbox (disabled)</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div>
+    <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
+    <label for="as24-checkbox-1">Checkbox</label>
+
+    <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
+    <label for="as24-checkbox-2">Checkbox (disabled)</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="color-selectors"></a>
+    <h3>Color Selectors</h3>
+    <p>
+        We created a special type of radio buttons and check boxes for you to easily implement a color selection.
+        In this case you have to write a little custom scss to define the background color of the elements. You can also
+        choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background
+        color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
+    </p>
+    <div class="example example-color-picker">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
+            <label for="as24-cb-cp-1">red</label>
+
+            <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
+            <label for="as24-cb-cp-2">yellow</label>
+
+            <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
+            <label for="as24-cb-cp-7">green</label>
+
+            <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
+            <label for="as24-cb-cp-8">gold</label>
+        </div>
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
+            <label for="as24-cb-cp-3">radio</label>
+
+            <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l other">
+            <label for="as24-cb-cp-4">radio</label>
+        </div>
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
+            <label for="as24-cb-cp-5">radio</label>
+
+            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l other">
+            <label for="as24-cb-cp-6">radio</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-color-selector">
+    <input id="cs1" type="radio" name="cs1" class="sc-input red">
+    <label for="cs1">red</label>
+
+    <input id="cs2" type="radio" name="cs1" class="sc-input yellow">
+    <label for="cs2">yellow</label>
+
+    <input id="cs3" type="radio" name="cs1" class="sc-input green">
+    <label for="cs4">green</label>
+</div>
+-- additional scss --
+@import "path/to/mixins/color-selector";
+.sc-color-selector {
+    input.sc-input {
+        &.red {
+            @include color-selector-color(#ff0000, #fff);
+        }
+        -- gradient support --
+        &.gold {
+            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+        }
+    }
+}
+
+-- radio buttons --
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="radio" name="...">
+    <label for="...">...</label>
+</div>
+
+-- checkboxes --
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="checkbox" name="...">
+    <label for="...">...</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="input-groups"></a>
+    <h3>Input Groups</h3>
+    <div class="example example-groups">
+        <div class="sc-input-group">
+            <input class="sc-input" type="text" placeholder="Text input 1">
+            <input class="sc-input" type="text" placeholder="Text input 2">
+            <button class="sc-btn-bob">Submit</button>
+        </div>
+
+        <div class="sc-input-group-radio">
+            <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
+            <label for="as24-radio-7">Option 1</label>
+
+            <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked>
+            <label for="as24-radio-8">Option 2</label>
+
+            <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
+            <label for="as24-radio-9">Option 3</label>
+        </div>
+        <div class="sc-input-group-radio input-group-emission-badge">
+            <input class="sc-input" id="example-groups-3-1" name="example-groups-3" type="radio">
+            <label for="example-groups-3-1">Alle</label>
+
+            <input class="sc-input" id="example-groups-3-2" name="example-groups-3" type="radio" checked>
+            <label for="example-groups-3-2"><as24-icon type="emission-badge-2"></as24-icon></label>
+
+            <input class="sc-input" id="example-groups-3-3" name="example-groups-3" type="radio">
+            <label for="example-groups-3-3"><as24-icon type="emission-badge-3"></as24-icon></label>
+
+            <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
+            <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-input-group">
+    <input class="sc-input" type="text">
+    ...
+</div>
+
+<div class="sc-input-group-radio">
+    <input class="sc-input" id="radio" type="radio">
+    <label for="radio">...</label>
+    ...
+</div>
+<div class="sc-input-group-radio" >
+    ...
+    <input class="sc-input" id="radio" type="radio">
+    <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
+    ...
+</div>
 -->
     </code></pre>
 </div>
@@ -1198,245 +1535,6 @@
         -->
     </code></pre>
 </div>
-    <div class="docs-totop">
-        <a href="#top">Jump to Top</a>
-    </div>
-    <div>
-    <a name="forms"></a>
-    <h2>Forms</h2>
-    <a name="inputs-textareas"></a>
-    <h3>Inputs / Textareas</h3>
-
-    <div class="example example-inputs">
-        <input type="text" placeholder=".sc-input" class="sc-input">
-        <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
-        <input type="text" placeholder=".sc-input .info" class="sc-input info">
-        <input type="text" placeholder=".sc-input .success" class="sc-input success">
-        <input type="text" placeholder=".sc-input .error" class="sc-input error">
-        <textarea class="sc-input" placeholder="sc-input" readonly>textarea.sc-input</textarea>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<input type="text" class="sc-input">
-<input type="text" class="sc-input" disabled>
-<input type="text" class="sc-input info">
-<input type="text" class="sc-input success">
-<input type="text" class="sc-input error">
-<textarea class="sc-input">...</textarea>
--->
-    </code></pre>
-
-    <a name="select-boxes"></a>
-    <h3>Select Boxes</h3>
-    <div class="example example-selects">
-        <select class="sc-input" name="as24-select-1">
-            <option>default (.sc-input)</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
-        <select name="as24-select-3" class="sc-input" disabled>
-            <option>disabled</option>
-        </select>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<select class="sc-input">
-    <option>...</option>
-</select>
-
-<select class="sc-input" disabled>
-    ...
-</select>
--->
-    </code></pre>
-
-    <a name="radio-buttons"></a>
-    <h3>Radio Buttons</h3>
-    <div class="example example-radios">
-        <div>
-            <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
-            <label for="as24-radio-1">Radio 1</label>
-
-            <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
-            <label for="as24-radio-2">Radio 2</label>
-
-            <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
-            <label for="as24-radio-3">Radio 3 (disabled)</label>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<div>
-    <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
-    <label for="as24-radio-1">Radio 1</label>
-
-    <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
-    <label for="as24-radio-2">Radio 2</label>
-
-    <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
-    <label for="as24-radio-3">Radio 3 (disabled)</label>
-</div>
--->
-    </code></pre>
-
-    <a name="checkboxes"></a>
-    <h3>Checkboxes</h3>
-    <div class="example example-checkboxes">
-        <div>
-            <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
-            <label for="as24-checkbox-1">Checkbox</label>
-
-            <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
-            <label for="as24-checkbox-2">Checkbox (disabled)</label>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<div>
-    <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
-    <label for="as24-checkbox-1">Checkbox</label>
-
-    <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
-    <label for="as24-checkbox-2">Checkbox (disabled)</label>
-</div>
--->
-    </code></pre>
-
-    <a name="color-selectors"></a>
-    <h3>Color Selectors</h3>
-    <p>
-        We created a special type of radio buttons and check boxes for you to easily implement a color selection.
-        In this case you have to write a little custom scss to define the background color of the elements. You can also
-        choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background
-        color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
-    </p>
-    <div class="example example-color-picker">
-        <div class="sc-color-selector">
-            <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
-            <label for="as24-cb-cp-1">red</label>
-
-            <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
-            <label for="as24-cb-cp-2">yellow</label>
-
-            <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
-            <label for="as24-cb-cp-7">green</label>
-
-            <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
-            <label for="as24-cb-cp-8">gold</label>
-        </div>
-        <div class="sc-color-selector">
-            <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
-            <label for="as24-cb-cp-3">radio</label>
-
-            <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l orange">
-            <label for="as24-cb-cp-4">radio</label>
-        </div>
-        <div class="sc-color-selector">
-            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
-            <label for="as24-cb-cp-5">radio</label>
-
-            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l orange">
-            <label for="as24-cb-cp-6">radio</label>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<div class="sc-color-selector">
-    <input id="cs1" type="radio" name="cs1" class="sc-input red">
-    <label for="cs1">red</label>
-
-    <input id="cs2" type="radio" name="cs1" class="sc-input yellow">
-    <label for="cs2">yellow</label>
-
-    <input id="cs3" type="radio" name="cs1" class="sc-input green">
-    <label for="cs4">green</label>
-</div>
--- additional scss --
-@import "path/to/mixins/color-selector";
-.sc-color-selector {
-    input.sc-input {
-        &.red {
-            @include color-selector-color(#ff0000, #fff);
-        }
-        -- gradient support --
-        &.gold {
-            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
-        }
-    }
-}
-
--- radio buttons --
-<div class="sc-color-selector">
-    <input id="..." class="sc-input" type="radio" name="...">
-    <label for="...">...</label>
-</div>
-
--- checkboxes --
-<div class="sc-color-selector">
-    <input id="..." class="sc-input" type="checkbox" name="...">
-    <label for="...">...</label>
-</div>
--->
-    </code></pre>
-
-    <a name="input-groups"></a>
-    <h3>Input Groups</h3>
-    <div class="example example-groups">
-        <div class="sc-input-group">
-            <input class="sc-input" type="text" placeholder="Text input 1">
-            <input class="sc-input" type="text" placeholder="Text input 2">
-            <button class="sc-btn-bob">Submit</button>
-        </div>
-
-        <div class="sc-input-group-radio">
-            <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
-            <label for="as24-radio-7">Option 1</label>
-
-            <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked>
-            <label for="as24-radio-8">Option 2</label>
-
-            <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
-            <label for="as24-radio-9">Option 3</label>
-        </div>
-        <div class="sc-input-group-radio input-group-emission-badge">
-            <input class="sc-input" id="example-groups-3-1" name="example-groups-3" type="radio">
-            <label for="example-groups-3-1">Alle</label>
-
-            <input class="sc-input" id="example-groups-3-2" name="example-groups-3" type="radio" checked>
-            <label for="example-groups-3-2"><as24-icon type="emission-badge-2"></as24-icon></label>
-
-            <input class="sc-input" id="example-groups-3-3" name="example-groups-3" type="radio">
-            <label for="example-groups-3-3"><as24-icon type="emission-badge-3"></as24-icon></label>
-
-            <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
-            <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
-        </div>
-    </div>
-    <pre><code class="html js-format-code">
-<!--
-<div class="sc-input-group">
-    <input class="sc-input" type="text">
-    ...
-</div>
-
-<div class="sc-input-group-radio">
-    <input class="sc-input" id="radio" type="radio">
-    <label for="radio">...</label>
-    ...
-</div>
-<div class="sc-input-group-radio" >
-    ...
-    <input class="sc-input" id="radio" type="radio">
-    <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
-    ...
-</div>
--->
-    </code></pre>
-</div>
-    <div class="docs-totop">
-        <a href="#top">Jump to Top</a>
-    </div>
-    
     <div class="docs-totop">
         <a href="#top">Jump to Top</a>
     </div>
@@ -1865,61 +1963,49 @@
     <a name="pagination"></a>
     <h3>Pagination</h3>
 
-    <div class="example">
-        <ul class="sc-pagination">
-            <li class="previous-page">
-                <a class="disabled" href="">
-                    <as24-icon type="arrow"></as24-icon> Previous
-                </a>
-            </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-            <li><a href="javascript:void(0)">1</a></li>
-            <li><a href="javascript:void(0)">2</a></li>
-            <li><a class="active" href="javascript:void(0)">3</a></li>
-            <li><a href="javascript:void(0)">4</a></li>
-            <li><a href="javascript:void(0)">5</a></li>
-            <li><a href="javascript:void(0)">6</a></li>
-            <li><a href="javascript:void(0)">7</a></li>
-            <li><a href="javascript:void(0)">8</a></li>
-            <li><a href="javascript:void(0)">9</a></li>
-            <li><a class="disabled" href="">...</a></li>
-            <li><a href="javascript:void(0)">20</a></li>
-            <li class="next-page">
-                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
-                </a>
-            </li>
+    <p>If you want to use the pagination component, you just need to add the <code>ul</code> element with the <code>.sc-pagination</code> class as shown below and the
+    corresponding javascript snippet.</p>
+    <p>You need following properties to instantiate the "Pager":</p>
+        <ul class="sticky-list">
+            <li>the name of the "root" element (in fact you can use <code>document.querySelector('.sc-pagination')</code> to obtain the right element)</li>
+            <li>number of items per page (itemsPerPage)</li>
+            <li>the currently active page (activePage)</li>
+            <li>total number of items (totalCount)</li>
+            <li>the url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.</li>
         </ul>
+
+    <p>The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</p>
+
+    <div class="example">
+        This example is fully responsive and represents how it will be if included in your page:
+        <ul class="sc-pagination"></ul>
     </div>
+
     <pre><code class="html js-format-code">
-<!--
-<ul class="sc-pagination">
-    <li class="previous-page">
-        <a class="disabled" href="">
-            <as24-icon type="arrow"></as24-icon> Previous
-        </a>
-    </li>
-    <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-    <li><a href="javascript:void(0)">1</a></li>
-    <li><a href="javascript:void(0)">2</a></li>
-    <li><a class="active" href="javascript:void(0)">3</a></li>
-    <li><a href="javascript:void(0)">4</a></li>
-    <li><a href="javascript:void(0)">5</a></li>
-    <li><a href="javascript:void(0)">6</a></li>
-    <li><a href="javascript:void(0)">7</a></li>
-    <li><a href="javascript:void(0)">8</a></li>
-    <li><a href="javascript:void(0)">9</a></li>
-    <li><a class="disabled" href="">...</a></li>
-    <li><a href="javascript:void(0)">20</a></li>
-    <li class="next-page">
-        <a href="javascript:void(0)">
-            Next <as24-icon type="arrow"></as24-icon>
-        </a>
-    </li>
-</ul>
--->
+    <!--
+    <ul class="sc-pagination">
+    </ul>
+    -->
     </code></pre>
 
-    <h3>More Examples</h3>
+    <p>This needs to be build in your webpack:</p>
+    <pre><code class="js-format-code">
+    <!--
+    (function ($) {
+        var paginationElement = document.querySelector('.sc-pagination'),
+            itemsPerPage = 20,
+            activePage = 1,
+            totalCount = 800,
+            urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+        if (paginationElement) {
+            new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+        }
+    })(window.Zepto);
+    -->
+    </code></pre>
+
+    <h3>More examples (not responsive)</h3>
 
     <div class="example-pagination version-normal">
         <h4>Normal Version: 768px (will be centered if less pages)</h4>
@@ -2049,12 +2135,16 @@
         <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
             Close me, please.
         </as24-notification>
+        <as24-notification type="tip" id="tip1" target="#example-notification-target" title="Tip for you" close="true">
+            Tip tip...
+        </as24-notification>
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
             <button class="notification-demo sc-btn-bob" data-id="error1">Toggle error notification</button>
             <hr>
-            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>
+            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>&nbsp;
+            <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
@@ -2090,7 +2180,7 @@
                 <tbody>
                 <tr>
                     <td>type</td>
-                    <td>Allowed types are: success, information, error</td>
+                    <td>Allowed types are: success, information, error, tip</td>
                 </tr>
                 <tr>
                     <td>target</td>
@@ -2250,43 +2340,8 @@ notification.classList.toggle('show');
     <script src="https://www.promisejs.org/polyfills/promise-6.1.0.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-        SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-        NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g;
-    
-        function encodeEntities(value) {
-            return value.
-                    replace(/&/g, '&amp;').
-                    replace(SURROGATE_PAIR_REGEXP, function(value) {
-                        var hi = value.charCodeAt(0);
-                        var low = value.charCodeAt(1);
-                        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
-                    }).
-                    replace(NON_ALPHANUMERIC_REGEXP, function(value) {
-                        return '&#' + value.charCodeAt(0) + ';';
-                    }).
-                    replace(/</g, '&lt;').
-                    replace(/>/g, '&gt;');
-        }
-        function formatCode (target) {
-            var elements = document.querySelectorAll(target);
-            for (i = 0; i < elements.length; i++) {
-                var content = elements[i].innerHTML;
-                if (content) {
-                    content = content.trim();
-                    if (content.indexOf('<!--') === 0 && content.lastIndexOf('-->') === (content.length - 3)) {
-                        content = content.substring(4);
-                        content = content.substring(0, content.length - 3);
-                        content.trim();
-                    }
-                    elements[i].innerHTML = encodeEntities(content);
-                }
-            }
-        }
-        formatCode('.js-format-code');
-    </script>
+    <script src="./js/format-code.js"></script>
     <script src="./../dist/showcar-ui.js"></script>
-    <script src="./js/pager.js"></script>
     <script src="./js/notification.js"></script>
-</body>
+    <script src="./js/pager.js"></script></body>
 </html>

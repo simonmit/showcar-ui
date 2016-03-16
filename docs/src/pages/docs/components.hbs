@@ -437,61 +437,49 @@ sub-nav:
     <a name="pagination"></a>
     <h3>Pagination</h3>
 
-    <div class="example">
-        <ul class="sc-pagination">
-            <li class="previous-page">
-                <a class="disabled" href="">
-                    <as24-icon type="arrow"></as24-icon> Previous
-                </a>
-            </li>
-            <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-            <li><a href="javascript:void(0)">1</a></li>
-            <li><a href="javascript:void(0)">2</a></li>
-            <li><a class="active" href="javascript:void(0)">3</a></li>
-            <li><a href="javascript:void(0)">4</a></li>
-            <li><a href="javascript:void(0)">5</a></li>
-            <li><a href="javascript:void(0)">6</a></li>
-            <li><a href="javascript:void(0)">7</a></li>
-            <li><a href="javascript:void(0)">8</a></li>
-            <li><a href="javascript:void(0)">9</a></li>
-            <li><a class="disabled" href="">...</a></li>
-            <li><a href="javascript:void(0)">20</a></li>
-            <li class="next-page">
-                <a href="javascript:void(0)">Next <as24-icon type="arrow"></as24-icon>
-                </a>
-            </li>
+    <p>If you want to use the pagination component, you just need to add the <code>ul</code> element with the <code>.sc-pagination</code> class as shown below and the
+    corresponding javascript snippet.</p>
+    <p>You need following properties to instantiate the "Pager":</p>
+        <ul class="sticky-list">
+            <li>the name of the "root" element (in fact you can use <code>document.querySelector('.sc-pagination')</code> to obtain the right element)</li>
+            <li>number of items per page (itemsPerPage)</li>
+            <li>the currently active page (activePage)</li>
+            <li>total number of items (totalCount)</li>
+            <li>the url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.</li>
         </ul>
+
+    <p>The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</p>
+
+    <div class="example">
+        This example is fully responsive and represents how it will be if included in your page:
+        <ul class="sc-pagination"></ul>
     </div>
+
     <pre><code class="html js-format-code">
-<!--
-<ul class="sc-pagination">
-    <li class="previous-page">
-        <a class="disabled" href="">
-            <as24-icon type="arrow"></as24-icon> Previous
-        </a>
-    </li>
-    <li class="info-page"><a class="disabled" href="javascript:void(0)">3 / 20</a></li>
-    <li><a href="javascript:void(0)">1</a></li>
-    <li><a href="javascript:void(0)">2</a></li>
-    <li><a class="active" href="javascript:void(0)">3</a></li>
-    <li><a href="javascript:void(0)">4</a></li>
-    <li><a href="javascript:void(0)">5</a></li>
-    <li><a href="javascript:void(0)">6</a></li>
-    <li><a href="javascript:void(0)">7</a></li>
-    <li><a href="javascript:void(0)">8</a></li>
-    <li><a href="javascript:void(0)">9</a></li>
-    <li><a class="disabled" href="">...</a></li>
-    <li><a href="javascript:void(0)">20</a></li>
-    <li class="next-page">
-        <a href="javascript:void(0)">
-            Next <as24-icon type="arrow"></as24-icon>
-        </a>
-    </li>
-</ul>
--->
+    <!--
+    <ul class="sc-pagination">
+    </ul>
+    -->
     </code></pre>
 
-    <h3>More Examples</h3>
+    <p>This needs to be build in your webpack:</p>
+    <pre><code class="js-format-code">
+    <!--
+    (function ($) {
+        var paginationElement = document.querySelector('.sc-pagination'),
+            itemsPerPage = 20,
+            activePage = 1,
+            totalCount = 800,
+            urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+        if (paginationElement) {
+            new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+        }
+    })(window.Zepto);
+    -->
+    </code></pre>
+
+    <h3>More examples (not responsive)</h3>
 
     <div class="example-pagination version-normal">
         <h4>Normal Version: 768px (will be centered if less pages)</h4>
@@ -621,12 +609,16 @@ sub-nav:
         <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
             Close me, please.
         </as24-notification>
+        <as24-notification type="tip" id="tip1" target="#example-notification-target" title="Tip for you" close="true">
+            Tip tip...
+        </as24-notification>
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
             <button class="notification-demo sc-btn-bob" data-id="error1">Toggle error notification</button>
             <hr>
-            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>
+            <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>&nbsp;
+            <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
@@ -662,7 +654,7 @@ sub-nav:
                 <tbody>
                 <tr>
                     <td>type</td>
-                    <td>Allowed types are: success, information, error</td>
+                    <td>Allowed types are: success, information, error, tip</td>
                 </tr>
                 <tr>
                     <td>target</td>
