@@ -12,7 +12,8 @@
 
 <div class="sc-content-container" style="background:lightgreen">
     <h2>ShowCar UI Library Examples - Responsive Grid</h2>
-    <div class="sc-pagination"></div>
+    <div class="sc-pagination" width="539" style="
+    width: 539px;"></div>
 </div>
 
 <script src="../../../dist/showcar-ui.min.js"></script>
@@ -20,8 +21,8 @@
 (function ($) {
     var paginationElement = document.querySelector('.sc-pagination'),
         itemsPerPage = 20,
-        activePage = 1,
-        totalCount = 60,
+        activePage = 18,
+        totalCount = 500,
         urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
 
     if (paginationElement) {

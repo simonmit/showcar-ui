@@ -25,7 +25,8 @@
     border-bottom: 1px solid $black-30;
 
     &.previous-page, &.next-page {
-      max-width: 160px;
+      width: 100px;
+      max-width: 100px;
 
       a.disabled {
         svg {
@@ -54,6 +55,7 @@
     a {
       @include link(M);
       display: block;
+      white-space: nowrap;
       transition: background-color .3s ease-in;
       background-color: $white;
       border-left: 1px solid $black-20;

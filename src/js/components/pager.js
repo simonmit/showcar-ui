@@ -124,7 +124,9 @@ class Pager {
      */
     getMaximumPossibleTiles() {
         const rootWidth = this.rootElement.width();
-        const prevNextWidth = $('.previous-page').width() + $('.next-page').width();
+
+        // We assume that this is the minWidth for both buttons
+        const prevNextWidth = 200;
 
         return Math.floor((rootWidth - prevNextWidth) / this.tileWidth);
     }
@@ -141,40 +143,42 @@ class Pager {
      * @returns {Array}
      */
     getPageTiles(activePage) {
-        let leftTiles  = [],
-            rightTiles = [];
+        let leftTiles  = [1],
+            rightTiles = [this.maxPage],
+            maxPossibleTiles = this.getMaximumPossibleTiles(),
+            highestPage = this.maxPage;
 
-        // Number of pages is lower than max. possible tiles
-        if (this.getMaximumPossibleTiles() > this.maxPage) {
+
+        console.log('maxPossibleTile:', maxPossibleTiles, ' highestPage:', highestPage, ' activePage:', activePage);
+
+        // Number of pages is lower or equal max. possible tiles
+        // < 1 [2] 3 4 >
+        if (maxPossibleTiles >= highestPage) {
             return Array.from(new Array(this.maxPage), (x, i) => i + 1);
         }
 
-
-
-
-        // Number of pages is equal max. possible tiles
-        // Number of pages is greater than max possible tiles
-
-
-        /*
-        if (this.maxPage < 10) {
-            return Array.from(new Array(this.maxPage), (x, i) => i + 1);
+        // < 1 2 3 [4] 5 ... 20 >
+        if (activePage <= Math.ceil(maxPossibleTiles / 2)){
+            return Array.from(new Array(maxPossibleTiles - 2), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
         }
 
-        if (activePage < 6) {
-            return Array.from(new Array(7), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
+        leftTiles.push(this.ETC);
+
+        // < 1 ... 16 [17] 18 19 20 >
+        let unusedTiles = Math.ceil((maxPossibleTiles - leftTiles.length) / 2);
+        if (activePage > unusedTiles) {
+            return leftTiles.concat(Array.from(new Array(this.maxPage), (_, i) => i + 1).slice(activePage - 1, this.maxPage));
         }
 
-        if (activePage > (this.maxPage - 5)) {
-            return [1, this.ETC].concat(Array.from(new Array(this.maxPage), (_, i) => i + 1).slice(this.maxPage - 7, this.maxPage));
-        }
+        // < 1 ... 6 [7] 8 ... 20 >
 
-        if (activePage > 5 && activePage < (this.maxPage - 4)) {
-            leftTiles  = [1, this.ETC, activePage - 2, activePage - 1];
-            rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
-        }
-        */
 
+
+        //if (activePage > 5 && activePage < (this.maxPage - 4)) {
+        //    leftTiles  = [1, this.ETC, activePage - 2, activePage - 1];
+        //    rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
+        //}
+        //
         return leftTiles.concat([activePage].concat(rightTiles));
     }
 
