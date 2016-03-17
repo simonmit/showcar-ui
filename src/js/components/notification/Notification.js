@@ -43,6 +43,7 @@ class Notification {
 
     hide() {
         this.element.classList.remove('show');
+        this.element.classList.remove('prefade');
     }
 
     isShow() {
@@ -53,6 +54,7 @@ class Notification {
      * Create the html structure of the notification element
      */
     create() {
+        this.element.classList.add('prefade');
         this.element.innerHTML = '';
         this.container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
         this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
@@ -69,9 +71,12 @@ class Notification {
      */
     update(attribute, value) {
         if ('class' === attribute && this.isShow()) {
+            this.element.classList.remove('prefade');
             if (this.timeout) {
                 window.setTimeout(this.hide.bind(this), this.timeout);
             }
+        } else if ('class' === attribute && !this.isShow()) {
+            this.hide();
         }
         if ('title' === attribute) {
             this.titleTag.innerHTML = value;

@@ -1,14 +1,19 @@
 @import "mixins/notification";
 
 as24-notification {
+  display: block;
   overflow: hidden;
   width: 100%;
-  display: none;
   z-index: 9999;
-  transition: height 0.4s ease;
+  max-height: 0;
+  transition: max-height $transition-time ease-out;
 
+  &.prefade {
+    transition-duration: 0;
+  }
   &.show {
-    display: block;
+    transition: max-height $transition-time ease-in;
+    max-height: 71px;
   }
 
   @each $name, $value in $types {

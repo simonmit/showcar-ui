@@ -29,13 +29,14 @@ class ContainerHandler {
      */
     updateNotification(element, attribute, previous, value) {
         let notification = element.notification;
-        notification.update(attribute, value);
 
         if ('class' === attribute && 'show' === value) {
             this.addNotificationToContainer(notification);
         } else if ('target' === attribute) {
             this.moveNotificationToContainer(notification, attribute, previous, value);
         }
+
+        notification.update(attribute, value);
     }
 
     /**
