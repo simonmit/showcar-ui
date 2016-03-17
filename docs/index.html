@@ -1573,17 +1573,19 @@
 
     <h4>Show more/less example</h4>
     <div class="example example-collapse">
-        <a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target in" data-test="example-collapse-show"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Show content
         </a>
-        <div class="sc-collapse sc-collapse-target">
+        <div class="sc-collapse sc-collapse-target" data-test="example-collapse-box">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
             ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target" data-test="example-collapse-hide"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Less content
         </a>
     </div>
@@ -1620,7 +1622,7 @@
     -->
     </code></pre>
     <h4>Multiple Breadcrumbs</h4>
-    <div class="example example-breadcrumbs">
+    <div class="example example-breadcrumbs" data-test="breadcrumbs-responsive">
         <ul class="sc-breadcrumbs">
             <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
             <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
@@ -1643,7 +1645,7 @@
     <h3>Custom Dropdown</h3>
     <div class="example example-custom-dropdown">
         <label>Custom Dropdown</label>
-        <custom-dropdown class="sc-input" checkboxgroup>
+        <custom-dropdown class="sc-input" data-test="custom-dropdown-1" checkboxgroup>
             <div>
                 <p>All</p>
             </div>
@@ -1658,7 +1660,7 @@
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons</label>
-        <custom-dropdown class="sc-input icon" checkboxgroup style="max-width: 300px;">
+        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-2" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
@@ -1809,7 +1811,7 @@
     <a name="navigation"></a>
     <h3>Navigation</h3>
 
-    <div class="example">
+    <div class="example example-navigation">
 
         <div class="sc-navigation">
             <div class="bar">
