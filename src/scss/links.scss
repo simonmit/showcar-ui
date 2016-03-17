@@ -1,6 +1,6 @@
 @import "mixins/links";
 
-a {
+a, .sc-link {
   @include link;
 }
 
