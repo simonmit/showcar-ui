@@ -3,29 +3,70 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>ShowCar UI Library Examples - Responsive Grid</title>
+    <title>ShowCar UI Library Examples - Intelligent Pagination</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../dist/showcar-ui.css">
     <link rel="stylesheet" href="../../examples.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/urljs/2.1.0/url.min.js"></script>
 </head>
 <body>
 
 <div class="sc-content-container" style="background:lightgreen">
-    <h2>ShowCar UI Library Examples - Responsive Grid</h2>
+    <h2>ShowCar UI Library Examples - Intelligent Pagination</h2>
     <div class="sc-pagination"></div>
 </div>
 
 <script src="../../../dist/showcar-ui.min.js"></script>
 <script>
 (function ($) {
-    var paginationElement = document.querySelector('.sc-pagination'),
-        itemsPerPage = 20,
-        activePage = 12,
-        totalCount = 800,
-        urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+    function parseURL(url) {
+        var parser = document.createElement('a'),
+            searchObject = {},
+            queries, split, i;
+
+        parser.href = url;
+        queries = parser.search.replace(/^\?/, '').split('&');
+        for( i = 0; i < queries.length; i++ ) {
+            split = queries[i].split('=');
+            searchObject[split[0]] = split[1];
+        }
+
+        return {
+            protocol: parser.protocol,
+            host: parser.host,
+            hostname: parser.hostname,
+            port: parser.port,
+            pathname: parser.pathname,
+            search: parser.search,
+            searchObject: searchObject,
+            hash: parser.hash
+        };
+    }
+
+
+    let page = 1, size = 20, totalCount = 800, urlTemplate;
+    let url = parseURL(window.location.href);
+    let host = url.protocol + '//' + url.host + url.pathname;
+    let qs = url.searchObject;
+    let paginationElement = document.querySelector('.sc-pagination');
+
+    if (typeof qs.page != 'undefined') {
+        page = qs.page;
+    }
+
+    if (typeof qs.size != 'undefined') {
+        size = qs.size;
+    }
+
+    if (typeof qs.totalCount != 'undefined') {
+        totalCount = qs.totalCount;
+    }
+
+    urlTemplate = host + "?page={page}&size={size}&totalCount=" + totalCount;
 
     if (paginationElement) {
-        new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+        new Pager(paginationElement, size, page, totalCount, urlTemplate);
     }
 })(window.Zepto);
 </script>

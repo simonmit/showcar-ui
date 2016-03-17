@@ -11,9 +11,9 @@ class Pager {
 
         this.ETC          = '...';
         this.rootElement  = $(root);
-        this.itemsPerPage = itemsPerPage;
-        this.activePage   = activePage;
-        this.totalCount   = totalItems;
+        this.itemsPerPage = parseInt(itemsPerPage);
+        this.activePage   = parseInt(activePage);
+        this.totalCount   = parseInt(totalItems);
         this.urlTemplate  = urlTemplate;
         this.maxPage      = this.calculatePageCount();
         this.tileWidth    = 48;
@@ -134,7 +134,7 @@ class Pager {
     }
 
     /**
-     * Returns a array with all page numbers in the correct order
+     * Returns an array with all page numbers in the correct order
      *
      * Example:
      * activePage = 17
@@ -145,19 +145,17 @@ class Pager {
      * @returns {Array}
      */
     getPageTiles(activePage) {
-        let leftNumber = activePage-1;
+        let leftNumber = activePage - 1;
         let rightNumber = activePage + 1;
         let maxPossibleTiles = this.getMaximumPossibleTiles();
         let tiles = [activePage];
-        let willUnshift;
         let usefulTiles = 0;
 
         while (leftNumber > 0 || rightNumber <= this.maxPage) {
 
-            willUnshift = false;
-
             if (leftNumber > 0) {
-                willUnshift = true;
+                tiles.unshift(leftNumber);
+                usefulTiles++;
                 maxPossibleTiles--;
                 if (0 === maxPossibleTiles) {
                     break;
@@ -165,10 +163,6 @@ class Pager {
             }
 
             if (rightNumber <= this.maxPage) {
-                if (true === willUnshift) {
-                    tiles.unshift(leftNumber);
-                    usefulTiles++;
-                }
                 tiles.push(rightNumber);
                 usefulTiles++;
                 maxPossibleTiles--;
@@ -193,8 +187,7 @@ class Pager {
             usefulTiles -= 1;
         }
 
-        if (usefulTiles <= 2) {
-            console.log('Showing info');
+        if (usefulTiles <= 3) {
             return [];
         }
 
