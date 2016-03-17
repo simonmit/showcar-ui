@@ -22,7 +22,7 @@ class Pager {
         this.prototypeA    = $('<a>');
         this.prototypeIcon = $('<as24-icon>');
 
-        $(window).on('resize', this.render);
+        $(window).on('resize', $.proxy(this.render, this));
 
         this.render();
     }
@@ -149,8 +149,8 @@ class Pager {
         let rightNumber = activePage + 1;
         let maxPossibleTiles = this.getMaximumPossibleTiles();
         let tiles = [activePage];
-
         let willUnshift;
+        let usefulTiles = 0;
 
         while (leftNumber > 0 || rightNumber <= this.maxPage) {
 
@@ -167,8 +167,10 @@ class Pager {
             if (rightNumber <= this.maxPage) {
                 if (true === willUnshift) {
                     tiles.unshift(leftNumber);
+                    usefulTiles++;
                 }
                 tiles.push(rightNumber);
+                usefulTiles++;
                 maxPossibleTiles--;
                 if (0 === maxPossibleTiles) {
                     break;
@@ -182,77 +184,43 @@ class Pager {
         if (1 !== tiles[0]) {
             tiles[0] = 1;
             tiles[1] = this.ETC;
+            usefulTiles -= 1;
         }
 
         if (this.maxPage !== tiles[tiles.length -1]) {
             tiles[tiles.length -1] = this.maxPage;
             tiles[tiles.length -2] = this.ETC;
+            usefulTiles -= 1;
+        }
+
+        if (usefulTiles <= 2) {
+            console.log('Showing info');
+            return [];
         }
 
         return tiles;
-    }
-
-
-    xgetPageTiles(activePage) {
-        let leftTiles  = [1],
-            rightTiles = [this.maxPage],
-            maxPossibleTiles = this.getMaximumPossibleTiles(),
-            highestPage = this.maxPage;
-
-
-        console.log('maxPossibleTile:', maxPossibleTiles, ' highestPage:', highestPage, ' activePage:', activePage);
-
-        // Number of pages is lower or equal max. possible tiles
-        // < 1 [2] 3 4 >
-        if (maxPossibleTiles >= highestPage) {
-            console.log('< 1 [2] 3 4 >');
-            return Array.from(new Array(this.maxPage), (x, i) => i + 1);
-        }
-
-        // < 1 2 3 [4] 5 ... 20 >
-        if (activePage <= Math.ceil(maxPossibleTiles / 2)){
-            console.log('< 1 2 3 [4] 5 ... 20 >');
-            return Array.from(new Array(maxPossibleTiles - 2), (x, i) => i + 1).concat([this.ETC, this.maxPage]);
-        }
-
-        leftTiles.push(this.ETC);
-
-        // < 1 ... 16 [17] 18 19 20 >
-        let unusedTiles = Math.ceil((maxPossibleTiles - leftTiles.length) / 2);
-        console.log('< 1 ... 16 [17] 18 19 20 >');
-        console.log('unusedTiles', unusedTiles);
-        if (activePage > unusedTiles) {
-            return leftTiles.concat(Array.from(new Array(this.maxPage), (_, i) => i + 1).slice(activePage - 1, this.maxPage));
-        }
-
-        rightTiles.unshift(this.ETC);
-
-        // < 1 ... 6 [7] 8 ... 20 >
-
-
-        //if (activePage > 5 && activePage < (this.maxPage - 4)) {
-        //    leftTiles  = [1, this.ETC, activePage - 2, activePage - 1];
-        //    rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
-        //}
-        //
-        return leftTiles.concat([activePage].concat(rightTiles));
     }
 
     /**
      * Render the pagination
      */
     render() {
+        this.rootElement.children().remove();
+
         let pagination = this.getPageTiles(this.activePage),
             collection      = $();
 
         this.rootElement.append(this.previousButton);
-        // this.rootElement.append(this.infoPage);
 
-        pagination.forEach((page) => {
-            collection = collection.add(this.createPage(page));
-        });
+        if (0 === pagination.length) {
+            this.rootElement.append(this.infoPage);
+        } else {
+            pagination.forEach((page) => {
+                collection = collection.add(this.createPage(page));
+            });
+            this.rootElement.append(collection);
+        }
 
-        this.rootElement.append(collection);
         this.rootElement.append(this.nextButton);
     }
 
