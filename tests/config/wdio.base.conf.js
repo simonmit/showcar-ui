@@ -1,5 +1,5 @@
 exports.config = {
-    
+
     //
     // ==================
     // Specify Test Files
@@ -14,7 +14,6 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        './tests/specs/test.spec.js'
         // 'path/to/excluded/files'
     ],
     //
@@ -30,9 +29,7 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
+    capabilities: [],
     //
     // ===================
     // Test Configurations
@@ -98,7 +95,7 @@ exports.config = {
     // The following are supported: dot (default), spec and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     reporters: ['dot'],
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -115,9 +112,8 @@ exports.config = {
     // resolved to continue.
     //
     // Gets executed once before all workers get launched.
-    onPrepare: function (config, capabilities) {
-
-    },
+    //onPrepare: function (config, capabilities) {
+    //},
     //
     // Gets executed before test execution begins. At this point you can access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
