@@ -1,5 +1,9 @@
 class Container {
 
+    /**
+     * @event Container#onScroll
+     * @param {String} target
+     */
     constructor(target) {
         this.target        = target;
         this.element       = this.createElement('div', document.body, '', ['sc-notification-container']);
@@ -24,10 +28,16 @@ class Container {
         return this.element.remove();
     }
 
+    /**
+     * @param {Notification} notification
+     */
     addNotificationToTarget(notification) {
         this.element.appendChild(notification.element);
     }
 
+    /**
+     * @param {Notification} notification
+     */
     addNotification(notification) {
         if (this.notifications.indexOf(notification) < 0) {
             this.notifications.push(notification);
@@ -35,21 +45,12 @@ class Container {
         this.addNotificationToTarget(notification);
     }
 
-    removeNotification(notification) {
-        return this.notifications.splice(this.notifications.indexOf(notification), 1);
-    }
-
     /**
      * @param {Notification} notification
-     * @param {String} attribute
-     * @param {String} value
+     * @returns {Array.<T>}
      */
-    updateNotification(notification, attribute, value) {
-        notification.update(attribute, value);
-
-        if ('target' === attribute || ('class' === attribute && 'show' === value)) {
-            this.addNotification(notification);
-        }
+    removeNotification(notification) {
+        return this.notifications.splice(this.notifications.indexOf(notification), 1);
     }
 
     /**
@@ -88,17 +89,17 @@ class Container {
                 left: offset.left + 'px'
             });
         } else {
-            let top = (offset.top + offset.height) - $(target).offsetParent().offset().top;
             element.css({
                 position: 'absolute',
                 width: width + 'px',
-                top: top + 'px',
+                top: (offset.top + offset.height) + 'px',
                 left: offset.left + 'px'
             });
         }
     }
 
     onScroll() {
+        // TODO: Trigger updatePosition, if a child as24-notification node contains the class show
         this.updatePosition();
     }
 

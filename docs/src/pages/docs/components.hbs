@@ -595,6 +595,14 @@ sub-nav:
         Notification Target container
     </div>
 
+    <br>
+
+    <div class="sc-content-container example-notification-target-container">
+        <div class="example-notification-target-s" id="example-notification-target-s">
+            Small Notification Target container
+        </div>
+    </div>
+
     <h4>Demo:</h4>
     <div class="example example-notification">
         <as24-notification type="success" id="succ1" target="#example-notification-target" title="Vehicle is added to watchlist." timeout="2500">
@@ -609,8 +617,12 @@ sub-nav:
         <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
             Close me, please.
         </as24-notification>
-        <as24-notification type="tip" id="tip1" target="#example-notification-target" title="Tip for you" close="true">
+        <as24-notification type="tip" id="tip1" target="#example-notification-target-s" title="Tip for you" close="true">
             Tip tip...
+        </as24-notification>
+
+        <as24-notification type="tip" id="tip2" target="#example-notification-target-s" title="Small Tip for you" close="true">
+            Tip tip hurra...
         </as24-notification>
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
@@ -619,6 +631,7 @@ sub-nav:
             <hr>
             <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip notification</button>
+            <button class="notification-demo sc-btn-ross" data-id="tip2">Show small tip notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">

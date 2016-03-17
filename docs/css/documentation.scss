@@ -514,3 +514,15 @@ pre {
     background-color: $black-30;
     padding: $L;
 }
+
+
+.sc-content-container.example-notification-target-container {
+    max-width: 640px;
+
+    .example-notification-target-s {
+        height: 70px;
+        width: 100%;
+        border-bottom: 1px solid $black-60;
+        background-color: $black-30;
+    }
+}

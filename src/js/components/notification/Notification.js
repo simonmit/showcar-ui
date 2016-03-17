@@ -2,13 +2,15 @@ class Notification {
 
 
     /**
-     * @event Notification#onScroll
      * @param {HTMLElement} element
      */
     constructor(element) {
         this.element = element;
         this._body   = '';
         this.body    = this.element.innerHTML;
+
+        this.closeBtn = null;
+        this.titleTag = null;
     }
 
     get title() {
@@ -52,16 +54,12 @@ class Notification {
      */
     create() {
         this.element.innerHTML = '';
-        let container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-        this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
-        this.createElement('div', container, this.body);
+        this.container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+        this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
+        this.createElement('div', this.container, this.body);
 
         if (this.close) {
-            let close = this.createElement('a', this.element, '');
-            $(close).on('click', this.hide.bind(this));
-
-            let icon  = this.createElement('as24-icon', close, '');
-            icon.setAttribute('type', 'close');
+            this.closeBtn = this.createCloseButton();
         }
     }
 
@@ -73,6 +71,17 @@ class Notification {
         if ('class' === attribute && this.isShow()) {
             if (this.timeout) {
                 window.setTimeout(this.hide.bind(this), this.timeout);
+            }
+        }
+        if ('title' === attribute) {
+            this.titleTag.innerHTML = value;
+        }
+        if ('close' === attribute) {
+            if (!this.closeBtn && "true" === value) {
+                this.closeBtn = this.createCloseButton();
+            } else {
+                this.closeBtn.remove();
+                this.closeBtn = null;
             }
         }
     }
@@ -95,6 +104,16 @@ class Notification {
         parent.appendChild(element);
 
         return element;
+    }
+
+    createCloseButton() {
+        let closeBtn = this.createElement('a', this.container, '');
+        $(closeBtn).on('click', this.hide.bind(this));
+
+        let icon  = this.createElement('as24-icon', closeBtn, '');
+        icon.setAttribute('type', 'close');
+
+        return closeBtn;
     }
 
 }

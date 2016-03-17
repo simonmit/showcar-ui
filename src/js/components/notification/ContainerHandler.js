@@ -72,7 +72,7 @@ class ContainerHandler {
         // cleanup old containers without notifications
         if (this.hasContainer(previous)) {
             let container = this.getContainer(previous);
-            if (container.childNodes.length < 2) {
+            if (container.childNodes.length < 1) {
                 container.remove();
                 delete this.containers[previous];
             }
