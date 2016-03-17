@@ -56,7 +56,7 @@
 	    window.console.warn(msg);
 	};
 	
-	var FontFaceObserver = __webpack_require__(9);
+	var FontFaceObserver = __webpack_require__(10);
 	var observer = new FontFaceObserver('Source Sans Pro');
 	
 	try {
@@ -69,18 +69,19 @@
 	    warn('Failed to use FontFaceObserver', e);
 	}
 	
-	window.Storage = __webpack_require__(10);
+	window.Storage = __webpack_require__(11);
+	window.Pager = __webpack_require__(15);
 	
-	__webpack_require__(14);
-	__webpack_require__(15);
 	__webpack_require__(16);
-	__webpack_require__(17)();
-	__webpack_require__(18)();
+	__webpack_require__(17);
+	__webpack_require__(18);
 	__webpack_require__(19)();
-	__webpack_require__(20);
+	__webpack_require__(20)();
+	__webpack_require__(21)();
+	__webpack_require__(22);
 	
 	if (!window.notification) {
-	    window.notification = __webpack_require__(21);
+	    window.notification = __webpack_require__(23);
 	} else {
 	    warn('window.notification is already registered.');
 	}
@@ -828,17 +829,18 @@
 	
 	    __webpack_require__(3);
 	    __webpack_require__(4);
+	    __webpack_require__(6);
 	
 	    if (!isDom4Browser) {
-	        __webpack_require__(6);
+	        __webpack_require__(7);
 	    }
 	    if (!isEs5Browser) {
-	        __webpack_require__(7);
+	        __webpack_require__(8);
 	    }
 	    if (needsPlaceholderPolyfill) {
 	        //check if this is required anymore and can be dropped - midler, 09.02.2016
 	        //needed only for IE9 support
-	        __webpack_require__(8);
+	        __webpack_require__(9);
 	    }
 	};
 
@@ -2656,6 +2658,99 @@
 /* 6 */
 /***/ function(module, exports) {
 
+	'use strict';
+	
+	/*! https://mths.be/array-from v0.2.0 by @mathias */
+	if (!Array.from) {
+		(function () {
+			'use strict';
+	
+			var defineProperty = function () {
+				// IE 8 only supports `Object.defineProperty` on DOM elements.
+				try {
+					var object = {};
+					var $defineProperty = Object.defineProperty;
+					var result = $defineProperty(object, object, object) && $defineProperty;
+				} catch (error) {}
+				return result || function put(object, key, descriptor) {
+					object[key] = descriptor.value;
+				};
+			}();
+			var toStr = Object.prototype.toString;
+			var isCallable = function isCallable(fn) {
+				// In a perfect world, the `typeof` check would be sufficient. However,
+				// in Chrome 1–12, `typeof /x/ == 'object'`, and in IE 6–8
+				// `typeof alert == 'object'` and similar for other host objects.
+				return typeof fn == 'function' || toStr.call(fn) == '[object Function]';
+			};
+			var toInteger = function toInteger(value) {
+				var number = Number(value);
+				if (isNaN(number)) {
+					return 0;
+				}
+				if (number == 0 || !isFinite(number)) {
+					return number;
+				}
+				return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+			};
+			var maxSafeInteger = Math.pow(2, 53) - 1;
+			var toLength = function toLength(value) {
+				var len = toInteger(value);
+				return Math.min(Math.max(len, 0), maxSafeInteger);
+			};
+			var from = function from(arrayLike) {
+				var C = this;
+				if (arrayLike == null) {
+					throw new TypeError('`Array.from` requires an array-like object, not `null` or `undefined`');
+				}
+				var items = Object(arrayLike);
+				var mapping = arguments.length > 1;
+	
+				var mapFn, T;
+				if (arguments.length > 1) {
+					mapFn = arguments[1];
+					if (!isCallable(mapFn)) {
+						throw new TypeError('When provided, the second argument to `Array.from` must be a function');
+					}
+					if (arguments.length > 2) {
+						T = arguments[2];
+					}
+				}
+	
+				var len = toLength(items.length);
+				var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+				var k = 0;
+				var kValue, mappedValue;
+				while (k < len) {
+					kValue = items[k];
+					if (mapFn) {
+						mappedValue = typeof T == 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+					} else {
+						mappedValue = kValue;
+					}
+					defineProperty(A, k, {
+						'value': mappedValue,
+						'configurable': true,
+						'enumerable': true,
+						'writable': true
+					});
+					++k;
+				}
+				A.length = len;
+				return A;
+			};
+			defineProperty(Array, 'from', {
+				'value': from,
+				'configurable': true,
+				'writable': true
+			});
+		})();
+	}
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
 	"use strict";
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
@@ -2803,7 +2898,7 @@
 	})(window);
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -3447,7 +3542,7 @@
 	//# sourceMappingURL=es5-shim.map
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3576,7 +3671,7 @@
 	}(undefined);
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3666,7 +3761,7 @@
 	})();
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3676,9 +3771,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var stores = {
-	    local: __webpack_require__(11),
-	    session: __webpack_require__(12),
-	    cookie: __webpack_require__(13)
+	    local: __webpack_require__(12),
+	    session: __webpack_require__(13),
+	    cookie: __webpack_require__(14)
 	};
 	
 	var Storage = function () {
@@ -3811,7 +3906,7 @@
 	module.exports = Storage;
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3851,7 +3946,7 @@
 	}();
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3891,7 +3986,7 @@
 	}();
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3965,7 +4060,326 @@
 	}();
 
 /***/ },
-/* 14 */
+/* 15 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Pager = function () {
+	
+	    /**
+	     * @param {HTMLElement|String} root can be a selector
+	     * @param {Number} itemsPerPage
+	     * @param {Number} activePage
+	     * @param {Number} totalItems
+	     * @param {String} urlTemplate
+	     */
+	
+	    function Pager(root, itemsPerPage, activePage, totalItems, urlTemplate) {
+	        _classCallCheck(this, Pager);
+	
+	        this.ETC = '...';
+	        this.rootElement = $(root);
+	        this.itemsPerPage = itemsPerPage;
+	        this.activePage = activePage;
+	        this.totalCount = totalItems;
+	        this.urlTemplate = urlTemplate;
+	        this.maxPage = this.calculatePageCount();
+	        this.tileWidth = 48;
+	
+	        this.prototypeLi = $('<li>');
+	        this.prototypeA = $('<a>');
+	        this.prototypeIcon = $('<as24-icon>');
+	
+	        $('window').on('resize', this.render);
+	
+	        this.render();
+	    }
+	
+	    /**
+	     * @returns {Number}
+	     */
+	
+	    _createClass(Pager, [{
+	        key: 'getPageUrl',
+	
+	        /**
+	         * @param {Number} pageNumber
+	         * @returns {String}
+	         */
+	        value: function getPageUrl(pageNumber) {
+	            var template = this.urlTemplate.replace('{page}', pageNumber.toString());
+	
+	            return template.replace('{size}', this.itemsPerPage.toString());
+	        }
+	
+	        /**
+	         * Create a single page element
+	         *
+	         * @param {Number} pageNumber
+	         * @returns {Object|Zepto}
+	         */
+	
+	    }, {
+	        key: 'createPage',
+	        value: function createPage(pageNumber) {
+	            var tile = this.prototypeLi.clone().data('page', pageNumber),
+	                a = this.prototypeA.clone().attr('href', this.getPageUrl(pageNumber));
+	
+	            if (this.ETC === pageNumber) {
+	                tile.data('page', 'etc');
+	                a.addClass('disabled');
+	            }
+	
+	            if (this.activePage === pageNumber) {
+	                a.addClass('active');
+	            }
+	
+	            a.text(pageNumber);
+	
+	            return tile.append(a);
+	        }
+	
+	        /**
+	         * Returns the maximum possible amount ot tiles between <PREV> and <NEXT>
+	         *
+	         * @returns {int}
+	         */
+	
+	    }, {
+	        key: 'getMaximumPossibleTiles',
+	        value: function getMaximumPossibleTiles() {
+	            var rootWidth = this.rootElement.width();
+	
+	            // We assume that this is the minWidth for both buttons
+	            var prevNextWidth = 200;
+	
+	            return Math.floor((rootWidth - prevNextWidth) / this.tileWidth);
+	        }
+	
+	        /**
+	         * Returns a array with all page numbers in the correct order
+	         *
+	         * Example:
+	         * activePage = 17
+	         * maxPage    = 20
+	         * Returns [1, "...", 14, 15, 16, 17, 18, 19, 20]
+	         *
+	         * @param {Number} activePage
+	         * @returns {Array}
+	         */
+	
+	    }, {
+	        key: 'getPageTiles',
+	        value: function getPageTiles(activePage) {
+	            var leftNumber = activePage - 1;
+	            var rightNumber = activePage + 1;
+	            var maxPossibleTiles = this.getMaximumPossibleTiles();
+	            var tiles = [activePage];
+	
+	            var willUnshift = undefined;
+	
+	            while (leftNumber > 0 || rightNumber <= this.maxPage) {
+	
+	                willUnshift = false;
+	
+	                if (leftNumber > 0) {
+	                    willUnshift = true;
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                if (rightNumber <= this.maxPage) {
+	                    if (true === willUnshift) {
+	                        tiles.unshift(leftNumber);
+	                    }
+	                    tiles.push(rightNumber);
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                leftNumber--;
+	                rightNumber++;
+	            }
+	
+	            if (1 !== tiles[0]) {
+	                tiles[0] = 1;
+	                tiles[1] = this.ETC;
+	            }
+	
+	            if (this.maxPage !== tiles[tiles.length - 1]) {
+	                tiles[tiles.length - 1] = this.maxPage;
+	                tiles[tiles.length - 2] = this.ETC;
+	            }
+	
+	            return tiles;
+	        }
+	    }, {
+	        key: 'xgetPageTiles',
+	        value: function xgetPageTiles(activePage) {
+	            var leftTiles = [1],
+	                rightTiles = [this.maxPage],
+	                maxPossibleTiles = this.getMaximumPossibleTiles(),
+	                highestPage = this.maxPage;
+	
+	            console.log('maxPossibleTile:', maxPossibleTiles, ' highestPage:', highestPage, ' activePage:', activePage);
+	
+	            // Number of pages is lower or equal max. possible tiles
+	            // < 1 [2] 3 4 >
+	            if (maxPossibleTiles >= highestPage) {
+	                console.log('< 1 [2] 3 4 >');
+	                return Array.from(new Array(this.maxPage), function (x, i) {
+	                    return i + 1;
+	                });
+	            }
+	
+	            // < 1 2 3 [4] 5 ... 20 >
+	            if (activePage <= Math.ceil(maxPossibleTiles / 2)) {
+	                console.log('< 1 2 3 [4] 5 ... 20 >');
+	                return Array.from(new Array(maxPossibleTiles - 2), function (x, i) {
+	                    return i + 1;
+	                }).concat([this.ETC, this.maxPage]);
+	            }
+	
+	            leftTiles.push(this.ETC);
+	
+	            // < 1 ... 16 [17] 18 19 20 >
+	            var unusedTiles = Math.ceil((maxPossibleTiles - leftTiles.length) / 2);
+	            console.log('< 1 ... 16 [17] 18 19 20 >');
+	            console.log('unusedTiles', unusedTiles);
+	            if (activePage > unusedTiles) {
+	                return leftTiles.concat(Array.from(new Array(this.maxPage), function (_, i) {
+	                    return i + 1;
+	                }).slice(activePage - 1, this.maxPage));
+	            }
+	
+	            rightTiles.unshift(this.ETC);
+	
+	            // < 1 ... 6 [7] 8 ... 20 >
+	
+	            //if (activePage > 5 && activePage < (this.maxPage - 4)) {
+	            //    leftTiles  = [1, this.ETC, activePage - 2, activePage - 1];
+	            //    rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
+	            //}
+	            //
+	            return leftTiles.concat([activePage].concat(rightTiles));
+	        }
+	
+	        /**
+	         * Render the pagination
+	         */
+	
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this = this;
+	
+	            var pagination = this.getPageTiles(this.activePage),
+	                collection = $();
+	
+	            this.rootElement.append(this.previousButton);
+	            // this.rootElement.append(this.infoPage);
+	
+	            pagination.forEach(function (page) {
+	                collection = collection.add(_this.createPage(page));
+	            });
+	
+	            this.rootElement.append(collection);
+	            this.rootElement.append(this.nextButton);
+	        }
+	
+	        /**
+	         * @returns {Number}
+	         */
+	
+	    }, {
+	        key: 'calculatePageCount',
+	        value: function calculatePageCount() {
+	            var numberOfPages = Math.ceil(this.totalCount / this.itemsPerPage);
+	
+	            if (numberOfPages >= 20) {
+	                return 20;
+	            }
+	
+	            return numberOfPages;
+	        }
+	    }, {
+	        key: 'maxPage',
+	        get: function get() {
+	            return this._maxPage;
+	        }
+	
+	        /**
+	         * @param {Number} pages
+	         */
+	        ,
+	        set: function set(pages) {
+	            this._maxPage = pages;
+	        }
+	
+	        /**
+	         * @returns {Object|Zepto}
+	         */
+	
+	    }, {
+	        key: 'previousButton',
+	        get: function get() {
+	            var li = this.prototypeLi.clone(),
+	                a = this.prototypeA.clone(),
+	                icon = this.prototypeIcon.clone();
+	
+	            li.addClass('previous-page');
+	            a.attr('href', this.getPageUrl(this.activePage - 1));
+	            a.text(' Previous');
+	            icon.attr('type', 'arrow');
+	
+	            if (1 === this.activePage) a.addClass('disabled');
+	
+	            return li.append(a.prepend(icon));
+	        }
+	
+	        /**
+	         * @returns {Object|Zepto}
+	         */
+	
+	    }, {
+	        key: 'nextButton',
+	        get: function get() {
+	            var li = this.prototypeLi.clone(),
+	                a = this.prototypeA.clone(),
+	                icon = this.prototypeIcon.clone();
+	
+	            li.addClass('next-page');
+	            a.attr('href', this.getPageUrl(this.activePage + 1));
+	            a.text('Next ');
+	            icon.attr('type', 'arrow');
+	
+	            if (this.maxPage === this.activePage) a.addClass('disabled');
+	
+	            return li.append(a.append(icon));
+	        }
+	    }, {
+	        key: 'infoPage',
+	        get: function get() {
+	            return this.prototypeLi.clone().addClass('info-page').append(this.prototypeA.clone().addClass('disabled').attr('href', 'javascript:void(0)').text(this.activePage + ' / ' + this.maxPage));
+	        }
+	    }]);
+	
+	    return Pager;
+	}();
+	
+	module.exports = Pager;
+
+/***/ },
+/* 16 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4149,7 +4563,7 @@
 	//# sourceMappingURL=showcar-icons.min.js.map
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4230,7 +4644,7 @@
 	}
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4541,7 +4955,7 @@
 	});
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4556,7 +4970,7 @@
 	};
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4565,8 +4979,7 @@
 	    function handleStickies() {
 	        var scrollPos = $(window).scrollTop();
 	
-	        var stickyButtons = $('[data-sticky]');
-	        Array.prototype.forEach.call(stickyButtons, function (stickyButton) {
+	        Array.prototype.forEach.call($('[data-sticky]'), function (stickyButton) {
 	            var stickyEl = $(stickyButton);
 	            var id = stickyEl.attr('data-sticky');
 	            var undockEl = $('[data-sticky-undock="' + id + '"]');
@@ -4622,7 +5035,7 @@
 	};
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4646,7 +5059,7 @@
 	};
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4655,6 +5068,7 @@
 	    if (duration < 0) {
 	        return;
 	    }
+	
 	    var difference = to - $(window).scrollTop();
 	    var perTick = difference / duration * 10;
 	    $(this).scrollToTimerCache = setTimeout(function () {
@@ -4662,7 +5076,7 @@
 	            window.scrollTo(0, $(window).scrollTop() + perTick);
 	            smoothScroll(el, to, duration - 10);
 	        }
-	    }.bind(this), 10);
+	    }, 10);
 	}
 	
 	Zepto(function ($) {
@@ -4682,7 +5096,7 @@
 	});
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports) {
 
 	'use strict';
