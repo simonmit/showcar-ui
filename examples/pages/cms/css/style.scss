@@ -5,10 +5,17 @@ body {
   background-color: $black-20;
 }
 
+.cs-telekom-bar {
+    height: $XL;
+    border-bottom: 1px solid $black-30;
+    text-align: right;
+    as24-icon {
+        height: $XL - 1px;
+    }
+}
+
 .sc-content-container {
   background-color: $white;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
 }
 
 *[class^=sc-grid-col] {
@@ -16,19 +23,17 @@ body {
 }
 
 .sc-stripe {
-  background-color: $orange-40;
+  background-color: $black-20;
   margin-left: -$gutter-width;
   margin-right: -$gutter-width;
   padding-left: $gutter-width;
   padding-right: $gutter-width;
   margin-top: $gutter-width;
   padding-bottom: $gutter-width;
-  text-align: center;
   @include clearfix();
-}
-
-.sc-stripe-transparent {
-  background-color: transparent;
+  &.orange {
+      background-color: $orange-50;
+  }
 }
 
 .sc-card {
