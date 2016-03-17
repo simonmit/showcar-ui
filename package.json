@@ -37,6 +37,7 @@
     "selenium-standalone": "^5.0.0",
     "wdio-dot-reporter": "0.0.5",
     "wdio-mocha-framework": "^0.2.11",
+    "wdio-spec-reporter": "git+https://github.com/sjeedandi/wdio-spec-reporter.git",
     "webdriverio": "^4.0.3",
     "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1"
