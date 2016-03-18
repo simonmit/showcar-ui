@@ -151,7 +151,7 @@ class Pager {
         let tiles = [activePage];
         let usefulTiles = 0;
 
-        while (leftNumber > 0 || rightNumber <= this.maxPage) {
+        while ((leftNumber > 0 || rightNumber <= this.maxPage) && maxPossibleTiles > 0) {
 
             if (leftNumber > 0) {
                 tiles.unshift(leftNumber);
@@ -175,19 +175,27 @@ class Pager {
             rightNumber++;
         }
 
+        // show dots on the left ( < 1 ... 7 8 9)
         if (1 !== tiles[0]) {
             tiles[0] = 1;
             tiles[1] = this.ETC;
             usefulTiles -= 1;
         }
 
-        if (this.maxPage !== tiles[tiles.length -1]) {
+        // show dots on the right ( 10 11 ... 20 >)
+        if (this.maxPage !== tiles[tiles.length - 1]) {
             tiles[tiles.length -1] = this.maxPage;
             tiles[tiles.length -2] = this.ETC;
             usefulTiles -= 1;
         }
 
-        if (usefulTiles <= 3) {
+        // special case for having a maximum of 3 pages and enough space to show 'em all
+        if ((usefulTiles >= 2 && this.maxPage === 3)) {
+            return tiles;
+        }
+
+        // show only the infopage tile
+        if ((usefulTiles <= 2 || this.maxPage <= 2) || (usefulTiles <= 3 && this.maxPage >= 7)) {
             return [];
         }
 
