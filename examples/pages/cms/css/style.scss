@@ -1,43 +1,26 @@
 @import "../../../../src/scss/variables.scss";
 @import "../../../../src/scss/mixins/utils.scss";
 
-body {
-  background-color: $black-20;
-}
-
-.cs-telekom-bar {
-    height: $XL;
-    border-bottom: 1px solid $black-30;
-    text-align: right;
-    as24-icon {
-        height: $XL - 1px;
-    }
-}
-
-.sc-content-container {
-  background-color: $white;
-}
-
 *[class^=sc-grid-col] {
   margin-top: $gutter-width;
 }
 
-.sc-stripe {
-  background-color: $black-20;
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-  margin-top: $gutter-width;
-  padding-bottom: $gutter-width;
-  @include clearfix();
-  &.orange {
-      background-color: $orange-50;
-  }
-}
+//.sc-stripe {
+//  background-color: $black-20;
+//  margin-left: -$gutter-width;
+//  margin-right: -$gutter-width;
+//  padding-left: $gutter-width;
+//  padding-right: $gutter-width;
+//  margin-top: $gutter-width;
+//  padding-bottom: $gutter-width;
+//  @include clearfix();
+//  &.orange {
+//    background-color: $orange-50;
+//  }
+//}
 
 .sc-card {
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid $black-30;
   padding-bottom: $gutter-width;
   text-align: center;
   height: 100%;

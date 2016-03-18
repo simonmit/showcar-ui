@@ -56,32 +56,19 @@
 	    window.console.warn(msg);
 	};
 	
-	var FontFaceObserver = __webpack_require__(10);
-	var observer = new FontFaceObserver('Source Sans Pro');
+	window.Storage = __webpack_require__(10);
+	window.Pager = __webpack_require__(14);
 	
-	try {
-	    observer.check().then(function () {
-	        $('body').addClass('font-loaded');
-	    }, function () {
-	        warn('Cannot load font.');
-	    });
-	} catch (e) {
-	    warn('Failed to use FontFaceObserver', e);
-	}
-	
-	window.Storage = __webpack_require__(11);
-	window.Pager = __webpack_require__(15);
-	
+	__webpack_require__(15);
 	__webpack_require__(16);
 	__webpack_require__(17);
-	__webpack_require__(18);
+	__webpack_require__(18)();
 	__webpack_require__(19)();
 	__webpack_require__(20)();
-	__webpack_require__(21)();
-	__webpack_require__(22);
+	__webpack_require__(21);
 	
 	if (!window.notification) {
-	    window.notification = __webpack_require__(23);
+	    window.notification = __webpack_require__(22);
 	} else {
 	    warn('window.notification is already registered.');
 	}
@@ -1197,7 +1184,7 @@
 		    regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
 		    regexTrailingCommas = /[,]+$/,
 		    regexNonNegativeInteger = /^\d+$/,
-		   
+	
 	
 		// ( Positive or negative or unsigned integers or decimals, without or without exponents.
 		// Must include at least one digit.
@@ -1551,12 +1538,12 @@
 			    currentDescriptor,
 			    state,
 			    c,
-			   
+	
 	
 			// 2. Let position be a pointer into input, initially pointing at the start
 			//    of the string.
 			pos = 0,
-			   
+	
 	
 			// 3. Let candidates be an initially empty source set.
 			candidates = [];
@@ -1572,7 +1559,7 @@
 	
 				// 9. Descriptor parser: Let error be no.
 				var pError = false,
-				   
+	
 	
 				// 10. Let width be absent.
 				// 11. Let density be absent.
@@ -2803,7 +2790,7 @@
 	      } else r = u;return r;
 	    };
 	  }, j = function j(e) {
-	    "query" in e || (e.query = A.query), "queryAll" in e || (e.queryAll = A.queryAll);
+	    ("query" in e) || (e.query = A.query), ("queryAll" in e) || (e.queryAll = A.queryAll);
 	  }, F = ["matches", A.matchesSelector || A.webkitMatchesSelector || A.khtmlMatchesSelector || A.mozMatchesSelector || A.msMatchesSelector || A.oMatchesSelector || function (t) {
 	    var n = this.parentNode;return !!n && -1 < h.call(n.querySelectorAll(t), this);
 	  }, "closest", function (t) {
@@ -3672,96 +3659,6 @@
 
 /***/ },
 /* 10 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	(function () {
-	  var k = !!document.addEventListener;function l(a, b) {
-	    k ? a.addEventListener("scroll", b, !1) : a.attachEvent("scroll", b);
-	  }function v(a) {
-	    document.body ? a() : k ? document.addEventListener("DOMContentLoaded", a) : document.onreadystatechange = function () {
-	      "interactive" == document.readyState && a();
-	    };
-	  };function w(a) {
-	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.f = document.createElement("span");this.g = -1;this.b.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	    this.f.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c);
-	  }
-	  function y(a, b) {
-	    a.a.style.cssText = "max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
-	  }function z(a) {
-	    var b = a.a.offsetWidth,
-	        c = b + 100;a.f.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.g !== b ? (a.g = b, !0) : !1;
-	  }function A(a, b) {
-	    function c() {
-	      var a = m;z(a) && null !== a.a.parentNode && b(a.g);
-	    }var m = a;l(a.b, c);l(a.c, c);z(a);
-	  };function B(a, b) {
-	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
-	  }var C = null,
-	      D = null,
-	      H = !!window.FontFace;function I() {
-	    if (null === D) {
-	      var a = document.createElement("div");try {
-	        a.style.font = "condensed 100px sans-serif";
-	      } catch (b) {}D = "" !== a.style.font;
-	    }return D;
-	  }function J(a, b) {
-	    return [a.style, a.weight, I() ? a.stretch : "", "100px", b].join(" ");
-	  }
-	  B.prototype.a = function (a, b) {
-	    var c = this,
-	        m = a || "BESbswy",
-	        x = b || 3E3,
-	        E = new Date().getTime();return new Promise(function (a, b) {
-	      if (H) {
-	        var K = new Promise(function (a, b) {
-	          function e() {
-	            new Date().getTime() - E >= x ? b() : document.fonts.load(J(c, c.family), m).then(function (c) {
-	              1 <= c.length ? a() : setTimeout(e, 25);
-	            }, function () {
-	              b();
-	            });
-	          }e();
-	        }),
-	            L = new Promise(function (a, c) {
-	          setTimeout(c, x);
-	        });Promise.race([L, K]).then(function () {
-	          a(c);
-	        }, function () {
-	          b(c);
-	        });
-	      } else v(function () {
-	        function q() {
-	          var b;if (b = -1 != f && -1 != g || -1 != f && -1 != h || -1 != g && -1 != h) (b = f != g && f != h && g != h) || (null === C && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), C = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = C && (f == r && g == r && h == r || f == t && g == t && h == t || f == u && g == u && h == u)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(G), a(c));
-	        }function F() {
-	          if (new Date().getTime() - E >= x) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
-	            var a = document.hidden;if (!0 === a || void 0 === a) f = e.a.offsetWidth, g = n.a.offsetWidth, h = p.a.offsetWidth, q();G = setTimeout(F, 50);
-	          }
-	        }var e = new w(m),
-	            n = new w(m),
-	            p = new w(m),
-	            f = -1,
-	            g = -1,
-	            h = -1,
-	            r = -1,
-	            t = -1,
-	            u = -1,
-	            d = document.createElement("div"),
-	            G = 0;d.dir = "ltr";y(e, J(c, "sans-serif"));y(n, J(c, "serif"));y(p, J(c, "monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);r = e.a.offsetWidth;t = n.a.offsetWidth;u = p.a.offsetWidth;F();A(e, function (a) {
-	          f = a;q();
-	        });y(e, J(c, '"' + c.family + '",sans-serif'));A(n, function (a) {
-	          g = a;q();
-	        });y(n, J(c, '"' + c.family + '",serif'));A(p, function (a) {
-	          h = a;q();
-	        });y(p, J(c, '"' + c.family + '",monospace'));
-	      });
-	    });
-	  };window.FontFaceObserver = B;window.FontFaceObserver.prototype.check = B.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
-	})();
-
-/***/ },
-/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3771,9 +3668,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var stores = {
-	    local: __webpack_require__(12),
-	    session: __webpack_require__(13),
-	    cookie: __webpack_require__(14)
+	    local: __webpack_require__(11),
+	    session: __webpack_require__(12),
+	    cookie: __webpack_require__(13)
 	};
 	
 	var Storage = function () {
@@ -3806,6 +3703,7 @@
 	     * @throws {Error} If not silent
 	     * @returns {string} The stored value or defaultValue
 	     */
+	
 	
 	    _createClass(Storage, [{
 	        key: 'get',
@@ -3906,7 +3804,7 @@
 	module.exports = Storage;
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3946,7 +3844,7 @@
 	}();
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3986,7 +3884,7 @@
 	}();
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4025,6 +3923,7 @@
 	            var _ref$path = _ref.path;
 	            var path = _ref$path === undefined ? "/" : _ref$path;
 	
+	
 	            // support expires in seconds
 	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
 	                expires = new Date(Date.now() + parseInt(expires) * 1000).toUTCString();
@@ -4060,7 +3959,7 @@
 	}();
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4101,8 +4000,10 @@
 	     * @returns {Number}
 	     */
 	
+	
 	    _createClass(Pager, [{
 	        key: 'getPageUrl',
+	
 	
 	        /**
 	         * @param {Number} pageNumber
@@ -4290,7 +4191,7 @@
 	module.exports = Pager;
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4474,7 +4375,7 @@
 	//# sourceMappingURL=showcar-icons.min.js.map
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4555,7 +4456,7 @@
 	}
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4629,6 +4530,7 @@
 	     * @event Navigation#onKeyDown
 	     * @event Navigation#onKeyUp
 	     */
+	
 	
 	    _createClass(Navigation, [{
 	        key: 'initEvents',
@@ -4866,7 +4768,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4881,7 +4783,7 @@
 	};
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4946,7 +4848,7 @@
 	};
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4970,7 +4872,7 @@
 	};
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5007,7 +4909,7 @@
 	});
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';
