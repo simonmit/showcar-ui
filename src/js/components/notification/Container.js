@@ -10,6 +10,7 @@ class Container {
         this.notifications = [];
 
         this.updatePosition();
+        this.observeTargetHeight();
 
         $(document).on('scroll', this.onScroll.bind(this));
     }
@@ -99,8 +100,20 @@ class Container {
     }
 
     onScroll() {
-        // TODO: Trigger updatePosition, if a child as24-notification node contains the class show
-        this.updatePosition();
+        if ($('.show', this.element).length > 0) {
+            this.updatePosition();
+        }
+    }
+
+    observeTargetHeight() {
+        let targetElement      = document.querySelector(this.target);
+        let observeContainer   = this.createElement('div', targetElement, '', ['sc-notification-observe-item']);
+        let observeExpand      = this.createElement('div', observeContainer, '', ['sc-notification-observe-item']);
+        let observeExpandChild = this.createElement('div', observeExpand, '', ['observe-item-child']);
+        let observeShrink      = this.createElement('div', observeContainer, '', ['sc-notification-observe-item']);
+        let observeShrinkChild = this.createElement('div', observeExpand, '', ['observe-item-child']);
+
+        observeExpand.addEventListener('scroll', );
     }
 
 }

@@ -65,3 +65,21 @@ as24-notification {
   position: absolute;
   width: 100%;
 }
+
+.sc-notification-observe-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  z-index: -1;
+  visibility: hidden;
+
+  > .observe-item-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+}
