@@ -13,62 +13,72 @@
 
 <div class="sc-content-container">
     <h2>ShowCar UI Library Examples - Intelligent Pagination</h2>
+
     <div class="sc-pagination"></div>
 </div>
 
 <script src="../../../dist/showcar-ui.min.js"></script>
 <script>
-(function ($) {
+    (function ($) {
 
-    function parseURL(url) {
-        var parser = document.createElement('a'),
-            searchObject = {},
-            queries, split, i;
+        let isIE = function () {
+            return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
+        };
 
-        parser.href = url;
-        queries = parser.search.replace(/^\?/, '').split('&');
-        for( i = 0; i < queries.length; i++ ) {
-            split = queries[i].split('=');
-            searchObject[split[0]] = split[1];
+        function parseURL(url) {
+            var parser = document.createElement('a'),
+                    searchObject = {},
+                    queries, split, i;
+
+            parser.href = url;
+            queries = parser.search.replace(/^\?/, '').split('&');
+            for (i = 0; i < queries.length; i++) {
+                split = queries[i].split('=');
+                searchObject[split[0]] = split[1];
+            }
+
+            return {
+                protocol: parser.protocol,
+                host: parser.host,
+                hostname: parser.hostname,
+                port: parser.port,
+                pathname: parser.pathname,
+                search: parser.search,
+                searchObject: searchObject,
+                hash: parser.hash
+            };
         }
 
-        return {
-            protocol: parser.protocol,
-            host: parser.host,
-            hostname: parser.hostname,
-            port: parser.port,
-            pathname: parser.pathname,
-            search: parser.search,
-            searchObject: searchObject,
-            hash: parser.hash
-        };
-    }
+        let slash = '';
 
+        if (isIE()) {
+            slash = '/';
+        }
 
-    let page = 1, size = 20, totalCount = 800, urlTemplate;
-    let url = parseURL(window.location.href);
-    let host = url.protocol + '//' + url.host + url.pathname;
-    let qs = url.searchObject;
-    let paginationElement = document.querySelector('.sc-pagination');
+        let page = 1, size = 20, totalCount = 800, urlTemplate;
+        let url = parseURL(document.URL);
+        let host = url.protocol + '//' + url.host + slash + url.pathname;
+        let qs = url.searchObject;
+        let paginationElement = document.querySelector('.sc-pagination');
 
-    if (typeof qs.page != 'undefined') {
-        page = qs.page;
-    }
+        if (typeof qs.page != 'undefined') {
+            page = qs.page;
+        }
 
-    if (typeof qs.size != 'undefined') {
-        size = qs.size;
-    }
+        if (typeof qs.size != 'undefined') {
+            size = qs.size;
+        }
 
-    if (typeof qs.totalCount != 'undefined') {
-        totalCount = qs.totalCount;
-    }
+        if (typeof qs.totalCount != 'undefined') {
+            totalCount = qs.totalCount;
+        }
 
-    urlTemplate = host + "?page={page}&size={size}&totalCount=" + totalCount;
+        urlTemplate = host + "?page={page}&size={size}&totalCount=" + totalCount;
 
-    if (paginationElement) {
-        new Pager(paginationElement, size, page, totalCount, urlTemplate);
-    }
-})(window.Zepto);
+        if (paginationElement) {
+            new Pager(paginationElement, size, page, totalCount, urlTemplate);
+        }
+    })(window.Zepto);
 </script>
 </body>
 </html>
