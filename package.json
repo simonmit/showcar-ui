@@ -29,6 +29,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-pleeease": "^1.4.0",
     "grunt-sass": "^1.1.0",
+    "grunt-selenium-standalone": "git+https://github.com/JSMike/grunt-selenium-standalone.git",
+    "grunt-webdriver": "^1.0.0",
     "grunt-webpack": "^1.0.11",
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",

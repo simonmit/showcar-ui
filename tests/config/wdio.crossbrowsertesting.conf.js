@@ -52,7 +52,7 @@ exports.config = {
         screen_resolution : '1024x768',
         record_video : "true",
         record_network : "true",
-        browserName : "internet explorer", // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
+        browserName : "internet explorer" // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
     }, {
         name : 'webdriverio test chrome48',
 
@@ -63,7 +63,7 @@ exports.config = {
         record_video : "true",
         record_network : "true",
 
-        browserName : "chrome", // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
+        browserName : "chrome" // <---- this needs to be the browser type in lower case: firefox, internet explorer, chrome, opera, or safari
     }],
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
