@@ -145,11 +145,21 @@ class Pager {
      * @returns {Array}
      */
     getPageTiles(activePage) {
-        let leftNumber = activePage - 1;
-        let rightNumber = activePage + 1;
-        let maxPossibleTiles = this.getMaximumPossibleTiles();
+        let leftNumber = activePage - 1,
+            rightNumber = activePage + 1,
+            maxPossibleTiles = this.getMaximumPossibleTiles(),
+            usefulTiles = 0,
+            countEtc = 0;
+
+        // we always want to have an odd number of tiles to show
+        if (maxPossibleTiles % 2 === 0 && this.maxPage > maxPossibleTiles) {
+            maxPossibleTiles--;
+        }
+
         let tiles = [activePage];
-        let usefulTiles = 0;
+
+        // because we have our activePage, we have one possible tile less
+        maxPossibleTiles--;
 
         while ((leftNumber > 0 || rightNumber <= this.maxPage) && maxPossibleTiles > 0) {
 
@@ -175,27 +185,43 @@ class Pager {
             rightNumber++;
         }
 
+        // special case: we have enough space to show 'em all
+        if (tiles.length === this.maxPage) {
+            console.log('fam');
+            return tiles;
+        }
+
+        // special case: If we have less or equal to 7 pages/tiles in total, we show all or infopage
+        if (this.maxPage <= 7 && tiles.length < this.maxPage) {
+            console.log('fim');
+            return [];
+        }
+
         // show dots on the left ( < 1 ... 7 8 9)
         if (1 !== tiles[0]) {
             tiles[0] = 1;
             tiles[1] = this.ETC;
+            countEtc++;
             usefulTiles -= 1;
         }
 
         // show dots on the right ( 10 11 ... 20 >)
         if (this.maxPage !== tiles[tiles.length - 1]) {
-            tiles[tiles.length -1] = this.maxPage;
-            tiles[tiles.length -2] = this.ETC;
+            tiles[tiles.length - 1] = this.maxPage;
+            tiles[tiles.length - 2] = this.ETC;
+            countEtc++;
             usefulTiles -= 1;
         }
 
-        // special case for having a maximum of 3 pages and enough space to show 'em all
-        if ((usefulTiles >= 2 && this.maxPage === 3)) {
-            return tiles;
+        // special case: show info page if less than 3 useful tiles
+        if (countEtc >= 1 && usefulTiles <= 3) {
+            console.log('fum');
+            return [];
         }
 
-        // show only the infopage tile
-        if ((usefulTiles <= 2 || this.maxPage <= 2) || (usefulTiles <= 3 && this.maxPage >= 7)) {
+        // show only the info page tile
+        if (usefulTiles <= 2 || this.maxPage <= 3) {
+            console.log('fem');
             return [];
         }
 
