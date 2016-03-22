@@ -18,14 +18,11 @@ html {
 }
 
 body, &[data-showcar-ui] {
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   line-height: 1.382;
   color: $black-100;
   -webkit-overflow-scrolling: touch;
-  &.font-loaded {
-    font-family: Source Sans Pro, sans-serif;
-  }
 }
 
 
