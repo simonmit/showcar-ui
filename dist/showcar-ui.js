@@ -56,32 +56,19 @@
 	    window.console.warn(msg);
 	};
 	
-	var FontFaceObserver = __webpack_require__(10);
-	var observer = new FontFaceObserver('Source Sans Pro');
+	window.Storage = __webpack_require__(10);
+	window.Pager = __webpack_require__(14);
 	
-	try {
-	    observer.check().then(function () {
-	        $('body').addClass('font-loaded');
-	    }, function () {
-	        warn('Cannot load font.');
-	    });
-	} catch (e) {
-	    warn('Failed to use FontFaceObserver', e);
-	}
-	
-	window.Storage = __webpack_require__(11);
-	window.Pager = __webpack_require__(15);
-	
+	__webpack_require__(15);
 	__webpack_require__(16);
 	__webpack_require__(17);
-	__webpack_require__(18);
+	__webpack_require__(18)();
 	__webpack_require__(19)();
 	__webpack_require__(20)();
-	__webpack_require__(21)();
-	__webpack_require__(22);
+	__webpack_require__(21);
 	
 	if (!window.notification) {
-	    window.notification = __webpack_require__(23);
+	    window.notification = __webpack_require__(22);
 	} else {
 	    warn('window.notification is already registered.');
 	}
@@ -3580,96 +3567,6 @@
 
 /***/ },
 /* 10 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	(function () {
-	  var k = !!document.addEventListener;function l(a, b) {
-	    k ? a.addEventListener("scroll", b, !1) : a.attachEvent("scroll", b);
-	  }function v(a) {
-	    document.body ? a() : k ? document.addEventListener("DOMContentLoaded", a) : document.onreadystatechange = function () {
-	      "interactive" == document.readyState && a();
-	    };
-	  };function w(a) {
-	    this.a = document.createElement("div");this.a.setAttribute("aria-hidden", "true");this.a.appendChild(document.createTextNode(a));this.b = document.createElement("span");this.c = document.createElement("span");this.h = document.createElement("span");this.f = document.createElement("span");this.g = -1;this.b.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	    this.f.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c);
-	  }
-	  function y(a, b) {
-	    a.a.style.cssText = "max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:" + b + ";";
-	  }function z(a) {
-	    var b = a.a.offsetWidth,
-	        c = b + 100;a.f.style.width = c + "px";a.c.scrollLeft = c;a.b.scrollLeft = a.b.scrollWidth + 100;return a.g !== b ? (a.g = b, !0) : !1;
-	  }function A(a, b) {
-	    function c() {
-	      var a = m;z(a) && null !== a.a.parentNode && b(a.g);
-	    }var m = a;l(a.b, c);l(a.c, c);z(a);
-	  };function B(a, b) {
-	    var c = b || {};this.family = a;this.style = c.style || "normal";this.weight = c.weight || "normal";this.stretch = c.stretch || "normal";
-	  }var C = null,
-	      D = null,
-	      H = !!window.FontFace;function I() {
-	    if (null === D) {
-	      var a = document.createElement("div");try {
-	        a.style.font = "condensed 100px sans-serif";
-	      } catch (b) {}D = "" !== a.style.font;
-	    }return D;
-	  }function J(a, b) {
-	    return [a.style, a.weight, I() ? a.stretch : "", "100px", b].join(" ");
-	  }
-	  B.prototype.a = function (a, b) {
-	    var c = this,
-	        m = a || "BESbswy",
-	        x = b || 3E3,
-	        E = new Date().getTime();return new Promise(function (a, b) {
-	      if (H) {
-	        var K = new Promise(function (a, b) {
-	          function e() {
-	            new Date().getTime() - E >= x ? b() : document.fonts.load(J(c, c.family), m).then(function (c) {
-	              1 <= c.length ? a() : setTimeout(e, 25);
-	            }, function () {
-	              b();
-	            });
-	          }e();
-	        }),
-	            L = new Promise(function (a, c) {
-	          setTimeout(c, x);
-	        });Promise.race([L, K]).then(function () {
-	          a(c);
-	        }, function () {
-	          b(c);
-	        });
-	      } else v(function () {
-	        function q() {
-	          var b;if (b = -1 != f && -1 != g || -1 != f && -1 != h || -1 != g && -1 != h) (b = f != g && f != h && g != h) || (null === C && (b = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), C = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10))), b = C && (f == r && g == r && h == r || f == t && g == t && h == t || f == u && g == u && h == u)), b = !b;b && (null !== d.parentNode && d.parentNode.removeChild(d), clearTimeout(G), a(c));
-	        }function F() {
-	          if (new Date().getTime() - E >= x) null !== d.parentNode && d.parentNode.removeChild(d), b(c);else {
-	            var a = document.hidden;if (!0 === a || void 0 === a) f = e.a.offsetWidth, g = n.a.offsetWidth, h = p.a.offsetWidth, q();G = setTimeout(F, 50);
-	          }
-	        }var e = new w(m),
-	            n = new w(m),
-	            p = new w(m),
-	            f = -1,
-	            g = -1,
-	            h = -1,
-	            r = -1,
-	            t = -1,
-	            u = -1,
-	            d = document.createElement("div"),
-	            G = 0;d.dir = "ltr";y(e, J(c, "sans-serif"));y(n, J(c, "serif"));y(p, J(c, "monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);r = e.a.offsetWidth;t = n.a.offsetWidth;u = p.a.offsetWidth;F();A(e, function (a) {
-	          f = a;q();
-	        });y(e, J(c, '"' + c.family + '",sans-serif'));A(n, function (a) {
-	          g = a;q();
-	        });y(n, J(c, '"' + c.family + '",serif'));A(p, function (a) {
-	          h = a;q();
-	        });y(p, J(c, '"' + c.family + '",monospace'));
-	      });
-	    });
-	  };window.FontFaceObserver = B;window.FontFaceObserver.prototype.check = B.prototype.a;"undefined" !== typeof module && (module.exports = window.FontFaceObserver);
-	})();
-
-/***/ },
-/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3679,9 +3576,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var stores = {
-	    local: __webpack_require__(12),
-	    session: __webpack_require__(13),
-	    cookie: __webpack_require__(14)
+	    local: __webpack_require__(11),
+	    session: __webpack_require__(12),
+	    cookie: __webpack_require__(13)
 	};
 	
 	var Storage = (function () {
@@ -3814,7 +3711,7 @@
 	module.exports = Storage;
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3854,7 +3751,7 @@
 	})();
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3894,7 +3791,7 @@
 	})();
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3968,7 +3865,7 @@
 	})();
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3992,15 +3889,18 @@
 	
 	        this.ETC = '...';
 	        this.rootElement = $(root);
-	        this.itemsPerPage = itemsPerPage;
-	        this.activePage = activePage;
-	        this.totalCount = totalItems;
+	        this.itemsPerPage = parseInt(itemsPerPage);
+	        this.activePage = parseInt(activePage);
+	        this.totalCount = parseInt(totalItems);
 	        this.urlTemplate = urlTemplate;
 	        this.maxPage = this.calculatePageCount();
+	        this.tileWidth = 48;
 	
 	        this.prototypeLi = $('<li>');
 	        this.prototypeA = $('<a>');
 	        this.prototypeIcon = $('<as24-icon>');
+	
+	        $(window).on('resize', $.proxy(this.render, this));
 	
 	        this.render();
 	    }
@@ -4050,7 +3950,24 @@
 	        }
 	
 	        /**
-	         * Returns a array with all page numbers in the correct order
+	         * Returns the maximum possible amount ot tiles between <PREV> and <NEXT>
+	         *
+	         * @returns {int}
+	         */
+	
+	    }, {
+	        key: 'getMaximumPossibleTiles',
+	        value: function getMaximumPossibleTiles() {
+	            var rootWidth = this.rootElement.width();
+	
+	            // We assume that this is the minWidth for both buttons
+	            var prevNextWidth = 200;
+	
+	            return Math.floor((rootWidth - prevNextWidth) / this.tileWidth);
+	        }
+	
+	        /**
+	         * Returns an array with all page numbers in the correct order
 	         *
 	         * Example:
 	         * activePage = 17
@@ -4064,32 +3981,87 @@
 	    }, {
 	        key: 'getPageTiles',
 	        value: function getPageTiles(activePage) {
-	            if (this.maxPage < 10) {
-	                return Array.from(new Array(this.maxPage), function (x, i) {
-	                    return i + 1;
-	                });
+	            var leftNumber = activePage - 1,
+	                rightNumber = activePage + 1,
+	                maxPossibleTiles = this.getMaximumPossibleTiles(),
+	                usefulTiles = 0,
+	                countEtc = 0;
+	
+	            // we always want to have an odd number of tiles to show
+	            if (maxPossibleTiles % 2 === 0 && this.maxPage > maxPossibleTiles) {
+	                maxPossibleTiles--;
 	            }
 	
-	            if (activePage < 6) {
-	                return Array.from(new Array(7), function (x, i) {
-	                    return i + 1;
-	                }).concat([this.ETC, this.maxPage]);
-	            }
-	            if (activePage > this.maxPage - 5) {
-	                return [1, this.ETC].concat(Array.from(new Array(this.maxPage), function (_, i) {
-	                    return i + 1;
-	                }).slice(this.maxPage - 7, this.maxPage));
+	            var tiles = [activePage];
+	
+	            // because we have our activePage, we have one possible tile less
+	            maxPossibleTiles--;
+	
+	            while ((leftNumber > 0 || rightNumber <= this.maxPage) && maxPossibleTiles > 0) {
+	
+	                if (leftNumber > 0) {
+	                    tiles.unshift(leftNumber);
+	                    usefulTiles++;
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                if (rightNumber <= this.maxPage) {
+	                    tiles.push(rightNumber);
+	                    usefulTiles++;
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                leftNumber--;
+	                rightNumber++;
 	            }
 	
-	            var leftTiles = [],
-	                rightTiles = [];
-	
-	            if (activePage > 5 && activePage < this.maxPage - 4) {
-	                leftTiles = [1, this.ETC, activePage - 2, activePage - 1];
-	                rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
+	            // special case: we have enough space to show 'em all
+	            if (tiles.length === this.maxPage) {
+	                console.log('fam');
+	                return tiles;
 	            }
 	
-	            return leftTiles.concat([activePage].concat(rightTiles));
+	            // special case: If we have less or equal to 7 pages/tiles in total, we show all or infopage
+	            if (this.maxPage <= 7 && tiles.length < this.maxPage) {
+	                console.log('fim');
+	                return [];
+	            }
+	
+	            // show dots on the left ( < 1 ... 7 8 9)
+	            if (1 !== tiles[0]) {
+	                tiles[0] = 1;
+	                tiles[1] = this.ETC;
+	                countEtc++;
+	                usefulTiles -= 1;
+	            }
+	
+	            // show dots on the right ( 10 11 ... 20 >)
+	            if (this.maxPage !== tiles[tiles.length - 1]) {
+	                tiles[tiles.length - 1] = this.maxPage;
+	                tiles[tiles.length - 2] = this.ETC;
+	                countEtc++;
+	                usefulTiles -= 1;
+	            }
+	
+	            // special case: show info page if less than 3 useful tiles
+	            if (countEtc >= 1 && usefulTiles <= 3) {
+	                console.log('fum');
+	                return [];
+	            }
+	
+	            // show only the info page tile
+	            if (usefulTiles <= 2 || this.maxPage <= 3) {
+	                console.log('fem');
+	                return [];
+	            }
+	
+	            return tiles;
 	        }
 	
 	        /**
@@ -4101,17 +4073,22 @@
 	        value: function render() {
 	            var _this = this;
 	
+	            this.rootElement.children().remove();
+	
 	            var pagination = this.getPageTiles(this.activePage),
 	                collection = $();
 	
 	            this.rootElement.append(this.previousButton);
-	            this.rootElement.append(this.infoPage);
 	
-	            pagination.forEach(function (page) {
-	                collection = collection.add(_this.createPage(page));
-	            });
+	            if (0 === pagination.length) {
+	                this.rootElement.append(this.infoPage);
+	            } else {
+	                pagination.forEach(function (page) {
+	                    collection = collection.add(_this.createPage(page));
+	                });
+	                this.rootElement.append(collection);
+	            }
 	
-	            this.rootElement.append(collection);
 	            this.rootElement.append(this.nextButton);
 	        }
 	
@@ -4198,38 +4175,38 @@
 	module.exports = Pager;
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
 	!(function (c) {
-	  function s(l) {
-	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
-	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
-	})([function (c, s, v) {
-	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
-	      t = {};l.forEach(function (c) {
-	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
+	  function s(v) {
+	    if (l[v]) return l[v].exports;var t = l[v] = { exports: {}, id: v, loaded: !1 };return c[v].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
+	  }var l = {};return s.m = c, s.c = l, s.p = "", s(0);
+	})([function (c, s, l) {
+	  var v = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "car-valuation", "close", "contract", "counselor", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
+	      t = {};v.forEach(function (c) {
+	    t[c.toLowerCase()] = l(1)("./" + c + ".svg");
 	  });var h = Object.create(HTMLElement.prototype);h.createdCallback = function () {
 	    this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()];
-	  }, h.attributeChangedCallback = function (c, s, v) {
+	  }, h.attributeChangedCallback = function (c, s, l) {
 	    "type" === c && (this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()]);
 	  };try {
 	    document.registerElement("as24-icon", { prototype: h });
-	  } catch (e) {
-	    window && window.console && window.console.warn('Failed to register CustomElement "as24-icon".', e);
-	  }window.showcarIconNames = l;
-	}, function (c, s, v) {
-	  function l(c) {
-	    return v(t(c));
+	  } catch (o) {
+	    window && window.console && window.console.warn('Failed to register CustomElement "as24-icon".', o);
+	  }window.showcarIconNames = v;
+	}, function (c, s, l) {
+	  function v(c) {
+	    return l(t(c));
 	  }function t(c) {
 	    return h[c] || (function () {
 	      throw new Error("Cannot find module '" + c + "'.");
 	    })();
-	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./navigation/car.svg": 58, "./navigation/caravan.svg": 59, "./navigation/motocycle.svg": 60, "./navigation/truck.svg": 61, "./phone.svg": 62, "./pin.svg": 63, "./pinCar.svg": 64, "./pinMoto.svg": 65, "./pinterest.svg": 66, "./search.svg": 67, "./sharing.svg": 68, "./star-half.svg": 69, "./star.svg": 70, "./t-online.svg": 71, "./tip.svg": 72, "./twitter.svg": 73, "./whatsapp.svg": 74, "./youtube.svg": 75 };l.keys = function () {
+	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./car-valuation.svg": 27, "./close.svg": 28, "./contract.svg": 29, "./counselor.svg": 30, "./delete.svg": 31, "./edit.svg": 32, "./emission-badge-2.svg": 33, "./emission-badge-3.svg": 34, "./emission-badge-4.svg": 35, "./facebook.svg": 36, "./finance24.svg": 37, "./flag/at.svg": 38, "./flag/be.svg": 39, "./flag/de.svg": 40, "./flag/es.svg": 41, "./flag/fr.svg": 42, "./flag/it.svg": 43, "./flag/lu.svg": 44, "./flag/nl.svg": 45, "./flag/pl.svg": 46, "./googleplus.svg": 47, "./heart.svg": 48, "./hook.svg": 49, "./immo24.svg": 50, "./info.svg": 51, "./ios.svg": 52, "./lifestyle/familycar.svg": 53, "./lifestyle/firstcar.svg": 54, "./lifestyle/fourxfour.svg": 55, "./lifestyle/fuelsaver.svg": 56, "./lifestyle/luxury.svg": 57, "./lifestyle/roadster-l.svg": 58, "./location.svg": 59, "./mail.svg": 60, "./navigation/car.svg": 61, "./navigation/caravan.svg": 62, "./navigation/motocycle.svg": 63, "./navigation/truck.svg": 64, "./phone.svg": 65, "./pin.svg": 66, "./pinCar.svg": 67, "./pinMoto.svg": 68, "./pinterest.svg": 69, "./search.svg": 70, "./sharing.svg": 71, "./star-half.svg": 72, "./star.svg": 73, "./t-online.svg": 74, "./tip.svg": 75, "./twitter.svg": 76, "./whatsapp.svg": 77, "./youtube.svg": 78 };v.keys = function () {
 	    return Object.keys(h);
-	  }, l.resolve = t, c.exports = l, l.id = 1;
+	  }, v.resolve = t, c.exports = v, v.id = 1;
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22"><path d="M6.2 1.7h.1c.1 0 .1-.1.1-.1L5.4 0h-.1c-.1 0-.1.1-.1.1l1 1.6zM11.7 1.7h-.1c-.1 0-.1-.1-.1-.1L12.6 0h.1c.1 0 .1.1.1.1l-1.1 1.6zM9 2.7C3.3 2.7 3 8 3 8h12s-.4-5.3-6-5.3zM6.4 6.4c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zm5.1 0c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zM2 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM18 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM7 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6zM12 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6z"/><path d="M15 17c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v7z"/></svg>';
 	}, function (c, s) {
@@ -4281,7 +4258,13 @@
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 60"><path d="M69.2 27c1.1 0 2.8 1.6 2.8 2.7v15.2c0 1-1.9 3.2-3 3.2h-3.5c-1 0-2.5 1-2.5 2v4l-5.7-5c-.4-.4-.8-1-1.3-1H43c-1 0-2-3-2-4h-4c0 3.1 2.6 7 5.7 7H55l9.5 8.4c.4.4.8.6 1.3.6.2 0 .2.1.2-.1v-8.9h3c3.1 0 6-3 6-6.2V29.7c0-3.1-2.6-5.7-5.7-5.7H59v3h10.2z" fill-rule="evenodd" clip-rule="evenodd" fill="#C4C4C4"/><path d="M48.2 37H26l-1.2.9L13 50V39l-2-2H7.5C5.4 37 4 35.8 4 33.7V7.5C4 5.4 5.4 4 7.5 4h41.1c2 0 3.4 1.4 3.4 3.5v26.1c0 2.1-1.4 3.4-3.5 3.4h-.3zm0-37H7.5C3.4 0 0 3.3 0 7.5v26.1c0 4.1 3.4 7.5 7.5 7.5L9 41v13l3.3 2 14.4-15h21.8c4.1 0 7.5-3.3 7.5-7.4V7.5C56 3.3 52.6 0 48.5 0h-.3z" fill-rule="evenodd" clip-rule="evenodd" fill="#C4C4C4"/><path fill="#FF7500" d="M10 9h34v4H10z"/><path fill="#C4C4C4" d="M10 27h22v4H10zM10 18h34v4H10z"/></svg>';
 	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="none" d="M25.236 27.96h7.383v2.218h-7.384z"/><circle fill="none" cx="36.31" cy="26.486" r="1.66"/><path fill="#949494" d="M37.715 20.562c-.893-1.58-2.104-2.934-3.908-2.934h-3.5c-.165.506-.362.997-.582 1.476h4.082c.73 0 1.275.073 2.24 1.778.1.18.636 1.18 1.1 2.65h-10.63c-1.017.942-2.17 1.73-3.43 2.34.076.19.12.397.12.613 0 .918-.742 1.66-1.66 1.66-.753 0-1.38-.502-1.585-1.19-.655.14-1.33.226-2.014.27-.056.504-.092 1.02-.092 1.55v3.617c0 .813.66 1.476 1.476 1.476h.738c.815 0 1.476-.662 1.476-1.476v-.738H36.31v.738c0 .813.66 1.476 1.477 1.476h.738c.815 0 1.476-.662 1.476-1.476v-3.617c0-3.86-1.646-7.08-2.285-8.213zm-5.096 9.616h-7.384V27.96h7.383v2.218zm3.69-2.032c-.917 0-1.66-.743-1.66-1.66 0-.918.743-1.66 1.66-1.66.916 0 1.662.742 1.662 1.66 0 .917-.746 1.66-1.662 1.66zM.33 35.834c-.68 1.18-.276 2.688.904 3.37 1.18.682 2.688.276 3.37-.903l6.833-11.836C9.9 25.81 8.507 24.884 7.3 23.76L.33 35.835z"/><path fill="#949494" d="M17.022.465C9.937.465 4.194 6.208 4.194 13.293S9.937 26.12 17.022 26.12c.37 0 .733-.024 1.095-.056.667-.056 1.317-.168 1.952-.323.76-.185 1.492-.433 2.192-.747.88-.394 1.7-.887 2.463-1.46 1.553-1.17 2.832-2.682 3.723-4.43.242-.475.452-.968.635-1.475.487-1.356.767-2.81.767-4.335C29.85 6.208 24.106.465 17.022.465zm3.753 22.907c-.67.25-1.372.435-2.098.548-.54.084-1.09.14-1.655.14-5.938 0-10.768-4.83-10.768-10.767s4.83-10.768 10.768-10.768S27.79 7.355 27.79 13.293c0 1.542-.332 3.007-.92 4.335-.227.515-.495 1.007-.797 1.476-1.25 1.94-3.105 3.45-5.298 4.268z"/><path fill="#FF7500" d="M19.816 9.208c-.292-.1-.57-.18-.828-.236-.26-.057-.607-.084-1.04-.084-.698 0-1.263.24-1.695.718-.43.48-.736 1.08-.914 1.797h4.025l-.264 1.4h-4.01l-.038.36c-.013.117-.02.23-.02.34v.35c0 .11.007.228.022.35H18.8l-.267 1.4h-3.308c.14 1.047.458 1.822.953 2.326.495.504 1.125.757 1.887.757.6 0 1.183-.114 1.756-.34v1.588c-.264.09-.565.155-.898.2-.333.045-.665.066-.993.066-.707 0-1.322-.113-1.846-.338-.523-.225-.967-.542-1.334-.946-.364-.407-.655-.893-.87-1.455-.213-.562-.365-1.18-.454-1.857h-1.55l.264-1.4h1.174c-.014-.123-.02-.24-.02-.35v-.35c0-.11.006-.224.02-.34.01-.116.025-.238.037-.36h-1.42l.265-1.4h1.344c.125-.516.3-1.017.528-1.504.228-.485.52-.915.88-1.286.358-.373.785-.67 1.277-.9.49-.227 1.072-.34 1.74-.34.44 0 .86.036 1.258.105.397.068.723.153.974.253l-.38 1.475z"/></svg>';
+	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.03 14.142L14.174 0l1.414 1.414L1.445 15.556z"/><path d="M1.415.03l14.142 14.143-1.415 1.414L0 1.445z"/></svg>';
+	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="#949494" d="M30 26.5v10.678c0 .548-.405.822-.954.822H3.154C2.604 38 2 37.726 2 37.178V3.318C2 2.77 2.604 2 3.154 2h25.892c.55 0 .954.77.954 1.32v12.09l2-2.008V3.32C32 1.67 30.693 0 29.046 0H3.154C1.507 0 0 1.672 0 3.32v33.858C0 38.825 1.507 40 3.154 40h25.892C30.693 40 32 38.825 32 37.178V24.495L30 26.5z"/><path fill="#949494" d="M39.704 12.857c-.603-.606-1.177-1.054-1.777-1.66-.602-.607-1.202 0-1.804.606l-12.7 12.806 3.005 3.032L39.13 14.834c.42-.422.856-.747.87-1.17.006-.182-.113-.622-.296-.807z"/><path fill="#FF7500" d="M19.883 30.604l.603.606 4.812-2.426-3.01-3.032"/><path fill="#949494" d="M6 8h20v2H6zM6 13h20v2H6zM6 18h17v2H6z"/><path fill="none" stroke="#FF7500" stroke-width="1.3" stroke-linejoin="round" stroke-miterlimit="10" d="M6.72 31.035s3.27-6.9 5.092-6.648c2.56.355-3.91 9.722-2.388 10.45 1.202.572 3.754-4.292 5.848-4.775.898-.208 1.78.57 1.78.57"/></svg>';
+	}, function (c, s) {
+	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="#949494" d="M36 36c0 2.207-1.792 4-4 4H8c-2.21 0-4-1.793-4-4V4c0-2.21 1.79-4 4-4h24c2.208 0 4 1.79 4 4v32zM34 4c0-1.105-.897-2-2-2H8c-1.105 0-2 .895-2 2v32c0 1.102.895 2 2 2h24c1.103 0 2-.898 2-2V4z"/><path fill="#949494" d="M10 6.998h20v2H10z"/><path fill="#FF7500" d="M10 12h20v2H10z"/><path fill="#949494" d="M10 16.998h20v2H10zM15.494 33.796l-.47-1.972h-2.457l-.47 1.972H9.955l2.547-8.714h2.665l2.547 8.714h-2.22zm-1.712-7.16l-.875 3.737h1.763l-.888-3.736zM18.925 30.752v-1.516h3.423v1.516h-3.423zM24.133 33.796V32.54l3.318-5.93h-3.16v-1.528h5.59v1.254l-3.317 5.918h3.396v1.542h-5.827z"/></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 21"><path d="M6 18c.5 0 1-.5 1-1V6c0-.5-.5-1-1-1s-1 .5-1 1v11c0 .5.5 1 1 1zM10 18c.5 0 1-.5 1-1V6c0-.5-.5-1-1-1s-1 .5-1 1v11c0 .5.5 1 1 1z"/><path d="M15 2h-4V0H5v2H1c-.5 0-1 .5-1 1v1h1v15c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4h1V3s-.5-1-1-1zm-2 17H3V4h10v15z"/></svg>';
 	}, function (c, s) {
@@ -4382,7 +4365,7 @@
 	//# sourceMappingURL=showcar-icons.min.js.map
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4463,7 +4446,7 @@
 	}
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4774,7 +4757,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4789,7 +4772,7 @@
 	};
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4854,7 +4837,7 @@
 	};
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4878,7 +4861,7 @@
 	};
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4915,7 +4898,7 @@
 	});
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';

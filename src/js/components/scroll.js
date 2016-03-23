@@ -19,10 +19,15 @@ $('a[href*="#"]').on('click', (e) => {
     let targetSelector = 'a[name="' + targetName[1] + '"]';
 
     if ($(targetSelector).length === 0) {
-        return;
+        targetSelector = '#' + targetName[1];
+        if ($(targetSelector).length === 0) {
+            return;
+        }
     }
 
     e.preventDefault();
 
     smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
+
+    return false;
 });
