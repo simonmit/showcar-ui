@@ -58,7 +58,6 @@ pre {
 
 .docs-container {
     position: relative;
-
 }
 .docs-navigation {
     padding: $M;
@@ -77,12 +76,12 @@ pre {
 
     @include mqmax($viewportM) {
         border-bottom: 1px solid $black-30;
+        margin-left: $XL;
+        margin-right: $XL;
     }
 }
 .docs-content {
-    @include mqmin($viewportM + 1) {
-        margin-left: 240px;
-    }
+    padding: 0 $XL;
 }
 
 .docs-table {
@@ -281,6 +280,7 @@ pre {
         //margin: 2.5px 0;
 
         > div {
+            border: 1px solid $black-30;
             background: $black-20;
             margin-bottom: 5px;
             padding: 5px;
