@@ -6,13 +6,14 @@ class Container {
      */
     constructor(target) {
         this.target        = target;
+        this.targetHeight  = 0;
         this.element       = this.createElement('div', document.body, '', ['sc-notification-container']);
         this.notifications = [];
 
         this.updatePosition();
-        this.observeTargetHeight();
 
         $(document).on('scroll', this.onScroll.bind(this));
+        $(this.target).on('DOMSubtreeModified propertychange', this.observeTargetHeight.bind(this));
     }
 
     /**
@@ -82,6 +83,8 @@ class Container {
         let width   = target.width();
         let element = $(this.element);
 
+        this.targetHeight = offset.height;
+
         if ($(window).scrollTop() > (offset.top + offset.height)) {
             element.css({
                 position: 'fixed',
@@ -106,14 +109,10 @@ class Container {
     }
 
     observeTargetHeight() {
-        let targetElement      = document.querySelector(this.target);
-        let observeContainer   = this.createElement('div', targetElement, '', ['sc-notification-observe-item']);
-        let observeExpand      = this.createElement('div', observeContainer, '', ['sc-notification-observe-item']);
-        let observeExpandChild = this.createElement('div', observeExpand, '', ['observe-item-child']);
-        let observeShrink      = this.createElement('div', observeContainer, '', ['sc-notification-observe-item']);
-        let observeShrinkChild = this.createElement('div', observeExpand, '', ['observe-item-child']);
-
-        observeExpand.addEventListener('scroll', );
+        let currentHeight = $(this.target).offset().height;
+        if (this.targetHeight != currentHeight) {
+            this.updatePosition();
+        }
     }
 
 }
