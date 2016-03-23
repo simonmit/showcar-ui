@@ -22,12 +22,12 @@ try {
 }
 
 window.Storage = require('../../vendor/showcar-storage/src/storage.js');
+window.Pager = require('./components/pager.js');
 
 require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
+require('./components/custom-dropdown.js');
 
 Zepto(($) => {
-    window.Pager = require('./components/pager.js');
-    require('./components/custom-dropdown.js');
     require('./components/navigation.js');
     require('./components/rotating-arrow.js')();
     require('./components/sticky.js')();
