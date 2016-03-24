@@ -591,6 +591,12 @@ sub-nav:
     <a name="notifications"></a>
     <h3>Notifications</h3>
 
+    <div class="example-ad">Here's an example ad, that pop's up suddenly on reload</div>
+    <script>
+        window.setTimeout(function () {
+            document.querySelector('.example-ad').style.display = 'block';
+        }, 10000);
+    </script>
     <div class="sc-content-container example-notification-target" id="example-notification-target">
         Notification Target container
     </div>
@@ -619,10 +625,10 @@ sub-nav:
         <as24-notification type="tip" id="tip1" target="#example-notification-target-s" title="Tip for you" close="true">
             Tip tip...
         </as24-notification>
-
         <as24-notification type="tip" id="tip2" target="#example-notification-target-s" title="Small Tip for you" close="true">
             Tip tip hurra...
         </as24-notification>
+
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
