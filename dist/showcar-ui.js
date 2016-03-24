@@ -61,11 +61,14 @@
 	
 	__webpack_require__(15);
 	__webpack_require__(16);
-	__webpack_require__(17);
-	__webpack_require__(18)();
-	__webpack_require__(19)();
-	__webpack_require__(20)();
-	__webpack_require__(21);
+	
+	Zepto(function ($) {
+	    __webpack_require__(17);
+	    __webpack_require__(18)();
+	    __webpack_require__(19)();
+	    __webpack_require__(20)();
+	    __webpack_require__(21);
+	});
 	
 	if (!window.notification) {
 	    window.notification = __webpack_require__(22);
@@ -3889,15 +3892,18 @@
 	
 	        this.ETC = '...';
 	        this.rootElement = $(root);
-	        this.itemsPerPage = itemsPerPage;
-	        this.activePage = activePage;
-	        this.totalCount = totalItems;
+	        this.itemsPerPage = parseInt(itemsPerPage);
+	        this.activePage = parseInt(activePage);
+	        this.totalCount = parseInt(totalItems);
 	        this.urlTemplate = urlTemplate;
 	        this.maxPage = this.calculatePageCount();
+	        this.tileWidth = 48;
 	
 	        this.prototypeLi = $('<li>');
 	        this.prototypeA = $('<a>');
 	        this.prototypeIcon = $('<as24-icon>');
+	
+	        $(window).on('resize', $.proxy(this.render, this));
 	
 	        this.render();
 	    }
@@ -3947,7 +3953,24 @@
 	        }
 	
 	        /**
-	         * Returns a array with all page numbers in the correct order
+	         * Returns the maximum possible amount ot tiles between <PREV> and <NEXT>
+	         *
+	         * @returns {int}
+	         */
+	
+	    }, {
+	        key: 'getMaximumPossibleTiles',
+	        value: function getMaximumPossibleTiles() {
+	            var rootWidth = this.rootElement.width();
+	
+	            // We assume that this is the minWidth for both buttons
+	            var prevNextWidth = 200;
+	
+	            return Math.floor((rootWidth - prevNextWidth) / this.tileWidth);
+	        }
+	
+	        /**
+	         * Returns an array with all page numbers in the correct order
 	         *
 	         * Example:
 	         * activePage = 17
@@ -3961,32 +3984,87 @@
 	    }, {
 	        key: 'getPageTiles',
 	        value: function getPageTiles(activePage) {
-	            if (this.maxPage < 10) {
-	                return Array.from(new Array(this.maxPage), function (x, i) {
-	                    return i + 1;
-	                });
+	            var leftNumber = activePage - 1,
+	                rightNumber = activePage + 1,
+	                maxPossibleTiles = this.getMaximumPossibleTiles(),
+	                usefulTiles = 0,
+	                countEtc = 0;
+	
+	            // we always want to have an odd number of tiles to show
+	            if (maxPossibleTiles % 2 === 0 && this.maxPage > maxPossibleTiles) {
+	                maxPossibleTiles--;
 	            }
 	
-	            if (activePage < 6) {
-	                return Array.from(new Array(7), function (x, i) {
-	                    return i + 1;
-	                }).concat([this.ETC, this.maxPage]);
-	            }
-	            if (activePage > this.maxPage - 5) {
-	                return [1, this.ETC].concat(Array.from(new Array(this.maxPage), function (_, i) {
-	                    return i + 1;
-	                }).slice(this.maxPage - 7, this.maxPage));
+	            var tiles = [activePage];
+	
+	            // because we have our activePage, we have one possible tile less
+	            maxPossibleTiles--;
+	
+	            while ((leftNumber > 0 || rightNumber <= this.maxPage) && maxPossibleTiles > 0) {
+	
+	                if (leftNumber > 0) {
+	                    tiles.unshift(leftNumber);
+	                    usefulTiles++;
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                if (rightNumber <= this.maxPage) {
+	                    tiles.push(rightNumber);
+	                    usefulTiles++;
+	                    maxPossibleTiles--;
+	                    if (0 === maxPossibleTiles) {
+	                        break;
+	                    }
+	                }
+	
+	                leftNumber--;
+	                rightNumber++;
 	            }
 	
-	            var leftTiles = [],
-	                rightTiles = [];
-	
-	            if (activePage > 5 && activePage < this.maxPage - 4) {
-	                leftTiles = [1, this.ETC, activePage - 2, activePage - 1];
-	                rightTiles = [activePage + 1, activePage + 2, this.ETC, this.maxPage];
+	            // special case: we have enough space to show 'em all
+	            if (tiles.length === this.maxPage) {
+	                console.log('fam');
+	                return tiles;
 	            }
 	
-	            return leftTiles.concat([activePage].concat(rightTiles));
+	            // special case: If we have less or equal to 7 pages/tiles in total, we show all or infopage
+	            if (this.maxPage <= 7 && tiles.length < this.maxPage) {
+	                console.log('fim');
+	                return [];
+	            }
+	
+	            // show dots on the left ( < 1 ... 7 8 9)
+	            if (1 !== tiles[0]) {
+	                tiles[0] = 1;
+	                tiles[1] = this.ETC;
+	                countEtc++;
+	                usefulTiles -= 1;
+	            }
+	
+	            // show dots on the right ( 10 11 ... 20 >)
+	            if (this.maxPage !== tiles[tiles.length - 1]) {
+	                tiles[tiles.length - 1] = this.maxPage;
+	                tiles[tiles.length - 2] = this.ETC;
+	                countEtc++;
+	                usefulTiles -= 1;
+	            }
+	
+	            // special case: show info page if less than 3 useful tiles
+	            if (countEtc >= 1 && usefulTiles <= 3) {
+	                console.log('fum');
+	                return [];
+	            }
+	
+	            // show only the info page tile
+	            if (usefulTiles <= 2 || this.maxPage <= 3) {
+	                console.log('fem');
+	                return [];
+	            }
+	
+	            return tiles;
 	        }
 	
 	        /**
@@ -3998,17 +4076,22 @@
 	        value: function render() {
 	            var _this = this;
 	
+	            this.rootElement.children().remove();
+	
 	            var pagination = this.getPageTiles(this.activePage),
 	                collection = $();
 	
 	            this.rootElement.append(this.previousButton);
-	            this.rootElement.append(this.infoPage);
 	
-	            pagination.forEach(function (page) {
-	                collection = collection.add(_this.createPage(page));
-	            });
+	            if (0 === pagination.length) {
+	                this.rootElement.append(this.infoPage);
+	            } else {
+	                pagination.forEach(function (page) {
+	                    collection = collection.add(_this.createPage(page));
+	                });
+	                this.rootElement.append(collection);
+	            }
 	
-	            this.rootElement.append(collection);
 	            this.rootElement.append(this.nextButton);
 	        }
 	
@@ -4669,14 +4752,12 @@
 	    return Navigation;
 	})();
 	
-	Zepto(function () {
-	    var navigationElement = document.querySelector('.sc-navigation'),
-	        navigation = null;
-	    if (navigationElement) {
-	        navigation = new Navigation(navigationElement);
-	    }
-	    module.exports = navigation;
-	});
+	var navigationElement = document.querySelector('.sc-navigation'),
+	    navigation = null;
+	if (navigationElement) {
+	    navigation = new Navigation(navigationElement);
+	}
+	module.exports = navigation;
 
 /***/ },
 /* 18 */
@@ -4803,20 +4884,23 @@
 	    }, 10);
 	}
 	
-	Zepto(function ($) {
-	    $('a[href*="#"]').on('click', function (e) {
-	        var scrollDuration = 300;
-	        var targetName = $(e.currentTarget).attr('href').split('#');
-	        var targetSelector = 'a[name="' + targetName[1] + '"]';
+	$('a[href*="#"]').on('click', function (e) {
+	    var scrollDuration = 300;
+	    var targetName = $(e.currentTarget).attr('href').split('#');
+	    var targetSelector = 'a[name="' + targetName[1] + '"]';
 	
+	    if ($(targetSelector).length === 0) {
+	        targetSelector = '#' + targetName[1];
 	        if ($(targetSelector).length === 0) {
 	            return;
 	        }
+	    }
 	
-	        e.preventDefault();
+	    e.preventDefault();
 	
-	        smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
-	    });
+	    smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
+	
+	    return false;
 	});
 
 /***/ },

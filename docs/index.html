@@ -171,7 +171,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12">
+            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12 docs-content">
     
     <div class="docs-totop">
         <a href="#top">Jump to Top</a>
@@ -2220,8 +2220,13 @@ notification.classList.toggle('show');
 
     <a name="scrolling"></a>
     <h3>Scrolling</h3>
+    <p>
+        ShowcarUI adds some nice animated scrolling functionality for all anchor links that have a target of
+        either <code>id="..."</code> or <code>&lt;a name="..."&gt;</code>.
+    </p>
     <div class="example example-scrolling">
         <ul>
+            <li><a href="#top">ToTop</a></li>
             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
             <li><a href="#collapse">Collapse</a></li>
             <li><a href="#navigation">Navigation</a></li>
@@ -2230,12 +2235,13 @@ notification.classList.toggle('show');
     </div>
     <pre><code class="html js-format-code">
         <!--
-        <ul>
-            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-            <li><a href="#collapse">Collapse</a></li>
-            <li><a href="#navigation">Navigation</a></li>
-            <li><a href="#custom-dropdown">Custom Dropdown</a></li>
-        </ul>
+<ul>
+    <li><a href="#top">ToTop</a></li>
+    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+    <li><a href="#collapse">Collapse</a></li>
+    <li><a href="#navigation">Navigation</a></li>
+    <li><a href="#custom-dropdown">Custom Dropdown</a></li>
+</ul>
         -->
     </code></pre>
 
