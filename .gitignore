@@ -5,3 +5,4 @@ bower_components
 .bundle
 atlassian-ide-plugin.xml
 .gitignore.swp
+tests/errorShots
