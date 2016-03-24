@@ -14,7 +14,9 @@ describe('content-container tests', function(){
 
     it('should have full width in smaller viewport',function () {
         browser.setViewportSize({width: 800, height: 600});
-        browser.getElementSize('body>.sc-content-container', 'width').should.be.equal(800);
+        //compare with the body width because of strange behavior with scrollBars
+        var bodyWidth = browser.getElementSize('body', 'width');
+        browser.getElementSize('body>.sc-content-container', 'width').should.be.equal(bodyWidth);
 
         return browser;
     });
