@@ -22,8 +22,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: "mtrieba.ext@autoscout24.com",
-    key: "u32928d5c6d81f47",
+    user: "",
+    key: "",
 
     //
     // If you are using Sauce Labs, WebdriverIO takes care to update the job information
