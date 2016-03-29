@@ -532,9 +532,12 @@ pre {
 }
 
 .example-ad {
-    display: none;
-    padding: 10px;
     width: 100%;
     color: white;
     background-color: $orange-70;
+
+    > p {
+        margin: 0;
+        padding: 10px;
+    }
 }

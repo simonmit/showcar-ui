@@ -5,15 +5,15 @@ class Container {
      * @param {String} target
      */
     constructor(target) {
-        this.target        = target;
-        this.targetHeight  = 0;
-        this.element       = this.createElement('div', document.body, '', ['sc-notification-container']);
-        this.notifications = [];
+        this.target         = target;
+        this.targetPosition = 0;
+        this.element        = this.createElement('div', document.body, '', ['sc-notification-container']);
+        this.notifications  = [];
 
         this.updatePosition();
 
         $(document).on('scroll', this.onScroll.bind(this));
-        $(this.target).on('DOMSubtreeModified propertychange', this.observeTargetHeight.bind(this));
+        $(document.body).on('DOMSubtreeModified', this.observeTargetPosition.bind(this));
     }
 
     /**
@@ -83,7 +83,7 @@ class Container {
         let width   = target.width();
         let element = $(this.element);
 
-        this.targetHeight = offset.height;
+        this.targetPosition = [offset.top, offset.left, offset.width, offset.height];
 
         if ($(window).scrollTop() > (offset.top + offset.height)) {
             element.css({
@@ -108,10 +108,10 @@ class Container {
         }
     }
 
-    observeTargetHeight() {
-        let currentHeight = $(this.target).offset().height;
-        if (this.targetHeight != currentHeight) {
-            this.updatePosition();
+    observeTargetPosition() {
+        let offset = $(this.target).offset();
+        if (this.targetPosition.toString() != [offset.top, offset.left, offset.width, offset.height].toString()) {
+            this.onScroll();
         }
     }
 

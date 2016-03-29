@@ -591,10 +591,10 @@ sub-nav:
     <a name="notifications"></a>
     <h3>Notifications</h3>
 
-    <div class="example-ad">Here's an example ad, that pop's up suddenly on reload</div>
+    <div class="example-ad"></div>
     <script>
         window.setTimeout(function () {
-            document.querySelector('.example-ad').style.display = 'block';
+            $('.example-ad').append('<p>Here\'s an example ad, that pop\'s up suddenly on reload</p>');
         }, 10000);
     </script>
     <div class="sc-content-container example-notification-target" id="example-notification-target">
