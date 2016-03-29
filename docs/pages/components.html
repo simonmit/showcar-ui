@@ -174,7 +174,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12">
+            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12 docs-content">
                 
 <div>
     <a name="components"></a>
@@ -211,17 +211,19 @@
 
     <h4>Show more/less example</h4>
     <div class="example example-collapse">
-        <a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target in" data-test="example-collapse-show"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Show content
         </a>
-        <div class="sc-collapse sc-collapse-target">
+        <div class="sc-collapse sc-collapse-target" data-test="example-collapse-box">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
             ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target" data-test="example-collapse-hide"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Less content
         </a>
     </div>
@@ -258,7 +260,7 @@
     -->
     </code></pre>
     <h4>Multiple Breadcrumbs</h4>
-    <div class="example example-breadcrumbs">
+    <div class="example example-breadcrumbs" data-test="breadcrumbs-responsive">
         <ul class="sc-breadcrumbs">
             <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
             <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
@@ -281,7 +283,7 @@
     <h3>Custom Dropdown</h3>
     <div class="example example-custom-dropdown">
         <label>Custom Dropdown</label>
-        <custom-dropdown class="sc-input" checkboxgroup>
+        <custom-dropdown class="sc-input" data-test="custom-dropdown-1" checkboxgroup>
             <div>
                 <p>All</p>
             </div>
@@ -296,7 +298,7 @@
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons</label>
-        <custom-dropdown class="sc-input icon" checkboxgroup style="max-width: 300px;">
+        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-2" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
@@ -447,7 +449,7 @@
     <a name="navigation"></a>
     <h3>Navigation</h3>
 
-    <div class="example">
+    <div class="example example-navigation">
 
         <div class="sc-navigation">
             <div class="bar">
@@ -857,8 +859,13 @@ notification.classList.toggle('show');
 
     <a name="scrolling"></a>
     <h3>Scrolling</h3>
+    <p>
+        ShowcarUI adds some nice animated scrolling functionality for all anchor links that have a target of
+        either <code>id="..."</code> or <code>&lt;a name="..."&gt;</code>.
+    </p>
     <div class="example example-scrolling">
         <ul>
+            <li><a href="#top">ToTop</a></li>
             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
             <li><a href="#collapse">Collapse</a></li>
             <li><a href="#navigation">Navigation</a></li>
@@ -867,12 +874,13 @@ notification.classList.toggle('show');
     </div>
     <pre><code class="html js-format-code">
         <!--
-        <ul>
-            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-            <li><a href="#collapse">Collapse</a></li>
-            <li><a href="#navigation">Navigation</a></li>
-            <li><a href="#custom-dropdown">Custom Dropdown</a></li>
-        </ul>
+<ul>
+    <li><a href="#top">ToTop</a></li>
+    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+    <li><a href="#collapse">Collapse</a></li>
+    <li><a href="#navigation">Navigation</a></li>
+    <li><a href="#custom-dropdown">Custom Dropdown</a></li>
+</ul>
         -->
     </code></pre>
 
