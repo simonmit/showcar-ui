@@ -187,13 +187,11 @@ class Pager {
 
         // special case: we have enough space to show 'em all
         if (tiles.length === this.maxPage) {
-            console.log('fam');
             return tiles;
         }
 
         // special case: If we have less or equal to 7 pages/tiles in total, we show all or infopage
         if (this.maxPage <= 7 && tiles.length < this.maxPage) {
-            console.log('fim');
             return [];
         }
 
@@ -215,13 +213,11 @@ class Pager {
 
         // special case: show info page if less than 3 useful tiles
         if (countEtc >= 1 && usefulTiles <= 3) {
-            console.log('fum');
             return [];
         }
 
         // show only the info page tile
         if (usefulTiles <= 2 || this.maxPage <= 3) {
-            console.log('fem');
             return [];
         }
 
