@@ -4998,6 +4998,188 @@
 
 /***/ },
 /* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var ContainerHandler = __webpack_require__(23);
+	var containerHandler = new ContainerHandler();
+	
+	function onElementCreated() {
+	    containerHandler.createNotification(this);
+	}
+	
+	function onElementChanged(attributeName, previous, value) {
+	    containerHandler.updateNotification(this, attributeName, previous, value);
+	}
+	
+	var tagName = 'as24-notification';
+	
+	try {
+	    module.exports = document.registerElement(tagName, {
+	        prototype: Object.create(HTMLElement.prototype, {
+	            createdCallback: { value: onElementCreated },
+	            attributeChangedCallback: { value: onElementChanged }
+	        })
+	    });
+	} catch (e) {
+	    if (window && window.console) {
+	        window.console.warn('Failed to register CustomElement "' + tagName + '".', e);
+	    }
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Notification = __webpack_require__(24);
+	var Container = __webpack_require__(25);
+	
+	var ContainerHandler = function () {
+	    function ContainerHandler() {
+	        _classCallCheck(this, ContainerHandler);
+	
+	        this.containers = {};
+	    }
+	
+	    /**
+	     * Add a new notification
+	     *
+	     * @param {HTMLElement} element
+	     */
+	
+	
+	    _createClass(ContainerHandler, [{
+	        key: 'createNotification',
+	        value: function createNotification(element) {
+	            var notification = new Notification(element);
+	            notification.create();
+	
+	            element.notification = notification;
+	        }
+	
+	        /**
+	         * Update a existing notification
+	         *
+	         * @param {HTMLElement} element
+	         * @param {String} attribute
+	         * @param {String} previous previous value
+	         * @param {String} value new value
+	         */
+	
+	    }, {
+	        key: 'updateNotification',
+	        value: function updateNotification(element, attribute, previous, value) {
+	            var notification = element.notification;
+	
+	            if ('class' === attribute && 'show' === value) {
+	                this.addNotificationToContainer(notification);
+	            } else if ('target' === attribute) {
+	                this.moveNotificationToContainer(notification, attribute, previous, value);
+	            }
+	
+	            notification.update(attribute, value);
+	        }
+	
+	        /**
+	         * @param {Notification} notification
+	         */
+	
+	    }, {
+	        key: 'addNotificationToContainer',
+	        value: function addNotificationToContainer(notification) {
+	            var container = void 0;
+	
+	            if (!this.hasContainer(notification.targetName)) {
+	                container = this.createContainer(notification.targetName);
+	            } else {
+	                container = this.getContainer(notification.targetName);
+	            }
+	            container.addNotification(notification);
+	        }
+	
+	        /**
+	         * Move a notification to a new container if the target was changed
+	         *
+	         * @param {Notification} notification
+	         * @param {String} attribute
+	         * @param {String} previous
+	         * @param {String} value
+	         */
+	
+	    }, {
+	        key: 'moveNotificationToContainer',
+	        value: function moveNotificationToContainer(notification, attribute, previous, value) {
+	            if (previous !== value) {
+	                if (this.hasContainer(previous)) {
+	                    var container = this.getContainer(previous);
+	                    container.removeNotification(notification);
+	                }
+	                this.addNotificationToContainer(notification);
+	            }
+	
+	            // cleanup old containers without notifications
+	            if (this.hasContainer(previous)) {
+	                var _container = this.getContainer(previous);
+	                if (_container.childNodes.length < 1) {
+	                    _container.remove();
+	                    delete this.containers[previous];
+	                }
+	            }
+	        }
+	
+	        /**
+	         * Create container below the target element
+	         *
+	         * @param target
+	         */
+	
+	    }, {
+	        key: 'createContainer',
+	        value: function createContainer(target) {
+	            var container = new Container(target);
+	            this.containers[target] = container;
+	
+	            return container;
+	        }
+	
+	        /**
+	         * @param {String} target
+	         * @returns {Container}
+	         */
+	
+	    }, {
+	        key: 'getContainer',
+	        value: function getContainer(target) {
+	            return this.containers[target];
+	        }
+	
+	        /**
+	         *
+	         * @param {String} name
+	         * @returns {boolean}
+	         */
+	
+	    }, {
+	        key: 'hasContainer',
+	        value: function hasContainer(name) {
+	            return this.containers.hasOwnProperty(name);
+	        }
+	    }]);
+	
+	    return ContainerHandler;
+	}();
+	
+	module.exports = ContainerHandler;
+
+/***/ },
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5009,7 +5191,6 @@
 	var Notification = function () {
 	
 	    /**
-	     * @event Notification#onScroll
 	     * @param {HTMLElement} element
 	     */
 	
@@ -5020,13 +5201,15 @@
 	        this._body = '';
 	        this.body = this.element.innerHTML;
 	
-	        $(document).on('scroll', this.onScroll.bind(this));
+	        this.closeBtn = null;
+	        this.titleTag = null;
 	    }
 	
 	    _createClass(Notification, [{
 	        key: 'hide',
 	        value: function hide() {
 	            this.element.classList.remove('show');
+	            this.element.classList.remove('prefade');
 	        }
 	    }, {
 	        key: 'isShow',
@@ -5041,17 +5224,14 @@
 	    }, {
 	        key: 'create',
 	        value: function create() {
+	            this.element.classList.add('prefade');
 	            this.element.innerHTML = '';
-	            var container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
-	            this.createElement('span', container, this.title, ['sc-font-m', 'sc-font-bold']);
-	            this.createElement('div', container, this.body);
+	            this.container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+	            this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
+	            this.createElement('div', this.container, this.body);
 	
 	            if (this.close) {
-	                var close = this.createElement('a', this.element, '');
-	                $(close).on('click', this.hide.bind(this));
-	
-	                var icon = this.createElement('as24-icon', close, '');
-	                icon.setAttribute('type', 'close');
+	                this.closeBtn = this.createCloseButton();
 	            }
 	        }
 	
@@ -5064,10 +5244,22 @@
 	        key: 'update',
 	        value: function update(attribute, value) {
 	            if ('class' === attribute && this.isShow()) {
-	                this.updatePosition();
-	
+	                this.element.classList.remove('prefade');
 	                if (this.timeout) {
 	                    window.setTimeout(this.hide.bind(this), this.timeout);
+	                }
+	            } else if ('class' === attribute && !this.isShow()) {
+	                this.hide();
+	            }
+	            if ('title' === attribute) {
+	                this.titleTag.innerHTML = value;
+	            }
+	            if ('close' === attribute) {
+	                if (!this.closeBtn && "true" === value) {
+	                    this.closeBtn = this.createCloseButton();
+	                } else {
+	                    this.closeBtn.remove();
+	                    this.closeBtn = null;
 	                }
 	            }
 	        }
@@ -5096,44 +5288,16 @@
 	
 	            return element;
 	        }
-	
-	        /**
-	         * Update the position of the notification directly below the target element
-	         */
-	
 	    }, {
-	        key: 'updatePosition',
-	        value: function updatePosition() {
-	            if (!this.target) return;
+	        key: 'createCloseButton',
+	        value: function createCloseButton() {
+	            var closeBtn = this.createElement('a', this.container, '');
+	            $(closeBtn).on('click', this.hide.bind(this));
 	
-	            var target = $(this.target);
-	            var offset = target.offset();
-	            var width = target.width();
-	            var element = $(this.element);
+	            var icon = this.createElement('as24-icon', closeBtn, '');
+	            icon.setAttribute('type', 'close');
 	
-	            if ($(window).scrollTop() > offset.top + offset.height) {
-	                element.css({
-	                    position: 'fixed',
-	                    top: 0,
-	                    width: width + 'px',
-	                    left: offset.left + 'px'
-	                });
-	            } else {
-	                var top = offset.top + offset.height - $(target).offsetParent().offset().top;
-	                element.css({
-	                    position: 'absolute',
-	                    width: width + 'px',
-	                    top: top + 'px',
-	                    left: this.target.offsetLeft + 'px'
-	                });
-	            }
-	        }
-	    }, {
-	        key: 'onScroll',
-	        value: function onScroll() {
-	            if (this.element.classList.contains('show')) {
-	                this.updatePosition();
-	            }
+	            return closeBtn;
 	        }
 	    }, {
 	        key: 'title',
@@ -5161,36 +5325,179 @@
 	    }, {
 	        key: 'target',
 	        get: function get() {
-	            return document.querySelector(this.element.getAttribute('target'));
+	            return document.querySelector(this.targetName);
+	        }
+	    }, {
+	        key: 'targetName',
+	        get: function get() {
+	            return this.element.getAttribute('target');
 	        }
 	    }]);
 	
 	    return Notification;
 	}();
 	
-	function onElementCreated() {
-	    this.notification = new Notification(this);
-	    this.notification.create();
-	}
+	module.exports = Notification;
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	'use strict';
 	
-	function onElementChanged(attributeName, previous, value) {
-	    this.notification.update(attributeName, value);
-	}
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var tagName = 'as24-notification';
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	try {
-	    module.exports = document.registerElement(tagName, {
-	        prototype: Object.create(HTMLElement.prototype, {
-	            createdCallback: { value: onElementCreated },
-	            attributeChangedCallback: { value: onElementChanged }
-	        })
-	    });
-	} catch (e) {
-	    if (window && window.console) {
-	        window.console.warn('Failed to register CustomElement "' + tagName + '".', e);
+	var Container = function () {
+	
+	    /**
+	     * @event Container#onScroll
+	     * @param {String} target
+	     */
+	
+	    function Container(target) {
+	        _classCallCheck(this, Container);
+	
+	        this.target = target;
+	        this.targetPosition = 0;
+	        this.element = this.createElement('div', document.body, '', ['sc-notification-container']);
+	        this.notifications = [];
+	
+	        this.updatePosition();
+	
+	        $(document).on('scroll', this.onScroll.bind(this));
+	        $(document.body).on('DOMSubtreeModified', this.observeTargetPosition.bind(this));
 	    }
-	}
+	
+	    /**
+	     * @returns {Array}
+	     */
+	
+	
+	    _createClass(Container, [{
+	        key: 'remove',
+	
+	
+	        /**
+	         * @returns {Node}
+	         */
+	        value: function remove() {
+	            return this.element.remove();
+	        }
+	
+	        /**
+	         * @param {Notification} notification
+	         */
+	
+	    }, {
+	        key: 'addNotificationToTarget',
+	        value: function addNotificationToTarget(notification) {
+	            this.element.appendChild(notification.element);
+	        }
+	
+	        /**
+	         * @param {Notification} notification
+	         */
+	
+	    }, {
+	        key: 'addNotification',
+	        value: function addNotification(notification) {
+	            if (this.notifications.indexOf(notification) < 0) {
+	                this.notifications.push(notification);
+	            }
+	            this.addNotificationToTarget(notification);
+	        }
+	
+	        /**
+	         * @param {Notification} notification
+	         * @returns {Array.<T>}
+	         */
+	
+	    }, {
+	        key: 'removeNotification',
+	        value: function removeNotification(notification) {
+	            return this.notifications.splice(this.notifications.indexOf(notification), 1);
+	        }
+	
+	        /**
+	         * @param {String} name
+	         * @param {String} body
+	         * @param {Array} classes
+	         * @param {HTMLElement} parent
+	         * @returns {Element}
+	         */
+	
+	    }, {
+	        key: 'createElement',
+	        value: function createElement(name, parent, body) {
+	            var classes = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
+	
+	            var element = document.createElement(name);
+	
+	            classes.forEach(function (cls) {
+	                element.classList.add(cls);
+	            });
+	            element.innerHTML = body;
+	
+	            parent.appendChild(element);
+	
+	            return element;
+	        }
+	    }, {
+	        key: 'updatePosition',
+	        value: function updatePosition() {
+	            if (!this.target) return;
+	
+	            var target = $(this.target);
+	            var offset = target.offset();
+	            var width = target.width();
+	            var element = $(this.element);
+	
+	            this.targetPosition = [offset.top, offset.left, offset.width, offset.height];
+	
+	            if ($(window).scrollTop() > offset.top + offset.height) {
+	                element.css({
+	                    position: 'fixed',
+	                    top: 0,
+	                    width: width + 'px',
+	                    left: offset.left + 'px'
+	                });
+	            } else {
+	                element.css({
+	                    position: 'absolute',
+	                    width: width + 'px',
+	                    top: offset.top + offset.height + 'px',
+	                    left: offset.left + 'px'
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'onScroll',
+	        value: function onScroll() {
+	            if ($('.show', this.element).length > 0) {
+	                this.updatePosition();
+	            }
+	        }
+	    }, {
+	        key: 'observeTargetPosition',
+	        value: function observeTargetPosition() {
+	            var offset = $(this.target).offset();
+	            if (this.targetPosition.toString() != [offset.top, offset.left, offset.width, offset.height].toString()) {
+	                this.onScroll();
+	            }
+	        }
+	    }, {
+	        key: 'childNodes',
+	        get: function get() {
+	            return this.element.childNodes;
+	        }
+	    }]);
+	
+	    return Container;
+	}();
+	
+	module.exports = Container;
 
 /***/ }
 /******/ ]);

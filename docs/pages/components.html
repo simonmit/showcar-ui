@@ -757,8 +757,22 @@
     <a name="notifications"></a>
     <h3>Notifications</h3>
 
+    <div class="example-ad"></div>
+    <script>
+        window.setTimeout(function () {
+            $('.example-ad').append('<p>Here\'s an example ad, that pop\'s up suddenly on reload</p>');
+        }, 10000);
+    </script>
     <div class="sc-content-container example-notification-target" id="example-notification-target">
         Notification Target container
+    </div>
+
+    <br>
+
+    <div class="sc-content-container example-notification-target-container">
+        <div class="example-notification-target-s" id="example-notification-target-s">
+            Small Notification Target container
+        </div>
     </div>
 
     <h4>Demo:</h4>
@@ -766,8 +780,7 @@
         <as24-notification type="success" id="succ1" target="#example-notification-target" title="Vehicle is added to watchlist." timeout="2500">
             Go to <a href="#">my watchlist</a>.
         </as24-notification>
-        <as24-notification type="information" id="info1" target="#example-notification-target" title="Information for you">
-            Information here...
+        <as24-notification type="information" id="info1" target="#example-notification-target" title="Information for you, but without body text">
         </as24-notification>
         <as24-notification type="error" id="error1" target="#example-notification-target" title="Error occurred">
             Error here...
@@ -775,9 +788,13 @@
         <as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
             Close me, please.
         </as24-notification>
-        <as24-notification type="tip" id="tip1" target="#example-notification-target" title="Tip for you" close="true">
+        <as24-notification type="tip" id="tip1" target="#example-notification-target-s" title="Tip for you" close="true">
             Tip tip...
         </as24-notification>
+        <as24-notification type="tip" id="tip2" target="#example-notification-target-s" title="Small Tip for you" close="true">
+            Tip tip hurra...
+        </as24-notification>
+
         <div class="sc-text-center">
             <button class="notification-demo sc-btn-bob" data-id="succ1">Show success notification with timeout</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="info1">Toggle info notification</button>&nbsp;
@@ -785,6 +802,7 @@
             <hr>
             <button class="notification-demo sc-btn-bob" data-id="succ2">Show success notification with close button</button>&nbsp;
             <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip notification</button>
+            <button class="notification-demo sc-btn-ross" data-id="tip2">Show small tip notification</button>
         </div>
     </div>
     <pre><code class="html js-format-code">
