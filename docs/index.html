@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./../dist/showcar-ui.css">
     <link rel="stylesheet" href="./css/highlight.css">
     <link rel="stylesheet" href="./css/documentation.css">
@@ -171,7 +171,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12">
+            <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12 docs-content">
     
     <div class="docs-totop">
         <a href="#top">Jump to Top</a>
@@ -916,8 +916,7 @@
     <p>
         ShowCars default <code>font-family</code> is <span class="sc-font-bold">Source Sans Pro</span>. Please use the
         predefined classes to increase or decrease the font size. You should not define explicit font sizes.
-        To use the Source Sans Pro font, you don't have to do anything. It is loaded with the showcar-ui library using a technic called
-        <a href="https://www.npmjs.com/package/fontfaceobserver" target="_blank">font-face observer</a>.
+        To use the Source Sans Pro font, you don't have to do anything.
     </p>
     <a name="headlines"></a>
     <h3>Headlines</h3>
@@ -964,7 +963,7 @@
             </tbody>
         </table>
     </div>
-    <div class="example example-body-copy">
+    <div class="example example-headlines">
         <h1 class="sc-font">Lorem ipsum dolor sit amet (h1.sc-font)</h1>
         <h2 class="sc-font">Lorem ipsum dolor sit amet (h2.sc-font)</h2>
         <h3 class="sc-font">Lorem ipsum dolor sit amet (h3.sc-font)</h3>
@@ -1573,17 +1572,19 @@
 
     <h4>Show more/less example</h4>
     <div class="example example-collapse">
-        <a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target in" data-test="example-collapse-show"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Show content
         </a>
-        <div class="sc-collapse sc-collapse-target">
+        <div class="sc-collapse sc-collapse-target" data-test="example-collapse-box">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
             ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
             magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
             sanctus est Lorem ipsum dolor sit amet.
         </div>
-        <a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+        <a class="sc-collapse sc-collapse-target" data-test="example-collapse-hide"
+           data-toggle="sc-collapse" data-target=".sc-collapse-target">
             Less content
         </a>
     </div>
@@ -1620,7 +1621,7 @@
     -->
     </code></pre>
     <h4>Multiple Breadcrumbs</h4>
-    <div class="example example-breadcrumbs">
+    <div class="example example-breadcrumbs" data-test="breadcrumbs-responsive">
         <ul class="sc-breadcrumbs">
             <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
             <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
@@ -1643,7 +1644,7 @@
     <h3>Custom Dropdown</h3>
     <div class="example example-custom-dropdown">
         <label>Custom Dropdown</label>
-        <custom-dropdown class="sc-input" checkboxgroup>
+        <custom-dropdown class="sc-input" data-test="custom-dropdown-1" checkboxgroup>
             <div>
                 <p>All</p>
             </div>
@@ -1658,7 +1659,7 @@
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons</label>
-        <custom-dropdown class="sc-input icon" checkboxgroup style="max-width: 300px;">
+        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-2" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
@@ -1809,7 +1810,7 @@
     <a name="navigation"></a>
     <h3>Navigation</h3>
 
-    <div class="example">
+    <div class="example example-navigation">
 
         <div class="sc-navigation">
             <div class="bar">
@@ -2219,8 +2220,13 @@ notification.classList.toggle('show');
 
     <a name="scrolling"></a>
     <h3>Scrolling</h3>
+    <p>
+        ShowcarUI adds some nice animated scrolling functionality for all anchor links that have a target of
+        either <code>id="..."</code> or <code>&lt;a name="..."&gt;</code>.
+    </p>
     <div class="example example-scrolling">
         <ul>
+            <li><a href="#top">ToTop</a></li>
             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
             <li><a href="#collapse">Collapse</a></li>
             <li><a href="#navigation">Navigation</a></li>
@@ -2229,12 +2235,13 @@ notification.classList.toggle('show');
     </div>
     <pre><code class="html js-format-code">
         <!--
-        <ul>
-            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-            <li><a href="#collapse">Collapse</a></li>
-            <li><a href="#navigation">Navigation</a></li>
-            <li><a href="#custom-dropdown">Custom Dropdown</a></li>
-        </ul>
+<ul>
+    <li><a href="#top">ToTop</a></li>
+    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+    <li><a href="#collapse">Collapse</a></li>
+    <li><a href="#navigation">Navigation</a></li>
+    <li><a href="#custom-dropdown">Custom Dropdown</a></li>
+</ul>
         -->
     </code></pre>
 

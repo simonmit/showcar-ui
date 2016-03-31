@@ -2,6 +2,11 @@
 @import "mixins/utils";
 @import "mixins/ellipsis";
 
+.sc-content-container {
+  border-left: 1px solid $black-30;
+  border-right: 1px solid $black-30;
+}
+
 .sc-clearfix {
   @include clearfix;
 }
@@ -88,4 +93,21 @@
   @include mqmin($viewportM) {
     margin-bottom: 40px;
   }
+}
+
+.sc-telekom-bar {
+    padding-right: $XL;
+    text-align: right;
+    as24-icon[type="t-online"] {
+        height: $XL - 1;
+    }
+}
+
+.sc-section {
+    border-bottom: 1px solid $black-30;
+    background-color: $white;
+    padding: 0 $XL;
+    &.sc-section-transparent {
+        background-color: transparent;
+    }
 }

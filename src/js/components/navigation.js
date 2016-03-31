@@ -244,12 +244,10 @@ class Navigation {
     }
 }
 
-Zepto(() => {
-    let navigationElement = document.querySelector('.sc-navigation'),
-        navigation        = null;
-    if (navigationElement) {
-        navigation = new Navigation(navigationElement);
-    }
-    module.exports = navigation;
-});
+let navigationElement = document.querySelector('.sc-navigation'),
+    navigation        = null;
+if (navigationElement) {
+    navigation = new Navigation(navigationElement);
+}
+module.exports = navigation;
 

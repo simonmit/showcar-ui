@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         return result;
     };
 
-    grunt.initConfig({
+    grunt.initConfig(Object.assign({
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
         uglify: loadConfig("uglify"),
@@ -16,8 +16,9 @@ module.exports = function(grunt) {
         copy: loadConfig("copy"),
         watch: loadConfig("watch"),
         pleeease: loadConfig("pleeease"),
-        assemble: loadConfig("assemble")
-    });
+        assemble: loadConfig("assemble"),
+        selenium_standalone: loadConfig("selenium-standalone", 'local')
+    }, loadConfig("webdriver", 'webdriver')));
 
     grunt.registerTask("build", ["sass", "webpack", "copy"]);
     grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy","assemble"]);
@@ -25,8 +26,14 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);
 
+    grunt.registerTask("test-local", [
+        "selenium_standalone:local:install",
+        "selenium_standalone:local:start",
+        "webdriver:local",
+        "selenium_standalone:local:stop"]);
+    grunt.registerTask("test-cbt", ["webdriver:cbt"]);
+
     require('load-grunt-tasks')(grunt, {
         pattern: ['grunt-*', "!grunt-cli"]
     });
 };
-

@@ -1,38 +1,12 @@
 @import "../../../../src/scss/variables.scss";
 @import "../../../../src/scss/mixins/utils.scss";
 
-body {
-  background-color: $black-20;
-}
-
-.sc-content-container {
-  background-color: $white;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-}
-
 *[class^=sc-grid-col] {
   margin-top: $gutter-width;
 }
 
-.sc-stripe {
-  background-color: $orange-40;
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-  margin-top: $gutter-width;
-  padding-bottom: $gutter-width;
-  text-align: center;
-  @include clearfix();
-}
-
-.sc-stripe-transparent {
-  background-color: transparent;
-}
-
 .sc-card {
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid $black-30;
   padding-bottom: $gutter-width;
   text-align: center;
   height: 100%;
@@ -91,4 +65,7 @@ as24-icon[type="arrow"] svg {
   transform: rotate(180deg);
   height: .5em;
   margin-left: $gutter-width;
+}
+as24-icon[type="t-online"] svg {
+  width: 110px;
 }
