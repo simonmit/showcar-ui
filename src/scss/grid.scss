@@ -5,6 +5,7 @@
 .sc-content-container {
   @include container;
   position: relative;
+  overflow: hidden;
 }
 
 .sc-grid-row {
