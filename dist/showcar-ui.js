@@ -1187,7 +1187,7 @@
 		    regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
 		    regexTrailingCommas = /[,]+$/,
 		    regexNonNegativeInteger = /^\d+$/,
-	
+		   
 	
 		// ( Positive or negative or unsigned integers or decimals, without or without exponents.
 		// Must include at least one digit.
@@ -1541,12 +1541,12 @@
 			    currentDescriptor,
 			    state,
 			    c,
-	
+			   
 	
 			// 2. Let position be a pointer into input, initially pointing at the start
 			//    of the string.
 			pos = 0,
-	
+			   
 	
 			// 3. Let candidates be an initially empty source set.
 			candidates = [];
@@ -1562,7 +1562,7 @@
 	
 				// 9. Descriptor parser: Let error be no.
 				var pError = false,
-	
+				   
 	
 				// 10. Let width be absent.
 				// 11. Let density be absent.
@@ -2793,7 +2793,7 @@
 	      } else r = u;return r;
 	    };
 	  }, j = function j(e) {
-	    ("query" in e) || (e.query = A.query), ("queryAll" in e) || (e.queryAll = A.queryAll);
+	    "query" in e || (e.query = A.query), "queryAll" in e || (e.queryAll = A.queryAll);
 	  }, F = ["matches", A.matchesSelector || A.webkitMatchesSelector || A.khtmlMatchesSelector || A.mozMatchesSelector || A.msMatchesSelector || A.oMatchesSelector || function (t) {
 	    var n = this.parentNode;return !!n && -1 < h.call(n.querySelectorAll(t), this);
 	  }, "closest", function (t) {
@@ -3707,7 +3707,6 @@
 	     * @returns {string} The stored value or defaultValue
 	     */
 	
-	
 	    _createClass(Storage, [{
 	        key: 'get',
 	        value: function get(key) {
@@ -3926,7 +3925,6 @@
 	            var _ref$path = _ref.path;
 	            var path = _ref$path === undefined ? "/" : _ref$path;
 	
-	
 	            // support expires in seconds
 	            if (!isNaN(parseFloat(expires)) && isFinite(expires)) {
 	                expires = new Date(Date.now() + parseInt(expires) * 1000).toUTCString();
@@ -4006,10 +4004,8 @@
 	     * @returns {Number}
 	     */
 	
-	
 	    _createClass(Pager, [{
 	        key: 'getPageUrl',
-	
 	
 	        /**
 	         * @param {Number} pageNumber
@@ -4277,31 +4273,31 @@
 	
 	!function (c) {
 	  function s(l) {
-	    if (v[l]) return v[l].exports;var h = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(h.exports, h, h.exports, s), h.loaded = !0, h.exports;
+	    if (v[l]) return v[l].exports;var t = v[l] = { exports: {}, id: l, loaded: !1 };return c[l].call(t.exports, t, t.exports, s), t.loaded = !0, t.exports;
 	  }var v = {};return s.m = c, s.c = v, s.p = "", s(0);
 	}([function (c, s, v) {
-	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "car-valuation", "close", "contract", "counselor", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "scout24", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
-	      h = {};l.forEach(function (c) {
-	    h[c.toLowerCase()] = v(1)("./" + c + ".svg");
-	  });var t = Object.create(HTMLElement.prototype);t.createdCallback = function () {
-	    this.innerHTML = h[("" + this.getAttribute("type")).toLowerCase()];
-	  }, t.attributeChangedCallback = function (c, s, v) {
-	    "type" === c && (this.innerHTML = h[("" + this.getAttribute("type")).toLowerCase()]);
+	  var l = ["android", "appIcon", "arrow", "attention", "auto24", "bodytypes/compact", "bodytypes/delivery", "bodytypes/limousine", "bodytypes/moto-chopper", "bodytypes/moto-classic", "bodytypes/moto-enduro", "bodytypes/moto-naked", "bodytypes/moto-quad", "bodytypes/moto-scooter", "bodytypes/moto-sports", "bodytypes/moto-tourer", "bodytypes/moto-touring_enduro", "bodytypes/offroad", "bodytypes/oldtimer", "bodytypes/roadster", "bodytypes/sports", "bodytypes/station", "bodytypes/van", "bubble", "bubbles", "close", "delete", "edit", "emission-badge-2", "emission-badge-3", "emission-badge-4", "facebook", "finance24", "flag/at", "flag/be", "flag/de", "flag/es", "flag/fr", "flag/it", "flag/lu", "flag/nl", "flag/pl", "googleplus", "heart", "hook", "immo24", "info", "ios", "lifestyle/familycar", "lifestyle/firstcar", "lifestyle/fourxfour", "lifestyle/fuelsaver", "lifestyle/luxury", "lifestyle/roadster-l", "location", "mail", "navigation/car", "navigation/caravan", "navigation/motocycle", "navigation/truck", "phone", "pin", "pinCar", "pinMoto", "pinterest", "search", "sharing", "star-half", "star", "t-online", "tip", "twitter", "whatsapp", "youtube"],
+	      t = {};l.forEach(function (c) {
+	    t[c.toLowerCase()] = v(1)("./" + c + ".svg");
+	  });var h = Object.create(HTMLElement.prototype);h.createdCallback = function () {
+	    this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()];
+	  }, h.attributeChangedCallback = function (c, s, v) {
+	    "type" === c && (this.innerHTML = t[("" + this.getAttribute("type")).toLowerCase()]);
 	  };try {
-	    document.registerElement("as24-icon", { prototype: t });
-	  } catch (o) {
-	    window && window.console && window.console.warn('Failed to register CustomElement "as24-icon".', o);
+	    document.registerElement("as24-icon", { prototype: h });
+	  } catch (e) {
+	    window && window.console && window.console.warn('Failed to register CustomElement "as24-icon".', e);
 	  }window.showcarIconNames = l;
 	}, function (c, s, v) {
 	  function l(c) {
-	    return v(h(c));
-	  }function h(c) {
-	    return t[c] || function () {
+	    return v(t(c));
+	  }function t(c) {
+	    return h[c] || function () {
 	      throw new Error("Cannot find module '" + c + "'.");
 	    }();
-	  }var t = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./car-valuation.svg": 27, "./close.svg": 28, "./contract.svg": 29, "./counselor.svg": 30, "./delete.svg": 31, "./edit.svg": 32, "./emission-badge-2.svg": 33, "./emission-badge-3.svg": 34, "./emission-badge-4.svg": 35, "./facebook.svg": 36, "./finance24.svg": 37, "./flag/at.svg": 38, "./flag/be.svg": 39, "./flag/de.svg": 40, "./flag/es.svg": 41, "./flag/fr.svg": 42, "./flag/it.svg": 43, "./flag/lu.svg": 44, "./flag/nl.svg": 45, "./flag/pl.svg": 46, "./googleplus.svg": 47, "./heart.svg": 48, "./hook.svg": 49, "./immo24.svg": 50, "./info.svg": 51, "./ios.svg": 52, "./lifestyle/familycar.svg": 53, "./lifestyle/firstcar.svg": 54, "./lifestyle/fourxfour.svg": 55, "./lifestyle/fuelsaver.svg": 56, "./lifestyle/luxury.svg": 57, "./lifestyle/roadster-l.svg": 58, "./location.svg": 59, "./mail.svg": 60, "./navigation/car.svg": 61, "./navigation/caravan.svg": 62, "./navigation/motocycle.svg": 63, "./navigation/truck.svg": 64, "./phone.svg": 65, "./pin.svg": 66, "./pinCar.svg": 67, "./pinMoto.svg": 68, "./pinterest.svg": 69, "./scout24.svg": 70, "./search.svg": 71, "./sharing.svg": 72, "./star-half.svg": 73, "./star.svg": 74, "./t-online.svg": 75, "./tip.svg": 76, "./twitter.svg": 77, "./whatsapp.svg": 78, "./youtube.svg": 79 };l.keys = function () {
-	    return Object.keys(t);
-	  }, l.resolve = h, c.exports = l, l.id = 1;
+	  }var h = { "./android.svg": 2, "./appIcon.svg": 3, "./arrow.svg": 4, "./attention.svg": 5, "./auto24.svg": 6, "./bodytypes/compact.svg": 7, "./bodytypes/delivery.svg": 8, "./bodytypes/limousine.svg": 9, "./bodytypes/moto-chopper.svg": 10, "./bodytypes/moto-classic.svg": 11, "./bodytypes/moto-enduro.svg": 12, "./bodytypes/moto-naked.svg": 13, "./bodytypes/moto-quad.svg": 14, "./bodytypes/moto-scooter.svg": 15, "./bodytypes/moto-sports.svg": 16, "./bodytypes/moto-tourer.svg": 17, "./bodytypes/moto-touring_enduro.svg": 18, "./bodytypes/offroad.svg": 19, "./bodytypes/oldtimer.svg": 20, "./bodytypes/roadster.svg": 21, "./bodytypes/sports.svg": 22, "./bodytypes/station.svg": 23, "./bodytypes/van.svg": 24, "./bubble.svg": 25, "./bubbles.svg": 26, "./close.svg": 27, "./delete.svg": 28, "./edit.svg": 29, "./emission-badge-2.svg": 30, "./emission-badge-3.svg": 31, "./emission-badge-4.svg": 32, "./facebook.svg": 33, "./finance24.svg": 34, "./flag/at.svg": 35, "./flag/be.svg": 36, "./flag/de.svg": 37, "./flag/es.svg": 38, "./flag/fr.svg": 39, "./flag/it.svg": 40, "./flag/lu.svg": 41, "./flag/nl.svg": 42, "./flag/pl.svg": 43, "./googleplus.svg": 44, "./heart.svg": 45, "./hook.svg": 46, "./immo24.svg": 47, "./info.svg": 48, "./ios.svg": 49, "./lifestyle/familycar.svg": 50, "./lifestyle/firstcar.svg": 51, "./lifestyle/fourxfour.svg": 52, "./lifestyle/fuelsaver.svg": 53, "./lifestyle/luxury.svg": 54, "./lifestyle/roadster-l.svg": 55, "./location.svg": 56, "./mail.svg": 57, "./navigation/car.svg": 58, "./navigation/caravan.svg": 59, "./navigation/motocycle.svg": 60, "./navigation/truck.svg": 61, "./phone.svg": 62, "./pin.svg": 63, "./pinCar.svg": 64, "./pinMoto.svg": 65, "./pinterest.svg": 66, "./search.svg": 67, "./sharing.svg": 68, "./star-half.svg": 69, "./star.svg": 70, "./t-online.svg": 71, "./tip.svg": 72, "./twitter.svg": 73, "./whatsapp.svg": 74, "./youtube.svg": 75 };l.keys = function () {
+	    return Object.keys(h);
+	  }, l.resolve = t, c.exports = l, l.id = 1;
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22"><path d="M6.2 1.7h.1c.1 0 .1-.1.1-.1L5.4 0h-.1c-.1 0-.1.1-.1.1l1 1.6zM11.7 1.7h-.1c-.1 0-.1-.1-.1-.1L12.6 0h.1c.1 0 .1.1.1.1l-1.1 1.6zM9 2.7C3.3 2.7 3 8 3 8h12s-.4-5.3-6-5.3zM6.4 6.4c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zm5.1 0c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zM2 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM18 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM7 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6zM12 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6z"/><path d="M15 17c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v7z"/></svg>';
 	}, function (c, s) {
@@ -4353,13 +4349,7 @@
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 60"><path d="M69.2 27c1.1 0 2.8 1.6 2.8 2.7v15.2c0 1-1.9 3.2-3 3.2h-3.5c-1 0-2.5 1-2.5 2v4l-5.7-5c-.4-.4-.8-1-1.3-1H43c-1 0-2-3-2-4h-4c0 3.1 2.6 7 5.7 7H55l9.5 8.4c.4.4.8.6 1.3.6.2 0 .2.1.2-.1v-8.9h3c3.1 0 6-3 6-6.2V29.7c0-3.1-2.6-5.7-5.7-5.7H59v3h10.2z" fill-rule="evenodd" clip-rule="evenodd" fill="#C4C4C4"/><path d="M48.2 37H26l-1.2.9L13 50V39l-2-2H7.5C5.4 37 4 35.8 4 33.7V7.5C4 5.4 5.4 4 7.5 4h41.1c2 0 3.4 1.4 3.4 3.5v26.1c0 2.1-1.4 3.4-3.5 3.4h-.3zm0-37H7.5C3.4 0 0 3.3 0 7.5v26.1c0 4.1 3.4 7.5 7.5 7.5L9 41v13l3.3 2 14.4-15h21.8c4.1 0 7.5-3.3 7.5-7.4V7.5C56 3.3 52.6 0 48.5 0h-.3z" fill-rule="evenodd" clip-rule="evenodd" fill="#C4C4C4"/><path fill="#FF7500" d="M10 9h34v4H10z"/><path fill="#C4C4C4" d="M10 27h22v4H10zM10 18h34v4H10z"/></svg>';
 	}, function (c, s) {
-	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="none" d="M25.236 27.96h7.383v2.218h-7.384z"/><circle fill="none" cx="36.31" cy="26.486" r="1.66"/><path fill="#949494" d="M37.715 20.562c-.893-1.58-2.104-2.934-3.908-2.934h-3.5c-.165.506-.362.997-.582 1.476h4.082c.73 0 1.275.073 2.24 1.778.1.18.636 1.18 1.1 2.65h-10.63c-1.017.942-2.17 1.73-3.43 2.34.076.19.12.397.12.613 0 .918-.742 1.66-1.66 1.66-.753 0-1.38-.502-1.585-1.19-.655.14-1.33.226-2.014.27-.056.504-.092 1.02-.092 1.55v3.617c0 .813.66 1.476 1.476 1.476h.738c.815 0 1.476-.662 1.476-1.476v-.738H36.31v.738c0 .813.66 1.476 1.477 1.476h.738c.815 0 1.476-.662 1.476-1.476v-3.617c0-3.86-1.646-7.08-2.285-8.213zm-5.096 9.616h-7.384V27.96h7.383v2.218zm3.69-2.032c-.917 0-1.66-.743-1.66-1.66 0-.918.743-1.66 1.66-1.66.916 0 1.662.742 1.662 1.66 0 .917-.746 1.66-1.662 1.66zM.33 35.834c-.68 1.18-.276 2.688.904 3.37 1.18.682 2.688.276 3.37-.903l6.833-11.836C9.9 25.81 8.507 24.884 7.3 23.76L.33 35.835z"/><path fill="#949494" d="M17.022.465C9.937.465 4.194 6.208 4.194 13.293S9.937 26.12 17.022 26.12c.37 0 .733-.024 1.095-.056.667-.056 1.317-.168 1.952-.323.76-.185 1.492-.433 2.192-.747.88-.394 1.7-.887 2.463-1.46 1.553-1.17 2.832-2.682 3.723-4.43.242-.475.452-.968.635-1.475.487-1.356.767-2.81.767-4.335C29.85 6.208 24.106.465 17.022.465zm3.753 22.907c-.67.25-1.372.435-2.098.548-.54.084-1.09.14-1.655.14-5.938 0-10.768-4.83-10.768-10.767s4.83-10.768 10.768-10.768S27.79 7.355 27.79 13.293c0 1.542-.332 3.007-.92 4.335-.227.515-.495 1.007-.797 1.476-1.25 1.94-3.105 3.45-5.298 4.268z"/><path fill="#FF7500" d="M19.816 9.208c-.292-.1-.57-.18-.828-.236-.26-.057-.607-.084-1.04-.084-.698 0-1.263.24-1.695.718-.43.48-.736 1.08-.914 1.797h4.025l-.264 1.4h-4.01l-.038.36c-.013.117-.02.23-.02.34v.35c0 .11.007.228.022.35H18.8l-.267 1.4h-3.308c.14 1.047.458 1.822.953 2.326.495.504 1.125.757 1.887.757.6 0 1.183-.114 1.756-.34v1.588c-.264.09-.565.155-.898.2-.333.045-.665.066-.993.066-.707 0-1.322-.113-1.846-.338-.523-.225-.967-.542-1.334-.946-.364-.407-.655-.893-.87-1.455-.213-.562-.365-1.18-.454-1.857h-1.55l.264-1.4h1.174c-.014-.123-.02-.24-.02-.35v-.35c0-.11.006-.224.02-.34.01-.116.025-.238.037-.36h-1.42l.265-1.4h1.344c.125-.516.3-1.017.528-1.504.228-.485.52-.915.88-1.286.358-.373.785-.67 1.277-.9.49-.227 1.072-.34 1.74-.34.44 0 .86.036 1.258.105.397.068.723.153.974.253l-.38 1.475z"/></svg>';
-	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.03 14.142L14.174 0l1.414 1.414L1.445 15.556z"/><path d="M1.415.03l14.142 14.143-1.415 1.414L0 1.445z"/></svg>';
-	}, function (c, s) {
-	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="#949494" d="M30 26.5v10.678c0 .548-.405.822-.954.822H3.154C2.604 38 2 37.726 2 37.178V3.318C2 2.77 2.604 2 3.154 2h25.892c.55 0 .954.77.954 1.32v12.09l2-2.008V3.32C32 1.67 30.693 0 29.046 0H3.154C1.507 0 0 1.672 0 3.32v33.858C0 38.825 1.507 40 3.154 40h25.892C30.693 40 32 38.825 32 37.178V24.495L30 26.5z"/><path fill="#949494" d="M39.704 12.857c-.603-.606-1.177-1.054-1.777-1.66-.602-.607-1.202 0-1.804.606l-12.7 12.806 3.005 3.032L39.13 14.834c.42-.422.856-.747.87-1.17.006-.182-.113-.622-.296-.807z"/><path fill="#FF7500" d="M19.883 30.604l.603.606 4.812-2.426-3.01-3.032"/><path fill="#949494" d="M6 8h20v2H6zM6 13h20v2H6zM6 18h17v2H6z"/><path fill="none" stroke="#FF7500" stroke-width="1.3" stroke-linejoin="round" stroke-miterlimit="10" d="M6.72 31.035s3.27-6.9 5.092-6.648c2.56.355-3.91 9.722-2.388 10.45 1.202.572 3.754-4.292 5.848-4.775.898-.208 1.78.57 1.78.57"/></svg>';
-	}, function (c, s) {
-	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="#949494" d="M36 36c0 2.207-1.792 4-4 4H8c-2.21 0-4-1.793-4-4V4c0-2.21 1.79-4 4-4h24c2.208 0 4 1.79 4 4v32zM34 4c0-1.105-.897-2-2-2H8c-1.105 0-2 .895-2 2v32c0 1.102.895 2 2 2h24c1.103 0 2-.898 2-2V4z"/><path fill="#949494" d="M10 6.998h20v2H10z"/><path fill="#FF7500" d="M10 12h20v2H10z"/><path fill="#949494" d="M10 16.998h20v2H10zM15.494 33.796l-.47-1.972h-2.457l-.47 1.972H9.955l2.547-8.714h2.665l2.547 8.714h-2.22zm-1.712-7.16l-.875 3.737h1.763l-.888-3.736zM18.925 30.752v-1.516h3.423v1.516h-3.423zM24.133 33.796V32.54l3.318-5.93h-3.16v-1.528h5.59v1.254l-3.317 5.918h3.396v1.542h-5.827z"/></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 21"><path d="M6 18c.5 0 1-.5 1-1V6c0-.5-.5-1-1-1s-1 .5-1 1v11c0 .5.5 1 1 1zM10 18c.5 0 1-.5 1-1V6c0-.5-.5-1-1-1s-1 .5-1 1v11c0 .5.5 1 1 1z"/><path d="M15 2h-4V0H5v2H1c-.5 0-1 .5-1 1v1h1v15c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4h1V3s-.5-1-1-1zm-2 17H3V4h10v15z"/></svg>';
 	}, function (c, s) {
@@ -4438,8 +4428,6 @@
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 44"><path d="M14.1 42c-.4-.5-.7-.9-1-1.3-3.6-4.9-7.6-10.8-10.5-17.5C1.2 19.9-.2 16 .9 11.7 2.4 5.1 8.2.5 15 .5c1.2 0 2.5.2 3.7.5 3.7 1 6.9 3.3 8.8 6.7 2 3.4 2.5 7.3 1.4 11.1-1.8 6.3-5.2 11.9-8.7 17-1 1.6-2.1 3-3.3 4.6-.5.7-1.1 1.5-1.6 2.2l-.4.6-.8-1.2z" fill="#FF7500"/><path d="M15 1c1.2 0 2.4.1 3.6.5 7.5 1.9 12 9.7 9.9 17.2-1.7 6.2-5.1 11.6-8.6 16.9-1.5 2.3-3.2 4.4-4.8 6.8-.6-.7-1.1-1.3-1.5-1.9C9.5 34.9 5.7 29.3 3 23 1.4 19.4.4 15.8 1.3 11.8 2.9 5.3 8.6 1 15 1m0-1C8 0 2 4.8.4 11.6c-1.1 4.5.3 8.5 1.7 11.8C5 30.1 9.1 36.1 12.7 41c.3.4.7.9 1 1.3.2.2.3.4.5.7l.8 1.1.8-1.1c.5-.7 1.1-1.5 1.6-2.2 1.1-1.6 2.2-3.1 3.3-4.6 3.4-5.2 6.9-10.7 8.7-17.2 1.1-4 .6-8-1.4-11.5s-5.3-6-9.2-7C17.6.2 16.3 0 15 0z" fill="#FFF"/><g fill="#FFF"><path d="M16.6 19.9c0-.8-.6-1.4-1.4-1.4h-.7c-.8 0-1.4.6-1.4 1.4v6.4c0 .8.6 1.4 1.4 1.4h.7c.8 0 1.4-.6 1.4-1.4v-6.4z"/><path d="M21.5 8.8h-.7c-.6 0-1.3.6-1.3 1.2v.7c-.7 0-1 .1-1 .1-.8-1.8-3-2.8-3-2.8h-1.2s-2.1 1-3 2.8c0 0-.3-.1-1-.1V10c0-.6-.7-1.2-1.3-1.2h-.8s-.8.7-.8 1.2v.7s.8.7 1.5.7l2.1.7c-.4.7-.7 1.9-.7 2.9v2.9c0 2.4.7 3.6 2.1 5v-3.6c0-.7.8-2 2.2-2h.4c1.4 0 2.3 1.2 2.3 2v3.6c1.4-1.4 2.1-2.6 2.1-5V15c0-.9-.4-2.1-.7-2.9l2.1-.7c.7 0 1.5-.7 1.5-.7V10c0-.5-.8-1.2-.8-1.2zm-6.8 5.9c-.9 0-1.7-.8-1.7-1.7 0-.9.8-1.7 1.7-1.7.9 0 1.7.8 1.7 1.7 0 1-.7 1.7-1.7 1.7z"/></g></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9 1C4.6 1 1 4.6 1 9c0 3.3 2 6.1 4.8 7.3 0-.6 0-1.2.1-1.8l1-4.4s-.3-.5-.3-1.3c0-1.2.7-2.1 1.5-2.1.9.1 1.2.6 1.2 1.3 0 .7-.5 1.8-.7 2.8-.2.9.4 1.5 1.3 1.5 1.5 0 2.5-1.9 2.5-4.3 0-1.7-1.2-3.1-3.3-3.1-2.4 0-3.9 1.8-3.9 3.8 0 .7.2 1.2.5 1.6.2.2.2.2.1.5l-.2.6c-.1.2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.7-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.7 5.5-4.3 5.5-.9 0-1.7-.5-2-1 0 0-.5 1.8-.6 2.2-.2.6-.5 1.2-.8 1.7.8.4 1.5.5 2.3.5 4.4 0 8-3.6 8-8s-3.6-8-8-8z"/></svg>';
-	}, function (c, s) {
-	  c.exports = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 210.5 74 36"><path fill="#FF7500" d="M0 246.236h65.28c4.85 0 8.72-3.983 8.72-8.65V210.5H0v35.736z"/><g fill="#003468"><path d="M8.1 241.69h-.155c-1.868 0-3.476-1.295-3.476-3.457 0-1.33 2.005-1.33 2.005 0 0 .934.605 1.47 1.47 1.47H8.1c.865 0 1.522-.45 1.522-1.314 0-2.162-5.03-2.37-5.03-5.534v-.363c0-1.85 1.85-2.957 3.353-2.957H8.1c1.78 0 3.372 1.107 3.372 2.766 0 1.28-1.988 1.314-1.988.052 0-.45-.553-.83-1.383-.83h-.155c-.76 0-1.35.415-1.35 1.07v.26c0 1.366 5.032 1.97 5.032 5.533 0 1.972-1.538 3.304-3.526 3.304zM16.798 241.69h-.156c-1.902 0-3.458-1.47-3.458-3.387v-5.395c0-1.92 1.557-3.37 3.458-3.37h.156c1.746 0 3.198 1.192 3.423 2.887.02.052.02.104.02.172 0 .623-.52.968-1.022.968-.45 0-.882-.276-.968-.864-.104-.708-.708-1.175-1.452-1.175h-.156c-.812 0-1.47.588-1.47 1.383v5.395c0 .812.674 1.4 1.47 1.4h.156c.744 0 1.35-.467 1.452-1.176.086-.587.536-.865.968-.865.52 0 1.02.346 1.02.968v.19c-.26 1.66-1.694 2.87-3.44 2.87zM25.287 241.69h-.156c-1.9 0-3.457-1.486-3.457-3.387v-5.377c0-1.92 1.557-3.39 3.458-3.39h.157c1.92 0 3.458 1.47 3.458 3.39v5.36c0 1.92-1.538 3.405-3.458 3.405zm1.453-8.764c0-.813-.64-1.4-1.452-1.4h-.156c-.812 0-1.452.604-1.452 1.4v5.36c0 .812.657 1.417 1.452 1.417h.156c.813 0 1.452-.605 1.452-1.4v-5.377zM34.417 241.69h-.155c-1.902 0-3.458-1.556-3.458-3.457v-7.693c0-.674.5-1.003 1.002-1.003.5 0 1.003.33 1.003 1.003v7.693c0 .796.656 1.47 1.452 1.47h.155c.813 0 1.47-.657 1.47-1.47v-7.693c0-.674.5-1.003 1.003-1.003s1.002.33 1.002 1.003v7.693c0 1.902-1.555 3.458-3.475 3.458zM44.982 231.628h-1.384v9.06c0 .675-.502 1.003-1.002 1.003-.502 0-1.003-.327-1.003-1v-9.062H40.21c-.657 0-1.002-.5-1.002-1.002 0-.484.346-.986 1.002-.986h4.772c.675 0 1.002.5 1.002.986 0 .5-.327 1.002-1.002 1.002zM54.32 241.587h-4.497c-.64 0-1.02-.605-1.02-1.193 0-.225.034-.433.155-.623l3.925-6.327c.208-.346.208-.536.208-.795v-.14c0-.518-.448-.984-1.036-.984H52c-.57 0-1.002.45-1.002.985v.19c0 .657-.5.985-1.002.985s-1.003-.33-1.003-.985v-.26c0-1.676 1.365-2.904 3.008-2.904h.054c1.625 0 3.043 1.21 3.043 2.905l-.017.19c0 .658-.243 1.194-.606 1.8l-3.163 5.168h3.01c.674 0 1.002.502 1.002.985 0 .503-.33 1.004-1.003 1.004zM62.22 239.22h-.38v1.47c0 .673-.502 1-1.003 1-.502 0-1.003-.327-1.003-1v-1.47H57.12c-.69 0-1.124-.38-1.124-1.055 0-.173.034-.398.104-.554l3.232-7.468c.19-.432.536-.605.883-.605.52 0 1.037.397 1.037.968 0 .14-.018.277-.086.434l-2.853 6.29h1.52v-1c0-.66.503-1.004 1.004-1.004.502 0 1.003.33 1.003 1.003v1h.38c.674 0 1.003.485 1.003.987 0 .5-.33 1.002-1.003 1.002z"/></g></svg>';
 	}, function (c, s) {
 	  c.exports = '<svg viewBox="0 0 17 20" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M7 2.2c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5m0 12c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7M16.146 16.824l-2.96-3.808c-.803.855-1.774 1.547-2.87 2.012l3.06 3.933c.287.613.904 1.04 1.625 1.04.994 0 1.8-.806 1.8-1.8 0-.556-.257-1.046-.653-1.376"/></g></svg>';
 	}, function (c, s) {
@@ -4617,7 +4605,6 @@
 	     * @event Navigation#onKeyDown
 	     * @event Navigation#onKeyUp
 	     */
-	
 	
 	    _createClass(Navigation, [{
 	        key: 'initEvents',
@@ -5054,7 +5041,6 @@
 	     * @param {HTMLElement} element
 	     */
 	
-	
 	    _createClass(ContainerHandler, [{
 	        key: 'createNotification',
 	        value: function createNotification(element) {
@@ -5094,7 +5080,7 @@
 	    }, {
 	        key: 'addNotificationToContainer',
 	        value: function addNotificationToContainer(notification) {
-	            var container = void 0;
+	            var container = undefined;
 	
 	            if (!this.hasContainer(notification.targetName)) {
 	                container = this.createContainer(notification.targetName);
@@ -5126,9 +5112,9 @@
 	
 	            // cleanup old containers without notifications
 	            if (this.hasContainer(previous)) {
-	                var _container = this.getContainer(previous);
-	                if (_container.childNodes.length < 1) {
-	                    _container.remove();
+	                var container = this.getContainer(previous);
+	                if (container.childNodes.length < 1) {
+	                    container.remove();
 	                    delete this.containers[previous];
 	                }
 	            }
@@ -5374,10 +5360,8 @@
 	     * @returns {Array}
 	     */
 	
-	
 	    _createClass(Container, [{
 	        key: 'remove',
-	
 	
 	        /**
 	         * @returns {Node}
