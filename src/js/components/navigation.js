@@ -104,6 +104,12 @@ class Navigation {
     }
 
     openMenu() {
+        if (!this.activeMenu) {
+            // quick fix when active menu doesn't exists because of any unknown reason
+            // TODO: fix it properly
+            return;
+        }
+        
         this.activeMenu.addClass('open');
         this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
         this.menuIsOpen = true;
@@ -202,12 +208,24 @@ class Navigation {
     }
 
     handleJumpRight() {
+        if (!this.activeMenu) {
+            // quick fix when active menu doesn't exists because of any unknown reason
+            // TODO: fix it properly
+            return;
+        }
+
         let current = this.menus.indexOf(this.activeMenu[0]);
         let newMenuIdx = this.menus.length - 1 > current ? newMenuIdx = current + 1 : 0;
         this.selectMenu(this.menus[newMenuIdx]);
     }
 
     handleJumpLeft() {
+        if (!this.activeMenu) {
+            // quick fix when active menu doesn't exists because of any unknown reason
+            // TODO: fix it properly
+            return;
+        }
+
         let current = this.menus.indexOf(this.activeMenu[0]);
         let newMenuIdx = (0 < current) ? current - 1 : this.menus.length - 1;
         this.selectMenu(this.menus[newMenuIdx]);
