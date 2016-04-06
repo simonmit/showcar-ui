@@ -2,11 +2,6 @@
 @import "mixins/utils";
 @import "mixins/ellipsis";
 
-.sc-content-container {
-  border-left: 1px solid $black-30;
-  border-right: 1px solid $black-30;
-}
-
 .sc-clearfix {
   @include clearfix;
 }
