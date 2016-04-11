@@ -1,4 +1,6 @@
 before_script:
   - npm install
   - npm run bower install
+
+build:
   - npm run grunt
