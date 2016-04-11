@@ -5,3 +5,6 @@ build:
      - npm install -s
      - node node_modules/bower/bin/bower install
      - npm run grunt
+  artifacts:
+    paths:
+      - dist
