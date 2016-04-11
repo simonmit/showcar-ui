@@ -1,6 +1,7 @@
-before_script:
-  - npm install
-  - npm run bower install
+image: node:4.2.2
 
 build:
-  - npm run grunt
+  script:
+     - npm install
+     - npm run bower install
+     - npm run grunt
