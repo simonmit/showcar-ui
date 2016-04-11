@@ -4,7 +4,7 @@ as24-notification {
   display: block;
   overflow: hidden;
   width: 100%;
-  z-index: 9999;
+  z-index: 8000;
   max-height: 0;
   transition: max-height $transition-time ease-out;
 
