@@ -5,8 +5,6 @@ module.exports = (function() {
     return {
         options: {
             outputStyle: DEBUG ? 'expanded' : 'compressed',
-            sourceMap: DEBUG,
-            sourceMapEmbed: true,
             includePaths: [
                 'vendor/susy/sass/susy'
             ]

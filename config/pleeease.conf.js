@@ -4,8 +4,15 @@ module.exports = (function() {
 
     return {
         options: {
+            "in": "dist/showcar-ui.css",
+            "out": "dist/showcar-ui.css",
             autoprefixer: {'browsers': ['last 2 versions', '> 5%']},
-            minifier: !DEBUG
+            minifier: !DEBUG,
+            sourcemaps: {
+                map: {
+                    inline: false
+                }
+            }
         },
         files: {
             'dist/': 'dist/*.css'
