@@ -3,5 +3,5 @@ image: node:4.2.2
 build:
   script:
      - npm install
-     - npm run bower install
+     - npm run bower install --allow-root
      - npm run grunt
