@@ -1,5 +1,9 @@
 image: node:5
 
+cache:
+  paths:
+    - node_modules/
+
 build:
   script:
      - npm install -s
