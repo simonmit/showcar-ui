@@ -10,8 +10,7 @@ module.exports = (function() {
             ]
         },
         files: [
-            {dest: 'dist/showcar-ui.css', src: 'src/scss/showcar-ui.scss'},
-            {dest: 'dist/showcar-ui-namespaced.css', src: 'src/scss/showcar-ui-namespaced.scss'},
+            {dest: '<%= assetVersion %>.css', src: 'src/scss/showcar-ui.scss'},
             {dest: 'docs/css/documentation.css', src: 'docs/css/documentation.scss'},
             {
                 expand: true,
