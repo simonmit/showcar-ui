@@ -6,14 +6,13 @@ module.exports = (function() {
         options: {
             autoprefixer: {'browsers': ['last 2 versions', '> 5%']},
             minifier: !DEBUG,
-            sourcemaps: {
-                map: {
-                    inline: false
-                }
-            }
+            sourcemaps: false,
+            rem: false,
+            opacity: false,
+            mqpacker: true
         },
-        files: {
-            'dist/': 'dist/*.css'
-        }
+        files: [
+            {dest: '<%= assetVersion %>.css', src: '<%= assetVersion %>.css'}
+        ]
     };
 })();

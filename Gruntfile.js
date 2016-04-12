@@ -9,19 +9,18 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig(Object.assign({
+        assetVersion: "./dist/" + (new Date).getTime() + "-" + process.env.CI_BUILD_REF + "/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
-        uglify: loadConfig("uglify"),
         sass: loadConfig("sass"),
-        copy: loadConfig("copy"),
         watch: loadConfig("watch"),
         pleeease: loadConfig("pleeease"),
         assemble: loadConfig("assemble"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
     }, loadConfig("webdriver", 'webdriver')));
 
-    grunt.registerTask("build", ["sass", "webpack", "copy"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "uglify", "copy","assemble"]);
+    grunt.registerTask("build", ["sass", "webpack"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble"]);
 
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);

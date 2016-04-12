@@ -1,8 +1,6 @@
 module.exports = () => {
     'use strict';
 
-    let needsPlaceholderPolyfill = !('placeholder' in document.createElement('input'));
-
     let isDom4Browser = document.head
         && ('matches' in document.head)
         && ('classList' in document.head)
@@ -14,19 +12,16 @@ module.exports = () => {
         && 'keys' in Object
         && 'trim' in String.prototype;
 
-    require('document-register-element/build/document-register-element.js');
-    require('picturefill/dist/picturefill.js');
-    require('array.from/array-from.js');
+    require('document-register-element');
+    require('picturefill');
+    require('array.from');
 
     if (!isDom4Browser) {
-        require('dom4/build/dom4.js');
+        require('dom4');
     }
-    if (!isEs5Browser) {
-        require('es5-shim/es5-shim.min.js');
-    }
-    if (needsPlaceholderPolyfill) {
-        //check if this is required anymore and can be dropped - midler, 09.02.2016
-        //needed only for IE9 support
-        require('placeholders/dist/placeholders.min.js');
-    }
+
+    // TODO: check whether we need this
+    //if (!isEs5Browser) {
+    //    require('es5-shim/es5-shim.min.js');
+    //}
 };
