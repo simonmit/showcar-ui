@@ -12,7 +12,7 @@ module.exports = (function() {
             mqpacker: true
         },
         files: [
-            {dest: '<%= assetVersion %>.css', src: '<%= assetVersion %>.css'}
+            {dest: '<%= buildDestination %>.css', src: '<%= buildDestination %>.css'}
         ]
     };
 })();

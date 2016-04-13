@@ -2,7 +2,7 @@ const webpack = require("webpack");
 
 module.exports = {
     entry: "./src/js/showcar-ui.js",
-    output: {filename: "<%= assetVersion %>.js"},
+    output: {filename: "<%= buildDestination %>.js"},
     module: {
         loaders: [{test: /\.js$/, loader: "babel?presets[]=es2015"}]
     },

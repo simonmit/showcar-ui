@@ -10,7 +10,7 @@ module.exports = (function() {
             ]
         },
         files: [
-            {dest: '<%= assetVersion %>.css', src: 'src/scss/showcar-ui.scss'},
+            {dest: '<%= buildDestination %>.css', src: 'src/scss/showcar-ui.scss'},
             {dest: 'docs/css/documentation.css', src: 'docs/css/documentation.scss'},
             {
                 expand: true,

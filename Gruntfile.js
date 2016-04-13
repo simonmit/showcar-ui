@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig(assign({
-        assetVersion: "./dist/" + (new Date).getTime() + "-" + process.env.CI_BUILD_REF + "/showcar-ui",
+        buildDestination: "./dist/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
         sass: loadConfig("sass"),
