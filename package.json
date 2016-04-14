@@ -34,6 +34,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-inline": "^0.3.6",
     "grunt-pleeease": "^1.4.0",
     "grunt-sass": "^1.1.0",
     "grunt-selenium-standalone": "git+https://github.com/JSMike/grunt-selenium-standalone.git",

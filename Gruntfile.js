@@ -35,12 +35,13 @@ module.exports = function(grunt) {
         sass: loadConfig("sass"),
         watch: loadConfig("watch"),
         pleeease: loadConfig("pleeease"),
+        inline: loadConfig("inline"),
         assemble: loadConfig("assemble"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
     }, loadConfig("webdriver", 'webdriver')));
 
     grunt.registerTask("build", ["sass", "webpack"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "inline", "assemble"]);
 
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);
