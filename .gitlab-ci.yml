@@ -4,8 +4,6 @@ before_script:
   - apt-get -qq update
   - apt-get -qq install -y python2.7 python2.7-dev build-essential make gcc g++ libicu-dev
   - apt-get install -yqq ruby ruby-dev
-  - npm install --silent
-  - node node_modules/bower/bin/bower install
 
 cache:
   paths:
@@ -20,6 +18,8 @@ build_master_and_deploy:
   only:
     - master
   script:
+    - npm install --silent
+    - node node_modules/bower/bin/bower install
     - npm run grunt
     - gem install dpl
     - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/prod
@@ -32,6 +32,8 @@ build_develop_and_deploy:
   only:
     - develop
   script:
+    - npm install --silent
+    - node node_modules/bower/bin/bower install
     - npm run grunt
     - gem install dpl
     - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/latest
