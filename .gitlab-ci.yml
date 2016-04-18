@@ -13,7 +13,6 @@ cache:
 
 stages:
   - build
-  - clean_up
 
 build_master_and_deploy:
   stage: build
@@ -22,7 +21,7 @@ build_master_and_deploy:
   script:
     - npm run grunt
     - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/prod
+    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/prod
   artifacts:
     paths:
       - dist
@@ -34,14 +33,7 @@ build_develop_and_deploy:
   script:
     - npm run grunt
     - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/latest
+    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/latest
   artifacts:
     paths:
       - dist
-
-clean_up_job:
-  stage: clean_up
-  script:
-    - rm -rf node_modules
-    - rm -rf ~/.node-gyp
-  when: on_failure

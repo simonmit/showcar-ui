@@ -29,7 +29,9 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig(assign({
-        buildDestination: "./dist/showcar-ui",
+        buildDest: process.env.CI_BUILD_REF_NAME || 'latest',
+        versionPrefix: process.env.CI_BUILD_REF ? ('-' + process.env.CI_BUILD_REF) : '',
+        buildDestination: "./dist/showcar-ui<%= versionPrefix %>",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
         sass: loadConfig("sass"),
@@ -37,11 +39,14 @@ module.exports = function(grunt) {
         pleeease: loadConfig("pleeease"),
         inline: loadConfig("inline"),
         assemble: loadConfig("assemble"),
+        snippet: loadConfig("snippet"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
     }, loadConfig("webdriver", 'webdriver')));
 
+    grunt.loadTasks('./tasks/snippet');
+
     grunt.registerTask("build", ["sass", "webpack"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "inline", "assemble"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet", "inline"]);
 
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);

@@ -2,6 +2,6 @@ module.exports = {
     options: {
       uglify: true
     },
-    src: 'src/html/inline.html',
-    dest: '<%= buildDestination %>.html'
+    src: 'dist/index.html',
+    dest: 'dist/index.html'
 };
