@@ -1,11 +1,8 @@
-image: node:4
-
-before_script:
-  - npm cache clean
+image: node:5
 
 cache:
   paths:
-    - node_modules/
+    - node_modules
 
 stages:
   - build
