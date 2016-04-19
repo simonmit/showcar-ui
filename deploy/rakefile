@@ -10,7 +10,7 @@ Aws.use_bundled_cert!
 
 SERVICE = 'showcar-ui'
 REGION = ENV['REGION'] || 'eu-west-1'
-S3_ARTIFACTS_BUCKET = (ENV['SANDBOX'] || "as24") + "-showcar-ui.aws.autoscout24.com"
+S3_ARTIFACTS_BUCKET = (ENV['SANDBOX'] || "as24") + "-assets-eu-west-1/showcar-ui"
 VERSION  = ENV['VERSION'] || ENV['GO_PIPELINE_LABEL']
 SANDBOX  = ENV['SANDBOX'] || ENV['GO_JOB_NAME'].nil? && `whoami`.strip
 STACK    = SANDBOX ? "#{SANDBOX}-#{SERVICE}" : SERVICE
@@ -83,9 +83,7 @@ desc "publish"
 task :publish do
   Dir.chdir('../')
   dist = Dir['dist/**/*'].select { |f| File.file?(f) }
-  docs = Dir['docs/**/*'].select { |f| File.file?(f) }
-  examples = Dir['examples/**/*'].select { |f| File.file?(f) }
-  artifacts = dist + docs + examples
+  artifacts = dist
 
   s3 = Aws::S3::Client.new
 
