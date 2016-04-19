@@ -1,9 +1,9 @@
 image: node:5
 
 before_script:
-  - apt-get -qq update
-  - apt-get -qq install -y python2.7 python2.7-dev build-essential make gcc g++ libicu-dev
-  - apt-get install -yqq ruby ruby-dev
+#  - apt-get -qq update
+#  - apt-get -qq install -y python2.7 python2.7-dev build-essential make gcc g++ libicu-dev
+#  - apt-get install -yqq ruby ruby-dev
   - npm cache clean
 
 cache:
@@ -21,8 +21,8 @@ build_master_and_deploy:
     - npm install
     - node node_modules/bower/bin/bower install
     - npm run grunt
-    - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --access-key-id= --secret-access-key= --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/master
+#    - gem install dpl
+#    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --access-key-id= --secret-access-key= --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/master
   artifacts:
     paths:
       - dist
@@ -35,8 +35,8 @@ build_develop_and_deploy:
     - npm install
     - node node_modules/bower/bin/bower install
     - npm run grunt
-    - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --access-key-id= --secret-access-key= --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/develop
+#    - gem install dpl
+#    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --access-key-id= --secret-access-key= --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/develop
   artifacts:
     paths:
       - dist
