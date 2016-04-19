@@ -1,12 +1,7 @@
-image: node:5
+image: node:4
 
 before_script:
-  - apt-get -qq update
-  - apt-get -qq install -y python2.7 python2.7-dev build-essential make gcc g++ libicu-dev
-  - apt-get install -yqq ruby ruby-dev
-  - npm -g update npm --silent
-  - npm install --silent
-  - node node_modules/bower/bin/bower install
+  - npm cache clean
 
 cache:
   paths:
@@ -14,16 +9,15 @@ cache:
 
 stages:
   - build
-  - clean_up
 
 build_master_and_deploy:
   stage: build
   only:
     - master
   script:
+    - npm install
+    - node node_modules/bower/bin/bower install
     - npm run grunt
-    - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/prod
   artifacts:
     paths:
       - dist
@@ -33,16 +27,9 @@ build_develop_and_deploy:
   only:
     - develop
   script:
+    - npm install
+    - node node_modules/bower/bin/bower install
     - npm run grunt
-    - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-showcar-ui --local-dir=dist --upload-dir=/latest
   artifacts:
     paths:
       - dist
-
-clean_up_job:
-  stage: clean_up
-  script:
-    - rm -rf node_modules
-    - rm -rf ~/.node-gyp
-  when: on_failure
