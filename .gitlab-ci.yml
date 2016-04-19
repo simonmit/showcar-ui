@@ -21,7 +21,7 @@ build_master_and_deploy:
   script:
     - npm run grunt
     - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/prod
+    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/master
   artifacts:
     paths:
       - dist
@@ -33,7 +33,7 @@ build_develop_and_deploy:
   script:
     - npm run grunt
     - gem install dpl
-    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/latest
+    - dpl --skip_cleanup --provider=s3 --region=eu-west-1 --bucket=as24-assets-eu-west-1 --local-dir=dist --upload-dir=/showcar-ui/develop
   artifacts:
     paths:
       - dist
