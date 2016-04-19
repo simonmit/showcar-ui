@@ -12,6 +12,7 @@ cache:
 
 stages:
   - build
+  - show_logs
 
 build_master_and_deploy:
   stage: build
@@ -40,3 +41,9 @@ build_develop_and_deploy:
   artifacts:
     paths:
       - dist
+
+npm_log:
+  stage: show_logs
+  script:
+    - tail -n 100 npm-debug.log
+  when: on_failure
