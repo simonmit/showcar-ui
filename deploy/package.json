@@ -1,0 +1,14 @@
+{
+  "name": "showcar-deploy-to-s3",
+  "version": "1.0.0",
+  "description": "Deploy script",
+  "main": "deploy_to_s3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.3.3"
+  }
+}
