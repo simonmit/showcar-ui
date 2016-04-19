@@ -36,7 +36,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-inline": "^0.3.6",
     "grunt-pleeease": "^1.4.0",
-    "grunt-sass": "^1.1.0",
+    "grunt-sass": "^1.2.0-beta",
     "grunt-selenium-standalone": "git+https://github.com/JSMike/grunt-selenium-standalone.git",
     "grunt-webdriver": "^1.0.0",
     "grunt-webpack": "^1.0.11",
