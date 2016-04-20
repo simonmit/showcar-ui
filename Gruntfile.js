@@ -40,6 +40,7 @@ module.exports = function(grunt) {
         pleeease: loadConfig("pleeease"),
         inline: loadConfig("inline"),
         assemble: loadConfig("assemble"),
+        copy: loadConfig("copy"),
         snippet: loadConfig("snippet"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
     }, loadConfig("webdriver", 'webdriver')));
@@ -47,7 +48,7 @@ module.exports = function(grunt) {
     grunt.loadTasks('./tasks/snippet');
 
     grunt.registerTask("build", ["sass", "webpack"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet", "inline"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet", "inline", "copy"]);
 
     grunt.registerTask("default", ["dist"]);
     grunt.registerTask("docs", ["assemble"]);
