@@ -9,11 +9,11 @@ var chalk = require('chalk');
 
 AWS.config.region = 'eu-west-1';
 
-var localDirPath = process.argv[2];
+var localDirPath = path.join(__dirname, process.argv[2]);
 var remoteDirName = process.argv[3] + '/' + process.env.CI_BUILD_REF_NAME + '/' + process.env.CI_BUILD_REF;
 
-chalk.blue('Local path is: ', localDirPath);
-chalk.blue('Remote path is: ', remoteDirName);
+console.log(chalk.cyan('Local path is: ', localDirPath));
+console.log(chalk.cyan('Remote path is: ', remoteDirName));
 
 readLocalDir(localDirPath)
     .then(filterDotDirs)
@@ -21,50 +21,55 @@ readLocalDir(localDirPath)
     .then(mapFilesToStreams)
     .then(function(streams) {
         streams.forEach(uploadFile(remoteDirName))
+    }).catch(function(err) {
+        console.log(chalk.red('Error: ', err));
     });
 
 function readLocalDir(localPath) {
-    chalk.blue('Reading local dir: ', localPath);
+    console.log(chalk.cyan('Reading local dir: ', localPath));
 
     return Q.nfcall(fs.readdir, localPath);
 }
 
 function filterDotDirs(filesList) {
-    chalk.blue('Files list is here: ', filesList.join("\n"));
+    console.log(chalk.cyan('Files list is here: ', filesList.join(', ')));
 
-    Q.when(filesList
-        .filter(function(fileName) {
-            return ['..', '.'].indexOf(fileName) === -1;
-        })
-    );
+    return Q.when(filesList.filter(function(fileName) {
+        return ['..', '.'].indexOf(fileName) === -1;
+    }));
 }
 
 function mapFilesToFullPaths(localDirPath) {
     return function(filesList) {
-        filesList.map(function(fileName) {
+        console.log(chalk.cyan('Map files list to list of full paths'));
+
+        return filesList.map(function(fileName) {
             return path.join(localDirPath, fileName);
         });
     };
 }
 
 function mapFilesToStreams(filesPaths) {
-    chalk.blue('Create files streams');
+    console.log(chalk.cyan('Create files streams'));
 
     return filesPaths.map(function(filePath) {
-        return fs.createReadStream(filePath);
+        return {
+            fileStream: fs.createReadStream(filePath),
+            fileName: path.basename(filePath)
+        };
     });
 }
 
 function uploadFile(remotePath) {
-    return function(stream) {
-        var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: remotePath + '/' + stream}});
-        S3.upload({Body: body})
+    return function(payload) {
+        var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: remotePath + '/' + payload.fileName}});
+        S3.upload({Body: payload.fileStream})
             .on('httpUploadProgress', function(evt) {
-                chalk.green('File ' + evt.key + ' is ' + (evt.loaded * 100 / evt.total) + '% loaded');
+                console.log(chalk.green('File ' + evt.key + ' is ' + Math.floor(evt.loaded * 100 / evt.total) + '% loaded'));
             })
             .send(function(err, data) {
-                if (err) return chalk.red(err);
-                return chalk.green('Uploading of ' + data.key + ' is done!\n\tIt is located at ' + data.Location);
+                if (err) return console.log(chalk.red(err));
+                return console.log(chalk.green('Uploading of ' + data.key + ' is done!\n\tIt is located at ' + data.Location));
             });
     };
 }
