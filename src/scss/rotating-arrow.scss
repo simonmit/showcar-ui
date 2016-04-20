@@ -1,5 +1,5 @@
 [data-toggle="arrow"] {
-  &:after {
+  &::after {
     display: inline-block;
     content: '';
     width: 20px;
@@ -9,8 +9,7 @@
     transition: 0.3s ease-in-out;
   }
 
-  &.open:after {
+  &.open::after {
     transform: rotate(-180deg);
   }
 }
-

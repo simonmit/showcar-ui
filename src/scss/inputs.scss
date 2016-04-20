@@ -2,153 +2,166 @@
 @import "mixins/inputs";
 @import "mixins/select";
 
-input[type="text"], input[type="tel"], input[type="number"], input[type="email"], textarea, select, custom-dropdown {
-    &.sc-input {
-        @include input();
-        font-family: inherit;
-        border-radius: $form-border-radius;
-        border: 1px solid #959595; // TODO: color: correct?
-        color: $black-100;
-        width: 100%;
-        line-height: 1.5;
-        transition: all $transition-time ease-in;
-        outline: none;
-        cursor: pointer;
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+textarea,
+select,
+custom-dropdown {
+  &.sc-input {
+    @include input();
+    font-family: inherit;
+    border-radius: $form-border-radius;
+    border: 1px solid #959595; // TODO: color: correct?
+    color: $black-100;
+    width: 100%;
+    line-height: 1.5;
+    transition: all $transition-time ease-in;
+    outline: none;
+    cursor: pointer;
 
-        &.error {
-            border-color: $color-error;
-            background-color: $color-error-message;
-        }
-
-        &.success {
-            border-color: $color-success;
-            background-color: $color-success-message;
-        }
-
-        &.info {
-            border-color: $color-info;
-            background-color: $color-info-message;
-        }
-
-        &:disabled {
-            background-color: $white;
-            border-color: $black-40;
-            color: $black-40;
-            cursor: not-allowed;
-        }
-
-        &:hover:enabled {
-            border-color: $black-100;
-        }
-
-        &:focus:enabled {
-            box-shadow: 0 0 1px 0 $blue-80 ;
-            border-color: $blue-80;
-        }
-
-        &:invalid {
-            box-shadow: none;
-        }
-
-        &::-webkit-input-placeholder {
-            color: #939393;
-        }
-        // CHECK: color correct?
-        &:-moz-placeholder {
-            color: #939393;
-        }
-        &::-moz-placeholder {
-            color: #939393;
-        }
-        &:-ms-input-placeholder {
-            color: #939393;
-        }
-
-        &:focus::-webkit-input-placeholder {
-            color: transparent;
-        }
-        &:focus:-moz-placeholder {
-            color: transparent;
-        }
-        &:focus::-moz-placeholder {
-            color: transparent;
-        }
-        &:focus:-ms-input-placeholder {
-            color: transparent;
-        }
+    &.error {
+      border-color: $color-error;
+      background-color: $color-error-message;
     }
+
+    &.success {
+      border-color: $color-success;
+      background-color: $color-success-message;
+    }
+
+    &.info {
+      border-color: $color-info;
+      background-color: $color-info-message;
+    }
+
+    &:disabled {
+      background-color: $white;
+      border-color: $black-40;
+      color: $black-40;
+      cursor: not-allowed;
+    }
+
+    &:hover:enabled {
+      border-color: $black-100;
+    }
+
+    &:focus:enabled {
+      box-shadow: 0 0 1px 0 $blue-80;
+      border-color: $blue-80;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #939393;
+    }
+
+    // CHECK: color correct?
+    &:-moz-placeholder {
+      color: #939393;
+    }
+
+    &::-moz-placeholder {
+      color: #939393;
+    }
+
+    &:-ms-input-placeholder {
+      color: #939393;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
 }
 
 textarea.sc-input {
-    height: auto !important;
+  height: auto !important;
 }
 
 // TODO: check that original radio box is hidden on all devices and in all browsers
-input[type="radio"], input[type="checkbox"] {
-    &.sc-input {
-        display: block;
-        opacity: 0;
-        position: absolute;
+input[type="radio"],
+input[type="checkbox"] {
+  &.sc-input {
+    display: block;
+    opacity: 0;
+    position: absolute;
 
-        &.block + label {
-            display: block;
-        }
-
-        & + label {
-            @include avoid-selection();
-            line-height: 1.5rem;
-            display: inline-block;
-            position: relative;
-            margin-right: 16px;
-            cursor: pointer;
-
-            &:before {
-                content: '';
-                display: block;
-                background-size: cover;
-                position: absolute;
-                left: 0;
-                top: 0;
-                border: 1px solid #939393;
-                transition: border-color $transition-time ease-in;
-            }
-
-            &:after {
-                transition: border-color $transition-time ease-in;
-            }
-        }
-
-        &:disabled + label:before {
-            opacity: 0.45;
-        }
-
-        &:disabled + label {
-            cursor: not-allowed;
-            color: $black-40;
-        }
-
-        &:enabled + label:hover:before {
-            border-color: $black-100;
-        }
-
-        &:focus:enabled + label:before {
-            border-color: $blue-80;
-        }
+    &.block + label {
+      display: block;
     }
+
+    & + label {
+      @include avoid-selection();
+      line-height: 1.5rem;
+      display: inline-block;
+      position: relative;
+      margin-right: 16px;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #939393;
+        transition: border-color $transition-time ease-in;
+      }
+
+      &::after {
+        transition: border-color $transition-time ease-in;
+      }
+    }
+
+    &:disabled + label::before {
+      opacity: 0.45;
+    }
+
+    &:disabled + label {
+      cursor: not-allowed;
+      color: $black-40;
+    }
+
+    &:enabled + label:hover::before {
+      border-color: $black-100;
+    }
+
+    &:focus:enabled + label::before {
+      border-color: $blue-80;
+    }
+  }
 }
 
 input[type="radio"] {
-    &.sc-input {
-        @include radiobutton();
-    }
+  &.sc-input {
+    @include radiobutton();
+  }
 }
 
 input[type="checkbox"] {
-    &.sc-input {
-        @include checkbox();
-    }
+  &.sc-input {
+    @include checkbox();
+  }
 }
 
 select.sc-input {
-    @include select();
+  @include select();
 }

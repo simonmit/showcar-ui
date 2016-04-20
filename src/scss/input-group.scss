@@ -1,47 +1,52 @@
 @import "mixins/input-group";
 
 .sc-input-group {
-    @include input-group;
-    border: none;
+  @include input-group;
+  border: none;
 
-    > * {
-        position: relative;
-        width: 100%;
-        padding: 0 14px;
+  > * {
+    position: relative;
+    width: 100%;
+    padding: 0 14px;
 
-        &:first-child:not(:last-child) {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        &:last-child:not(:first-child) {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            margin-left: -1px;
-        }
-        &:not(:first-child):not(:last-child) {
-            border-radius: 0;
-            margin-left: -1px;
-        }
-        &:hover,
-        &:focus {
-            z-index: 2;
-        }
+    &:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
+
+    &:last-child:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -1px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -1px;
+    }
+
+    &:hover,
+    &:focus {
+      z-index: 2;
+    }
+  }
 }
+
 .sc-input-group-radio {
-    @include input-group-radio;
+  @include input-group-radio;
 
-    > label {
-        position: relative;
-        width: 100%;
-        padding: 5px 14px!important;
+  > label {
+    position: relative;
+    width: 100%;
+    padding: 5px 14px !important;
 
-        as24-icon {
-            line-height: 0;
-            display: block;
-        }
-        &:before {
-            background-image: none!important;
-        }
+    as24-icon {
+      line-height: 0;
+      display: block;
     }
+
+    &::before {
+      background-image: none !important;
+    }
+  }
 }

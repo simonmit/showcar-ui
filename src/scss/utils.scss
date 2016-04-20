@@ -9,6 +9,7 @@
 .sc-pull-right {
   float: right !important;
 }
+
 .sc-pull-left {
   float: left !important;
 }
@@ -16,15 +17,19 @@
 .sc-text-left {
   text-align: left;
 }
+
 .sc-text-right {
   text-align: right;
 }
+
 .sc-text-center {
   text-align: center;
 }
+
 .sc-text-justify {
   text-align: justify;
 }
+
 .sc-text-nowrap {
   white-space: nowrap;
 }
@@ -42,9 +47,11 @@
 .sc-hidden {
   display: none;
 }
+
 .sc-visible {
   display: initial;
 }
+
 //xl viewport
 @include mqmin($viewportXL) {
   .sc-hidden-xl {
@@ -54,6 +61,7 @@
     display: initial;
   }
 }
+
 //l viewport
 @include mqmax($viewportXL - 1) {
   .sc-hidden-l {
@@ -63,6 +71,7 @@
     display: initial;
   }
 }
+
 //m viewport
 @include mqmax($viewportL - 1) {
   .sc-hidden-m {
@@ -72,6 +81,7 @@
     display: initial;
   }
 }
+
 //s viewport
 @include mqmax($viewportM - 1) {
   .sc-hidden-s {
@@ -91,18 +101,19 @@
 }
 
 .sc-telekom-bar {
-    padding-right: $XL;
-    text-align: right;
-    as24-icon[type="t-online"] {
-        height: $XL - 1;
-    }
+  padding-right: $XL;
+  text-align: right;
+  as24-icon[type="t-online"] {
+    height: $XL - 1;
+  }
 }
 
 .sc-section {
-    border-bottom: 1px solid $black-30;
-    background-color: $white;
-    padding: 0 $XL;
-    &.sc-section-transparent {
-        background-color: transparent;
-    }
+  border-bottom: 1px solid $black-30;
+  background-color: $white;
+  padding: 0 $XL;
+
+  &.sc-section-transparent {
+    background-color: transparent;
+  }
 }

@@ -17,9 +17,12 @@
  * DEPRECATED: only for compatibility
  * TODO: remove asap
  */
-.sc-btn-bob-l, .sc-btn-bob-m {
+.sc-btn-bob-l,
+.sc-btn-bob-m {
   @include button(bob);
 }
-.sc-btn-ross-l, .sc-btn-ross-m {
+
+.sc-btn-ross-l,
+.sc-btn-ross-m {
   @include button(ross);
 }

@@ -1,10 +1,10 @@
 @import "variables";
-
 @import "mixins/meyer-reset";
 @include meyer-reset;
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -17,7 +17,8 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-body, &[data-showcar-ui] {
+body,
+&[data-showcar-ui] {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   line-height: 1.382;
@@ -26,9 +27,12 @@ body, &[data-showcar-ui] {
   background-color: $black-20;
 }
 
-
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 

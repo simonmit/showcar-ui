@@ -1,9 +1,10 @@
 @import "mixins/links";
 
-a, .sc-link {
+a,
+.sc-link {
   @include link;
 }
 
 .sc-inline-link {
-  @include link($variant: black)
+  @include link($variant: black);
 }

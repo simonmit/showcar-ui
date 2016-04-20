@@ -1,14 +1,15 @@
-button, input[type=submit] {
-    font-family: inherit; //Source Sans Pro, sans-serif;
-    cursor: pointer;
-    line-height: 1.5;
+button,
+input[type=submit] {
+  font-family: inherit; //Source Sans Pro, sans-serif;
+  cursor: pointer;
+  line-height: 1.5;
 
-    &[disabled] {
-        cursor: not-allowed;
-    }
+  &[disabled] {
+    cursor: not-allowed;
+  }
 
-    &::-moz-focus-inner {
-        border:0;
-        padding:0;
-    }
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }

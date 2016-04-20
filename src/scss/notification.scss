@@ -11,6 +11,7 @@ as24-notification {
   &.prefade {
     transition-duration: 0;
   }
+
   &.show {
     transition: max-height $transition-time ease-in;
     max-height: 71px;

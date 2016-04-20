@@ -1,69 +1,72 @@
 @import "../variables";
 
 %input-group {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 
-    > * {
-        display: inline-block;
-        min-width: 0;
-    }
+  > * {
+    display: inline-block;
+    min-width: 0;
+  }
 }
 
 %input-group-radio {
-    @extend %input-group;
+  @extend %input-group;
 
-    border: 1px solid $black-60;
-    border-radius: $form-border-radius;
-    font-weight: 400;
+  border: 1px solid $black-60;
+  border-radius: $form-border-radius;
+  font-weight: 400;
 
-    input[type=radio] {
-        display: none;
+  input[type=radio] {
+    display: none;
 
-        &:checked {
-            & + label {
-                &:before{
-                    border: none;
-                    background-image: none;
-                }
-            }
+    &:checked {
+      & + label {
+        &::before {
+          border: none;
+          background-image: none;
         }
-
-        & + label {
-            padding: 4px 12px;
-            margin: 0;
-            border-right: 1px solid $black-60;
-            text-align: center;
-            cursor: pointer;
-            color: $black-100;
-            line-height: 1.8rem;
-            height: 38px;
-            transition: background-color $transition-time ease-in;
-
-            &:last-of-type {
-                border: none;
-            }
-            &:before {
-                border: none;
-                background-image: none;
-            }
-        }
-
-        &:checked + label {
-            color: $white;
-            background: $black-60;
-
-        }
-        &:not(:checked) + label:hover {
-            background: $black-30;
-        }
+      }
     }
+
+    & + label {
+      padding: 4px 12px;
+      margin: 0;
+      border-right: 1px solid $black-60;
+      text-align: center;
+      cursor: pointer;
+      color: $black-100;
+      line-height: 1.8rem;
+      height: 38px;
+      transition: background-color $transition-time ease-in;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      &::before {
+        border: none;
+        background-image: none;
+      }
+    }
+
+    &:checked + label {
+      color: $white;
+      background: $black-60;
+
+    }
+
+    &:not(:checked) + label:hover {
+      background: $black-30;
+    }
+  }
 }
 
 @mixin input-group() {
-    @extend %input-group;
+  @extend %input-group;
 }
+
 @mixin input-group-radio() {
-    @extend %input-group-radio;
+  @extend %input-group-radio;
 }
