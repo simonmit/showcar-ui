@@ -29,9 +29,9 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig(assign({
-        buildDest: process.env.CI_BUILD_REF_NAME || 'latest',
-        versionPrefix: process.env.CI_BUILD_REF ? ('-' + process.env.CI_BUILD_REF) : '',
-        buildDestination: "./dist/showcar-ui<%= versionPrefix %>",
+        buildRefName: process.env.CI_BUILD_REF_NAME || 'unknown_build_ref_name', // branch name
+        buildRef: process.env.CI_BUILD_REF || 'unknown_build_ref', // commit hash
+        buildDestination: "./dist/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
         sass: loadConfig("sass"),

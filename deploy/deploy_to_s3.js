@@ -1,35 +1,70 @@
 // node deplpy_to_s3.js [localDirName] [S3DirName]
-// node deplpy_to_s3.js dist production
+// node deplpy_to_s3.js ../dist production
 
 var AWS = require('aws-sdk');
 var fs = require('fs');
 var path = require('path');
+var Q = require('q');
+var chalk = require('chalk');
 
 AWS.config.region = 'eu-west-1';
 
-var localDirName = process.argv[2];
-var S3DirName = process.argv[3];
+var localDirPath = process.argv[2];
+var remoteDirName = process.argv[3] + '/' + process.env.CI_BUILD_REF_NAME + '/' + process.env.CI_BUILD_REF;
 
-var dirToLoadFrom = path.join(__dirname, '..', localDirName);
+chalk.blue('Local path is: ', localDirPath);
+chalk.blue('Remote path is: ', S3DirName);
 
-console.info('>> Load from dir', dirToLoadFrom);
+readLocalDir(localDirPath)
+    .then(filterDotDirs)
+    .then(mapFilesToFullPaths(localDirPath))
+    .then(mapFilesToStreams)
+    .then(function(streams) {
+        streams.forEach(uploadFile(remoteDirName))
+    });
 
-fs.readdir(path.join(__dirname, '..', localDirName), function(err, filesList) {
-    filesList
+function readLocalDir(localPath) {
+    chalk.blue('Reading local dir: ', localPath);
+
+    return Q.nfcall(fs.readdir, localPath);
+}
+
+function filterDotDirs(filesList) {
+    chalk.blue('Files list is here: ', filesList.join("\n"));
+
+    Q.when(filesList
         .filter(function(fileName) {
             return ['..', '.'].indexOf(fileName) === -1;
         })
-        .forEach(function(fileName) {
-            var fileToUpload = path.join(dirToLoadFrom, fileName);
+    );
+}
 
-            console.info('>> try to upload: ', fileToUpload);
-
-            var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: S3DirName + '/' + fileName}});
-
-            var body = fs.createReadStream(fileToUpload);
-
-            S3.upload({Body: body})
-                .on('httpUploadProgress', function(evt) { console.log(evt); })
-                .send(function(err, data) { console.log(err, data) });
+function mapFilesToFullPaths(localDirPath) {
+    return function(filesList) {
+        filesList.map(function(fileName) {
+            return path.join(localDirPath, fileName);
         });
-});
+    };
+}
+
+function mapFilesToStreams(filesPaths) {
+    chalk.blue('Create files streams');
+
+    return filesPaths.map(function(filePath) {
+        return fs.createReadStream(filePath);
+    });
+}
+
+function uploadFile(remotePath) {
+    return function(stream) {
+        var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: remotePath + '/' + stream}});
+        S3.upload({Body: body})
+            .on('httpUploadProgress', function(evt) {
+                chalk.green('File ' + evt.key + ' is ' + (evt.loaded * 100 / evt.total) + '% loaded');
+            })
+            .send(function(err, data) {
+                if (err) return chalk.red(err);
+                return chalk.green('Uploading of ' + data.key + ' is done!\n\tIt is located at ' + data.Location);
+            });
+    };
+}

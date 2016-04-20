@@ -39,7 +39,7 @@ deploy_master:
   script:
       - cd deploy
       - npm install
-      - node deploy_to_s3.js dist showcar-ui/prod
+      - node deploy_to_s3.js ../dist showcar-ui/prod
 
 deploy_develop:
   stage: deploy
@@ -48,4 +48,4 @@ deploy_develop:
   script:
       - cd deploy
       - npm install
-      - node deploy_to_s3.js dist showcar-ui/latest
+      - node deploy_to_s3.js ../dist showcar-ui/latest
