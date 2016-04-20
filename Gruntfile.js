@@ -8,6 +8,9 @@ module.exports = function(grunt) {
         return result;
     };
 
+    var revision = require('child_process')
+        .execSync('git rev-parse --short=8 ' + process.env.CI_BUILD_REF).toString().trim();
+
     var assign = function (target) {
         'use strict';
         if (target === undefined || target === null) {
@@ -30,7 +33,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig(assign({
         buildType: process.env.BUILD_TYPE || 'unknown_build_type', // prod or latest
-        commitHash: process.env.CI_BUILD_REF || 'unknown_build_ref',
+        commitHash: revision || 'unknown_build_ref',
         buildDestination: "./dist/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
