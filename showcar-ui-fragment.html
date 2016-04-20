@@ -1,5 +1,7 @@
-<!--# if expr="$arg_sc_ui_latest" -->
-    <!-- include virtual="/assets/external/showcar-ui/latest/index.html" -->
-<!--# else -->
-    <!-- include virtual="/assets/external/showcar-ui/prod/index.html" -->
+<!--# if expr="$arg_sc_prod" -->
+    <!-- include virtual="/assets/external/showcar-ui/latest/$arg_sc_prod/index.html" -->
+<!--# elif expr="$arg_sc_latest" -->
+    <!-- include virtual="/assets/external/showcar-ui/latest/$arg_sc_latest/index.html" -->
+<!--# else" -->
+    <!-- include virtual="/assets/external/showcar-ui/prod/$arg_sc_prod_version/index.html" -->
 <!--# endif -->

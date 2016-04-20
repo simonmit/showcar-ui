@@ -8,44 +8,19 @@ stages:
   - build
   - deploy
 
-build_master:
+build_lib:
   stage: build
-  only:
-    - master
   script:
     - npm install
     - node node_modules/bower/bin/bower install
-    - BUILD_TYPE=prod npm run grunt
+    - npm run grunt
   artifacts:
     paths:
       - dist
 
-build_develop:
-  stage: build
-  only:
-    - develop
-  script:
-    - npm install
-    - node node_modules/bower/bin/bower install
-    - BUILD_TYPE=latest npm run grunt
-  artifacts:
-    paths:
-      - dist
-
-deploy_master:
+deploy_lib:
   stage: deploy
-  only:
-      - master
   script:
       - cd deploy
       - npm install
-      - node ./deploy_to_s3.js ../dist showcar-ui/prod
-
-deploy_develop:
-  stage: deploy
-  only:
-      - develop
-  script:
-      - cd deploy
-      - npm install
-      - node ./deploy_to_s3.js ../dist showcar-ui/latest
+      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME

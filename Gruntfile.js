@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig(assign({
-        buildType: process.env.BUILD_TYPE || 'unknown_build_type', // prod or latest
+        buildType: process.env.CI_BUILD_REF_NAME || 'unknown_build_type', // prod or latest
         commitHash: revision || 'unknown_build_ref',
         buildDestination: "./dist/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
