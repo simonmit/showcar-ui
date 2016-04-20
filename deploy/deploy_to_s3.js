@@ -1,5 +1,9 @@
-// node deplpy_to_s3.js [local dir] [remote dir]
-// node deplpy_to_s3.js ../dist production
+/**
+ * Deploy the files from specified local dir to remote dir on S3
+ * 
+ * node deplpy_to_s3.js [local dir] [remote dir]
+ * node deplpy_to_s3.js ../dist production
+ */
 
 var R = require('ramda');
 var AWS = require('aws-sdk');
