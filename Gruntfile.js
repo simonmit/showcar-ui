@@ -8,9 +8,6 @@ module.exports = function(grunt) {
         return result;
     };
 
-    var commitHash = require('child_process')
-        .execSync('git rev-parse --short=8 ' + process.env.CI_BUILD_REF).toString().trim();
-
     var assign = function (target) {
         'use strict';
         if (target === undefined || target === null) {
@@ -34,7 +31,7 @@ module.exports = function(grunt) {
     grunt.initConfig(assign({
         assetsPrefix: '/assets/external/showcar-ui',
         buildType: process.env.CI_BUILD_REF_NAME || 'unknown_build_type', // branch name
-        commitHash: commitHash || 'unknown_commit_hash',
+        commitHash: process.env.CI_BUILD_REF || 'unknown_commit_hash',
         buildDestination: "./dist/showcar-ui",
         pkg: grunt.file.readJSON("package.json"),
         webpack: loadConfig("webpack"),
