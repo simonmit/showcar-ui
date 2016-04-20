@@ -10,7 +10,7 @@ var chalk = require('chalk');
 AWS.config.region = 'eu-west-1';
 
 var localDirPath = path.join(__dirname, process.argv[2]);
-var remoteDirName = process.argv[3] + '/' + process.env.CI_BUILD_REF_NAME + '/' + process.env.CI_BUILD_REF;
+var remoteDirName = process.argv[3] + '/' + process.env.CI_BUILD_REF;
 
 console.log(chalk.cyan('Local path is: ', localDirPath));
 console.log(chalk.cyan('Remote path is: ', remoteDirName));
