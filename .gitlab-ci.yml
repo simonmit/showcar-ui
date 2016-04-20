@@ -29,5 +29,5 @@ deploy_lib:
   script:
       - cd deploy
       - npm install
-      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/CI_BUILD_REF
+      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest
