@@ -3,11 +3,13 @@ image: node:5
 cache:
   paths:
     - node_modules
+    - deploy/node_modules
 
 stages:
   - build
+  - deploy
 
-build_master_and_deploy:
+build_master:
   stage: build
   only:
     - master
@@ -19,7 +21,7 @@ build_master_and_deploy:
     paths:
       - dist
 
-build_develop_and_deploy:
+build_develop:
   stage: build
   only:
     - develop
@@ -30,3 +32,21 @@ build_develop_and_deploy:
   artifacts:
     paths:
       - dist
+
+deploy_master:
+  stage: deploy
+  only:
+      - master
+  script:
+      - cd deploy
+      - npm install
+      - node deploy_to_s3.js dist showcar-ui/prod
+
+deploy_develop:
+  stage: deploy
+  only:
+      - develop
+  script:
+      - cd deploy
+      - npm install
+      - node deploy_to_s3.js dist showcar-ui/latest
