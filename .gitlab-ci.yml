@@ -14,7 +14,7 @@ build_lib:
     - master
     - develop
   script:
-    - npm install
+    - npm install -s
     - node node_modules/bower/bin/bower install
     - npm run grunt
   artifacts:
@@ -28,6 +28,6 @@ deploy_lib:
       - develop
   script:
       - cd deploy
-      - npm install
+      - npm install -s
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest
