@@ -10,6 +10,9 @@ stages:
 
 build_lib:
   stage: build
+  only:
+    - master
+    - develop
   script:
     - npm install
     - node node_modules/bower/bin/bower install
@@ -20,7 +23,19 @@ build_lib:
 
 deploy_lib:
   stage: deploy
+  only:
+      - master
+      - develop
   script:
       - cd deploy
       - npm install
-      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME
+      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/CI_BUILD_REF
+
+deploy_lib:
+  stage: deploy
+  only:
+      - master
+  script:
+      - cd deploy
+      - npm install
+      - node ./deploy_to_s3.js ../dist showcar-ui/master/latest

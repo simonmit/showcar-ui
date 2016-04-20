@@ -9,11 +9,8 @@ var chalk = require('chalk');
 
 AWS.config.region = 'eu-west-1';
 
-var revision = require('child_process')
-    .execSync('git rev-parse --short=8 ' + process.env.CI_BUILD_REF).toString().trim();
-
 var localDirPath = path.join(__dirname, process.argv[2]);
-var remoteDirName = process.argv[3] + '/' + revision;
+var remoteDirName = process.argv[3];
 
 console.log(chalk.cyan('Local path is: ', localDirPath));
 console.log(chalk.cyan('Remote path is: ', remoteDirName));
