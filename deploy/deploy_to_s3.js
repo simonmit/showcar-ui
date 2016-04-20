@@ -1,4 +1,4 @@
-// node deplpy_to_s3.js [localDirName] [S3DirName]
+// node deplpy_to_s3.js [local dir] [remote dir]
 // node deplpy_to_s3.js ../dist production
 
 var AWS = require('aws-sdk');
@@ -13,7 +13,7 @@ var localDirPath = process.argv[2];
 var remoteDirName = process.argv[3] + '/' + process.env.CI_BUILD_REF_NAME + '/' + process.env.CI_BUILD_REF;
 
 chalk.blue('Local path is: ', localDirPath);
-chalk.blue('Remote path is: ', S3DirName);
+chalk.blue('Remote path is: ', remoteDirName);
 
 readLocalDir(localDirPath)
     .then(filterDotDirs)
