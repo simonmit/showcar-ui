@@ -4,6 +4,7 @@ var Q = require('q');
 var path = require('path');
 var chalk = require('chalk');
 var fs = require('fs');
+var mime = require('mime');
 
 var joinPath = R.curry(R.nAry(2, path.join));
 
@@ -33,7 +34,8 @@ var mapFilesToStreams = function(filesPaths) {
 };
 
 var uploadFile = R.curry(function(remotePath, payload) {
-    var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: remotePath + '/' + payload.fileName}});
+    var mimeType = mime.lookup(payload.fileName);
+    var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', ContentType: mimeType, Key: remotePath + '/' + payload.fileName}});
     S3.upload({Body: payload.fileStream})
         .on('httpUploadProgress', function(evt) {
             console.log(chalk.green('File ' + evt.key + ' is ' + Math.floor(evt.loaded * 100 / evt.total) + '% loaded'));
