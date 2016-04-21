@@ -33,7 +33,7 @@ var mapFilesToStreams = function(filesPaths) {
 };
 
 var uploadFile = R.curry(function(remotePath, payload) {
-    var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', ACL: 'public-read', Key: remotePath + '/' + payload.fileName}});
+    var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', Key: remotePath + '/' + payload.fileName}});
     S3.upload({Body: payload.fileStream})
         .on('httpUploadProgress', function(evt) {
             console.log(chalk.green('File ' + evt.key + ' is ' + Math.floor(evt.loaded * 100 / evt.total) + '% loaded'));
