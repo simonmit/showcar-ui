@@ -46,9 +46,18 @@ var uploadFinished = function(err, data) {
     return logGreen('Uploading of ' + data.key + ' is done!\n\tIt is located at ' + data.Location);
 };
 
+var getUploadParams = function(remotePath, fileName) {
+    var mimeType = mime.lookup(fileName);
+    var extName = path.extname(fileName);
+    var base = {Bucket: 'as24-assets-eu-west-1', ContentType: mimeType, Key: remotePath + '/' + fileName};
+    if (extName === '.html') {
+        return R.merge({CacheControl: 'max-age=60'}, base);
+    }
+    return base;
+};
+
 var uploadFile = R.curry(function(remotePath, payload) {
-    var mimeType = mime.lookup(payload.fileName);
-    var S3 = new AWS.S3({params: {Bucket: 'as24-assets-eu-west-1', ContentType: mimeType, Key: remotePath + '/' + payload.fileName}});
+    var S3 = new AWS.S3({params: getUploadParams(remotePath, payload.fileName)});
     S3.upload({Body: payload.fileStream})
         .on('httpUploadProgress', showUploadProgress)
         .send(uploadFinished);
