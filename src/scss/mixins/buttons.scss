@@ -3,68 +3,70 @@
 @import "fonts";
 
 %btn {
-    @include avoid-selection();
-    @include font(L, $bold: true, $silent: false, $line-height: 40px);
+  @include avoid-selection();
+  @include font(L, $bold: true, $silent: false, $line-height: 40px);
 
-    display: inline-block;
-    height: 40px;
-    padding: 0 20px;
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
 
-    -webkit-appearance: none;
-    border: none;
-    border-radius: $form-border-radius;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: $form-border-radius;
+  color: #fff;
+  transition: all $transition-time ease-in;
+  transition-property: color, background-color;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
     color: #fff;
-    transition: all $transition-time ease-in;
-    transition-property: color, background-color;
-    text-decoration: none;
-    text-align: center;
+  }
 
-    &:hover {
-        color: #fff;
-    }
-
-    [class^="icon-"] {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        background-size: contain;
-        position: relative;
-    }
+  [class^="icon-"] {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    position: relative;
+  }
 }
 
 %btn-bob {
-    background-color: $orange-100;
+  background-color: $orange-100;
 
-    &:hover, &:focus {
-        background-color: #cb5f00;
-    }
+  &:hover,
+  &:focus {
+    background-color: #cb5f00;
+  }
 
-    &:active {
-        background-color: #994200;
-    }
+  &:active {
+    background-color: #994200;
+  }
 
-    &[disabled] {
-        background-color: #ffc996;
-    }
+  &[disabled] {
+    background-color: #ffc996;
+  }
 }
 
 %btn-ross {
-    background-color: $blue-80;
+  background-color: $blue-80;
 
-    &:hover, &:focus {
-        background-color: $blue-90;
-    }
+  &:hover,
+  &:focus {
+    background-color: $blue-90;
+  }
 
-    &:active {
-        background-color: $blue-100;
-    }
+  &:active {
+    background-color: $blue-100;
+  }
 
-    &[disabled] {
-        background-color: #b1c2d2;
-    }
+  &[disabled] {
+    background-color: #b1c2d2;
+  }
 }
 
 @mixin button($type) {
-    @extend %btn;
-    @extend %btn-#{to-lower-case($type)};
+  @extend %btn;
+  @extend %btn-#{to-lower-case($type)};
 }

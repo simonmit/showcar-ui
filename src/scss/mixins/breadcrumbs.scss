@@ -7,7 +7,6 @@
   height: 13px;
   margin-top: 5px;
   margin-right: $S;
-  float: left;
 
   @if $direction == 'left' {
     transform: rotate(180deg);
@@ -25,8 +24,9 @@
 
   li {
     display: none;
-    @include font(M);
     margin-top: 10px;
+
+    @include font(M);
   }
 
   li a {
@@ -42,7 +42,7 @@
     display: inline-block;
   }
 
-  li:last-child:before {
+  li:last-child::before {
     @include arrow('left');
   }
 
@@ -51,12 +51,12 @@
       display: inline-block;
     }
 
-    li:after {
+    li::after {
       @include arrow('right');
     }
 
-    li:not(:only-child):last-child:before,
-    li:last-child:after {
+    li:not(:only-child):last-child::before,
+    li:last-child::after {
       content: none;
       float: left;
     }

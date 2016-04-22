@@ -34,18 +34,23 @@
 }
 
 h1.sc-font {
-    padding: 0 $L;
-    @include headline(XL, XXL);
+  padding: 0 $L;
+
+  @include headline(XL, XXL);
 }
+
 h2.sc-font {
-    @include headline(L, XL, true, true);
+  @include headline(L, XL, true, true);
 }
+
 h3.sc-font {
   @include headline(M, XL, true, false);
 }
+
 h4.sc-font {
   @include headline(M, L, false, true);
 }
+
 h5.sc-font {
   @include headline(M, M, false, true);
 }

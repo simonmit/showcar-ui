@@ -10,48 +10,45 @@
 //$viewportXXL: 1270px; // 1270 - ∞
 
 .has-ad-skyscraper-right {
+  // 1270 - 1440
+  @include mqminmax($viewportXXL, 1440px) {
+    margin-right: 170px;
+  }
 
-    // 1270 - 1440
-    @include mqminmax($viewportXXL, 1440px) {
-        margin-right: 170px;
-    }
-
-    // 1100 - 1270
-    @include mqminmax($viewportXL, $viewportXXL) {
-        margin-left: 0;
-    }
+  // 1100 - 1270
+  @include mqminmax($viewportXL, $viewportXXL) {
+    margin-left: 0;
+  }
 }
 
 // Show superbanner first
 .sc-superbanner {
-    display: none;
+  display: none;
 
-    // show superbanner at 728px
-    @include mqmin($viewportM - 40) {
-        @include sc-topbanner();
-    }
+  // show superbanner at 728px
+  @include mqmin($viewportM - 40) {
+    @include sc-topbanner();
+  }
 }
 
 // show right skyscraper as second
 .sc-skyscraper-right {
-    display: none;
+  display: none;
 
-    // show skyscraper at 1121px
-    @include mqmin($viewportXL + 10) {
-        @include sc-skyscraper();
-        right: -170px;
-    }
+  // show skyscraper at 1121px
+  @include mqmin($viewportXL + 10) {
+    @include sc-skyscraper();
+    right: -170px;
+  }
 }
 
 // show left skyscraper as third
 .sc-skyscraper-left {
-    display: none;
+  display: none;
 
-    // show skyscraper at 1271px
-    @include mqmin($viewportXXL) {
-        @include sc-skyscraper();
-        left: -170px;
-    }
+  // show skyscraper at 1271px
+  @include mqmin($viewportXXL) {
+    @include sc-skyscraper();
+    left: -170px;
+  }
 }
-
-

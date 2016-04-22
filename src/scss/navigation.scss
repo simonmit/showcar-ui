@@ -1,383 +1,394 @@
 .sc-navigation {
+  position: relative;
+  z-index: 3;
+  background-color: $white;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+
+  .sc-btn-mobile-menu {
+    position: absolute;
+    transition: 0.2s ease;
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+    padding: $S 0;
+    margin-top: -2px;
+    left: $L;
+
+    @include font(M);
+
+    span {
+      vertical-align: middle;
+      margin-right: $S;
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background-color: $black-60;
+      top: -2px;
+      transition: background-color 0.1s;
+
+      &::before,
+      &::after {
+        transition: 0.2s ease-in-out;
+        position: absolute;
+        background: $black-60;
+        content: '';
+        width: 20px;
+        height: 2px;
+        left: 0;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+
+  hr {
     position: relative;
-    z-index: 3;
-    background-color: $white;
-    -webkit-tap-highlight-color: transparent;
+    top: 1px;
+    border: 0;
+    border-bottom: 1px solid $black-30;
+  }
+
+  nav {
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
     overflow: hidden;
 
-    .sc-btn-mobile-menu {
-        position: absolute;
-        transition: .2s ease;
-        border: 0;
-        background-color: transparent;
-        outline: 0;
-        @include font(M);
-        padding: $S 0;
-        margin-top: -2px;
-        left: $L;
-
-        span {
-            vertical-align: middle;
-            margin-right: $S;
-            position: relative;
-            display: inline-block;
-            width: 20px;
-            height: 2px;
-            background-color: $black-60;
-            top: -2px;
-            transition: background-color 0.1s;
-
-            &:before, &:after {
-                transition: .2s ease-in-out;
-                position: absolute;
-                background: $black-60;
-                content: '';
-                width: 20px;
-                height: 2px;
-                left: 0;
-            }
-
-            &:before {
-                top: -6px;
-            }
-
-            &:after {
-                top: 6px;
-            }
-        }
+    & > ul {
+      padding: $M $L $L $L;
+      border-top: 1px solid $black-30;
     }
 
-    hr {
-        position: relative;
-        top: 1px;
-        border: 0;
-        border-bottom: 1px solid $black-30;
+    li {
+      margin-right: -20px;
+      padding-right: 20px;
+    }
+
+    a {
+      display: block;
+      padding: $S 0;
+      text-decoration: none;
+
+      @include link(M, $variant: black);
+    }
+
+    li ul {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+
+      .subheadline {
+        color: $black-60;
+        font-size: 0.75rem;
+      }
+    }
+
+    li.open ul {
+      max-height: 2000px;
+    }
+
+    li ul a {
+      margin-left: $XL;
+    }
+
+    span.title {
+      cursor: pointer;
+      padding: $S 0;
+      display: inline-block;
+      outline: 0;
+      position: relative;
+      transition: color $transition-time ease;
+      &::after {
+        content: '';
+        position: absolute;
+        outline: 0;
+        right: 0;
+        margin-top: 6px;
+        width: 12px;
+        height: 12px;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==') no-repeat center center;
+        color: $orange-100;
+      }
+    }
+
+    > ul {
+      border: none;
+    }
+
+    > hr {
+      margin: 0 16px;
+    }
+
+    ul {
+      li.open {
+        span.title {
+          color: $orange-100;
+          &::after {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+          }
+        }
+      }
+    }
+
+    &::hover,
+    &:active,
+    &:focus {
+      li:hover {
+        cursor: pointer;
+        span.title {
+          color: $orange-100;
+          &::after {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    .sc-btn-mobile-menu {
+      color: $orange-100;
+
+      span {
+        background: transparent;
+
+        &::before {
+          transform: rotate(45deg) translate(3px, 5px);
+          background: $orange-100;
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(3px, -6px);
+          background: $orange-100;
+        }
+      }
     }
 
     nav {
-        transition: max-height .5s ease-out;
-        max-height: 0;
-        overflow: hidden;
+      max-height: 2200px;
+      transition: max-height 0.5s ease-in;
+    }
+  }
 
-        & > ul {
-            padding: $M $L $L $L;
-            border-top: 1px solid $black-30;
-        }
+  .bar {
+    margin: 9px 0 7px;
+    text-align: center;
+    height: 51px;
 
-        hr {
-            // margin: $S 0;
-        }
+    .icon-auto24,
+    as24-icon {
+      width: 85px;
+      height: 40px;
+      background-size: contain;
+      display: inline-block;
+    }
+  }
 
-        li {
-            margin-right: -20px;
-            padding-right: 20px;
-        }
-
-        a {
-            display: block;
-            padding: $S 0;
-            text-decoration: none;
-            @include link(M, $variant: black);
-        }
-
-        li ul {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .3s ease-out;
-
-            .subheadline {
-                color: $black-60;
-                font-size: 0.75rem;
-            }
-        }
-
-        li.open ul {
-            max-height: 2000px;
-        }
-
-        li ul a {
-            margin-left: $XL;
-        }
-
-        span.title {
-            cursor: pointer;
-            padding: $S 0;
-            display:inline-block;
-            outline: 0;
-            position: relative;
-            transition: color $transition-time ease;
-            &:after {
-                content: '';
-                position: absolute;
-                outline: 0;
-                right: 0;
-                margin-top: 6px;
-                width: 12px;
-                height: 12px;
-                background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==') no-repeat center center;
-                color: $orange-100;
-            }
-        }
-
-        > ul {
-            border: none;
-        }
-
-        > hr {
-            margin: 0 16px;
-        }
-
-        ul{
-            li.open {
-                span.title {
-                    color: $orange-100;
-                    &:after{
-                        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-                    }
-                }
-            }
-        }
-
-        &:hover, &:active, &:focus {
-            li:hover {
-                cursor: pointer;
-                span.title {
-                    color: $orange-100;
-                    &:after {
-                        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-                    }
-                }
-            }
-        }
+  @media screen and (max-width: 922px) {
+    nav {
+      .title {
+        display: inline-block;
+        width: 100%;
+      }
     }
 
-    &.open {
-        .sc-btn-mobile-menu {
-            color: $orange-100;
+    .right {
+      right: 0;
 
-            span {
-                background: transparent;
-
-                &:before {
-                    transform: rotate(45deg) translate(3px, 5px);
-                    background: $orange-100;
-                }
-
-                &:after {
-                    transform: rotate(-45deg) translate(3px, -6px);
-                    background: $orange-100;
-                }
-            }
+      li.open {
+        ul {
+          right: 0;
+          left: auto;
         }
+      }
 
-        nav {
-            max-height: 2200px;
-            transition: max-height .5s ease-in;
+      li {
+        a::after {
+          content: none;
         }
+      }
     }
 
-    .bar {
-        margin: 9px 0 7px;
-        text-align: center;
-        height: 51px;
-        .icon-auto24, as24-icon {
-            width: 85px;
-            height: 40px;
-            background-size: contain;
-            display: inline-block;
-        }
+    .login-teaser {
+      display: none !important;
     }
-
-    @media screen and (max-width: 922px) {
-        nav {
-            .title {
-                display: inline-block;
-                width: 100%;
-            }
-        }
-
-        .right {
-            right: 0;
-
-            li.open {
-                ul {
-                    right: 0;
-                    left: auto;
-                }
-            }
-
-            li {
-                a:after {
-                    content: none;
-                }
-            }
-        }
-
-        .login-teaser {
-            display: none !important;
-        }
-    }
+  }
 }
 
 @media screen and (min-width: 923px) and (max-width: $viewportXL) {
-    .sc-navigation nav ul li.open ul.submenu {
-        white-space: normal;
-    }
+  .sc-navigation nav ul li.open ul.submenu {
+    white-space: normal;
+  }
 }
 
 @media screen and (min-width: $viewportXL) {
-    .sc-navigation nav ul li.open ul.submenu {
-        white-space: nowrap;
-    }
+  .sc-navigation nav ul li.open ul.submenu {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 923px) {
-    .sc-navigation  {
-        height: 70px;
-        width: 100%;
-        overflow: visible;
-        display: inline-block;
+  .sc-navigation {
+    height: 70px;
+    width: 100%;
+    overflow: visible;
+    display: inline-block;
 
-        .sc-btn-mobile-menu {
-            display: none;
-        }
-
-        .bar {
-            text-align: left;
-            margin: 15px $L;
-        }
-
-        nav {
-            position: relative;
-            max-height: 1px;
-            overflow: visible;
-
-            & > ul {
-                padding: 0;
-            }
-
-            span.title {
-                padding: 0;
-                &:after {
-                    right: -20px;
-                }
-            }
-
-            > ul > li > a {
-                padding: 0;
-            }
-
-            > hr {
-                display: none;
-            }
-
-            > ul {
-                margin-left: 120px;
-            }
-
-            ul {
-                position: absolute;
-                top: -82px;
-                border: none;
-                max-height: 0;
-                ul {
-                    transition: none;
-                }
-
-                li {
-                    display: inline-block;
-                    padding: 24px 48px 24px 24px;
-                    border: 1px solid transparent;
-                    border-width: 0 1px;
-                    margin: 0 -1px;
-
-                    a:hover, a:active, a:focus, li.active-item > a {
-                        color: $orange-100;
-                    }
-                }
-
-                li.open {
-                    box-sizing: border-box;
-                    border: 1px solid $black-30;
-                    border-width: 0 1px;
-                    position: relative;
-                    margin: 0 -1px;
-
-                    .login-teaser {
-                        position: absolute;
-                        max-width: 100px;
-                    }
-
-                    .btn-login {
-                        margin-top: $XXXL;
-                    }
-
-                    span.title {
-                        color: $orange-100;
-                    }
-
-                    &:before {
-                        content: '';
-                        height: 2px;
-                        background-color: white;
-                        width: 100%;
-                        position: absolute;
-                        bottom: -1px;
-                        left: 0;
-                        z-index: 100;
-                    }
-
-                    > ul {
-                        transition: max-height 1s ease-out;
-                        max-height: 1000px;
-                        background-color: white;
-                        top: 70px;
-                        border: 1px solid $black-30;
-                        left: 0;
-                        margin-left: -1px;
-                        margin-right: -1px;
-                        padding: 12px 24px;
-                        li {
-                            float: none;
-                            display: block;
-                            padding: 0;
-                            a {
-                                white-space: nowrap;
-                                margin: 0;
-                            }
-                        }
-                    }
-
-                    ul.submenu {
-                        > li {
-                            ul {
-                                position: static;
-                                a {
-                                    margin: 0 1px 1px 1px;
-                                }
-
-                                li:first-child {
-                                    padding: 8px 0;
-                                }
-                            }
-                            vertical-align: top;
-                            display: inline-block;
-                            margin-left: 0px;
-                            padding-right: 24px;
-                        }
-                    }
-                }
-            }
-
-            .right {
-                right: 0;
-                li.open {
-                    ul {
-                        right: 0;
-                        left: auto;
-                    }
-                }
-            }
-        }
+    .sc-btn-mobile-menu {
+      display: none;
     }
+
+    .bar {
+      text-align: left;
+      margin: 15px $L;
+    }
+
+    nav {
+      position: relative;
+      max-height: 1px;
+      overflow: visible;
+
+      & > ul {
+        padding: 0;
+      }
+
+      span.title {
+        padding: 0;
+        &::after {
+          right: -20px;
+        }
+      }
+
+      > ul > li > a {
+        padding: 0;
+      }
+
+      > hr {
+        display: none;
+      }
+
+      > ul {
+        margin-left: 120px;
+      }
+
+      ul {
+        position: absolute;
+        top: -82px;
+        border: none;
+        max-height: 0;
+
+        ul {
+          transition: none;
+        }
+
+        li {
+          display: inline-block;
+          padding: 24px 48px 24px 24px;
+          border: 1px solid transparent;
+          border-width: 0 1px;
+          margin: 0 -1px;
+
+          a:hover,
+          a:active,
+          a:focus,
+          li.active-item > a {
+            color: $orange-100;
+          }
+        }
+
+        li.open {
+          box-sizing: border-box;
+          border: 1px solid $black-30;
+          border-width: 0 1px;
+          position: relative;
+          margin: 0 -1px;
+
+          .login-teaser {
+            position: absolute;
+            max-width: 100px;
+          }
+
+          .btn-login {
+            margin-top: $XXXL;
+          }
+
+          span.title {
+            color: $orange-100;
+          }
+
+          &::before {
+            content: '';
+            height: 2px;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            z-index: 100;
+          }
+
+          > ul {
+            transition: max-height 1s ease-out;
+            max-height: 1000px;
+            background-color: white;
+            top: 70px;
+            border: 1px solid $black-30;
+            left: 0;
+            margin-left: -1px;
+            margin-right: -1px;
+            padding: 12px 24px;
+
+            li {
+              float: none;
+              display: block;
+              padding: 0;
+
+              a {
+                white-space: nowrap;
+                margin: 0;
+              }
+            }
+          }
+
+          ul.submenu {
+            > li {
+              ul {
+                position: static;
+
+                a {
+                  margin: 0 1px 1px 1px;
+                }
+
+                li:first-child {
+                  padding: 8px 0;
+                }
+              }
+
+              vertical-align: top;
+              display: inline-block;
+              margin-left: 0;
+              padding-right: 24px;
+            }
+          }
+        }
+      }
+
+      .right {
+        right: 0;
+        li.open {
+          ul {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
 }

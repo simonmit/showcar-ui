@@ -8,3 +8,6 @@ bower_components
 atlassian-ide-plugin.xml
 .gitignore.swp
 tests/errorShots
+dist
+.DS_Store
+npm-debug.log*
