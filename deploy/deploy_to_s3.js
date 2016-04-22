@@ -20,7 +20,7 @@ console.log(chalk.cyan('Remote path is: ', remoteDirName));
 
 H.readLocalDir(localDirPath)
     .then(H.filterDotDirs)
-    .then(H.mapFilesToFullPaths(localDirPath))
+    .then(H.appendFullPathToFiles(localDirPath))
     .then(H.mapFilesToStreams)
     .then(R.forEach(H.uploadFile(remoteDirName)))
     .catch(R.compose(console.log.bind(console), chalk.red.bind(chalk)));
