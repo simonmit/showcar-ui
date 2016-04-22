@@ -6,36 +6,34 @@ var chalk = require('chalk');
 var fs = require('fs');
 var mime = require('mime');
 
+Q.longStackSupport = true;
+
 var logCyan = R.compose(console.log.bind(console), chalk.cyan.bind(chalk));
 var logGreen = R.compose(console.log.bind(console), chalk.green.bind(chalk));
 var logRed = R.compose(console.log.bind(console), chalk.red.bind(chalk));
 
+var doLog = R.curry(function(msg, data) {
+    logCyan(msg);
+    console.log(data);
+    return data;
+});
+
+/// joinPath :: String -> String -> String
 var joinPath = R.curry(R.nAry(2, path.join));
 
+
 /// readLocalDir -> String -> Promise [String]
-var readLocalDir = function(localPath) {
-    logCyan('Reading local dir: ', localPath);
-
-    return Q.nfcall(fs.readdir, localPath);
-};
-
-
-/// filterDotDirs :: [String] -> [String]
-var filterDotDirs = R.filter(R.compose(R.not, R.flip(R.contains)(['.', '..'])));
+var readLocalDir = R.curryN(2, Q.nfcall)(fs.readdir);
 
 
 /// appendFullPathToFiles :: String -> [String] -> [String]
-var appendFullPathToFiles = R.curry(function(localDirPath) {
-    logCyan('Append ' + localDirPath + ' to provided list of files', localDirPath);
-
-    return R.map(joinPath(localDirPath));
-});
+var appendFullPathToFiles = R.compose(R.map, joinPath);
 
 
 /// mapFilesToStreams :: [String] -> [{stream: FileStream, fileName: String}]
 var mapFilesToStreams = R.map(R.converge(R.merge, [
-    R.compose(R.objOf('stream'), fs.createReadStream.bind(fs)),
-    R.compose(R.objOf('fileName'), path.basename.bind(path))
+    R.compose(R.objOf('fileStream'), R.nAry(1, fs.createReadStream)),
+    R.compose(R.objOf('fileName'), R.nAry(1, path.basename))
 ]));
 
 
@@ -57,10 +55,10 @@ var uploadFile = R.curry(function(remotePath, payload) {
 });
 
 module.exports = {
+    doLog: doLog,
     joinPath: joinPath,
     uploadFile: uploadFile,
     mapFilesToStreams: mapFilesToStreams,
     appendFullPathToFiles: appendFullPathToFiles,
-    filterDotDirs: filterDotDirs,
     readLocalDir: readLocalDir
 };
