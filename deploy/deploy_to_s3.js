@@ -19,8 +19,10 @@ console.log(chalk.cyan('Local path is: ', localDirPath));
 console.log(chalk.cyan('Remote path is: ', remoteDirName));
 
 H.readLocalDir(localDirPath)
-    .then(H.filterDotDirs)
-    .then(H.mapFilesToFullPaths(localDirPath))
+    .then(H.doLog('Append "' + localDirPath + '" to files names'))
+    .then(H.appendFullPathToFiles(localDirPath))
+    .then(H.doLog('Map following files to streams'))
     .then(H.mapFilesToStreams)
+    .then(H.doLog('Upload streams to S3'))
     .then(R.forEach(H.uploadFile(remoteDirName)))
     .catch(R.compose(console.log.bind(console), chalk.red.bind(chalk)));
