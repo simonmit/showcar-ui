@@ -52,6 +52,10 @@
   display: initial;
 }
 
+.sc-overflow-hidden {
+  overflow: hidden;
+}
+
 //xl viewport
 @include mqmin($viewportXL) {
   .sc-hidden-xl {
