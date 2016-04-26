@@ -7,7 +7,6 @@
 
 var R = require('ramda');
 var AWS = require('aws-sdk');
-var chalk = require('chalk');
 var H = require('./helper');
 
 AWS.config.region = 'eu-west-1';
@@ -15,8 +14,8 @@ AWS.config.region = 'eu-west-1';
 var localDirPath = H.joinPath(__dirname, process.argv[2]);
 var remoteDirName = process.argv[3];
 
-console.log(chalk.cyan('Local path is: ', localDirPath));
-console.log(chalk.cyan('Remote path is: ', remoteDirName));
+H.logCyan('Local path is: ' + localDirPath);
+H.logCyan('Remote path is: ' + remoteDirName);
 
 H.readLocalDir(localDirPath)
     .then(H.doLog('Append "' + localDirPath + '" to files names'))
@@ -25,4 +24,4 @@ H.readLocalDir(localDirPath)
     .then(H.mapFilesToStreams)
     .then(H.doLog('Upload streams to S3'))
     .then(R.forEach(H.uploadFile(remoteDirName)))
-    .catch(R.compose(console.log.bind(console), chalk.red.bind(chalk)));
+    .catch(H.logRed);

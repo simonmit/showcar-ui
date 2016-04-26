@@ -14,12 +14,11 @@ var logRed = R.compose(console.log.bind(console), chalk.red.bind(chalk));
 
 var doLog = R.curry(function(msg, data) {
     logCyan(msg);
-    console.log(data);
     return data;
 });
 
 /// joinPath :: String -> String -> String
-var joinPath = R.curry(R.nAry(2, path.join));
+var joinPath = R.curryN(2, path.join);
 
 
 /// readLocalDir -> String -> Promise [String]
@@ -64,6 +63,9 @@ var uploadFile = R.curry(function(remotePath, payload) {
 });
 
 module.exports = {
+    logCyan:logCyan,
+    logGreen:logGreen,
+    logRed: logRed,
     doLog: doLog,
     joinPath: joinPath,
     uploadFile: uploadFile,
