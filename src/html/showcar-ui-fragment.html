@@ -1,13 +1,9 @@
 <!--# if expr="$arg_sc_master_ver" -->
-    <!-- sc_master_ver was set -->
     <!--# include virtual="/assets/external/showcar-ui/master/$arg_sc_master_ver/index.html" -->
 <!--# elif expr="$arg_sc_develop" -->
-    <!-- sc_develop was set -->
     <!--# include virtual="/assets/external/showcar-ui/develop/latest/index.html" -->
 <!--# elif expr="$arg_sc_develop_ver" -->
-    <!-- sc_develop_ver was set -->
     <!--# include virtual="/assets/external/showcar-ui/develop/$arg_sc_develop_ver/index.html" -->
 <!--# else -->
-    <!-- nothing was set, default -->
     <!--# include virtual="/assets/external/showcar-ui/master/latest/index.html" -->
 <!--# endif -->
