@@ -1,6 +1,6 @@
 {
   "name": "showcar-deploy-to-s3",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Deploy script",
   "main": "deploy_to_s3.js",
   "scripts": {
