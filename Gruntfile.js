@@ -40,7 +40,6 @@ module.exports = function(grunt) {
         pleeease: loadConfig("pleeease"),
         inline: loadConfig("inline"),
         assemble: loadConfig("assemble"),
-        copy: loadConfig("copy"),
         snippet: loadConfig("snippet"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
     }, loadConfig("webdriver", 'webdriver')));
