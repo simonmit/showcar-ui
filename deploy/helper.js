@@ -66,6 +66,5 @@ module.exports = {
     joinPath: joinPath,
     uploadFile: uploadFile,
     mapFilesToStreams: mapFilesToStreams,
-    appendFullPathToFiles: appendFullPathToFiles,
-    readLocalDir: readLocalDir
+    appendFullPathToFiles: appendFullPathToFiles
 };
