@@ -21,10 +21,6 @@ var doLog = R.curry(function(msg, data) {
 var joinPath = R.curryN(2, path.join);
 
 
-/// readLocalDir -> String -> Promise [String]
-var readLocalDir = R.curryN(2, Q.nfcall)(fs.readdir);
-
-
 /// appendFullPathToFiles :: String -> [String] -> [String]
 var appendFullPathToFiles = R.compose(R.map, joinPath);
 
@@ -42,7 +38,7 @@ var showUploadProgress = function(evt) {
 
 var uploadFinished = function(err, data) {
     if (err) return logRed(err);
-    return logGreen('Uploading of ' + data.key + ' is done!\n\tIt is located at ' + data.Location);
+    return logGreen('Uploading of ' + data.key + ' is done!\n>> It is located at ' + data.Location);
 };
 
 var getUploadParams = function(remotePath, fileName) {
