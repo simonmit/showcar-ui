@@ -1,0 +1,3 @@
+[submodule "css-regression"]
+	path = css-regression
+	url = git@github.com:AutoScout24/css-regression.git
