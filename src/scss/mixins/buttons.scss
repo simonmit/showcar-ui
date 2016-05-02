@@ -33,11 +33,11 @@
 }
 
 %btn-bob {
-  background-color: green;// $orange-100;
+  background-color: $orange-100;
 
   &:hover,
   &:focus {
-    background-color: #00ee00; //#cb5f00;
+    background-color: #cb5f00;
   }
 
   &:active {
