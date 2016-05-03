@@ -6,7 +6,7 @@ module.exports = (function() {
         options: {
             outputStyle: DEBUG ? 'expanded' : 'compressed',
             includePaths: [
-                'vendor/susy/sass/susy'
+                'node_modules/susy/sass/susy'
             ]
         },
         files: [

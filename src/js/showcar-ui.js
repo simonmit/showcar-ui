@@ -1,4 +1,5 @@
-require('../../vendor/zepto/zepto.min.js');
+window.Zepto = require('zepto-browserify').$;
+window.$ = window.Zepto;
 require('./components/polyfills.js')();
 
 let warn = (msg) => {
@@ -8,13 +9,13 @@ let warn = (msg) => {
     window.console.warn(msg);
 };
 
-window.Storage = require('../../vendor/showcar-storage/src/storage.js');
+window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
-require('../../vendor/showcar-icons/dist/showcar-icons.min.js');
+require('showcar-icons');
 require('./components/custom-dropdown.js');
 
-Zepto(($) => {
+Zepto(_ => {
     require('./components/navigation.js');
     require('./components/rotating-arrow.js')();
     require('./components/sticky.js')();
