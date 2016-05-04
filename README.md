@@ -4,9 +4,9 @@ This module provides several predefined classes, scss mixins and variables for s
 
 ## Installation:
 
-To install showcar-ui within your project use bower.
+To install showcar-ui within your project use npm.
 
-    bower install --save git@github.com:AutoScout24/showcar-ui.git
+    npm install git@github.com:AutoScout24/showcar-ui.git --save
 
 
 ## How to include:
