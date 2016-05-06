@@ -1,5 +1,4 @@
-window.Zepto = require('zepto-browserify').$;
-window.$ = window.Zepto;
+window.$ = window.Zepto = require('zepto-browserify').$;
 require('./components/polyfills.js')();
 
 let warn = (msg) => {
@@ -13,6 +12,7 @@ window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
 require('showcar-icons');
+require('showcar-tracking');
 require('./components/custom-dropdown.js');
 
 Zepto(_ => {
