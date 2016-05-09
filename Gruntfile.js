@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         sass: loadConfig("sass"),
         watch: loadConfig("watch"),
         pleeease: loadConfig("pleeease"),
-        inline: loadConfig("inline"),
+        copy: loadConfig("copy"),
         assemble: loadConfig("assemble"),
         snippet: loadConfig("snippet"),
         selenium_standalone: loadConfig("selenium-standalone", 'local')
@@ -47,16 +47,21 @@ module.exports = function(grunt) {
     grunt.loadTasks('./tasks/snippet');
 
     grunt.registerTask("build", ["sass", "webpack"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet", "inline"]);
+    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet"]);
 
     grunt.registerTask("default", ["dist"]);
-    grunt.registerTask("docs", ["assemble"]);
+
+    grunt.registerTask("docs", "Create documentation artifacts", function(){
+        grunt.config.set("buildDestination", "./public/showcar-ui");
+        grunt.task.run(["sass", "copy", "webpack", "assemble"]);
+    });
 
     grunt.registerTask("test-local", [
         "selenium_standalone:local:install",
         "selenium_standalone:local:start",
         "webdriver:local",
         "selenium_standalone:local:stop"]);
+    
     grunt.registerTask("test-cbt", ["webdriver:cbt"]);
 
     require('load-grunt-tasks')(grunt, {

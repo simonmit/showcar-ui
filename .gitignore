@@ -11,3 +11,4 @@ tests/errorShots
 dist
 .DS_Store
 npm-debug.log*
+public
