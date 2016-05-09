@@ -2,11 +2,38 @@
 
 This module provides several predefined classes, scss mixins and variables for simple page styling with the showcar ui library
 
+## Using Sass version
+
+In order to use showcar-ui sass files, you need to include this importer in your sass pipeline
+ 
+```js
+importer: function(url, prev, done) {
+    return done(url.split(':')[0].toLowerCase() === 'npm'
+        ? { file: require.resolve(url.split(':')[1]) }
+        : null);
+}
+```
+
+In case of grunt-sass you'll have:
+ 
+```
+sass: {
+    options: {
+        importer: function(url, prev, done) {
+            return done(url.split(':')[0].toLowerCase() === 'npm'
+                ? { file: require.resolve(url.split(':')[1]) }
+                : null);
+        }
+    },
+    files: []
+}
+```
+
 ## Installation:
 
-To install showcar-ui within your project use bower.
+To install showcar-ui within your project use npm.
 
-    bower install --save git@github.com:AutoScout24/showcar-ui.git
+    npm install git@github.com:AutoScout24/showcar-ui.git --save
 
 
 ## How to include:

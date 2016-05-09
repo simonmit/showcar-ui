@@ -31,6 +31,7 @@ if (!process.argv[4]) {
 var localDirPath = H.joinPath(__dirname, process.argv[2]);
 var remoteDirName = process.argv[3];
 var filesList = R.split(',', process.argv[4]);
+var bucketName = process.env.BUCKETNAME;
 
 H.logCyan('Upload files: ' + filesList);
 H.logCyan('... from: ' + localDirPath);
@@ -42,5 +43,5 @@ Q.when(filesList)
     .then(H.doLog('Map following files to streams'))
     .then(H.mapFilesToStreams)
     .then(H.doLog('Send streams to S3'))
-    .then(R.forEach(H.uploadFile(remoteDirName)))
+    .then(R.forEach(H.uploadFile(bucketName, remoteDirName)))
     .catch(H.logRed);

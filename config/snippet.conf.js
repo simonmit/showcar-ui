@@ -1,9 +1,19 @@
 module.exports = {
     options: {
-        jsFile: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>/showcar-ui.js',
-        cssFile: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>/showcar-ui.css'
+        inlineJS: {
+            file: 'src/js/inline-js/js-error-collector.js',
+            options: {
+                uglify: true
+            }
+        },
+        jsFile: {
+            content: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>/showcar-ui.js'
+        },
+        cssFile: {
+            content: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>/showcar-ui.css'
+        }
     },
     files: [
-        {src: 'src/html/index.html', dest: 'dist/index.html'}
+        { src: 'src/html/index.html', dest: 'dist/index.html' }
     ]
 };

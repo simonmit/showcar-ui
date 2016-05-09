@@ -5,9 +5,11 @@ module.exports = (function() {
     return {
         options: {
             outputStyle: DEBUG ? 'expanded' : 'compressed',
-            includePaths: [
-                'vendor/susy/sass/susy'
-            ]
+            importer: function(url, prev, done) {
+                return done(url.split(':')[0].toLowerCase() === 'npm'
+                    ? { file: require.resolve(url.split(':')[1]) }
+                    : null);
+            }
         },
         files: [
             {dest: '<%= buildDestination %>.css', src: 'src/scss/showcar-ui.scss'},
