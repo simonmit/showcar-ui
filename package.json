@@ -62,7 +62,7 @@
     "placeholders": "^0.2.0",
     "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git",
     "showcar-storage": "git+https://github.com/AutoScout24/showcar-storage.git",
-    "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#master",
+    "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.0.3",
     "susy": "^2.2.12",
     "zepto-browserify": "^1.0.0"
   }
