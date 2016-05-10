@@ -12,7 +12,7 @@ window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
 require('showcar-icons');
-require('showcar-tracking');
+// require('showcar-tracking');
 require('./components/custom-dropdown.js');
 
 Zepto(_ => {
