@@ -33,7 +33,7 @@ sass: {
 
 To install showcar-ui within your project use npm.
 
-    npm install git@github.com:AutoScout24/showcar-ui.git --save
+    npm install git@gitlab.com:web-experience/showcar-ui.git --save
 
 
 ## How to include:
@@ -104,7 +104,7 @@ The current implementation uses a CSS file with inlined fonts. The CSS file is `
 
 ## How to use:
 
-for the use of the library have a look at the documentation that is located in the docs directory.
+for the use of the library have a look at the [documentation](https://web-experience.gitlab.io/showcar-ui/).
 
 ## How to contribute:
 
