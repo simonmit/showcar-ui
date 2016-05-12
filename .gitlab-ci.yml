@@ -8,6 +8,7 @@ stages:
   - build
   - deploy
   - documentation
+  - sanity
 
 pages:
   stage: documentation
@@ -44,3 +45,13 @@ deploy_lib:
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF index.html,showcar-ui.css,showcar-ui.js,showcar-ui.js.map
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
       - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
+
+test_sanity:
+  stage: sanity
+  only:
+      - master
+      - develop
+  scripts:
+      - npm install mocha -g
+      - npm install -s
+      - npm test

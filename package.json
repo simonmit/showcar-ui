@@ -11,7 +11,8 @@
     "url": "git+https://github.com/AutoScout24/showcar-ui.git"
   },
   "scripts": {
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "test": "mocha tests/index.js -t 30000"
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",
@@ -47,7 +48,15 @@
     "uglify-js": "^2.6.2",
     "webdriverio": "^4.0.3",
     "webpack": "^1.12.3",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "cheerio": "^0.20.0",
+    "mocha-parallel-tests": "^0.3.2",
+    "mocha-teamcity-reporter": "^1.0.0",
+    "mocha.parallel": "^0.12.0",
+    "nightmare": "^2.3.3",
+    "npm": "^3.8.7",
+    "request": "^2.72.0",
+    "yargs": "^4.6.0"
   },
   "main": "src/js/showcar-ui.js",
   "dependencies": {
