@@ -8,7 +8,7 @@ stages:
   - build
   - deploy
   - documentation
-  - sanity
+  - test
 
 pages:
   stage: documentation
@@ -37,21 +37,21 @@ build_lib:
 deploy_lib:
   stage: deploy
   only:
-      - master
-      - develop
+    - master
+    - develop
   script:
-      - cd deploy
-      - npm install -s
-      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF index.html,showcar-ui.css,showcar-ui.js,showcar-ui.js.map
-      - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
-      - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
+    - cd deploy
+    - npm install -s
+    - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF index.html,showcar-ui.css,showcar-ui.js,showcar-ui.js.map
+    - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
+    - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
 
-test:
-  stage: sanity
+sanity_test:
+  stage: test
   only:
-      - master
-      - develop
-  scripts:
-      - npm install mocha -g
-      - npm install -s
-      - npm test
+    - master
+    - develop
+  script:
+    - npm install mocha -g
+    - npm install -s
+    - npm test
