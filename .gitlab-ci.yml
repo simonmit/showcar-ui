@@ -19,6 +19,7 @@ pages:
       - public
   only:
     - master
+    - develop
 
 build_lib:
   stage: build
