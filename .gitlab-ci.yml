@@ -46,7 +46,7 @@ deploy_lib:
       - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
       - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
 
-test_sanity:
+test:
   stage: sanity
   only:
       - master
