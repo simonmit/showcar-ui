@@ -12,7 +12,7 @@
   },
   "scripts": {
     "grunt": "grunt",
-    "test": "mocha tests/index.js -t 30000"
+    "test": "mocha tests/index.js -t 120000"
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",

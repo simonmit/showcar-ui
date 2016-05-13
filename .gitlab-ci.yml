@@ -52,6 +52,6 @@ sanity_test:
     - master
     - develop
   script:
-    - npm install mocha -g
-    - npm install -s
+    - npm install mocha -g --silent
+    - npm install --silent
     - npm test
