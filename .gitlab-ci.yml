@@ -8,7 +8,6 @@ stages:
   - build
   - deploy
   - documentation
-  - test
 
 pages:
   stage: documentation
