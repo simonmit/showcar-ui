@@ -8,6 +8,10 @@ let warn = (msg) => {
     window.console.warn(msg);
 };
 
+if (typeof Object.assign !== 'function') {
+    require('object.assign/shim')();
+}
+
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
