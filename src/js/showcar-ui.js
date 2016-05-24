@@ -17,7 +17,9 @@ window.Pager = require('./components/pager.js');
 
 require('showcar-icons');
 
-if (document.createElement('as24-tracking').constructor === HTMLElement || document.createElement('as24-tracking').constructor === HTMLUnknownElement) {
+const ctor = document.createElement('as24-tracking').constructor;
+
+if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
     // only requiring showcar-tracking when it was not already included before
     require('showcar-tracking');
 }
