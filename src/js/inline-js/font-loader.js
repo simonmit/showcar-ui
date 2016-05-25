@@ -106,7 +106,7 @@
     var styleElement = document.createElement('style');
     styleElement.innerHTML = '.font-loaded body{font-family:Source Sans Pro,sans-serif;}';
     var firstScript = document.getElementsByTagName('script')[0];
-    script.parentNode.insertBefore(styleElement, firstScript);
+    firstScript.parentNode.insertBefore(styleElement, firstScript);
 
     loadFont('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext', 'Source Sans Pro', [400, 600], 'font-loaded');
 }());
