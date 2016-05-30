@@ -7,6 +7,7 @@ cache:
 stages:
   - build
   - deploy
+  - test
   - documentation
 
 pages:
@@ -44,3 +45,16 @@ deploy_lib:
     - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF index.html,showcar-ui.css,showcar-ui.js,showcar-ui.js.map
     - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
     - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
+
+test:
+  stage: test
+  only:
+    - master
+    - develop
+  before_script:
+    - apt-get install xvfb
+    - export DISPLAY=:99.0
+    - chmod 0755 /etc/init.d/xvfb
+    - sh -e /etc/init.d/xvfb start
+  script:
+    - npm test 
