@@ -1,4 +1,4 @@
-image: node:6-wheezy
+image: node:5-wheezy
 
 # cache:
 #   paths:
