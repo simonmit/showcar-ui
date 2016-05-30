@@ -1,0 +1,63 @@
+[{
+  "label": "Home page : .com",
+  "url": "https://www.autoscout24.com?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    ".sc-navigation",
+    "#brand-box-container > div.search-mask",
+    "#home-search-headline",
+    ".home-category-stripe",
+    ".home-placements-stripe",
+    ".fragments-footer"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .de",
+  "url": "https://www.autoscout24.de?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.de",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    ".sc-navigation",
+    "#brand-box-container > div.search-mask",
+    "#home-search-headline",
+    ".home-category-stripe",
+    ".home-placements-stripe",
+    ".fragments-footer"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .at",
+  "url": "https://www.autoscout24.at?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.at",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    ".sc-navigation",
+    "#brand-box-container > div.search-mask",
+    "#home-search-headline",
+    ".home-category-stripe",
+    ".home-placements-stripe",
+    ".fragments-footer"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
+}]

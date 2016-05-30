@@ -12,7 +12,10 @@
   },
   "scripts": {
     "grunt": "grunt",
-    "test": "mocha tests/index.js -t 120000"
+    "test-sanity": "mocha tests/index.js -t 120000",
+    "test-css": "cd ./node_modules/backstopjs && npm run test -- --configPath=../../css_regression_test_config.json && cd ../..",
+    "test-css-assemble": "node ./tests/css/assemble.js ../config/css_regression ../config/css_regression_core_config.json ./css_regression_test_config.json",
+    "test-css-reference": "npm run test-css-assemble && cd ./node_modules/backstopjs && npm run reference -- --configPath=../../css_regression_test_config.json && cd ../.."
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",
@@ -57,7 +60,10 @@
     "webdriverio": "^4.0.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.12.1",
-    "yargs": "^4.6.0"
+    "yargs": "^4.6.0",
+    "backstopjs": "^1.2.1",
+    "q": "^1.4.1",
+    "ramda": "^0.21.0"
   },
   "main": "src/js/showcar-ui.js",
   "dependencies": {

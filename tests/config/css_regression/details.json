@@ -1,0 +1,51 @@
+[{
+  "label": "Details page : .com",
+  "url": "https://www.autoscout24.com/offers/-007?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com/offers/-007",
+  "hideSelectors": [],
+  "removeSelectors": [
+    ".detailsAdContainer"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "Details page : .de",
+  "url": "https://www.autoscout24.de/offers/-007?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.de/offers/-007",
+  "hideSelectors": [],
+  "removeSelectors": [
+    ".detailsAdContainer"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "Details page : .at",
+  "url": "https://www.autoscout24.at/offers/-007?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.at/offers/-007",
+  "hideSelectors": [],
+  "removeSelectors": [
+    ".detailsAdContainer"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+}]

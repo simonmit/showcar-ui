@@ -1,0 +1,98 @@
+[{
+  "label": "PriceEstimation : .com : Landing page",
+  "url": "https://www.autoscout24.com/priceestimation?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com/priceestimation",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .com : Details page",
+  "url": "https://www.autoscout24.com/priceestimation/detail?modelSize=light&makeId=13&firstRegistrationMonth=03&firstRegistrationYear=2011&vehicleGroupId=18482_2_2&fuelId=B&power=125&equipmentLine=120i+Cabrio&natCode=10130218&mileage=76000&action=displayDetails&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com/priceestimation/detail?modelSize=light&makeId=13&firstRegistrationMonth=03&firstRegistrationYear=2011&vehicleGroupId=18482_2_2&fuelId=B&power=125&equipmentLine=120i+Cabrio&natCode=10130218&mileage=76000&action=displayDetails",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .com : Result page",
+  "url": "https://www.autoscout24.com/priceestimation/result?ep.emissionClassId=5&ep.eid[32]=32&ep.eid[15]=15&makeId=13&ep.eid[125]=125&ep.consumption=6.8&mileage=76000&ep.eid[20]=20&natCode=10130218&ep.eid[113]=113&ep.eid[1]=1&ep.doors=2&ep.eid[31]=31&equipmentLine=120i+Cabrio&vehicleGroupId=18482_2_2&fuelId=B&ep.eid[121]=121&ep.eid[43]=43&ep.eid[2]=2&ep.eid[17]=17&ep.eid[41]=41&ep.eid[13]=13&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=03&ep.eid[132]=132&power=125&ep.eid[12]=12&ep.bodyColorId=6&ep.eid[42]=42&action=calc&firstRegistrationYear=2011&modelSize=light&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com/priceestimation/result?ep.emissionClassId=5&ep.eid[32]=32&ep.eid[15]=15&makeId=13&ep.eid[125]=125&ep.consumption=6.8&mileage=76000&ep.eid[20]=20&natCode=10130218&ep.eid[113]=113&ep.eid[1]=1&ep.doors=2&ep.eid[31]=31&equipmentLine=120i+Cabrio&vehicleGroupId=18482_2_2&fuelId=B&ep.eid[121]=121&ep.eid[43]=43&ep.eid[2]=2&ep.eid[17]=17&ep.eid[41]=41&ep.eid[13]=13&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=03&ep.eid[132]=132&power=125&ep.eid[12]=12&ep.bodyColorId=6&ep.eid[42]=42&action=calc&firstRegistrationYear=2011&modelSize=light",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+
+{
+  "label": "PriceEstimation : .de : Landing page",
+  "url": "https://www.autoscout24.de/fahrzeugbewertung?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.de/fahrzeugbewertung",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .de : Details page",
+  "url": "https://www.autoscout24.de/fahrzeugbewertung/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.de/fahrzeugbewertung/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .de : Result page",
+  "url": "https://www.autoscout24.de/fahrzeugbewertung/ergebnis?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.de/fahrzeugbewertung/ergebnis?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1000,
+  "misMatchThreshold" : 0.1,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+}
+]
