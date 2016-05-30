@@ -28,7 +28,7 @@ build_lib:
     - master
     - develop
   script:
-    - npm i --log-level=error -s
+    - npm i
     - npm run grunt
   artifacts:
     paths:
