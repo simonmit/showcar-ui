@@ -4,7 +4,7 @@ module.exports = (function() {
 
     return {
         options: {
-            autoprefixer: {'browsers': ['last 2 versions', '> 5%']},
+            autoprefixer: {'browsers': ['last 4 versions','ios 6']},
             minifier: !DEBUG,
             sourcemaps: false,
             rem: false,
