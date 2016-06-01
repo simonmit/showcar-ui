@@ -54,8 +54,7 @@ css_test:
   script:
     - npm install -s
     - npm run test-css-reference
-    - cd ./node_modules/backstopjs
-    - npm run test -- --configPath=../../css_regression_test_config.json
+    - npm run test-css
 
 #sanity_test:
 #  stage: test
