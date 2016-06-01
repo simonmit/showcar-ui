@@ -1,7 +1,10 @@
 module.exports = {
     options: {
         inlineJS: {
-            file: 'src/js/inline-js/js-error-collector.js',
+            file: [
+                'src/js/inline-js/js-error-collector.js',
+                'src/js/inline-js/font-loader.js',
+            ],
             options: {
                 uglify: true
             }

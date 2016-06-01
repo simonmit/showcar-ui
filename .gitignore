@@ -12,3 +12,5 @@ dist
 .DS_Store
 npm-debug.log*
 public
+backstop_data
+css_regression_test_config.json

@@ -1,4 +1,5 @@
-window.$ = window.Zepto = require('zepto-browserify').$;
+if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
+
 require('./components/polyfills.js')();
 
 let warn = (msg) => {
@@ -17,14 +18,16 @@ window.Pager = require('./components/pager.js');
 
 require('showcar-icons');
 
-if (document.createElement('as24-tracking').constructor === HTMLElement || document.createElement('as24-tracking').constructor === HTMLUnknownElement) {
+const ctor = document.createElement('as24-tracking').constructor;
+
+if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
     // only requiring showcar-tracking when it was not already included before
     require('showcar-tracking');
 }
 
 require('./components/custom-dropdown.js');
 
-Zepto(_ => {
+$(_ => {
     require('./components/navigation.js');
     require('./components/rotating-arrow.js')();
     require('./components/sticky.js')();
