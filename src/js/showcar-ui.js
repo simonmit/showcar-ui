@@ -1,4 +1,5 @@
-window.$ = window.Zepto = require('zepto-browserify').$;
+if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
+
 require('./components/polyfills.js')();
 
 let warn = (msg) => {
@@ -26,7 +27,7 @@ if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
 
 require('./components/custom-dropdown.js');
 
-Zepto(_ => {
+$(_ => {
     require('./components/navigation.js');
     require('./components/rotating-arrow.js')();
     require('./components/sticky.js')();
