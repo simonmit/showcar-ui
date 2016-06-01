@@ -5,6 +5,7 @@ as24-notification {
   overflow: hidden;
   width: 100%;
   z-index: 8000; /* TODO: Do we need this z-index? */
+  position: relative;
   max-height: 0;
   transition: max-height $transition-time ease-out;
 

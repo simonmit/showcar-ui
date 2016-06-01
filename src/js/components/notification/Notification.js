@@ -56,7 +56,7 @@ class Notification {
     create() {
         this.element.classList.add('prefade');
         this.element.innerHTML = '';
-        this.container = this.createElement('div', this.element, '', ['sc-content-container', 'icon']);
+        this.container = this.createElement('div', this.element, '', ['icon']);
         this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
         this.createElement('div', this.container, this.body);
 
