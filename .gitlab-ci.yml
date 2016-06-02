@@ -1,8 +1,8 @@
-image: node:5
+image: bdadamas24/node-xvfb
 
-# cache:
-#   paths:
-#     - node_modules
+cache:
+  paths:
+    - node
 
 stages:
   - build
@@ -55,16 +55,15 @@ css_test:
     - npm install -s
     - npm run test-css-reference
     - npm run test-css
+  artifacts:
+    paths:
+      - backstop_data/bitmaps_test/**/*.png
 
-#sanity_test:
-#  stage: test
-#  only:
-#    - master
-#    - develop
-#  before_script:
-#    - apt-get install xvfb
-#    - export DISPLAY=:99.0
-#    - chmod 0755 /etc/init.d/xvfb
-#    - sh -e /etc/init.d/xvfb start
-#  script:
-#    - npm test-sanity
+sanity_test:
+  stage: test
+  only:
+    - master
+    - develop
+  script:
+    - npm install
+    - xvfb-run --server-args="-screen 0 1024x768x24" npm test
