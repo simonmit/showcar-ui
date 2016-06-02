@@ -9,8 +9,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 },
@@ -25,8 +25,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 },
@@ -41,8 +41,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 },
@@ -58,8 +58,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 },
@@ -74,8 +74,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 },
@@ -90,8 +90,8 @@
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 }

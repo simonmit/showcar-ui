@@ -1,51 +1,17 @@
 [{
   "label": "Details page : .com",
-  "url": "https://www.autoscout24.com/offers/-007?sc_develop=1",
-  "referenceUrl": "https://www.autoscout24.com/offers/-007",
+  "url": "https://www.autoscout24.com/classified-detail/detail-page/226bb52a-510b-ae57-e053-e350040a29a5?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.com/classified-detail/detail-page/226bb52a-510b-ae57-e053-e350040a29a5",
   "hideSelectors": [],
   "removeSelectors": [
-    ".detailsAdContainer"
+    "[data-type=ad]"
   ],
   "selectors": [
     "body"
   ],
   "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
-  "onBeforeScript": "",
-  "onReadyScript": ""
-},
-{
-  "label": "Details page : .de",
-  "url": "https://www.autoscout24.de/offers/-007?sc_develop=1",
-  "referenceUrl": "https://www.autoscout24.de/offers/-007",
-  "hideSelectors": [],
-  "removeSelectors": [
-    ".detailsAdContainer"
-  ],
-  "selectors": [
-    "body"
-  ],
-  "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
-  "onBeforeScript": "",
-  "onReadyScript": ""
-},
-{
-  "label": "Details page : .at",
-  "url": "https://www.autoscout24.at/offers/-007?sc_develop=1",
-  "referenceUrl": "https://www.autoscout24.at/offers/-007",
-  "hideSelectors": [],
-  "removeSelectors": [
-    ".detailsAdContainer"
-  ],
-  "selectors": [
-    "body"
-  ],
-  "readyEvent": "",
-  "delay": 1000,
-  "misMatchThreshold" : 0.1,
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
 }]
