@@ -5,16 +5,13 @@ cache:
     - node_modules
 
 stages:
-  - install
   - build
   - deploy
   - test
   - documentation
 
-install_dependecies:
-  stage: install
-  script:
-    - npm install -s
+before_script:
+  - npm install -s
 
 pages:
   stage: documentation
