@@ -66,4 +66,4 @@ sanity_test:
     - develop
   script:
     - npm install
-    - xvfb-run --server-args="-screen 0 1024x768x24" npm test
+    - xvfb-run --server-args="-screen 0 1024x768x24" npm test-sanity
