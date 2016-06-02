@@ -2,18 +2,23 @@ image: bdadamas24/node-xvfb
 
 cache:
   paths:
-    - node
+    - node_modules
 
 stages:
+  - install
   - build
   - deploy
   - test
   - documentation
 
+install_dependecies:
+  stage: install
+  script:
+    - npm install -s
+
 pages:
   stage: documentation
   script:
-    - npm install -s
     - npm run grunt docs
   artifacts:
     paths:
@@ -28,7 +33,6 @@ build_lib:
     - master
     - develop
   script:
-    - npm i
     - npm run grunt
   artifacts:
     paths:
@@ -52,7 +56,6 @@ css_test:
     - master
     - develop
   script:
-    - npm install -s
     - npm run test-css-reference
     - npm run test-css
   artifacts:
@@ -65,5 +68,4 @@ sanity_test:
     - master
     - develop
   script:
-    - npm install
     - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
