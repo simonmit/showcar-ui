@@ -54,10 +54,10 @@ css_test:
     - master
     - develop
   script:
-    - cd deploy
-    - npm install -s
     - npm run test-css-reference
     - npm run test-css
+    - cd deploy
+    - npm install -s
     - node ./deploy_to_s3.js ../backstop_data/bitmaps_test/**/failed*.png showcar-ui/css-tests-artifacts
 
 sanity_test:
