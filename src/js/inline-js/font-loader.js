@@ -61,7 +61,14 @@
             link.onload = function() {
                 this.media = 'all';
                 this.onload = null;
-                fn();
+
+                (function onbodyready() {
+                    if (!document.body) {
+                        return raf(onbodyready);
+                    }
+
+                    fn();
+                }());
             };
 
             var script = document.getElementsByTagName('script')[0];
