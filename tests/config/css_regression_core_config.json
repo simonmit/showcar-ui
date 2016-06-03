@@ -25,7 +25,7 @@
   },
   "engine": "phantomjs",
   "report": ["CLI"],
-  "cliExitOnFail": true,
+  "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
   "port": 3001,

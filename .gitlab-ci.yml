@@ -2,7 +2,7 @@ image: bdadamas24/node-xvfb
 
 cache:
   paths:
-    - node
+    - node_modules
 
 stages:
   - build
@@ -10,10 +10,13 @@ stages:
   - test
   - documentation
 
+before_script:
+  - npm install -s
+  - npm rebuild node-sass
+
 pages:
   stage: documentation
   script:
-    - npm install -s
     - npm run grunt docs
   artifacts:
     paths:
@@ -28,7 +31,6 @@ build_lib:
     - master
     - develop
   script:
-    - npm i
     - npm run grunt
   artifacts:
     paths:
@@ -42,9 +44,9 @@ deploy_lib:
   script:
     - cd deploy
     - npm install -s
-    - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF index.html,showcar-ui.css,showcar-ui.js,showcar-ui.js.map
-    - node ./deploy_to_s3.js ../dist showcar-ui/$CI_BUILD_REF_NAME/latest index.html
-    - node ./deploy_to_s3.js ../src/html showcar-ui showcar-ui-fragment.html
+    - node ./deploy_to_s3.js "../dist/+(index.html|showcar-ui.css|showcar-ui.js|showcar-ui.js.map)" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
+    - node ./deploy_to_s3.js "../dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
+    - node ./deploy_to_s3.js "../src/html/showcar-ui-fragment.html" showcar-ui
 
 css_test:
   stage: test
@@ -52,12 +54,12 @@ css_test:
     - master
     - develop
   script:
-    - npm install -s
     - npm run test-css-reference
     - npm run test-css
-  artifacts:
-    paths:
-      - backstop_data/bitmaps_test/**/*.png
+    - cd deploy
+    - npm install -s
+    - node ./deploy_to_s3.js "../backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
+    - if [ -f backstop_data/bitmaps_test/**/failed*.png ]; then echo "1"; else echo "0"; fi
 
 sanity_test:
   stage: test
@@ -65,5 +67,4 @@ sanity_test:
     - master
     - develop
   script:
-    - npm install
-    - xvfb-run --server-args="-screen 0 1024x768x24" npm test
+    - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity

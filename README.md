@@ -116,6 +116,16 @@ MIT License
 
 ## Release notes
 
+*1.3.3*
+
+- Added css regression tests
+- Fixed the javascript sanity tests
+- Improved the gitlab-ci config
+
+*1.3.2*
+
+- Bugfixes
+
 *1.3.1*
 
 - Improved support for older iOS devices
