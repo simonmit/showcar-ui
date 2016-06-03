@@ -58,6 +58,7 @@ css_test:
     - npm run test-css
     - cd deploy
     - npm install -s
+    - node ./cleanup_s3.js "showcar-ui/css-tests-artifacts"
     - node ./deploy_to_s3.js "../backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
     - if [ -f backstop_data/bitmaps_test/**/failed*.png ]; then echo "1"; else echo "0"; fi
 
