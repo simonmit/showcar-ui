@@ -45,8 +45,8 @@ deploy_lib:
     - cd deploy
     - npm install -s
     - node ./deploy_to_s3.js "../dist/+(index.html|showcar-ui.css|showcar-ui.js|showcar-ui.js.map)" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
-    - node ./deploy_to_s3.js ../dist/index.html showcar-ui/$CI_BUILD_REF_NAME/latest
-    - node ./deploy_to_s3.js ../src/html/showcar-ui-fragment.html showcar-ui
+    - node ./deploy_to_s3.js "../dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
+    - node ./deploy_to_s3.js "../src/html/showcar-ui-fragment.html" showcar-ui
 
 css_test:
   stage: test
@@ -58,7 +58,7 @@ css_test:
     - npm run test-css
     - cd deploy
     - npm install -s
-    - node ./deploy_to_s3.js ../backstop_data/bitmaps_test/**/failed*.png showcar-ui/css-tests-artifacts
+    - node ./deploy_to_s3.js "../backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
 
 sanity_test:
   stage: test
