@@ -5,6 +5,7 @@ var path = require('path');
 var chalk = require('chalk');
 var fs = require('fs');
 var mime = require('mime');
+var glob = require('glob');
 
 Q.longStackSupport = true;
 
@@ -13,16 +14,17 @@ var logGreen = R.compose(console.log.bind(console), chalk.green.bind(chalk));
 var logRed = R.compose(console.log.bind(console), chalk.red.bind(chalk));
 
 var doLog = R.curry(function(msg, data) {
-    logCyan(msg);
+    logCyan(msg + ' > ', data);
     return data;
 });
 
+
+/// readPattern :: String -> Promise [String]
+var readPattern = R.curryN(2, Q.nfcall)(glob);
+
+
 /// joinPath :: String -> String -> String
 var joinPath = R.curryN(2, path.join);
-
-
-/// appendFullPathToFiles :: String -> [String] -> [String]
-var appendFullPathToFiles = R.compose(R.map, joinPath);
 
 
 /// mapFilesToStreams :: [String] -> [{stream: FileStream, fileName: String}]
@@ -63,8 +65,8 @@ module.exports = {
     logGreen:logGreen,
     logRed: logRed,
     doLog: doLog,
+    readPattern: readPattern,
     joinPath: joinPath,
     uploadFile: uploadFile,
-    mapFilesToStreams: mapFilesToStreams,
-    appendFullPathToFiles: appendFullPathToFiles
+    mapFilesToStreams: mapFilesToStreams
 };
