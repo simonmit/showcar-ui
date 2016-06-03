@@ -12,6 +12,7 @@ stages:
 
 before_script:
   - npm install -s
+  - npm rebuild node-sass
 
 pages:
   stage: documentation
