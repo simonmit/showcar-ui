@@ -59,6 +59,7 @@ css_test:
     - cd deploy
     - npm install -s
     - node ./deploy_to_s3.js "../backstop_data/bitmaps_test/**/*.png" showcar-ui/css-tests-artifacts
+    - [ -f backstop_data/bitmaps_test/**/failed*.png ] && exit 1 || exit 0
 
 sanity_test:
   stage: test
