@@ -30,11 +30,8 @@ var bucketName = process.env.BUCKETNAME;
 H.logCyan('From: ' + localPattern);
 H.logCyan('To: ' + remoteDirName);
 
-Q.when(localPattern)
-    .then(H.doLog('To be uploaded'))
-    .then(H.readPattern)
+Q.when(H.readPattern(localPattern))
     .then(H.doLog('Resolved files list'))
-    .then(H.doLog('Map following files to streams'))
     .then(H.mapFilesToStreams)
     .then(H.doLog('Send streams to S3'))
     .then(R.forEach(H.uploadFile(bucketName, remoteDirName)))
