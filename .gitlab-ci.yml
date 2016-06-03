@@ -55,9 +55,6 @@ css_test:
   script:
     - npm run test-css-reference
     - npm run test-css
-  artifacts:
-    paths:
-      - backstop_data/bitmaps_test/**/*.png
 
 sanity_test:
   stage: test
