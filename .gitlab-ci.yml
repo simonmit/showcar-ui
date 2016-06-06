@@ -6,8 +6,8 @@ cache:
 
 stages:
   - build
-  - test
   - deploy
+  - test
   - documentation
 
 before_script:
