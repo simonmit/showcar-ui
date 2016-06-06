@@ -94,5 +94,53 @@
   "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .be : Landing page",
+  "url": "https://www.autoscout24.be/evaluationvoiture?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .be : Details page",
+  "url": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": ""
+},
+{
+  "label": "PriceEstimation : .be : Result page",
+  "url": "https://www.autoscout24.be/evaluationvoiture/resultat?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/resultat?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light",
+  "hideSelectors": [],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": ""
 }
 ]
