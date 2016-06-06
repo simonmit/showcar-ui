@@ -60,6 +60,16 @@ var uploadFile = R.curry(function(bucketName, remotePath, payload) {
         .send(uploadFinished);
 });
 
+var listObjects = R.curry(function(bucketName, remotePath) {
+    var S3 = new AWS.S3();
+    return Q.ninvoke(S3, 'listObjects', {Bucket: bucketName, Prefix: remotePath});
+});
+
+var deleteObject = R.curry(function(bucketName, s3ObjectKey) {
+    var S3 = new AWS.S3();
+    return Q.ninvoke(S3, 'deleteObject', {Bucket: bucketName, Key: s3ObjectKey});
+});
+
 module.exports = {
     logCyan:logCyan,
     logGreen:logGreen,
@@ -68,5 +78,7 @@ module.exports = {
     readPattern: readPattern,
     joinPath: joinPath,
     uploadFile: uploadFile,
-    mapFilesToStreams: mapFilesToStreams
+    mapFilesToStreams: mapFilesToStreams,
+    deleteObject: deleteObject,
+    listObjects: listObjects
 };

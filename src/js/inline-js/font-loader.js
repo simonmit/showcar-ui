@@ -1,4 +1,6 @@
 (function() {
+    if (location.href.indexOf('web-font=no') >= 0) { return; }
+    
     function loadFont(sheet, family, weights, className) {
         var raf = window.requestAnimationFrame || function(fn) { return setTimeout(fn, 50); };
         var caf = window.cancelAnimationFrame || clearTimeout;
@@ -61,7 +63,14 @@
             link.onload = function() {
                 this.media = 'all';
                 this.onload = null;
-                fn();
+
+                (function onbodyready() {
+                    if (!document.body) {
+                        return raf(onbodyready);
+                    }
+
+                    fn();
+                }());
             };
 
             var script = document.getElementsByTagName('script')[0];

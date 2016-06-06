@@ -60,4 +60,25 @@
   "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
   "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .nl",
+  "url": "https://www.autoscout24.nl?sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.nl",
+  "hideSelectors": [
+  ],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    ".sc-navigation",
+    "#brand-box-container > div.search-mask",
+    "#home-search-headline",
+    "#cms-55110116",
+    ".fragments-footer"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
 }]
