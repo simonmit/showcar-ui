@@ -116,9 +116,6 @@ MIT License
 
 ## Release notes
 
-*1.3.4*
-- Fixed button CSS by removing fixed height.
-
 *1.3.3*
 
 - Added css regression tests
