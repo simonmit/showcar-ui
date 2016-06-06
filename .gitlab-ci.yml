@@ -6,8 +6,8 @@ cache:
 
 stages:
   - build
-  - deploy
   - test
+  - deploy
   - documentation
 
 before_script:
@@ -60,7 +60,7 @@ css_test:
     - npm install -s
     - node ./cleanup_s3.js "showcar-ui/css-tests-artifacts"
     - node ./deploy_to_s3.js "../backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
-    - cd .. && if [[ -f ./backstop_data/bitmaps_test/**/failed*.png ]]; then exit 1; else exit 0; fi
+    - if ls ../backstop_data/bitmaps_test/**/failed*.png 1> /dev/null 2>&1; then exit 1; else exit 0; fi
 
 sanity_test:
   stage: test
