@@ -116,6 +116,10 @@ MIT License
 
 ## Release notes
 
+*Next release*
+
+- Cleaned-up deployment script 
+
 *1.4.0*
 
 - Improved css regression tests
