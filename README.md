@@ -116,6 +116,12 @@ MIT License
 
 ## Release notes
 
+*1.4.0*
+
+- Improved css regression tests
+- Updated icons ( carInsertion.svg, carInsertionEdit.svg, hookSquare.svg )
+- Bugfixes
+
 *1.3.5*
 
 - Fixed button CSS by removing fixed height
