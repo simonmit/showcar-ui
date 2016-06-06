@@ -2,12 +2,10 @@
 
 .sc-btn-bob {
   @include button(bob);
-  background-color: #00ee00;
 }
 
 .sc-btn-ross {
   @include button(ross);
-  background-color: #00ee00;
 }
 
 .sc-btn-block {
@@ -22,11 +20,9 @@
 .sc-btn-bob-l,
 .sc-btn-bob-m {
   @include button(bob);
-  background-color: #00ee00;
 }
 
 .sc-btn-ross-l,
 .sc-btn-ross-m {
   @include button(ross);
-  background-color: #00ee00;
 }
