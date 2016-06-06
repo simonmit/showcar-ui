@@ -13,8 +13,6 @@ if (typeof Object.assign !== 'function') {
     require('object.assign/shim')();
 }
 
-throw new Error('test!');
-
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
