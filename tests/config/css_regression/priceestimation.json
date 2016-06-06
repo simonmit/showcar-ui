@@ -113,8 +113,8 @@
 },
 {
   "label": "PriceEstimation : .be : Details page",
-  "url": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails&sc_develop=1",
-  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=29&firstRegistrationMonth=02&firstRegistrationYear=2012&vehicleGroupId=1758_6_5&fuelId=D&power=51&equipmentLine=1.4+TDCi+Ambiente&natCode=10213745&mileage=12345&action=displayDetails",
+  "url": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=55&firstRegistrationMonth=01&firstRegistrationYear=2011&vehicleGroupId=18797_2_2&fuelId=B&power=88&equipmentLine=1.6i+Key+West&natCode=86898&mileage=10000&action=displayDetails&sc_develop=1",
+  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/detail?modelSize=light&makeId=55&firstRegistrationMonth=01&firstRegistrationYear=2011&vehicleGroupId=18797_2_2&fuelId=B&power=88&equipmentLine=1.6i+Key+West&natCode=86898&mileage=10000&action=displayDetails",
   "hideSelectors": [],
   "removeSelectors": [
   ],
