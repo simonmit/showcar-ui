@@ -116,7 +116,6 @@ MIT License
 
 ## Release notes
 
-<<<<<<< HEAD
 *Next release*
 
 - Cleaned-up deployment script 
