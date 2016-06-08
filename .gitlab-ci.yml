@@ -49,7 +49,6 @@ deploy_lib:
 css_test:
   stage: test
   only:
-    - master
     - develop
   script:
     - npm run test-css-reference
