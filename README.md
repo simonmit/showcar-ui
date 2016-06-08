@@ -116,6 +116,10 @@ MIT License
 
 ## Release notes
 
+*Next release*
+
+- Cleaned-up deployment script 
+
 *1.4.1*
 
 - Fixed buttons height
