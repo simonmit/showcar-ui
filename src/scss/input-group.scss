@@ -49,11 +49,4 @@
     }
   }
 
-  &--condensed {
-    > label {
-      @include mqminmax($viewportS, $viewportM) {
-        padding: 5px 0;
-      }
-    }
-  }
 }
