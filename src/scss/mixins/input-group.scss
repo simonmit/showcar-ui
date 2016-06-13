@@ -18,7 +18,7 @@
   border-radius: $form-border-radius;
   font-weight: 400;
 
-  input[type=radio] {
+  input[type=radio].sc-input {
     display: none;
 
     &:checked {
@@ -31,7 +31,7 @@
     }
 
     & + label {
-      padding: 4px 12px;
+      padding: 5px 0;
       margin: 0;
       border-right: 1px solid $black-60;
       text-align: center;
