@@ -38,7 +38,6 @@
   > label {
     position: relative;
     width: 100%;
-    padding: 5px 14px !important;
 
     as24-icon {
       line-height: 0;
@@ -47,6 +46,14 @@
 
     &::before {
       background-image: none !important;
+    }
+  }
+
+  &--condensed {
+    > label {
+      @include mqminmax($viewportS, $viewportM) {
+        padding: 5px 0;
+      }
     }
   }
 }
