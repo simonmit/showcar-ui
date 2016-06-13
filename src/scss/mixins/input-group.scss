@@ -27,6 +27,7 @@
       & + label {
         cursor: not-allowed;
         color: $black-40;
+        border-right: 1px solid $black-40;
       }
 
       &:checked {
