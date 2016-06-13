@@ -46,7 +46,7 @@ var uploadFinished = function(err, data) {
 var getUploadParams = function(bucketName, remotePath, fileName) {
     var mimeType = mime.lookup(fileName);
     var extName = path.extname(fileName);
-    var base = {Bucket: bucketName, ContentType: mimeType, Key: remotePath + '/' + fileName, ACL: 'bucket-owner-full-control'};
+    var base = {Bucket: bucketName, ContentType: mimeType, Key: remotePath + '/' + fileName};
     if (extName === '.html') {
         return R.merge({CacheControl: 'max-age=60'}, base);
     } else {
