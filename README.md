@@ -116,9 +116,15 @@ MIT License
 
 ## Release notes
 
-*Next release*
-
-- Cleaned-up deployment script 
+*1.4.4*
+- Font-size S to 0.8125rem = 13px
+- Line-height to 1.5
+- Cache all files except for html fragment for 30 days
+- Optimized css regression tests
+- Added new icon "environment.svg"
+- Fixed padding for the radio group
+- Added disabled state for the radio buttons
+- Fix for the group of radios
 
 *1.4.1*
 

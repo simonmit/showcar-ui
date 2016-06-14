@@ -1,6 +1,6 @@
 [{
   "label": "Home page : .com",
-  "url": "https://www.autoscout24.com?sc_develop=1",
+  "url": "https://www.autoscout24.com?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.com",
   "hideSelectors": [
   ],
@@ -21,7 +21,7 @@
 },
 {
   "label": "Home page : .de",
-  "url": "https://www.autoscout24.de?sc_develop=1",
+  "url": "https://www.autoscout24.de?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.de",
   "hideSelectors": [
   ],
@@ -42,7 +42,7 @@
 },
 {
   "label": "Home page : .at",
-  "url": "https://www.autoscout24.at?sc_develop=1",
+  "url": "https://www.autoscout24.at?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.at",
   "hideSelectors": [
   ],
@@ -63,7 +63,7 @@
 },
 {
   "label": "Home page : .nl",
-  "url": "https://www.autoscout24.nl?sc_develop=1",
+  "url": "https://www.autoscout24.nl?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.nl",
   "hideSelectors": [
   ],

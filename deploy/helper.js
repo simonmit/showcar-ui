@@ -49,6 +49,8 @@ var getUploadParams = function(bucketName, remotePath, fileName) {
     var base = {Bucket: bucketName, ContentType: mimeType, Key: remotePath + '/' + fileName};
     if (extName === '.html') {
         return R.merge({CacheControl: 'max-age=60'}, base);
+    } else {
+        return R.merge({CacheControl: 'max-age=2592000'}, base); // cache everything but html fragment for 30 days
     }
     return base;
 };

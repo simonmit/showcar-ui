@@ -18,8 +18,38 @@
   border-radius: $form-border-radius;
   font-weight: 400;
 
-  input[type=radio] {
+  input[type=radio].sc-input {
     display: none;
+
+
+    &:disabled {
+
+      & + label {
+        cursor: not-allowed;
+        color: $black-40;
+        border-right: 1px solid $black-40;
+      }
+
+      &:checked {
+        & + label {
+          color: $black-50;
+          background-color: $black-30;
+          &:hover {
+            background-color: $black-30;
+          }
+        }
+      }
+
+      &:not(:checked) {
+        & + label {
+          background-color: $black-20;
+          &:hover {
+            background-color: $black-20;
+          }
+        }
+      }
+
+    }
 
     &:checked {
       & + label {
@@ -31,7 +61,7 @@
     }
 
     & + label {
-      padding: 4px 12px;
+      padding: 5px 0;
       margin: 0;
       border-right: 1px solid $black-60;
       text-align: center;
