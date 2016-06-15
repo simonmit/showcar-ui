@@ -17,5 +17,5 @@
   "delay": 1200,
   "misMatchThreshold" : 0.2,
   "onBeforeScript": "",
-  "onReadyScript": ""
+  "onReadyScript": "list.js"
 }]

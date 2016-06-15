@@ -3,9 +3,11 @@
   "url": "https://www.autoscout24.com?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.com",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
-    ".home-placements-stripe"
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
     "body"
@@ -21,9 +23,11 @@
   "url": "https://www.autoscout24.de?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.de",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
-    ".home-placements-stripe"
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
     "body"
@@ -39,9 +43,11 @@
   "url": "https://www.autoscout24.at?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.at",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
-    ".home-placements-stripe"
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
     "body"
@@ -57,9 +63,11 @@
   "url": "https://www.autoscout24.nl?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.nl",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
-    ".home-placements-stripe"
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
     "body"

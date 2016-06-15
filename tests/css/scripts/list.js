@@ -1,9 +1,10 @@
 module.exports = function(casper) {
 
     function expandFilters(selector) {
-        var el = document.querySelectorAll(selector);
-        for(var i=0; i<el.length; i++) {
-            el.classList.add('in');
+        var elements = document.querySelectorAll(selector);
+
+        for(var i=0; i < elements.length; i++) {
+            elements[i].classList.add('in');
         }
     }
 
