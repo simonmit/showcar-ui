@@ -5,13 +5,10 @@
   "hideSelectors": [
   ],
   "removeSelectors": [
+    ".home-placements-stripe"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -26,13 +23,10 @@
   "hideSelectors": [
   ],
   "removeSelectors": [
+    ".home-placements-stripe"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -47,13 +41,10 @@
   "hideSelectors": [
   ],
   "removeSelectors": [
+    ".home-placements-stripe"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -68,13 +59,10 @@
   "hideSelectors": [
   ],
   "removeSelectors": [
+    ".home-placements-stripe"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
