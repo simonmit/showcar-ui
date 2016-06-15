@@ -108,10 +108,12 @@ for the use of the library have a look at the [documentation](https://web-experi
 
 ## How to contribute:
 
-TBD
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-MIT License
+See [LICENSE.md](LICENSE.md)
 
-## Release notes
+## Changelog / History
+
+See [History.md](History.md)

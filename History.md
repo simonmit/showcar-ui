@@ -16,7 +16,7 @@
 1.4.1
 =====
   * Fixed buttons height
-
+.toHaveBeenCalled();
 1.4.0
 =====
   * Improved css regression tests
