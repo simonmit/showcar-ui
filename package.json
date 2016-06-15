@@ -81,7 +81,7 @@
     "dom4": "^1.8.3",
     "picturefill": "^3.0.2",
     "placeholders": "^0.2.0",
-    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.1.4",
+    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.1.5",
     "showcar-storage": "git+https://github.com/AutoScout24/showcar-storage.git#v1.0.2",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.0.11",
     "susy": "^2.2.12",
