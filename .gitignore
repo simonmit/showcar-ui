@@ -9,8 +9,7 @@ atlassian-ide-plugin.xml
 .gitignore.swp
 tests/errorShots
 dist
-.DS_Store
-npm-debug.log*
+*.log
 public
 backstop_data
 css_regression_test_config.json
