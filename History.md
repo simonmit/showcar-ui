@@ -1,3 +1,16 @@
+
+1.4.6 / 2016-06-16
+==================
+
+  * Fixed dependencies
+  * Added license and contributing files
+  * Added proper changelog
+  * Added changelog file
+  * CSS tests: added more exclude selectors for the home page + fixed list test script
+  * Cleaned up dependecies
+  * adjusted home CSS regression tests + added list.js script for CSS tests
+  * added more logging for AWS
+
 1.4.5 
 =====
   * Fix for radio buttons when there's no class specified for the `input` 
