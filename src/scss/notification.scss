@@ -7,15 +7,15 @@ as24-notification {
   z-index: 8000; /* TODO: Do we need this z-index? */
   position: relative;
   max-height: 0;
-  transition: max-height $transition-time ease-out;
+  transition: max-height 0.5s ease-out;
 
   &.prefade {
     transition-duration: 0;
   }
 
   &.show {
-    transition: max-height $transition-time ease-in;
-    max-height: 71px;
+    transition: max-height 0.5s ease-in;
+    max-height: 320px; /* ToDo: could be set in js for better accuracy */
   }
 
   @each $name, $value in $types {
