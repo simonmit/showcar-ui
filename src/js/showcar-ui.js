@@ -33,6 +33,7 @@ $(_ => {
     require('./components/sticky.js')();
     require('./components/collapse.js')();
     require('./components/scroll.js');
+    require('./components/stepper.js');
 });
 
 if (!window.notification) {

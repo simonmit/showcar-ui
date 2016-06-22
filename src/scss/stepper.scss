@@ -1,0 +1,45 @@
+@import "variables";
+
+.sc-stepper {
+  display: flex;
+}
+
+.sc-stepper-input {
+  border: 1px solid $black-60;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  text-align: center;
+  outline: none;
+}
+
+.sc-stepper-button {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 15px;
+  color: $black-100;
+  background-color: $white;
+  font-size: 100%;
+  border: 1px solid $black-60;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $black-30;
+  }
+
+  &-decrement {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &-increment {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.sc-stepper-input::-webkit-inner-spin-button,
+.sc-stepper-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
