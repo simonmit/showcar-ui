@@ -1,33 +1,36 @@
 (function() {
     var stepperEl = document.querySelector(".sc-stepper-input");
-    var decrementEl = document.querySelector(".sc-stepper-button-decrement");
-    var incrementEl = document.querySelector(".sc-stepper-button-increment");
-    var minValue = parseInt(stepperEl.getAttribute('min'));
-    var maxValue = parseInt(stepperEl.getAttribute('max'));
 
-    // To make sure we can also calculate with the value the user typed in
-    var getCurrentValue = function() {
-        return stepperEl.value !== "" ? parseInt(stepperEl.value, 10) : 0;
-    };
+    if (stepperEl) {
+        var decrementEl = document.querySelector(".sc-stepper-button-decrement");
+        var incrementEl = document.querySelector(".sc-stepper-button-increment");
+        var minValue = parseInt(stepperEl.getAttribute('min'));
+        var maxValue = parseInt(stepperEl.getAttribute('max'));
 
-    var currentValue = getCurrentValue();
+        // To make sure we can also calculate with the value the user typed in
+        var getCurrentValue = function() {
+            return stepperEl.value !== "" ? parseInt(stepperEl.value, 10) : 0;
+        };
 
-    var increment = function() {
-        currentValue = getCurrentValue();
+        var currentValue = getCurrentValue();
 
-        if (currentValue < maxValue) {
-            stepperEl.value = ++currentValue;
-        }
-    };
+        var increment = function() {
+            currentValue = getCurrentValue();
 
-    var decrement = function(){
-        currentValue = getCurrentValue();
+            if (currentValue < maxValue) {
+                stepperEl.value = ++currentValue;
+            }
+        };
 
-        if (currentValue > minValue) {
-            stepperEl.value = --currentValue;
-        }
-    };
+        var decrement = function(){
+            currentValue = getCurrentValue();
 
-    decrementEl.addEventListener("click", decrement);
-    incrementEl.addEventListener("click", increment);
+            if (currentValue > minValue) {
+                stepperEl.value = --currentValue;
+            }
+        };
+
+        decrementEl.addEventListener("click", decrement);
+        incrementEl.addEventListener("click", increment);
+    }
 }());
