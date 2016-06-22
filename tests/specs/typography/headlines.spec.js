@@ -1,6 +1,6 @@
 describe('typography - headlines tests', function(){
     beforeEach(function() {
-        browser.url('/docs/pages/typography.html#headlines');
+        browser.url('/');
     });
 
     it('should have the correct font sizes in viewport < M ',function() {

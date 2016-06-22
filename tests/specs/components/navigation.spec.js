@@ -1,7 +1,7 @@
 describe('Components collapse tests', function(){
 
     beforeEach(function() {
-        browser.url('/docs/pages/components.html#navigation');
+        browser.url('/');
     });
 
     it('should hide all nav menues',function() {

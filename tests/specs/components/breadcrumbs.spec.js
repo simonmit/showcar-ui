@@ -1,7 +1,7 @@
 describe('Components breadcrumbs tests', function() {
 
     beforeEach(function () {
-        browser.url('/docs/pages/components.html');
+        browser.url('/');
     });
 
     it('should show all breadcrumbs in large viewport',function() {

@@ -1,7 +1,7 @@
 describe('forms - radios tests', function(){
 
     beforeEach(function() {
-        browser.url('/docs/pages/forms.html');
+        browser.url('/');
     });
 
     it('should have the correct size',function() {

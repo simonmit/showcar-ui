@@ -1,7 +1,7 @@
 describe('Components collapse tests', function(){
 
     beforeEach(function() {
-        browser.url('/docs/pages/components.html');
+        browser.url('/');
     });
 
     it('should toggle collapse example',function() {

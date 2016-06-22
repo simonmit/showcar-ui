@@ -3,7 +3,7 @@ describe('forms - selects tests', function(){
     const inputHeight = 40;
 
     beforeEach(function() {
-        browser.url('/docs/pages/forms.html');
+        browser.url('/');
     });
 
     it('should have the correct size',function() {

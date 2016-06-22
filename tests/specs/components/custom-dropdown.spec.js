@@ -1,7 +1,7 @@
 describe('Components custom-dropdowns tests', function() {
 
     beforeEach(function () {
-        browser.url('/docs/pages/components.html');
+        browser.url('/');
     });
 
     it('should have custom dropdowns on page',function() {
