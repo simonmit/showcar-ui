@@ -1,20 +1,19 @@
 (function() {
-    var stepperEl = document.querySelector(".sc-stepper-input");
-
-    if (stepperEl) {
-        var decrementEl = document.querySelector(".sc-stepper-button-decrement");
-        var incrementEl = document.querySelector(".sc-stepper-button-increment");
-        var minValue = parseInt(stepperEl.getAttribute('min'));
-        var maxValue = parseInt(stepperEl.getAttribute('max'));
+    Array.prototype.forEach.call(document.querySelectorAll('.sc-stepper'), (stepperContainer) => {
+        const stepperEl = stepperContainer.querySelector('.sc-stepper-input');
+        const decrementEl = stepperContainer.querySelector(".sc-stepper-button-decrement");
+        const incrementEl = stepperContainer.querySelector(".sc-stepper-button-increment");
+        const minValue = parseInt(stepperEl.getAttribute('min'));
+        const maxValue = parseInt(stepperEl.getAttribute('max'));
 
         // To make sure we can also calculate with the value the user typed in
-        var getCurrentValue = function() {
+        const getCurrentValue = _ => {
             return stepperEl.value !== "" ? parseInt(stepperEl.value, 10) : 0;
         };
 
         var currentValue = getCurrentValue();
 
-        var increment = function() {
+        const increment = _ => {
             currentValue = getCurrentValue();
 
             if (currentValue < maxValue) {
@@ -22,7 +21,7 @@
             }
         };
 
-        var decrement = function(){
+        const decrement = _ => {
             currentValue = getCurrentValue();
 
             if (currentValue > minValue) {
@@ -32,5 +31,5 @@
 
         decrementEl.addEventListener("click", decrement);
         incrementEl.addEventListener("click", increment);
-    }
+    });
 }());
