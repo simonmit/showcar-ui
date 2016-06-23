@@ -36,6 +36,15 @@ $(_ => {
     require('./components/stepper.js');
 });
 
+
+try {
+    document.registerElement('as24-carousel-item', { prototype: Object.create(HTMLElement.prototype) });
+} catch (e) {
+    if (window && window.console) {
+        window.console.warn('Failed to register CustomElement "as24-carousel".', e);
+    }
+}
+
 if (!window.notification) {
     window.notification = require('./components/notification.js');
 } else {
