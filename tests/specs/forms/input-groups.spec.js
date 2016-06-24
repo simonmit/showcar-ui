@@ -7,7 +7,11 @@ describe('forms - input-groups tests', function(){
     });
 
     it('should have the correct input-group size',function() {
-        browser.getElementSize('.example-groups .sc-input-group', 'height').should.equal(inputHeight);
+        browser.getElementSize('.example-groups .sc-input-group', 'height').should.to.satisfy(function(heights) {
+            return heights.every(function(h) {
+                return h === inputHeight;
+            })
+        });
 
         return browser;
     });

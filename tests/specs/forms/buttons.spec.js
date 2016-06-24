@@ -1,6 +1,6 @@
 describe('forms - buttons tests', function(){
 
-    const inputHeight = 39;
+    const inputHeight = 40;
 
     beforeEach(function() {
         browser.url('/');
