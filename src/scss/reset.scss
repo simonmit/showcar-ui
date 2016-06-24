@@ -43,6 +43,10 @@ hr {
   border-top: 1px solid $black-30;
 }
 
+form {
+  overflow-x: hidden;
+}
+
 @import "reset/buttons";
 @import "reset/images";
 @import "reset/as24-icon";
