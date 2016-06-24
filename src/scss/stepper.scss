@@ -1,10 +1,13 @@
 @import "variables";
+@import "mixins/inputs";
 
 .sc-stepper {
   display: flex;
 }
 
 .sc-stepper-input {
+  @include input;
+
   border: 1px solid $black-60;
   border-left: 0;
   border-right: 0;
@@ -16,7 +19,7 @@
 .sc-stepper-button {
   cursor: pointer;
   outline: none;
-  padding: 5px 15px;
+  padding: 5px 10%;
   color: $black-100;
   background-color: $white;
   font-size: 100%;
