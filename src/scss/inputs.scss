@@ -2,8 +2,7 @@
 @import "mixins/inputs";
 @import "mixins/select";
 
-.sc-input {
-  @include input();
+%customInputStyles {
   font-family: inherit;
   border-radius: $form-border-radius;
   border: 1px solid #959595; // TODO: color: correct?
