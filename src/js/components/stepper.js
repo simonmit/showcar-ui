@@ -3,8 +3,8 @@
         const stepperEl = stepperContainer.querySelector('.sc-stepper-input');
         const decrementEl = stepperContainer.querySelector(".sc-stepper-button-decrement");
         const incrementEl = stepperContainer.querySelector(".sc-stepper-button-increment");
-        const minValue = parseInt(stepperEl.getAttribute('min'));
-        const maxValue = parseInt(stepperEl.getAttribute('max'));
+        const minValue = parseInt(stepperEl.getAttribute('min')) || 0;
+        const maxValue = parseInt(stepperEl.getAttribute('max')) || 100;
 
         // To make sure we can also calculate with the value the user typed in
         const getCurrentValue = _ => {
