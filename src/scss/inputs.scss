@@ -2,92 +2,84 @@
 @import "mixins/inputs";
 @import "mixins/select";
 
-input[type="text"],
-input[type="tel"],
-input[type="number"],
-input[type="email"],
-textarea,
-select,
-custom-dropdown {
-  &.sc-input {
-    @include input();
-    font-family: inherit;
-    border-radius: $form-border-radius;
-    border: 1px solid #959595; // TODO: color: correct?
-    color: $black-100;
-    width: 100%;
-    line-height: 1.5;
-    transition: all $transition-time ease-in;
-    outline: none;
-    cursor: pointer;
+.sc-input {
+  @include input();
+  font-family: inherit;
+  border-radius: $form-border-radius;
+  border: 1px solid #959595; // TODO: color: correct?
+  color: $black-100;
+  width: 100%;
+  line-height: 1.5;
+  transition: all $transition-time ease-in;
+  outline: none;
+  cursor: pointer;
 
-    &.error {
-      border-color: $color-error;
-      background-color: $color-error-message;
-    }
+  &.error {
+    border-color: $color-error;
+    background-color: $color-error-message;
+  }
 
-    &.success {
-      border-color: $color-success;
-      background-color: $color-success-message;
-    }
+  &.success {
+    border-color: $color-success;
+    background-color: $color-success-message;
+  }
 
-    &.info {
-      border-color: $color-info;
-      background-color: $color-info-message;
-    }
+  &.info {
+    border-color: $color-info;
+    background-color: $color-info-message;
+  }
 
-    &:disabled {
-      background-color: $white;
-      border-color: $black-40;
-      color: $black-40;
-      cursor: not-allowed;
-    }
+  &:disabled {
+    background-color: $white;
+    border-color: $black-40;
+    color: $black-40;
+    cursor: not-allowed;
+  }
 
-    &:hover:enabled {
-      border-color: $black-100;
-    }
+  &:hover:enabled {
+    border-color: $black-100;
+  }
 
-    &:focus:enabled {
-      box-shadow: 0 0 1px 0 $blue-80;
-      border-color: $blue-80;
-    }
+  &:focus:enabled {
+    box-shadow: 0 0 1px 0 $blue-80;
+    border-color: $blue-80;
+  }
 
-    &:invalid {
-      box-shadow: none;
-    }
+  &:invalid {
+    box-shadow: none;
+  }
 
-    &::-webkit-input-placeholder {
-      color: #939393;
-    }
+  &::-webkit-input-placeholder {
+    color: #939393;
+  }
 
-    // CHECK: color correct?
-    &:-moz-placeholder {
-      color: #939393;
-    }
+  // CHECK: color correct?
+  &:-moz-placeholder {
+    color: #939393;
+  }
 
-    &::-moz-placeholder {
-      color: #939393;
-    }
+  &::-moz-placeholder {
+    color: #939393;
+  }
 
-    &:-ms-input-placeholder {
-      color: #939393;
-    }
+  &:-ms-input-placeholder {
+    color: #939393;
+  }
 
-    &:focus::-webkit-input-placeholder {
-      color: transparent;
-    }
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
 
-    &:focus:-moz-placeholder {
-      color: transparent;
-    }
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
 
-    &:focus::-moz-placeholder {
-      color: transparent;
-    }
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
 
-    &:focus:-ms-input-placeholder {
-      color: transparent;
-    }
+  &:focus:-ms-input-placeholder {
+    color: transparent;
   }
 }
 
