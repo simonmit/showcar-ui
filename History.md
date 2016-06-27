@@ -1,4 +1,34 @@
 
+1.4.8 / 2016-06-27
+==================
+
+  * increased version number
+  * reverted form fix for iOs
+  * added overflow-x hidden to all form elements to prevent iOS input rendering bug
+  * adjusted stepper padding and font
+  * changed button vertical padding to 7px
+  * added custom element as24-carousel-item to check safari 8 bug
+  * now supporting multiple steppers and fixing JS problems
+  * only execute stepper code if stepper is available
+  * added an additional input-group example with dropdowns
+  * added new stepper form element
+  * updated specs configuration + specs
+  * updated sc-font-s font-size change in docs
+  * Merge branch 'hotfix/1.4.7' into develop
+  * Merge branch 'hotfix/notification-size' into develop
+  * Fixed dependencies
+  * Added license and contributing files
+  * Added proper changelog
+  * Added changelog file
+  * CSS tests: added more exclude selectors for the home page + fixed list test script
+  * Cleaned up dependecies
+  * adjusted home CSS regression tests + added list.js script for CSS tests
+  * Merge branch 'hotfix/1.4.5' into develop
+  * Merge branch 'hotfix/icon-fix' into develop
+  * added more logging for AWS
+  * Merge branch 'hotfix/icon-name' into develop
+  * Merge branch 'hotfix/icon-and-documentation' into develop
+
 1.4.6 / 2016-06-16
 ==================
 
@@ -29,7 +59,7 @@
 1.4.1
 =====
   * Fixed buttons height
-.toHaveBeenCalled();
+
 1.4.0
 =====
   * Improved css regression tests
