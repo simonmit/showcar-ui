@@ -20,6 +20,7 @@
 
       overflow: hidden;
       padding-right: 26px;
+      padding-top: 3px;
 
       &::after {
         @extend %icon-dropdown-arrow-down;
