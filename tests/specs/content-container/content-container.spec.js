@@ -1,7 +1,7 @@
 describe('content-container tests', function(){
 
     beforeEach(function() {
-        browser.url('/docs/pages/content-container.html');
+        browser.url('/');
     });
 
     it('should be centered and 1100px in large viewport ',function() {

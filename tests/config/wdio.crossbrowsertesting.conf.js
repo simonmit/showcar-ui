@@ -68,5 +68,5 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
-    baseUrl: 'http://as24-showcar-ui.aws.autoscout24.com'
+    baseUrl: 'https://web-experience.gitlab.io/showcar-ui/'
 }

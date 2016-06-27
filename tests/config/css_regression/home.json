@@ -3,15 +3,14 @@
   "url": "https://www.autoscout24.com?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.com",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -24,15 +23,14 @@
   "url": "https://www.autoscout24.de?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.de",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -45,15 +43,14 @@
   "url": "https://www.autoscout24.at?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.at",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,
@@ -66,15 +63,14 @@
   "url": "https://www.autoscout24.nl?sc_develop=true",
   "referenceUrl": "https://www.autoscout24.nl",
   "hideSelectors": [
+    "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-placements-stripe",
+    "#cms-55110117"
   ],
   "selectors": [
-    ".sc-navigation",
-    "#brand-box-container > div.search-mask",
-    "#home-search-headline",
-    "#cms-55110116",
-    ".fragments-footer"
+    "body"
   ],
   "readyEvent": "",
   "delay": 1200,

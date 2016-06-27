@@ -254,6 +254,18 @@ sub-nav:
             <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
             <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
         </div>
+        <div class="sc-input-group">
+            <select class="sc-input">
+              <option>One</option>
+              <option>Two</option>
+              <option>Three</option>
+            </select>
+            <select class="sc-input">
+              <option>One</option>
+              <option>Two</option>
+              <option>Three</option>
+            </select>
+        </div>
     </div>
     <pre><code class="html js-format-code">
 <!--
@@ -273,6 +285,34 @@ sub-nav:
     <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
     ...
 </div>
+<div class="sc-input-group">
+    <select class="sc-input">
+      ...
+    </select>
+    <select class="sc-input">
+      ...
+    </select>
+</div>
 -->
     </code></pre>
 </div>
+
+
+<a name="stepper"></a>
+    <h3>Stepper</h3>
+    <div class="example">
+        <div class="sc-stepper">
+            <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
+            <input type="number" value="0" class="sc-stepper-input" min="0" max="10" step="1"/>
+            <button class="sc-stepper-button sc-stepper-button-increment">+</button>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-stepper">
+    <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
+    <input type="number" value="0" class="sc-stepper-input" min="0" max="10" step="1"/>
+    <button class="sc-stepper-button sc-stepper-button-increment">+</button>
+</div>
+-->
+    </code></pre>

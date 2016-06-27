@@ -10,6 +10,7 @@ var R = require('ramda');
 var H = require('./helper');
 
 AWS.config.region = 'eu-west-1';
+AWS.config.logger = process.stdout;
 
 if (!process.argv[2]) {
     H.logRed('Please, specify a directory to remove');

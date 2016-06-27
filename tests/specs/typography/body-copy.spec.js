@@ -1,10 +1,10 @@
 describe('typography - body-copy tests', function(){
     beforeEach(function() {
-        browser.url('/docs/pages/typography.html#headlines');
+        browser.url('/');
     });
 
     it('should have the correct font sizes',function() {
-        browser.getCssProperty('.example-body-copy .sc-font-s', 'font-size').value.should.equal('12px');
+        browser.getCssProperty('.example-body-copy .sc-font-s', 'font-size').value.should.equal('13px');
         browser.getCssProperty('.example-body-copy .sc-font-m', 'font-size').value.should.equal('16px');
         browser.getCssProperty('.example-body-copy .sc-font-l', 'font-size').value.should.equal('20px');
         browser.getCssProperty('.example-body-copy .sc-font-xl', 'font-size').value.should.equal('24px');
