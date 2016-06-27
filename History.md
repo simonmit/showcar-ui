@@ -1,4 +1,15 @@
 
+1.4.9 / 2016-06-27
+==================
+
+  * bumped version
+  * better horizontal centering of labels in custom dropdowns
+  * removed padding top for checkboxes
+  * setting default min/max values for stepper
+  * fixed custom dropdowns
+  * fixed broken custom dropdowns - removed unnecessary element selectors
+  * Merge branch 'release/1.4.8' into develop
+
 1.4.8 / 2016-06-27
 ==================
 
