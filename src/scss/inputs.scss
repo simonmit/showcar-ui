@@ -96,6 +96,7 @@ select {
 
 custom-dropdown {
   &.sc-input {
+    height: 40px;
     @extend %customInputStyles;
   }
 }
