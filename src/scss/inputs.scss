@@ -2,8 +2,7 @@
 @import "mixins/inputs";
 @import "mixins/select";
 
-.sc-input {
-  @include input();
+%customInputStyles {
   font-family: inherit;
   border-radius: $form-border-radius;
   border: 1px solid #959595; // TODO: color: correct?
@@ -82,6 +81,26 @@
     color: transparent;
   }
 }
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  &.sc-input {
+    @include input();
+    @extend %customInputStyles;
+  }
+}
+
+custom-dropdown {
+  &.sc-input {
+    height: 40px;
+    @extend %customInputStyles;
+  }
+}
+
 
 textarea.sc-input {
   height: auto !important;

@@ -1,0 +1,17 @@
+[{
+  "label": "Refine search : .com",
+  "url": "https://www.autoscout24.com/refinesearch?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.com/refinesearch",
+  "hideSelectors": [
+  ],
+  "removeSelectors": [
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": "refinesearch.js"
+}]

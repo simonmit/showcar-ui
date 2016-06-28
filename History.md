@@ -1,4 +1,15 @@
 
+1.5.0 / 2016-06-28
+==================
+
+  * bumped version
+  * added refine search page to CSS regression tests
+  * explicitly setting height for custom dropdowns
+  * fixing the custom dorpdown mess
+  * fixed custom dropdown properly without side effects :-)
+  * fixed custom dropdown properly without side effects :-)
+  * Merge branch 'release/1.4.9' into develop
+
 1.4.9 / 2016-06-27
 ==================
 
