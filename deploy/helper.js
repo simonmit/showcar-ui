@@ -52,7 +52,6 @@ var getUploadParams = function(bucketName, remotePath, fileName) {
     } else {
         return R.merge({CacheControl: 'max-age=2592000'}, base); // cache everything but html fragment for 30 days
     }
-    return base;
 };
 
 var uploadFile = R.curry(function(bucketName, remotePath, payload) {
