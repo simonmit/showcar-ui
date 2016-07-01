@@ -1,4 +1,11 @@
 
+1.5.1 / 2016-07-01
+==================
+
+  * Updated version of the tracking library
+  * updated showcar-tracking to v0.0.12
+  * remove spinners of stepper element in firefox
+
 1.5.0 / 2016-06-28
 ==================
 
