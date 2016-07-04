@@ -1,3 +1,5 @@
+@import "../utils";
+
 @mixin arrow($direction) {
   content: '';
   display: inline-block;
@@ -27,37 +29,63 @@
     margin-top: 10px;
 
     @include font(M);
-  }
 
-  li a {
-    @include link(M);
-    display: inline-block;
+    a {
+      @include link(M);
+      display: inline-block;
 
-    padding: 10px $S;
-    margin: -10px (-$S);
-  }
+      padding: 10px $S;
+      margin: -10px (-$S);
+    }
 
-  li:last-child {
-    display: inline-block;
-  }
-
-  li:last-child::before {
-    @include arrow('left');
-  }
-
-  @media all and (min-width: 500px) {
-    li {
+    &:last-child {
       display: inline-block;
     }
 
-    li::after {
-      @include arrow('right');
+    &:last-child::before {
+      @include arrow('left');
     }
 
-    li:not(:only-child):last-child::before,
-    li:last-child::after {
-      content: none;
-      float: left;
+    @include mqmin(500px) { // 500px?
+      display: inline-block;
+
+      &::after {
+        @include arrow('right');
+      }
+
+      &:not(:only-child):last-child::before,
+      &:last-child::after {
+        content: none;
+        float: left;
+      }
+    }
+  }
+
+  // Block modifier
+  &--viewport-s {
+    display: inline-block;
+
+    // Mark the element that should be visible on viewportS
+    li.sc-breadcrumb-item--viewport-s {
+      display: inline-block;
+    }
+
+    @include mqmax(500px) { // 500px?
+      li {
+        display: none;
+
+        &::before {
+          @include arrow('left');
+        }
+
+        &::after {
+          display: none;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
     }
   }
 }
