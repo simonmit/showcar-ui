@@ -14,6 +14,7 @@
   width: 100%;
   text-align: center;
   outline: none;
+  -moz-appearance: textfield; // Don't show spinners in firefox
 }
 
 .sc-stepper-button {
@@ -41,6 +42,7 @@
   }
 }
 
+// Don't show spinners in webkit browsers
 .sc-stepper-input::-webkit-inner-spin-button,
 .sc-stepper-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
