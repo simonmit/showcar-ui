@@ -1,4 +1,24 @@
 
+1.5.2 / 2016-07-04
+==================
+
+  * bumped version
+  * updated showcar-tracking to latest release
+  * Added a "viewport-s" modifier to Breadcrumbs component that specifies which element should be visible on the screens that are smaller then 500px
+  * updated showcar-tracking
+  * hotfix 1.5.2
+  * Fixed the version reference for tracking lib
+  * release 1.5.1
+  * release 1.5.1
+  * Updated version of the tracking library
+  * Revert "Updated deploy script, added a fragment file"
+  * Merge branch 'develop' of gitlab.com:web-experience/showcar-ui into develop
+  * Updated deploy script, added a fragment file
+  * Updated deploy script, added a fragment file
+  * updated showcar-tracking to v0.0.12
+  * remove spinners of stepper element in firefox
+  * Merge branch 'release/1.5.0' into develop
+
 1.5.1 / 2016-07-01
 ==================
 
