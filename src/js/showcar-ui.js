@@ -34,6 +34,7 @@ $(_ => {
     require('./components/collapse.js')();
     require('./components/scroll.js');
     require('./components/stepper.js');
+    require('./components/expandable-box.js')();
 });
 
 
