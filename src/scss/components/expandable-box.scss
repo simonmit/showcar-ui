@@ -9,6 +9,7 @@
 
   &--adaptive {
     @include mqmin($viewportS) {
+      border-bottom: none;
 
       .as24-expandable-box__content {
         display: block;
