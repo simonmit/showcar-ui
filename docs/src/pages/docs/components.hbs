@@ -20,24 +20,37 @@ sub-nav:
     <a name="expandable-box"></a>
     <h3>Expandable Box</h3>
 
+    <p>
+        This component is CSS-only implementation. Thus, you have to follow the markup structure. In other words,
+        it is important to keep class structure like it is shown in the examples.
+    </p>
+
+    <p>
+        <em>Note: </em>You can spot H3 and H5 tags being used here. You can use any element according to the
+        requirements as long as you have ".as24-expandable-box__title" class in place.
+    </p>
+
     <h4>Example</h4>
     <div class="example example-collapse">
         <div class="as24-expandable-box">
-            <h3 class="sc-font as24-expandable-box__title">Box #1 title</h3>
+            <input id="exb1" type="checkbox" class="as24-expandable-box__toggle">
+            <h3 class="sc-font as24-expandable-box__title"><label for="exb1" class="as24-expandable-box__label">Box #1 title</label></h3>
             <div class="as24-expandable-box__content">
                 Lorem ipsum...
             </div>
         </div>
 
         <div class="as24-expandable-box as24-expandable-box--opened">
-            <h3 class="sc-font as24-expandable-box__title">Box #2 title</h3>
+            <input id="exb2" type="checkbox" class="as24-expandable-box__toggle">
+            <h3 class="sc-font as24-expandable-box__title"><label for="exb2" class="as24-expandable-box__label">Box #2 title</label></h3>
             <div class="as24-expandable-box__content">
                 Lorem ipsum...
             </div>
         </div>
 
-        <div class="as24-expandable-box">
-            <h3 class="sc-font as24-expandable-box__title">Box #3 title</h3>
+        <div class="as24-expandable-box as24-expandable-box--opened">
+            <input id="exb3" type="checkbox" class="as24-expandable-box__toggle">
+            <h5 class="sc-font as24-expandable-box__title"><label for="exb3" class="as24-expandable-box__label">Box #2 title</label></h5>
             <div class="as24-expandable-box__content">
                 Lorem ipsum...
             </div>
@@ -47,21 +60,30 @@ sub-nav:
     <pre><code class="html js-format-code">
 <!--
 <div class="as24-expandable-box">
-    <h3 class="sc-font as24-expandable-box__title">Box #1 title</h3>
+    <input id="exb1" type="checkbox" class="as24-expandable-box__toggle">
+    <h3 class="sc-font as24-expandable-box__title">
+        <label for="exb1" class="as24-expandable-box__label">Box #1 title</label>
+    </h3>
     <div class="as24-expandable-box__content">
         Lorem ipsum...
     </div>
 </div>
 
 <div class="as24-expandable-box as24-expandable-box--opened">
-    <h3 class="sc-font as24-expandable-box__title">Box #2 title</h3>
+    <input id="exb2" type="checkbox" class="as24-expandable-box__toggle">
+    <h3 class="sc-font as24-expandable-box__title">
+        <label for="exb2" class="as24-expandable-box__label">Box #2 title</label>
+    </h3>
     <div class="as24-expandable-box__content">
         Lorem ipsum...
     </div>
 </div>
 
 <div class="as24-expandable-box as24-expandable-box--opened">
-    <h3 class="sc-font as24-expandable-box__title">Box #3 title</h3>
+    <input id="exb3" type="checkbox" class="as24-expandable-box__toggle">
+    <h3 class="sc-font as24-expandable-box__title">
+        <label for="exb3" class="as24-expandable-box__label">Box #2 title</label>
+    </h3>
     <div class="as24-expandable-box__content">
         Lorem ipsum...
     </div>
