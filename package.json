@@ -1,6 +1,6 @@
 {
   "name": "showcar-ui",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "",
   "directories": {
     "doc": "docs",
@@ -70,7 +70,7 @@
     "picturefill": "^3.0.2",
     "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.1.5",
     "showcar-storage": "git+https://github.com/AutoScout24/showcar-storage.git#v1.0.2",
-    "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.0.13",
+    "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.0.14",
     "susy": "^2.2.12",
     "zepto-browserify": "^1.0.0"
   }

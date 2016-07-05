@@ -1,4 +1,10 @@
 
+1.5.3 / 2016-07-05
+==================
+
+  * Updated showcar-tracking to v0.0.14
+  * Added a "viewport-s" modifier to Breadcrumbs component that specifies which element should be visible on the screens that are smaller then 500px
+
 1.5.2 / 2016-07-04
 ==================
 
