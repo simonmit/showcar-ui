@@ -30,7 +30,7 @@ sub-nav:
         requirements as long as you have ".as24-expandable-box__title" class in place.
     </p>
 
-    <h4>Example</h4>
+    <h4>Regular Exandible box</h4>
     <div class="example example-collapse">
         <div class="as24-expandable-box">
             <input id="exb1" type="checkbox" class="as24-expandable-box__toggle">
@@ -42,15 +42,7 @@ sub-nav:
 
         <div class="as24-expandable-box as24-expandable-box--opened">
             <input id="exb2" type="checkbox" class="as24-expandable-box__toggle">
-            <h3 class="sc-font as24-expandable-box__title"><label for="exb2" class="as24-expandable-box__label">Box #2 title</label></h3>
-            <div class="as24-expandable-box__content">
-                Lorem ipsum...
-            </div>
-        </div>
-
-        <div class="as24-expandable-box as24-expandable-box--opened">
-            <input id="exb3" type="checkbox" class="as24-expandable-box__toggle">
-            <h5 class="sc-font as24-expandable-box__title"><label for="exb3" class="as24-expandable-box__label">Box #2 title</label></h5>
+            <h5 class="sc-font as24-expandable-box__title"><label for="exb2" class="as24-expandable-box__label">Box #2 title</label></h5>
             <div class="as24-expandable-box__content">
                 Lorem ipsum...
             </div>
@@ -78,18 +70,61 @@ sub-nav:
         Lorem ipsum...
     </div>
 </div>
+-->
+    </code></pre>
 
-<div class="as24-expandable-box as24-expandable-box--opened">
+
+    <h4>Adaptive Exandible box</h4>
+    <div class="example example-collapse">
+        <div class="as24-expandable-box as24-expandable-box--adaptive">
+            <input id="exb3" type="checkbox" class="as24-expandable-box__toggle">
+            <h3 class="sc-font as24-expandable-box__title"><label for="exb3" class="as24-expandable-box__label">Box #1 title</label></h3>
+            <div class="as24-expandable-box__content">
+                Lorem ipsum...
+            </div>
+        </div>
+
+        <div class="as24-expandable-box as24-expandable-box--adaptive">
+            <input id="exb4" type="checkbox" class="as24-expandable-box__toggle">
+            <h5 class="sc-font as24-expandable-box__title"><label for="exb4" class="as24-expandable-box__label">Box #2 title</label></h5>
+            <div class="as24-expandable-box__content">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <pre><code class="html js-format-code">
+<!--
+<div class="as24-expandable-box as24-expandable-box--adaptive">
     <input id="exb3" type="checkbox" class="as24-expandable-box__toggle">
     <h3 class="sc-font as24-expandable-box__title">
-        <label for="exb3" class="as24-expandable-box__label">Box #2 title</label>
+        <label for="exb3" class="as24-expandable-box__label">Box #1 title</label>
     </h3>
     <div class="as24-expandable-box__content">
         Lorem ipsum...
     </div>
 </div>
+
+<div class="as24-expandable-box as24-expandable-box--adaptive">
+    <input id="exb4" type="checkbox" class="as24-expandable-box__toggle">
+    <h5 class="sc-font as24-expandable-box__title">
+        <label for="exb4" class="as24-expandable-box__label">Box #2 title</label>
+    </h5>
+    <div class="as24-expandable-box__content">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</div>
 -->
     </code></pre>
+
 
     <a name="collapse"></a>
     <h3>Collapse</h3>

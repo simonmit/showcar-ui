@@ -1,9 +1,27 @@
 @import "../utils";
 @import "../mixins/fonts";
+@import "../variables";
+
 
 .as24-expandable-box {
   @include clearfix();
   border-bottom: 1px solid $black-30;
+
+  &--adaptive {
+    @include mqmin($viewportS) {
+
+      .as24-expandable-box__content {
+        display: block;
+      }
+
+      .as24-expandable-box__label {
+        &:after {
+          display: none;
+        }
+      }
+
+    }
+  }
 
   &:first-child {
     border-top: 1px solid $black-30;
