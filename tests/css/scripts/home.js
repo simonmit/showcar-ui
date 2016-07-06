@@ -7,6 +7,5 @@ module.exports = function(casper, scenario, vp) {
 
   casper.waitForSelector('#brand-box-container', function() {
     casper.evaluate(grayElementOut, '#brand-box-container');
-  })
-
+  });
 };
