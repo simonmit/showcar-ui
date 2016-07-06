@@ -9,9 +9,6 @@
 
   &--adaptive {
     @include mqmin($viewportS) {
-      &.as24-expandable-box:first-child {
-        border-top: none;
-      }
       border-bottom: none;
 
       .as24-expandable-box__content {
@@ -25,10 +22,6 @@
       }
 
     }
-  }
-
-  &:first-child {
-    border-top: 1px solid $black-30;
   }
 
   &__toggle {
