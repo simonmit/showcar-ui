@@ -8,7 +8,7 @@
   border-bottom: 1px solid $black-30;
 
   &--adaptive {
-    @include mqmin($viewportS) {
+    @include mqmin($viewportM) {
       border-bottom: none;
 
       .sc-expandable-box__content {
