@@ -6,17 +6,63 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative;
+
+  &__state {
+    display: none;
+
+    &:checked {
+      & ~ .sc-cards__show-more {
+        display: none;
+      }
+
+      & ~ .sc-cards__show-less {
+        display: block;
+      }
+
+      & ~ .sc-card--stateful {
+        display: block;
+      }
+    }
+
+  }
+
+  &__show-more {
+    display: block;
+    @include mqmin($viewportM) {
+      display: none;
+    }
+  }
+
+  &__show-less {
+    display: none;
+    @include mqmin($viewportM) {
+      display: none;
+    }
+  }
+
+  .sc-card--stateful {
+    display: none;
+    @include mqmin($viewportM) {
+      display: block;
+    }
+  }
 }
 
 .sc-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   border: solid 1px $black-30;
   border-radius: $S;
-  margin: $XS;
-  width: 46%;
+  margin: 1%;
+  width: 48%;
 
   @include mqmin($viewportS) {
+    width: 23%;
+  }
+
+  @include mqmin($viewportM) {
     width: 170px;
   }
 
