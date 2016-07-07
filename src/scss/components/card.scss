@@ -1,6 +1,16 @@
 @import "../variables";
 @import "../mixins/utils";
 
+%trigger_btn {
+  border-top: solid 1px $black-30;
+  margin-top: $S;
+  padding: $S;
+  flex-basis: 100%;
+  @include mqmin($viewportM) {
+    display: none;
+  }
+}
+
 .sc-cards {
   display: flex;
   flex-direction: row;
@@ -29,16 +39,12 @@
 
   &__show-more {
     display: block;
-    @include mqmin($viewportM) {
-      display: none;
-    }
+    @extend %trigger_btn;
   }
 
   &__show-less {
     display: none;
-    @include mqmin($viewportM) {
-      display: none;
-    }
+    @extend %trigger_btn;
   }
 
   .sc-card--stateful {
@@ -56,20 +62,21 @@
   border: solid 1px $black-30;
   border-radius: $S;
   margin: 1%;
-  width: 48%;
+  max-width: 48%;
 
-  @include mqmin($viewportS) {
-    width: 23%;
+  @include mqmin(415px) {
+    max-width: 23%;
   }
 
-  @include mqmin($viewportM) {
-    width: 170px;
+  @include mqmin(768) {
+    max-width: 170px;
   }
 
   &__media {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     background: $black-20;
   }
 
