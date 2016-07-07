@@ -1,14 +1,18 @@
 @import "../variables";
 @import "../mixins/utils";
 
+%mobile-only {
+  @include mqmin($viewportM) {
+    display: none;
+  }
+}
+
 %trigger_btn {
+  @extend %mobile-only;
   border-top: solid 1px $black-30;
   margin-top: $S;
   padding: $S;
   flex-basis: 100%;
-  @include mqmin($viewportM) {
-    display: none;
-  }
 }
 
 .sc-cards {
@@ -23,10 +27,12 @@
 
     &:checked {
       & ~ .sc-cards__show-more {
+        @extend %mobile-only;
         display: none;
       }
 
       & ~ .sc-cards__show-less {
+        @extend %mobile-only;
         display: block;
       }
 
@@ -81,7 +87,7 @@
   }
 
   &__content {
-    padding: $M;
+    padding: $M $S;
   }
 
 }
