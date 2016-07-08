@@ -80,13 +80,16 @@
 
   &__media {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 7px 7px 0 0;
     background: $black-20;
   }
 
   &__content {
+    border-radius: 0 0 7px 7px;
     padding: $M $S;
     background: $white;
   }
