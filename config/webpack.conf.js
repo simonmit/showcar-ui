@@ -14,10 +14,10 @@ module.exports = {
     cache: true,
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
+        /*new webpack.optimize.UglifyJsPlugin({
             compress: true,
             mangle: true,
             sourceMap: true
-        })
+        })*/
     ]
 };

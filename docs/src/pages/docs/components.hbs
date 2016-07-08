@@ -2,6 +2,7 @@
 title: Components
 nav-index: 8
 sub-nav:
+- Spy Navigation
 - Card
 - Expandable Box
 - Collapse
@@ -18,6 +19,77 @@ sub-nav:
     <a name="components"></a>
     <h2>Components</h2>
 
+
+    <a name="spy-navigation"></a>
+    <h3>Spy Navigation</h3>
+    <div class="example example-collapse">
+        <div id="page-subnav-stick"></div>
+        <div class="sc-spy-navigation" data-stick-when="#page-subnav-stick">
+            <div class="sc-grid-row">
+                <div class="sc-grid-col-12">
+                    <div class="sc-spy-navigation__wrapper">
+                        <nav class="sc-spy-navigation__links">
+                            <a class="sc-spy-navigation__link" href="#" data-href="section-1">Sectino 1</a>
+                            <a class="sc-spy-navigation__link" href="#" data-href="section-2">Sectino 2</a>
+                            <a class="sc-spy-navigation__link" href="#" data-href="section-3">Sectino 3</a>
+                            <a class="sc-spy-navigation__link" href="#" data-href="section-4">Sectino 4</a>
+                        </nav>
+                        <div class="sc-spy-navigation__toggle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <pre><code class="html js-format-code">
+<!--
+<div id="page-subnav-stick"></div>
+<div class="sc-spy-navigation" data-stick-when="#page-subnav-stick">
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-12">
+            Any content here...
+            <div class="sc-spy-navigation__wrapper">
+                <nav class="sc-spy-navigation__links">
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-1">Sectino 1</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-2">Sectino 2</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-3">Sectino 3</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-4">Sectino 4</a>
+                </nav>
+                <div class="sc-spy-navigation__toggle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+    </code></pre>
+
+    <p>This component have to be initialized with an object with two functions:</p>
+    <pre><code class="js js-format-code">
+<!--
+
+showcar.spyNavigation({
+    stickPosFn: function(scrollTop, stickToElem, componentElem) {
+        // scrollTop - amount of window scroll
+        // stickToElem - in the example, #data-stick-when
+        // componentElem - in the example, .sc-spy-navigation
+        // Do your calculations, return Boolean
+    },
+    unstickPosFn: function(scrollTop, stickToElem, componentElem) {
+        // scrollTop - amount of window scroll
+        // stickToElem - in the example, #data-stick-when
+        // componentElem - in the example, .sc-spy-navigation
+        // Do your calculations, return Boolean
+    },
+});
+-->
+    </code></pre>
+
+    <p>Each function takes 3 arguments:</p>
+    <ul>
+        <li><code>scrollTop</code> - scroll amount</li>
+        <li><code>stickToElem</code> - the element to which the navigation should stick to</li>
+        <li><code>componentElem</code> - the component element (the one with the root class ".sc-spy-navigation")</li>
+    </ul>
 
     <a name="card"></a>
 

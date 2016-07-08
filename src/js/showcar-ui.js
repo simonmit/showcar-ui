@@ -1,7 +1,5 @@
 if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
-
 require('./components/polyfills.js')();
-
 let warn = (msg) => {
     if (!window || !window.console) {
         return;
@@ -25,6 +23,10 @@ if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
     require('showcar-tracking');
 }
 
+var showcar = {};
+
+showcar.spyNavigation = require('./components/spy-navigation.js');
+
 require('./components/custom-dropdown.js');
 
 $(_ => {
@@ -36,7 +38,7 @@ $(_ => {
     require('./components/stepper.js');
 });
 
-
+// TODO: wat? why is this here?
 try {
     document.registerElement('as24-carousel-item', { prototype: Object.create(HTMLElement.prototype) });
 } catch (e) {
@@ -45,8 +47,13 @@ try {
     }
 }
 
+// TODO: question for the guild
 if (!window.notification) {
     window.notification = require('./components/notification.js');
 } else {
     warn('window.notification is already registered.');
 }
+
+
+window.showcar = window.showcar || showcar;
+module.exports = showcar;

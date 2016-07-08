@@ -1,0 +1,124 @@
+@import "../../scss/utils";
+@import "../variables";
+@import "../links";
+@import "../mixins/rotating-arrow";
+
+@mixin ls {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@mixin lx {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.sc-spy-navigation {
+
+  $nav: &;
+
+  border-bottom: solid 1px $black-30;
+
+  &--expanded {
+
+    #{$nav}__links {
+      height: auto;
+    }
+
+    #{$nav}__link {
+      position: static;
+      @include ls;
+      &:first-child {
+        transition: none;
+        position: static;
+        @include ls;
+      }
+    }
+
+    #{$nav}__toggle {
+      &:after {
+        @include rotating-arrow('up');
+      }
+    }
+
+  }
+
+  &--sticked {
+    width: 100%;
+    max-width: $viewportXL;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 21;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: space-between;
+    padding: $S $L;
+
+    &:after {
+      @include rotating-arrow('down');
+    }
+
+    @include mqmin($viewportM) {
+      display: none;
+    }
+
+  }
+
+  &__links {
+    flex: 1;
+    position: relative;
+    height: 38px;
+    overflow: hidden;
+
+    @include mqmin($viewportM) {
+      height: auto;
+    }
+  }
+
+  &__link {
+    @include link(M, $variant: black);
+    display: block;
+    padding: $S $L;
+    position: absolute;
+    background: white;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+    transition: .3s;
+
+    &:first-child {
+      @include lx;
+    }
+
+    @include mqmin($viewportM) {
+      @include ls;
+      display: inline-block;
+      padding: $XL;
+      position: static;
+      width: auto;
+      &:first-child {
+        @include ls;
+      }
+    }
+
+    &--active {
+      color: $orange-100;
+      z-index: 1;
+      @include lx;
+
+      @include mqmin($viewportM) {
+        border-bottom: 2px solid $orange-100;
+      }
+
+    }
+
+  }
+
+}

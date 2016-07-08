@@ -46,8 +46,9 @@ module.exports = function(grunt) {
 
     grunt.loadTasks('./tasks/snippet');
 
-    grunt.registerTask("build", ["sass", "pleeease", "webpack"]);
-    grunt.registerTask("dist", ["sass", "pleeease", "webpack", "assemble", "snippet"]);
+    grunt.registerTask("build-css", ["sass", "pleeease"]);
+    grunt.registerTask("build", ["build-css", "webpack"]);
+    grunt.registerTask("dist", ["build-css", "webpack", "assemble", "snippet"]);
 
     grunt.registerTask("default", ["dist"]);
 
