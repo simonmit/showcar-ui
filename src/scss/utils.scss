@@ -40,6 +40,12 @@
   margin-right: auto;
 }
 
+.sc-absolute-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .sc-ellipsis {
   @include ellipsis();
 }
@@ -104,6 +110,7 @@
   }
 }
 
+//TODO: Remove?
 .sc-telekom-bar {
   padding-right: $XL;
   text-align: right;

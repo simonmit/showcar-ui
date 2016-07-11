@@ -1,0 +1,97 @@
+@import "../variables";
+@import "../mixins/utils";
+
+%mobile-only {
+  @include mqmin($viewportM) {
+    display: none;
+  }
+}
+
+%trigger_btn {
+  @extend %mobile-only;
+  border-top: solid 1px $black-30;
+  margin-top: $S;
+  padding: $S;
+  flex-basis: 100%;
+}
+
+.sc-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+
+  &__state {
+    display: none;
+
+    &:checked {
+      & ~ .sc-cards__show-more {
+        @extend %mobile-only;
+        display: none;
+      }
+
+      & ~ .sc-cards__show-less {
+        @extend %mobile-only;
+        display: block;
+      }
+
+      & ~ .sc-card--stateful {
+        display: block;
+      }
+    }
+
+  }
+
+  &__show-more {
+    display: block;
+    @extend %trigger_btn;
+  }
+
+  &__show-less {
+    display: none;
+    @extend %trigger_btn;
+  }
+
+  .sc-card--stateful {
+    display: none;
+    @include mqmin($viewportM) {
+      display: block;
+    }
+  }
+}
+
+.sc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px $black-30;
+  border-radius: $S;
+  margin: 1%;
+  max-width: 48%;
+
+  @include mqmin(415px) {
+    max-width: 23%;
+  }
+
+  @include mqmin(768) {
+    max-width: 170px;
+  }
+
+  &__media {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 7px 7px 0 0;
+    background: $black-20;
+  }
+
+  &__content {
+    border-radius: 0 0 7px 7px;
+    padding: $M $S;
+    background: $white;
+  }
+
+}

@@ -1,4 +1,12 @@
 
+1.5.6 / 2016-07-11
+==================
+
+  * Fix: adding visitor cookie before all backstopJS tests in order to prevent failed tests due to testing.
+  * Introduced a Card element
+  * Added new utility class for absolute centering + added loading spinners
+  * Introduced Expandable box component
+
 1.5.3 / 2016-07-05
 
   * Updated showcar-tracking to v0.0.14
