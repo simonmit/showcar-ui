@@ -23,6 +23,7 @@ class Pager {
         this.prototypeIcon = $('<as24-icon>');
 
         $(window).on('resize', $.proxy(this.render, this));
+        $(window).on('as24-pager:update', $.proxy(this.render, this));
 
         this.render();
     }
