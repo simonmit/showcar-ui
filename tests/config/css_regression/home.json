@@ -72,6 +72,6 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "",
+  "onBeforeScript": "beforeScript.js",
   "onReadyScript": "home.js"
 }]
