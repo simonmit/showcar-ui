@@ -6,7 +6,7 @@
 
 .sc-expandable-box {
   @include clearfix();
-  border-bottom: 1px solid $black-30;
+  border-top: 1px solid $black-30;
 
   &--adaptive {
     @include mqmin($viewportM) {
