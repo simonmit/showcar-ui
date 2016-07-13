@@ -23,9 +23,7 @@ class Pager {
         this.prototypeIcon = $('<as24-icon>');
 
         $(window).on('resize', $.proxy(this.render, this));
-        console.log('############ register update event');
-        $(window).on('as24-pager:update', $.proxy(this.render, this));
-        console.log('############ registered update event');
+
         this.render();
     }
 
@@ -230,7 +228,6 @@ class Pager {
      * Render the pagination
      */
     render() {
-        console.log('########### render start');
         this.rootElement.children().remove();
 
         let pagination = this.getPageTiles(this.activePage),
@@ -248,7 +245,6 @@ class Pager {
         }
 
         this.rootElement.append(this.nextButton);
-        console.log('############ render end')
     }
 
     /**
