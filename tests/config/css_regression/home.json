@@ -6,6 +6,7 @@
     "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-worlds-stripe",
     ".home-placements-stripe"
   ],
   "selectors": [
@@ -25,6 +26,7 @@
     "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-worlds-stripe",
     ".home-placements-stripe",
     ".boxMagazin"
   ],
@@ -45,6 +47,7 @@
     "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-worlds-stripe",
     ".boxMagazin"
   ],
   "selectors": [
@@ -64,6 +67,7 @@
     "#home-car-button > span"
   ],
   "removeSelectors": [
+    ".home-worlds-stripe",
     ".boxMagazin"
   ],
   "selectors": [
