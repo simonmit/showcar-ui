@@ -67,7 +67,7 @@
   flex-direction: column;
   border: solid 1px $black-30;
   border-radius: $S;
-  margin: 7px;
+  margin: 1vh 1% 1vh 1%;
   max-width: 48%;
 
   @include mqmin(415px) {
