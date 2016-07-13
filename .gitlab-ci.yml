@@ -15,6 +15,17 @@ before_script:
   - npm rebuild node-sass
 
 
+pages:
+  stage: documentation
+  script:
+    - npm run grunt docs
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+    - develop
+
 
 build_lib:
   stage: build
