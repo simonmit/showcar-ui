@@ -21,6 +21,7 @@ module.exports = function(grunt) {
         var done = this.async();
         var config = this.options();
 
+        console.log(this);
         this.files.forEach(file => {
             grunt.log.writeln('Process file: ' + file.src);
 
