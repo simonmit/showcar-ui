@@ -1,0 +1,232 @@
+---
+title: Utility classes
+nav-index: 7
+sub-nav:
+- Floats
+- Text alignment
+- Center blocks
+- Center absolute
+- Horizontal line
+- Ellipsis
+- Visibility
+- Box spacing
+---
+<div>
+    <a name="utility"></a>
+    <h2>Utility classes</h2>
+    <a name="floats"></a>
+    <h3>Floats</h3>
+    <div class="example example-floats">
+        <div class="sc-clearfix">
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+            <div class="sc-pull-left"></div>
+        </div>
+        <hr>
+        <div class="sc-clearfix">
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+            <div class="sc-pull-right"></div>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-clearfix">
+            <div class="sc-pull-left">...</div>
+            <div class="sc-pull-right">...</div>
+        </div>
+        -->
+    </code></pre>
+
+    <a name="text-alignment"></a>
+    <h3>Text alignment</h3>
+    <div class="example example-text-alignment">
+        <strong>Text aligned left</strong>
+        <p class="sc-text-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Text aligned right</strong>
+        <p class="sc-text-right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Centered text</strong>
+        <p class="sc-text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Justified text</strong>
+        <p class="sc-text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <strong>Text without wrapping</strong>
+        <p class="sc-text-nowrap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <p class="sc-text-left">...</p>
+        <p class="sc-text-right">...</p>
+        <p class="sc-text-center">...</p>
+        <p class="sc-text-justify">...</p>
+        <p class="sc-text-nowrap">...</p>
+        -->
+    </code></pre>
+
+    <a name="center-blocks"></a>
+    <h3>Center blocks</h3>
+    <div class="example example-block-center">
+        <div class="sc-block-center">.sc-block-center</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-block-center">...</div>
+        -->
+    </code></pre>
+
+    <a name="center-absolute"></a>
+    <h3>Center absolute (horizontally and vertically)</h3>
+    <div class="example">
+        <div class="sc-absolute-center" style="border: 1px solid black; height: 200px;">
+          <p>Look ma, I am totally centered</p>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-absolute-center">
+          <p>Look ma, I am totally centered</p>
+        </div>
+        -->
+    </code></pre>
+
+    <a name="horizontal-line"></a>
+    <h3>Horizontal line</h3>
+    <p>To seperate some content you can use a horizontal line.</p>
+    <div class="example example-horizontal-line">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <hr>
+        -->
+    </code></pre>
+
+    <a name="ellipsis"></a>
+    <h3>Ellipsis</h3>
+    <p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+    <div class="example example-ellipsis">
+        <div class="sc-ellipsis" title="My very long text">My very long text</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-ellipsis" title="...">...</div>
+        -->
+    </code></pre>
+
+    <a name="visibility"></a>
+    <h3>Visibility</h3>
+    <p>
+        The ShowCarUI library provides some utility classes to show/hide elements based on the current viewport
+        (media queries).
+    </p>
+    <p>
+        <span class="font-bold">IMPORTANT</span>: Try to use these on a limited basis and avoid creating entirely different
+        versions of the same site. Instead, use them to complement each device's presentation.
+    </p>
+    <table class="docs-table docs-table-visibility">
+        <thead>
+        <tr>
+            <th></th>
+            <th>S Viewport</th>
+            <th>M Viewport</th>
+            <th>L Viewport</th>
+            <th>XL Viewport</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><code>.sc-visible</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-m</code></td>
+            <td></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-visible-s</code></td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+            <td class="cell-visible">Visible</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-xl</code></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-l</code></td>
+            <td></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-m</code></td>
+            <td></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        <tr>
+            <td><code>.sc-hidden-s</code></td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+            <td class="cell-hidden">Hidden</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a name="box-spacing"></a>
+    <h3>Box spacing</h3>
+    <p>
+        To get a consistent spacing between content boxes, e.g. cms boxes on the home page use the css extendable
+        <code>%box-spacing</code> or the predefined class <code>sc-box-spacing</code>
+    </p>
+    <div class="example example-box-spacing">
+        <div class="sc-box-spacing">Box 1</div>
+        <div class="sc-box-spacing">Box 2</div>
+        <div class="sc-box-spacing">Box 3</div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-box-spacing">...</div>
+        <div class="sc-box-spacing">...</div>
+        -->
+    </code></pre>
+</div>

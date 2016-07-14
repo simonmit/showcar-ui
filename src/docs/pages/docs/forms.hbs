@@ -1,0 +1,319 @@
+---
+title: Forms
+nav-index: 7
+sub-nav:
+- Buttons
+- Inputs Textareas
+- Select Boxes
+- Radio Buttons
+- Checkboxes
+- Color Selectors
+- Input Groups
+- Stepper
+---
+<div>
+    <a name="forms"></a>
+    <h2>Forms</h2>
+        <a name="buttons"></a>
+        <h3>Buttons</h3>
+        <p>ShowCar uses two types of buttons, <code>.sc-btn-bob</code> and <code>.sc-btn-ross</code>.</p>
+        <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+        <p><code>.sc-btn-block</code> adds block style to a button, which stretches the button to full width.</p>
+
+        <div class="example example-buttons">
+            <div>
+                <button class="sc-btn-bob">.sc-btn-bob</button>
+                <button class="sc-btn-ross">.sc-btn-ross</button>
+                <a class="sc-btn-bob">a .sc-btn-ross</a>
+                <a class="sc-btn-ross">a .sc-btn-ross</a>
+            </div>
+            <div>
+                <button class="sc-btn-bob" disabled>disabled</button>
+                <button class="sc-btn-ross" disabled>disabled</button>
+            </div>
+            <div>
+                <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+            </div>
+        </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <button class="sc-btn-bob">.sc-btn-bob</button>
+        <button class="sc-btn-ross">.sc-btn-ross</button>
+        <a class="sc-btn-bob">.sc-btn-ross</a>
+        <a class="sc-btn-ross">.sc-btn-ross</a>
+
+        <button class="sc-btn-bob" disabled>disabled</button>
+        <button class="sc-btn-ross" disabled>disabled</button>
+
+        <button class="sc-btn-bob sc-btn-block">.sc-btn-bob.sc-btn-block</button>
+        -->
+    </code></pre>
+    <a name="inputs-textareas"></a>
+    <h3>Inputs / Textareas</h3>
+
+    <div class="example example-inputs">
+        <input type="text" placeholder=".sc-input" class="sc-input">
+        <input type="text" placeholder=".sc-input disabled" class="sc-input" disabled>
+        <input type="text" placeholder=".sc-input .info" class="sc-input info">
+        <input type="text" placeholder=".sc-input .success" class="sc-input success">
+        <input type="text" placeholder=".sc-input .error" class="sc-input error">
+        <textarea class="sc-input" placeholder="sc-input" readonly>textarea.sc-input</textarea>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<input type="text" class="sc-input">
+<input type="text" class="sc-input" disabled>
+<input type="text" class="sc-input info">
+<input type="text" class="sc-input success">
+<input type="text" class="sc-input error">
+<textarea class="sc-input">...</textarea>
+-->
+    </code></pre>
+
+    <a name="select-boxes"></a>
+    <h3>Select Boxes</h3>
+    <div class="example example-selects">
+        <select class="sc-input" name="as24-select-1">
+            <option>default (.sc-input)</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+        <select name="as24-select-3" class="sc-input" disabled>
+            <option>disabled</option>
+        </select>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<select class="sc-input">
+    <option>...</option>
+</select>
+
+<select class="sc-input" disabled>
+    ...
+</select>
+-->
+    </code></pre>
+
+    <a name="radio-buttons"></a>
+    <h3>Radio Buttons</h3>
+    <div class="example example-radios">
+        <div>
+            <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
+            <label for="as24-radio-1">Radio 1</label>
+
+            <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
+            <label for="as24-radio-2">Radio 2</label>
+
+            <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
+            <label for="as24-radio-3">Radio 3 (disabled)</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div>
+    <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
+    <label for="as24-radio-1">Radio 1</label>
+
+    <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
+    <label for="as24-radio-2">Radio 2</label>
+
+    <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
+    <label for="as24-radio-3">Radio 3 (disabled)</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="checkboxes"></a>
+    <h3>Checkboxes</h3>
+    <div class="example example-checkboxes">
+        <div>
+            <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
+            <label for="as24-checkbox-1">Checkbox</label>
+
+            <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
+            <label for="as24-checkbox-2">Checkbox (disabled)</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div>
+    <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
+    <label for="as24-checkbox-1">Checkbox</label>
+
+    <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
+    <label for="as24-checkbox-2">Checkbox (disabled)</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="color-selectors"></a>
+    <h3>Color Selectors</h3>
+    <p>
+        We created a special type of radio buttons and check boxes for you to easily implement a color selection.
+        In this case you have to write a little custom scss to define the background color of the elements. You can also
+        choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background
+        color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
+    </p>
+    <div class="example example-color-picker">
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
+            <label for="as24-cb-cp-1">red</label>
+
+            <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
+            <label for="as24-cb-cp-2">yellow</label>
+
+            <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
+            <label for="as24-cb-cp-7">green</label>
+
+            <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
+            <label for="as24-cb-cp-8">gold</label>
+        </div>
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
+            <label for="as24-cb-cp-3">radio</label>
+
+            <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l other">
+            <label for="as24-cb-cp-4">radio</label>
+        </div>
+        <div class="sc-color-selector">
+            <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
+            <label for="as24-cb-cp-5">radio</label>
+
+            <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l other">
+            <label for="as24-cb-cp-6">radio</label>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-color-selector">
+    <input id="cs1" type="radio" name="cs1" class="sc-input red">
+    <label for="cs1">red</label>
+
+    <input id="cs2" type="radio" name="cs1" class="sc-input yellow">
+    <label for="cs2">yellow</label>
+
+    <input id="cs3" type="radio" name="cs1" class="sc-input green">
+    <label for="cs4">green</label>
+</div>
+-- additional scss --
+@import "path/to/mixins/color-selector";
+.sc-color-selector {
+    input.sc-input {
+        &.red {
+            @include color-selector-color(#ff0000, #fff);
+        }
+        -- gradient support --
+        &.gold {
+            @include color-selector-color(linear-gradient(brown, yellow, brown) gold);
+        }
+    }
+}
+
+-- radio buttons --
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="radio" name="...">
+    <label for="...">...</label>
+</div>
+
+-- checkboxes --
+<div class="sc-color-selector">
+    <input id="..." class="sc-input" type="checkbox" name="...">
+    <label for="...">...</label>
+</div>
+-->
+    </code></pre>
+
+    <a name="input-groups"></a>
+    <h3>Input Groups</h3>
+    <div class="example example-groups">
+        <div class="sc-input-group">
+            <input class="sc-input" type="text" placeholder="Text input 1">
+            <input class="sc-input" type="text" placeholder="Text input 2">
+            <button class="sc-btn-bob">Submit</button>
+        </div>
+
+        <div class="sc-input-group-radio">
+            <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
+            <label for="as24-radio-7">Option 1</label>
+
+            <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked>
+            <label for="as24-radio-8">Option 2</label>
+
+            <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
+            <label for="as24-radio-9">Option 3</label>
+        </div>
+        <div class="sc-input-group-radio input-group-emission-badge">
+            <input class="sc-input" id="example-groups-3-1" name="example-groups-3" type="radio">
+            <label for="example-groups-3-1">Alle</label>
+
+            <input class="sc-input" id="example-groups-3-2" name="example-groups-3" type="radio" checked>
+            <label for="example-groups-3-2"><as24-icon type="emission-badge-2"></as24-icon></label>
+
+            <input class="sc-input" id="example-groups-3-3" name="example-groups-3" type="radio">
+            <label for="example-groups-3-3"><as24-icon type="emission-badge-3"></as24-icon></label>
+
+            <input class="sc-input" id="example-groups-3-4" name="example-groups-3" type="radio">
+            <label for="example-groups-3-4"><as24-icon type="emission-badge-4"></as24-icon></label>
+        </div>
+        <div class="sc-input-group">
+            <select class="sc-input">
+              <option>One</option>
+              <option>Two</option>
+              <option>Three</option>
+            </select>
+            <select class="sc-input">
+              <option>One</option>
+              <option>Two</option>
+              <option>Three</option>
+            </select>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-input-group">
+    <input class="sc-input" type="text">
+    ...
+</div>
+
+<div class="sc-input-group-radio">
+    <input class="sc-input" id="radio" type="radio">
+    <label for="radio">...</label>
+    ...
+</div>
+<div class="sc-input-group-radio" >
+    ...
+    <input class="sc-input" id="radio" type="radio">
+    <label for="radio"><as24-icon type="emission-badge-2"></as24-icon></label>
+    ...
+</div>
+<div class="sc-input-group">
+    <select class="sc-input">
+      ...
+    </select>
+    <select class="sc-input">
+      ...
+    </select>
+</div>
+-->
+    </code></pre>
+</div>
+
+
+<a name="stepper"></a>
+    <h3>Stepper</h3>
+    <div class="example">
+        <div class="sc-stepper">
+            <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
+            <input type="number" value="0" class="sc-stepper-input" min="0" max="10" step="1"/>
+            <button class="sc-stepper-button sc-stepper-button-increment">+</button>
+        </div>
+    </div>
+    <pre><code class="html js-format-code">
+<!--
+<div class="sc-stepper">
+    <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
+    <input type="number" value="0" class="sc-stepper-input" min="0" max="10" step="1"/>
+    <button class="sc-stepper-button sc-stepper-button-increment">+</button>
+</div>
+-->
+    </code></pre>

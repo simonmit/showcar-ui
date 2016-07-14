@@ -1,0 +1,47 @@
+---
+title: Content container
+nav-index: 2
+---
+<div>
+    <a name="content-container"></a>
+    <h2>Content container</h2>
+
+    <p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use the content container class (sc-content-container) on your page once!</p>
+
+    <table class="docs-table docs-table-content-container">
+        <thead>
+        <tr>
+            <th>viewport</th>
+            <th>container width</th>
+            <th>container alignment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>&lt; 1100px</td>
+            <td>100%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&gt;= 1100px, &lt;1440px</td>
+            <td>1100px</td>
+            <td>center</td>
+        </tr>
+        <tr>
+            <td>&gt;= 1440px</td>
+            <td>1100px</td>
+            <td>center</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="example example-content-container">
+        <div class="sc-content-container">Your Content goes here</div>
+        <div class="clearfix"></div>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+        <div class="sc-content-container">...</div>
+        -->
+    </code></pre>
+</div>
