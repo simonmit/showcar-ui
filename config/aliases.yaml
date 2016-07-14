@@ -19,6 +19,7 @@ docs:
   tasks:
     - 'copy:docs'
     - 'sass:docs'
+    - 'pleeease:docs'
     - 'webpack:docs'
     - 'assemble:docs'
 
