@@ -1,0 +1,71 @@
+@import "../../../../src/scss/variables.scss";
+@import "../../../../src/scss/mixins/utils.scss";
+
+*[class^=sc-grid-col] {
+  margin-top: $gutter-width;
+}
+
+.sc-card {
+  border: 1px solid $black-30;
+  padding-bottom: $gutter-width;
+  text-align: center;
+  height: 100%;
+
+  &.padding {
+    padding: $gutter-width;
+    text-align: justify;
+  }
+
+  & > .description p {
+    max-width: 40%;
+  }
+}
+
+.sc-title {
+  margin-top: 2em;
+  margin-bottom: .75em;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.sc-card .sc-content {
+  min-height: 80px;
+}
+
+.sc-content {
+  padding: 4px $gutter-width;
+}
+
+hr {
+  clear: both;
+}
+
+/*======================================*/
+
+@media(max-width: ($viewportM)) {
+  .sc-content-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sc-card {
+    margin-left: 0 - $gutter-width;
+    margin-right: 0 - $gutter-width;
+    border-right: 0 none;
+    border-left: 0 none;
+    border-top: 0 none;
+  }
+  .sc-content {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+  }
+}
+
+as24-icon[type="arrow"] svg {
+  transform: rotate(180deg);
+  height: .5em;
+  margin-left: $gutter-width;
+}
+as24-icon[type="t-online"] svg {
+  width: 110px;
+}
