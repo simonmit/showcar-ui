@@ -16,10 +16,10 @@ module.exports = function(grunt, options) {
             }
         },
         docs: {
-            files: [
-                { dest: 'docs/lib/showcar-ui.css', src: 'src/scss/showcar-ui.scss' },
-                { dest: 'docs/css/documentation.css', src: 'docs/css/documentation.scss' },
-            ]
+            files: {
+                'docs/lib/showcar-ui.css': 'docs/lib/showcar-ui.css',
+                'docs/css/documentation.css': 'docs/css/documentation.css'
+            }
         }
     };
 };
