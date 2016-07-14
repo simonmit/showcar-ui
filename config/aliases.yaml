@@ -1,0 +1,34 @@
+default:
+  tasks:
+    - 'dist'
+
+build:
+  tasks:
+    - 'sass:dist'
+    - 'pleeease:dist'
+    - 'webpack:dist'
+
+dist:
+  description: 'Build the distribution'
+  tasks:
+    - 'build'
+    - 'snippet'
+
+docs:
+  description: 'Build the documentation'
+  tasks:
+    - 'copy:docs'
+    - 'sass:docs'
+    - 'webpack:docs'
+    - 'assemble:docs'
+
+test-local:
+  tasks:
+    - 'selenium_standalone:local:install'
+    - 'selenium_standalone:local:start'
+    - 'webdriver:local'
+    - 'selenium_standalone:local:stop'
+
+test-cbt:
+  tasks:
+    - 'webdriver:cbt'

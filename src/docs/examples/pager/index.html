@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ShowCar UI Library Examples - Intelligent Pagination</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../lib/showcar-ui.css">
+    <link rel="stylesheet" href="../examples.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/urljs/2.1.0/url.min.js"></script>
+</head>
+<body>
+
+<div class="sc-content-container">
+    <h2>ShowCar UI Library Examples - Intelligent Pagination</h2>
+
+    <div class="sc-pagination"></div>
+</div>
+
+<script src="../../lib/showcar-ui.js"></script>
+<script>
+    (function ($) {
+
+        let isIE = function () {
+            return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
+        };
+
+        function parseURL(url) {
+            var parser = document.createElement('a'),
+                    searchObject = {},
+                    queries, split, i;
+
+            parser.href = url;
+            queries = parser.search.replace(/^\?/, '').split('&');
+            for (i = 0; i < queries.length; i++) {
+                split = queries[i].split('=');
+                searchObject[split[0]] = split[1];
+            }
+
+            return {
+                protocol: parser.protocol,
+                host: parser.host,
+                hostname: parser.hostname,
+                port: parser.port,
+                pathname: parser.pathname,
+                search: parser.search,
+                searchObject: searchObject,
+                hash: parser.hash
+            };
+        }
+
+        let slash = '';
+
+        if (isIE()) {
+            slash = '/';
+        }
+
+        let page = 1, size = 20, totalCount = 800, urlTemplate;
+        let url = parseURL(document.URL);
+        let host = url.protocol + '//' + url.host + slash + url.pathname;
+        let qs = url.searchObject;
+        let paginationElement = document.querySelector('.sc-pagination');
+
+        if (typeof qs.page != 'undefined') {
+            page = qs.page;
+        }
+
+        if (typeof qs.size != 'undefined') {
+            size = qs.size;
+        }
+
+        if (typeof qs.totalCount != 'undefined') {
+            totalCount = qs.totalCount;
+        }
+
+        urlTemplate = host + "?page={page}&size={size}&totalCount=" + totalCount;
+
+        if (paginationElement) {
+            new Pager(paginationElement, size, page, totalCount, urlTemplate);
+        }
+    })(window.Zepto);
+</script>
+</body>
+</html>
