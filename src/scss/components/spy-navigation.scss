@@ -115,6 +115,7 @@
 
       @include mqmin($viewportM) {
         border-bottom: 2px solid $orange-100;
+        @include ls;
       }
 
     }
