@@ -18,7 +18,7 @@ module.exports = function(grunt, options) {
         docs: {
             files: {
                 'docs/lib/showcar-ui.css': 'docs/lib/showcar-ui.css',
-                'docs/css/documentation.css': 'docs/css/documentation.css'
+                'docs/lib/css/documentation.css': 'docs/lib/css/documentation.css'
             }
         }
     };
