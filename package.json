@@ -52,6 +52,7 @@
     "mocha.parallel": "^0.12.0",
     "nightmare": "^2.3.3",
     "node-sass": "^3.4.2",
+    "ramda": "^0.21.0",
     "request": "^2.72.0",
     "selenium-standalone": "^5.0.0",
     "uglify-js": "^2.6.2",
