@@ -17,7 +17,7 @@ before_script:
 pages:
   stage: documentation
   script:
-    - npm run grunt docs
+    - npm run grunt docs && npm run grunt copy
   artifacts:
     paths:
       - public
