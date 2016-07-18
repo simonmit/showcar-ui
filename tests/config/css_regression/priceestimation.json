@@ -129,8 +129,8 @@
 },
 {
   "label": "PriceEstimation : .be : Result page",
-  "url": "https://www.autoscout24.be/evaluationvoiture/resultat?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light&sc_develop=true",
-  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/resultat?ep.emissionClassId=5&ep.eid[32]=32&makeId=29&ep.eid[125]=125&ep.consumption=4.1&mileage=12345&natCode=10213745&ep.eid[1]=1&ep.doors=5&equipmentLine=1.4+TDCi+Ambiente&vehicleGroupId=1758_6_5&fuelId=D&ep.eid[121]=121&ep.eid[53]=53&ep.eid[2]=2&ep.eid[3]=3&ep.eid[26]=26&firstRegistrationMonth=02&power=51&ep.eid[12]=12&ep.eid[42]=42&action=calc&firstRegistrationYear=2012&modelSize=light",
+  "url": "https://www.autoscout24.be/evaluationvoiture/resultat?makeId=13&mileage=10000&natCode=99005&equipmentLine=114i&vehicleGroupId=20149_6_3&fuelId=B&power=75&action=calc&firstRegistrationYear=2013&modelSize=light&sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.be/evaluationvoiture/resultat?makeId=13&mileage=10000&natCode=99005&equipmentLine=114i&vehicleGroupId=20149_6_3&fuelId=B&power=75&action=calc&firstRegistrationYear=2013&modelSize=light",
   "hideSelectors": [],
   "removeSelectors": [
   ],
