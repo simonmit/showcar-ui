@@ -15,7 +15,7 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "beforeScript_com.js",
+  "onBeforeScript": "",
   "onReadyScript": "home.js"
 },
 {
@@ -36,7 +36,7 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "beforeScript_de.js",
+  "onBeforeScript": "",
   "onReadyScript": "home.js"
 },
 {
@@ -56,7 +56,7 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "beforeScript_at.js",
+  "onBeforeScript": "",
   "onReadyScript": "home.js"
 },
 {
@@ -76,6 +76,6 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "beforeScript_nl.js",
+  "onBeforeScript": "",
   "onReadyScript": "home.js"
 }]
