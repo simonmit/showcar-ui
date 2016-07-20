@@ -78,4 +78,25 @@
   "misMatchThreshold" : 0.2,
   "onBeforeScript": "beforeScript_nl.js",
   "onReadyScript": "home.js"
-}]
+},
+{
+  "label": "Home page : .es",
+  "url": "https://www.autoscout24.es?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.es",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".boxMagazin"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
+}
+]
