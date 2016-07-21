@@ -1,4 +1,58 @@
 
+1.6.0 / 2016-07-21
+==================
+
+  * removing topCars for CSS regression tests from spanish home page
+  * reverting noscript changes since it does not have any effects
+  * removed noscript tag - attempt to fix pagespeed issues/jigsaw problems on list page
+  * added css regression test for spain home
+  * updated backstopjs to latest version
+  * added old no defer attribute to noscript tag
+  * re-added onBeforeScripts for home trying to fix CSS tests
+  * added no-defer attribute to noscript tag in order to prevent mod_pagespeed problems
+  * removed before scripts for home page tests
+  * added ramda dependency to package.json
+  * copying docs files to public folder since public folder is default for gitlab pages
+  * removed obsolete before scripts
+  * adding CSS tests again
+  * fixed priceestimation regression test url
+  * Merge branch 'hotfix/1.5.13' into develop
+  * Merge branch 'hotfix/1.5.12' into develop
+  * Merge branch 'hotfix/1.5.11' into develop
+  * Removed CSS tests for now
+  * Merge branch 'hotfix/1.5.9' into develop
+  * Fix: spy-navigation on M+ view
+  * clean up
+  * fixed spynav
+  * Fixed version
+  * Fixed docs setup
+  * ignore docs
+  * Removed old docs
+  * unIgnore docs
+  * Added event for reinitializing collapse events.
+  * Merge branch 'hotfix/1.5.7' into develop
+  * Merge branch 'hotfix/grunt-file-fixed' into develop
+  * No test for now
+  * No test for now
+  * Fix for border-top
+  * Revert "no pages"
+  * no pages
+  * pages
+  * Small UI fixes
+  * There is a better solution for the problem of ignored margin in percentage
+  * Fixed margin for the Card Element
+  * Christos / Ivan: fixing css tests
+  * Introduced Spy-navigation component
+  * Restored pager js to previous state, as it seems update mechanism not needed yet.
+  * Added console log messages to pager to test update event handling
+  * Try to set sample visitor cookies along with correct domain.
+  * try fixing issue with AB testing using optimizely opt out parameter
+  * Added before script to home.json
+  * Try to fix come css tests by setting domain along with sample visitor cookie.
+  * added update event for rerendering pager.
+  * Fixed paddings for expandable boxes
+  * Release 1.5.6
+
 1.5.6 / 2016-07-11
 ==================
 
