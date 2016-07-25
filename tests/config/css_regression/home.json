@@ -1,7 +1,7 @@
 [{
   "label": "Home page : .com",
-  "url": "https://www.autoscout24.com?sc_develop=true&optimizely_opt_out=true",
-  "referenceUrl": "https://www.autoscout24.com?optimizely_opt_out=true",
+  "url": "https://www.autoscout24.com?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.com",
   "hideSelectors": [
     "#home-car-button > span"
   ],
@@ -15,13 +15,13 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "",
+  "onBeforeScript": "beforeScript_com.js",
   "onReadyScript": "home.js"
 },
 {
   "label": "Home page : .de",
-  "url": "https://www.autoscout24.de?sc_develop=true&optimizely_opt_out=true",
-  "referenceUrl": "https://www.autoscout24.de?optimizely_opt_out=true",
+  "url": "https://www.autoscout24.de?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.de",
   "hideSelectors": [
     "#home-car-button > span"
   ],
@@ -36,13 +36,13 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "",
+  "onBeforeScript": "beforeScript_de.js",
   "onReadyScript": "home.js"
 },
 {
   "label": "Home page : .at",
-  "url": "https://www.autoscout24.at?sc_develop=true&optimizely_opt_out=true",
-  "referenceUrl": "https://www.autoscout24.at?optimizely_opt_out=true",
+  "url": "https://www.autoscout24.at?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.at",
   "hideSelectors": [
     "#home-car-button > span"
   ],
@@ -56,13 +56,13 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "",
+  "onBeforeScript": "beforeScript_at.js",
   "onReadyScript": "home.js"
 },
 {
   "label": "Home page : .nl",
-  "url": "https://www.autoscout24.nl?sc_develop=true&optimizely_opt_out=true",
-  "referenceUrl": "https://www.autoscout24.nl?optimizely_opt_out=true",
+  "url": "https://www.autoscout24.nl?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.nl",
   "hideSelectors": [
     "#home-car-button > span"
   ],
@@ -76,13 +76,13 @@
   "readyEvent": "",
   "delay": 1200,
   "misMatchThreshold" : 0.2,
-  "onBeforeScript": "",
+  "onBeforeScript": "beforeScript_nl.js",
   "onReadyScript": "home.js"
 },
 {
   "label": "Home page : .es",
-  "url": "https://www.autoscout24.es?sc_develop=true&optimizely_opt_out=true",
-  "referenceUrl": "https://www.autoscout24.es?optimizely_opt_out=true",
+  "url": "https://www.autoscout24.es?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.es",
   "hideSelectors": [
     "#home-car-button > span"
   ],
