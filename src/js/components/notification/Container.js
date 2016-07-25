@@ -85,7 +85,7 @@ class Container {
 
         this.targetPosition = [offset.top, offset.left, offset.width, offset.height];
 
-        if ($(window).scrollTop() > (offset.top + offset.height)) {
+        if (window.pageYOffset > (offset.top + offset.height)) {
             element.css({
                 position: 'fixed',
                 top: 0,
