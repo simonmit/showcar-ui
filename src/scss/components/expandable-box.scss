@@ -12,6 +12,10 @@
     border-top: none;
   }
 
+  @include mqmin($viewportM) {
+    border-top: none;
+  }
+
   &--adaptive {
     @include mqmin($viewportM) {
       border-bottom: none;

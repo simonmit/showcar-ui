@@ -38,7 +38,7 @@
       }
 
       & ~ .sc-card--stateful {
-        display: block;
+        display: flex;
       }
     }
 
@@ -57,7 +57,7 @@
   .sc-card--stateful {
     display: none;
     @include mqmin($viewportM) {
-      display: block;
+      display: flex;
     }
   }
 }
