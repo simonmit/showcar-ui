@@ -3,11 +3,11 @@ function smoothScroll(el, to, duration) {
         return;
     }
 
-    let difference = to - $(window).scrollTop();
+    let difference = to - window.pageYOffset;
     let perTick = difference / duration * 10;
     $(this).scrollToTimerCache = setTimeout(() => {
         if (!isNaN(parseInt(perTick, 10))) {
-            window.scrollTo(0, $(window).scrollTop() + perTick);
+            window.scrollTo(0, window.pageYOffset + perTick);
             smoothScroll(el, to, duration - 10);
         }
     }, 10);
