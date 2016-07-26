@@ -1,4 +1,20 @@
 
+1.7.0 / 2016-07-26
+==================
+
+  * New font-size and padding for Buttons
+  * Fix: CSS Regression tests
+  * Fix: PageSpeed/Jigsaw issues for the List Page
+  * Fix: documentation for the library
+  * updated showcar-tracking - includes dealer tracking adjusted to https
+  * Fix: spy-navigation on M+ view
+  * Added event for reinitializing collapse events.
+  * Fix: styles for ExpandableBox
+  * Various UI fixes
+  * Fix: styles for the Card
+  * Introduced Spy-navigation component
+  * Added update event for rerendering pager.
+
 1.6.0 / 2016-07-21
 ==================
 
