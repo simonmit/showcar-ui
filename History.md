@@ -1,4 +1,11 @@
 
+1.7.3 / 2016-08-08
+==================
+
+  * updated showcar-icons version
+  * Removed improper image from docs
+  * release 1.7.2
+
 1.7.0 / 2016-07-26
 ==================
 
