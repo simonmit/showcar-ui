@@ -70,7 +70,7 @@ module.exports = function(config) {
             targetTopOffset = target.offsetTop;
             navHeight = navEl.getBoundingClientRect().height;
             targetOffset = targetTopOffset - navHeight;
-            window.scrollTo(0, targetOffset);
+            //window.scrollTo(0, targetOffset);
         }
     }
 

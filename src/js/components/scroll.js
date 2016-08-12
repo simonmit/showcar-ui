@@ -13,7 +13,9 @@ function smoothScroll(el, to, duration) {
     }, 10);
 }
 
-$(window).on('click', 'a[href*="#"]', e => {
+$(window).on('click', 'a[href^="#"]', e => {
+    e.preventDefault();
+
     let scrollDuration = 300;
     let targetName     = $(e.currentTarget).attr('href').split('#');
     let targetSelector = 'a[name="' + targetName[1] + '"]';
@@ -24,8 +26,6 @@ $(window).on('click', 'a[href*="#"]', e => {
             return;
         }
     }
-
-    e.preventDefault();
 
     smoothScroll($(window), $(targetSelector).offset().top, scrollDuration);
 

@@ -133,10 +133,10 @@
                             <div class="sc-grid-col-12">
                                 <div class="sc-spy-navigation__wrapper">
                                     <nav class="sc-spy-navigation__links">
-                                        <a class="sc-spy-navigation__link" href="#" data-href="car-details">Details</a>
-                                        <a class="sc-spy-navigation__link" href="#" data-href="car-equipment">Equipment</a>
-                                        <a class="sc-spy-navigation__link" href="#" data-href="car-description">Description</a>
-                                        <a class="sc-spy-navigation__link" href="#" data-href="contactFormBottom">Contact the seller</a>
+                                        <a class="sc-spy-navigation__link" href="#details" data-href="car-details">Details</a>
+                                        <a class="sc-spy-navigation__link" href="#equipment" data-href="car-equipment">Equipment</a>
+                                        <a class="sc-spy-navigation__link" href="#description" data-href="car-description">Description</a>
+                                        <a class="sc-spy-navigation__link" href="#contact" data-href="contactFormBottom">Contact the seller</a>
                                     </nav>
                                     <div class="sc-spy-navigation__toggle"></div>
                                 </div>
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <hr/>
-                    <a name="car-details"></a>
+                    <a name="car-details" id="details"></a>
                     <div class="cldt-item" data-item-name="car-details">
                         <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='car-details']">
                             <h2 class="sc-font-l sc-font-bold">Details</h2>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                     <hr/>
-                    <a name="car-equipment"></a>
+                    <a name="car-equipment" id="equipment"></a>
                     <div class="cldt-item" data-item-name="equipments">
                         <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
                             <h2 class="sc-font-l sc-font-bold">Equipment</h2>
@@ -288,7 +288,7 @@
                     </div>
                     <hr/>
                     <a name="descriptionTop"></a>
-                    <a name="car-description"></a>
+                    <a name="car-description" id="description"></a>
                     <div class="cldt-item" data-item-name="description">
                         <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='description']">
                             <h2 class="sc-font-l sc-font-bold">Description</h2>
@@ -315,7 +315,7 @@
                         </div>
                     </div>
                     <hr/>
-                    <a name="contactFormBottom"></a>
+                    <a name="contactFormBottom" id="contact"></a>
                     <as24-notification type="success" id="cldt-vendor-contact-email-sent" title="Your message has been sent successfully." timeout="2000" target=".sc-navigation"></as24-notification>
                     <as24-notification type="error" id="cldt-vendor-contact-email-not-sent" title="Sorry, your message could not be sent." close="true" target=".sc-navigation"></as24-notification>
                     <div class="cldt-item" data-item-name="vendor-contact-box">
