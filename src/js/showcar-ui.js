@@ -1,8 +1,9 @@
+// Todo: remove Zepto
 if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
 // Polyfills
 require('document-register-element');
-require('picturefill');
+require('picturefill'); // Todo: Can we remove picturefill? -> Robert W. is using it for CMS stuff!
 require('array.from');
 require('dom4');
 
@@ -20,6 +21,7 @@ if (typeof Object.assign !== 'function') {
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
+// Todo: remove from library
 require('showcar-icons');
 
 const ctor = document.createElement('as24-tracking').constructor;
@@ -37,7 +39,7 @@ require('./components/custom-dropdown.js');
 
 $(_ => {
     require('./components/navigation.js');
-    require('./components/rotating-arrow.js')();
+    require('./components/rotating-arrow.js')(); // Todo: Check usages and remove
     require('./components/sticky.js')();
     require('./components/collapse.js')();
     require('./components/scroll.js');
