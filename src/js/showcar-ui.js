@@ -1,5 +1,11 @@
 if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
-require('./components/polyfills.js')();
+
+// Polyfills
+require('document-register-element');
+require('picturefill');
+require('array.from');
+require('dom4');
+
 let warn = (msg) => {
     if (!window || !window.console) {
         return;
