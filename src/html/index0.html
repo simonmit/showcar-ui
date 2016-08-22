@@ -1,0 +1,33 @@
+<head>
+    <script data-pagespeed-no-defer pagespeed_no_defer>
+    @@ERROR_COLLECTOR
+    @@FONT_LOADER
+    @@DOM4_POLYFILL
+    @@DOCUMENT_REGISTER_ELEMENT_POLYFILL
+
+    // Object.assign
+    // Array.from
+    // Array.isArray
+    // Array.of
+    // Promise
+    // window.fetch
+    // Map, Weakmap, Set
+
+    (function() {
+        if(!window.__proto__){l('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')}
+        // if(!window.Promise){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/promise.js')}
+        // if(!window.fetch){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/fetch.js')}
+        // if(!(Array.from && Array.of && Array.isArray)){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/array.js')}
+        // if(!(Object.assign)){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/object.js')}
+        // if(!(window.Map && window.WeakMap && window.Set)){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/collections.js')}
+        if(!window.HTMLPictureElement){l('"@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/picturefill.min.js')}
+        function l(url){document.write('<script src="'+url+'"></'+'script>')}
+    }())
+    </script>
+    <noscript>
+        <style>body{font-family:Source Sans Pro,sans-serif;}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext">
+    </noscript>
+    <link rel="stylesheet" href="@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/showcar-ui.css">
+</head>
+<script src="@@ASSETS_PREFIX/@@BUILD_TYPE/@@COMMIT_HASH/showcar-ui.js"></script>
