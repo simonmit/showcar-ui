@@ -46,22 +46,12 @@ $(_ => {
     require('./components/stepper.js');
 });
 
-// TODO: wat? why is this here?
-try {
-    document.registerElement('as24-carousel-item', { prototype: Object.create(HTMLElement.prototype) });
-} catch (e) {
-    if (window && window.console) {
-        window.console.warn('Failed to register CustomElement "as24-carousel".', e);
-    }
-}
-
 // TODO: question for the guild
 if (!window.notification) {
     window.notification = require('./components/notification.js');
 } else {
     warn('window.notification is already registered.');
 }
-
 
 window.showcar = window.showcar || showcar;
 module.exports = showcar;
