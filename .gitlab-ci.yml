@@ -10,8 +10,7 @@ stages:
   - all
 
 build-deploy-docs-test:
-  stage:
-    - all
+  stage: all
   only:
     - master
     - develop
