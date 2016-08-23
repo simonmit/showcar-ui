@@ -1,22 +1,12 @@
 // Todo: remove Zepto
 if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
-// Polyfills
-require('document-register-element');
-require('picturefill'); // Todo: Can we remove picturefill? -> Robert W. is using it for CMS stuff!
-require('array.from');
-require('dom4');
-
 let warn = (msg) => {
     if (!window || !window.console) {
         return;
     }
     window.console.warn(msg);
 };
-
-if (typeof Object.assign !== 'function') {
-    require('object.assign/shim')();
-}
 
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
