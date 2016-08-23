@@ -6,7 +6,12 @@ cache:
   paths:
     - node_modules/
 
+stages:
+  - all
+
 build-deploy-docs-test:
+  stage:
+    - all
   only:
     - master
     - develop
