@@ -38,7 +38,9 @@ build_lib:
     - master
     - develop
   script:
+    - date
     - npm run grunt
+    - date
   artifacts:
     paths:
       - dist
