@@ -1,7 +1,7 @@
 image: bdadamas24/node-xvfb
 
 cache:
-  untracked: true
+  # untracked: true
   key: "$CI_BUILD_REF_NAME"
   paths:
     - node_modules/
@@ -38,9 +38,7 @@ build_lib:
     - master
     - develop
   script:
-    - date
     - npm run grunt
-    - date
   artifacts:
     paths:
       - dist
