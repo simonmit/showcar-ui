@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     var path = require('path');
 
-    grunt.loadTasks('./tasks/snippet');
     grunt.loadTasks('./tasks/generate-polyfills');
 
     require('load-grunt-config')(grunt, {

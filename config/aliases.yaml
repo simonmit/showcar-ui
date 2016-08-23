@@ -1,21 +1,16 @@
 default:
   tasks:
-    - 'dist'
+    - build
 
 build:
+  description: 'Build the distribution'
   tasks:
     - 'copy:polyfills'
     - 'sass:dist'
     - 'pleeease:dist'
     - 'webpack:dist'
-    - 'generate-polyfills'
+    # - 'generate-polyfills'
     - 'replace:fragment'
-
-dist:
-  description: 'Build the distribution'
-  tasks:
-    - 'build'
-    # - 'snippet'
 
 docs:
   description: 'Build the documentation'
