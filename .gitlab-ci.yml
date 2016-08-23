@@ -1,8 +1,12 @@
 image: bdadamas24/node-xvfb
 
 cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
   paths:
-    - node_modules
+    - node_modules/
+
+
 
 stages:
   - build
@@ -13,7 +17,6 @@ stages:
 before_script:
   - npm install -s
   - npm rebuild node-sass
-
 
 pages:
   stage: documentation
