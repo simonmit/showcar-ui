@@ -6,58 +6,29 @@ cache:
   paths:
     - node_modules/
 
-stages:
-  - setup
-  - build
-  - deploy
-  - test
-  - documentation
-
-npminstall:
-  stage: setup
+build-deploy-docs-test:
+  only:
+    - master
+    - develop
   script:
+    # Installing dependencies
     - npm install -s
     - npm prune
     - npm rebuild node-sass
 
-pages:
-  stage: documentation
-  script:
+    # Building lib
+    - npm run grunt build
+
+    # Creating docs
     - npm run grunt docs
     - npm run grunt copy:docs
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
 
-build_lib:
-  stage: build
-  only:
-    - master
-    - develop
-  script:
-    - npm run grunt
-  artifacts:
-    paths:
-      - dist
-
-deploy_lib:
-  stage: deploy
-  only:
-    - master
-    - develop
-  script:
+    # Deploying to S3
     - node deploy/deploy_to_s3.js "dist/*.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
     - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
     - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
 
-sanity_test:
-  stage: test
-  only:
-    - master
-    - develop
-  script:
+    # Testing
     - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
 
 # css_test:
