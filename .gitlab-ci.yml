@@ -44,7 +44,7 @@ deploy_lib:
     - master
     - develop
   script:
-    - node deploy/deploy_to_s3.js "dist/.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
+    - node deploy/deploy_to_s3.js "dist/(.*)" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
     - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
     - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
 
