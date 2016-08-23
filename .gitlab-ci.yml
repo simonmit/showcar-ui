@@ -1,7 +1,7 @@
 image: bdadamas24/node-xvfb
 
 cache:
-  # untracked: true
+  untracked: true
   key: "$CI_BUILD_REF_NAME"
   paths:
     - node_modules/
@@ -23,14 +23,13 @@ npminstall:
 pages:
   stage: documentation
   script:
-    - npm run grunt docs && npm run grunt copy:docs
+    - npm run grunt docs
+    - npm run grunt copy:docs
   artifacts:
     paths:
       - public
   only:
     - master
-    - develop
-
 
 build_lib:
   stage: build
