@@ -16,6 +16,7 @@ stages:
 
 before_script:
   - npm install -s
+  - npm prune
   - npm rebuild node-sass
 
 pages:
