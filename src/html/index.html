@@ -1,11 +1,24 @@
 <head>
-    <script data-pagespeed-no-defer pagespeed_no_defer>{{ inlineJS }}</script>
-    <script data-pagespeed-no-defer pagespeed_no_defer>if (/*@cc_on!@*/false && document.documentMode === 10) {document.write('<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js\">\x3C/script>');}</script>
-    <!--[if lte IE 9]><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><![endif]-->
-    <noscript>
-        <style>body{font-family:Source Sans Pro,sans-serif;}</style>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext">
-    </noscript>
-    <link rel="stylesheet" href="{{ cssFile }}">
+<script data-pagespeed-no-defer pagespeed_no_defer>
+@@SCRIPT_ERROR_COLLECTOR
+@@SCRIPT_FONT_LOADER
+@@POLYFILL_DOM4
+@@POLYFILL_DOCUMENT_REGISTER_ELEMENT
+(function(w) {
+if(!w.__proto__){l('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')}
+if(!w.Promise){l('"@@ASSET_PATH/promiz.js')}
+if(!w.fetch){l('"@@ASSET_PATH/fetch.js')}
+if(!(Array.from && Array.of && Array.isArray)){l('"@@ASSET_PATH/array.js')}
+if(!(Object.assign)){l('"@@ASSET_PATH/object.js')}
+if(!(w.Map && w.WeakMap && w.Set)){l('"@@ASSET_PATH/es6-collections.js')}
+if(!w.HTMLPictureElement){l('"@@ASSET_PATH/picturefill.js',1)}
+function l(url,a){document.write('<script '+(a&&'async')+' src="'+url+'"></'+'script>')}
+}(window))
+</script>
+<noscript>
+    <style>body{font-family:Source Sans Pro,sans-serif;}</style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext">
+</noscript>
+<link rel="stylesheet" href="@@ASSET_PATH/showcar-ui.css">
 </head>
-<script src="{{ jsFile }}"></script>
+<script src="@@ASSET_PATH/showcar-ui.js"></script>

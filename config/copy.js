@@ -1,3 +1,9 @@
+const fs = require('fs');
+const UglifyJS = require("uglify-js");
+
+const readFile = filename => fs.readFileSync(filename, 'utf-8');
+const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
+
 module.exports = {
     docs: {
         files: [
@@ -8,8 +14,20 @@ module.exports = {
     },
 
     polyfills: {
+        options: {
+            process: (content, path) => {
+                if (path.includes('min.js') || path.includes('es6-collections.js')) {
+                    return content;
+                }
+
+                return UglifyJS.minify(content, { fromString: true }).code;
+            }
+        },
         files: {
-            'dist/picturefill.min.js': 'node_modules/picturefill/dist/picturefill.min.js'
+            'dist/picturefill.js': 'node_modules/picturefill/dist/picturefill.min.js',
+            'dist/promiz.js': 'node_modules/promiz/promiz.min.js',
+            'dist/es6-collections.js': 'node_modules/es6-collections/es6-collections.js',
+            'dist/fetch.js': 'node_modules/whatwg-fetch/fetch.js',
         }
     }
 };

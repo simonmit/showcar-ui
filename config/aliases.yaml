@@ -4,9 +4,12 @@ default:
 
 build:
   tasks:
+    - 'copy:polyfills'
     - 'sass:dist'
     - 'pleeease:dist'
     - 'webpack:dist'
+    - 'generate-polyfills'
+    - 'replace:fragment'
 
 dist:
   description: 'Build the distribution'

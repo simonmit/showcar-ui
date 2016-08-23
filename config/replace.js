@@ -9,20 +9,15 @@ module.exports = function(grunt, options) {
         fragment: {
             options:{
                 patterns: [
-                    { match: 'ASSETS_PREFIX', replacement: '<%= assetsPrefix %>' },
-                    { match: 'BUILD_TYPE', replacement: '<%= buildType %>' },
-                    { match: 'COMMIT_HASH', replacement: '<%= commitHash %>' },
-                    { match: 'DOCUMENT_REGISTER_ELEMENT_POLYFILL', replacement: readFile('node_modules/document-register-element/build/document-register-element.js') },
-                    { match: 'DOM4_POLYFILL', replacement: readFile('node_modules/dom4/build/dom4.js') },
-
-                    { match: 'ERROR_COLLECTOR', replacement: readJsFile('src/js/inline-js/js-error-collector.js') },
-                    { match: 'FONT_LOADER', replacement: readJsFile('src/js/inline-js/font-loader.js') },
-
-                    // { match: /[\s^]+\/\/.*/g, replacement: '' }
+                    { match: 'ASSET_PATH', replacement: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>' },
+                    { match: 'POLYFILL_DOCUMENT_REGISTER_ELEMENT', replacement: readFile('node_modules/document-register-element/build/document-register-element.js') },
+                    { match: 'POLYFILL_DOM4', replacement: readFile('node_modules/dom4/build/dom4.js') },
+                    { match: 'SCRIPT_ERROR_COLLECTOR', replacement: readJsFile('src/js/inline-js/js-error-collector.js') },
+                    { match: 'SCRIPT_FONT_LOADER', replacement: readJsFile('src/js/inline-js/font-loader.js') },
                 ],
             },
             files: {
-                'dist/index0.html': 'src/html/index0.html'
+                'dist/index.html': 'src/html/index.html'
             }
         }
     }
