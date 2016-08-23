@@ -2,6 +2,7 @@ module.exports = function(grunt) {
     var path = require('path');
 
     grunt.loadTasks('./tasks/snippet');
+    grunt.loadTasks('./tasks/generate-polyfills');
 
     require('load-grunt-config')(grunt, {
         // path to tasks configs
@@ -26,6 +27,4 @@ module.exports = function(grunt) {
             scope: 'devDependencies'
         }
     });
-
 };
-
