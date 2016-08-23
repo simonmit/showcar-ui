@@ -6,18 +6,19 @@ cache:
   paths:
     - node_modules/
 
-
-
 stages:
+  - setup
   - build
   - deploy
   - test
   - documentation
 
-before_script:
-  - npm install -s
-  - npm prune
-  - npm rebuild node-sass
+npminstall:
+  stage: setup
+  script:
+    - npm install -s
+    - npm prune
+    - npm rebuild node-sass
 
 pages:
   stage: documentation
