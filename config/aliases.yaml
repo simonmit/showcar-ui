@@ -15,7 +15,7 @@ dist:
   description: 'Build the distribution'
   tasks:
     - 'build'
-    - 'snippet'
+    # - 'snippet'
 
 docs:
   description: 'Build the documentation'
