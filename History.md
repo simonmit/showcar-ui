@@ -1,4 +1,42 @@
 
+1.8.0 / 2016-08-24
+==================
+
+ * using stages for better visibility on gitlab UI
+ * running all gitlab stages in one build so that it takes significantly less time
+ * only running docs generation for master branch
+ * moving npm install into separate build stage to be able to see its duration
+ * cleaning up node modules on gitlab
+ * got rid of unused dependencies
+ * updated document-register-element polyfill to latest version
+ * got rid of unnecessary generate-polyfills grunt task
+ * not copying unused polyfills
+ * inlining almost all polyfills to make Google Page Speed Insights happy + using smaller and simpler polyfills for Array.of, Array.from and Object.assign methods
+ * removed snippet task because grunt-replace does its job
+ * only copying docs when building docs
+ * removed unnecessary polyfills -> they are in the fragment now
+ * running tasks for new polyfill solution
+ * every file inside dist/ gets deployed to S3
+ * using generate-polyfills task for Object.assign and Array.from/of/isArray methods
+ * task for generating custom polyfills
+ * not running css test for now because they are always red
+ * preparing new polyfills solution (WIP)
+ * added current version number of showcar-icons - trying to fix icons update issue
+
+1.7.6 / 2016-08-22
+==================
+
+ * Merge branch 'hotfix/v1.7.6' into develop
+ * removed unnecessary element registration
+ * added todo's
+ * removed unused polyfills + moved polyfills to showcar-ui.js
+ * updated scrolling documentation
+ * added a class for smooth scrolling + added smooth scrolling for spy navigation
+ * adjusted scroll.js to use startsWith selector + fixed spy navigation examples
+ * changed spy navigation - removed orange bottom border + added shadow to bottom
+ * triggering smooth scrolling for all links
+ * Merge branch 'hotfix/1.7.4' into develop
+
 1.7.3 / 2016-08-08
 ==================
 
@@ -179,9 +217,9 @@
   * adjusted home CSS regression tests + added list.js script for CSS tests
   * added more logging for AWS
 
-1.4.5 
+1.4.5
 =====
-  * Fix for radio buttons when there's no class specified for the `input` 
+  * Fix for radio buttons when there's no class specified for the `input`
 
 1.4.4
 =====
