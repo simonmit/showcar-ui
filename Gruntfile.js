@@ -1,8 +1,6 @@
 module.exports = function(grunt) {
     var path = require('path');
 
-    grunt.loadTasks('./tasks/snippet');
-
     require('load-grunt-config')(grunt, {
         // path to tasks configs
         configPath: path.join(process.cwd(), 'config'),
@@ -26,6 +24,4 @@ module.exports = function(grunt) {
             scope: 'devDependencies'
         }
     });
-
 };
-

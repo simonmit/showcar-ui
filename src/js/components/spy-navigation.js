@@ -1,4 +1,5 @@
 module.exports = function(config) {
+    const smoothScroll = require('./scroll');
     // This one is needed for check whether active link element has changed or not
     var activeNavItemCache;
     var componentClass = '.sc-spy-navigation';
@@ -70,7 +71,7 @@ module.exports = function(config) {
             targetTopOffset = target.offsetTop;
             navHeight = navEl.getBoundingClientRect().height;
             targetOffset = targetTopOffset - navHeight;
-            window.scrollTo(0, targetOffset);
+            smoothScroll(target, targetOffset, 300);
         }
     }
 
@@ -139,5 +140,4 @@ module.exports = function(config) {
     handleStickiness();
     spyScroll();
     initMobileToggle();
-
 };

@@ -1,68 +1,47 @@
 image: bdadamas24/node-xvfb
 
 cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
   paths:
-    - node_modules
+    - node_modules/
 
 stages:
-  - build
-  - deploy
-  - test
-  - documentation
+  - all
 
-before_script:
-  - npm install -s
-  - npm rebuild node-sass
-
-
-pages:
-  stage: documentation
-  script:
-    - npm run grunt docs && npm run grunt copy
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
-    - develop
-
-
-build_lib:
-  stage: build
+build-deploy-docs-test:
+  stage: all
   only:
     - master
     - develop
   script:
-    - npm run grunt
-  artifacts:
-    paths:
-      - dist
+    # Installing dependencies
+    - npm install -s
+    - npm prune
+    - npm rebuild node-sass
 
-deploy_lib:
-  stage: deploy
-  only:
-    - master
-    - develop
-  script:
-    - node deploy/deploy_to_s3.js "dist/+(index.html|showcar-ui.css|showcar-ui.js|showcar-ui.js.map)" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
+    # Building lib
+    - npm run grunt build
+
+    # Creating docs
+    - npm run grunt docs
+    - npm run grunt copy:docs
+
+    # Deploying to S3
+    - node deploy/deploy_to_s3.js "dist/*.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
     - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
     - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
 
-sanity_test:
-  stage: test
-  only:
-    - master
-    - develop
-  script:
+    # Testing
     - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
 
-css_test:
-  stage: test
-  only:
-    - develop
-  script:
-    - npm run test-css-reference
-    - npm run test-css
-    - node deploy/cleanup_s3.js "showcar-ui/css-tests-artifacts"
-    - node deploy/deploy_to_s3.js "backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
-    - if ls backstop_data/bitmaps_test/**/failed*.png 1> /dev/null 2>&1; then exit 1; else exit 0; fi
+# css_test:
+#   stage: test
+#   only:
+#     - develop
+#   script:
+#     - npm run test-css-reference
+#     - npm run test-css
+#     - node deploy/cleanup_s3.js "showcar-ui/css-tests-artifacts"
+#     - node deploy/deploy_to_s3.js "backstop_data/bitmaps_test/**/failed*.png" showcar-ui/css-tests-artifacts
+#     - if ls backstop_data/bitmaps_test/**/failed*.png 1> /dev/null 2>&1; then exit 1; else exit 0; fi
