@@ -1,4 +1,9 @@
 
+1.8.2 / 2016-08-24
+==================
+
+  * reverted document-register-element to an earlier version in order to fix Safari/Webkit issues
+
 1.8.1 / 2016-08-24
 ==================
  * fixed issues with document-register-element in Safari
