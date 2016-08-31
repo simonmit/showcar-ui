@@ -83,6 +83,10 @@ class Container {
         let width   = target.width();
         let element = $(this.element);
 
+        if(!offset.height) {
+            offset.height = 0;
+        }
+
         this.targetPosition = [offset.top, offset.left, offset.width, offset.height];
 
         if (window.pageYOffset > (offset.top + offset.height)) {

@@ -49,9 +49,11 @@ class Pager {
             a    = this.prototypeA.clone(),
             icon = this.prototypeIcon.clone();
 
+        const previousText = $(this.rootElement).data('previous-text') || 'Previous';
+
         li.addClass('previous-page');
         a.attr('href', this.getPageUrl(this.activePage - 1));
-        a.text(' Previous');
+        a.text(' ' + previousText);
         icon.attr('type', 'arrow');
 
         if (1 === this.activePage) a.addClass('disabled');
@@ -67,9 +69,11 @@ class Pager {
             a    = this.prototypeA.clone(),
             icon = this.prototypeIcon.clone();
 
+        const nextText = $(this.rootElement).data('next-text') || 'Next';
+
         li.addClass('next-page');
         a.attr('href', this.getPageUrl(this.activePage + 1));
-        a.text('Next ');
+        a.text(nextText + ' ');
         icon.attr('type', 'arrow');
 
         if (this.maxPage === this.activePage) a.addClass('disabled');
