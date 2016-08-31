@@ -1,4 +1,11 @@
 
+1.8.3 / 2016-08-31
+==================
+
+  * Temporary fix for issue with misplaced notification due to undefined offset height position.
+  * reading pager next/previous text from data attributes
+  * Merge tag 'quickfix-dre' into develop
+
 1.8.2 / 2016-08-24
 ==================
 
