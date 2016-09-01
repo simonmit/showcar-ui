@@ -41,10 +41,6 @@
         display: flex;
       }
     }
-
-    @include mqmin(415px) {
-      justify-content: center;
-    }
   }
 
   &__show-more {
@@ -62,6 +58,10 @@
     @include mqmin($viewportM) {
       display: flex;
     }
+  }
+
+  @include mqmin(415px) {
+    justify-content: center;
   }
 }
 
