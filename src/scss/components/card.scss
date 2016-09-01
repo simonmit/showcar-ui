@@ -60,8 +60,12 @@
     }
   }
 
-  @include mqmin(415px) {
+  @include mqminmax(415, 767) {
     justify-content: center;
+  }
+
+  @include mqmin(768) {
+    justify-content: flex-start;
   }
 }
 
@@ -74,12 +78,16 @@
   margin: 2vh 1%;
   flex-basis: 48%;
 
-  @include mqminmax(415, 768) {
+  @include mqminmax(415, 767) {
     flex-basis: 42%;
   }
 
-  @include mqmin(768) {
+  @include mqminmax(768, 859) {
     flex-basis: 23%;
+  }
+
+  @include mqmin(860) {
+    flex-basis: 18%;
   }
 
   &__media {
