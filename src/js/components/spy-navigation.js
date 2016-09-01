@@ -9,6 +9,7 @@ module.exports = function(config) {
     var stickedStateModifier = (componentClass + '--sticked').substr(1);
     var activeLinkModifier = (linkClass + '--active').substr(1);
     var componentElem = document.querySelector(componentClass);
+    var spyOnHold = false;
 
     if (componentElem == null) return;
 
@@ -67,15 +68,27 @@ module.exports = function(config) {
         targetName = $item.getAttribute('data-href');
         navEl = document.querySelector(componentClass);
         target = document.querySelector("[name = '" + targetName + "']");
+
         if (target) {
             targetTopOffset = target.offsetTop;
             navHeight = navEl.getBoundingClientRect().height;
             targetOffset = targetTopOffset - navHeight;
-            smoothScroll(target, targetOffset, 300);
+            smoothScroll(target, targetOffset, 300, function() {
+                spyOnHold = false;
+                spyScroll();
+            });
         }
     }
 
+    function closeNavigation() {
+        if (!componentElem) return;
+
+        componentElem.classList.remove('sc-spy-navigation--expanded');
+    }
+
     var spyScroll = function() {
+        if (spyOnHold) return;
+
         var activeNavItem,
             scrollTop = window.pageYOffset,
             componentHeight = componentElem.getBoundingClientRect().height;
@@ -121,6 +134,8 @@ module.exports = function(config) {
     Array.prototype.forEach.call(componentElem.querySelectorAll(linkClass), function(linkEl) {
         linkEl.addEventListener('click', function(evt) {
             evt.preventDefault();
+            closeNavigation();
+            spyOnHold = true;
             navigateToAnchor(linkEl);
         });
     });

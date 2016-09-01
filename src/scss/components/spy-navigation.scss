@@ -29,7 +29,6 @@
       position: static;
       @include ls;
       &:first-child {
-        transition: none;
         position: static;
         @include ls;
       }
@@ -55,6 +54,7 @@
 
   &__wrapper {
     display: flex;
+    padding: $XS;
   }
 
   &__toggle {
@@ -92,10 +92,9 @@
     width: 100%;
     top: 100%;
     opacity: 0;
-    transition: .3s;
 
     &:first-child {
-      @include lx;
+      @include ls;
     }
 
     @include mqmin($viewportM) {
@@ -113,6 +112,10 @@
       color: $orange-100;
       z-index: 1;
       @include lx;
+
+      &:first-child {
+        @include lx;
+      }
     }
   }
 

@@ -1,17 +1,15 @@
-function smoothScroll(el, to, duration) {
-    if (duration < 0) {
-        return;
-    }
-
-    if (duration === 0) {
+function smoothScroll(el, to, duration, cb) {
+    if (duration <= 0) {
+        if (cb) cb();
         window.scrollTo(0, to);
     } else {
         let difference = to - window.pageYOffset;
+
         let perTick = difference / duration * 10;
         $(this).scrollToTimerCache = setTimeout(() => {
             if (!isNaN(parseInt(perTick, 10))) {
                 window.scrollTo(0, window.pageYOffset + perTick);
-                smoothScroll(el, to, duration - 10);
+                smoothScroll(el, to, duration - 10, cb);
             }
         }, 10);
     }
