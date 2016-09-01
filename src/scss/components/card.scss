@@ -74,7 +74,7 @@
   margin: 2vh 1%;
   flex-basis: 48%;
 
-  @include mqmin(415px) {
+  @include mqminmax(415, 768) {
     flex-basis: 42%;
   }
 
