@@ -75,11 +75,11 @@
   flex-basis: 48%;
 
   @include mqmin(415px) {
-    flex-basis: 32%;
+    flex-basis: 42%;
   }
 
   @include mqmin(768) {
-    flex-basis: 170px;
+    flex-basis: 23%;
   }
 
   &__media {
