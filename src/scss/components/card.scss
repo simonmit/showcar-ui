@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   position: relative;
   padding: $L;
 
@@ -68,11 +68,11 @@
   flex-direction: column;
   border: solid 1px $black-30;
   border-radius: 4px 4px 0 0;
-  margin: 1vh 1%;
+  margin: 2vh 1%;
   flex-basis: 48%;
 
   @include mqmin(415px) {
-    flex-basis: 23%;
+    flex-basis: 18%;
   }
 
   @include mqmin(768) {
