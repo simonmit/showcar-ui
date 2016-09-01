@@ -42,6 +42,9 @@
       }
     }
 
+    @include mqmin(415px) {
+      justify-content: center;
+    }
   }
 
   &__show-more {
@@ -72,7 +75,7 @@
   flex-basis: 48%;
 
   @include mqmin(415px) {
-    flex-basis: 18%;
+    flex-basis: 32%;
   }
 
   @include mqmin(768) {
