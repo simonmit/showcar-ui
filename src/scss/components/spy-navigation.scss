@@ -104,7 +104,7 @@
       position: static;
       width: auto;
       &:first-child {
-        @include visible;
+        @include invisible;
       }
     }
 
