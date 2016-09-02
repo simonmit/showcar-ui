@@ -3,12 +3,12 @@
 @import "../links";
 @import "../mixins/rotating-arrow";
 
-@mixin ls {
+@mixin invisible {
   opacity: 1;
   transform: translateY(0);
 }
 
-@mixin lx {
+@mixin visible {
   opacity: 1;
   transform: translateY(-100%);
 }
@@ -27,11 +27,10 @@
 
     #{$nav}__link {
       position: static;
-      @include ls;
+      @include invisible;
       &:first-child {
-        transition: none;
         position: static;
-        @include ls;
+        @include invisible;
       }
     }
 
@@ -55,6 +54,7 @@
 
   &__wrapper {
     display: flex;
+    padding: $XS;
   }
 
   &__toggle {
@@ -92,27 +92,30 @@
     width: 100%;
     top: 100%;
     opacity: 0;
-    transition: .3s;
 
     &:first-child {
-      @include lx;
+      @include visible;
     }
 
     @include mqmin($viewportM) {
-      @include ls;
+      @include invisible;
       display: inline-block;
       padding: $XL;
       position: static;
       width: auto;
       &:first-child {
-        @include ls;
+        @include invisible;
       }
     }
 
     &--active {
       color: $orange-100;
       z-index: 1;
-      @include lx;
+      @include visible;
+
+      &:first-child {
+        @include visible;
+      }
     }
   }
 
