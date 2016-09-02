@@ -1,4 +1,14 @@
 
+1.8.4 / 2016-09-02
+==================
+
+  * fixed spy navigation link visibility
+  * closing spyNavigation after selecting an entry
+  * card adjustments
+  * fixed mq in cards
+  * adjusted card flex settings for M-L views
+  * adjusted cards container
+
 1.8.3 / 2016-08-31
 ==================
 
