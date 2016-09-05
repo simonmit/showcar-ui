@@ -105,6 +105,7 @@
 
   &__content {
     border: solid 1px $black-30;
+    border-top: none;
     border-radius: 0 0 3px 3px;
     padding: $M $S;
     background: $white;
