@@ -11,6 +11,13 @@ let warn = (msg) => {
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
+var lazySizesConfig = {
+  loadMode: 1,
+  expFactor: 0,
+  hFac:0
+};
+require('lazysizes');
+
 // Todo: remove from library
 require('showcar-icons');
 
