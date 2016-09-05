@@ -1,4 +1,16 @@
 
+1.8.5 / 2016-09-05
+==================
+
+  * adjusted card margin top to 1vh
+  * removed border top for card content
+  * fixed IE11 cards bug
+  * Updated the spinner for the lazy-image
+  * Added lazy image + lazysizes
+  * forcing system fonts
+  * improved readme
+  * testing system fonts
+
 1.8.4 / 2016-09-02
 ==================
 
