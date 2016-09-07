@@ -8,6 +8,7 @@ cache:
 
 stages:
   - all
+  - documentation
 
 build-deploy-docs-test:
   stage: all
@@ -23,10 +24,6 @@ build-deploy-docs-test:
     # Building lib
     - npm run grunt build
 
-    # Creating docs
-    - npm run grunt docs
-    - npm run grunt copy:docs
-
     # Deploying to S3
     - node deploy/deploy_to_s3.js "dist/*.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
     - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
@@ -34,6 +31,18 @@ build-deploy-docs-test:
 
     # Testing
     - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
+
+pages:
+  stage: documentation
+  script:
+    - npm run grunt docs
+    - npm run grunt copy:docs
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+    - develop
 
 # css_test:
 #   stage: test
