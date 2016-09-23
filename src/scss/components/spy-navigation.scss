@@ -55,6 +55,10 @@
   &__wrapper {
     display: flex;
     padding: $XS;
+
+    @include mqmin($viewportM) {
+      padding: 0;
+    }
   }
 
   &__toggle {
@@ -115,6 +119,10 @@
 
       &:first-child {
         @include visible;
+      }
+
+      @include mqmin($viewportM) {
+        border-bottom: 2px solid $orange-100;
       }
     }
   }
