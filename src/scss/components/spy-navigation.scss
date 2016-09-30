@@ -104,7 +104,10 @@
     @include mqmin($viewportM) {
       @include invisible;
       display: inline-block;
-      padding: $L;
+      padding-top: $L;
+      padding-right: $L;
+      padding-bottom: $M;
+      padding-left: $L;
       position: static;
       width: auto;
       &:first-child {
