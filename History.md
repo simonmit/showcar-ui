@@ -1,4 +1,21 @@
 
+1.9.0 / 2016-10-12
+==================
+
+  * using new showcar-tracking
+  * updated showcar-tracking to a working version
+  * using newer version of tracking lib to be able to test the new array logic
+  * fixed pagintation link: no href on first and last page
+  * minor cleanup
+  * changed padding for spy navigation links
+  * adjusted spy-navigation orange border + link padding
+  * added orange border to active spy navigation element
+  * Removed unnecessary body tag
+  * Renamed the file back
+  * Adam/Ivan: attempt to fix the order of scripts
+  * Attempt to fix docs deneration
+  * Merge branch 'release/v1.8.6' into develop
+
 1.8.6 / 2016-09-05
 ==================
 
