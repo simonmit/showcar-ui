@@ -186,10 +186,18 @@
 
     .icon-auto24,
     as24-icon {
-      width: 85px;
-      height: 40px;
+      width: 74px;
+      height: 34px;
       background-size: contain;
       display: inline-block;
+    }
+
+    @media screen and (min-width: 922px) {
+      .icon-auto24,
+      as24-icon {
+        width: 85px;
+        height: 40px;
+      }
     }
   }
 
