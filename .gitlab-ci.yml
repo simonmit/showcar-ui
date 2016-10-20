@@ -1,11 +1,5 @@
 image: bdadamas24/node-xvfb
 
-cache:
-  untracked: true
-  key: "$CI_BUILD_REF_NAME"
-  paths:
-    - node_modules/
-
 stages:
   - all
   - documentation
@@ -17,9 +11,7 @@ build-deploy-docs-test:
     - develop
   script:
     # Installing dependencies
-    - npm install -s
-    - npm prune
-    - npm rebuild node-sass
+    - yarn
 
     # Building lib
     - npm run grunt build
@@ -42,7 +34,6 @@ pages:
       - public
   only:
     - master
-    - develop
 
 # css_test:
 #   stage: test
