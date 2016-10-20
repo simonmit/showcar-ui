@@ -11,7 +11,7 @@ build-deploy-docs-test:
     - develop
   script:
     # Installing dependencies
-    - yarn
+    - yarn --ignore-engines
 
     # Building lib
     - npm run grunt build
