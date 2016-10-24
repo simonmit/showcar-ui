@@ -190,7 +190,6 @@
       height: 35px;
       background-size: contain;
       display: inline-block;
-      margin-top: 0px;
     }
 
     @media screen and (min-width: 922px) {
@@ -198,6 +197,7 @@
       as24-icon {
         width: 85px;
         height: 40px;
+        margin-top: 0px;
       }
     }
   }
