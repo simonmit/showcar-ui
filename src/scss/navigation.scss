@@ -190,6 +190,7 @@
       height: 35px;
       background-size: contain;
       display: inline-block;
+      margin-top: 0px;
     }
 
     @media screen and (min-width: 922px) {
@@ -272,7 +273,7 @@
       span.title {
         padding: 0;
         &::after {
-          right: -20px;
+          right: -18px;
         }
       }
 
@@ -300,7 +301,7 @@
 
         li {
           display: inline-block;
-          padding: 24px 24px 24px 24px;
+          padding: 24px 40px 24px 24px;
           border: 1px solid transparent;
           border-width: 0 1px;
           margin: 0 -1px;
