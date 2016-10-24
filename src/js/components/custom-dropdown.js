@@ -27,6 +27,25 @@ function createdCallback() {
         return;
     }
 
+    // start
+    if ("dropdowngroup" === el.attr('dropdowngroup')) {
+        el.find('[type=hidden]').addClass('sc-input');
+        let updateCaption = () => {
+            let userChoice = el.find('[type=hidden]:selected');
+            let texts = [];
+            checkboxes.filter(":selected").forEach((element) => {
+                texts.push(element.nextElementSibling.innerHTML);
+            });
+
+            let title = texts.join(', ') || defaultTitle;
+            titleElement.html(title);
+        };
+
+        el.on('change', updateCaption);
+        updateCaption();        
+    }
+    //end
+
     el.find('[type=checkbox]').addClass('sc-input');
     let updateCaption = () => {
         let checkboxes = el.find('[type=checkbox]:checked');
