@@ -1,15 +1,14 @@
 module.exports = {
-    files: [
-        'src/scss/**/*.scss',
-        'src/js/**/*.js',
-        'docs/src/**/*.hbs',
-        'docs/css/*.scss',
-        'docs/js/*.js',
-        'examples/**/*',
-        '!examples/**/*.css'
-    ],
-    tasks: ["docs"],
-    options: {
-        livereload: true
+    js: {
+        files: ['src/**/*.js'],
+        tasks: ['webpack:docs']
+    },
+    scss: {
+        files: ['src/**/*.scss', 'src/**/*.scss'],
+        tasks: ['sass', 'pleeease']
+    },
+    hbs: {
+        files: ['src/docs/**/*.hbs'],
+        tasks: ['assemble']
     }
 };
