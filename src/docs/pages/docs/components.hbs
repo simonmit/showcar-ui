@@ -533,20 +533,62 @@ showcar.spyNavigation({
         </custom-dropdown>
         <hr/>
         <label>Custom Dropdown with Icons without Checkbox</label>
-        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-3" dropdowngroup style="max-width: 300px;">
+        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-3" checkboxgroup style="max-width: 300px;">
             <div>
                 <p>All</p>
             </div>
             <div>
-                <input type="hidden" id="delivery2"/>
-                <label for="delivery">
-                    <as24-icon type="bodytypes/delivery"></as24-icon>
-                    <span>
-                        Transporter
-                    </span>
-                </label>
-                <input type="hidden" id="van2">
-                    <label for="van">
+                <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="cabrio-3"/>
+                    <label class="sc-input-without-checkbox" for="cabrio-3">
+                        <as24-icon type="bodytypes/roadster"></as24-icon>
+                        <span>
+                            Cabrio
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="coupe-3"/>
+                    <label class="sc-input-without-checkbox" for="coupe-3">
+                        <as24-icon type="bodytypes/sports"></as24-icon>
+                        <span>
+                            Coupé
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="compact-3"/>
+                    <label class="sc-input-without-checkbox" for="compact-3">
+                        <as24-icon type="bodytypes/compact"></as24-icon>
+                        <span>
+                            Kleinwagen
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="station-3"/>
+                    <label class="sc-input-without-checkbox" for="station-3">
+                        <as24-icon type="bodytypes/station"></as24-icon>
+                        <span>
+                            Kombi
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="limousine-3"/>
+                    <label class="sc-input-without-checkbox" for="limousine-3">
+                        <as24-icon type="bodytypes/limousine"></as24-icon>
+                        <span>
+                            Limousine
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="offroad-3"/>
+                    <label class="sc-input-without-checkbox" for="offroad-3">
+                        <as24-icon type="bodytypes/offroad"></as24-icon>
+                        <span>
+                            SUV/Geländewagen
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="delivery-3"/>
+                    <label class="sc-input-without-checkbox" for="delivery-3">
+                        <as24-icon type="bodytypes/delivery"></as24-icon>
+                        <span>
+                            Transporter
+                        </span>
+                    </label>
+                    <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="van-3">
+                    <label class="sc-input-without-checkbox" for="van-3">
                         <as24-icon type="bodytypes/van"></as24-icon>
                         <span>
                             Van
@@ -577,6 +619,23 @@ showcar.spyNavigation({
     <div>
         <input type="checkbox" id="myId"/>
         <label for="myId">
+            <as24-icon type="..."></as24-icon>
+    <span>
+        ...
+    </span>
+        </label>
+        ...
+    </div>
+</custom-dropdown>
+
+<label>Custom Dropdown with Icons without Checkbox</label>
+<custom-dropdown class="icon" checkboxgroup">
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input name="custom-radio" class="custom-dropdown--hide" type="radio" id="myId"/>
+        <label class="sc-input-without-checkbox" for="myId">
             <as24-icon type="..."></as24-icon>
     <span>
         ...

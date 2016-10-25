@@ -80,3 +80,13 @@
     width: 100%;
   }
 }
+
+.sc-input-without-checkbox {
+    display: block;
+}
+
+.custom-dropdown {
+  &--hide{
+    display: none;
+  }
+}
