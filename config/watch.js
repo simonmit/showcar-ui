@@ -8,7 +8,7 @@ module.exports = {
         'examples/**/*',
         '!examples/**/*.css'
     ],
-    tasks: ["build", "docs"],
+    tasks: ["docs"],
     options: {
         livereload: true
     }
