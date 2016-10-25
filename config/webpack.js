@@ -4,16 +4,16 @@ module.exports = function(grunt, options) {
 
     return {
         options: {
-            context: __dirname + '/../src',
-            entry: './js/showcar-ui.js',
+            entry: './src/js/showcar-ui.js',
             module: {
+                noParse: [
+                    /\.min\.js/
+                ],
                 loaders: [ { test: /\.js$/, loader: 'babel?presets[]=es2015' } ]
             },
-            resolve: {
-                extensions: ['', '.js']
-            },
             devtool: 'source-map',
-            cache: true
+            cache: true,
+            watch: true
         },
         dist: {
             output: {filename: 'dist/showcar-ui.js'},
