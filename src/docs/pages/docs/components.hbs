@@ -467,6 +467,17 @@ showcar.spyNavigation({
             </div>
         </custom-dropdown>
         <hr/>
+        <label>Custom Dropdown (disabled)</label>
+        <custom-dropdown class="sc-input icon" data-test="custom-dropdown-" checkboxgroup disabled style="max-width: 300px;">
+        <div>
+            <p>Value1</p>
+        </div>
+        <div>
+            <input type="checkbox" id="cd1"/>
+            <label for="cd1">Value1</label>
+        </div>
+        </custom-dropdown>
+        <hr/>
         <label>Custom Dropdown with Icons</label>
         <custom-dropdown class="sc-input icon" data-test="custom-dropdown-2" checkboxgroup style="max-width: 300px;">
             <div>
@@ -536,6 +547,18 @@ showcar.spyNavigation({
 <!--
 <label>Custom Dropdown</label>
 <custom-dropdown checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="myId"/>
+        <label for="myId">My Label</label>
+        ...
+    </div>
+</custom-dropdown>
+
+<label>Custom Dropdown (disabled)</label>
+<custom-dropdown checkboxgroup diasbled>
     <div>
         <p>All</p>
     </div>
