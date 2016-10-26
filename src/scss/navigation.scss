@@ -5,6 +5,8 @@
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
 
+  border-bottom: 1px solid $black30;
+
   .sc-btn-mobile-menu {
     position: absolute;
     transition: 0.2s ease;
