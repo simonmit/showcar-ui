@@ -50,6 +50,10 @@
   @include ellipsis();
 }
 
+.sc-block {
+  display: block;
+}
+
 .sc-hidden {
   display: none;
 }

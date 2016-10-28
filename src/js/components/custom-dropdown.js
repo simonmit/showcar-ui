@@ -43,8 +43,6 @@ function createdCallback() {
         el.on('change', updateCaption);
         updateCaption();
     }
-
-
 }
 
 function attachedCallback() {
