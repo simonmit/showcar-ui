@@ -27,29 +27,32 @@ function createdCallback() {
         return;
     }
 
-    el.find('[type=checkbox]').addClass('sc-input');
-    let updateCaption = () => {
-        let checkboxes = el.find('[type=checkbox]:checked');
-        let texts = [];
-        checkboxes.filter(":checked").forEach((element) => {
-            texts.push(element.nextElementSibling.innerHTML);
-        });
+    if (this.hasAttribute('checkboxgroup')) {
+        el.find('[type=checkbox]').addClass('sc-input');
+        let updateCaption = () => {
+            let checkboxes = el.find(':checked');
+            let texts = [];
+            checkboxes.filter(":checked").forEach((element) => {
+                texts.push(element.nextElementSibling.innerHTML);
+            });
 
-        let title = texts.join(', ') || defaultTitle;
-        titleElement.html(title);
-    };
+            let title = texts.join(', ') || defaultTitle;
+            titleElement.html(title);
+        };
 
-    el.on('change', updateCaption);
-    updateCaption();
+        el.on('change', updateCaption);
+        updateCaption();
+    }
 }
 
 function attachedCallback() {
-    this.querySelector('p').addEventListener('mousedown', () => {
-        closeAllDropdowns(this);
-        this.classList.toggle('sc-open');
-    });
-
-    attachEventListeners();
+    if (this.hasAttribute('checkboxgroup')) {
+        this.querySelector('p').addEventListener('mousedown', () => {
+            closeAllDropdowns(this);
+            this.classList.toggle('sc-open');
+        });
+        attachEventListeners();
+    }
 }
 
 /**
