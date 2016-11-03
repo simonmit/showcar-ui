@@ -104,7 +104,7 @@ class Notification {
         classes.forEach((cls) => {
             element.classList.add(cls);
         });
-        element.innerHTML = body;
+        element.innerHTML = typeof body === 'string' ? body : '';
 
         parent.appendChild(element);
 

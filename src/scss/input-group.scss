@@ -36,9 +36,10 @@
   @include input-group-radio;
 
   > label {
-    padding: 5px 14px !important;
+    padding: 5px 0 !important;
     position: relative;
     width: 100%;
+    flex: 1;
 
     as24-icon {
       line-height: 0;

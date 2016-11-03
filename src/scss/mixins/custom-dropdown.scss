@@ -9,6 +9,15 @@
   background-color: $white;
   display: block;
 
+  &[disabled=''] {
+    opacity: 0.55;
+    cursor: not-allowed;
+
+    div:first-child {
+      pointer-events: none;
+    }
+  }
+
   div:first-child {
     padding: $XS 12px;
     width: 100%;
@@ -78,5 +87,9 @@
   div label {
     margin-top: $XS;
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

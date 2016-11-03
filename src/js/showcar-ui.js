@@ -1,31 +1,24 @@
 // Todo: remove Zepto
 if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
-let warn = (msg) => {
-    if (!window || !window.console) {
-        return;
-    }
-    window.console.warn(msg);
-};
+let warn = (msg) => window.console && window.console.warn(msg);
 
 window.Storage = require('showcar-storage');
 window.Pager = require('./components/pager.js');
 
-var lazySizesConfig = {
-  loadMode: 1,
-  expFactor: 0,
-  hFac:0
-};
+window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac:0 };
 require('lazysizes');
 
-// Todo: remove from library
+// Todo: remove from the library
 require('showcar-icons');
 
 const ctor = document.createElement('as24-tracking').constructor;
 
 if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
     // only requiring showcar-tracking when it was not already included before
-    require('showcar-tracking');
+    $(window).on('load', () => {
+        require('showcar-tracking');
+    });
 }
 
 var showcar = {};

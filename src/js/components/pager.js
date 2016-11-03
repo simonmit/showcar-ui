@@ -50,13 +50,19 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         const previousText = $(this.rootElement).data('previous-text') || 'Previous';
+        const isFirstPage = 1 === this.activePage;
 
         li.addClass('previous-page');
-        a.attr('href', this.getPageUrl(this.activePage - 1));
+        if (!isFirstPage) {
+            a.attr('href', this.getPageUrl(this.activePage - 1));
+        }
+        
         a.text(' ' + previousText);
         icon.attr('type', 'arrow');
 
-        if (1 === this.activePage) a.addClass('disabled');
+        if (isFirstPage) {
+            a.addClass('disabled');
+        }
 
         return li.append(a.prepend(icon));
     }
@@ -70,13 +76,19 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         const nextText = $(this.rootElement).data('next-text') || 'Next';
+        const isLastPage = this.maxPage === this.activePage;
 
         li.addClass('next-page');
-        a.attr('href', this.getPageUrl(this.activePage + 1));
+        if (!isLastPage) {
+            a.attr('href', this.getPageUrl(this.activePage + 1));
+        }
+
         a.text(nextText + ' ');
         icon.attr('type', 'arrow');
 
-        if (this.maxPage === this.activePage) a.addClass('disabled');
+        if (isLastPage) {
+            a.addClass('disabled');
+        }
 
         return li.append(a.append(icon));
     }
