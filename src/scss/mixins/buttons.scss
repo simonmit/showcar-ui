@@ -34,8 +34,7 @@
 %btn-bob {
   background-color: $orange-100;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $orange-120;
   }
 
@@ -51,8 +50,7 @@
 %btn-ross {
   background-color: $blue-80;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $blue-90;
   }
 
