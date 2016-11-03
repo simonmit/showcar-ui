@@ -21,6 +21,13 @@ docs:
     - 'webpack:docs'
     - 'assemble:docs'
 
+dev:
+  description: 'Dev task'
+  tasks:
+    - docs
+    - browserSync
+    - watch
+
 test-local:
   tasks:
     - 'selenium_standalone:local:install'

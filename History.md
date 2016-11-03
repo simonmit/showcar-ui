@@ -1,4 +1,24 @@
 
+1.11.0 / 2016-11-03
+==================
+
+  * change direction of spinner
+  * update showcar-icons version in dependencies
+  * fixed spinner animation to use CSS animations instead of SMIL and no to eat up all the CPU
+  * Mathias/Diana: added hover cursor on custom dropdown
+  * Mathias/Diana: review changes custom dropdownp
+  * decrease margin in header
+  * added example of disabled state to demo page
+  * added styles for disabled state
+  * added bottom border on every header
+  * changed watch task options to solve problems on mac
+  * optimized js build in watch mode
+  * improved watching with browserSync and optimized watch task
+  * watch only rebuilds docs
+  * added style and html for dropdown without checkbox
+  * changed spacing in header (big size)
+  * element added to example page
+
 1.9.0 / 2016-10-12
 ==================
 
