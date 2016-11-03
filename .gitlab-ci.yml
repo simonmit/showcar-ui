@@ -27,12 +27,16 @@ build-deploy-docs-test:
 pages:
   stage: documentation
   script:
+    # Installing dependencies
+    - yarn --ignore-engines
+
     - npm run grunt docs
     - npm run grunt copy:docs
   artifacts:
     paths:
       - public
   only:
+    - develop
     - master
 
 # css_test:
