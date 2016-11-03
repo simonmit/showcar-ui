@@ -36,7 +36,6 @@ pages:
     paths:
       - public
   only:
-    - develop
     - master
 
 # css_test:
