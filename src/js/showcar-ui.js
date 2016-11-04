@@ -15,10 +15,7 @@ require('showcar-icons');
 const ctor = document.createElement('as24-tracking').constructor;
 
 if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
-    // only requiring showcar-tracking when it was not already included before
-    $(window).on('load', () => {
-        require('showcar-tracking');
-    });
+    require('showcar-tracking');
 }
 
 var showcar = {};
