@@ -11,7 +11,7 @@
   border: 1px solid $black-60;
   border-left: 0;
   border-right: 0;
-  width: 100%;
+  width: 50%;
   text-align: center;
   outline: none;
   -moz-appearance: textfield; // Don't show spinners in firefox
@@ -26,6 +26,7 @@
   font-size: 100%;
   border: 1px solid $black-60;
   border-radius: 4px;
+  width: 25%;
 
   &:hover {
     background-color: $black-30;
