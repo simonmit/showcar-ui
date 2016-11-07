@@ -1,7 +1,25 @@
 <svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
   <style>
   .spinner {
-      animation: spinner 2s linear infinite;
+      -webkit-animation: spinner 2s linear infinite;
+              animation: spinner 2s linear infinite;
+  }
+
+  @-webkit-keyframes spinner {
+      0% {
+          stroke-dashoffset: 502;
+          stroke-dasharray: 150.6 100.4;
+      }
+
+      50% {
+          stroke-dashoffset: 251;
+          stroke-dasharray: 1 250;
+      }
+
+      100% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 150.6 100.4;
+      }
   }
 
   @keyframes spinner {
