@@ -7,8 +7,8 @@ function getFilesizeInBytes(filename) {
     return fileSizeInBytes
 }
 
-var js_bytes = getFilesizeInBytes('../dist/showcar-ui.js');
-var css_bytes = getFilesizeInBytes('../dist/showcar-ui.css');
+var js_bytes = getFilesizeInBytes('dist/showcar-ui.js');
+var css_bytes = getFilesizeInBytes('dist/showcar-ui.css');
 
 metrics.init({ prefix: 'showcar.ui.' });
 metrics.gauge('css_bytes', css_bytes, ['showcar']);
