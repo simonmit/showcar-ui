@@ -86,7 +86,14 @@ input[type="text"],
 input[type="tel"],
 input[type="number"],
 input[type="email"],
-textarea,
+textarea {
+  &.sc-input {
+    @include input();
+    @extend %customInputStyles;
+    cursor: auto;
+  }
+}
+
 select {
   &.sc-input {
     @include input();
