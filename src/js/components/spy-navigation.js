@@ -62,6 +62,56 @@ module.exports = function(config) {
         }
     }
 
+    function handleResize() {
+        var containerHeight = 55;
+        var rootEl = document.querySelector(componentClass);
+        var toggle = rootEl.querySelector(toggleClass);
+        var toggleIconWidth = 28;
+        var toggleWidth = toggle.offsetWidth;
+        var toggleVisibleClass = 'sc-spy-navigation__toggle--visible';
+        var containerWidth = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+        containerWidth = containerWidth > 1100 ? 1100 : containerWidth;
+        var navigationWidth = 0;
+        var elementY = containerHeight + 1;
+        var elements = componentElem.querySelectorAll(linkClass);
+        var index = 0;
+        var count = elements.length;
+        var minWidth = 0;
+        Array.prototype.forEach.call(elements, function(element) {
+            element.style.width = 'auto';
+            if(element.offsetWidth + toggleIconWidth > minWidth){
+                minWidth = element.offsetWidth + toggleIconWidth;
+            }
+        });
+        var first = true;
+        Array.prototype.forEach.call(elements, function(element) {
+            navigationWidth += element.offsetWidth + 1;
+            if(navigationWidth > containerWidth - toggleWidth && containerWidth > 768){
+                toggle.classList.add(toggleVisibleClass);
+                element.style.position = 'absolute';
+                element.style.top = elementY+'px';
+                element.style.right = 0;
+                element.style.borderLeft = '1px solid #dcdcdc';
+                element.style.width = minWidth+'px';
+                element.style.padding = '12px 16px';
+                if(first){
+                    first = false;
+                    element.style.padding = '20px 16px 12px 16px';
+                } else if(index === count - 1){
+                    element.style.borderBottom = '1px solid #dcdcdc';
+                    element.style.padding = '12px 16px 20px 16px';
+                }
+                elementY += element.offsetHeight;
+            } else {
+                toggle.classList.remove(toggleVisibleClass);
+                element.removeAttribute('style');
+            }
+            index++;
+        });
+    }
+
     function navigateToAnchor($item) {
         var targetName, target, targetTopOffset, navEl, navHeight, targetOffset;
 
@@ -144,6 +194,7 @@ module.exports = function(config) {
 
     window.addEventListener('resize', function() {
         handleStickiness();
+        handleResize();
         debSpyScroll();
     });
 
@@ -155,4 +206,7 @@ module.exports = function(config) {
     handleStickiness();
     spyScroll();
     initMobileToggle();
+    document.addEventListener("DOMContentLoaded", function(event) {
+        handleResize();
+    });
 };
