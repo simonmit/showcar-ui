@@ -29,10 +29,6 @@
         $hover-color: map-get(map-get($link-colors, $variant), hover);
 
         color: $hover-color;
-
-        svg {
-            fill: $hover-color;
-        }
     }
 
     &:active {
