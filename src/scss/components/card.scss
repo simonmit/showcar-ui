@@ -1,114 +1,113 @@
 @import "../variables";
 @import "../mixins/utils";
 
+$breakpoint-S: 640;
+$breakpoint-M: 720;
+$breakpoint-L: 900;
+$breakpoint-XL: 1099;
+
 %mobile-only {
-  @include mqmin($viewportM) {
+  @include mqmin($breakpoint-S) {
     display: none;
   }
-}
-
-%trigger_btn {
-  @extend %mobile-only;
-  border-top: solid 1px $black-30;
-  margin-top: $S;
-  padding: $S;
-  flex-basis: 100%;
 }
 
 .sc-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position: relative;
-  padding: $L;
-
+  padding: $XXL $L $XXXL;
+  @include mqmin($breakpoint-S) {
+    padding: $XXXL $L 60px;
+  }
+  $list: &__list;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin: #{-$L} 0 0 #{-$L};
+  }
+  &__show {
+    @extend %mobile-only;
+    display: block;
+    margin-top: $XXL;
+    text-align: center;
+    cursor: pointer;
+    color: $color-link;
+    &:hover {
+      color: $blue-100;
+    }
+    &--less {
+      display: none;
+    }
+  }
   &__state {
     display: none;
-
-    &:checked {
-      & ~ .sc-cards__show-more {
-        @extend %mobile-only;
+    & ~ .sc-cards__list {
+      .sc-card:nth-child(1n+5) {
         display: none;
-      }
-
-      & ~ .sc-cards__show-less {
-        @extend %mobile-only;
-        display: block;
-      }
-
-      & ~ .sc-card--stateful {
-        display: flex;
+        @include mqmin($breakpoint-S) {
+          display: block;
+        }
       }
     }
-  }
-
-  &__show-more {
-    display: block;
-    @extend %trigger_btn;
-  }
-
-  &__show-less {
-    display: none;
-    @extend %trigger_btn;
-  }
-
-  .sc-card--stateful {
-    display: none;
-    @include mqmin($viewportM) {
-      display: flex;
+    &:checked {
+      & ~ .sc-cards__show {
+        .sc-cards__show--less {
+          display: block;
+        }
+        .sc-cards__show--more {
+          display: none;
+        }
+      }
+      & ~ .sc-cards__list {
+        .sc-card {
+          display: block;
+        }
+      }
     }
-  }
-
-  @include mqminmax(415, 767) {
-    justify-content: center;
-  }
-
-  @include mqmin(768) {
-    justify-content: flex-start;
   }
 }
 
 .sc-card {
+  display: block;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px 4px 0 0;
-  margin: 1vh .9%;
-  flex-basis: 48%;
-
-  @include mqminmax(415, 767) {
-    flex-basis: 42%;
+  overflow: hidden;
+  border-left: $L solid transparent;
+  border-top: $L solid transparent;
+  flex: 0 0 50%;
+  @include mqmin($breakpoint-S) {
+    flex: 0 0 33%;
   }
-
-  @include mqminmax(768, 859) {
-    flex-basis: 23%;
+  @include mqmin($breakpoint-M) {
+    flex: 0 0 25%;
   }
-
-  @include mqmin(860) {
-    flex-basis: 18%;
+  @include mqmin($breakpoint-XL) {
+    flex: 0 0 20%;
   }
-
-  &__media {
-    display: flex;
-    flex: 1 0 auto;
-    align-items: center;
-    justify-content: center;
+  &__link {
+    display: block;
     overflow: hidden;
-    border-radius: 4px 4px 0 0;
-    background: $black-20;
-    & > img {
-      width: 100%;
-      max-width: none;
+    border: 1px solid $black-30;
+    border-radius: $XS;
+    transition: border .3s ease;
+    &:hover {
+      border: 1px solid $black-60;
     }
   }
-
-  &__content {
-    border: solid 1px $black-30;
-    border-top: none;
-    border-radius: 0 0 3px 3px;
-    padding: $M $S;
-    background: $white;
+  &__label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: $L $XL;
+    text-align: center;
+    background: white;
+    font-size: 13px;
+    @include mqmin($breakpoint-S) {
+      font-size: 16px;
+    }
   }
-
+  &__image {
+    display: block;
+    width: 100%;
+  }
 }
