@@ -1,4 +1,18 @@
 
+1.11.4 / 2016-11-21
+==================
+
+  * only showing spinner image while lazy image is being loaded
+  * removed svg hover styles from links
+  * using static image for spinner
+  * changed disabled state for button ross
+  * fixed file path
+  * added build script to send data to datadog
+  * added auto cursor behavior to text inputs
+  * trying to fix ghost radio circles in some cases
+  * added vendor prefixes for spinner svg
+  * fixed stepper for FF
+
 1.11.3 / 2016-11-11
 ==================
 
