@@ -70,7 +70,7 @@
     "lazysizes": "^2.0.2",
     "picturefill": "^3.0.2",
     "promiz": "^1.0.5",
-    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.3.5",
+    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.3.7",
     "showcar-storage": "git+https://github.com/AutoScout24/showcar-storage.git#v1.0.2",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.6",
     "susy": "^2.2.12",
