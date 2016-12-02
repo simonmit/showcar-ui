@@ -42,6 +42,7 @@ pages:
     - master
 
 notification:
+  stage: all
   # only:
   #   - master
   script:
