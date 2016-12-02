@@ -4,28 +4,28 @@ stages:
   - all
   - documentation
 
-# build-deploy-docs-test:
-#   stage: all
-#   only:
-#     - master
-#     - develop
-#   script:
-#     # Installing dependencies
-#     - yarn --ignore-engines
-#
-#     # Building lib
-#     - npm run grunt build
-#
-#     # Deploying to S3
-#     - node deploy/deploy_to_s3.js "dist/*.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
-#     - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
-#     - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
-#
-#     # Testing
-#     - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
-#
-#     # Sending data to datadog
-#     - DATADOG_API_KEY=$DATADOG_API_KEY node deploy/send_to_datadog.js
+build-deploy-docs-test:
+  stage: all
+  only:
+    - master
+    - develop
+  script:
+    # Installing dependencies
+    - yarn --ignore-engines
+
+    # Building lib
+    - npm run grunt build
+
+    # Deploying to S3
+    - node deploy/deploy_to_s3.js "dist/*.*" showcar-ui/$CI_BUILD_REF_NAME/$CI_BUILD_REF
+    - node deploy/deploy_to_s3.js "dist/index.html" showcar-ui/$CI_BUILD_REF_NAME/latest
+    - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
+
+    # Testing
+    - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
+
+    # Sending data to datadog
+    - DATADOG_API_KEY=$DATADOG_API_KEY node deploy/send_to_datadog.js
 
 pages:
   stage: documentation
@@ -43,8 +43,8 @@ pages:
 
 notification:
   stage: all
-  # only:
-  #   - master
+  only:
+    - master
   script:
     - "node deploy/slack.js"
 
