@@ -46,7 +46,7 @@ notification:
   # only:
   #   - master
   script:
-    - deploy/slack.sh
+    - "bash deploy/slack.sh"
 
 # css_test:
 #   stage: test
