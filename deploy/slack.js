@@ -29,7 +29,7 @@ const req = https.request({
 const data = {
     channel: '#as24_web_experience',
     username: 'showcar-release',
-    text: `TEST! <@channel>: DEVELOP!!! New ShowCar UI release was done. See build here: <https://gitlab.com/web-experience/showcar-ui/pipelines/${process.env.CI_PIPELINE_ID}>`,
+    text: `TEST! <@channel>: New ShowCar UI release was done (master branch). See build here: <https://gitlab.com/web-experience/showcar-ui/pipelines/${process.env.CI_PIPELINE_ID}>`,
     icon_emoji: ':tada:'
 };
 
