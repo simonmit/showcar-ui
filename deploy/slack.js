@@ -29,8 +29,8 @@ const req = https.request({
 const data = {
     channel: '#as24_web_experience',
     username: 'showcar-release',
-    text: `TEST! @channel: DEVELOP!!! New ShowCar UI release was done. See build here: <https://gitlab.com/web-experience/showcar-ui/pipelines/${process.env.CI_BUILD_ID}>`,
-    link_names: 1
+    text: `TEST! <@channel>: DEVELOP!!! New ShowCar UI release was done. See build here: <https://gitlab.com/web-experience/showcar-ui/pipelines/${process.env.CI_BUILD_ID}>`,
+    icon_emoji: ':tada:'
 };
 
 req.write(querystring.stringify({payload: JSON.stringify(data)}));
