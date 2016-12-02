@@ -10,7 +10,10 @@ const req = https.request({
     hostname: slackUrl.hostname,
     port: slackUrl.port,
     path: slackUrl.pathname,
-    method: 'POST'
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
 }, res =>{
 
     res.setEncoding('utf8');
@@ -30,3 +33,4 @@ const data = {
 };
 
 req.write(querystring.stringify(data));
+req.end();
