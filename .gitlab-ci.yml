@@ -41,6 +41,12 @@ pages:
   only:
     - master
 
+notification:
+  # only:
+  #   - master
+  script:
+    - deploy/slack.sh
+
 # css_test:
 #   stage: test
 #   only:
