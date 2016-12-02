@@ -4,7 +4,7 @@ const https = require('https');
 const URL = require('url');
 const querystring = require('querystring');
 
-const slackUrl = new URL(process.env.SLACK_HOOK_URL);
+const slackUrl = URL.parse(process.env.SLACK_HOOK_URL);
 
 const req = https.request({
     hostname: slackUrl.hostname,
@@ -17,12 +17,12 @@ const req = https.request({
 }, res =>{
 
     res.setEncoding('utf8');
-
-    res.on('data', (chunk) => {
-        console.log(`BODY: ${chunk}`);
+    const chunks = [];
+    res.on('data', chunk => {
+        chunks.push(chunk)
     });
     res.on('end', () => {
-        console.log('No more data in response.');
+        console.log(chunks.join(''));
     });
 });
 
