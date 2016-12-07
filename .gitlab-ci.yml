@@ -41,6 +41,13 @@ pages:
   only:
     - master
 
+notification:
+  stage: all
+  only:
+    - master
+  script:
+    - "node deploy/slack.js"
+
 # css_test:
 #   stage: test
 #   only:
