@@ -74,7 +74,7 @@ module.exports = function(config) {
             || document.body.clientWidth;
         containerWidth = containerWidth > 1100 ? 1100 : containerWidth;
         var navigationWidth = 0;
-        var elementY = containerHeight + 1;
+        var elementY = containerHeight;
         var elements = componentElem.querySelectorAll(linkClass);
         var index = 0;
         var count = elements.length;
@@ -87,8 +87,8 @@ module.exports = function(config) {
         });
         var first = true;
         Array.prototype.forEach.call(elements, function(element) {
-            navigationWidth += element.offsetWidth + 1;
-            if(navigationWidth > containerWidth - toggleWidth && containerWidth > 768){
+            navigationWidth += element.offsetWidth + 10;
+            if(navigationWidth > containerWidth - toggleWidth && containerWidth >= 768){
                 toggle.classList.add(toggleVisibleClass);
                 element.style.position = 'absolute';
                 element.style.top = elementY+'px';
@@ -99,7 +99,8 @@ module.exports = function(config) {
                 if(first){
                     first = false;
                     element.style.padding = '20px 16px 12px 16px';
-                } else if(index === count - 1){
+                }
+                if(index === count - 1){
                     element.style.borderBottom = '1px solid #dcdcdc';
                     element.style.padding = '12px 16px 20px 16px';
                 }

@@ -17,8 +17,8 @@ $spy-height: 55px;
 
 .sc-spy-navigation {
   $nav: &;
+  box-sizing: border-box;
   max-width: $viewportXL;
-  border-top: 1px solid $black-30;
   border-bottom: 1px solid $black-30;
   position: relative;
   background-color: white;
@@ -59,15 +59,15 @@ $spy-height: 55px;
         padding: 12px $L $L;
       }
       @include mqmin($viewportM) {
-        padding: $L 24px 14px 24px;
+        padding: $L 24px 13px 24px;
         &:first-child {
-          padding: $L 24px 14px $L;
+          padding: $L 24px 13px $L;
         }
         &:nth-child(2){
-          padding: $L 24px 14px 24px;
+          padding: $L 24px 13px 24px;
         }
         &:last-child {
-          padding: $L $L 14px 24px;
+          padding: $L $L 13px 24px;
         }
       }
     }
@@ -78,7 +78,8 @@ $spy-height: 55px;
         background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
       }
       &--visible {
-        height: #{$spy-height+1};
+        height: $spy-height;
+        border-left: 1px solid $black-30;
       }
       &__text {
         color: $orange-100;
@@ -107,10 +108,7 @@ $spy-height: 55px;
   &__wrapper {
     position: relative;
     overflow: hidden;
-    height: 55px;
-    @include mqmin($viewportM) {
-      height: auto;
-    }
+    height: #{$spy-height - 1};
   }
 
   &__toggle {
@@ -123,7 +121,7 @@ $spy-height: 55px;
     z-index: 2;
     padding: $L $L #{$M+1};
 
-    @include mqmax($viewportM) {
+    @include mqmax(#{$viewportM - 1}) {
       width: $spy-height;
     }
 
@@ -133,7 +131,7 @@ $spy-height: 55px;
 
     &:after {
       position: absolute;
-      margin-top: 3px;
+      margin-top: 2px;
       right: $L;
       top: $L;
       @include rotating-arrow('down');
@@ -154,7 +152,6 @@ $spy-height: 55px;
 
     &--visible {
       visibility: visible !important;
-      border-left: 1px solid $black-30;
       width: auto;
       background: white;
       #{$toggle}__text {
