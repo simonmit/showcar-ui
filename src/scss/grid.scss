@@ -6,6 +6,7 @@
   @include container;
   position: relative;
   overflow-x: hidden;
+  box-sizing: content-box;
 }
 
 .sc-grid-row {
