@@ -1,4 +1,17 @@
 
+1.12.0 / 2016-12-16
+==================
+
+  * remove show less label from docs
+  * #AS24-#18669, some changes and fixes as defined in the tickets
+  * Merge branch 'develop' of gitlab.com:web-experience/showcar-ui into develop
+  * adjusted arrow in tooltip
+  * run docs in develop (to be removed after tooltip done)
+  * styled tooltip in docs
+  * added tooltip (squshed)
+  * #AS24-18671, #AS24-18669
+  * Merge tag 'slack-notifications' into develop
+
 1.11.4 / 2016-11-21
 ==================
 

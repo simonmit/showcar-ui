@@ -12,6 +12,7 @@ sub-nav:
 - Rotating Arrow
 - Navigation
 - Pagination
+- Tooltip
 - Notifications
 - Scrolling
 ---
@@ -1028,6 +1029,24 @@ showcar.spyNavigation({
             </li>
         </ul>
     </div>
+
+    <a name="tooltip"></a>
+    <h3>Tooltip</h3>
+    <p>
+        Tooltip with any icon from as24-icon set. Tooltip information stored in title attribute.
+    </p>
+    <div class="example example-tooltip">
+        <label>That text needs to be explaned
+            <as24-icon type="info" title='More information' style="width:16px;height:16px;margin-right:16px;margin-top: -4px;vertical-align: middle;"></as24-icon>
+        </label>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+<label>That text needs to be explaned
+    <as24-icon type="info" title='More information'></as24-icon>
+</label>
+        -->
+    </code></pre>
 
     <a name="notifications"></a>
     <h3>Notifications</h3>

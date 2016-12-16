@@ -3,7 +3,7 @@
 
 $breakpoint-S: 640;
 $breakpoint-M: 720;
-$breakpoint-L: 900;
+$breakpoint-L: 1024;
 $breakpoint-XL: 1099;
 
 %mobile-only {
@@ -36,9 +36,6 @@ $breakpoint-XL: 1099;
     &:hover {
       color: $blue-100;
     }
-    &--less {
-      display: none;
-    }
   }
   &__state {
     display: none;
@@ -52,12 +49,7 @@ $breakpoint-XL: 1099;
     }
     &:checked {
       & ~ .sc-cards__show {
-        .sc-cards__show--less {
-          display: block;
-        }
-        .sc-cards__show--more {
-          display: none;
-        }
+        display: none;
       }
       & ~ .sc-cards__list {
         .sc-card {
@@ -81,7 +73,7 @@ $breakpoint-XL: 1099;
   @include mqmin($breakpoint-M) {
     flex: 0 0 25%;
   }
-  @include mqmin($breakpoint-XL) {
+  @include mqmin($breakpoint-L) {
     flex: 0 0 20%;
   }
   &__link {
@@ -109,5 +101,6 @@ $breakpoint-XL: 1099;
   &__image {
     display: block;
     width: 100%;
+    height: auto;
   }
 }

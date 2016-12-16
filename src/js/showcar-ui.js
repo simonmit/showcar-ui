@@ -31,6 +31,7 @@ $(_ => {
     require('./components/collapse.js')();
     require('./components/scroll.js');
     require('./components/stepper.js');
+    require('./components/tooltip.js')();
 });
 
 // TODO: question for the guild
