@@ -157,6 +157,7 @@ $spy-height: 55px;
       #{$toggle}__text {
         visibility: visible;
         margin-right: $XXL;
+        cursor: pointer;
       }
     }
   }
