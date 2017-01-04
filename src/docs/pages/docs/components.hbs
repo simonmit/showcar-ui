@@ -15,6 +15,7 @@ sub-nav:
 - Tooltip
 - Notifications
 - Scrolling
+- Lightbox
 ---
 <div>
     <a name="components"></a>
@@ -1192,6 +1193,31 @@ notification.classList.toggle('show');
     <li><a href="#navigation" class="sc-smooth-scroll">Navigation</a></li>
     <li><a href="#custom-dropdown" class="sc-smooth-scroll">Custom Dropdown</a></li>
 </ul>
+        -->
+    </code></pre>
+
+    <a name="lightbox"></a>
+    <h3>Lightbox</h3>
+    <p>
+        An overlay that requires the user to interact with it and designed to elicit a response from the user.
+        In order to use it add the sc-lightbox class to any button or link
+    </p>
+    <div class="example">
+        <a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
+        <div class="sc-lightbox sc-grid-col-6 sc-hidden" id="lightbox-div-1">
+            <h5>The modal window title</h5>
+            <a href="">X</a>
+            <label>The input label</label>
+            <input type="text" class="sc-input" placeholder="share your thoughts with us">
+            <p class="desc-text sc-font-s">small text under</p>
+            <button class="sc-btn-bob sc-btn-block">Close</button>
+        </div>
+        <br>
+        <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-1">Or press me</button>
+    </div>
+    <pre><code class="html js-format-code">
+        <!--
+here goes the code
         -->
     </code></pre>
 

@@ -1,0 +1,49 @@
+@import "../variables";
+@import "../mixins/utils";
+
+.sc-lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: $form-border-radius;
+    padding: $L;
+    background-color: $white;
+    z-index:100;
+
+    @include mqmax($viewportM) {
+      width: 288px;
+    }
+}
+
+.sc-lightbox .desc-text {
+    margin-top: $XS;
+    margin-bottom: 11px;
+    text-align: right;
+    color: $black-60;
+}
+
+.sc-lightbox a {
+    right: 16px;
+    position: absolute;
+    display: inline;
+}
+
+.sc-lightbox h5 {
+    display: inline;
+}
+
+.sc-lightbox label {
+    display: block;
+}
+
+.sc-lightbox-overlay {
+    background-color: rgba(0,0,0,0.6);;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
