@@ -7,7 +7,8 @@
             const overlay = document.createElement('div');
             const closeIcon = overlay.querySelector('.sc-lightbox-close');
 
-            containerClone.className = "sc-lightbox sc-grid-col-6";
+            containerClone.className = containerClone.className
+            .replace( /(?:^|\s)sc-hidden(?!\S)/g , ' sc-lightbox sc-grid-col-6' );
             overlay.appendChild(containerClone);
             overlay.setAttribute('class', 'sc-lightbox-overlay sc-grid-row');
 
