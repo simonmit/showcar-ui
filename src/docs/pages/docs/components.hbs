@@ -1200,11 +1200,19 @@ notification.classList.toggle('show');
     <h3>Lightbox</h3>
     <p>
         An overlay that requires the user to interact with it and designed to elicit a response from the user.
-        In order to use it add the sc-lightbox class to any button or link
     </p>
+    <p>
+        In order to use it add following elements to your html:
+    </p>
+    <ul>
+        <li>1) link, button or any other clickable element which has 
+            <code>.sc-lightbox-trigger</code> class and <code>data-id</code> attribute, that points to the div to show (lightbox-div-1 in example)</li>
+        <li>2) div container for lightbox message with appropriate <code>id</code></li>
+        <li>3) div may contain closing icon. To close modal window by clicking on the icon add <code>.sc-lightbox-close</code> class to it</li>
+    </ul>
     <div class="example">
         <a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
-        <div class="sc-hidden" id="lightbox-div-1">
+        <div class="sc-hidden example-lightbox" id="lightbox-div-1">
             <h5>The modal window title</h5>
             <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
             <label>The input label</label>
@@ -1214,7 +1222,7 @@ notification.classList.toggle('show');
         </div>
         <br>
         <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-2">Or press me</button>
-        <div class="sc-hidden" id="lightbox-div-2">
+        <div class="sc-hidden example-lightbox" id="lightbox-div-2">
             <h5>The modal window title 2</h5>
             <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
             <label>Thats another sample</label>
@@ -1225,7 +1233,15 @@ notification.classList.toggle('show');
     </div>
     <pre><code class="html js-format-code">
         <!--
-here goes the code
+<a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
+<div class="sc-hidden" id="lightbox-div-1">
+    <h5>The modal window title</h5>
+    <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+    <label>The input label</label>
+    <input type="text" class="sc-input" placeholder="share your thoughts with us">
+    <p class="desc-text sc-font-s">small text under</p>
+    <button class="sc-btn-bob sc-btn-block">Button bob</button>
+</div>
         -->
     </code></pre>
 
