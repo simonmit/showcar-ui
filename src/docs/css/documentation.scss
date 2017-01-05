@@ -541,3 +541,33 @@ pre {
         padding: 10px;
     }
 }
+
+// lightbox samples
+.example-lightbox .desc-text {
+    margin-top: $XS;
+    margin-bottom: 11px;
+    text-align: right;
+    color: $black-60;
+}
+
+.example-lightbox h5 {
+    display: inline;
+    font-weight: 700;
+}
+
+.example-lightbox label {
+    margin-top: $L;
+    margin-bottom: $M; 
+    display: block;
+}
+
+.example-lightbox as24-icon.sc-lightbox-close {
+    position: absolute;
+    right: 16px;
+    width: 16px;
+    fill: $color-link;
+
+    &:hover {
+      fill: $blue-90;
+    }
+}
