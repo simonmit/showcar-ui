@@ -1204,16 +1204,24 @@ notification.classList.toggle('show');
     </p>
     <div class="example">
         <a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
-        <div class="sc-lightbox sc-grid-col-6 sc-hidden" id="lightbox-div-1">
+        <div class="sc-hidden" id="lightbox-div-1">
             <h5>The modal window title</h5>
-            <a href="">X</a>
+            <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
             <label>The input label</label>
             <input type="text" class="sc-input" placeholder="share your thoughts with us">
             <p class="desc-text sc-font-s">small text under</p>
-            <button class="sc-btn-bob sc-btn-block">Close</button>
+            <button class="sc-btn-bob sc-btn-block">Button bob</button>
         </div>
         <br>
-        <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-1">Or press me</button>
+        <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-2">Or press me</button>
+        <div class="sc-hidden" id="lightbox-div-2">
+            <h5>The modal window title 2</h5>
+            <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+            <label>Thats another sample</label>
+            <input type="text" class="sc-input" placeholder="share your thoughts with us">
+            <p class="desc-text sc-font-s">small text under</p>
+            <button class="sc-btn-bob sc-btn-block">Button bob</button>
+        </div>
     </div>
     <pre><code class="html js-format-code">
         <!--

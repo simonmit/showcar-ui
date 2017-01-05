@@ -10,9 +10,8 @@
     border-radius: $form-border-radius;
     padding: $L;
     background-color: $white;
-    z-index:100;
 
-    @include mqmax($viewportM) {
+    @include mqmax($viewportM - 1) {
       width: 288px;
     }
 }
@@ -24,26 +23,40 @@
     color: $black-60;
 }
 
-.sc-lightbox a {
-    right: 16px;
-    position: absolute;
-    display: inline;
-}
-
 .sc-lightbox h5 {
     display: inline;
+    font-weight: 700;
 }
 
 .sc-lightbox label {
+    margin-top: $L;
+    margin-bottom: $M; 
     display: block;
 }
 
+.sc-lightbox-scroll {
+    @include mqmin($viewportM) {
+        overflow-y: hidden;
+    }
+}
+
 .sc-lightbox-overlay {
-    background-color: rgba(0,0,0,0.6);;
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 10;
+    z-index: 5; // more than navigation bar
+}
+
+as24-icon.sc-lightbox-close {
+    width: 16px;
+    fill: $color-link;
+    right: 16px;
+    position: absolute;
+}
+
+as24-icon.sc-lightbox-close:hover{
+    fill: $blue-90;
 }
