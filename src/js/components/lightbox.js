@@ -5,25 +5,26 @@
             const container = document.getElementById(dataId);
             const containerClone = container.cloneNode(true);
             const overlay = document.createElement('div');
-            const closeIcon = overlay.querySelector('.sc-lightbox-close');
 
             containerClone.className = containerClone.className
             .replace( /(?:^|\s)sc-hidden(?!\S)/g , ' sc-lightbox sc-grid-col-6' );
             overlay.appendChild(containerClone);
             overlay.setAttribute('class', 'sc-lightbox-overlay sc-grid-row');
 
+            const closeIcon = overlay.querySelector('.sc-lightbox-close');
+
             // Events
+            if (closeIcon) {
+                closeIcon.addEventListener('click', function(e) {
+                    clean(overlay);
+                });
+            }
             document.addEventListener('keydown', removeLightbox);
             overlay.addEventListener('click', function(e) {
                 if (!$(e.target).closest(containerClone).length) {
                     clean(overlay);
                 }
             });
-            if (closeIcon) {
-                closeIcon.addEventListener('click', function(e) {
-                    clean(overlay);
-                });
-            }
 
             document.body.appendChild(overlay);
             document.documentElement.setAttribute('class', 'sc-lightbox-scroll');
@@ -32,13 +33,11 @@
         function removeLightbox(e) {
             const overlay = document.querySelector('.sc-lightbox-overlay');
             if ( e.keyCode == 27 && overlay) {
-                document.body.removeChild(overlay);
-                document.removeEventListener('keydown', removeLightbox);
-                document.documentElement.className = '';
+                clean(overlay);
             }
         }
 
-        function clean(overlay) {
+        const clean = overlay => {
             document.body.removeChild(overlay);
             document.removeEventListener('keydown', removeLightbox);
             document.documentElement.className = '';
