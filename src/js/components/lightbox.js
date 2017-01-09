@@ -11,14 +11,13 @@
             overlay.appendChild(containerClone);
             overlay.setAttribute('class', 'sc-lightbox-overlay sc-grid-row');
 
-            const closeIcon = overlay.querySelector('.sc-lightbox-close');
-
+            const closeElements = overlay.querySelectorAll('.sc-lightbox-close');
             // Events
-            if (closeIcon) {
-                closeIcon.addEventListener('click', e => {
+            Array.prototype.forEach.call(closeElements, (closeEl) => {
+                closeEl.addEventListener('click', e => {
                     clean(overlay);
-                });
-            }
+                })
+            });
             overlay.addEventListener('click', e => {
                 if (!$(e.target).closest(containerClone).length) {
                     clean(overlay);

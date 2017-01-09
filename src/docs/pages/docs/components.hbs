@@ -1208,7 +1208,7 @@ notification.classList.toggle('show');
         <li>1) link, button or any other clickable element which has 
             <code>.sc-lightbox-trigger</code> class and <code>data-id</code> attribute, that points to the div to show (lightbox-div-1 in example)</li>
         <li>2) div container for lightbox message with appropriate <code>id</code></li>
-        <li>3) div may contain closing icon. To close modal window by clicking on the icon add <code>.sc-lightbox-close</code> class to it</li>
+        <li>3) div may contain closing elements. To close modal window by clicking on the element add <code>.sc-lightbox-close</code> class to it</li>
     </ul>
     <div class="example">
         <a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
@@ -1218,7 +1218,7 @@ notification.classList.toggle('show');
             <label>The input label</label>
             <input type="text" class="sc-input" placeholder="share your thoughts with us">
             <p class="desc-text sc-font-s">small text under</p>
-            <button class="sc-btn-bob sc-btn-block">Button bob</button>
+            <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
         </div>
         <br>
         <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-2">Or press me</button>
@@ -1240,7 +1240,7 @@ notification.classList.toggle('show');
     <label>The input label</label>
     <input type="text" class="sc-input" placeholder="share your thoughts with us">
     <p class="desc-text sc-font-s">small text under</p>
-    <button class="sc-btn-bob sc-btn-block">Button bob</button>
+    <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
 </div>
         -->
     </code></pre>
