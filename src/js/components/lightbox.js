@@ -15,16 +15,16 @@
 
             // Events
             if (closeIcon) {
-                closeIcon.addEventListener('click', function(e) {
+                closeIcon.addEventListener('click', e => {
                     clean(overlay);
                 });
             }
-            document.addEventListener('keydown', removeLightbox);
-            overlay.addEventListener('click', function(e) {
+            overlay.addEventListener('click', e => {
                 if (!$(e.target).closest(containerClone).length) {
                     clean(overlay);
                 }
             });
+            document.addEventListener('keydown', removeLightbox);
 
             document.body.appendChild(overlay);
             document.documentElement.setAttribute('class', 'sc-lightbox-scroll');
