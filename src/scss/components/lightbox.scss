@@ -10,6 +10,10 @@
     padding: $L;
     background-color: $white;
 
+    @include mqmin($viewportM) {
+      @include span(6);
+    }
+
     @include mqmax($viewportM - 1) {
       width: 288px;
     }
