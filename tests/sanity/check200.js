@@ -7,7 +7,7 @@ module.exports = (url, selectors) => {
             }
 
             if (res.statusCode !== 200) {
-                return done(new Error('Status Code: ' + code));
+                return done(new Error(url + ', Status Code: ' + res.statusCode));
             }
 
             return done();
