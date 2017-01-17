@@ -1,4 +1,16 @@
 
+1.12.2 / 2017-01-17
+==================
+
+  * increased z-index for tooltip
+  * changed tooltip arrow
+  * fixed 200 test
+  * log test
+  * build documentation in develop (temp)
+  * changed link to css for header example
+  * added cursor pointer for toggle text
+  * migrated backstopjs to version 2.x
+
 1.12.1 / 2016-12-16
 ==================
 

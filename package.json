@@ -1,6 +1,6 @@
 {
   "name": "showcar-ui",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "description": "",
   "directories": {
     "doc": "docs",
@@ -14,9 +14,9 @@
     "grunt": "grunt",
     "test-sanity": "mocha tests/index.js -t 120000",
     "test-css-cleanup": "rm -rf ./backstop_data/bitmaps_test",
-    "test-css": "npm run test-css-cleanup && cd ./node_modules/backstopjs && npm run test -- --configPath=../../css_regression_test_config.json && cd ../..",
-    "test-css-assemble": "node ./tests/css/assemble.js ../config/css_regression ../config/css_regression_core_config.json ./css_regression_test_config.json",
-    "test-css-reference": "npm run test-css-assemble && cd ./node_modules/backstopjs && npm run reference -- --configPath=../../css_regression_test_config.json && cd ../.."
+    "test-css": "npm run test-css-cleanup && backstop test",
+    "test-css-assemble": "node ./tests/css/assemble.js ../config/css_regression ../config/css_regression_core_config.json ./backstop.json",
+    "test-css-reference": "npm run test-css-assemble && backstop reference"
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",
