@@ -40,7 +40,7 @@ pages:
       - public
   only:
     - master
-    - develop
+    # - develop
 
 notification:
   stage: all
