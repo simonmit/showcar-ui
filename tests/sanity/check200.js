@@ -1,3 +1,4 @@
+// removed from build step
 module.exports = (url, selectors) => {
     const request = require('request');
     return done => {
