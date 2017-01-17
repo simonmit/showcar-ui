@@ -1,51 +1,48 @@
-/**
- * Adapted from:
- * Responsive Tooltip for Zepto - CodePen - by David Kerns
- * codepen.io/kerns/pen/ydBqk
-**/
-
-.tooltip {
-  max-width: 220px;
-  background-color: $black-120;
-  border-color: $black-120;
-  color: white;
-  opacity: 0.75;
-  padding: 6px 8px;
-  position:absolute;
-  z-index: 2;
-  border-radius: 4px;
+as24-tooltip.sc-tooltip{
+	.sc-tooltip-content{
+		//display: none;
+		opacity: 0;
+		transition: opacity .4s;
+		max-width: 220px;
+		background-color: $black-120;
+		border-color: $black-120;
+		color: white;
+		
+		padding: 6px 8px;
+		position: absolute;
+		z-index: 2;
+		border-radius: 4px;
+		&.tooltip-shown{
+			opacity: 0.75;
+		}
+	}
 }
-
-.tooltip-arrow {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-top-color: inherit;
-  position:absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6px;
+.tooltip-arrow{
+	display: block;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top-color: inherit;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
 }
-
-.tooltip-bottom .tooltip-arrow {
-  border-bottom-color: inherit;
-  border-top-color: transparent;
-  top: auto;
-  bottom: 100%;
+.tooltip-bottom .tooltip-arrow{
+	border-bottom-color: inherit;
+	border-top-color: transparent;
+	top: auto;
+	bottom: 100%;
 }
-
-.tooltip-right .tooltip-arrow {
-  left: 10px;
-  margin: 0;
+.tooltip-right .tooltip-arrow{
+	left: 10px;
+	margin: 0;
 }
-
-.tooltip-left .tooltip-arrow {
-  right: 10px;
-  left: auto;
-  margin: 0;
+.tooltip-left .tooltip-arrow{
+	right: 10px;
+	left: auto;
+	margin: 0;
 }
-
-.tooltip-hidden {
-  display: none;
+.tooltip-hidden{
+	display: none;
 }
