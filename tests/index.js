@@ -6,7 +6,6 @@ const argv = require('yargs').argv;
 
 const getPageConfig = require('./config/page-config');
 
-const check200 = require('./sanity/check200');
 const checkForJsErrors = require('./sanity/checkForJsErrors');
 
 const pageids = ['home', 'list', 'detail'];
@@ -25,7 +24,6 @@ parallel('Checking pages', function() {
             } else if (process.env.CI_BUILD_REF_NAME === 'master'){
                 url = `${url}?sc_master_ver=${process.env.CI_BUILD_REF}`;
             }
-            it(`URL must return 200 OK (${locale}; ${pageid})`, check200(url));
             it(`There must not be any JS error on the page (${locale}; ${pageid})`, checkForJsErrors(url));
         });
     });
