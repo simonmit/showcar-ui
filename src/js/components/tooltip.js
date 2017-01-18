@@ -1,81 +1,83 @@
-class Tooltip extends HTMLElement {
-    show() {
-        clearTimeout(this.timeoutID);
-        this.content.classList.add('tooltip-shown');
-        this.setPosition();
-    }
-
-    hide() {
-        this.timeoutID = window.setTimeout(() => {
-            this.content.classList.remove('tooltip-shown')
-        }, 300);
-    }
-
-    setPosition() {
-        const distance = { vertical: 6, horizontal: 8 };
-        const contentDim = {
-            width: this.content.offsetWidth,
-            height: this.content.offsetHeight,
-        }
-        const wrapperDim = {
-            top: this.offsetTop,
-            left: this.offsetLeft,
-            width: this.offsetWidth,
-            height: this.offsetHeight,
-        }
-
-        let top = wrapperDim.top - contentDim.height - distance.vertical;
-        let left = wrapperDim.left - (contentDim.width / 2) + (wrapperDim.width / 2);
-
-        const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-
-        if (top - scrollPosition <= 0) {
-            top = wrapperDim.top + wrapperDim.height + distance.vertical;
-            this.content.classList.remove('tooltip-top');
-            this.content.classList.add('tooltip-bottom');
-        } else {
-            this.content.classList.remove('tooltip-bottom');
-            this.content.classList.add('tooltip-top');
-        }
-
-        this.content.classList.remove('tooltip-right', 'tooltip-left');
-
-        if (left + contentDim.width > window.innerWidth) {
-            left = wrapperDim.left - contentDim.width + wrapperDim.width + distance.horizontal;
-            this.content.classList.remove('tooltip-right');
-            this.content.classList.add('tooltip-left');
-        } else if (left <= 0) {
-            left = wrapperDim.left - distance.horizontal;
-            this.content.classList.remove('tooltip-left');
-            this.content.classList.add('tooltip-right');
-        }
-
-        this.content.style.top = top + 'px';
-        this.content.style.left = left + 'px';
-    }
-
-    attachedCallback() {
-        this.content = this.querySelector('.sc-tooltip-content');
-        this.arrow = document.createElement('span');
-        this.arrow.classList.add('tooltip-arrow');
-        this.content.appendChild(this.arrow);
-
-        this.onmouseover = this.show;
-        this.onmousedown = this.show;
-        this.ontouchstart = this.show;
-        this.onclick = this.show;
-        document.ontouchstart = ()=> {this.hide() };
-        this.onmouseleave = this.hide;
-    }
-}
-
-export default function registerDS() {
-    try {
-        return document.registerElement('as24-tooltip', Tooltip);
-    } catch (e) {
-        return null;
-    }
-}
 module.exports = () => {
-    registerDS();
-}
+    const $target = $('as24-icon[title]');
+    if (!$target.length) return;
+    const $tooltip = $('<div class="sc-font-s tooltip tooltip-top tooltip-hidden"></div>');
+    $tooltip.appendTo($(document.body));
+
+    var allTooltipClasses = 'tooltip-top tooltip-r tooltip-b tooltip-l tooltip-hidden';
+
+    var hideTooltip = function() {
+        $tooltip.addClass('tooltip-hidden');
+    };
+
+    let timer = null;
+
+    $target.on("mousedown mouseover", function() {
+        const $this = $(this);
+        if (!$this.data('title')) return;
+
+        if (!$tooltip.hasClass('tooltip-hidden')) {
+            hideTooltip();
+            return;
+        }
+
+        timer = setTimeout(function() {
+
+            $tooltip.removeAttr('style')
+                .html($this.data('title') + '<span class="tooltip-arrow"></span>')
+                .removeClass(allTooltipClasses);
+
+            const distance = { vertical: 6, horizontal: 8 };
+
+            const width = $tooltip.width();
+            const height = $tooltip.height();
+            const pos = $this.offset();
+            let top = pos.top - height - distance.vertical;
+            let left = pos.left - (width / 2) + ($this.width() / 2);
+
+            const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+            if (top - scrollPosition <= 0) {
+                top = pos.top + $this.height() + distance.vertical;
+                $tooltip.removeClass('tooltip-top').addClass('tooltip-bottom');
+            } else {
+                $tooltip.removeClass('tooltip-bottom').addClass('tooltip-top');
+            }
+
+            $tooltip.removeClass('tooltip-right tooltip-left');
+
+            if (left + width > $(window).width()) {
+                left = pos.left - width + $this.width() + distance.horizontal;
+                $tooltip.removeClass('tooltip-right').addClass('tooltip-left');
+            } else if (left <= 0) {
+                left = pos.left - distance.horizontal;
+                $tooltip.removeClass('tooltip-left').addClass('tooltip-right');
+            }
+
+            $tooltip.css({ top: top, left: left });
+
+        }, 300);
+
+    });
+
+    $target.on("mouseleave", function() {
+        clearTimeout(timer);
+        timer = setTimeout(hideTooltip, 300);
+    }).data('title', function() {
+        return this.title ? this.title : false;
+    }).removeAttr('title');
+
+    $tooltip.on("mouseenter", function() {
+        clearTimeout(timer);
+    });
+
+    $tooltip.on("mouseleave", function() {
+        clearTimeout(timer);
+        timer = setTimeout(hideTooltip, 300);
+    });
+
+    $(window).on("resize", function() {
+        clearTimeout(timer);
+        hideTooltip();
+    });
+};
