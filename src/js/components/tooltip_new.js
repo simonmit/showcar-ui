@@ -1,7 +1,7 @@
 class Tooltip extends HTMLElement {
     show() {
         clearTimeout(this.timeoutID);
-        if(this.shown === true) return;
+        if (this.shown === true) return;
         this.content.classList.add('tooltip-shown');
         this.setPosition();
     }
@@ -9,7 +9,9 @@ class Tooltip extends HTMLElement {
     hide() {
         this.timeoutID = window.setTimeout(() => {
             this.shown = false;
-            this.content.classList.remove('tooltip-shown')
+            this.content.classList.remove('tooltip-shown');
+            this.content.style.top = 0 + 'px';
+            this.content.style.left = 0 + 'px';
         }, 300);
     }
 
@@ -58,18 +60,18 @@ class Tooltip extends HTMLElement {
     }
 
     attachedCallback() {
-        this.shown = true;
+        this.shown = false;
         this.content = this.querySelector('.sc-tooltip-content');
         this.arrow = document.createElement('span');
         this.arrow.classList.add('tooltip-arrow');
         this.content.appendChild(this.arrow);
 
-        this.onmouseover = this.show;
-        this.onmousedown = this.show;
-        this.ontouchstart = this.show;
-        this.onclick = this.show;
-        document.ontouchstart = ()=> {this.hide() };
-        this.onmouseleave = this.hide;
+        this.addEventListener('mouseover', this.show, false)
+        this.addEventListener('mousedown', this.show, false)
+        this.addEventListener('touchstart', this.show, false)
+        this.addEventListener('click', this.show, false)
+        this.addEventListener('mouseleave', this.hide, false)
+        document.addEventListener('touchstart', () => this.hide(), false)
     }
 }
 
