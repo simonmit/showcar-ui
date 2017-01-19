@@ -1,6 +1,5 @@
 @import "../variables";
 @import "../mixins/utils";
-
 .sc-lightbox {
     position: fixed;
     top: 50%;
@@ -9,14 +8,28 @@
     border-radius: $form-border-radius;
     padding: $L;
     background-color: $white;
-
     @include mqmin($viewportM) {
-      @include span(6);
+        @include span(6);
+    }
+    @include mqmax($viewportM - 1) {
+        width: 288px;
     }
 
-    @include mqmax($viewportM - 1) {
-      width: 288px;
+    z-index: 999;
+
+    /*
+    &::before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 998;
+        background-color: rgba(0, 0, 0, 0.6);
     }
+    */
 }
 
 .sc-lightbox-scroll {

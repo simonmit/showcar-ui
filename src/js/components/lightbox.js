@@ -1,61 +1,42 @@
-(function() {
-    Array.prototype.forEach.call(document.querySelectorAll('.sc-lightbox-trigger'), (lightboxTrigger) => {
-        let subscription;
-        function show() {
-            const dataId = lightboxTrigger.getAttribute('data-id');
-            const container = document.getElementById(dataId);
-            const containerClone = container.cloneNode(true);
-            const overlay = document.createElement('div');
+document.addEventListener('click', e => {
+    const openTrigger = e.target.closest('.sc-lightbox-trigger');
+    const closeTrigger = e.target.closest('.sc-lightbox-close, .sc-lightbox-overlay');
 
-            containerClone.className = containerClone.className
-            .replace( /(?:^|\s)sc-hidden(?!\S)/g , ' sc-lightbox' );
-            overlay.appendChild(containerClone);
-            overlay.setAttribute('class', 'sc-lightbox-overlay sc-grid-row');
+    if (!openTrigger && !closeTrigger) { return; }
 
-            const closeElements = overlay.querySelectorAll('.sc-lightbox-close');
-            // Events
-            subscription = subscribe(document, removeLightbox(overlay));
-            Array.prototype.forEach.call(closeElements, (closeEl) => {
-                closeEl.addEventListener('click', e => {
-                    clean(overlay);
-                    subscription.dispose();
-                })
-            });
-            overlay.addEventListener('click', e => {
-                if (!$(e.target).closest(containerClone).length) {
-                    clean(overlay);
-                    subscription.dispose();
-                }
-            });
+    if (openTrigger) {
+        show(openTrigger);
+    } else {
+        hide();
+    }
+});
 
-            document.body.appendChild(overlay);
-            document.documentElement.setAttribute('class', 'sc-lightbox-scroll');
-        }
+document.addEventListener('keydown', e => {
+    if (e.keyCode == 27) {
+        hide();
+    }
+});
 
-        const removeLightbox = (overlay) => {
-            return function(e) {
-                if ( e.keyCode == 27 ) {
-                    clean(overlay);
-                }
-                if (subscription) {
-                    subscription.dispose();
-                }
-            }
-        }
+const show = (lightboxTrigger) => {
+    const dataId = lightboxTrigger.getAttribute('data-id');
+    const container = document.getElementById(dataId);
 
-        const subscribe = (elem, handler) => {
-            elem.addEventListener('keydown', handler);
-            return {
-                dispose: () => elem.removeEventListener('keydown', handler)
-            }
-        }
+    const overlay = document.createElement('div');
+    overlay.className = 'sc-lightbox-overlay';
 
-        const clean = overlay => {
-            document.body.removeChild(overlay);
-            subscription.dispose();
-            document.documentElement.className = '';
-        }
+    document.body.appendChild(overlay);
 
-        lightboxTrigger.addEventListener('click', show);
+    container.classList.add('sc-lightbox');
+    container.classList.remove('sc-hidden');
+};
+
+const hide = () => {
+    [...document.querySelectorAll('.sc-lightbox-overlay')].forEach(el => {
+        el.remove();
     });
-}());
+
+    [...document.querySelectorAll('.sc-lightbox')].forEach(el => {
+        el.classList.remove('sc-lightbox');
+        el.classList.add('sc-hidden');
+    });
+};
