@@ -8,14 +8,17 @@
     border-radius: $form-border-radius;
     padding: $L;
     background-color: $white;
-    @include mqmin($viewportM) {
+    @include mqmin($viewportXL) {
+        width: 550px;
+    }
+    @include mqminmax($viewportM, $viewportXL - 1) {
         @include span(6);
     }
     @include mqmax($viewportM - 1) {
-        width: 288px;
+         width: 288px;
     }
 
-    z-index: 999;
+    z-index: 6;
 
     /*
     &::before {
