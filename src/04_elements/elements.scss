@@ -1,0 +1,41 @@
+as24-icon {
+  display: inline-block;
+  width: auto;
+  height: 16px;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+button,
+input[type=submit] {
+  font-family: inherit; //Source Sans Pro, sans-serif;
+  cursor: pointer;
+  line-height: 1.5;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+//@import "mixins/links";
+//
+//a,
+//.sc-link {
+//  @include link;
+//}
+//
+//.sc-inline-link {
+//  @include link($variant: black);
+//}

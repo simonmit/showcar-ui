@@ -1,13 +1,17 @@
-@import "mixins/ad";
+@import "../01_settings/variables";
+@import "../02_tools/utils";
 
-// viewports
-// ----------------------------
-//$viewportXS: 0; // 0 - 320
-//$viewportS: 321px; // 321 - 767
-//$viewportM: 768px; // 768 - 1023
-//$viewportL: 1024px; // 1024 - 1099
-//$viewportXL: 1100px; // 1100 - 1269
-//$viewportXXL: 1270px; // 1270 - ∞
+@mixin sc-skyscraper {
+  min-height: 600px;
+  line-height: 0;
+  width: 160px;
+  display: block;
+  position: absolute;
+  z-index: 990;
+  top: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
 .has-ad-skyscraper-right {
   // 1270 - 1440
@@ -27,7 +31,12 @@
 
   // show superbanner at 728px
   @include mqmin($viewportM - 40) {
-    @include sc-topbanner();
+    width: 1120px;
+    line-height: 0;
+    text-align: right;
+    position: relative;
+    left: -10px;
+    display: block;
   }
 }
 

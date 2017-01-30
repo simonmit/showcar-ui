@@ -1,6 +1,6 @@
 @import "npm:susy";
-@import "mixins/utils";
-@import "variables";
+@import "../01_settings/variables";
+@import "../02_tools/utils";
 
 .sc-content-container {
   @include container;

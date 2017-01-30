@@ -1,4 +1,4 @@
-@import "../utils";
+@import "../../01_settings/variables";
 
 @mixin arrow($direction) {
   content: '';
@@ -20,17 +20,20 @@
   }
 }
 
-@mixin breadcrumb() {
+.sc-breadcrumbs {
   font-size: 0; //avoid spacing between inline-block li elements
   padding-left: $L;
+  margin-top: 10px; //give all breadcrumbs a common top margin within all pages
 
   li {
     display: none;
     margin-top: 10px;
 
+    //TODO: remove
     @include font(M);
 
     a {
+      //TODO: remove (element styling)
       @include link(M);
       display: inline-block;
 

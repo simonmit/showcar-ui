@@ -1,9 +1,16 @@
 @import "variables";
 @import "mixins/utils";
-@import "mixins/ellipsis";
 
 .sc-clearfix {
-  @include clearfix;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .sc-pull-right {
@@ -15,23 +22,23 @@
 }
 
 .sc-text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .sc-text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .sc-text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .sc-text-justify {
-  text-align: justify;
+  text-align: justify !important;
 }
 
 .sc-text-nowrap {
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 .sc-block-center {
@@ -47,23 +54,26 @@
 }
 
 .sc-ellipsis {
-  @include ellipsis();
+  -moz-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .sc-block {
-  display: block;
+  display: block !important;
 }
 
 .sc-hidden {
-  display: none;
+  display: none !important;
 }
 
 .sc-visible {
-  display: initial;
+  display: initial !important;
 }
 
 .sc-overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 //xl viewport
@@ -123,6 +133,7 @@
   }
 }
 
+//TODO: move to layout
 .sc-section {
   border-bottom: 1px solid $black-30;
   background-color: $white;

@@ -1,0 +1,76 @@
+@import "fonts";
+
+.sc-color-selector {
+  input[type="radio"],
+  input[type="checkbox"] {
+    &.sc-input,
+    &.sc-input-m,
+    &.sc-input-l {
+      $size: 17px;
+
+      & + label {
+        @include font(M);
+        line-height: 32px;
+        padding-left: 40px;
+        padding-right: 8px;
+        margin: $M 0;
+
+        &::before {
+          border: none;
+          width: 26px;
+          height: 26px;
+          top: 3px;
+          left: 3px;
+        }
+        &::after {
+          border: 1px solid #939393;
+          content: '';
+          display: block;
+          background-size: cover;
+          position: absolute;
+
+          width: 32px;
+          height: 32px;
+          top: 0;
+          left: 0;
+          border-radius: $size + $M;
+        }
+      }
+
+      &:disabled + label {
+        cursor: not-allowed;
+        color: $black-40;
+
+        &::after {
+          opacity: 0.45;
+        }
+      }
+
+      &:enabled + label:hover::after {
+        border-color: $black-100;
+      }
+
+      &:focus:enabled + label::after {
+        border-color: $blue-80;
+      }
+
+      &:checked + label::before {
+        text-align: center;
+        padding-top: 1px;
+        line-height: $size + $XS;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    &.sc-input {
+      & + label {
+        &::before,
+        &::after {
+          border-radius: $form-border-radius !important; //TODO: get rid of important
+        }
+      }
+    }
+  }
+}

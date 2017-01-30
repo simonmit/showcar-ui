@@ -1,17 +1,4 @@
-@mixin avoid-selection() {
-    user-select: none;
-}
-
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
+//TODO: replace with sass-mq
 
 @mixin mqmin($min, $media: all) {
     @media #{$media} and (min-width: $min + 0px) {
