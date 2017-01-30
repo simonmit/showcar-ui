@@ -1,4 +1,49 @@
-@import "mixins/notification";
+@import "../../../01-settings/variables";
+
+$types: (
+  'success': (
+    color: $color-success,
+    color-hover: $color-success-hover,
+    background-position-y: $M,
+    background-color: $color-success-message,
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Cpath%20fill%3D%22%23196600%22%20d%3D%22M8.3%2039.5l13.2-13.3-1.6-1.7L8.3%2036.2l-5.2-5.3-1.6%201.7z%22%2F%3E%3C%2Fsvg%3E')
+  ),
+  'information': (
+    color: $color-info,
+    color-hover: $color-info-hover,
+    background-position-y: $L,
+    background-color: $color-info-message,
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2239%22%20r%3D%222.5%22%20fill%3D%22%23853900%22%2F%3E%3Cpath%20fill%3D%22%23853900%22%20d%3D%22M13.5%2033.5h-3l-1-11%201-1h2.9l1.1%201.1z%22%2F%3E%3C%2Fsvg%3E'),
+  ),
+  'error': (
+    color: $color-error,
+    color-hover: $color-error-hover,
+    background-position-y: $L,
+    background-color: $color-error-message,
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%221.5%2021.5%2020%2020%22%20enable-background%3D%22new%201.5%2021.5%2020%2020%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2239%22%20r%3D%222.5%22%20fill%3D%22%23B80000%22%2F%3E%3Cpath%20fill%3D%22%23B80000%22%20d%3D%22M13.5%2033.5h-3l-1-11%201-1h2.9l1.1%201.1z%22%2F%3E%3C%2Fsvg%3E'),
+  ),
+  'tip': (
+    color: $color-tip,
+    color-hover: $color-tip-hover,
+    background-position-y: $L,
+    background-color: $color-tip-message,
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.4%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Ebene_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2220px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2020%2020%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpolygon%20style%3D%22fill%3A%23264c83%3B%22%20points%3D%227%2C16%207%2C17.2%208%2C19%209.3%2C20%2010.7%2C20%2012%2C19%2013%2C17.2%2013%2C16%2012%2C15%208%2C15%20%22/%3E%0D%0A%3Cpath%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23264c83%3B%22%20d%3D%22M8.6%2C12h2.9l0.1-0.1c0.1-1.2%2C0.8-2.2%2C1.7-3.6l0.3-0.5C13.8%2C7.3%2C14%2C6.7%2C14%2C6%0D%0A%09c0-2.2-1.8-4-4-4S6%2C3.8%2C6%2C6c0%2C0.7%2C0.2%2C1.4%2C0.5%2C2l0.4%2C0.5C7.8%2C9.8%2C8.4%2C10.7%2C8.6%2C12L8.6%2C12z%20M11.9%2C14H8.1c-0.3%2C0-0.6-0.1-0.8-0.3%0D%0A%09L6.7%2C13c-0.2-0.2-0.2-0.4-0.2-0.7c0-0.7-0.4-1.3-1.3-2.7L4.8%2C9C4.3%2C8.1%2C4%2C7.1%2C4%2C6c0-3.3%2C2.7-6%2C6-6s6%2C2.7%2C6%2C6c0%2C1-0.2%2C2-0.7%2C2.9%0D%0A%09l-0.4%2C0.5c-1%2C1.5-1.4%2C2.1-1.4%2C2.9c0%2C0.2-0.1%2C0.5-0.2%2C0.7l-0.6%2C0.7C12.5%2C13.9%2C12.2%2C14%2C11.9%2C14z%22/%3E%0D%0A%3C/svg%3E%0D%0A'),
+  )
+);
+
+@mixin notification($type) {
+  color: map-get($type, color);
+  border-bottom: 1px solid map-get($type, color);
+  background-color: map-get($type, background-color);
+}
+
+@mixin notification-icon($type) {
+  background-image: map-get($type, background-image);
+  background-repeat: no-repeat;
+  background-position: $L map-get($type, background-position-y);
+}
+
+
 
 as24-notification {
   display: block;
@@ -10,7 +55,7 @@ as24-notification {
   transition: max-height 0.5s ease-out;
 
   &.prefade {
-    transition-duration: 0;
+    transition-duration: 0s;
   }
 
   &.show {

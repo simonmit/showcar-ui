@@ -1,8 +1,6 @@
-@import "../utils";
-@import "../mixins/fonts";
-@import "../mixins/rotating-arrow";
-@import "../variables";
-
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
+@import "../../../06-components/atoms/rotating-arrow/rotating-arrow";
 
 .sc-expandable-box {
   @include clearfix();
@@ -58,9 +56,6 @@
     &:after {
       @include rotating-arrow('down');
     }
-  }
-
-  &__title {
   }
 
   &__content {

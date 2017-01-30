@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins/inputs";
+@import "../../../01-settings/variables";
+@import "../input/input";
 
 .sc-stepper {
   display: flex;

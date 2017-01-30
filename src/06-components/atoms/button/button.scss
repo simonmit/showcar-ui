@@ -1,13 +1,14 @@
-@import "../../01_settings/variables";
+@import "../../../01-settings/variables";
+@import "../../../03-generic/fonts";
 
 @mixin button {
   user-select: none;
-  //@include font(M, $bold: true, $silent: false, $line-height: 1.3);
+  @include font(M, $bold: true, $silent: false, $line-height: 1.3);
 
   display: inline-block;
   padding: 10px;
 
-  -webkit-appearance: none;
+  appearance: none;
   border: none;
   border-radius: $form-border-radius;
   color: $white;

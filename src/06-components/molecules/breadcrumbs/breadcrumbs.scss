@@ -1,4 +1,6 @@
-@import "../../01_settings/variables";
+@import "../../../01-settings/variables";
+@import "../../../03-generic/fonts";
+@import "../../../06-components/atoms/link/link";
 
 @mixin arrow($direction) {
   content: '';

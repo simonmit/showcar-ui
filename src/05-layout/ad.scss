@@ -1,5 +1,5 @@
-@import "../01_settings/variables";
-@import "../02_tools/utils";
+@import "../01-settings/variables";
+@import "../02-sass-tools/sass-mq";
 
 @mixin sc-skyscraper {
   min-height: 600px;

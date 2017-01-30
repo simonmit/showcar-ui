@@ -1,5 +1,7 @@
-@import "../variables";
-@import "../mixins/utils";
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
+@import "../../../05-layout/grid";
+
 .sc-lightbox {
     position: fixed;
     top: 50%;
@@ -17,22 +19,7 @@
     @include mqmax($viewportM - 1) {
          width: 288px;
     }
-
     z-index: 6;
-
-    /*
-    &::before {
-        content: '';
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 998;
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-    */
 }
 
 .sc-lightbox-scroll {

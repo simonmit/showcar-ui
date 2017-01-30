@@ -1,7 +1,7 @@
-@import "../../scss/utils";
-@import "../variables";
-@import "../links";
-@import "../mixins/rotating-arrow";
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
+@import "../../../06-components/atoms/link/link";
+@import "../../../06-components/atoms/rotating-arrow/rotating-arrow";
 
 $spy-height: 55px;
 
