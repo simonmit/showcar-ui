@@ -36,6 +36,14 @@ module.exports = function(grunt, options) {
                 uglify()
             ]
         },
+        tracking: {
+            entry: './src/js/showcar-tracking.js',
+            output: { filename: 'dist/showcar-tracking.js' },
+            plugins: [
+                new webpack.optimize.OccurenceOrderPlugin(),
+                uglify()
+            ]
+        },
         docs: {
             output: { filename: 'docs/lib/showcar-ui.js' },
             plugins: [new webpack.optimize.OccurenceOrderPlugin()]

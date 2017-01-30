@@ -9,12 +9,6 @@ window.Pager = require('./components/pager.js');
 window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac: 0 };
 require('lazysizes');
 
-const ctor = document.createElement('as24-tracking').constructor;
-
-if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
-    require('showcar-tracking');
-}
-
 var showcar = {};
 
 showcar.spyNavigation = require('./components/spy-navigation.js');
