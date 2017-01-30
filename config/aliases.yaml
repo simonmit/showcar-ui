@@ -10,6 +10,7 @@ build:
     - 'pleeease:dist'
     - 'webpack:dist'
     - 'webpack:icons'
+    - 'webpack:tracking'
     # - 'generate-polyfills'
     - 'replace:fragment'
 
