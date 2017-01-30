@@ -18,7 +18,7 @@
          width: 288px;
     }
 
-    z-index: 140; // overlay header
+    z-index: 6;
 
     /*
     &::before {
@@ -48,5 +48,5 @@
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 139; // by 1 less than modal window
+    z-index: 5; // more than navigation bar
 }
