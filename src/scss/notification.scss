@@ -4,7 +4,6 @@ as24-notification {
   display: block;
   overflow: hidden;
   width: 100%;
-  z-index: 8000; /* TODO: Do we need this z-index? */
   position: relative;
   max-height: 0;
   transition: max-height 0.5s ease-out;
@@ -62,7 +61,7 @@ as24-notification {
 }
 
 .sc-notification-container {
-  z-index: 8000;
+  z-index: 120; // overlays ads
   overflow: hidden;
   position: absolute;
   width: 100%;
