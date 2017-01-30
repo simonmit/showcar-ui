@@ -9,6 +9,7 @@ build:
     - 'sass:dist'
     - 'pleeease:dist'
     - 'webpack:dist'
+    - 'webpack:icons'
     # - 'generate-polyfills'
     - 'replace:fragment'
 
