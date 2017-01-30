@@ -1,5 +1,5 @@
 @import "../../../01-settings/variables";
-@import "../../../02-tools/utils";
+@import "../../../02-sass-tools/sass-mq";
 
 *[class^=sc-grid-col] {
   margin-top: $gutter-width;

@@ -4,7 +4,7 @@ module.exports = function(grunt, options) {
 
     return {
         options: {
-            entry: './src/js/showcar-ui.js',
+            entry: './src/showcar-ui.js',
             module: {
                 noParse: [
                     /\.min\.js/

@@ -22,23 +22,23 @@ var showcar = {};
 
 showcar.spyNavigation = require('./06-components/organisms/spy-navigation/spy-navigation.js');
 
-require('./06-components/atoms/custom-dropdown.js');
+require('./06-components/atoms/custom-dropdown/custom-dropdown.js');
 
 $(_ => {
     require('./06-components/organisms/navigation/navigation.js');
     require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
     require('./06-components/organisms/sticky/sticky.js')();
-    require('./06-components/molecules/collapse/collapse.js')();
+    require('./06-components/atoms/collapse/collapse.js')();
     require('./06-components/atoms/scroll/scroll.js');
     require('./06-components/atoms/stepper/stepper.js');
     require('./06-components/atoms/tooltip/tooltip.js')();
-    require('./06-components/atoms/tooltip/tooltip-2.js')();
+    require('./06-components/atoms/tooltip-2/tooltip-2.js')();
     require('./06-components/atoms/lightbox/lightbox.js');
 });
 
 // TODO: question for the guild
 if (!window.notification) {
-    window.notification = require('./06-components/molecules/notification.js');
+    window.notification = require('./06-components/molecules/notification/notification.js');
 } else {
     warn('window.notification is already registered.');
 }

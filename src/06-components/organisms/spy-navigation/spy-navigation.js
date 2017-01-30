@@ -1,5 +1,5 @@
 module.exports = function(config) {
-    const smoothScroll = require('./scroll');
+    const smoothScroll = require('../../../06-components/atoms/scroll/scroll.js');
     // This one is needed for check whether active link element has changed or not
     var activeNavItemCache;
     var componentClass = '.sc-spy-navigation';

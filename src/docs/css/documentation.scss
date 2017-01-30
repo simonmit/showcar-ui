@@ -1,5 +1,5 @@
 @import "../../01-settings/variables";
-@import "../../02-tools/utils";
+@import "../../02-sass-tools/sass-mq";
 @import "../../06-components/atoms/color-selector/color-selector";
 
 body {
@@ -393,7 +393,7 @@ pre {
     padding: 10px;
 }
 
-
+/*
 .sc-color-selector {
     input {
         &.red {
@@ -418,7 +418,7 @@ pre {
             @include color-selector-color($body-other, #fff);
         }
     }
-}
+}*/
 
 .example-ellipsis {
     .sc-ellipsis {
