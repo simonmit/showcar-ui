@@ -29,9 +29,10 @@ $(_ => {
     require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
     require('./06-components/organisms/sticky/sticky.js')();
     require('./06-components/molecules/collapse/collapse.js')();
-    require('./js/components/scroll/scroll.js');
+    require('./06-components/atoms/scroll/scroll.js');
     require('./06-components/atoms/stepper/stepper.js');
     require('./06-components/atoms/tooltip/tooltip.js')();
+    require('./06-components/atoms/tooltip/tooltip-2.js')();
     require('./06-components/atoms/lightbox/lightbox.js');
 });
 

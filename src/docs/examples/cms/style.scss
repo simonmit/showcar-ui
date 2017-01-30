@@ -1,5 +1,5 @@
-@import "../../../scss/variables.scss";
-@import "../../../scss/mixins/utils.scss";
+@import "../../../01-settings/variables";
+@import "../../../02-tools/utils";
 
 *[class^=sc-grid-col] {
   margin-top: $gutter-width;
