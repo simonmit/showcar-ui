@@ -1206,12 +1206,12 @@ notification.classList.toggle('show');
     </p>
     <ul>
         <li>1) link, button or any other clickable element which has 
-            <code>.sc-lightbox-trigger</code> class and <code>data-id</code> attribute, that points to the div to show (lightbox-div-1 in example)</li>
+            <code>.sc-lightbox-trigger</code> class and <code>data-id</code> attribute, that points to the div to show (lightbox-div-1 in example). To prevent link from jumping to the top of the page and appending chars to page's url use <code>a</code> element without href attribute. It's a valid HTML5 syntax</li>
         <li>2) div container for lightbox message with appropriate <code>id</code></li>
         <li>3) div may contain closing elements. To close modal window by clicking on the element add <code>.sc-lightbox-close</code> class to it</li>
     </ul>
     <div class="example">
-        <a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
+        <a class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
         <div class="sc-hidden example-lightbox" id="lightbox-div-1">
             <h5>The modal window title</h5>
             <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
@@ -1233,7 +1233,7 @@ notification.classList.toggle('show');
     </div>
     <pre><code class="html js-format-code">
         <!--
-<a href="#test" class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
+<a class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
 <div class="sc-hidden" id="lightbox-div-1">
     <h5>The modal window title</h5>
     <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
