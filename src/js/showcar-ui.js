@@ -33,6 +33,7 @@ $(_ => {
     require('./components/stepper.js');
     require('./components/tooltip_new.js')();
     require('./components/tooltip.js')();
+    require('./components/lightbox.js');
 });
 
 // TODO: question for the guild

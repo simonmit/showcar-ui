@@ -1,3 +1,12 @@
+1.13.1 / 2017-01-23
+==================
+
+  * Diana/Nina: added complex responsive behavior for lightbox
+
+1.13.0 / 2017-01-20
+==================
+
+  * Merge tag '1.13.0' into develop
 
 1.12.2 / 2017-01-17
 ==================

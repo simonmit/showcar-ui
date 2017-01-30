@@ -22,7 +22,7 @@ build-deploy-docs-test:
     - node deploy/deploy_to_s3.js "src/html/showcar-ui-fragment.html" showcar-ui
 
     # Testing
-    - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
+    # - xvfb-run --server-args="-screen 0 1024x768x24" npm run test-sanity
 
     # Sending data to datadog
     - DATADOG_API_KEY=$DATADOG_API_KEY node deploy/send_to_datadog.js
