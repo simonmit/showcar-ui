@@ -22,20 +22,24 @@ if(!w.HTMLPictureElement){l('@@ASSET_PATH/picturefill.js',1)}
 function l(url,a){document.write('<script '+(a&&'async')+' src="'+url+'"></'+'script>')}
 
 
-var ready = function(cb) {
+function ready (cb) {
     if(document.readyState !== 'loading') {
         return setTimeout(cb);
     }
-
     window.addEventListener('DOMContentLoaded', cb);
-};
+}
 
-ready(function() {
+function loadScript(src) {
     var s = document.createElement('script');
-    s.src = '@@ASSET_PATH/showcar-icons.js';
+    s.src = src;
     var x =document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
+}
+
+ready(function() {
+    loadScript('@@ASSET_PATH/showcar-icons.js');
 });
+
 }(window))
 </script>
 <link rel="stylesheet" href="@@ASSET_PATH/showcar-ui.css">
