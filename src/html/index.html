@@ -18,14 +18,11 @@ document.write('<style>body,[data-showcar-ui]{font-family: -apple-system, BlinkM
 
 (function(w) {
 if(!w.__proto__){l('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')}
+l('@@ASSET_PATH/showcar-icons.js',1)
 if(!w.HTMLPictureElement){l('@@ASSET_PATH/picturefill.js',1)}
-function l(url,a){document.write('<script '+(a&&'async')+' src="'+url+'"></'+'script>')}
-
-//function ready(cb){if (document.readyState !== 'loading'){return setTimeout(cb);}document.addEventListener('DOMContentLoaded', cb);}
-//ready(function() )
+function l(url,a){document.write('<script '+(a&&'defer')+' src="'+url+'"></'+'script>')}
 }(window))
 </script>
 <link rel="stylesheet" href="@@ASSET_PATH/showcar-ui.css">
 </head>
 <script src="@@ASSET_PATH/showcar-ui.js"></script>
-<script src="@@ASSET_PATH/showcar-icons.js" defer data-pagespeed-no-defer pagespeed_no_defer></script>
