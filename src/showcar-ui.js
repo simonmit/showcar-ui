@@ -10,13 +10,13 @@ window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac:0 };
 require('lazysizes');
 
 // Todo: remove from the library
-// require('showcar-icons');
+require('showcar-icons');
 
-// const ctor = document.createElement('as24-tracking').constructor;
+const ctor = document.createElement('as24-tracking').constructor;
 
-/*if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
+if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
     require('showcar-tracking');
-}*/
+}
 
 var showcar = {};
 

@@ -1,7 +1,7 @@
 @import "../../../01-settings/variables";
 @import "../../../03-generic/fonts";
 @import "../../../06-components/atoms/link/link";
-
+//TODO remove Multiple Breadcrumbs, mobile is better
 @mixin arrow($direction) {
   content: '';
   display: inline-block;

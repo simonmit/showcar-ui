@@ -1,51 +1,13 @@
 @import "../../../02-sass-tools/sass-mq";
 @import "../../../03-generic/fonts";
-@import "../select/select";
-
+//@import "../select/select";
 
 @mixin input() {
   @include font(M);
-  
   padding: $XS 12px;
   height: 40px;
 }
-
-@mixin checkbox() {
-  padding: 8px 8px 8px 0;
-  
-  & + label {
-    &:before {
-      border-radius: $form-border-radius;
-    }
-  }
-  
-  &:checked + label:before {
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-  }
-}
-
-@mixin radiobutton() {
-  $size: 20px;
-  & + label {
-    font-size : 16px;
-    padding-left: 32px;
-    
-    &:before {
-      border-radius: 25px;
-      height: $size + $XS;
-      width: $size + $XS;
-      top: 0;
-    }
-  }
-  &:checked + label:before {
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23333%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-  }
-}
-
-
-%customInputStyles {
+%customInputStyles{
   font-family: inherit;
   border-radius: $form-border-radius;
   border: 1px solid #959595; // TODO: color: correct?
@@ -55,175 +17,192 @@
   transition: all $transition-time ease-in;
   outline: none;
   cursor: pointer;
-
-  &.error {
+  
+  &.error{
     border-color: $color-error;
     background-color: $color-error-message;
   }
-
-  &.success {
+  
+  &.success{
     border-color: $color-success;
     background-color: $color-success-message;
   }
-
-  &.info {
+  
+  &.info{
     border-color: $color-info;
     background-color: $color-info-message;
   }
-
-  &:disabled {
+  
+  &:disabled{
     background-color: $white;
     border-color: $black-40;
     color: $black-40;
     cursor: not-allowed;
   }
-
-  &:hover:enabled {
+  
+  &:hover:enabled{
     border-color: $black-100;
   }
-
-  &:focus:enabled {
+  
+  &:focus:enabled{
     box-shadow: 0 0 1px 0 $blue-80;
     border-color: $blue-80;
   }
-
-  &:invalid {
+  
+  &:invalid{
     box-shadow: none;
   }
-
-  &::-webkit-input-placeholder {
+  
+  &::-webkit-input-placeholder{
     color: #939393;
   }
-
+  
   // CHECK: color correct?
-  &:-moz-placeholder {
+  &:-moz-placeholder{
     color: #939393;
   }
-
-  &::-moz-placeholder {
+  
+  &::-moz-placeholder{
     color: #939393;
   }
-
-  &:-ms-input-placeholder {
+  
+  &:-ms-input-placeholder{
     color: #939393;
   }
-
-  &:focus::-webkit-input-placeholder {
+  
+  &:focus::-webkit-input-placeholder{
     color: transparent;
   }
-
-  &:focus:-moz-placeholder {
+  
+  &:focus:-moz-placeholder{
     color: transparent;
   }
-
-  &:focus::-moz-placeholder {
+  
+  &:focus::-moz-placeholder{
     color: transparent;
   }
-
-  &:focus:-ms-input-placeholder {
+  
+  &:focus:-ms-input-placeholder{
     color: transparent;
   }
 }
-
 input[type="text"],
 input[type="tel"],
 input[type="number"],
 input[type="email"],
-textarea {
-  &.sc-input {
+textarea{
+  &.sc-input{
     @include input();
     @extend %customInputStyles;
     cursor: auto;
   }
 }
-
-select {
-  &.sc-input {
+select{
+  &.sc-input{
     @include input();
     @extend %customInputStyles;
   }
 }
-
-custom-dropdown {
-  &.sc-input {
+custom-dropdown{
+  &.sc-input{
     height: 40px;
     @extend %customInputStyles;
   }
 }
-
-
-textarea.sc-input {
+textarea.sc-input{
   height: auto !important;
 }
-
 // TODO: check that original radio box is hidden on all devices and in all browsers
 input[type="radio"],
-input[type="checkbox"] {
-  &.sc-input {
+input[type="checkbox"]{
+  &.sc-input{
     display: block;
     opacity: 0;
     position: absolute;
-
-    &.block + label {
+    
+    &.block + label{
       display: block;
     }
-
-    & + label {
-      @include avoid-selection();
+    
+    & + label{
+      user-select: none;
+      -webkit-touch-callout: none;
       line-height: 1.5rem;
       display: inline-block;
       position: relative;
       margin-right: 16px;
       cursor: pointer;
-
-      &::before {
+      padding-left: 32px;
+      font-size: 16px;
+      
+      &::before{
         content: '';
         display: block;
         background-size: cover;
         position: absolute;
         left: 0;
+        height: 24px;
+        width: 24px;
         top: 0;
         border: 1px solid #939393;
         transition: border-color $transition-time ease-in;
       }
-
-      &::after {
+      
+      &::after{
         transition: border-color $transition-time ease-in;
       }
     }
-
-    &:disabled + label::before {
+    
+    &:disabled + label::before{
       opacity: 0.45;
     }
-
-    &:disabled + label {
+    
+    &:disabled + label{
       cursor: not-allowed;
       color: $black-40;
     }
-
-    &:enabled + label:hover::before {
+    
+    &:enabled + label:hover::before{
       border-color: $black-100;
     }
-
-    &:focus:enabled + label::before {
+    
+    &:focus:enabled + label::before{
       border-color: $blue-80;
     }
   }
 }
-
-input[type="radio"] {
-  &.sc-input {
-    @include radiobutton();
+input[type="radio"]{
+  &.sc-input{
+    & + label{
+      &:before{
+      border-radius: 25px;
+      }
+    }
+    &:checked + label:before{
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23333%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat;
+    }
   }
 }
 
-input[type="checkbox"] {
-  &.sc-input {
-    @include checkbox();
+input[type="checkbox"]{
+  &.sc-input{
+    padding: 8px 8px 8px 0;
+    
+    & + label{
+      &:before{
+        border-radius: $form-border-radius;
+      }
+    }
+    
+    &:checked + label:before{
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat;
+    }
   }
 }
 
-select.sc-input {
+select.sc-input{
   @include input();
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
@@ -238,7 +217,7 @@ select.sc-input {
   -moz-appearance: none;
   appearance: none;
   
-  &:-moz-focusring {
+  &:-moz-focusring{
     color: transparent;
     text-shadow: 0 0 0 #000;
   }

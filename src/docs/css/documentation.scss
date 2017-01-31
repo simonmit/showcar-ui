@@ -393,7 +393,6 @@ pre {
     padding: 10px;
 }
 
-/*
 .sc-color-selector {
     input {
         &.red {
@@ -418,7 +417,7 @@ pre {
             @include color-selector-color($body-other, #fff);
         }
     }
-}*/
+}
 
 .example-ellipsis {
     .sc-ellipsis {

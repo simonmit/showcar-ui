@@ -1031,20 +1031,45 @@ showcar.spyNavigation({
         </ul>
     </div>
 
-    <a name="tooltip"></a>
-    <h3>Tooltip</h3>
-    <p>
-        Tooltip with any icon from as24-icon set. Tooltip information stored in title attribute.
-    </p>
-    <div class="example example-tooltip">
-        <label>That text needs to be explaned
-            <as24-icon type="info" title='More information' style="width:16px;height:16px;margin-right:16px;margin-top: -4px;vertical-align: middle;"></as24-icon>
-        </label>
-    </div>
-    <pre><code class="html js-format-code">
+	<a name="tooltip"></a>
+	<h3>Tooltip</h3>
+	<p>
+		Tooltip with any icon from as24-icon set. Tooltip information stored in title attribute.
+	</p>
+	<div class="example example-tooltip">
+		<label>That text needs to be explaned
+			<as24-icon type="info" title='More information' style="width:16px;height:16px;margin-right:16px;margin-top: -4px;vertical-align: middle;"></as24-icon>
+		</label>
+	</div>
+	<pre><code class="html js-format-code">
         <!--
 <label>That text needs to be explaned
     <as24-icon type="info" title='More information'></as24-icon>
+</label>
+        -->
+    </code></pre>
+	<a name="tooltip_new"></a>
+	<h3>New Tooltip</h3>
+	<p>
+		Tooltip with any icon from as24-icon set, any divs, any span etc. It appears in the center of item.
+		Tooltip information stored in sc-tooltip-content class.
+	</p>
+	<div class="example example-tooltip">
+		<label>That text needs to be explaned
+			<as24-tooltip class="sc-tooltip">
+				<as24-icon type="info" style="width:16px;height:16px;margin-top: -4px;vertical-align: middle;">
+				</as24-icon>
+				<div class="sc-tooltip-content">Information in tooltip <a href="/">link</a></div>
+			</as24-tooltip>
+		</label>
+	</div>
+	<pre><code class="html js-format-code">
+        <!--
+<label>That text needs to be explaned
+	<as24-tooltip class="sc-tooltip">
+		<as24-icon type="info"></as24-icon>
+		<div class="sc-tooltip-content">Information in tooltip <a href="/">link</a></div>
+	</as24-tooltip>
 </label>
         -->
     </code></pre>
@@ -1205,7 +1230,7 @@ notification.classList.toggle('show');
         In order to use it add following elements to your html:
     </p>
     <ul>
-        <li>1) link, button or any other clickable element which has 
+        <li>1) link, button or any other clickable element which has
             <code>.sc-lightbox-trigger</code> class and <code>data-id</code> attribute, that points to the div to show (lightbox-div-1 in example). To prevent link from jumping to the top of the page and appending chars to page's url use <code>a</code> element without href attribute. It's a valid HTML5 syntax</li>
         <li>2) div container for lightbox message with appropriate <code>id</code></li>
         <li>3) div may contain closing elements. To close modal window by clicking on the element add <code>.sc-lightbox-close</code> class to it</li>

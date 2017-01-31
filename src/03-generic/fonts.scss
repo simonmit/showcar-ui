@@ -63,7 +63,7 @@
   font-weight: 600;
 }
 h1.sc-font{
-  padding: 0 $L;
+  padding: 0 $L; //TODO rewrite padding
   
   @include headline(XL, XXL);
 }

@@ -1,6 +1,7 @@
 @import "npm:susy";
 @import "../01-settings/variables";
 @import "../02-sass-tools/sass-mq";
+@import "../07-utilities/utils";
 
 .sc-content-container {
   @include container;
