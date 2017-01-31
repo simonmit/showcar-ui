@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins/utils";
+@import "../01-settings/variables";
+@import "../02-sass-tools/sass-mq";
 
 .sc-clearfix {
   &:before,
