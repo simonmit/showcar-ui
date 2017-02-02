@@ -18,17 +18,15 @@ function createdCallback() {
 
 const clickHandler = e => {
     const openTrigger = e.target.closest('.sc-lightbox-trigger');
-    const closeTrigger = e.target.closest('.sc-lightbox-close, .sc-lightbox-overlay');
-
+    const closeTrigger = e.target.closest('.sc-lightbox-close') || !e.target.closest('.sc-lightbox');
     if (!openTrigger && !closeTrigger) { return; }
-
     if (openTrigger) {
         show(openTrigger);
         console.log('fire');
     } else {
         hide();
     }
-});
+};
 
 const touchHandler = e => {
     const closeTrigger = e.target.closest('.sc-lightbox-close') || !e.target.closest('.sc-lightbox');
@@ -61,12 +59,6 @@ const show = (lightboxTrigger) => {
 
 const hide = () => {
     [...document.querySelectorAll('.sc-lightbox-overlay')].forEach(el => {
-        el.classList.add('sc-hidden');
-    });
-};
-
-    [...document.querySelectorAll('.sc-lightbox')].forEach(el => {
-        el.classList.remove('sc-lightbox');
         el.classList.add('sc-hidden');
     });
 };
