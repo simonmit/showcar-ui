@@ -1,5 +1,6 @@
-@import "../../scss/variables";
-@import "../../scss/utils";
+@import "../../01-settings/variables";
+@import "../../02-sass-tools/sass-mq";
+@import "../../06-components/atoms/color-selector/color-selector";
 
 body {
     overflow-x: hidden;
@@ -392,7 +393,6 @@ pre {
     padding: 10px;
 }
 
-@import "../../scss/mixins/color-selector";
 .sc-color-selector {
     input {
         &.red {
@@ -557,7 +557,7 @@ pre {
 
 .example-lightbox label {
     margin-top: $L;
-    margin-bottom: $M; 
+    margin-bottom: $M;
     display: block;
 }
 
