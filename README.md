@@ -33,7 +33,7 @@ sass: {
 
 To install showcar-ui within your project use npm.
 
-    npm install https://gitlab.com/web-experience/showcar-ui.git --save
+    npm install git@github.com:AutoScout24/showcar-ui.git --save
 
 
 ## How to include:
