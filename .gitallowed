@@ -1,3 +1,4 @@
-# whitelist secret by position
-tests/config/page-config.js:19
-yarn.lock
+yarn\.lock:.*
+.*\.html
+.*\.js
+.*\.s?css
