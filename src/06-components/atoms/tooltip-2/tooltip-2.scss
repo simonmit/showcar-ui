@@ -8,11 +8,20 @@ as24-tooltip.sc-tooltip{
 		background-color: $black-120;
 		border-color: $black-120;
 		color: white;
-		
 		padding: 6px 8px;
 		position: absolute;
 		z-index: 2;
 		border-radius: 4px;
+    a{
+      color: #fff;
+      text-decoration: underline;
+      &:active{
+        color: $black-50;
+      }
+      &:hover{
+        color: $black-40;
+      }
+    }
 		&.tooltip-shown{
 			visibility: visible;
 			opacity: 0.75;
