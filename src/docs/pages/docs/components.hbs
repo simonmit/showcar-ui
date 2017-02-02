@@ -1237,37 +1237,54 @@ notification.classList.toggle('show');
         <li>3) div may contain closing elements. To close modal window by clicking on the element add <code>.sc-lightbox-close</code> class to it</li>
     </ul>
     <div class="example">
+        {{!--<a class="sc-lightbox-trigger" data-id="lightbox-div-3">CUSTOM ELEMENT</a>
+        <as24-lightbox id="lightbox-div-3">
+            <div class="sc-lightbox__window">
+                <h5>CUSTOM ELEMENT</h5>
+                <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+                <label>The input label</label>
+                <input type="text" class="sc-input" placeholder="share your thoughts with us">
+                <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
+            </div>
+        </as24-lightbox>--}}
+
         <a class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
-        <div class="sc-hidden example-lightbox" id="lightbox-div-1">
-            <h5>The modal window title</h5>
-            <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
-            <label>The input label</label>
-            <input type="text" class="sc-input" placeholder="share your thoughts with us">
-            <p class="desc-text sc-font-s">small text under</p>
-            <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
-        </div>
+        <as24-lightbox class="example-lightbox" id="lightbox-div-1">
+            <div>
+                <h5>The modal window title</h5>
+                <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+                <label>The input label</label>
+                <input type="text" class="sc-input" placeholder="share your thoughts with us">
+                <p class="desc-text sc-font-s">small text under</p>
+                <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
+            </div>
+        </as24-lightbox>
         <br>
         <button class="sc-btn-bob sc-lightbox-trigger" data-id="lightbox-div-2">Or press me</button>
-        <div class="sc-hidden example-lightbox" id="lightbox-div-2">
-            <h5>The modal window title 2</h5>
-            <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
-            <label>Thats another sample</label>
-            <input type="text" class="sc-input" placeholder="share your thoughts with us">
-            <p class="desc-text sc-font-s">small text under</p>
-            <button class="sc-btn-bob sc-btn-block">Button bob</button>
-        </div>
+        <as24-lightbox class="example-lightbox" id="lightbox-div-2">
+            <div>
+                <h5>The modal window title 2</h5>
+                <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+                <label>Thats another sample</label>
+                <input type="text" class="sc-input" placeholder="share your thoughts with us">
+                <p class="desc-text sc-font-s">small text under</p>
+                <button class="sc-btn-bob sc-btn-block">Button bob</button>
+            </div>
+        </as24-lightbox>
     </div>
     <pre><code class="html js-format-code">
         <!--
 <a class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a>
-<div class="sc-hidden" id="lightbox-div-1">
-    <h5>The modal window title</h5>
-    <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
-    <label>The input label</label>
-    <input type="text" class="sc-input" placeholder="share your thoughts with us">
-    <p class="desc-text sc-font-s">small text under</p>
-    <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
-</div>
+<as24-lightbox class="sc-hidden" id="lightbox-div-1">
+    <div>
+        <h5>The modal window title</h5>
+        <as24-icon type="close" class="sc-lightbox-close"></as24-icon>
+        <label>The input label</label>
+        <input type="text" class="sc-input" placeholder="share your thoughts with us">
+        <p class="desc-text sc-font-s">small text under</p>
+        <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button>
+    </div>
+</as24-lightbox>
         -->
     </code></pre>
 
