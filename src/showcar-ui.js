@@ -1,22 +1,15 @@
 // Todo: remove Zepto
-if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
+if (! window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
 let warn = (msg) => window.console && window.console.warn(msg);
 
 window.Storage = require('showcar-storage');
 window.Pager = require('./06-components/organisms/pager/pager.js');
 
-window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac:0 };
+window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac: 0 };
 require('lazysizes');
 
-const ctor = document.createElement('as24-tracking').constructor;
-
-if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
-    require('showcar-tracking');
-}
-
 var showcar = {};
-
 showcar.spyNavigation = require('./06-components/organisms/spy-navigation/spy-navigation.js');
 
 require('./06-components/atoms/custom-dropdown/custom-dropdown.js');
@@ -34,7 +27,7 @@ $(_ => {
 });
 
 // TODO: question for the guild
-if (!window.notification) {
+if (! window.notification) {
     window.notification = require('./06-components/molecules/notification/notification.js');
 } else {
     warn('window.notification is already registered.');
