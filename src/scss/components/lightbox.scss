@@ -19,20 +19,37 @@
     }
 
     z-index: 140; // overlay header
+    // box-shadow: 0 0 10000px 10000px rgba(0,0,0,.6);
 
-    /*
-    &::before {
-        content: '';
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 998;
-        background-color: rgba(0, 0, 0, 0.6);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.sc-lightbox-scroll {
+    @include mqmin($viewportM) {
+        overflow-y: hidden;
     }
-    */
+}
+
+// TODO: fix the input centring problem
+// body.sc-lightbox-open {
+//     &::before {
+//         // transform: translateX(0) scaleX(100) scaleY(100);
+//         backface-visibility: hidden;
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         z-index: 139;
+//         background-color: rgba(0, 0, 0, 0.6);
+//     }
+// }
+
+body {
+    position: relative;
 }
 
 .sc-lightbox-scroll {
@@ -43,10 +60,10 @@
 
 .sc-lightbox-overlay {
     background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 139; // by 1 less than modal window
+    right: 0;
+    bottom: 0;
+    z-index: 139; // less than modal window by one
 }
