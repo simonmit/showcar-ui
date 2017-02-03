@@ -22,7 +22,6 @@ const clickHandler = e => {
     if (!openTrigger && !closeTrigger) { return; }
     if (openTrigger) {
         show(openTrigger);
-        console.log('fire');
     } else {
         hide();
     }
@@ -32,7 +31,6 @@ const touchHandler = e => {
     const closeTrigger = e.target.closest('.sc-lightbox-close') || !e.target.closest('.sc-lightbox');
     if (!closeTrigger) { return; }
     hide();
-    console.log('fire2');
 };
 
 document.body.addEventListener('touchstart', touchHandler);
