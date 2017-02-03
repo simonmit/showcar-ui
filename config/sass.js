@@ -15,7 +15,7 @@ module.exports = function(grunt, options) {
         },
         docs: {
             files: [
-                { dest: 'docs/lib/showcar-ui.css', src: 'src/scss/showcar-ui.scss' },
+                { dest: 'docs/lib/showcar-ui.css', src: 'src/showcar-ui.scss' },
                 { dest: 'docs/lib/css/documentation.css', src: 'src/docs/css/documentation.scss' },
                 {
                     expand: true,

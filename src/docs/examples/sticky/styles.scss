@@ -1,5 +1,5 @@
-@import "../../../scss/variables";
-@import "../../../scss/utils";
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
 
 .example {
   border: 1px solid $black-30;

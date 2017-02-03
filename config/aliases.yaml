@@ -9,6 +9,8 @@ build:
     - 'sass:dist'
     - 'pleeease:dist'
     - 'webpack:dist'
+    - 'webpack:icons'
+    - 'webpack:tracking'
     # - 'generate-polyfills'
     - 'replace:fragment'
 
@@ -18,13 +20,14 @@ docs:
     - 'copy:docs'
     - 'sass:docs'
     - 'pleeease:docs'
-    - 'webpack:docs'
+#    - 'webpack:docs'
     - 'assemble:docs'
 
 dev:
   description: 'Dev task'
   tasks:
     - docs
+    - webpack
     - browserSync
     - watch
 

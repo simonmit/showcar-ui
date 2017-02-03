@@ -1,6 +1,0 @@
-@import "mixins/breadcrumbs";
-
-.sc-breadcrumbs {
-  @include breadcrumb;
-  margin-top: 10px; //give all breadcrumbs a common top margin within all pages
-}
