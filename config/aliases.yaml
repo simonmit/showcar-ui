@@ -20,13 +20,14 @@ docs:
     - 'copy:docs'
     - 'sass:docs'
     - 'pleeease:docs'
-    - 'webpack:docs'
+#    - 'webpack:docs'
     - 'assemble:docs'
 
 dev:
   description: 'Dev task'
   tasks:
     - docs
+    - webpack
     - browserSync
     - watch
 
