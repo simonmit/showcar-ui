@@ -9,9 +9,6 @@ window.Pager = require('./06-components/organisms/pager/pager.js');
 window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac:0 };
 require('lazysizes');
 
-// Todo: remove from the library
-require('showcar-icons');
-
 const ctor = document.createElement('as24-tracking').constructor;
 
 if (ctor === HTMLElement || ctor === HTMLUnknownElement) {
