@@ -3,7 +3,7 @@
 @import "07-utilities/utils";
 @import "06-components/atoms/link/link.scss";
 @import "06-components/atoms/button/button.scss";
-
+@import "06-components/atoms/color-selector/color-selector.scss";
 
 @mixin clearfix() {
   &:before,
