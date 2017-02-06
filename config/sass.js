@@ -5,13 +5,13 @@ module.exports = function(grunt, options) {
         options: {
             outputStyle: DEBUG ? 'expanded' : 'compressed',
             importer: function(url, prev, done) {
-                return done(url.split(':')[0].toLowerCase() === 'npm'
-                    ? { file: require.resolve(url.split(':')[1]) }
-                    : null);
+                return done(url.split(':')[0].toLowerCase() === 'npm' ?
+                    { file: require.resolve(url.split(':')[1]) } :
+                    null);
             }
         },
         dist: {
-            files: { 'dist/showcar-ui.css': 'src/scss/showcar-ui.scss' }
+            files: { 'dist/showcar-ui.css': 'src/showcar-ui.scss' }
         },
         docs: {
             files: [
