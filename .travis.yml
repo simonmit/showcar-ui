@@ -11,8 +11,8 @@ branches:
   except:
     - release
 
-install:
-  - yarn --ignore-engines
+# install:
+#  - yarn --ignore-engines
 
 notifications:
   email: false
