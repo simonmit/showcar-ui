@@ -1,0 +1,44 @@
+@import "../../../01-settings/variables";
+
+a[data-item-name="vendor-contact-send-btn"] {
+  display: none;
+}
+
+.page-navigation-title {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+
+  h3 {
+    padding: $XL 0 0 $XL;
+
+    > span[data-type="title"]:after {
+      content: "";
+      margin-left: $S;
+    }
+    > span[data-type="price"]:before {
+      content: "|";
+      margin-right: $S;
+    }
+  }
+}
+
+
+.sc-spy-navigation {
+
+  &--sticked {
+
+    a[data-item-name="vendor-contact-send-btn"] {
+      margin-top: $M;
+      display: inline-block;
+    }
+
+    .page-navigation-title {
+      width: initial;
+      position: initial;
+      visibility: visible;
+    }
+
+  }
+
+}
