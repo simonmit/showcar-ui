@@ -4,6 +4,8 @@ set -ev
 
 TARGET_BRANCH=release
 
+echo "$COMMIT_AUTHOR_EMAIL"
+
 mkdir temp-git
 cd temp-git
 git clone "https://${GH_TOKEN}@github.com/AutoScout24/showcar-ui.git" .
