@@ -6,7 +6,7 @@ TARGET_BRANCH=release
 
 mkdir temp-git
 cd temp-git
-git clone "https://${GH_TOKEN}@github.com/AutoScout24/showcar-ui.git" .
+git clone "https://${GITHUB_TOKEN}@github.com/AutoScout24/showcar-ui.git" .
 git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
