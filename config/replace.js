@@ -7,9 +7,9 @@ const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString:
 module.exports = function(grunt, options) {
     return {
         fragment: {
-            options:{
+            options: {
                 patterns: [
-                    { match: 'ASSET_PATH', replacement: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>' },
+                    // { match: 'ASSET_PATH', replacement: '<%= assetsPrefix %>/<%= buildType %>/<%= commitHash %>' },
 
                     { match: 'POLYFILL_DOCUMENT_REGISTER_ELEMENT', replacement: readFile('node_modules/document-register-element/build/document-register-element.js') },
                     { match: 'POLYFILL_DOM4', replacement: readFile('node_modules/dom4/build/dom4.js') },

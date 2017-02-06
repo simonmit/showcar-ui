@@ -15,9 +15,7 @@ notifications:
   email: false
 
 script:
-  - npm run grunt build
-  - npm run grunt docs
-  - npm run grunt copy:docs
+  - npm run build
 
 after_success:
   # only run for master branch, we don't want to release PRs and other branches
