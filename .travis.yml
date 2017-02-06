@@ -18,4 +18,6 @@ script:
   - npm run grunt build
   - npm run grunt docs
   - npm run grunt copy:docs
-  - ls dist -R
+
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then bash ./travis_release.sh; fi'
