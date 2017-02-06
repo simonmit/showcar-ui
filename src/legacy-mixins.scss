@@ -2,7 +2,7 @@
 @import "03-generic/fonts";
 @import "07-utilities/utils";
 @import "06-components/atoms/link/link.scss";
-
+@import "06-components/atoms/button/button.scss";
 
 
 @mixin clearfix() {
@@ -14,6 +14,13 @@
   &:after {
     clear: both;
   }
+}
+
+@mixin ellipsis {
+  -moz-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 
