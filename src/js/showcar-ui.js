@@ -32,6 +32,7 @@ $(_ => {
     require('./components/scroll.js');
     require('./components/stepper.js');
     require('./components/tooltip.js')();
+    require('./components/tooltip-2.js')();
     require('./components/lightbox.js');
 });
 
