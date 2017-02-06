@@ -1,4 +1,4 @@
-const registerElement = (name = 'as24-tooltip') => {
+const registerTooltip = (name = 'as24-tooltip') => {
     const AS24TooltipPrototype = Object.create(HTMLElement.prototype, {
         attachedCallback: {
             value: function () {
@@ -83,7 +83,13 @@ const registerElement = (name = 'as24-tooltip') => {
             }
         }
     });
-    document.registerElement(name, { prototype: AS24TooltipPrototype });
+    try {
+        document.registerElement(name, { prototype: AS24TooltipPrototype });
+    } catch (e) {
+        if (window && window.console) {
+            window.console.warn('Failed to register CustomElement "' + name + '".', e);
+        }
+    }
 };
 
-module.exports = () => registerElement();
+module.exports = () => registerTooltip();
