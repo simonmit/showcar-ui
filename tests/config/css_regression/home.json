@@ -1,0 +1,103 @@
+[{
+  "label": "Home page : .com",
+  "url": "https://www.autoscout24.com?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.com",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".home-placements-stripe"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "beforeScript_com.js",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .de",
+  "url": "https://www.autoscout24.de?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.de",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".home-placements-stripe",
+    ".boxMagazin"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "beforeScript_de.js",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .at",
+  "url": "https://www.autoscout24.at?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.at",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".boxMagazin"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "beforeScript_at.js",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .nl",
+  "url": "https://www.autoscout24.nl?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.nl",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".boxMagazin"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "beforeScript_nl.js",
+  "onReadyScript": "home.js"
+},
+{
+  "label": "Home page : .es",
+  "url": "https://www.autoscout24.es?sc_develop=true",
+  "referenceUrl": "https://www.autoscout24.es",
+  "hideSelectors": [
+    "#home-car-button > span"
+  ],
+  "removeSelectors": [
+    ".home-worlds-stripe",
+    ".boxMagazin",
+    "#topCars"
+  ],
+  "selectors": [
+    "body"
+  ],
+  "readyEvent": "",
+  "delay": 1200,
+  "misMatchThreshold" : 0.2,
+  "onBeforeScript": "",
+  "onReadyScript": "home.js"
+}
+]

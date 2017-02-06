@@ -1,0 +1,155 @@
+@import "../01-settings/variables";
+@import "../02-sass-tools/sass-mq";
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.sc-clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.sc-pull-right {
+  float: right !important;
+}
+
+.sc-pull-left {
+  float: left !important;
+}
+
+.sc-text-left {
+  text-align: left !important;
+}
+
+.sc-text-right {
+  text-align: right !important;
+}
+
+.sc-text-center {
+  text-align: center !important;
+}
+
+.sc-text-justify {
+  text-align: justify !important;
+}
+
+.sc-text-nowrap {
+  white-space: nowrap !important;
+}
+
+.sc-block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sc-absolute-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sc-ellipsis {
+  -moz-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sc-block {
+  display: block !important;
+}
+
+.sc-hidden {
+  display: none !important;
+}
+
+.sc-visible {
+  display: initial !important;
+}
+
+.sc-overflow-hidden {
+  overflow: hidden !important;
+}
+
+//xl viewport
+@include mqmin($viewportXL) {
+  .sc-hidden-xl {
+    display: none;
+  }
+  .sc-visible-xl {
+    display: initial;
+  }
+}
+
+//l viewport
+@include mqmax($viewportXL - 1) {
+  .sc-hidden-l {
+    display: none;
+  }
+  .sc-visible-l {
+    display: initial;
+  }
+}
+
+//m viewport
+@include mqmax($viewportL - 1) {
+  .sc-hidden-m {
+    display: none;
+  }
+  .sc-visible-m {
+    display: initial;
+  }
+}
+
+//s viewport
+@include mqmax($viewportM - 1) {
+  .sc-hidden-s {
+    display: none;
+  }
+  .sc-visible-s {
+    display: initial;
+  }
+}
+
+.sc-box-spacing {
+  margin-bottom: 30px;
+
+  @include mqmin($viewportM) {
+    margin-bottom: 40px;
+  }
+}
+
+//TODO: Remove?
+.sc-telekom-bar {
+  padding-right: $XL;
+  text-align: right;
+  as24-icon[type="t-online"] {
+    height: $XL - 1;
+  }
+}
+
+//TODO: move to layout
+.sc-section {
+  border-bottom: 1px solid $black-30;
+  background-color: $white;
+  padding: 0 $XL;
+
+  &.sc-section-transparent {
+    background-color: transparent;
+  }
+}

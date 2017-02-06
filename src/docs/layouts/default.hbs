@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShowCar UI Library Docs{{#if title}} - {{title}}{{/if}}</title>
+    <!-- IMPORTANT: always change the *.hbs files within docs/src -->
+    {{> head }}
+	<script>
+		if (typeof Object.assign != 'function') {
+			Object.assign = function (target, varArgs) { // .length of function is 2
+				'use strict';
+				if (target == null) { // TypeError if undefined or null
+					throw new TypeError('Cannot convert undefined or null to object');
+				}
+
+				var to = Object(target);
+
+				for (var index = 1; index < arguments.length; index++) {
+					var nextSource = arguments[index];
+
+					if (nextSource != null) { // Skip over if undefined or null
+						for (var nextKey in nextSource) {
+							// Avoid bugs when hasOwnProperty is shadowed
+							if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+								to[nextKey] = nextSource[nextKey];
+							}
+						}
+					}
+				}
+				return to;
+			};
+		}
+	</script>
+</head>
+<body id="top" {{#if site-class}}class="{{site-class}}"{{/if}}>
+<div class="sc-content-container">
+    <div id="sc-skyscraper-left" class="sc-skyscraper-left"></div>
+    <div id="sc-superbanner" class="sc-superbanner"></div>
+    <div id="sc-skyscraper-right" class="sc-skyscraper-right"></div>
+    {{> header}}
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-3 sc-grid-col-m-3 sc-grid-col-s-12">
+            {{> nav }}
+        </div>
+        <div class="sc-grid-col-9 sc-grid-col-m-9 sc-grid-col-s-12 docs-content">
+            {{> body }}
+            {{#isnt basename 'index'}}
+                <div class="docs-totop">
+                    <a href="#top">Jump to Top</a>
+                </div>
+            {{/isnt}}
+        </div>
+    </div>
+    {{> footer}}
+</div>
+{{> foot }}
+</body>
+</html>

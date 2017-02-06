@@ -1,0 +1,35 @@
+---
+title: Responsive Images
+nav-index: 1
+---
+<div>
+    <a name="responsive-images"></a>
+    <h2>Responsive Images</h2>
+    <p>
+        The way to go for responsive images in Showcar is the html <code>&lt;picture&gt;</code> tag. Unfortunately, it is not yet sufficiently supported by the browsers.
+        Another, more supported way, is the srcset attribute of the <code>&lt;img&gt;</code> tag.
+        In any case, we included <a href="https://github.com/scottjehl/picturefill" target="_blank">picturefill</a> to polyfill the missing functionality for unsupported browsers.
+    </p>
+    <p>
+        Here an example with the <code>&lt;picture&gt;</code> tag:
+    </p>
+    <picture>
+        <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
+        <source srcset="https://placehold.it/780x150" media="(max-width: 780px)">
+        <source srcset="https://placehold.it/1024x150" media="(max-width: 1024px)">
+        <source srcset="https://placehold.it/1400x150">
+        <img srcset="https://placehold.it/1400x150" alt="My default image">
+    </picture>
+
+    <pre><code class="html js-format-code">
+<!--
+<picture>
+    <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
+    <source srcset="https://placehold.it/780x150" media="(max-width: 780px)">
+    <source srcset="https://placehold.it/1024x150" media="(max-width: 1024px)">
+    <source srcset="https://placehold.it/1400x150">
+    <img srcset="https://placehold.it/1400x150" alt="My default image">
+</picture>
+-->
+    </code></pre>
+</div>

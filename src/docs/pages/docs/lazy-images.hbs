@@ -1,0 +1,31 @@
+---
+title: Lazy loading Images
+nav-index: 2
+---
+<div>
+
+  <a name="lazy-loading-images"></a>
+
+  <h2>Lazy Images</h2>
+  <p>
+      If you want to make you images lazy, you need to add two classes to you <code>img</code> tag:
+      <code>sc-lazy-image</code> and <code>lazyload</code>. Also you need to use <code>data-src</code> instead of <code>src</code> attribute.
+  </p>
+  <p>
+      Here an example with the <code>&lt;img&gt;</code> tag:
+  </p>
+  <img width="300" height="200" data-src="http://loremflickr.com/300/200?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+
+  <pre><code class="html js-format-code">
+<!--
+<img width="300" height="200" data-src="http://loremflickr.com/300/200?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+-->
+  </code></pre>
+
+  <p>Please, note the default value for the <code>src</code>. This is needed for ommiting the default view for the "empty" image.</p>
+
+  <div class="docs-totop">
+      <a href="#top">Jump to Top</a>
+  </div>
+
+</div>
