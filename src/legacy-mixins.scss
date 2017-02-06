@@ -1,9 +1,10 @@
-@import "02-sass-tools/sass-mq.scss";
+@import "02-sass-tools/sass-mq";
 @import "03-generic/fonts";
 @import "07-utilities/utils";
-@import "06-components/atoms/link/link.scss";
-@import "06-components/atoms/button/button.scss";
-@import "06-components/atoms/color-selector/color-selector.scss";
+@import "06-components/atoms/link/link";
+@import "06-components/atoms/button/button";
+@import "06-components/atoms/color-selector/color-selector";
+@import "06-components/atoms/input/input";
 
 @mixin clearfix() {
   &:before,

@@ -1,6 +1,5 @@
 @import "../../../02-sass-tools/sass-mq";
 @import "../../../03-generic/fonts";
-//@import "../select/select";
 
 @mixin input() {
   @include font(M);
