@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "7"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+branches:
+  except:
+    - release
+
+install:
+  - yarn --ignore-engines
+
+notifications:
+  email: false
+
+script:
+  - npm run grunt build
+  - npm run grunt docs
+  - npm run grunt copy:docs
