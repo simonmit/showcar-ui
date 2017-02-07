@@ -1,4 +1,6 @@
-yarn\.lock:.*
+yarn\.lock
 .*\.html
 .*\.js
 .*\.s?css
+as24-travis-key-private\.enc
+\.travis\.yml
