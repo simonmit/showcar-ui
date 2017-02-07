@@ -2,5 +2,5 @@ yarn\.lock
 .*\.html
 .*\.js
 .*\.s?css
-as24-travis-key-private\.enc
+travis-release-key\.enc
 \.travis\.yml
