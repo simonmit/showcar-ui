@@ -15,7 +15,8 @@ module.exports = {
 
     fragment: {
         files: {
-            'dist/showcar-ui-fragment.html': 'src/html/showcar-ui-fragment.html'
+            'dist/showcar-ui-fragment.html': 'src/html/showcar-ui-fragment.html',
+            'dist/showcar-ui-standalone-fragment.html': 'src/html/showcar-ui-standalone-fragment.html'
         }
     }
 };

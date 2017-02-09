@@ -24,7 +24,8 @@ module.exports = function(grunt, options) {
                 ],
             },
             files: {
-                'dist/index.html': 'src/html/index.html'
+                'dist/index.html': 'src/html/index.html',
+                'dist/index-standalone.html': 'src/html/index-standalone.html'
             }
         }
     }
