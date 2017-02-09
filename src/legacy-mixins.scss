@@ -1,11 +1,21 @@
-@import "02-sass-tools/sass-mq";
-@import "03-generic/fonts";
-@import "07-utilities/utils";
-@import "06-components/atoms/link/link";
-@import "06-components/atoms/button/button";
-@import "06-components/atoms/color-selector/color-selector";
-@import "06-components/atoms/input/input";
+@import "01-settings/variables";
+@mixin mqmin($min, $media: all) {
+  @media #{$media} and (min-width: $min + 0px) {
+    @content;
+  }
+}
 
+@mixin mqmax($max, $media: all) {
+  @media #{$media} and (max-width: $max + 0px) {
+    @content;
+  }
+}
+
+@mixin mqminmax($min, $max, $media: all) {
+  @media #{$media} and (min-width: $min + 0px) and (max-width: $max + 0px) {
+    @content;
+  }
+}
 @mixin clearfix() {
   &:before,
   &:after {
@@ -16,49 +26,216 @@
     clear: both;
   }
 }
-
 @mixin ellipsis {
   -moz-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-
-
-/*
-
-@import "04-elements/elements";
-
-@import "05-layout/grid";
-@import "05-layout/ad";
-
-@import "06-components/atoms/button/button";
-@import "06-components/atoms/collapse/collapse";
-@import "06-components/atoms/color-selector/color-selector";
-@import "06-components/atoms/custom-dropdown/custom-dropdown";
-@import "06-components/atoms/custom-dropdown-icon/custom-dropdown-icon";
-@import "06-components/atoms/input/input";
-@import "06-components/atoms/lazy-image/lazy-image";
-@import "06-components/atoms/lightbox/lightbox";
-@import "06-components/atoms/link/link";
-@import "06-components/atoms/rotating-arrow/rotating-arrow";
-@import "06-components/atoms/spinner/spinner";
-@import "06-components/atoms/stepper/stepper";
-@import "06-components/atoms/tooltip/tooltip";
-@import "06-components/atoms/tooltip-2/tooltip-2";
-
-
-@import "06-components/molecules/breadcrumbs/breadcrumbs";
-@import "06-components/molecules/card/card";
-@import "06-components/molecules/expandable-box/expandable-box";
-@import "06-components/molecules/input-group/input-group";
-@import "06-components/molecules/notification/notification";
-
-
-@import "06-components/organisms/navigation/navigation";
-@import "06-components/organisms/pager/pager";
-@import "06-components/organisms/spy-navigation/spy-navigation";
-@import "06-components/organisms/sticky/sticky";
-
-
-*/
+@mixin font($size: null, $bold: false, $silent: false, $line-height: null) {
+  $font-sizes: (S: 0.8125rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 2rem, XXXL: 2.5rem);
+  
+  @if $size{
+    font-size: map-get($font-sizes, to-upper_case($size));
+  }
+  
+  @if $bold{
+    font-weight: 600;
+  }
+  
+  @if $silent{
+    color: $black-60;
+  }
+  
+  @if $line-height{
+    line-height: $line-height;
+  }
+}
+/// @param string $size - default size that is used, use the same variables as font mixin
+/// @param string $sizeM - font size that is used starting at viewportM, use the same variables as font mixin
+/// @param bool $bold - default font weight (true = bold)
+/// @param bool $boldM - font weight that is used starting at viewportM
+@mixin headline($size, $sizeM, $bold: false, $boldM: false) {
+  @include font($size, $bold);
+  @if not $bold{
+    font-weight: normal;
+  }
+  
+  @include mqmin($viewportM){
+    @include font($sizeM, $boldM);
+    @if not $boldM{
+      font-weight: normal;
+    }
+  }
+}
+@mixin link($size: null, $variant: blue) {
+  cursor: pointer;
+  text-decoration: none;
+  transition: color $transition-time ease-in;
+  background: none;
+  border: none;
+  
+  $link-colors: (
+    blue: (
+      normal: $color-link,
+      hover: $blue-90,
+      active: $blue-100
+    ),
+    black: (
+      normal: $black-100,
+      hover: $orange-90,
+      active: $orange-100
+    )
+  );
+  
+  $color: map-get(map-get($link-colors, $variant), normal);
+  
+  color: $color;
+  
+  &:hover{
+    $hover-color: map-get(map-get($link-colors, $variant), hover);
+    
+    color: $hover-color;
+  }
+  
+  &:active{
+    $active-color: map-get(map-get($link-colors, $variant), active);
+    
+    color: $active-color;
+  }
+  
+  @if ($size){
+    @include font($size);
+  }
+}
+@mixin button {
+  user-select: none;
+  @include font(M, $bold: true, $silent: false, $line-height: 1.3);
+  
+  display: inline-block;
+  padding: 10px;
+  
+  appearance: none;
+  border: none;
+  border-radius: $form-border-radius;
+  color: $white;
+  transition: all $transition-time ease-in;
+  transition-property: color, background-color;
+  text-decoration: none;
+  text-align: center;
+  
+  &:hover {
+    color: #fff;
+  }
+  
+  [class^="icon-"] {
+    width: $L;
+    height: $L;
+    display: inline-block;
+    background-size: contain;
+    position: relative;
+  }
+}
+@mixin color-selector-color($color, $checkedColor:"#333333") {
+  $checkedColor: str-slice(inspect($checkedColor), 2);
+  & + label {
+    &::before {
+      background: $color;
+      background-position: 50% 50%;
+    }
+  }
+  &:checked + label::before {
+    //attention: #{$checkedColor} is inside svg+xml with a placeholder
+    background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{$checkedColor}%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E'), $color;
+    background-position: 50% 50%;
+  }
+  &[type="radio"]:checked + label::before {
+    //attention: #{$checkedColor} is inside svg+xml with a placeholder
+    background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23#{$checkedColor}%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E'), $color;
+    background-position: 50% 50%;
+  }
+}
+@mixin input() {
+  @include font(M);
+  padding: $XS 12px;
+  height: 40px;
+}
+%customInputStyles{
+  font-family: inherit;
+  border-radius: $form-border-radius;
+  border: 1px solid #959595; // TODO: color: correct?
+  color: $black-100;
+  width: 100%;
+  line-height: 1.5;
+  transition: all $transition-time ease-in;
+  outline: none;
+  cursor: pointer;
+  
+  &.error{
+    border-color: $color-error;
+    background-color: $color-error-message;
+  }
+  
+  &.success{
+    border-color: $color-success;
+    background-color: $color-success-message;
+  }
+  
+  &.info{
+    border-color: $color-info;
+    background-color: $color-info-message;
+  }
+  
+  &:disabled{
+    background-color: $white;
+    border-color: $black-40;
+    color: $black-40;
+    cursor: not-allowed;
+  }
+  
+  &:hover:enabled{
+    border-color: $black-100;
+  }
+  
+  &:focus:enabled{
+    box-shadow: 0 0 1px 0 $blue-80;
+    border-color: $blue-80;
+  }
+  
+  &:invalid{
+    box-shadow: none;
+  }
+  
+  &::-webkit-input-placeholder{
+    color: #939393;
+  }
+  
+  // CHECK: color correct?
+  &:-moz-placeholder{
+    color: #939393;
+  }
+  
+  &::-moz-placeholder{
+    color: #939393;
+  }
+  
+  &:-ms-input-placeholder{
+    color: #939393;
+  }
+  
+  &:focus::-webkit-input-placeholder{
+    color: transparent;
+  }
+  
+  &:focus:-moz-placeholder{
+    color: transparent;
+  }
+  
+  &:focus::-moz-placeholder{
+    color: transparent;
+  }
+  
+  &:focus:-ms-input-placeholder{
+    color: transparent;
+  }
+}
