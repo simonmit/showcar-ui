@@ -46,7 +46,7 @@
 
 .sc-input-group-radio {
   @include input-group;
-  overflow: auto;
+  overflow: hidden;
   border: 1px solid $black-60;
   border-radius: $form-border-radius;
   font-weight: 400;
