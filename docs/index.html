@@ -404,10 +404,10 @@
 											   @click.prevent="component.code_show = ! component.code_show"
 											   v-text="component.code_show ? 'Hide code sample' : 'Show code sample'"></a>
 										</template>
-										<ul v-else class="ndpl-component__sample-missing ndpl-info">
+										<!--<ul v-else class="ndpl-component__sample-missing ndpl-info">
 											<li class="ndpl-info__item">Add your component markup to <code>/components/{{ component.group
 												}}/{{ component.name }}/markup.html</code></li>
-										</ul>
+										</ul>-->
 										<template v-if="component.js">
 											<div class="ndpl-component__code ndpl-c-border"
 												 v-show="component.js_show">

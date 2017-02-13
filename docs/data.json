@@ -7,7 +7,7 @@
     "client_name": null,
     "client_url": null,
     "settings": {
-        "components_folder": "../06-components"
+        "components_folder": "../src/06-components"
     },
     "creators": [
         {
@@ -64,6 +64,16 @@
                     "group": "atoms",
                     "name": "button",
                     "title": "Button",
+                    "width": "full",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-default",
+                    "title": "Button (default)",
                     "width": "half"
                 },
                 {
