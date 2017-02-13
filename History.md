@@ -1,3 +1,122 @@
+
+2.0.0 / 2017-02-13
+==================
+
+  * initializing global variables to avoid some exceptions
+  * replace overwflow auto to hidden
+  * Merge pull request #99 from mpuppin/patch-1
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * key encryption only for master branch when no PR
+  * Update reset.scss
+  * added vscode to gitignore
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * standolone fragment without icons and tracking
+  * add overflow to solve border-raduis problem
+  * add -error-text
+  * added missing variable
+  * adjusted tooltip arrow
+  * add %customInputStyles
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * copy all mixins to legacy-mixins
+  * some cleanup
+  * revert deploy test
+  * Old keyfile not needed anymore
+  * test deploy
+  * key
+  * try to fix travis keys encription
+  * trying to fix encryption
+  * added secure key for travis release
+  * bump again
+  * bump build
+  * improved travis build script
+  * only cloning release branch
+  * pushing to git
+  * fixed gh token
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * using team email
+  * add input mixin
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * checking commit email
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * repair tooltip
+  * fixed git config
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * fixed build script
+  * add color-selector mixin
+  * travis deploy
+  * release script for travis
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * added secure variable
+  * add button mixin
+  * add elllipsis mixin
+  * dist files are generated
+  * fixed scss path
+  * using after_success
+  * script deployment
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * fixed script condition
+  * add link mixin
+  * bash flags
+  * does it run?
+  * running travis release for master and not for PRs
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * first step towards travis deploy
+  * add legacy-mixins.scss
+  * listing artifacts
+  * not running yarn manually
+  * bump
+  * added first travis ci build
+  * Merge branch 'develop'
+  * rebuilt lightbox with custom element
+  * Merge remote-tracking branch 'origin/atomic-design' into develop
+  * repait icons src
+  * add js to dev compile
+  * replace icons
+  * merged branch: atomic-design to develop
+  * Merge branch 'master' of github.com:AutoScout24/showcar-ui
+  * not installing some packages
+  * Update README.md
+  * change link color
+  * replace z-index
+  * bump
+  * bump
+  * add defaults to tooltip
+  * Merge tag 'descrease-z-indexes' into develop
+  * Merge branch 'hotfix/descrease-z-indexes'
+  * Merge tag 'gtmdelaertracking' into develop
+  * bumped tracking version number
+  * repait styles
+  * repair links
+  * make everything done
+  * clean up directories, make proper links in import
+  * clean up fonts, add editor conf, move components
+  * docs only built for master branch again
+  * building showcar-tracking.js as well
+  * first step towards a standalone showcar-tracking fragment
+  * improved script loading
+  * improved deferred icons loading
+  * improved deferred loading of icons
+  * added missing no-defer attribute
+  * update js structure
+  * first step towards a separate showcar-icons fragment
+  * update scss structure
+  * put js component in each folder
+  * put each component in each folder
+  * build docs in dev branch
+  * update branches
+  * remove vanilaJsHelper
+  * repace class to prototype in tooltip ios8 bug
+  * tmp test z-indexes
+  * renamed folders
+  * Merge tag 'forminputsios' into develop
+  * WIP: refactoring structure to ITCSS - atomic design approach
+  * add extra information in documentation for tooltip
+  * code cleanup
+  * add new documentation for new tooltip
+  * move new tooltip to separate file
+  * add visibility to tooltip
+  * replace to another tooltip
+
 1.13.1 / 2017-01-23
 ==================
 
