@@ -33,5 +33,9 @@ if (! window.notification) {
     warn('window.notification is already registered.');
 }
 
+// Make sure these variables are initialized in case somebody uses them unintialized before they are loaded
+window.ut = window.ut || [];
+window.dataLayer = window.dataLayer || [];
+
 window.showcar = window.showcar || showcar;
 module.exports = showcar;
