@@ -286,9 +286,8 @@
 
 					<ul class="ndpl-nav__child-items ndpl-c-highlight"
 						v-if="group.components.length">
-
 						<li class="ndpl-nav__child-item ndpl-c-border-b ndpl-c-brand-bl-ca"
-							v-for="component in group.components">
+							v-for="component in group.components" v-if="!component.subgroup">
 							<a :href="'#' + component.id"
 							   class="ndpl-nav__component ndpl-nsc"
 							   :class="{ 'active': active_components.indexOf(component) >= 0 }"

@@ -586,6 +586,7 @@ new Vue({
                     // Set default variables
                     _this.$set('groups[' + i + '].components[' + j + '].id', 'group-' + group.name + '-component-' + group.components[j].name);
                     _this.$set('groups[' + i + '].components[' + j + '].group_id', 'group-' + group.name);
+                    _this.$set('groups[' + i + '].components[' + j + '].subroup', group.components[j].subgroup ? group.components[j].subgroup : null);
                     _this.$set('groups[' + i + '].components[' + j + '].active', false);
                     _this.$set('groups[' + i + '].components[' + j + '].options', group.components[j].options ? group.components[j].options : false);
                     _this.$set('groups[' + i + '].components[' + j + '].options.sample_always_show', group.components[j].options.sample_always_show ? group.components[j].options.sample_always_show : false);
