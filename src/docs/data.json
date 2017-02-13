@@ -1,0 +1,94 @@
+{
+    "project_logo": "AutoScout24.svg",
+    "project_favicon": "favicon.png",
+    "project_name": "",
+    "project_url": null,
+    "copyright_start_year": null,
+    "client_name": null,
+    "client_url": null,
+    "settings": {
+        "components_folder": "../06-components"
+    },
+    "creators": [
+        {
+            "name": null,
+            "url": null
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#00585C",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "ShowCar UI",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [
+            "https://web-experience.gitlab.io/showcar-ui/lib/showcar-ui.css",
+            "https://web-experience.gitlab.io/showcar-ui/lib/css/documentation.css"
+        ],
+        "js": []
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": "http://fonts.googleapis.com/css?family=Source+Sans%20Pro:400,600,700,900"
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "atoms",
+            "title": "Atoms",
+            "components": [
+                {
+                    "group": "atoms",
+                    "name": "button",
+                    "title": "Button",
+                    "width": "half"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-link",
+                    "title": "Button (link)",
+                    "width": "half"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-disabled",
+                    "title": "Button (disabled)",
+                    "width": "half"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-full-width",
+                    "title": "Button (full width)",
+                    "width": "half"
+                }
+            ]
+        }
+    ],
+    "version": "0.0.1"
+}
