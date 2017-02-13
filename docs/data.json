@@ -7,7 +7,7 @@
     "client_name": null,
     "client_url": null,
     "settings": {
-        "components_folder": "../src/06-components"
+        "components_folder": "components"
     },
     "creators": [
         {
