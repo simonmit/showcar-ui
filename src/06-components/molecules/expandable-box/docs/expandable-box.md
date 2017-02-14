@@ -3,4 +3,4 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
 
 #### Status:
 
-<p class="status refactor">Needs refactoring!</p>
+<p class="status refactor">Needs refactoring</p>
