@@ -13,7 +13,6 @@ button,
 input[type=submit] {
   font-family: inherit; //Source Sans Pro, sans-serif;
   cursor: pointer;
-  line-height: 1.5;
 
   &[disabled] {
     cursor: not-allowed;
