@@ -43,10 +43,6 @@ module.exports = function(grunt, options) {
                 new webpack.optimize.OccurenceOrderPlugin(),
                 uglify()
             ]
-        },
-        docs: {
-            output: { filename: 'docs/lib/showcar-ui.js' },
-            plugins: [new webpack.optimize.OccurenceOrderPlugin()]
         }
     };
 };

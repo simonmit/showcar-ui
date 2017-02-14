@@ -17,10 +17,6 @@ docs:
   description: 'Build the documentation'
   tasks:
     - 'copy:docs'
-    - 'sass:docs'
-    - 'pleeease:docs'
-    - 'webpack:docs'
-    - 'assemble:docs'
 
 dev:
   description: 'Dev task'
