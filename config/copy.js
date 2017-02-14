@@ -8,7 +8,8 @@ module.exports = {
     docs: {
         files: [
             { expand: true, cwd: './src/06-components/', src: ['atoms/**/docs/*', 'molecules/**/docs/*', 'organisms/**/docs/*'], dest: './docs/components/' },
-            { expand: true, cwd: './src/06-components/', src: ['atoms/description.md', 'molecules/description.md', 'organisms/description.md'], dest: './docs/components/' }
+            { expand: true, cwd: './src/06-components/', src: ['atoms/description.md', 'molecules/description.md', 'organisms/description.md'], dest: './docs/components/' },
+            { expand: true, cwd: './dist/', src: ['*.css', '*.js'], dest: './docs/lib/' }
         ]
     },
 
