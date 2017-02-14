@@ -15,13 +15,13 @@ showcar.spyNavigation = require('./06-components/organisms/spy-navigation/spy-na
 require('./06-components/atoms/custom-dropdown/custom-dropdown.js');
 
 $(_ => {
+    require('./05-layout/sticky/sticky.js')();
+    require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
     require('./06-components/atoms/collapse/collapse.js')();
     require('./06-components/atoms/stepper/stepper.js');
     require('./06-components/atoms/tooltip/tooltip.js')();
     require('./06-components/atoms/tooltip-2/tooltip-2.js')();
     require('./06-components/atoms/lightbox/lightbox.js');
-    require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
-    require('./06-components/organisms/sticky/sticky.js')();
     require('./06-components/organisms/navigation/navigation.js');
     require('./js/scroll/scroll.js');
 });
