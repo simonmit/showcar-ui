@@ -98,7 +98,6 @@
                     "group": "atoms",
                     "name": "collapse",
                     "title": "Collapse",
-                    "width": "full",
                     "options": {
                         "disable_code_sample": true
                     }
@@ -114,6 +113,26 @@
                     "subgroup": "collapse",
                     "name": "collapse-more-less",
                     "title": "Show more/less"
+                },
+                {
+                    "group": "atoms",
+                    "name": "color-selector",
+                    "title": "Color Selectors",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "color-selector",
+                    "name": "color-selector-radio",
+                    "title": "Color Selectors with radio buttons"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "color-selector",
+                    "name": "color-selector-checkbox",
+                    "title": "Color Selectors with checkboxes"
                 }
             ]
         }
