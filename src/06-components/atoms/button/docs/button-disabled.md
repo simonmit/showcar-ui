@@ -1,3 +1,3 @@
 #### Status:
 
-Complete
+<p class="status complete">Complete</p>

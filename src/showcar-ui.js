@@ -4,7 +4,7 @@ if (! window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 let warn = (msg) => window.console && window.console.warn(msg);
 
 window.Storage = require('showcar-storage');
-window.Pager = require('./06-components/organisms/pager/pager.js');
+window.Pager = require('./06-components/organisms/pagination/pagination.js');
 
 window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac: 0 };
 require('lazysizes');
@@ -15,15 +15,15 @@ showcar.spyNavigation = require('./06-components/organisms/spy-navigation/spy-na
 require('./06-components/atoms/custom-dropdown/custom-dropdown.js');
 
 $(_ => {
-    require('./06-components/organisms/navigation/navigation.js');
-    require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
-    require('./06-components/organisms/sticky/sticky.js')();
     require('./06-components/atoms/collapse/collapse.js')();
-    require('./06-components/atoms/scroll/scroll.js');
     require('./06-components/atoms/stepper/stepper.js');
     require('./06-components/atoms/tooltip/tooltip.js')();
     require('./06-components/atoms/tooltip-2/tooltip-2.js')();
     require('./06-components/atoms/lightbox/lightbox.js');
+    require('./06-components/atoms/rotating-arrow/rotating-arrow.js')(); // Todo: Check usages and remove
+    require('./06-components/organisms/sticky/sticky.js')();
+    require('./06-components/organisms/navigation/navigation.js');
+    require('./js/scroll/scroll.js');
 });
 
 // TODO: question for the guild

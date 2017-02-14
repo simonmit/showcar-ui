@@ -34,10 +34,11 @@
     },
     "assets": {
         "css": [
-            "https://web-experience.gitlab.io/showcar-ui/lib/showcar-ui.css",
-            "https://web-experience.gitlab.io/showcar-ui/lib/css/documentation.css"
+            "lib/showcar-ui.css"
         ],
-        "js": []
+        "js": [
+            "lib/showcar-ui.js"
+        ]
     },
     "font_libraries": {
         "typekit_code": null,
@@ -73,29 +74,25 @@
                     "group": "atoms",
                     "subgroup": "button",
                     "name": "button-default",
-                    "title": "Button (default)",
-                    "width": "half"
+                    "title": "Button (default)"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "button",
                     "name": "button-link",
-                    "title": "Button (link)",
-                    "width": "half"
+                    "title": "Button (link)"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "button",
                     "name": "button-disabled",
-                    "title": "Button (disabled)",
-                    "width": "half"
+                    "title": "Button (disabled)"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "button",
                     "name": "button-full-width",
-                    "title": "Button (full width)",
-                    "width": "half"
+                    "title": "Button (full width)"
                 }
             ]
         }
