@@ -93,6 +93,27 @@
                     "subgroup": "button",
                     "name": "button-full-width",
                     "title": "Button (full width)"
+                },
+                {
+                    "group": "atoms",
+                    "name": "collapse",
+                    "title": "Collapse",
+                    "width": "full",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "collapse",
+                    "name": "collapse-toggle",
+                    "title": "Toogle"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "collapse",
+                    "name": "collapse-more-less",
+                    "title": "Show more/less"
                 }
             ]
         }
