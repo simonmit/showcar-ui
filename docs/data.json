@@ -37,7 +37,8 @@
             "lib/showcar-ui.css"
         ],
         "js": [
-            "lib/showcar-ui.js"
+            "lib/showcar-ui.js",
+            "lib/showcar-icons.js"
         ]
     },
     "font_libraries": {
@@ -133,6 +134,38 @@
                     "subgroup": "color-selector",
                     "name": "color-selector-checkbox",
                     "title": "Color Selectors with checkboxes"
+                },
+                {
+                    "group": "atoms",
+                    "name": "custom-dropdown",
+                    "title": "Custom dropdown",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-simple",
+                    "title":"Simple custom dropdown"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-disabled",
+                    "title": "Disabled custom dropdown"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-icons",
+                    "title": "Custom dropdown with icons (one choice possible)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-icons-checkbox",
+                    "title": "Custom dropdown with icons (multiple choice possible)"
                 }
             ]
         }
