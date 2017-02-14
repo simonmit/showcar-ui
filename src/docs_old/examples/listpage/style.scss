@@ -1,0 +1,78 @@
+body {
+  background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 20px auto 40px;
+}
+
+.sc-row-breadcrumbs {
+    background-color: white;
+    padding: 5px;
+}
+
+.sc-grid-row + .sc-grid-row {
+  margin-top: 16px;
+}
+
+div.col-filter {
+  padding: 16px;
+  background-color: #ffffff;
+  form {
+    label,
+    .element-container {
+      margin-top: 16px;
+      display: inline-block;
+    }
+    button.btn-block:last-child {
+      margin-top: 16px;
+    }
+  }
+}
+
+div.col-list {
+  padding: 0;
+  ul.list {
+    > li {
+      background-color: #ffffff;
+      transition: background-color .5s ease-in-out;
+      a {
+        color: #000000;
+        div {
+          padding: 8px 0;
+          table {
+            width: 100%;
+            margin: 24px 0;
+            text-align: center;
+          }
+        }
+      }
+      + li {
+        margin-top: 8px;
+      }
+      &:hover {
+          background-color: #fafafa;
+      }
+    }
+  }
+}
+
+div.sc-collapse {
+  > label:not(:first-child) {
+    margin-top: 16px;
+    display: inline-block;
+  }
+}
+
+div.pagination {
+  margin: 8px 0;
+  a {
+    margin: 0 4px;
+    &.current {
+      cursor: default;
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Audi A4 amb. xenon navi</title>
+    <meta name="viewport" content="width=device-width">
+    <script data-pagespeed-no-defer pagespeed_no_defer>
+        !function(e){"use strict";function t(){var e=location.host,t="https://2w6tdi5ifg.execute-api.eu-west-1.amazonaws.com/default/event",n="https://5q1eumnb90.execute-api.eu-west-1.amazonaws.com/default/event";return e.indexOf("dev-www.")>-1?t:e.indexOf("www.")>-1?n:""}function n(e){var n=new XMLHttpRequest,r=t();""!==r&&(n.open("POST",r,!0),n.setRequestHeader("Content-Type","application/json"),n.send(e))}function r(){var e=location.pathname.split("/");return e[1]}window.onerror=function(t,a,o,s,i){var u={httpUri:location.href,httpReferrer:document.referrer,pagePath:r(),jsSrc:a||"",jsLine:o||"",jsColumn:s||"",browserOs:e.platform,browserUseragent:e.userAgent,errorStacktrace:i?i.stack:"",errorMessage:t||""};n(JSON.stringify(u))}}(navigator);
+
+        if (window.location.hash.indexOf('systemfonts') < 0) {
+            !function(){function e(e,t,n,o){function i(){document.write('<link rel="stylesheet" href="'+e+'">'),document.documentElement.className+=" "+o}function l(){localStorage["font-loaded-"+t]=Date.now()}function a(t){var n=document.createElement("link");n.media="only x",n.rel="stylesheet",n.href=e,n.onload=function(){this.media="all",this.onload=null,function e(){return document.body?void t():r(e)}()};var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)}function c(){m&&(d(m),m=null),m=r(function(){for(var e=!0,t=0;t<f.length;t+=s.length)e=e&&f[t].clientWidth===f[t+1].clientWidth&&f[t+1].clientWidth===f[t+2].clientWidth&&f[t].clientHeight===f[t+1].clientHeight&&f[t+1].clientHeight===f[t+2].clientHeight;e&&(document.documentElement.className+=" "+o,l(),f.forEach(function(e){e.parentNode.removeChild(e)}),c=function(){})})}var r=window.requestAnimationFrame||function(e){return setTimeout(e,50)},d=window.cancelAnimationFrame||clearTimeout,s=["sans-serif","serif","monospace"],f=[];try{var u=Date.now()-localStorage["font-loaded-"+t]<864e5;if(u)return l(),void i();a(function(){n.forEach(function(e){s.forEach(function(n){var o=document.createElement("div");o.innerHTML='<object style="display:block;position:absolute;top:0;right:0;bottom:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1;" type="text/html"></object>MXWmxwi0123',o.style.cssText="z-index:-1;overflow:hidden;pointer-events:none;position:absolute;visibility:hidden;display:inline-block;line-height:1;font-size:16px;font-family:"+n+";font-weight:"+e,document.body.appendChild(o),f.push(o);var i=o.querySelector("object");i.data="about:blank",i.onload=function(){this.contentDocument.defaultView.addEventListener("resize",c),c()},o.style.fontFamily=t+","+n})})})}catch(e){i(),console.error(e)}var m}if(!(location.href.indexOf("web-font=no")>=0)){var t=document.createElement("style");t.innerHTML=".font-loaded body{font-family:Source Sans Pro,sans-serif;}";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n),e("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext","Source Sans Pro",[400,600],"font-loaded")}}();
+        } else {
+            document.write('<style>body,[data-showcar-ui]{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, "Segoe UI Symbol" !important; }</style>');
+        }
+
+        /*! (C) Andrea Giammarchi - @WebReflection - Mit Style License */
+        (function(e){"use strict";function t(){return c.createDocumentFragment()}function n(e){return c.createElement(e)}function r(e,t){if(!e)throw new Error("Failed to construct "+t+": 1 argument required, but only 0 present.")}function i(e){if(e.length===1)return s(e[0]);for(var n=t(),r=R.call(e),i=0;i<e.length;i++)n.appendChild(s(r[i]));return n}function s(e){return typeof e=="string"?c.createTextNode(e):e}for(var o,u,a,f,l,c=e.document,h=Object.prototype.hasOwnProperty,p=Object.defineProperty||function(e,t,n){return h.call(n,"value")?e[t]=n.value:(h.call(n,"get")&&e.__defineGetter__(t,n.get),h.call(n,"set")&&e.__defineSetter__(t,n.set)),e},d=[].indexOf||function(t){var n=this.length;while(n--)if(this[n]===t)break;return n},v=function(e){if(!e)throw"SyntaxError";if(w.test(e))throw"InvalidCharacterError";return e},m=function(e){var t=typeof e.className=="undefined",n=t?e.getAttribute("class")||"":e.className,r=t||typeof n=="object",i=(r?t?n:n.baseVal:n).replace(b,"");i.length&&q.push.apply(this,i.split(w)),this._isSVG=r,this._=e},g={get:function(){return new m(this)},set:function(){}},y="dom4-tmp-".concat(Math.random()*+(new Date)).replace(".","-"),b=/^\s+|\s+$/g,w=/\s+/,E=" ",S="classList",x=function(t,n){if(this.contains(t))n||this.remove(t);else if(n===undefined||n)n=!0,this.add(t);return!!n},T=e.DocumentFragment&&DocumentFragment.prototype,N=e.Node,C=(N||Element).prototype,k=e.CharacterData||N,L=k&&k.prototype,A=e.DocumentType,O=A&&A.prototype,M=(e.Element||N||e.HTMLElement).prototype,_=e.HTMLSelectElement||n("select").constructor,D=_.prototype.remove,P=e.ShadowRoot,H=e.SVGElement,B=/ /g,j="\\ ",F=function(e){var t=e==="querySelectorAll";return function(n){var r,i,s,o,u,a,f=this.parentNode;if(f){for(s=this.getAttribute("id")||y,o=s===y?s:s.replace(B,j),a=n.split(","),i=0;i<a.length;i++)a[i]="#"+o+" "+a[i];n=a.join(",")}s===y&&this.setAttribute("id",s),u=(f||this)[e](n),s===y&&this.removeAttribute("id");if(t){i=u.length,r=new Array(i);while(i--)r[i]=u[i]}else r=u;return r}},I=function(e){"query"in e||(e.query=M.query),"queryAll"in e||(e.queryAll=M.queryAll)},q=["matches",M.matchesSelector||M.webkitMatchesSelector||M.khtmlMatchesSelector||M.mozMatchesSelector||M.msMatchesSelector||M.oMatchesSelector||function(t){var n=this.parentNode;return!!n&&-1<d.call(n.querySelectorAll(t),this)},"closest",function(t){var n=this,r;while((r=n&&n.matches)&&!n.matches(t))n=n.parentNode;return r?n:null},"prepend",function(){var t=this.firstChild,n=i(arguments);t?this.insertBefore(n,t):this.appendChild(n)},"append",function(){this.appendChild(i(arguments))},"before",function(){var t=this.parentNode;t&&t.insertBefore(i(arguments),this)},"after",function(){var t=this.parentNode,n=this.nextSibling,r=i(arguments);t&&(n?t.insertBefore(r,n):t.appendChild(r))},"replace",function(){this.replaceWith.apply(this,arguments)},"replaceWith",function(){var t=this.parentNode;t&&t.replaceChild(i(arguments),this)},"remove",function(){var t=this.parentNode;t&&t.removeChild(this)},"query",F("querySelector"),"queryAll",F("querySelectorAll")],R=q.slice,U=q.length;U;U-=2){u=q[U-2],u in M||(M[u]=q[U-1]),u==="remove"&&(_.prototype[u]=function(){return 0<arguments.length?D.apply(this,arguments):M.remove.call(this)}),/^(?:before|after|replace|replaceWith|remove)$/.test(u)&&(k&&!(u in L)&&(L[u]=q[U-1]),A&&!(u in O)&&(O[u]=q[U-1]));if(/^(?:append|prepend)$/.test(u))if(T)u in T||(T[u]=q[U-1]);else try{t().constructor.prototype[u]=q[U-1]}catch(z){}}I(c);if(T)I(T);else try{I(t().constructor.prototype)}catch(z){}P&&I(P.prototype),n("a").matches("a")||(M[u]=function(e){return function(n){return e.call(this.parentNode?this:t().appendChild(this),n)}}(M[u])),m.prototype={length:0,add:function(){for(var t=0,n;t<arguments.length;t++)n=arguments[t],this.contains(n)||q.push.call(this,u);this._isSVG?this._.setAttribute("class",""+this):this._.className=""+this},contains:function(e){return function(n){return U=e.call(this,u=v(n)),-1<U}}([].indexOf||function(e){U=this.length;while(U--&&this[U]!==e);return U}),item:function(t){return this[t]||null},remove:function(){for(var t=0,n;t<arguments.length;t++)n=arguments[t],this.contains(n)&&q.splice.call(this,U,1);this._isSVG?this._.setAttribute("class",""+this):this._.className=""+this},toggle:x,toString:function W(){return q.join.call(this,E)}},H&&!(S in H.prototype)&&p(H.prototype,S,g),S in c.documentElement?(f=n("div")[S],f.add("a","b","a"),"a b"!=f&&(a=f.constructor.prototype,"add"in a||(a=e.TemporaryTokenList.prototype),l=function(e){return function(){var t=0;while(t<arguments.length)e.call(this,arguments[t++])}},a.add=l(a.add),a.remove=l(a.remove),a.toggle=x)):p(M,S,g),"contains"in C||p(C,"contains",{value:function(e){while(e&&e!==this)e=e.parentNode;return this===e}}),"head"in c||p(c,"head",{get:function(){return o||(o=c.getElementsByTagName("head")[0])}}),function(){for(var t,n=e.requestAnimationFrame,r=e.cancelAnimationFrame,i=["o","ms","moz","webkit"],s=i.length;!r&&s--;)n=n||e[i[s]+"RequestAnimationFrame"],r=e[i[s]+"CancelAnimationFrame"]||e[i[s]+"CancelRequestAnimationFrame"];r||(n?(t=n,n=function(e){var n=!0;return t(function(){n&&e.apply(this,arguments)}),function(){n=!1}},r=function(e){e()}):(n=function(e){return setTimeout(e,15,15)},r=function(e){clearTimeout(e)})),e.requestAnimationFrame=n,e.cancelAnimationFrame=r}();try{new e.CustomEvent("?")}catch(z){e.CustomEvent=function(e,t){function n(n,i){var s=c.createEvent(e);if(typeof n!="string")throw new Error("An event name must be provided");return e=="Event"&&(s.initCustomEvent=r),i==null&&(i=t),s.initCustomEvent(n,i.bubbles,i.cancelable,i.detail),s}function r(e,t,n,r){this.initEvent(e,t,n),this.detail=r}return n}(e.CustomEvent?"CustomEvent":"Event",{bubbles:!1,cancelable:!1,detail:null})}try{new Event("_")}catch(z){z=function(e){function t(e,t){r(arguments.length,"Event");var n=c.createEvent("Event");return t||(t={}),n.initEvent(e,!!t.bubbles,!!t.cancelable),n}return t.prototype=e.prototype,t}(e.Event||function(){}),p(e,"Event",{value:z}),Event!==z&&(Event=z)}try{new KeyboardEvent("_",{})}catch(z){z=function(t){function a(e){for(var t=[],n=["ctrlKey","Control","shiftKey","Shift","altKey","Alt","metaKey","Meta","altGraphKey","AltGraph"],r=0;r<n.length;r+=2)e[n[r]]&&t.push(n[r+1]);return t.join(" ")}function f(e,t){for(var n in t)t.hasOwnProperty(n)&&!t.hasOwnProperty.call(e,n)&&(e[n]=t[n]);return e}function l(e,t,n){try{t[e]=n[e]}catch(r){}}function h(t,o){r(arguments.length,"KeyboardEvent"),o=f(o||{},i);var u=c.createEvent(s),h=o.ctrlKey,p=o.shiftKey,d=o.altKey,v=o.metaKey,m=o.altGraphKey,g=n>3?a(o):null,y=String(o.key),b=String(o.char),w=o.location,E=o.keyCode||(o.keyCode=y)&&y.charCodeAt(0)||0,S=o.charCode||(o.charCode=b)&&b.charCodeAt(0)||0,x=o.bubbles,T=o.cancelable,N=o.repeat,C=o.locale,k=o.view||e,L;o.which||(o.which=o.keyCode);if("initKeyEvent"in u)u.initKeyEvent(t,x,T,k,h,d,p,v,E,S);else if(0<n&&"initKeyboardEvent"in u){L=[t,x,T,k];switch(n){case 1:L.push(y,w,h,p,d,v,m);break;case 2:L.push(h,d,p,v,E,S);break;case 3:L.push(y,w,h,d,p,v,m);break;case 4:L.push(y,w,g,N,C);break;default:L.push(char,y,w,g,N,C)}u.initKeyboardEvent.apply(u,L)}else u.initEvent(t,x,T);for(y in u)i.hasOwnProperty(y)&&u[y]!==o[y]&&l(y,u,o);return u}var n=0,i={"char":"",key:"",location:0,ctrlKey:!1,shiftKey:!1,altKey:!1,metaKey:!1,altGraphKey:!1,repeat:!1,locale:navigator.language,detail:0,bubbles:!1,cancelable:!1,keyCode:0,charCode:0,which:0},s;try{var o=c.createEvent("KeyboardEvent");o.initKeyboardEvent("keyup",!1,!1,e,"+",3,!0,!1,!0,!1,!1),n=(o.keyIdentifier||o.key)=="+"&&(o.keyLocation||o.location)==3&&(o.ctrlKey?o.altKey?1:3:o.shiftKey?2:4)||9}catch(u){}return s=0<n?"KeyboardEvent":"Event",h.prototype=t.prototype,h}(e.KeyboardEvent||function(){}),p(e,"KeyboardEvent",{value:z}),KeyboardEvent!==z&&(KeyboardEvent=z)}try{new MouseEvent("_",{})}catch(z){z=function(t){function n(t,n){r(arguments.length,"MouseEvent");var i=c.createEvent("MouseEvent");return n||(n={}),i.initMouseEvent(t,!!n.bubbles,!!n.cancelable,n.view||e,n.detail||1,n.screenX||0,n.screenY||0,n.clientX||0,n.clientY||0,!!n.ctrlKey,!!n.altKey,!!n.shiftKey,!!n.metaKey,n.button||0,n.relatedTarget||null),i}return n.prototype=t.prototype,n}(e.MouseEvent||function(){}),p(e,"MouseEvent",{value:z}),MouseEvent!==z&&(MouseEvent=z)}})(window),function(e){"use strict";function n(){}function r(e,t,n){function i(e){i.once&&(e.currentTarget.removeEventListener(e.type,t,i),i.removed=!0),i.passive&&(e.preventDefault=r.preventDefault),typeof i.callback=="function"?i.callback.call(this,e):i.callback&&i.callback.handleEvent(e),i.passive&&delete e.preventDefault}return i.type=e,i.callback=t,i.capture=!!n.capture,i.passive=!!n.passive,i.once=!!n.once,i.removed=!1,i}var t=e.WeakMap||function(){function s(e,i,s){n=s,t=!1,r=undefined,e.dispatchEvent(i)}function o(e){this.value=e}function u(){e++,this.__ce__=new i("@DOMMap:"+e+Math.random())}var e=0,t=!1,n=!1,r;return o.prototype.handleEvent=function(i){t=!0,n?i.currentTarget.removeEventListener(i.type,this,!1):r=this.value},u.prototype={constructor:u,"delete":function(n){return s(n,this.__ce__,!0),t},get:function(t){s(t,this.__ce__,!1);var n=r;return r=undefined,n},has:function(n){return s(n,this.__ce__,!1),t},set:function(t,n){return s(t,this.__ce__,!0),t.addEventListener(this.__ce__.type,new o(n),!1),this}},u}();n.prototype=(Object.create||Object)(null),r.preventDefault=function(){};var i=e.CustomEvent,s=Object.prototype.hasOwnProperty,o=e.dispatchEvent,u=e.addEventListener,a=e.removeEventListener,f=0,l=function(){f++},c=[].indexOf||function(t){var n=this.length;while(n--)if(this[n]===t)break;return n},h=function(e){return"".concat(e.capture?"1":"0",e.passive?"1":"0",e.once?"1":"0")},p,d;try{u("_",l,{once:!0}),o(new i("_")),o(new i("_")),a("_",l,{once:!0})}catch(v){}f!==1&&function(){function s(e){return function(s,o,u){if(u&&typeof u!="boolean"){var a=i.get(this),f=h(u),l,p,d;a||i.set(this,a=new n),s in a||(a[s]={handler:[],wrap:[]}),p=a[s],l=c.call(p.handler,o),l<0?(l=p.handler.push(o)-1,p.wrap[l]=d=new n):d=p.wrap[l],f in d||(d[f]=r(s,o,u),e.call(this,s,d[f],d[f].capture))}else e.call(this,s,o,u)}}function o(e){return function(n,r,s){if(s&&typeof s!="boolean"){var o=i.get(this),u,a,f,l;if(o&&n in o){f=o[n],a=c.call(f.handler,r);if(-1<a){u=h(s),l=f.wrap[a];if(u in l){e.call(this,n,l[u],l[u].capture),delete l[u];for(u in l)return;f.handler.splice(a,1),f.wrap.splice(a,1),f.handler.length===0&&delete o[n]}}}}else e.call(this,n,r,s)}}var i=new t;p=function(e){if(!e)return;var t=e.prototype;t.addEventListener=s(t.addEventListener),t.removeEventListener=o(t.removeEventListener)},e.EventTarget?p(EventTarget):(p(e.Text),p(e.Element||e.HTMLElement),p(e.HTMLDocument),p(e.Window||{prototype:e}),p(e.XMLHttpRequest))}()}(self);
+        /*! (C) WebReflection Mit Style License */
+        (function(e,t,n,r){"use strict";function rt(e,t){for(var n=0,r=e.length;n<r;n++)vt(e[n],t)}function it(e){for(var t=0,n=e.length,r;t<n;t++)r=e[t],nt(r,b[ot(r)])}function st(e){return function(t){j(t)&&(vt(t,e),rt(t.querySelectorAll(w),e))}}function ot(e){var t=e.getAttribute("is"),n=e.nodeName.toUpperCase(),r=S.call(y,t?v+t.toUpperCase():d+n);return t&&-1<r&&!ut(n,t)?-1:r}function ut(e,t){return-1<w.indexOf(e+'[is="'+t+'"]')}function at(e){var t=e.currentTarget,n=e.attrChange,r=e.attrName,i=e.target;Q&&(!i||i===t)&&t.attributeChangedCallback&&r!=="style"&&e.prevValue!==e.newValue&&t.attributeChangedCallback(r,n===e[a]?null:e.prevValue,n===e[l]?null:e.newValue)}function ft(e){var t=st(e);return function(e){X.push(t,e.target)}}function lt(e){K&&(K=!1,e.currentTarget.removeEventListener(h,lt)),rt((e.target||t).querySelectorAll(w),e.detail===o?o:s),B&&pt()}function ct(e,t){var n=this;q.call(n,e,t),G.call(n,{target:n})}function ht(e,t){D(e,t),et?et.observe(e,z):(J&&(e.setAttribute=ct,e[i]=Z(e),e.addEventListener(p,G)),e.addEventListener(c,at)),e.createdCallback&&Q&&(e.created=!0,e.createdCallback(),e.created=!1)}function pt(){for(var e,t=0,n=F.length;t<n;t++)e=F[t],E.contains(e)||(n--,F.splice(t--,1),vt(e,o))}function dt(e){throw new Error("A "+e+" type is already registered")}function vt(e,t){var n,r=ot(e);-1<r&&(tt(e,b[r]),r=0,t===s&&!e[s]?(e[o]=!1,e[s]=!0,r=1,B&&S.call(F,e)<0&&F.push(e)):t===o&&!e[o]&&(e[s]=!1,e[o]=!0,r=1),r&&(n=e[t+"Callback"])&&n.call(e))}if(r in t)return;var i="__"+r+(Math.random()*1e5>>0),s="attached",o="detached",u="extends",a="ADDITION",f="MODIFICATION",l="REMOVAL",c="DOMAttrModified",h="DOMContentLoaded",p="DOMSubtreeModified",d="<",v="=",m=/^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$/,g=["ANNOTATION-XML","COLOR-PROFILE","FONT-FACE","FONT-FACE-SRC","FONT-FACE-URI","FONT-FACE-FORMAT","FONT-FACE-NAME","MISSING-GLYPH"],y=[],b=[],w="",E=t.documentElement,S=y.indexOf||function(e){for(var t=this.length;t--&&this[t]!==e;);return t},x=n.prototype,T=x.hasOwnProperty,N=x.isPrototypeOf,C=n.defineProperty,k=n.getOwnPropertyDescriptor,L=n.getOwnPropertyNames,A=n.getPrototypeOf,O=n.setPrototypeOf,M=!!n.__proto__,_=n.create||function mt(e){return e?(mt.prototype=e,new mt):this},D=O||(M?function(e,t){return e.__proto__=t,e}:L&&k?function(){function e(e,t){for(var n,r=L(t),i=0,s=r.length;i<s;i++)n=r[i],T.call(e,n)||C(e,n,k(t,n))}return function(t,n){do e(t,n);while((n=A(n))&&!N.call(n,t));return t}}():function(e,t){for(var n in t)e[n]=t[n];return e}),P=e.MutationObserver||e.WebKitMutationObserver,H=(e.HTMLElement||e.Element||e.Node).prototype,B=!N.call(H,E),j=B?function(e){return e.nodeType===1}:function(e){return N.call(H,e)},F=B&&[],I=H.cloneNode,q=H.setAttribute,R=H.removeAttribute,U=t.createElement,z=P&&{attributes:!0,characterData:!0,attributeOldValue:!0},W=P||function(e){J=!1,E.removeEventListener(c,W)},X,V=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,10)},$=!1,J=!0,K=!0,Q=!0,G,Y,Z,et,tt,nt;O||M?(tt=function(e,t){N.call(t,e)||ht(e,t)},nt=ht):(tt=function(e,t){e[i]||(e[i]=n(!0),ht(e,t))},nt=tt),B?(J=!1,function(){var e=k(H,"addEventListener"),t=e.value,n=function(e){var t=new CustomEvent(c,{bubbles:!0});t.attrName=e,t.prevValue=this.getAttribute(e),t.newValue=null,t[l]=t.attrChange=2,R.call(this,e),this.dispatchEvent(t)},r=function(e,t){var n=this.hasAttribute(e),r=n&&this.getAttribute(e),i=new CustomEvent(c,{bubbles:!0});q.call(this,e,t),i.attrName=e,i.prevValue=n?r:null,i.newValue=t,n?i[f]=i.attrChange=1:i[a]=i.attrChange=0,this.dispatchEvent(i)},s=function(e){var t=e.currentTarget,n=t[i],r=e.propertyName,s;n.hasOwnProperty(r)&&(n=n[r],s=new CustomEvent(c,{bubbles:!0}),s.attrName=n.name,s.prevValue=n.value||null,s.newValue=n.value=t[r]||null,s.prevValue==null?s[a]=s.attrChange=0:s[f]=s.attrChange=1,t.dispatchEvent(s))};e.value=function(e,o,u){e===c&&this.attributeChangedCallback&&this.setAttribute!==r&&(this[i]={className:{name:"class",value:this.className}},this.setAttribute=r,this.removeAttribute=n,t.call(this,"propertychange",s)),t.call(this,e,o,u)},C(H,"addEventListener",e)}()):P||(E.addEventListener(c,W),E.setAttribute(i,1),E.removeAttribute(i),J&&(G=function(e){var t=this,n,r,s;if(t===e.target){n=t[i],t[i]=r=Z(t);for(s in r){if(!(s in n))return Y(0,t,s,n[s],r[s],a);if(r[s]!==n[s])return Y(1,t,s,n[s],r[s],f)}for(s in n)if(!(s in r))return Y(2,t,s,n[s],r[s],l)}},Y=function(e,t,n,r,i,s){var o={attrChange:e,currentTarget:t,attrName:n,prevValue:r,newValue:i};o[s]=e,at(o)},Z=function(e){for(var t,n,r={},i=e.attributes,s=0,o=i.length;s<o;s++)t=i[s],n=t.name,n!=="setAttribute"&&(r[n]=t.value);return r})),t[r]=function(n,r){c=n.toUpperCase(),$||($=!0,P?(et=function(e,t){function n(e,t){for(var n=0,r=e.length;n<r;t(e[n++]));}return new P(function(r){for(var i,s,o,u=0,a=r.length;u<a;u++)i=r[u],i.type==="childList"?(n(i.addedNodes,e),n(i.removedNodes,t)):(s=i.target,Q&&s.attributeChangedCallback&&i.attributeName!=="style"&&(o=s.getAttribute(i.attributeName),o!==i.oldValue&&s.attributeChangedCallback(i.attributeName,i.oldValue,o)))})}(st(s),st(o)),et.observe(t,{childList:!0,subtree:!0})):(X=[],V(function E(){while(X.length)X.shift().call(null,X.shift());V(E)}),t.addEventListener("DOMNodeInserted",ft(s)),t.addEventListener("DOMNodeRemoved",ft(o))),t.addEventListener(h,lt),t.addEventListener("readystatechange",lt),t.createElement=function(e,n){var r=U.apply(t,arguments),i=""+e,s=S.call(y,(n?v:d)+(n||i).toUpperCase()),o=-1<s;return n&&(r.setAttribute("is",n=n.toLowerCase()),o&&(o=ut(i.toUpperCase(),n))),Q=!t.createElement.innerHTMLHelper,o&&nt(r,b[s]),r},H.cloneNode=function(e){var t=I.call(this,!!e),n=ot(t);return-1<n&&nt(t,b[n]),e&&it(t.querySelectorAll(w)),t}),-2<S.call(y,v+c)+S.call(y,d+c)&&dt(n);if(!m.test(c)||-1<S.call(g,c))throw new Error("The type "+n+" is invalid");var i=function(){return f?t.createElement(l,c):t.createElement(l)},a=r||x,f=T.call(a,u),l=f?r[u].toUpperCase():c,c,p;return f&&-1<S.call(y,d+l)&&dt(l),p=y.push((f?v:d)+c)-1,w=w.concat(w.length?",":"",f?l+'[is="'+n.toLowerCase()+'"]':l),i.prototype=b[p]=T.call(a,"prototype")?a.prototype:_(H),rt(t.querySelectorAll(w),s),i}})(window,document,Object,"registerElement");
+        Array.from||(Array.from=function(r){"use strict";return[].slice.call(r)}),Array.of||(Array.of=function(){return Array.prototype.slice.call(arguments)}),Array.prototype.includes||(Array.prototype.includes=function(r){"use strict";if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");var t=Object(this),e=parseInt(t.length,10)||0;if(0===e)return!1;var n,o=parseInt(arguments[1],10)||0;o>=0?n=o:(n=e+o,n<0&&(n=0));for(var a;n<e;){if(a=t[n],r===a||r!==r&&a!==a)return!0;n++}return!1});
+        "function"!=typeof Object.assign&&(Object.assign=function(n){"use strict";if(null==n)throw new TypeError("Cannot convert undefined or null to object");n=Object(n);for(var t=1;t<arguments.length;t++){var r=arguments[t];if(null!=r)for(var e in r)Object.prototype.hasOwnProperty.call(r,e)&&(n[e]=r[e])}return n});
+        !function(e){function t(e,t){function i(e){return this&&this.constructor===i?(this._keys=[],this._values=[],this._itp=[],this.objectOnly=t,void(e&&n.call(this,e))):new i(e)}return t||g(e,"size",{get:_}),e.constructor=i,i.prototype=e,i}function n(e){this.add?e.forEach(this.add,this):e.forEach(function(e){this.set(e[0],e[1])},this)}function i(e){return this.has(e)&&(this._keys.splice(k,1),this._values.splice(k,1),this._itp.forEach(function(e){k<e[0]&&e[0]--})),-1<k}function s(e){return this.has(e)?this._values[k]:void 0}function u(e,t){if(this.objectOnly&&t!==Object(t))throw new TypeError("Invalid value used as weak collection key");if(t!=t||0===t)for(k=e.length;k--&&!w(e[k],t););else k=e.indexOf(t);return-1<k}function a(e){return u.call(this,this._values,e)}function h(e){return u.call(this,this._keys,e)}function r(e,t){return this.has(e)?this._values[k]=t:this._values[this._keys.push(e)-1]=t,this}function o(e){return this.has(e)||this._values.push(e),this}function l(){(this._keys||0).length=this._values.length=0}function f(){return v(this._itp,this._keys)}function c(){return v(this._itp,this._values)}function d(){return v(this._itp,this._keys,this._values)}function p(){return v(this._itp,this._values,this._values)}function v(e,t,n){var i=[0],s=!1;return e.push(i),{next:function(){var u,a=i[0];return!s&&a<t.length?(u=n?[t[a],n[a]]:t[a],i[0]++):(s=!0,e.splice(e.indexOf(i),1)),{done:s,value:u}}}}function _(){return this._values.length}function y(e,t){for(var n=this.entries();;){var i=n.next();if(i.done)break;e.call(t,i.value[1],i.value[0],this)}}var k,g=Object.defineProperty,w=function(e,t){return isNaN(e)?isNaN(t):e===t};"undefined"==typeof WeakMap&&(e.WeakMap=t({delete:i,clear:l,get:s,has:h,set:r},!0)),"undefined"!=typeof Map&&"function"==typeof(new Map).values&&(new Map).values().next||(e.Map=t({delete:i,has:h,get:s,set:r,keys:f,values:c,entries:d,forEach:y,clear:l})),"undefined"!=typeof Set&&"function"==typeof(new Set).values&&(new Set).values().next||(e.Set=t({has:a,add:o,delete:i,clear:l,keys:c,values:c,entries:p,forEach:y})),"undefined"==typeof WeakSet&&(e.WeakSet=t({delete:i,add:o,clear:l,has:a},!0))}("undefined"!=typeof exports&&"undefined"!=typeof global?global:window);
+        !function(){function e(e){global.setImmediate?setImmediate(e):global.importScripts?setTimeout(e):(r++,n[r]=e,global.postMessage(r,"*"))}function t(r){"use strict";function n(e,t,r,n){if(2==u)return n();if("object"!=typeof a&&"function"!=typeof a||"function"!=typeof e)n();else try{var o=0;e.call(a,function(e){o++||(a=e,t())},function(e){o++||(a=e,r())})}catch(e){a=e,r()}}function o(){var e;try{e=a&&a.then}catch(e){return a=e,u=2,o()}n(e,function(){u=1,o()},function(){u=2,o()},function(){try{1==u&&"function"==typeof i?a=i(a):2==u&&"function"==typeof c&&(a=c(a),u=1)}catch(e){return a=e,l()}a==f?(a=TypeError(),l()):n(e,function(){l(3)},l,function(){l(1==u&&3)})})}if("function"!=typeof r&&void 0!=r)throw TypeError();if("object"!=typeof this||this&&this.then)throw TypeError();var i,c,f=this,u=0,a=0,s=[];f.promise=f,f.resolve=function(t){return i=f.fn,c=f.er,u||(a=t,u=1,e(o)),f},f.reject=function(t){return i=f.fn,c=f.er,u||(a=t,u=2,e(o)),f},f._d=1,f.then=function(e,r){if(1!=this._d)throw TypeError();var n=new t;return n.fn=e,n.er=r,3==u?n.resolve(a):4==u?n.reject(a):s.push(n),n},f.catch=function(e){return f.then(null,e)};var l=function(e){u=e||4,s.map(function(e){3==u&&e.resolve(a)||e.reject(a)})};try{"function"==typeof r&&r(f.resolve,f.reject)}catch(e){f.reject(e)}return f}global=this;var r=1,n={},o=!1;global.setImmediate||global.addEventListener("message",function(t){if(t.source==global)if(o)e(n[t.data]);else{o=!0;try{n[t.data]()}catch(e){}delete n[t.data],o=!1}}),t.resolve=function(e){if(1!=this._d)throw TypeError();return e instanceof t?e:new t(function(t){t(e)})},t.reject=function(e){if(1!=this._d)throw TypeError();return new t(function(t,r){r(e)})},t.all=function(e){function r(t,o){if(o)return n.resolve(o);if(t)return n.reject(t);var i=e.reduce(function(e,t){return t&&t.then?e+1:e},0);0==i&&n.resolve(e),e.map(function(t,n){t&&t.then&&t.then(function(t){return e[n]=t,r(),t},r)})}if(1!=this._d)throw TypeError();if(!(e instanceof Array))return t.reject(TypeError());var n=new t;return r(),n},t.race=function(e){function r(t,o){if(o)return n.resolve(o);if(t)return n.reject(t);var i=e.reduce(function(e,t){return t&&t.then?e+1:e},0);0==i&&n.resolve(e),e.map(function(e,t){e&&e.then&&e.then(function(e){r(null,e)},r)})}if(1!=this._d)throw TypeError();if(!(e instanceof Array))return t.reject(TypeError());if(0==e.length)return new t;var n=new t;return r(),n},t._d=1,"undefined"!=typeof module?module.exports=t:global.Promise=global.Promise||t}();
+        !function(t){"use strict";function e(t){if("string"!=typeof t&&(t=String(t)),/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(t))throw new TypeError("Invalid character in header field name");return t.toLowerCase()}function r(t){return"string"!=typeof t&&(t=String(t)),t}function o(t){var e={next:function(){var e=t.shift();return{done:void 0===e,value:e}}};return b.iterable&&(e[Symbol.iterator]=function(){return e}),e}function n(t){this.map={},t instanceof n?t.forEach(function(t,e){this.append(e,t)},this):t&&Object.getOwnPropertyNames(t).forEach(function(e){this.append(e,t[e])},this)}function i(t){return t.bodyUsed?Promise.reject(new TypeError("Already read")):void(t.bodyUsed=!0)}function s(t){return new Promise(function(e,r){t.onload=function(){e(t.result)},t.onerror=function(){r(t.error)}})}function a(t){var e=new FileReader,r=s(e);return e.readAsArrayBuffer(t),r}function u(t){var e=new FileReader,r=s(e);return e.readAsText(t),r}function f(t){if(t.slice)return t.slice(0);var e=new Uint8Array(t.byteLength);return e.set(new Uint8Array(t)),e.buffer}function h(){return this.bodyUsed=!1,this._initBody=function(t){if(this._bodyInit=t,t)if("string"==typeof t)this._bodyText=t;else if(b.blob&&Blob.prototype.isPrototypeOf(t))this._bodyBlob=t;else if(b.formData&&FormData.prototype.isPrototypeOf(t))this._bodyFormData=t;else if(b.searchParams&&URLSearchParams.prototype.isPrototypeOf(t))this._bodyText=t.toString();else if(b.arrayBuffer&&b.blob&&w(t))this._bodyArrayBuffer=f(t.buffer),this._bodyInit=new Blob([this._bodyArrayBuffer]);else{if(!b.arrayBuffer||!ArrayBuffer.prototype.isPrototypeOf(t)&&!v(t))throw new Error("unsupported BodyInit type");this._bodyArrayBuffer=f(t)}else this._bodyText="";this.headers.get("content-type")||("string"==typeof t?this.headers.set("content-type","text/plain;charset=UTF-8"):this._bodyBlob&&this._bodyBlob.type?this.headers.set("content-type",this._bodyBlob.type):b.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)&&this.headers.set("content-type","application/x-www-form-urlencoded;charset=UTF-8"))},b.blob&&(this.blob=function(){var t=i(this);if(t)return t;if(this._bodyBlob)return Promise.resolve(this._bodyBlob);if(this._bodyArrayBuffer)return Promise.resolve(new Blob([this._bodyArrayBuffer]));if(this._bodyFormData)throw new Error("could not read FormData body as blob");return Promise.resolve(new Blob([this._bodyText]))}),this.text=function(){var t=i(this);if(t)return t;if(this._bodyBlob)return u(this._bodyBlob);if(this._bodyArrayBuffer){var e=new Uint8Array(this._bodyArrayBuffer),r=String.fromCharCode.apply(null,e);return Promise.resolve(r)}if(this._bodyFormData)throw new Error("could not read FormData body as text");return Promise.resolve(this._bodyText)},b.arrayBuffer&&(this.arrayBuffer=function(){return this._bodyArrayBuffer?i(this)||Promise.resolve(this._bodyArrayBuffer):this.blob().then(a)}),b.formData&&(this.formData=function(){return this.text().then(p)}),this.json=function(){return this.text().then(JSON.parse)},this}function d(t){var e=t.toUpperCase();return B.indexOf(e)>-1?e:t}function y(t,e){e=e||{};var r=e.body;if("string"==typeof t)this.url=t;else{if(t.bodyUsed)throw new TypeError("Already read");this.url=t.url,this.credentials=t.credentials,e.headers||(this.headers=new n(t.headers)),this.method=t.method,this.mode=t.mode,r||null==t._bodyInit||(r=t._bodyInit,t.bodyUsed=!0)}if(this.credentials=e.credentials||this.credentials||"omit",!e.headers&&this.headers||(this.headers=new n(e.headers)),this.method=d(e.method||this.method||"GET"),this.mode=e.mode||this.mode||null,this.referrer=null,("GET"===this.method||"HEAD"===this.method)&&r)throw new TypeError("Body not allowed for GET or HEAD requests");this._initBody(r)}function p(t){var e=new FormData;return t.trim().split("&").forEach(function(t){if(t){var r=t.split("="),o=r.shift().replace(/\+/g," "),n=r.join("=").replace(/\+/g," ");e.append(decodeURIComponent(o),decodeURIComponent(n))}}),e}function l(t){var e=new n;return t.split("\r\n").forEach(function(t){var r=t.split(":"),o=r.shift().trim();if(o){var n=r.join(":").trim();e.append(o,n)}}),e}function c(t,e){e||(e={}),this.type="default",this.status="status"in e?e.status:200,this.ok=this.status>=200&&this.status<300,this.statusText="statusText"in e?e.statusText:"OK",this.headers=new n(e.headers),this.url=e.url||"",this._initBody(t)}if(!t.fetch){var b={searchParams:"URLSearchParams"in t,iterable:"Symbol"in t&&"iterator"in Symbol,blob:"FileReader"in t&&"Blob"in t&&function(){try{return new Blob,!0}catch(t){return!1}}(),formData:"FormData"in t,arrayBuffer:"ArrayBuffer"in t};if(b.arrayBuffer)var m=["[object Int8Array]","[object Uint8Array]","[object Uint8ClampedArray]","[object Int16Array]","[object Uint16Array]","[object Int32Array]","[object Uint32Array]","[object Float32Array]","[object Float64Array]"],w=function(t){return t&&DataView.prototype.isPrototypeOf(t)},v=ArrayBuffer.isView||function(t){return t&&m.indexOf(Object.prototype.toString.call(t))>-1};n.prototype.append=function(t,o){t=e(t),o=r(o);var n=this.map[t];n||(n=[],this.map[t]=n),n.push(o)},n.prototype.delete=function(t){delete this.map[e(t)]},n.prototype.get=function(t){var r=this.map[e(t)];return r?r[0]:null},n.prototype.getAll=function(t){return this.map[e(t)]||[]},n.prototype.has=function(t){return this.map.hasOwnProperty(e(t))},n.prototype.set=function(t,o){this.map[e(t)]=[r(o)]},n.prototype.forEach=function(t,e){Object.getOwnPropertyNames(this.map).forEach(function(r){this.map[r].forEach(function(o){t.call(e,o,r,this)},this)},this)},n.prototype.keys=function(){var t=[];return this.forEach(function(e,r){t.push(r)}),o(t)},n.prototype.values=function(){var t=[];return this.forEach(function(e){t.push(e)}),o(t)},n.prototype.entries=function(){var t=[];return this.forEach(function(e,r){t.push([r,e])}),o(t)},b.iterable&&(n.prototype[Symbol.iterator]=n.prototype.entries);var B=["DELETE","GET","HEAD","OPTIONS","POST","PUT"];y.prototype.clone=function(){return new y(this,{body:this._bodyInit})},h.call(y.prototype),h.call(c.prototype),c.prototype.clone=function(){return new c(this._bodyInit,{status:this.status,statusText:this.statusText,headers:new n(this.headers),url:this.url})},c.error=function(){var t=new c(null,{status:0,statusText:""});return t.type="error",t};var _=[301,302,303,307,308];c.redirect=function(t,e){if(_.indexOf(e)===-1)throw new RangeError("Invalid status code");return new c(null,{status:e,headers:{location:t}})},t.Headers=n,t.Request=y,t.Response=c,t.fetch=function(t,e){return new Promise(function(r,o){var n=new y(t,e),i=new XMLHttpRequest;i.onload=function(){var t={status:i.status,statusText:i.statusText,headers:l(i.getAllResponseHeaders()||"")};t.url="responseURL"in i?i.responseURL:t.headers.get("X-Request-URL");var e="response"in i?i.response:i.responseText;r(new c(e,t))},i.onerror=function(){o(new TypeError("Network request failed"))},i.ontimeout=function(){o(new TypeError("Network request failed"))},i.open(n.method,n.url,!0),"include"===n.credentials&&(i.withCredentials=!0),"responseType"in i&&b.blob&&(i.responseType="blob"),n.headers.forEach(function(t,e){i.setRequestHeader(e,t)}),i.send("undefined"==typeof n._bodyInit?null:n._bodyInit)})},t.fetch.polyfill=!0}}("undefined"!=typeof self?self:this);
+
+        (function(w) {
+            if(!w.__proto__){l('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')}
+            if(!w.HTMLPictureElement){l('/assets/external/showcar-ui/unknown_build_type/unknown_commit_hash/picturefill.js',1)}
+            function l(url,a){document.write('<script '+(a&&'async')+' src="'+url+'"></'+'script>')}
+        }(window))
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext">
+    <link rel="stylesheet" href="../../lib/showcar-ui.css">
+    <style>as24-gallery{display:block;position:relative;overflow:hidden}as24-gallery .left,as24-gallery .right{position:absolute;top:0;bottom:0;z-index:2;min-width:40px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;background-color:rgba(0,0,0,.5);background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI4IDQ4Ij48c3R5bGU+LnN0MHtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNmZmZ9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjcuNCAyNC4xTDMuMSA0OCAwIDQ1LjFsMjEuNC0yMUwwIDMuMSAzLjEgMHoiLz48L3N2Zz4=);background-repeat:no-repeat;background-position:center center;-webkit-transition:background-color 0.3s, opacity 0.3s, width 0.3s;transition:background-color 0.3s, opacity 0.3s, width 0.3s;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}as24-gallery .left.pagination-small,as24-gallery .right.pagination-small{height:60px;top:0;bottom:0;margin-top:auto;margin-bottom:auto;background-size:16px 28px}as24-gallery .left:before,as24-gallery .right:before{content:'';display:inline-block;height:100%;vertical-align:middle}as24-gallery .left:hover,as24-gallery .right:hover{background-color:rgba(0,0,0,.8)}as24-gallery .left{left:0;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}as24-gallery .right{right:0}as24-gallery .pager{position:absolute;z-index:1;bottom:0;width:60px;background:rgba(0,0,0,.5);text-align:center;color:#fff}as24-gallery as24-gallery-item{display:block;box-sizing:border-box;position:absolute;top:0;bottom:0;margin:0 2px;-webkit-transition:left .2s;transition:left .2s;-webkit-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out}as24-gallery as24-gallery-item img{max-width:100%;max-height:100%;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto}body{margin:0}as24-carousel .as24-pagination-button:hover:not(.hide){background-color:rgba(0,0,0,.8)}[data-item-name="description"],[data-item-name="car-details"],.cldt-car-basic-data ul,.cldt-car-basic-data .cldt-car-basic-data-watchlist-button,[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"],.cldt-co2emission-legal-notice{padding-left:16px;padding-right:16px}@media all and (max-width:767px){[data-item-name="description"],[data-item-name="car-details"],.cldt-car-basic-data ul,.cldt-car-basic-data .cldt-car-basic-data-watchlist-button,[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"],.cldt-co2emission-legal-notice{padding-left:12px;padding-right:12px}}.cldt-car-basic-data .btn-watchlist,[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"],.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist,.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-print{width:100%;line-height:1.5}.cldt-item{padding:28px 16px}@media all and (max-width:767px){.cldt-item{padding:28px 16px}}.cldt-item h2{float:left;margin-bottom:20px}.cldt-item h3:not(:first-child){margin:28px auto 0 auto}.cldt-item dl:before,.cldt-item dl:after{content:" ";display:table}.cldt-item dl:after{clear:both}.cldt-item dl dt{color:#949494}.cldt-item dl dd,.cldt-item dl dt{float:left;width:50%;word-wrap:break-word;padding-top:4px}.cldt-item p{max-width:450px}.cldt-item .cldt-collapsable{cursor:pointer}.cldt-item .cldt-collapsable:before,.cldt-item .cldt-collapsable:after{content:" ";display:table}.cldt-item .cldt-collapsable:after{clear:both}.cldt-item .cldt-collapsable as24-icon{float:right;width:13px}.cldt-item .cldt-collapsable as24-icon svg{fill:#949494;-webkit-transition:.4s;transition:.4s;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.cldt-item.in dl:not(:first-child),.cldt-item.in div:not(:first-child){display:none}.cldt-headline{background-color:#f4f4f4;margin-bottom:16px}.cldt-headline h1,.cldt-headline h4{padding:0 16px;-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;white-space:normal!important}@media all and (max-width:767px){.cldt-headline h4{display:none}}.cldt-headline .cldt-breadcrumbs{margin-top:10px}@media all and (min-width:1024px){.cldt-gallery-container{padding:20px 16px 16px 16px;float:left;width:60%}}@media all and (max-width:1023px){.cldt-gallery-container{padding-left:0;padding-right:0}}@media all and (max-width:767px){.cldt-gallery-container img{width:100%;max-height:none}}.cldt-gallery-container as24-gallery{height:480px}.cldt-gallery-container as24-gallery as24-gallery-item{height:480px;width:640px}@media all and (max-width:767px){.cldt-gallery-container as24-gallery as24-gallery-item{width:100%}}body{background-color:#f4f4f4}@media all and (min-width:1100px) and (max-width:1440px){.sc-content-container{margin:auto}}.cldt-toplink{background-color:#f4f4f4;border-top:1px solid #dcdcdc;padding:20px 16px;text-align:right;margin-top:40px}@media all and (max-width:767px){.cldt-toplink{padding:20px}}.cldt-toplink div{max-width:1100px;margin:auto}.cldt-toplink div .arrow svg{width:16px;fill:#1e4c7a;margin-right:8px;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}[data-item-name="description"] div[data-type="description"]{word-wrap:break-word}[data-item-name="description"] div[data-type="description"] strong{font-weight:600}[data-item-name="description"] div[data-type="description"]{max-height:500px;overflow:hidden}@media all and (max-width:767px){[data-item-name="description"] div[data-type="description"]{max-height:300px}}[data-item-name='description'] div.short-description ~ div.gradient{position:relative;bottom:0px;margin-top:-75px;height:80px;background:-webkit-linear-gradient(top,rgba(255,255,255,0) 0%,#fff 100%);background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 100%)}[data-item-name='description'] div.short-description.in ~ div.gradient{display:none}[data-item-name='description'] div.short-description.in ~ a.cldt-show-more{display:none}[data-item-name='description'] div.short-description.in ~ a.cldt-show-less{display:block}[data-item-name="description"] a.cldt-show-more,[data-item-name="description"] a.cldt-show-less{display:none;padding-top:12px}[data-item-name='description'] div.short-description ~ a.cldt-show-more{display:inherit}[data-item-name='description'].in div.short-description.in ~ a.cldt-show-more{display:none}[data-item-name='description'].in div.short-description.in ~ a.cldt-show-less{display:none}[data-item-name="car-details"] h2{margin-bottom:20px}[data-item-name='car-details'] .cldt-categorized-data:not(:last-child){margin-bottom:28px}[data-item-name="environment"] dl{margin-bottom:0}[data-item-name='environment'] dd:not(:last-of-type){margin-bottom:12px}@media all and (min-width:768px){[data-item-name="equipments"]{padding-bottom:0}}[data-item-name="equipments"] div span{display:list-item;padding:4px 4px 0 0;margin-left:20px}[data-item-name='equipments'] .cldt-equipment-block:not(:last-child){margin-bottom:28px}[data-item-name="equipments"] h3{margin-bottom:0}.cldt-car-basic-data:before,.cldt-car-basic-data:after{content:" ";display:table}.cldt-car-basic-data:after{clear:both}.cldt-car-basic-data .value{font-size:32px;font-size:2rem}@media all and (max-width:767px){.cldt-car-basic-data .value{font-size:1.25rem}}.cldt-car-basic-data .value-small{font-size:24px;font-size:1.5rem;white-space:nowrap}.cldt-car-basic-data .value-small span{display:inline}.cldt-car-basic-data ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;border-top:1px solid #f4f4f4;border-bottom:8px solid #f4f4f4}@media all and (min-width:768px){.cldt-car-basic-data li{padding-top:28px;padding-bottom:16px;text-align:center;width:25%;border-left:1px solid #f4f4f4}.cldt-car-basic-data li:first-child{border-left:none}}@media all and (min-width:768px) and (min-width:1024px){.cldt-car-basic-data li{display:none}}@media all and (min-width:768px){.cldt-car-basic-data .cldt-car-basic-data-power-hp{display:block}}@media all and (max-width:1023px){.cldt-car-basic-data{border-bottom:1px solid #f4f4f4}}@media all and (max-width:767px){.cldt-car-basic-data{margin-top:0}.cldt-car-basic-data ul{padding-bottom:16px}.cldt-car-basic-data li{margin-top:12px;width:50%}.cldt-car-basic-data li:nth-child(3){clear:left}}.cldt-car-basic-data button{margin-top:16px;margin-bottom:16px}.cldt-car-basic-data .btn-watchlist{display:inline-block}@media all and (max-width:767px){.cldt-car-basic-data .btn-watchlist{width:100%}}@media all and (min-width:768px) and (max-width:1023px){.cldt-car-basic-data .btn-watchlist{max-width:280px;margin-left:auto;margin-right:12px}}.cldt-car-basic-data .btn-watchlist span:first-of-type{display:inline}.cldt-car-basic-data .btn-watchlist span:last-of-type{display:none}.cldt-car-basic-data .btn-watchlist>as24-icon{margin-right:8px;fill:transparent;height:24px}.cldt-car-basic-data .btn-watchlist>as24-icon>svg{margin-bottom:-3px;width:26px;stroke-width:2px;stroke:#fff}.cldt-car-basic-data .btn-print{display:inline-block;max-width:280px;margin-right:auto;margin-left:12px}@media all and (max-width:767px){.cldt-car-basic-data .btn-print{display:none}}.cldt-car-basic-data .btn-print>as24-icon{margin-right:8px;height:24px}.cldt-car-basic-data .btn-print>as24-icon>svg{margin-bottom:-4px;stroke:none;fill:#fff;width:26px}.cldt-car-basic-data .btn-print>as24-icon>svg g{fill:#fff}.cldt-car-basic-data .cldt-car-basic-data-watchlist-button{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;display:-webkit-inline-flex;width:100%;margin:0 auto;white-space:nowrap}@media all and (min-width:1023px){.cldt-car-basic-data .cldt-car-basic-data-watchlist-button{display:none}}[data-item-name="vendor-data"][data-positioning="top"]>div{margin:0 auto}[data-item-name="vendor-data"][data-positioning="top"]>div h4{margin-top:20px;margin-bottom:0}[data-item-name="vendor-data"][data-positioning="top"]>div.cldt-vendor-contact-buttons{margin-top:20px}[data-item-name="vendor-data"][data-positioning="top"]>div.cldt-vendor-contact-buttons a{margin-bottom:12px}[data-item-name="vendor-data"][data-positioning="top"]>div.cldt-vendor-data-top-address-data{min-height:100px}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"]{padding-left:12px;padding-right:12px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;display:-webkit-inline-flex;white-space:nowrap}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"] a{width:49%;display:none}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"] a:hover{color:#fff}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"] a:focus{background-color:#ff7500}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"] a:first-child{margin-right:1.7%}@media all and (max-width:767px){[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"]{left:0;margin:0 auto}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"].sc-sticky a{display:inline-block}}@media all and (min-width:768px) and (max-width:1023px){[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"]{left:0;margin:0 auto}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"].sc-sticky a[href="#contactFormBottom"]{width:280px;display:inline-block}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"] .aligned-sticky-email-button{margin:0 auto 0 12px}[data-item-name="vendor-contact-box"] div[data-sticky="contactStickyButtons"].sc-sticky a[name="stickyCallButton"]{width:280px;margin:0 12px 0 auto;display:inline-block}}[data-item-name="vendor-contact-box"] h2{margin-bottom:12px}[data-item-name="vendor-contact-box"] .cldt-dealer-links{margin-top:16px}[data-item-name="vendor-contact-box"] .cldt-dealer-links a{margin-top:4px}[data-item-name="vendor-contact-box"] .cldt-phone-numbers{margin-top:16px}[data-item-name="vendor-contact-box"] .cldt-phone-numbers>*{display:block;margin-top:4px}[data-item-name="vendor-contact-box"] .cldt-contact-form{overflow-x:hidden}[data-item-name="vendor-contact-box"] .cldt-contact-form>label{display:block;margin-top:12px;margin-bottom:4px}[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="text"],[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="tel"],[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="submit"]{display:block;width:100%}[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="checkbox"].sc-input+label{display:block}[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="submit"]{margin-top:16px}[data-item-name="vendor-contact-box"] .cldt-contact-form textarea{display:block}[data-item-name="vendor-contact-box"] .cldt-contact-form .additionalInfo{color:#949494}[data-item-name="vendor-contact-box"] .cldt-contact-form p{margin-top:12px}[data-item-name="vendor-contact-box"] .cldt-contact-form h3{margin-top:20px}[data-item-name="vendor-contact-box"] .cldt-contact-form .contact-form-sender-row{margin:0;width:100%}[data-item-name="vendor-contact-box"] .cldt-contact-form .contact-form-sender-row label{margin-top:0}@media all and (max-width:767px){[data-item-name="vendor-contact-box"] .cldt-contact-form{margin-top:20px}}[data-item-name="vendor-contact-box"] .cldt-contact-form p{margin-top:12px}[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="text"],[data-item-name="vendor-contact-box"] .cldt-contact-form input[type="tel"],[data-item-name="vendor-contact-box"] .cldt-contact-form textarea{margin-top:4px}[data-item-name="vendor-contact-box"] .cldt-contact-form textarea{padding-top:8px}[data-item-name="vendor-contact-box"] .cldt-contact-form div[name="comment-checkbox-container"] h3{margin:16px 0 8px 0}[data-item-name='vendor-contact-box'] .cldt-contact-form div[name="comment-checkbox-container"] label:not(:first-of-type){display:block;margin-top:16px}[data-item-name="vendor-contact-box"] .cldt-contact-form label[for="sendCopy_checkbox"]{margin-top:12px}[data-type="ad"]{text-align:center;padding:20px 0}.cldt-navigation ul>li{display:inline}.cldt-navigation ul>li>a{padding:20px;display:inline-block;cursor:pointer;text-decoration:none;-webkit-transition:color .2s;transition:color .2s;background:none;border:none;color:#333;font-size:16px;font-size:1rem}.cldt-navigation ul>li>a:hover{color:#ff9133}.cldt-navigation ul>li>a:active{color:#ff7500}.cldt-navigation a[data-item-name="vendor-contact-send-btn"]{display:none}.cldt-navigation .cldt-navigation-title{position:absolute;visibility:hidden;width:100%}.cldt-navigation .cldt-navigation-title h3{padding:20px 0 0 20px}.cldt-navigation .cldt-navigation-title h3>span[data-type="title"]:after{content:"";margin-left:8px}.cldt-navigation .cldt-navigation-title h3>span[data-type="price"]:before{content:"|";margin-right:8px}main{background-color:#fff}main hr{margin:0}.cldt-vendor-watchlist-box{left:-8px;position:relative}@media all and (min-width:1024px){.cldt-vendor-watchlist-box{padding:20px 0 16px 0;float:right;width:40%}}.cldt-vendor-watchlist-box>div{margin:0 40px 0 40px}@media all and (min-width:1024px) and (max-width:1100px){.cldt-vendor-watchlist-box>div{margin:0 20px 0 20px}}.cldt-vendor-watchlist-box>div h4{margin-top:20px;margin-bottom:0}.cldt-vendor-watchlist-box .cldt-box-price{margin:16px 40px 0 40px;min-height:70px}@media all and (min-width:1024px) and (max-width:1100px){.cldt-vendor-watchlist-box .cldt-box-price{margin:16px 20px 0 20px}}.cldt-vendor-watchlist-box hr{margin-left:40px;margin-right:40px;margin-top:12px;margin-bottom:12px}@media all and (min-width:1024px) and (max-width:1100px){.cldt-vendor-watchlist-box hr{margin-left:20px;margin-right:20px}}.cldt-vendor-watchlist-box .cldt-box-summary{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;display:-webkit-inline-flex;vertical-align:top}.cldt-vendor-watchlist-box .cldt-box-summary .summary-small{margin-right:20px;margin-top:8px;margin-bottom:8px}.cldt-vendor-watchlist-box .cldt-watchlist-button-box{margin:4px 40px 0 40px;display:block}@media all and (min-width:1024px) and (max-width:1100px){.cldt-vendor-watchlist-box .cldt-watchlist-button-box{margin:0 20px 0 20px}}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist{width:49%;float:left}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist span:first-of-type{display:inline}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist span:last-of-type{display:none}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist>as24-icon{margin-right:8px;fill:transparent;height:24px}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-watchlist>as24-icon>svg{margin-bottom:-3px;width:26px;stroke-width:2px;stroke:#fff}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-print{width:49%;float:right}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-print>as24-icon{margin-right:8px;height:24px}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-print>as24-icon>svg{margin-bottom:-4px;width:26px;stroke:none}.cldt-vendor-watchlist-box .cldt-watchlist-button-box .btn-print>as24-icon>svg g{fill:#fff}.cldt-co2emission-legal-notice{color:#949494;margin-top:20px}</style>
+</head>
+<body>
+<div class="sc-content-container">
+    <a name="top"></a>
+    <header class="sc-navigation" role="navigation" data-parkdeck-url="/parkdeck">
+        <div class="bar">
+            <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+            <a href="https://www.autoscout24.com/" class="icon-auto24"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="title" href="https://www.autoscout24.com/" id="nav-cars">Used and New Cars</a></li>
+                <li><a class="title" href="https://www.autoscout24.com/motorcycle" id="nav-motos">Motorbikes</a></li>
+                <li><a class="title" href="http://www.truckscout24.com" id="nav-trucks">Trucks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cldt-headline">
+        <div class="sc-grid-row">
+            <div class="sc-grid-col-12">
+                <ul class="sc-breadcrumbs cldt-breadcrumbs">
+                    <li><a href="/" data-breadcrumb="back">Back</a></li>
+                </ul>
+                <h1 class="sc-ellipsis sc-font">Audi A4 amb. xenon navi</h1>
+                <h4 class="sc-ellipsis sc-font-m">Station wagon</h4>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="sc-clearfix" data-sticky-undock="contactStickyButtons">
+            <div class="cldt-gallery-container">
+                <div>
+                    <img src="https://secure.pic.autoscout24.net/images-big/239/374/0292374239001.jpg?75d95a40bcf2b67f9c33da02704dff4f" alt="">
+                </div>
+            </div>
+            <div class="cldt-vendor-watchlist-box sc-hidden-m">
+                <div class="cldt-box-price cldt-car-basic-data">
+                    <p class="value">
+                        <span class="sc-font-bold">€ 25,000.-</span>
+                    </p>
+                    <p class="sc-font-m" data-content="extra-price-information">VAT deductible</p>
+                </div>
+                <hr/>
+                <div class="cldt-box-summary cldt-car-basic-data">
+                    <div class="summary-small">
+                        <p class="value-small">36,000 km</p>
+                    </div>
+                    <div class="summary-small">
+                        <p class="value-small">05/2014</p>
+                    </div>
+                    <div class="summary-small">
+                        <p class="value-small">103 kW<span class="sc-font-m cldt-car-basic-data-power-hp">&nbsp;140 hp</span></p>
+                    </div>
+                </div>
+                <hr/>
+                <div data-item-name="vendor-data" data-positioning="top">
+                    <div class="cldt-vendor-data-top-address-data">
+                        <h4 class="sc-font-bold">Panoramauto Torino srl</h4>
+                        <p data-item-name="vendor-contact-street">Strada di Settimo, 364</p>
+                        <p data-item-name="vendor-contact-city">10156 Torino - To</p>
+                        <p data-item-name="vendor-country">Italy</p>
+                    </div>
+                    <div class="cldt-vendor-contact-buttons">
+                        <a href="#contactFormBottom" class="sc-btn-bob sc-btn-block" data-item-name="vendor-contact-send-btn">Send E-mail</a>
+                        <a class="sc-btn-bob sc-btn-block" name="stickyCallButton" href="tel:+39113740882">Call +39 (0)11 - 3740882</a>
+                    </div>
+                </div>
+                <div class="cldt-watchlist-button-box">
+                    <button class="sc-btn-ross sc-btn-block btn-watchlist" name="detailPageWatchlistButton" data-classified-guid="6fb1ab1a-e33c-434f-bff3-d1ee2821bf9d" data-selected="false">
+                        <as24-icon type="star"></as24-icon>
+                        <span>Save</span>
+                        <span>Saved</span>
+                    </button>
+                    <button class="sc-btn-ross sc-btn-block btn-print" name="detailPagePrintButton" onClick="window.print()">
+                        <as24-icon type="print"></as24-icon>
+                        <span>Print</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sc-grid-row" data-sticky-undock="contactStickyButtons">
+            <div class="sc-grid-col-12">
+                <div data-name="vechicle-summary">
+                    <div class="cldt-car-basic-data">
+                        <ul>
+                            <li>
+                                <label class="sc-font-m sc-font-silent">End Price</label>
+                                <p class="value">
+                                    <span>€ 25,000.-</span>
+                                </p>
+                                <p class="sc-font-m" data-content="vat">VAT deductible</p>
+                            </li>
+                            <li>
+                                <label class="sc-font-m sc-font-silent">Mileage</label>
+                                <p class="value">36,000 km</p>
+                            </li>
+                            <li>
+                                <label class="sc-font-m sc-font-silent">First Registration</label>
+                                <p class="value">05/2014</p>
+                            </li>
+                            <li>
+                                <label class="sc-font-m sc-font-silent">Power</label>
+                                <p class="value">103 kW<span class="sc-font-m cldt-car-basic-data-power-hp">&nbsp;140 hp</span></p>
+                            </li>
+                        </ul>
+                        <div class="cldt-car-basic-data-watchlist-button">
+                            <button class="sc-btn-ross sc-btn-block btn-watchlist" name="detailPageWatchlistButton" data-classified-guid="6fb1ab1a-e33c-434f-bff3-d1ee2821bf9d" data-selected="false">
+                                <as24-icon type="star"></as24-icon>
+                                <span>Save</span>
+                                <span>Saved</span>
+                            </button>
+                            <button class="sc-btn-ross sc-btn-block btn-print" name="detailPagePrintButton" onClick="window.print()">
+                                <as24-icon type="print"></as24-icon>
+                                <span>Print</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- spy nav -->
+                    <div id="page-subnav-stick"></div>
+                    <div class="sc-spy-navigation" data-stick-when="#page-subnav-stick">
+                        <div class="sc-spy-navigation__wrapper">
+                            <nav class="sc-spy-navigation__links">
+                                <a class="sc-spy-navigation__link" href="#details" data-href="car-details">Details about the car</a>
+                                <a class="sc-spy-navigation__link" href="#equipment" data-href="car-equipment">Equipment of the car</a>
+                                <a class="sc-spy-navigation__link" href="#description" data-href="car-description">Description from the seller</a>
+                                <a class="sc-spy-navigation__link" href="#contact" data-href="contactFormBottom">Contact the seller for more</a>
+                                <a class="sc-spy-navigation__link" href="#test1" data-href="test-anchor1">Just an other anchor for contact</a>
+                                <a class="sc-spy-navigation__link" href="#test2" data-href="test-anchor2">Need a couple more links</a>
+                                <a class="sc-spy-navigation__link" href="#test3" data-href="test-anchor3">Still not enough</a>
+                                <a class="sc-spy-navigation__link" href="#test4" data-href="test-anchor4">Ok this is it</a>
+                            </nav>
+                            <div class="sc-spy-navigation__toggle">
+                                <span class="sc-spy-navigation__toggle__text">Mehr anzeigen</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / spy nav -->
+                    <div class="cldt-item" data-type="ad" data-item-name="ad1">
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-12"><!-- ad content --></div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <a name="car-details" id="details"></a>
+                    <div class="cldt-item" data-item-name="car-details">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='car-details']">
+                            <h2 class="sc-font-l sc-font-bold">Details</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-categorized-data sc-grid-col-6 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">State</h3>
+                                <dl>
+                                    <dt>Type</dt>
+                                    <dd>Used</dd>
+                                </dl>
+                            </div>
+                            <div class="cldt-categorized-data sc-grid-col-6 sc-grid-col-s-12 sc-pull-right">
+                                <h3 class="sc-font-bold">Properties</h3>
+                                <dl>
+                                    <dt>Body Color</dt>
+                                    <dd>Black</dd>
+                                    <dt>Paint Type</dt>
+                                    <dd>Metallic</dd>
+                                    <dt>Upholstery</dt>
+                                    <dd>Other, Other</dd>
+                                    <dt>Body</dt>
+                                    <dd>Station wagon</dd>
+                                    <dt>Nr. of Doors</dt>
+                                    <dd>5</dd>
+                                    <dt>Nr. of Seats</dt>
+                                    <dd>5</dd>
+                                </dl>
+                            </div>
+                            <div class="cldt-categorized-data sc-grid-col-6 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Drive</h3>
+                                <dl>
+                                    <dt>Gearing Type</dt>
+                                    <dd>Manual</dd>
+                                    <dt>Gears</dt>
+                                    <dd>6</dd>
+                                    <dt>Displacement</dt>
+                                    <dd>1968 cc</dd>
+                                    <dt>Cylinders</dt>
+                                    <dd>4</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="cldt-item" data-item-name="environment">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='environment']">
+                            <h2 class="sc-font-l sc-font-bold">Environment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <dl class="sc-grid-col-6 sc-grid-col-s-12">
+                                <dt>Fuel</dt>
+                                <dd>
+                                    <i>Diesel</i>
+                                </dd>
+                                <dt>Consumption*</dt>
+                                <dd>
+                                    <div>5.5 l/100 km (combined)</div>
+                                    <div>6.5 l/100 km (city)</div>
+                                    <div>4.9 l/100 km (country)</div>
+                                </dd>
+                                <dt>CO2 Emission*</dt>
+                                <dd>144 g CO2/km (combined)</dd>
+                                <dt>Emission Class</dt>
+                                <dd>Euro 6</dd>
+                                <dt>Emission Label</dt>
+                                <dd>1 (No sticker)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <hr/>
+                    <a name="car-equipment" id="equipment"></a>
+                    <div class="cldt-item" data-item-name="equipments">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
+                            <h2 class="sc-font-l sc-font-bold">Equipment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Safety &amp; Security</h3>
+                                <span>ABS</span>
+                                <span>Adaptive headlights</span>
+                                <span>Central door lock</span>
+                                <span>Daytime running lights</span>
+                                <span>Driver-side airbag</span>
+                                <span>Electronic stability control</span>
+                                <span>Immobilizer</span>
+                                <span>Isofix</span>
+                                <span>Passenger-side airbag</span>
+                                <span>Power steering</span>
+                                <span>Side airbag</span>
+                                <span>Traction control</span>
+                                <span>Xenon headlights</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Comfort &amp; Convenience</h3>
+                                <span>Air conditioning</span>
+                                <span>Automatic climate control</span>
+                                <span>Cruise control</span>
+                                <span>Electrical side mirrors</span>
+                                <span>Electrically adjustable seats</span>
+                                <span>Fog lights</span>
+                                <span>Light sensor</span>
+                                <span>Multi-function steering wheel</span>
+                                <span>Navigation system</span>
+                                <span>Park Distance Control</span>
+                                <span>Parking assist system camera</span>
+                                <span>Parking assist system self-steering</span>
+                                <span>Parking assist system sensors rear</span>
+                                <span>Power windows</span>
+                                <span>Rain sensor</span>
+                                <span>Seat heating</span>
+                                <span>Start-stop system</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Entertainment &amp; Media</h3>
+                                <span>Bluetooth</span>
+                                <span>CD player</span>
+                                <span>Hands-free equipment</span>
+                                <span>MP3</span>
+                                <span>On-board computer</span>
+                                <span>Radio</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Extras</h3>
+                                <span>Alloy wheels</span>
+                                <span>Roof rack</span>
+                                <span>Sport package</span>
+                                <span>Sport seats</span>
+                                <span>Sport suspension</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <a name="descriptionTop"></a>
+                    <a name="car-description" id="description"></a>
+                    <div class="cldt-item" data-item-name="description">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='description']">
+                            <h2 class="sc-font-l sc-font-bold">Description</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-12">
+                                <div data-type="description">
+                                    Autovetture aziendali in pronta consegna ne abbiamo di diversi colori <br/><br/><strong>accessori extra : </strong><br/><strong>EA8 Garanzia supplementare per 3 anni, max. 100.000km</strong><br/><strong>PNQ Sistema di navigazione MMI plus con MMI</strong><br/><strong>PX1 Xenon plus </strong><br/><strong>3B4 ISOFIX per il sedile dei bambini </strong><br/><strong>4L6 Retrovisore interno anabagliante</strong><br/><strong>4X4 airbag laterali </strong><br/><strong>6XD specchietti eletrici/riscaldabili </strong><br/><strong>7X4 Parctronic Plus </strong><br/><strong>8N6 Pacchetto Luce e Sensorepioggia </strong><br/><strong>8SK Fari posteriori LED </strong><br/><strong>9AQ clima automatico plus</strong><br/><strong>9VD DSP Soundsystem </strong><br/><strong>9ZW Audi Bluetooth </strong><br/><strong>PRH Cerchi in lega 7,5x17&#x27; 20-Raze-Dynamic Design</strong><br/><strong>UF7 Audi music interface <br/></strong><br/><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong><br/><br/><br/></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong>Panoramauto torino Select. La nuova formula di acquisto senza vincoli ed estremamente adattabile alle vostre esigenze.<br/>Panoramauto Torino Select consente di acquistare una Audi versando un minimo anticipo e finanziando la parte restante in rate mensili particolarmente contenute, grazie al valore quattro ruote che garantiremo fin da subito alla vostra auto, nel caso decidiate di restituirla al termine del contratto . Con questa formula siete liberi di scegliere a fine contratto: potrete decidere di acquistare una nuova vettura lasciando la vostra auto usata in Concessionaria, di tenere la vostra vettura finanziando o liquidando la quota rimanente o semplicemente di restituire al Concessionario il vostro usato.Questa soluzione, inoltre, può essere ulteriormente personalizzata inserendo i sevizi assicurativi e il programma manutenzione.Per premiare i clienti che aderiscono abbiamo aggiunto uno sconto di 2000 al costo della vettura</strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong><br/><br/></strong><strong></strong><strong></strong><strong></strong><strong></strong><hr/><strong></strong><strong></strong><strong>Panoramauto non è solo qualità e convenienza ma anche assistenza a 360 gradi, oltre a seguire il cliente durante la fase di acquisto lo supporteremo tramite tutti i nostri servizi:<br/><br/>-FINANZIARI E ASSICURATIVI (collaboriamo solo con società leader del settore)<br/>-OFFICINA per tagliandi ,assistenza e revisioni<br/>-PNEUMATICI vendita e montaggio<br/>-INSTALLAZIONE di navigatori, antifurti, sistemi di parcheggio, ecc.... <br/>-AUTO SOSTITUTIVA e/o a noleggio a breve termine<br/></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong><br/></strong>Acquista la tua nuova auto online,da noi è possibile con una semplice chiamata può bloccare il tuo mezzo comodamente da casa,in modo semplice e sicuro, riceverai tramite mail il contratto d&#x27;acquisto e i documenti necessari per completare la pratica. Se desideri pagarla con le nostre formule finanziare, nessun problema di invieremo il modulo raccolta dati, la privacy da firmare, potrai così ricevere la tua vettura a domicilio .<strong><br/><br/>Vi aspettiamo a Torino in strada settimo 364 o on-line sul nostro sito www.panoramautotorino.it</strong><strong><br/></strong>
+                                </div>
+                                <div class="gradient"></div>
+                                <a class="cldt-show-more" data-toggle="sc-collapse" data-target=".short-description">Show more</a>
+                                <a class="cldt-show-less" data-toggle="sc-collapse" data-target=".short-description" href="#descriptionTop">Show less</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="cldt-item" data-type="ad" data-item-name="ad2">
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-12">
+                                <div id="detailContentBanner2" data-ad-slot-id="/4467/as24_com/detailpage_content2" data-ad-sizes="[[300,100],[300,250],[728,90],[300,50],[320,50],[320,100],[320,240]]" data-ad-size-mappings="[[[768,400],[728,90]],[[0,0],[[300,100],[300,250],[300,50],[320,50],[320,100],[320,240]]]]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <a name="contactFormBottom" id="contact"></a>
+                    <as24-notification type="success" id="cldt-vendor-contact-email-sent" title="Your message has been sent successfully." timeout="2000" target=".sc-navigation"></as24-notification>
+                    <as24-notification type="error" id="cldt-vendor-contact-email-not-sent" title="Sorry, your message could not be sent." close="true" target=".sc-navigation"></as24-notification>
+                    <div class="cldt-item" data-item-name="vendor-contact-box">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='vendor-contact-box']">
+                            <h2 class="sc-font-l sc-font-bold">Contact the dealer</h2>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="sc-grid-col-4 sc-grid-col-s-12">
+                                <div>
+                                    <h3 class="sc-font-bold sc-font-m" data-item-name="vendor-company-name">Panoramauto Torino srl</h3>
+                                    <p data-item-name="vendor-contact-name">Alessio Oertel / Lazzaro Caputo</p>
+                                    <p data-item-name="vendor-contact-street">Strada di Settimo, 364</p>
+                                    <p data-item-name="vendor-contact-city">10156 Torino - To</p>
+                                    <p data-item-name="vendor-contact-country">Italy</p>
+                                    <div class="cldt-phone-numbers">
+                                        <a href="tel:+39113740882" data-type="callLink">Tel.: +39 (0)11 - 3740882</a>
+                                        <a href="tel:+393355729119" data-type="callLink">Mob.: +39 (0)335 - 5729119</a>
+                                        <a href="tel:+393298488807" data-type="callLink">Tel.: +39 (0)329 - 8488807</a>
+                                    </div>
+                                    <section class="cldt-dealer-links">
+                                        <a href="https://www.autoscout24.com/offers/-292374239/imprint" data-type="dealerImprint" class="sc-btn-block">Imprint</a>
+                                        <a href="https://www.autoscout24.com/results?cid=9209530&amp;ustate=A,N,U&amp;atype=C" data-type="dealerPool" class="sc-btn-block">View all vehicles of this dealer</a>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="sc-grid-col-8 sc-grid-col-s-12">
+                                <div class="cldt-contact-form">
+                                    <form method="POST" action="https://vendor-contact-email.a.autoscout24.com/vendor-contact-email/contact/email" data-common-attribute-tracking="contact-form" class="cldt-contact-form sc-grid-row" data-culture="en-GB">
+                                        <input type="hidden" name="classifiedId" value="292374239">
+                                        <div class="sc-grid-col-12 contact-form-sender-row">
+                                            <label for="senderName" class="sc-grid-col-5 sc-grid-col-m-6 sc-grid-col-s-12">Your name
+                                                <input type="text" maxlength="80" class="sc-input" name="senderName" data-validation-pattern="[^()]" data-validation-error-msg="This field is required." data-server-validation-property-name="contactMailResource.SenderName" placeholder="e.g. John Doe">
+                                            </label>
+                                        </div>
+                                        <label for="senderEmail" class="sc-grid-col-5 sc-grid-col-m-6 sc-grid-col-s-12">Your e-mail address
+                                            <input type="text" class="sc-input" name="senderEmail" data-validation-pattern="^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9.-]+$" data-validation-error-msg="Please use a valid e-mail address." data-server-validation-property-name="contactMailResource.SenderEmail" placeholder="e.g. john.doe@example.com">
+                                        </label>
+                                        <label for="fullPhoneNumber" class="sc-grid-col-5 sc-grid-col-m-6 sc-grid-col-s-12">Your phone number
+                                            <span class="additionalInfo"> (optional)</span>
+                                            <input type="tel" maxlength="25" class="sc-input" name="fullPhoneNumber" data-server-validation-property-name="contactMailResource.FullPhoneNumber" placeholder="e.g. +49 (0) 1234 - 5678910">
+                                        </label>
+                                        <div class="sc-grid-col-12" name="comment-checkbox-container">
+                                            <h3 class="sc-font-bold">Your message</h3>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason0" data-tracking-code="avail" value="Is the vehicle still available?">
+                                            <label for="contactReason0">Is the vehicle still available?</label>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason1" data-tracking-code="price" value="Is the price negotiable or what would your minimum price be?">
+                                            <label for="contactReason1">Is the price negotiable or what would your minimum price be?</label>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason2" data-tracking-code="finance" value="Is financing and/or a trade-in possible?">
+                                            <label for="contactReason2">Is financing and/or a trade-in possible?</label>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason3" data-tracking-code="defects" value="Does the vehicle have any defects or damage not previously mentioned?">
+                                            <label for="contactReason3">Does the vehicle have any defects or damage not previously mentioned?</label>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason4" data-tracking-code="testdrive" value="When can I take a test drive?">
+                                            <label for="contactReason4">When can I take a test drive?</label>
+                                            <input type="checkbox" name="comment" class="sc-input" id="contactReason5" data-tracking-code="contact" value="Please contact me.">
+                                            <label for="contactReason5">Please contact me.</label>
+                                        </div>
+                                        <label for="comment" class="sc-grid-col-10 sc-grid-col-m-12 sc-grid-col-s-12">
+<textarea rows="7" maxlength="1400" class="sc-input" name="comment" data-validation-pattern="[^()]" data-validation-error-msg="Please enter a personal message." data-server-validation-property-name="contactMailResource.Comment">Dear Sir or Madam,
+
+I&#x27;m interested in your vehicle. Please contact me.
+
+Kind regards</textarea>
+                                        </label>
+                                        <div data-sticky-dock="contactStickyButtons"></div>
+                                        <div class="sc-grid-col-10 sc-grid-col-m-12 sc-grid-col-s-12">
+                                            <input type="checkbox" name="sendCopy" class="sc-input" id="sendCopy_checkbox">
+                                            <label for="sendCopy_checkbox">Send me a copy</label>
+                                            <p class="sc-font-silent sc-font-s">Your input will be checked for security reasons by AS24 team. The entered e-mail address is used for sending a review of AutoScout24 mail through this dealer.</p>
+                                        </div>
+                                        <div class="sc-grid-col-5 sc-grid-col-m-6 sc-grid-col-s-12">
+                                            <input type="submit" class="sc-btn-bob-l" data-cip-id="submit" value="Send E-mail" data-sending-message="Sending..."/>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div data-sticky="contactStickyButtons">
+                                    <a class="sc-btn-bob" name="stickyCallButton" href="tel:+39113740882">
+                                        <div class="sc-visible-s sc-hidden-m">Call</div>
+                                        <div class="sc-visible-m sc-hidden-s">Call +39 (0)11 - 3740882</div>
+                                    </a>
+                                    <a class="sc-btn-bob aligned-sticky-email-button" data-item-name="sticky-email-button" href="#contactFormBottom">Send E-mail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <a name="test-anchor1" id="test1"></a>
+                    <div class="cldt-item" data-item-name="equipments">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
+                            <h2 class="sc-font-l sc-font-bold">Equipment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Safety &amp; Security</h3>
+                                <span>ABS</span>
+                                <span>Adaptive headlights</span>
+                                <span>Central door lock</span>
+                                <span>Daytime running lights</span>
+                                <span>Driver-side airbag</span>
+                                <span>Electronic stability control</span>
+                                <span>Immobilizer</span>
+                                <span>Isofix</span>
+                                <span>Passenger-side airbag</span>
+                                <span>Power steering</span>
+                                <span>Side airbag</span>
+                                <span>Traction control</span>
+                                <span>Xenon headlights</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Comfort &amp; Convenience</h3>
+                                <span>Air conditioning</span>
+                                <span>Automatic climate control</span>
+                                <span>Cruise control</span>
+                                <span>Electrical side mirrors</span>
+                                <span>Electrically adjustable seats</span>
+                                <span>Fog lights</span>
+                                <span>Light sensor</span>
+                                <span>Multi-function steering wheel</span>
+                                <span>Navigation system</span>
+                                <span>Park Distance Control</span>
+                                <span>Parking assist system camera</span>
+                                <span>Parking assist system self-steering</span>
+                                <span>Parking assist system sensors rear</span>
+                                <span>Power windows</span>
+                                <span>Rain sensor</span>
+                                <span>Seat heating</span>
+                                <span>Start-stop system</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Entertainment &amp; Media</h3>
+                                <span>Bluetooth</span>
+                                <span>CD player</span>
+                                <span>Hands-free equipment</span>
+                                <span>MP3</span>
+                                <span>On-board computer</span>
+                                <span>Radio</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Extras</h3>
+                                <span>Alloy wheels</span>
+                                <span>Roof rack</span>
+                                <span>Sport package</span>
+                                <span>Sport seats</span>
+                                <span>Sport suspension</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <a name="test-anchor2" id="test2"></a>
+                    <div class="cldt-item" data-item-name="equipments">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
+                            <h2 class="sc-font-l sc-font-bold">Equipment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Safety &amp; Security</h3>
+                                <span>ABS</span>
+                                <span>Adaptive headlights</span>
+                                <span>Central door lock</span>
+                                <span>Daytime running lights</span>
+                                <span>Driver-side airbag</span>
+                                <span>Electronic stability control</span>
+                                <span>Immobilizer</span>
+                                <span>Isofix</span>
+                                <span>Passenger-side airbag</span>
+                                <span>Power steering</span>
+                                <span>Side airbag</span>
+                                <span>Traction control</span>
+                                <span>Xenon headlights</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Comfort &amp; Convenience</h3>
+                                <span>Air conditioning</span>
+                                <span>Automatic climate control</span>
+                                <span>Cruise control</span>
+                                <span>Electrical side mirrors</span>
+                                <span>Electrically adjustable seats</span>
+                                <span>Fog lights</span>
+                                <span>Light sensor</span>
+                                <span>Multi-function steering wheel</span>
+                                <span>Navigation system</span>
+                                <span>Park Distance Control</span>
+                                <span>Parking assist system camera</span>
+                                <span>Parking assist system self-steering</span>
+                                <span>Parking assist system sensors rear</span>
+                                <span>Power windows</span>
+                                <span>Rain sensor</span>
+                                <span>Seat heating</span>
+                                <span>Start-stop system</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Entertainment &amp; Media</h3>
+                                <span>Bluetooth</span>
+                                <span>CD player</span>
+                                <span>Hands-free equipment</span>
+                                <span>MP3</span>
+                                <span>On-board computer</span>
+                                <span>Radio</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Extras</h3>
+                                <span>Alloy wheels</span>
+                                <span>Roof rack</span>
+                                <span>Sport package</span>
+                                <span>Sport seats</span>
+                                <span>Sport suspension</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <a name="test-anchor3" id="test3"></a>
+                    <div class="cldt-item" data-item-name="equipments">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
+                            <h2 class="sc-font-l sc-font-bold">Equipment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Safety &amp; Security</h3>
+                                <span>ABS</span>
+                                <span>Adaptive headlights</span>
+                                <span>Central door lock</span>
+                                <span>Daytime running lights</span>
+                                <span>Driver-side airbag</span>
+                                <span>Electronic stability control</span>
+                                <span>Immobilizer</span>
+                                <span>Isofix</span>
+                                <span>Passenger-side airbag</span>
+                                <span>Power steering</span>
+                                <span>Side airbag</span>
+                                <span>Traction control</span>
+                                <span>Xenon headlights</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Comfort &amp; Convenience</h3>
+                                <span>Air conditioning</span>
+                                <span>Automatic climate control</span>
+                                <span>Cruise control</span>
+                                <span>Electrical side mirrors</span>
+                                <span>Electrically adjustable seats</span>
+                                <span>Fog lights</span>
+                                <span>Light sensor</span>
+                                <span>Multi-function steering wheel</span>
+                                <span>Navigation system</span>
+                                <span>Park Distance Control</span>
+                                <span>Parking assist system camera</span>
+                                <span>Parking assist system self-steering</span>
+                                <span>Parking assist system sensors rear</span>
+                                <span>Power windows</span>
+                                <span>Rain sensor</span>
+                                <span>Seat heating</span>
+                                <span>Start-stop system</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Entertainment &amp; Media</h3>
+                                <span>Bluetooth</span>
+                                <span>CD player</span>
+                                <span>Hands-free equipment</span>
+                                <span>MP3</span>
+                                <span>On-board computer</span>
+                                <span>Radio</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Extras</h3>
+                                <span>Alloy wheels</span>
+                                <span>Roof rack</span>
+                                <span>Sport package</span>
+                                <span>Sport seats</span>
+                                <span>Sport suspension</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <a name="test-anchor4" id="test4"></a>
+                    <div class="cldt-item" data-item-name="equipments">
+                        <div class="cldt-collapsable" data-toggle="sc-collapse" data-target="[data-item-name='equipments']">
+                            <h2 class="sc-font-l sc-font-bold">Equipment</h2>
+                            <as24-icon type="arrow" class="arrow"></as24-icon>
+                        </div>
+                        <div class="sc-grid-row">
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Safety &amp; Security</h3>
+                                <span>ABS</span>
+                                <span>Adaptive headlights</span>
+                                <span>Central door lock</span>
+                                <span>Daytime running lights</span>
+                                <span>Driver-side airbag</span>
+                                <span>Electronic stability control</span>
+                                <span>Immobilizer</span>
+                                <span>Isofix</span>
+                                <span>Passenger-side airbag</span>
+                                <span>Power steering</span>
+                                <span>Side airbag</span>
+                                <span>Traction control</span>
+                                <span>Xenon headlights</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Comfort &amp; Convenience</h3>
+                                <span>Air conditioning</span>
+                                <span>Automatic climate control</span>
+                                <span>Cruise control</span>
+                                <span>Electrical side mirrors</span>
+                                <span>Electrically adjustable seats</span>
+                                <span>Fog lights</span>
+                                <span>Light sensor</span>
+                                <span>Multi-function steering wheel</span>
+                                <span>Navigation system</span>
+                                <span>Park Distance Control</span>
+                                <span>Parking assist system camera</span>
+                                <span>Parking assist system self-steering</span>
+                                <span>Parking assist system sensors rear</span>
+                                <span>Power windows</span>
+                                <span>Rain sensor</span>
+                                <span>Seat heating</span>
+                                <span>Start-stop system</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Entertainment &amp; Media</h3>
+                                <span>Bluetooth</span>
+                                <span>CD player</span>
+                                <span>Hands-free equipment</span>
+                                <span>MP3</span>
+                                <span>On-board computer</span>
+                                <span>Radio</span>
+                            </div>
+                            <div class="cldt-equipment-block sc-grid-col-3 sc-grid-col-m-4 sc-grid-col-s-12 sc-pull-left">
+                                <h3 class="sc-font-bold">Extras</h3>
+                                <span>Alloy wheels</span>
+                                <span>Roof rack</span>
+                                <span>Sport package</span>
+                                <span>Sport seats</span>
+                                <span>Sport suspension</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+
+                    <div class="cldt-legal-disclaimer">
+                        <div class="cldt-co2emission-legal-notice sc-font-s">
+                            <p data-type="legal">* You can obtain more information on the official fuel consumption and official specific CO2 emissions of new passenger vehicles from the guideline on fuel consumption and CO2 emissions of new passenger vehicles. This guideline is available free of charge at all dealerships and from Deutsche Automobil Treuhand GmbH at www.dat.de.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cldt-toplink">
+            <div>
+                <a href="#top" class="sc-smooth-scroll"><as24-icon type="arrow" class="arrow"></as24-icon> To The Top</a>
+            </div>
+        </div>
+    </main>
+    <div class="fragments-footer">
+        <div class="site-footer ">
+            <footer class="domain-com">
+                <div class="footer-content-container">
+                    <h2>AutoScout24: a European automotive classifieds leader.</h2>
+                    <section>
+                        <h3>Company</h3>
+                        <ul class="about-links">
+                            <li><a href="http://about.autoscout24.com/au-company">About AutoScout24</a></li>
+                            <li><a href="http://about.autoscout24.com/au-contact-formular.aspx">Contact</a></li>
+                            <li><a href="http://about.autoscout24.com/au-company/au-company-imprint.aspx" data-test="cms-imprint">Imprint</a></li>
+                        </ul>
+                        <div class="line"></div>
+                        <ul class="app-links">
+                            <li><a href="https://itunes.apple.com/app/apple-store/id311785642?pt=229724&amp;ct=MWEB%7CCOM%7CAS24-footer&amp;mt=8" target="_blank"><span class="icon-ios" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"><path d="M18 15.4c-.5 1.1-.7 1.6-1.4 2.5-.9 1.4-2.1 3-3.7 3-1.4 0-1.7-.9-3.6-.9-1.9 0-2.2.9-3.6.9-1.5 0-2.7-1.5-3.6-2.9C-.4 14.2-.6 9.8.9 7.5 2 5.9 3.7 4.9 5.3 4.9c1.6 0 2.7.9 4 .9 1.3 0 2.1-.9 4-.9 1.4 0 2.9.8 4 2.1-3.4 2-2.9 7.1.7 8.4zM11.9 3.4c.7-.9 1.2-2.1 1-3.4-1.1.1-2.4.8-3.2 1.7-.7.8-1.3 2.1-1 3.3 1.2.1 2.5-.6 3.2-1.6z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span> AutoScout24 for iOS</a></li>
+                            <li><a href="https://app.adjust.com/yoykpq?campaign=footer" target="_blank"><span class="icon-android" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"><path d="M6.2 1.7h.1c.1 0 .1-.1.1-.1L5.4 0h-.1c-.1 0-.1.1-.1.1l1 1.6zM11.7 1.7h-.1c-.1 0-.1-.1-.1-.1L12.6 0h.1c.1 0 .1.1.1.1l-1.1 1.6zM9 2.7C3.3 2.7 3 8 3 8h12s-.4-5.3-6-5.3zM6.4 6.4c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zm5.1 0c-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7.4 0 .7.3.7.7 0 .4-.3.7-.7.7zM2 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM18 15c0 .6-.4 1-1 1s-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v6zM7 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6zM12 21c0 .6-.4 1-1 1s-1-.4-1-1v-6c0-.6.4-1 1-1s1 .4 1 1v6z"></path><path d="M15 17c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v7z"></path></svg></span> AutoScout24 for Android</a></li>
+                        </ul>
+                        <ul class="social-links">
+                        </ul>
+                        <select class="domain-picker sc-input">
+                            <option value="www.autoscout24.de/">Deutschland</option>
+                            <option value="www.autoscout24.be/">België/Belgique</option>
+                            <option value="www.autoscout24.es/">España</option>
+                            <option value="www.autoscout24.fr/">France</option>
+                            <option value="www.autoscout24.it/">Italia</option>
+                            <option value="www.autoscout24.lu/">Luxembourg</option>
+                            <option value="www.autoscout24.nl/">Nederland</option>
+                            <option value="www.autoscout24.at/">Österreich</option>
+                            <optgroup label="-------------------------">
+                                <option value="www.autoscout24.bg/">Български</option>
+                                <option value="www.autoscout24.cz/">Česky</option>
+                                <option value="www.autoscout24.com/" selected="">English</option>
+                                <option value="www.autoscout24.hr/">Hrvatski</option>
+                                <option value="www.autoscout24.pl/">Polski</option>
+                                <option value="www.autoscout24.ro/">Română</option>
+                                <option value="www.autoscout24.ru/">Русский</option>
+                                <option value="www.autoscout24.se/">Svenska</option>
+                                <option value="www.autoscout24.com.tr/">Türkçe</option>
+                                <option value="www.autoscout24.com.ua/">Українська</option>
+                            </optgroup>
+                        </select>
+                    </section>
+                </div>
+                <section class="copyright without-sticky-button">
+                    <div class="footer-content-container">
+                        <div class="other-sites-links">
+                            <a href="http://www.scout24.com/en/Home.aspx" target="_blank" title="Scout24" rel="nofollow">
+                                <as24-icon type="scout24"></as24-icon>
+                            </a>
+                        </div>
+                        <p>© Copyright <span id="copyright-year"></span> by AutoScout24 GmbH. All Rights reserved.</p>
+                    </div>
+                </section>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="../../lib/showcar-ui.js"></script>
+<script src="page2.js"></script>
+</body>
+</html>
