@@ -98,14 +98,12 @@ var ndplComponent = Vue.extend({
                 // If not currently auto scrolling to component
                 // and component is not active
                 if (! _this.$root.scrolling_to && ! _this.isActive(_this.component)) {
-
                     // Set this component to active
                     _this.$root.active_components.push(_this.component);
                     _this.$root.open_group = null;
                     _this.$root.updateHash(_this.component.id);
                 }
             } else {
-
                 // If not currently auto scrolling to component
                 if (_this.$root && ! _this.$root.scrolling_to) {
 
@@ -113,9 +111,8 @@ var ndplComponent = Vue.extend({
                     for (var i = 0; i < _this.$root.active_components.length; i ++) {
                         var component = _this.$root.active_components[i];
 
-                        if (component.id === _this.component.id) {
+                        if (component.name === _this.component.name) {
                             _this.$root.active_components.splice(i, 1);
-
                             return;
                         }
                     }
@@ -134,8 +131,7 @@ var ndplComponent = Vue.extend({
 
             for (var i = 0; i < _this.$root.active_components.length; i ++) {
                 var c = _this.$root.active_components[i];
-
-                if (component.id === c.id) {
+                if (component.name === c.name || component.subgroup === c.name) {
                     return true;
                 }
             }
@@ -584,7 +580,12 @@ new Vue({
                 for (var j = 0; j < group.components.length; j ++) {
 
                     // Set default variables
-                    _this.$set('groups[' + i + '].components[' + j + '].id', 'group-' + group.name + '-component-' + group.components[j].name);
+                    // _this.$set('groups[' + i + '].components[' + j + '].id', 'group-' + group.name + '-component-' +group.components[j].name); // old
+                    if(group.components[j].subgroup) {
+                        _this.$set('groups[' + i + '].components[' + j + '].id', 'group-' + group.name + '-component-' + group.components[j].subgroup);
+                    }else{
+                        _this.$set('groups[' + i + '].components[' + j + '].id', 'group-' + group.name + '-component-' + group.components[j].name);
+                    }
                     _this.$set('groups[' + i + '].components[' + j + '].group_id', 'group-' + group.name);
                     _this.$set('groups[' + i + '].components[' + j + '].subroup', group.components[j].subgroup ? group.components[j].subgroup : null);
                     _this.$set('groups[' + i + '].components[' + j + '].active', false);

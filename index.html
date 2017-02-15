@@ -290,10 +290,11 @@
 							v-for="component in group.components" v-if="!component.subgroup">
 							<a :href="'#' + component.id"
 							   class="ndpl-nav__component ndpl-nsc"
-							   :class="{ 'active': active_components.indexOf(component) >= 0 }"
+							   :class="{ 'active': active_components[0].name == component.name || active_components[0].subgroup == component.name}"
 							   v-text="component.title"
 							   @click.prevent="scrollToHref">
 							</a>
+
 						</li>
 					</ul>
 				</li>
