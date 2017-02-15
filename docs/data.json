@@ -166,6 +166,12 @@
                     "subgroup": "custom-dropdown",
                     "name": "custom-dropdown-icons-checkbox",
                     "title": "Custom dropdown with icons (multiple choice possible)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "lightbox",
+                    "name": "lightbox",
+                    "title": "Lightbox"
                 }
             ]
         }
