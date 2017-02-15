@@ -170,9 +170,63 @@
                 },
                 {
                     "group": "atoms",
-                    "subgroup": "lightbox",
                     "name": "lightbox",
                     "title": "Lightbox"
+                }
+            ]
+        },
+        {
+            "name": "molecules",
+            "title": "Molecules",
+            "components": [
+                {
+                    "group": "molecules",
+                    "name": "breadcrumb",
+                    "title": "Breadcrumb"
+                },
+                {
+                    "group": "molecules",
+                    "name": "card",
+                    "title": "Card"
+                },
+                {
+                    "group": "molecules",
+                    "name": "expandable-box",
+                    "title": "Expandable box"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "expandable-box",
+                    "name": "expandable-box-adaptive",
+                    "title": "Expandable box (adaptive)"
+                },
+                {
+                    "group": "molecules",
+                    "name": "input-group",
+                    "title": "Input group"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "input-group",
+                    "name": "input-group-radio",
+                    "title": "Input group (radio buttons)"
+                },
+                {
+                    "group": "molecules",
+                    "name": "notification",
+                    "title": "Notification"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "notification",
+                    "name": "notification-closeable",
+                    "title": "Notification (with close button)"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "notification",
+                    "name": "notification-timeout",
+                    "title": "Notification (with timeout)"
                 }
             ]
         }
