@@ -126,12 +126,6 @@
                 {
                     "group": "atoms",
                     "subgroup": "color-selector",
-                    "name": "color-selector-radio",
-                    "title": "Color Selectors with radio buttons"
-                },
-                {
-                    "group": "atoms",
-                    "subgroup": "color-selector",
                     "name": "color-selector-checkbox",
                     "title": "Color Selectors with checkboxes"
                 },
@@ -227,6 +221,27 @@
                     "subgroup": "notification",
                     "name": "notification-timeout",
                     "title": "Notification (with timeout)"
+                }
+            ]
+        },
+        {
+            "name": "organisms",
+            "title": "Organisms",
+            "components": [
+                {
+                    "group": "organisms",
+                    "name": "navigation",
+                    "title": "Navigation"
+                },
+                {
+                    "group": "organisms",
+                    "name": "pagination",
+                    "title": "Pagination"
+                },
+                {
+                    "group": "organisms",
+                    "name": "spy-navigation",
+                    "title": "Spy navigation"
                 }
             ]
         }
