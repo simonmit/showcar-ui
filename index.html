@@ -163,7 +163,7 @@
 	!important
 	;
 	}</style>
-	<link rel="stylesheet" href="app/css/styles.min.css">
+	<link rel="stylesheet" href="docs/app/css/styles.min.css">
 
 	<!-- Font Libraries -->
 	<link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
@@ -392,7 +392,7 @@
 											<div class="ndpl-component__code ndpl-c-border"
 												 v-show="component.code_show">
 											<button class="clipbrd-btn" data-clipboard-target="#copy_code-{{component.id}}">
-													<img src="clippy.svg" alt="Copy to clipboard">
+													<img src="docs/clippy.svg" alt="Copy to clipboard">
 												</button>
 												<pre
 													class="ndpl-pre"><code class="ndpl-code html" v-text="component.html"
@@ -411,7 +411,7 @@
 											<div class="ndpl-component__code ndpl-c-border"
 												 v-show="component.js_show">
 												<button class="clipbrd-btn" data-clipboard-target="#copy_js-{{component.id}}">
-													<img src="clippy.svg" alt="Copy to clipboard">
+													<img src="docs/clippy.svg" alt="Copy to clipboard">
 												</button>
 												<pre
 													class="ndpl-pre"><code class="ndpl-code js" v-text="component.js"
@@ -451,7 +451,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
-<script src="app/js/main.js"></script>
+<script src="docs/app/js/main.js"></script>
 <style>
 	/*own style*/
 	.ndpl-nav__title, .ndpl-nav__title .ndpl-nsc{
@@ -642,7 +642,7 @@
 
 	.example-lightbox label {
 		margin-top: $L;
-		margin-bottom: $M; 
+		margin-bottom: $M;
 		display: block;
 	}
 

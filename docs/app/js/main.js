@@ -485,7 +485,7 @@ new Vue({
         loadDataFile: function () {
             var _this = this;
 
-            _this.$http.get('./data.json' + '?cb=' + new Date()).then(function (response) {
+            _this.$http.get('./docs/data.json' + '?cb=' + new Date()).then(function (response) {
                 _this.initData(response.data, function () {
                     if (_this.$data.groups.length) {
                         _this.setupGroups();
@@ -615,7 +615,7 @@ new Vue({
          */
         loadGroup: function (group) {
             var _this = this,
-                group_path = './' + _this.settings.components_folder + '/' + group.name;
+                group_path = './docs/' + _this.settings.components_folder + '/' + group.name;
             // Get and set component description
             _this.$http.get(group_path + '/description.md' + '?cb=' + new Date()).then(function (response) {
                 group.description = marked(response.data);
@@ -640,7 +640,7 @@ new Vue({
                 component_folder = component.name;
             }
 
-            var component_path = './' + _this.settings.components_folder + '/' + component.group + '/' + component_folder + '/docs';
+            var component_path = './docs/' + _this.settings.components_folder + '/' + component.group + '/' + component_folder + '/docs';
 
             // Get and set component description
 
@@ -840,7 +840,7 @@ new Vue({
             _this.open_group = null;
             _this.open_nav = false;
 
-            _this.$http.get(page.file + '?cb=' + new Date()).then(function (response) {
+            _this.$http.get('docs/'+page.file + '?cb=' + new Date()).then(function (response) {
                 _this.$set('active_page.markup', marked(response.data));
 
                 _this.applySyntaxHighlighting(document);

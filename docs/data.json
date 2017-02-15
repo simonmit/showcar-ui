@@ -1,5 +1,5 @@
 {
-    "project_logo": "AutoScout24.svg",
+    "project_logo": "docs/AutoScout24.svg",
     "project_favicon": "favicon.png",
     "project_name": "",
     "project_url": null,
@@ -34,11 +34,11 @@
     },
     "assets": {
         "css": [
-            "lib/showcar-ui.css"
+            "docs/lib/showcar-ui.css"
         ],
         "js": [
-            "lib/showcar-ui.js",
-            "lib/showcar-icons.js"
+            "docs/lib/showcar-ui.js",
+            "docs/lib/showcar-icons.js"
         ]
     },
     "font_libraries": {
