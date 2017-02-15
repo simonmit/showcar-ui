@@ -7,7 +7,7 @@
     "client_name": null,
     "client_url": null,
     "settings": {
-        "components_folder": "components"
+        "components_folder": "../src/06-components"
     },
     "creators": [
         {
@@ -147,7 +147,8 @@
                     "group": "atoms",
                     "subgroup": "custom-dropdown",
                     "name": "custom-dropdown-simple",
-                    "title":"Simple custom dropdown"
+                    "title": "Simple custom dropdown",
+                    "show_js": true
                 },
                 {
                     "group": "atoms",

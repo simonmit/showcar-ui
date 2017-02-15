@@ -596,6 +596,7 @@ new Vue({
                     _this.$set('groups[' + i + '].components[' + j + '].code_show', false);
                     _this.$set('groups[' + i + '].components[' + j + '].js_show', false);
                     _this.$set('groups[' + i + '].components[' + j + '].type', group.components[j].type ? group.components[j].type : 'standard');
+                    _this.$set('groups[' + i + '].components[' + j + '].show_js', group.components[j].show_js ? group.components[j].show_js : false);
                     _this.$set('groups[' + i + '].components[' + j + '].width', group.components[j].width ? group.components[j].width : 'full');
 
                     // Add html and description properties to the component object.
@@ -662,14 +663,15 @@ new Vue({
                 _this.logError('HTML file for <strong>' + component.name + '</strong> component failed to load from <code>' + component_path + component.name + '.html</code>');
             });
 
-            // Get and set component js
-            _this.$http.get(component_path + '/' + component.name + '.js' + '?cb=' + new Date()).then(function (response) {
-                component.js = response.data;
-                _this.areComponentsLoaded();
-            }, function () {
-                // _this.logError('JS file for <strong>' + component.name + '</strong> component failed to load from <code>' + component_path + '/js.html</code>');
-            });
-
+            if (component.show_js) {
+                // Get and set component js
+                _this.$http.get(component_path + '/' + component.name + '.js' + '?cb=' + new Date()).then(function (response) {
+                    component.js = response.data;
+                    _this.areComponentsLoaded();
+                }, function () {
+                    _this.logError('JS file for <strong>' + component.name + '</strong> component failed to load from <code>' + component_path + '/' + component.name + '.js</code>');
+                });
+            }
 
         },
 
@@ -840,7 +842,7 @@ new Vue({
             _this.open_group = null;
             _this.open_nav = false;
 
-            _this.$http.get('docs/'+page.file + '?cb=' + new Date()).then(function (response) {
+            _this.$http.get('docs/' + page.file + '?cb=' + new Date()).then(function (response) {
                 _this.$set('active_page.markup', marked(response.data));
 
                 _this.applySyntaxHighlighting(document);
