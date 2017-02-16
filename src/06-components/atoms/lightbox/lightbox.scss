@@ -1,0 +1,71 @@
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
+@import "../../../05-layout/grid";
+
+.sc-lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: $form-border-radius;
+    padding: $L;
+    background-color: $white;
+    @include mqmin($viewportXL) {
+        width: 550px;
+    }
+    @include mqminmax($viewportM, $viewportXL - 1) {
+        @include span(6);
+    }
+    @include mqmax($viewportM - 1) {
+         width: 288px;
+    }
+
+    z-index: 140; // overlay header
+    // box-shadow: 0 0 10000px 10000px rgba(0,0,0,.6);
+
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.sc-lightbox-scroll {
+    @include mqmin($viewportM) {
+        overflow-y: hidden;
+    }
+}
+
+// TODO: fix the input centring problem
+// body.sc-lightbox-open {
+//     &::before {
+//         // transform: translateX(0) scaleX(100) scaleY(100);
+//         backface-visibility: hidden;
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         z-index: 139;
+//         background-color: rgba(0, 0, 0, 0.6);
+//     }
+// }
+
+body {
+    position: relative;
+}
+
+.sc-lightbox-scroll {
+    @include mqmin($viewportM) {
+        overflow-y: hidden;
+    }
+}
+
+.sc-lightbox-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 139; // less than modal window by one
+}

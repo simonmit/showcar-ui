@@ -1,0 +1,66 @@
+@import "../../../01-settings/variables";
+@import "../../../02-sass-tools/sass-mq";
+@import "../../../06-components/atoms/rotating-arrow/rotating-arrow";
+
+.sc-expandable-box {
+  @include clearfix();
+  border-top: 1px solid $black-30;
+
+  @include mqmin($viewportM) {
+    border-top: none;
+  }
+
+  @include mqmin($viewportM) {
+    border-top: none;
+  }
+
+  &--adaptive {
+    @include mqmin($viewportM) {
+      border-bottom: none;
+
+      .sc-expandable-box__content {
+        display: block;
+      }
+
+      .sc-expandable-box__label {
+        &:after {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked {
+      & ~ .sc-expandable-box__content {
+        display: block;
+      }
+      & ~ .sc-expandable-box__title > .sc-expandable-box__label {
+        &:after {
+          @include rotating-arrow('up');
+        }
+      }
+    }
+
+  }
+
+  &__label {
+    padding: $XL 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:after {
+      @include rotating-arrow('down');
+    }
+  }
+
+  &__content {
+    display: none;
+    padding-bottom: $XL;
+  }
+
+}

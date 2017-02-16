@@ -1,0 +1,97 @@
+@import "../../../01-settings/variables";
+@import "../../../03-generic/fonts";
+@import "../../../06-components/atoms/link/link";
+
+//TODO remove Multiple Breadcrumbs, mobile is better
+@mixin arrow($direction) {
+  content: '';
+  display: inline-block;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%227%22%20height%3D%2213%22%3E%3Cpath%20fill%3D%22%23007cca%22%20fill-rule%3D%22evenodd%22%20d%3D%22M.5%2013l-.5-.5%206-6L0%20.6.5%200%207%206.5z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 13px;
+  margin-top: 5px;
+  margin-right: $S;
+
+  @if $direction == 'left' {
+    transform: rotate(180deg);
+    margin-left: 3px; //adjust to match minimal text offset of following h1
+  }
+
+  @if $direction == 'right' {
+    margin-left: $L;
+  }
+}
+
+.sc-breadcrumbs {
+  font-size: 0; //avoid spacing between inline-block li elements
+  padding-left: $L;
+  margin-top: 10px; //give all breadcrumbs a common top margin within all pages
+
+  li {
+    display: none;
+    margin-top: 10px;
+
+    //TODO: remove
+    @include font(M);
+
+    a {
+      //TODO: remove (element styling)
+      @include link(M);
+      display: inline-block;
+
+      padding: 10px $S;
+      margin: -10px (-$S);
+    }
+
+    &:last-child {
+      display: inline-block;
+    }
+
+    &:last-child::before {
+      @include arrow('left');
+    }
+
+    @include mqmin(500px) { // 500px?
+      display: inline-block;
+
+      &::after {
+        @include arrow('right');
+      }
+
+      &:not(:only-child):last-child::before,
+      &:last-child::after {
+        content: none;
+        float: left;
+      }
+    }
+  }
+
+  // Block modifier
+  &--viewport-s {
+    display: inline-block;
+
+    // Mark the element that should be visible on viewportS
+    li.sc-breadcrumb-item--viewport-s {
+      display: inline-block;
+    }
+
+    @include mqmax(500px) { // 500px?
+      li {
+        display: none;
+
+        &::before {
+          @include arrow('left');
+        }
+
+        &::after {
+          display: none;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
