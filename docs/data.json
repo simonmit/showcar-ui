@@ -229,8 +229,35 @@
                 },
                 {
                     "group": "atoms",
+                    "name": "lazy-image",
+                    "title": "Lazy image"
+                },
+                {
+                    "group": "atoms",
                     "name": "lightbox",
                     "title": "Lightbox"
+                },
+                {
+                    "group": "atoms",
+                    "name": "link",
+                    "title": "Links"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "link",
+                    "name": "default-link",
+                    "title": "Default link"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "link",
+                    "name": "inline-link",
+                    "title": "Inline link"
+                },
+                {
+                    "group": "atoms",
+                    "name": "rotating-arrow",
+                    "title": "Rotating arrow"
                 }
             ]
         },
