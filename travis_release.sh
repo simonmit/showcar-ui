@@ -26,8 +26,6 @@ git add . -A
 git commit -am "Release"
 git push origin $RELEASE_BRANCH
 
-
-###### DOCS ######
 cd ..
 mkdir temp-gh-pages
 cd  temp-gh-pages
