@@ -217,6 +217,18 @@
                 },
                 {
                     "group": "atoms",
+                    "subgroup": "input",
+                    "name": "radio-button",
+                    "title": "Radio buttons"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "checkbox",
+                    "title": "Checkboxes"
+                },
+                {
+                    "group": "atoms",
                     "name": "lightbox",
                     "title": "Lightbox"
                 }
