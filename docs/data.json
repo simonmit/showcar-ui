@@ -263,6 +263,11 @@
                     "group": "atoms",
                     "name": "spinner",
                     "title": "Loading spinners"
+                },
+                {
+                    "group": "atoms",
+                    "name": "stepper",
+                    "title": "Stepper"
                 }
             ]
         },
