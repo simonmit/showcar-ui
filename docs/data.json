@@ -258,6 +258,11 @@
                     "group": "atoms",
                     "name": "rotating-arrow",
                     "title": "Rotating arrow"
+                },
+                {
+                    "group": "atoms",
+                    "name": "spinner",
+                    "title": "Loading spinners"
                 }
             ]
         },
