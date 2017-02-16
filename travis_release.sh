@@ -16,7 +16,6 @@ git clone -b $RELEASE_BRANCH --single-branch "git@github.com:AutoScout24/showcar
 git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git config push.default simple
-git checkout $RELEASE_BRANCH
 
 cp -r ../dist .
 cp -r ../src .
@@ -37,7 +36,6 @@ git clone -b $DOCS_BRANCH --single-branch "git@github.com:AutoScout24/showcar-ui
 git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git config push.default simple
-git checkout $DOCS_BRANCH
 
 cp -r ../docs .
 cp -r ../dist docs/lib
