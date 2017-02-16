@@ -1,0 +1,315 @@
+{
+    "project_logo": "docs/AutoScout24.svg",
+    "project_favicon": "favicon.png",
+    "project_name": "",
+    "project_url": null,
+    "copyright_start_year": null,
+    "client_name": null,
+    "client_url": null,
+    "settings": {
+        "components_folder": "../src/06-components"
+    },
+    "creators": [
+        {
+            "name": null,
+            "url": null
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#00585C",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "ShowCar UI",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [
+            "docs/lib/showcar-ui.css"
+        ],
+        "js": [
+            "docs/lib/showcar-ui.js",
+            "docs/lib/showcar-icons.js"
+        ]
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": "http://fonts.googleapis.com/css?family=Source+Sans%20Pro:400,600,700,900"
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "atoms",
+            "title": "Atoms",
+            "components": [
+                {
+                    "group": "atoms",
+                    "name": "button",
+                    "title": "Button",
+                    "width": "full",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-default",
+                    "title": "Button (default)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-link",
+                    "title": "Button (link)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-disabled",
+                    "title": "Button (disabled)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "button",
+                    "name": "button-full-width",
+                    "title": "Button (full width)"
+                },
+                {
+                    "group": "atoms",
+                    "name": "collapse",
+                    "title": "Collapse",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "collapse",
+                    "name": "collapse-toggle",
+                    "title": "Toogle"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "collapse",
+                    "name": "collapse-more-less",
+                    "title": "Show more/less"
+                },
+                {
+                    "group": "atoms",
+                    "name": "color-selector",
+                    "title": "Color Selectors",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "color-selector",
+                    "name": "color-selector-checkbox",
+                    "title": "Color Selectors with checkboxes"
+                },
+                {
+                    "group": "atoms",
+                    "name": "custom-dropdown",
+                    "title": "Custom dropdown",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-simple",
+                    "title": "Simple custom dropdown",
+                    "show_js": true
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-disabled",
+                    "title": "Disabled custom dropdown"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-icons",
+                    "title": "Custom dropdown with icons (one choice possible)"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "custom-dropdown",
+                    "name": "custom-dropdown-icons-checkbox",
+                    "title": "Custom dropdown with icons (multiple choice possible)"
+                },
+                {
+                    "group": "atoms",
+                    "name": "input",
+                    "title": "Default inputs and textarea"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "default-input",
+                    "title": "Default input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "disabled-input",
+                    "title": "disabled input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "info-input",
+                    "title": "Info input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "success-input",
+                    "title": "Success input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "error-input",
+                    "title": "Error input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "textarea",
+                    "title": "Textarea"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "select-box",
+                    "title": "Select box"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "select-box-disabled",
+                    "title": "Disabled select box"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "radio-button",
+                    "title": "Radio buttons"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "checkbox",
+                    "title": "Checkboxes"
+                },
+                {
+                    "group": "atoms",
+                    "name": "lightbox",
+                    "title": "Lightbox"
+                }
+            ]
+        },
+        {
+            "name": "molecules",
+            "title": "Molecules",
+            "components": [
+                {
+                    "group": "molecules",
+                    "name": "breadcrumb",
+                    "title": "Breadcrumb"
+                },
+                {
+                    "group": "molecules",
+                    "name": "card",
+                    "title": "Card"
+                },
+                {
+                    "group": "molecules",
+                    "name": "expandable-box",
+                    "title": "Expandable box"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "expandable-box",
+                    "name": "expandable-box-adaptive",
+                    "title": "Expandable box (adaptive)"
+                },
+                {
+                    "group": "molecules",
+                    "name": "input-group",
+                    "title": "Input group"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "input-group",
+                    "name": "input-group-radio",
+                    "title": "Input group (radio buttons)"
+                },
+                {
+                    "group": "molecules",
+                    "name": "notification",
+                    "title": "Notification"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "notification",
+                    "name": "notification-closeable",
+                    "title": "Notification (with close button)"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "notification",
+                    "name": "notification-timeout",
+                    "title": "Notification (with timeout)"
+                }
+            ]
+        },
+        {
+            "name": "organisms",
+            "title": "Organisms",
+            "components": [
+                {
+                    "group": "organisms",
+                    "name": "navigation",
+                    "title": "Navigation"
+                },
+                {
+                    "group": "organisms",
+                    "name": "pagination",
+                    "title": "Pagination"
+                },
+                {
+                    "group": "organisms",
+                    "name": "spy-navigation",
+                    "title": "Spy navigation"
+                }
+            ]
+        }
+    ],
+    "version": "0.0.1"
+}
