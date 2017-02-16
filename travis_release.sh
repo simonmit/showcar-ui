@@ -23,9 +23,14 @@ cp ../package.json .
 cp ../History.md .
 
 git add . -A
-git commit -am "Release"
-git push origin $RELEASE_BRANCH
 
+#checking for files to commit, if exists, then commit. If not make DOCS task.
+if [ -n "$(git status --porcelain)" ]; then
+	git commit -am "Release"
+	git push origin $RELEASE_BRANCH
+fi
+
+###DOCS###
 cd ..
 mkdir temp-gh-pages
 cd  temp-gh-pages
