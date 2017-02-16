@@ -7,7 +7,7 @@ const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString:
 module.exports = {
     docs: {
         files: [
-            { expand: true, cwd: './dist/', src: ['*.css', '*.js'], dest: './docs/lib/' }
+            { expand: true, cwd: './dist/', src: ['*.css', '*.js', '*.map'], dest: './docs/lib/' }
         ]
     },
 
