@@ -24,7 +24,7 @@ cp ../History.md .
 
 git add . -A
 
-#checking for files to commit, if exists, then commit. If not make DOCS task.
+#checking for files to commit, if exists then commit. If not make DOCS task.
 if [ -n "$(git status --porcelain)" ]; then
 	git commit -am "Release"
 	git push origin $RELEASE_BRANCH
@@ -35,17 +35,21 @@ cd ..
 mkdir temp-gh-pages
 cd  temp-gh-pages
 
+#remove all files except .gitignore and all inside.git "shopt -s extglob" extends bash
+shopt -s extglob
+rm -rf !(.git*)
+
 git clone -b $DOCS_BRANCH --single-branch "git@github.com:AutoScout24/showcar-ui.git" .
 git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git config push.default simple
 
+
 cp -r ../docs .
 cp -r ../dist docs/lib
+mkdir src
 cp -r ../src/06-components ./src/06-components
-cp  ../package.json .
 cp  ../index.html .
-cp ../History.md .
 
 git add . -A
 git commit -am "Release"
