@@ -229,6 +229,12 @@
                 },
                 {
                     "group": "atoms",
+                    "subgroup": "lazy-image",
+                    "name": "lazy-image",
+                    "title": "Lazy image"
+                },
+                {
+                    "group": "atoms",
                     "name": "lightbox",
                     "title": "Lightbox"
                 }
