@@ -1,4 +1,0 @@
-sticky
-
-pager
-notification
