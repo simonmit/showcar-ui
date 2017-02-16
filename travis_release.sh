@@ -41,7 +41,7 @@ git checkout $DOCS_BRANCH
 
 cp -r ../docs .
 cp -r ../dist docs/lib
-cp -r ../06-components docs/components
+cp -r ../src/06-components docs/components
 cp  ../package.json .
 cp ../History.md .
 
