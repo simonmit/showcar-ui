@@ -164,6 +164,71 @@
                 },
                 {
                     "group": "atoms",
+                    "name": "input",
+                    "title": "Default inputs and textarea"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "default-input",
+                    "title": "Default input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "disabled-input",
+                    "title": "disabled input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "info-input",
+                    "title": "Info input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "success-input",
+                    "title": "Success input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "error-input",
+                    "title": "Error input"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "textarea",
+                    "title": "Textarea"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "select-box",
+                    "title": "Select box"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "select-box-disabled",
+                    "title": "Disabled select box"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "radio-button",
+                    "title": "Radio buttons"
+                },
+                {
+                    "group": "atoms",
+                    "subgroup": "input",
+                    "name": "checkbox",
+                    "title": "Checkboxes"
+                },
+                {
+                    "group": "atoms",
                     "name": "lightbox",
                     "title": "Lightbox"
                 }
