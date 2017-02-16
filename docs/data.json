@@ -253,6 +253,11 @@
                     "subgroup": "link",
                     "name": "inline-link",
                     "title": "Inline link"
+                },
+                {
+                    "group": "atoms",
+                    "name": "rotating-arrow",
+                    "title": "Rotating arrow"
                 }
             ]
         },
