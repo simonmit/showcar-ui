@@ -37,7 +37,7 @@ git config push.default simple
 
 cp -r ../docs .
 cp -r ../dist docs/lib
-cp -r ../src/06-components .
+cp -r ../src/06-components ./src/06-components
 cp  ../package.json .
 cp  ../index.html .
 cp ../History.md .
