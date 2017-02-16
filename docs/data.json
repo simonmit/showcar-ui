@@ -44,7 +44,7 @@
     "font_libraries": {
         "typekit_code": null,
         "typography_web_fonts": null,
-        "google_web_fonts": "http://fonts.googleapis.com/css?family=Source+Sans%20Pro:400,600,700,900"
+        "google_web_fonts": "https://fonts.googleapis.com/css?family=Source+Sans%20Pro:400,600,700,900"
     },
     "content": {
         "show_first_page_on_load": true,
