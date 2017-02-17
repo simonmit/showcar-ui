@@ -57,11 +57,11 @@
             },{
                 "name": "colors",
                 "title": "colors",
-                "file": "./pages/intro.md"
+                "file": "./pages/colors.md"
             },{
                 "name": "variables",
                 "title": "variables",
-                "file": "./pages/intro.md"
+                "file": "./pages/variables.md"
             }
         ]
     },
