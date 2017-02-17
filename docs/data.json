@@ -54,6 +54,14 @@
                 "name": "introduction",
                 "title": "Introduction",
                 "file": "./pages/intro.md"
+            },{
+                "name": "colors",
+                "title": "colors",
+                "file": "./pages/intro.md"
+            },{
+                "name": "variables",
+                "title": "variables",
+                "file": "./pages/intro.md"
             }
         ]
     },
