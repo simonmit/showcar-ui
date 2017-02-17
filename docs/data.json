@@ -179,31 +179,31 @@
                     "group": "atoms",
                     "subgroup": "input",
                     "name": "default-input",
-                    "title": "Default input"
+                    "title": "Input default"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "input",
                     "name": "disabled-input",
-                    "title": "disabled input"
+                    "title": "Input disabled"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "input",
                     "name": "info-input",
-                    "title": "Info input"
+                    "title": "Input info"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "input",
                     "name": "success-input",
-                    "title": "Success input"
+                    "title": "Input success"
                 },
                 {
                     "group": "atoms",
                     "subgroup": "input",
                     "name": "error-input",
-                    "title": "Error input"
+                    "title": "Input error"
                 },
                 {
                     "group": "atoms",
