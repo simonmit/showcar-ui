@@ -404,12 +404,13 @@
 										<template v-if="component.html">
 											<div class="ndpl-component__code ndpl-c-border"
 												 v-show="component.code_show">
-											<button class="clipbrd-btn" data-clipboard-target="#copy_code-{{component.id}}">
+											<button class="clipbrd-btn"
+													data-clipboard-target="#copy_code-{{component.id}}-{{component.name}}">
 													<img src="docs/clippy.svg" alt="Copy to clipboard">
 												</button>
 												<pre
 													class="ndpl-pre"><code class="ndpl-code html" v-text="component.html"
-																		   id="copy_code-{{component.id}}"></code></pre>
+																		   id="copy_code-{{component.id}}-{{component.name}}"></code></pre>
 											</div>
 											<a v-if="!component.options.disable_code_sample"
 											   class="ndpl-component__code-toggle ndpl-c-highlight ndpl-c-border"
@@ -423,12 +424,12 @@
 										<template v-if="component.js">
 											<div class="ndpl-component__code ndpl-c-border"
 												 v-show="component.js_show">
-												<button class="clipbrd-btn" data-clipboard-target="#copy_js-{{component.id}}">
+												<button class="clipbrd-btn" data-clipboard-target="#copy_js-{{component.id}}-{{component.name}}">
 													<img src="docs/clippy.svg" alt="Copy to clipboard">
 												</button>
 												<pre
 													class="ndpl-pre"><code class="ndpl-code js" v-text="component.js"
-																		   id="copy_js-{{component.id}}"></code></pre>
+																		   id="copy_js-{{component.id}}-{{component.name}}"></code></pre>
 											</div>
 											<a v-if="!component.options.disable_code_sample"
 											   class="ndpl-component__code-toggle ndpl-c-highlight ndpl-c-border"
@@ -674,7 +675,7 @@
 	.example-spinners-background {
 		background-color: #808080;
 	}
-	
+
 	.docs-table {
 		border: 1px solid #dcdcdc;
 		border-radius: 4px;
