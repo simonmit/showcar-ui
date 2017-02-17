@@ -54,14 +54,21 @@
                 "name": "introduction",
                 "title": "Introduction",
                 "file": "./pages/intro.md"
-            },{
+            },
+            {
                 "name": "colors",
                 "title": "colors",
                 "file": "./pages/colors.md"
-            },{
-                "name": "variables",
-                "title": "variables",
-                "file": "./pages/variables.md"
+            },
+            {
+                "name": "spacings",
+                "title": "spacings",
+                "file": "./pages/spacings.md"
+            },
+            {
+                "name": "viewports",
+                "title": "viewports",
+                "file": "./pages/viewports.md"
             }
         ]
     },

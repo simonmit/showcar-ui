@@ -675,6 +675,42 @@
 		background-color: #808080;
 	}
 	
+	.docs-table {
+		border: 1px solid #dcdcdc;
+		border-radius: 4px;
+		border-collapse: separate;
+		margin: 20px 0;
+	}
+
+	.docs-table th {
+		background: #c4c4c4;
+		font-weight: bold;
+	}
+
+	.docs-table th, td {
+		width: 200px;
+		padding: 8px;
+		border-left: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
+		text-align: center;
+		word-break: break-all;
+	}
+
+	.docs-table th, td:first-child {
+		border-left: 0;
+	}
+
+	.docs-table th, tr:nth-child(even) td {
+		background: #f4f4f4;
+	}
+
+	.docs-table th, tr:last-child td {
+		border-bottom: none;
+	}
+
+	.ndpl-page {
+		margin: 0; /* dirty hack */
+	}
 	.ndpl-preloaded{
 		display: none;}
 </style>
