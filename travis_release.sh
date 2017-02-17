@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -ev
+
+chmod 600 release_key
+eval `ssh-agent -s`
+ssh-add release_key
+
 RELEASE_BRANCH=release
 mkdir temp-release
 cd temp-release

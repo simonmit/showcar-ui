@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -ev
+
+chmod 600 release_key
+eval `ssh-agent -s`
+ssh-add release_key
+
 DOCS_BRANCH=gh-pages
 mkdir temp-gh-pages
 cd  temp-gh-pages
