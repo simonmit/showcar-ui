@@ -1,8 +1,8 @@
 #### Usage:
-    There are several variables that should be used for the spacing inside and between elements.  
-    Use the variables only for the spacing and not for other properties like e.g. font-sizes.  
+There are several variables that should be used for the spacing inside and between elements.  
+Use the variables only for the spacing and not for other properties like e.g. font-sizes.  
 
-<div class="table-var-wrapper sc-clearfix">
+<div class="sc-clearfix">
     <table class="docs-table docs-table-variable-spacings sc-pull-left">
         <thead>
         <tr>
