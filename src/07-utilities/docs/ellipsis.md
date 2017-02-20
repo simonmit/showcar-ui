@@ -5,5 +5,3 @@ If the content gets too long, an ellipsis will be placed and the text is cut off
 #### Status:
 
 <p class="status review">Needs review</p>
-
-CODE EXAMPLE NEEDED
