@@ -398,15 +398,6 @@
                 },
                 {
                     "group": "globals",
-                    "subgroup": "generic",
-                    "name": "fonts",
-                    "title": "Fonts",
-                    "options": {
-                        "disable_code_sample": true
-                    }
-                },
-                {
-                    "group": "globals",
                     "name": "layout",
                     "title": "Layout",
                     "options": {
@@ -440,7 +431,7 @@
                 {
                     "group": "globals",
                     "subgroup": "layout",
-                    "name": "responsive-images-srcset",
+                    "name": "responsive-images-picture",
                     "title": "Art direction"
                 },
                 {

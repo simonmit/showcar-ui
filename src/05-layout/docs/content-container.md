@@ -32,5 +32,3 @@ The content container is a responsive element containing the entire content sect
     </tr>
     </tbody>
 </table>
-
-CODE EXAMPLE NEEDED
