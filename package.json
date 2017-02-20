@@ -13,6 +13,7 @@
   "scripts": {
     "grunt": "grunt",
     "build": "grunt build",
+    "docs": "grunt docs",
     "test-sanity": "mocha tests/index.js -t 120000",
     "test-css-cleanup": "rm -rf ./backstop_data/bitmaps_test",
     "test-css": "npm run test-css-cleanup && backstop test",
