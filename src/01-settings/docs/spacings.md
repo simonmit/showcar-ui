@@ -40,4 +40,3 @@ Use the variables only for the spacing and not for other properties like e.g. fo
     </tr>
     </tbody>
 </table>
-
