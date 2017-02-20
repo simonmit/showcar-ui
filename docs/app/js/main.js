@@ -661,7 +661,7 @@ new Vue({
                 component.html = response.data;
                 _this.areComponentsLoaded();
             }, function () {
-                _this.logError('HTML file for <strong>' + component.name + '</strong> component failed to load from <code>' + component_path + component.name + '.html</code>');
+                _this.logError('HTML file for <strong>' + component.name + '</strong> component failed to load from <code>' + component_path +'/' + component.name + '.html</code>');
             });
 
             if (component.show_js) {

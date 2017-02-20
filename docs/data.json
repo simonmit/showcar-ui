@@ -7,7 +7,7 @@
     "client_name": null,
     "client_url": null,
     "settings": {
-        "components_folder": "../src/06-components"
+        "components_folder": "components"
     },
     "creators": [
         {
@@ -362,28 +362,56 @@
             "title": "Globals",
             "components": [
                 {
-                    "group": "layout",
+                    "group": "globals",
+                    "name": "layout",
+                    "title": "Layout",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
                     "name": "grid",
                     "title": "Grid",
-                    "disable_code_sample": true
+                    "options": {
+                        "disable_code_sample": true
+                    }
                 },
                 {
-                    "group": "settings",
+                    "group": "globals",
+                    "name": "settings",
+                    "title": "Settings",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "settings",
                     "name": "colors",
                     "title": "Colors",
-                    "disable_code_sample": true
+                    "options": {
+                        "disable_code_sample": true
+                    }
                 },
                 {
-                    "group": "settings",
+                    "group": "globals",
+                    "subgroup": "settings",
                     "name": "spacings",
                     "title": "Spacings",
-                    "disable_code_sample": true
+                    "options": {
+                        "disable_code_sample": true
+                    }
                 },
                 {
-                    "group": "settings",
+                    "group": "globals",
+                    "subgroup": "settings",
                     "name": "viewports",
                     "title": "Viewports",
-                    "disable_code_sample": true
+                    "options": {
+                        "disable_code_sample": true
+                    }
                 }
             ]
         }
