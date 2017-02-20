@@ -356,6 +356,30 @@
                     "title": "Spy navigation"
                 }
             ]
+        },
+        {
+            "name": "globals",
+            "title": "Globals",
+            "components": [
+                {
+                    "group": "layout",
+                    "name": "grid",
+                    "title": "Grid"
+                },
+                {
+                    "group": "settings",
+                    "name": "colors",
+                    "title": "Colors"
+                },{
+                    "group": "settings",
+                    "name": "spacings",
+                    "title": "Spacings"
+                },{
+                    "group": "settings",
+                    "name": "viewports",
+                    "title": "Viewports"
+                }
+            ]
         }
     ],
     "version": "0.0.1"
