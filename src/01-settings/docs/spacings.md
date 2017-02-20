@@ -15,31 +15,31 @@ Use the variables only for the spacing and not for other properties like e.g. fo
     </thead>
     <tbody>
     <tr>
-        <td><code>$XS</code></td>
+        <td>$XS</td>
         <td>4px</td>
     </tr>
     <tr>
-        <td><code>$S</code></td>
+        <td>$S</td>
         <td>8px</td>
     </tr>
     <tr>
-        <td><code>$M</code></td>
+        <td>$M</td>
         <td>12px</td>
     </tr>
     <tr>
-        <td><code>$L</code></td>
+        <td>$L</td>
         <td>16px</td>
     </tr>
     <tr>
-        <td><code>$XL</code></td>
+        <td>$XL</td>
         <td>20px</td>
     </tr>
     <tr>
-        <td><code>$XXL</code></td>
+        <td>$XXL</td>
         <td>28px</td>
     </tr>
     <tr>
-        <td><code>$XXXL</code></td>
+        <td>$XXXL</td>
         <td>40px</td>
     </tr>
     </tbody>
