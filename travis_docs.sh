@@ -22,11 +22,10 @@ rm -rf !(.git*)
 cp -r ../docs .
 cp -r ../dist docs/lib
 mkdir src
-mkdir -p ./src/06-components/docs
-cp -r ../src/06-components/docs ./src/06-components/docs
-mkdir -p ./src/06-components/settings/
+cp -r ../src/06-components ./src/06-components
+mkdir -p ./src/06-components/settings/docs
 cp -r ../src/01-settings/docs ./src/06-components/settings/docs
-mkdir -p ./src/06-components/layout
+mkdir -p ./src/06-components/layout/docs
 cp -r ../src/05-layout/docs ./src/06-components/layout/docs
 
 cp  ../index.html .
