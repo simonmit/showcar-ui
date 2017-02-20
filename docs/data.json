@@ -364,20 +364,26 @@
                 {
                     "group": "layout",
                     "name": "grid",
-                    "title": "Grid"
+                    "title": "Grid",
+                    "disable_code_sample": true
                 },
                 {
                     "group": "settings",
                     "name": "colors",
-                    "title": "Colors"
-                },{
+                    "title": "Colors",
+                    "disable_code_sample": true
+                },
+                {
                     "group": "settings",
                     "name": "spacings",
-                    "title": "Spacings"
-                },{
+                    "title": "Spacings",
+                    "disable_code_sample": true
+                },
+                {
                     "group": "settings",
                     "name": "viewports",
-                    "title": "Viewports"
+                    "title": "Viewports",
+                    "disable_code_sample": true
                 }
             ]
         }
