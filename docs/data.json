@@ -363,25 +363,8 @@
             "components": [
                 {
                     "group": "globals",
-                    "name": "layout",
-                    "title": "Layout",
-                    "options": {
-                        "disable_code_sample": true
-                    }
-                },
-                {
-                    "group": "globals",
-                    "subgroup": "layout",
-                    "name": "grid",
-                    "title": "Grid",
-                    "options": {
-                        "disable_code_sample": true
-                    }
-                },
-                {
-                    "group": "globals",
                     "name": "settings",
-                    "title": "Settings",
+                    "title": "Variables",
                     "options": {
                         "disable_code_sample": true
                     }
@@ -409,6 +392,32 @@
                     "subgroup": "settings",
                     "name": "viewports",
                     "title": "Viewports",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "generic",
+                    "name": "fonts",
+                    "title": "Fonts",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "name": "layout",
+                    "title": "Layout",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
+                    "name": "grid",
+                    "title": "Grid",
                     "options": {
                         "disable_code_sample": true
                     }
