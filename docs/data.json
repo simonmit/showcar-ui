@@ -416,11 +416,38 @@
                 {
                     "group": "globals",
                     "subgroup": "layout",
+                    "name": "content-container",
+                    "title": "Content container"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
                     "name": "grid",
-                    "title": "Grid",
-                    "options": {
-                        "disable_code_sample": true
-                    }
+                    "title": "Grid"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
+                    "name": "responsive-grid",
+                    "title": "Responsive grid"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
+                    "name": "responsive-images-srcset",
+                    "title": "Responsive images with srcset"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
+                    "name": "responsive-images-srcset",
+                    "title": "Art direction"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "layout",
+                    "name": "sticky",
+                    "title": "Sticky element"
                 }
             ]
         }
