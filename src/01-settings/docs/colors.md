@@ -1,4 +1,4 @@
-# colors
+NOT DONE YET
 
 <div class="ndpl-component ndpl-component--full" id="group-atoms-component-color-pallete" group-id="group-atoms">
     <div class="ndpl-component__description ndpl-c-brand-ca"></div>
