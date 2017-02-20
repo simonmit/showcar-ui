@@ -9,6 +9,4 @@ Both markers are optional. If you omit the undock marker, the start of the docum
 
 #### Status:
 
-<p class="status review">Needs review</p>
-
-CODE EXAMPLE NEEDED
+<p class="status review">Needs review. Check example centring</p>

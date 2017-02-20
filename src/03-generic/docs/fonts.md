@@ -42,5 +42,3 @@ Several helper classes for font styling are available, the font sizes follow sim
         </tr>
     </tbody>
 </table>
-
-CODE EXAMPLE NEEDED
