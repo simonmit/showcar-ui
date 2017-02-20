@@ -23,10 +23,10 @@ cp -r ../docs .
 cp -r ../dist docs/lib
 mkdir src
 cp -r ../src/06-components ./src/06-components
-mkdir -p ./src/06-components/settings/docs
-cp -r ../src/01-settings/docs ./src/06-components/settings/docs
-mkdir -p ./src/06-components/layout/docs
-cp -r ../src/05-layout/docs ./src/06-components/layout/docs
+mkdir -p ./src/06-components/globals/settings
+cp -r ../src/01-settings/docs ./src/06-components/globals/settings
+mkdir -p ./src/06-components/globals/layout
+cp -r ../src/05-layout/docs ./src/06-components/globals/layout
 
 cp  ../index.html .
 
