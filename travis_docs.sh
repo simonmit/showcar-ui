@@ -22,7 +22,12 @@ rm -rf !(.git*)
 cp -r ../docs .
 cp -r ../dist docs/lib
 mkdir src
-cp -r ../src/06-components ./src/06-components
+cp -r ../src/06-components/docs ./src/06-components/docs
+mkdir ./src/06-components/settings/
+cp -r ../src/01-settings/docs ./src/06-components/settings/docs
+mkdir ./src/06-components/layout
+cp -r ../src/05-layout/docs ./src/06-components/layout/docs
+
 cp  ../index.html .
 
 git add . -A
