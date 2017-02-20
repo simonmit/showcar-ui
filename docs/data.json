@@ -363,15 +363,15 @@
             "components": [
                 {
                     "group": "globals",
-                    "name": "settings",
-                    "title": "Settings",
+                    "name": "variables",
+                    "title": "Variables",
                     "options": {
                         "disable_code_sample": true
                     }
                 },
                 {
                     "group": "globals",
-                    "subgroup": "settings",
+                    "subgroup": "variables",
                     "name": "colors",
                     "title": "Colors",
                     "options": {
@@ -380,7 +380,7 @@
                 },
                 {
                     "group": "globals",
-                    "subgroup": "settings",
+                    "subgroup": "variables",
                     "name": "spacings",
                     "title": "Spacings",
                     "options": {
@@ -389,12 +389,18 @@
                 },
                 {
                     "group": "globals",
-                    "subgroup": "settings",
+                    "subgroup": "variables",
                     "name": "viewports",
                     "title": "Viewports",
                     "options": {
                         "disable_code_sample": true
                     }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "fonts",
+                    "name": "fonts",
+                    "title": "Fonts"
                 },
                 {
                     "group": "globals",
