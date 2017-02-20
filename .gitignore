@@ -16,3 +16,4 @@ backstop.json
 .sass-cache
 .vscode
 docs/lib
+docs/components
