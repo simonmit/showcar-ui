@@ -2,6 +2,10 @@
 There are several variables that should be used for the spacing inside and between elements.  
 Use the variables only for the spacing and not for other properties like e.g. font-sizes.  
 
+#### Status:
+
+<p class="status complete">Complete</p>
+
 <table class="docs-table">
     <thead>
     <tr>
