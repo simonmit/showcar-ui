@@ -453,6 +453,71 @@
                     "subgroup": "layout",
                     "name": "sticky",
                     "title": "Sticky element"
+                },
+                {
+                    "group": "globals",
+                    "name": "utilities",
+                    "title": "Utility classes",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "visibility",
+                    "title": "Visible/hidden classes",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "box-spacings",
+                    "title": "Box spacings"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "center-absolute",
+                    "title": "Absolute centring"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "center-blocks",
+                    "title": "Blocks centring"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "ellipsis",
+                    "title": "Ellipsis"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "floats",
+                    "title": "Floats"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "horizontal-line",
+                    "title": "Hoizontal line"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "scrolling",
+                    "title": "Smooth scrolling"
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "utilities",
+                    "name": "text-alignments",
+                    "title": "Text alignments"
                 }
             ]
         }
