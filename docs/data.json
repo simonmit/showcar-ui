@@ -398,6 +398,20 @@
                 },
                 {
                     "group": "globals",
+                    "name": "generic",
+                    "title": "Fonts",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "generic",
+                    "name": "fonts",
+                    "title": "Sizes"
+                },
+                {
+                    "group": "globals",
                     "name": "layout",
                     "title": "Layout",
                     "options": {
