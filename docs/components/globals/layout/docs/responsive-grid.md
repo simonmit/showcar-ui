@@ -31,7 +31,6 @@ Always keep in mind, that smaller viewport grid classes override bigger ones.
         <td></td>
         <td>1099px</td>
     </tr>
-
     <tr>
         <td><code>.sc-grid-col-m-*</code></td>
         <td></td>
@@ -53,21 +52,4 @@ Always keep in mind, that smaller viewport grid classes override bigger ones.
 With the responsive grid column classes, you are able, to set the column width in dependency to the viewport. For Example if you define a grid with the classes `sc-grid-col-4 sc-grid-col-m-6 sc-grid-col-s-12` it will be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns wide in devices with S-Viewport.  
 You can simply check the behavior of the grid by resizing the current page.
 
-<div class="example-grid">
-    <div class="sc-grid-row">
-        <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
-    </div>
-</div>
-
-CODE EXAMPLE NEEDED
+ACHTUNG! Example is not working
