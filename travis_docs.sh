@@ -27,6 +27,8 @@ mkdir -p ./src/06-components/globals/settings
 cp -r ../src/01-settings/docs ./src/06-components/globals/settings
 mkdir -p ./src/06-components/globals/layout
 cp -r ../src/05-layout/docs ./src/06-components/globals/layout
+#temporary DELETE it
+cp  ../src/06-components/atoms/description.md ./src/06-components/globals/description.md
 
 cp  ../index.html .
 
