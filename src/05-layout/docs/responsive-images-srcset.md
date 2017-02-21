@@ -8,9 +8,9 @@ Use srcset attribute on the <img>.
 <p class="status review">Needs review</p>
 
 The height and width of the image should remain fixed.
-````html
-<img src="images/space-needle.jpg" srcset="images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w">
-```
+```html
+<img src="images/space-needle.jpg" srcset="images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w"> 
+``` 
 
 Сustom height and width of the image based on the viewport.
 ````html
