@@ -333,6 +333,12 @@
                     "subgroup": "notification",
                     "name": "notification-timeout",
                     "title": "Notification (with timeout)"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "notification",
+                    "name": "notification-tip",
+                    "title": "Notification Tip"
                 }
             ]
         },
