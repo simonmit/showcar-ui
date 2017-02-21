@@ -490,12 +490,6 @@
                 {
                     "group": "globals",
                     "subgroup": "utilities",
-                    "name": "box-spacings",
-                    "title": "Box spacings"
-                },
-                {
-                    "group": "globals",
-                    "subgroup": "utilities",
                     "name": "center-absolute",
                     "title": "Absolute centring"
                 },
