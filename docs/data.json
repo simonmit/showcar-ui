@@ -374,6 +374,22 @@
                     "subgroup": "settings",
                     "name": "colors",
                     "title": "Colors",
+                    "type": "colors",
+                    "colors": [
+                        {
+                            "hex": "#000",
+                            "sass":"$black-120"
+                        },{
+                            "hex": "#333",
+                            "sass":"$black-100"
+                        },{
+                            "hex": "#4c4c4c",
+                            "sass":"$black-90"
+                        },{
+                            "hex": "#646464",
+                            "sass":"$black-80"
+                        }
+                    ],
                     "options": {
                         "disable_code_sample": true
                     }
