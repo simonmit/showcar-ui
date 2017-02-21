@@ -80,7 +80,6 @@ var ndplComponent = Vue.extend({
             _this.$root.applySyntaxHighlighting(_this.$el);
         }
     },
-
     methods: {
 
         /**
