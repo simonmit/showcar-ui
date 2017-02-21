@@ -373,21 +373,224 @@
                     "group": "globals",
                     "subgroup": "settings",
                     "name": "colors",
-                    "title": "Colors",
+                    "title": "Primary colors (black pallete)",
                     "type": "colors",
                     "colors": [
                         {
                             "hex": "#000",
                             "sass":"$black-120"
-                        },{
+                        },
+                        {
                             "hex": "#333",
                             "sass":"$black-100"
-                        },{
+                        },
+                        {
                             "hex": "#4c4c4c",
                             "sass":"$black-90"
-                        },{
+                        },
+                        {
                             "hex": "#646464",
                             "sass":"$black-80"
+                        },
+                        {
+                            "hex": "#7c7c7c",
+                            "sass":"$black-70"
+                        },
+                        {
+                            "hex": "#949494",
+                            "sass":"$black-60"
+                        },
+                        {
+                            "hex": "#acacac",
+                            "sass":"$black-50"
+                        },
+                        {
+                            "hex": "#c4c4c4",
+                            "sass":"$black-40"
+                        },
+                        {
+                            "hex": "#dcdcdc",
+                            "sass":"$black-30"
+                        },
+                        {
+                            "hex": "#f4f4f4",
+                            "sass":"$black-20"
+                        }
+                    ],
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "settings",
+                    "name": "colors",
+                    "title": "Primary colors (orange pallete)",
+                    "type": "colors",
+                    "colors": [
+                        {
+                            "hex": "#662c00",
+                            "sass":"$orange-140"
+                        },
+                        {
+                            "hex": "#803700",
+                            "sass":"$orange-130"
+                        },
+                        {
+                            "hex": "#994200",
+                            "sass":"$orange-120"
+                        },
+                        {
+                            "hex": "#ff7500",
+                            "sass":"$orange-100"
+                        },
+                        {
+                            "hex": "#ff9133",
+                            "sass":"$orange-90"
+                        },
+                        {
+                            "hex": "#ff9a4c",
+                            "sass":"$orange-80"
+                        },
+                        {
+                            "hex": "#ffac66",
+                            "sass":"$orange-70"
+                        },
+                        {
+                            "hex": "#ffba80",
+                            "sass":"$orange-60"
+                        },
+                        {
+                            "hex": "#ffc899",
+                            "sass":"$orange-50"
+                        },
+                        {
+                            "hex": "#ffd5b0",
+                            "sass":"$orange-40"
+                        },
+                        {
+                            "hex": "#ffe3cc",
+                            "sass":"$orange-30"
+                        },
+                        {
+                            "hex": "#fff1e5",
+                            "sass":"$orange-20"
+                        }
+                    ],
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "settings",
+                    "name": "colors",
+                    "title": "Primary colors (blue pallete)",
+                    "type": "colors",
+                    "colors": [
+                        {
+                            "hex": "#00264d",
+                            "sass":"$blue-110"
+                        },
+                        {
+                            "hex": "#003468",
+                            "sass":"$blue-100"
+                        },
+                        {
+                            "hex": "#1e4c7a",
+                            "sass":"$blue-90"
+                        },
+                        {
+                            "hex": "#3d648c",
+                            "sass":"$blue-80"
+                        },
+                        {
+                            "hex": "#5b7c9e",
+                            "sass":"$blue-70"
+                        },
+                        {
+                            "hex": "#7995b0",
+                            "sass":"$blue-60"
+                        },
+                        {
+                            "hex": "#97adc1",
+                            "sass":"$blue-50"
+                        },
+                        {
+                            "hex": "#b6c5d3",
+                            "sass":"$blue-40"
+                        },
+                        {
+                            "hex": "#d4dde5",
+                            "sass":"$blue-30"
+                        },
+                        {
+                            "hex": "#f2f5f7",
+                            "sass":"$blue-20"
+                        }
+                    ],
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "globals",
+                    "subgroup": "settings",
+                    "name": "colors",
+                    "title": "Secondary colors",
+                    "type": "colors",
+                    "colors": [
+                        {
+                            "hex": "#d91a2a",
+                            "sass":"$color-error"
+                        },
+                        {
+                            "hex": "#99171d",
+                            "sass":"$color-error-hover"
+                        },
+                        {
+                            "hex": "#ffdddc",
+                            "sass":"$color-error-message"
+                        },
+                        {
+                            "hex": "#217306",
+                            "sass":"$color-success"
+                        },
+                        {
+                            "hex": "#235413",
+                            "sass":"$color-success-hover"
+                        },
+                        {
+                            "hex": "#e6f5cf",
+                            "sass":"$color-success-message"
+                        },
+                        {
+                            "hex": "#994200",
+                            "sass":"$color-info"
+                        },
+                        {
+                            "hex": "#803700",
+                            "sass":"$color-info-hover"
+                        },
+                        {
+                            "hex": "#fff1c0",
+                            "sass":"$color-info-message"
+                        },
+                        {
+                            "hex": "#1e4c7a",
+                            "sass":"$color-tip"
+                        },
+                        {
+                            "hex": "#003468",
+                            "sass":"$color-tip-hover"
+                        },
+                        {
+                            "hex": "#e4eeff",
+                            "sass":"$color-tip-message"
+                        },
+                        {
+                            "hex": "#3ad",
+                            "sass":"$color-highlight-info"
                         }
                     ],
                     "options": {
