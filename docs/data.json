@@ -378,7 +378,7 @@
                 {
                     "group": "globals",
                     "subgroup": "settings",
-                    "name": "colors",
+                    "name": "colors-primary-black",
                     "title": "Primary colors (black pallete)",
                     "type": "colors",
                     "colors": [
@@ -430,7 +430,7 @@
                 {
                     "group": "globals",
                     "subgroup": "settings",
-                    "name": "colors",
+                    "name": "colors-primary-orange",
                     "title": "Primary colors (orange pallete)",
                     "type": "colors",
                     "colors": [
@@ -490,7 +490,7 @@
                 {
                     "group": "globals",
                     "subgroup": "settings",
-                    "name": "colors",
+                    "name": "colors-primary-blue",
                     "title": "Primary colors (blue pallete)",
                     "type": "colors",
                     "colors": [
@@ -542,7 +542,7 @@
                 {
                     "group": "globals",
                     "subgroup": "settings",
-                    "name": "colors",
+                    "name": "colors-secondary",
                     "title": "Secondary colors",
                     "type": "colors",
                     "colors": [
