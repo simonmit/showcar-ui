@@ -1,0 +1,64 @@
+@import "../../../01-settings/variables";
+
+sc-tooltip.sc-tooltip-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s linear;
+  max-width: 220px;
+  background-color: $black-120;
+  border-color: $black-120;
+  color: white;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 4px;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:active {
+      color: $black-50;
+    }
+
+    &:hover{
+      color: $black-40;
+    }
+  }
+
+}
+
+.sc-tooltip-content--shown {
+  visibility: visible;
+  opacity: 0.75;
+}
+
+.sc-tooltip__arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: inherit;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.sc-tooltip__arrow--bottom {
+  border-bottom-color: inherit;
+  border-top-color: transparent;
+  top: auto;
+  bottom: 100%;
+}
+
+.sc-tooltip__arrow--right {
+  left: 10px;
+  margin: 0;
+}
+
+.sc-tooltip__arrow--left {
+  right: 10px;
+  left: auto;
+  margin: 0;
+}
