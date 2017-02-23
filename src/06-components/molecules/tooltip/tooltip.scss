@@ -1,6 +1,6 @@
 @import "../../../01-settings/variables";
 
-.sc-tooltip-content {
+sc-tooltip.sc-tooltip-content {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.4s, opacity 0.4s linear;

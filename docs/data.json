@@ -339,6 +339,12 @@
                     "subgroup": "notification",
                     "name": "notification-tip",
                     "title": "Notification Tip"
+                },
+                {
+                    "group": "molecules",
+                    "subgroup": "tooltip",
+                    "name": "tooltip",
+                    "title": "Tooltip (refactored version)"
                 }
             ]
         },
