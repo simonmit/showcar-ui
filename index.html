@@ -1099,7 +1099,7 @@
 								 :group-id="component.group_id"
 								 :class="'ndpl-component--' + component.width">
 
-								<h3 class="ndpl-component__title">{{ component.title }}</h3>
+								<h2 class="ndpl-component__title">{{ component.title }}</h3>
 
 								<div class="ndpl-component__description ndpl-c-brand-ca"
 									 v-html="component.description"></div>
@@ -1221,13 +1221,13 @@
 		padding: 0 0;
 	}
 	.ndpl-sidebar{
-		width: 300px;
+		width: 330px;
 		background-color: #f4f4f4;
 		padding-top: 20px;
 	}
 	@media only screen and (min-width: 60em){
 		.ndpl-content{
-			padding: 36px 48px 36px 330px;
+			padding: 36px 60px 36px 390px;
 		}
 	}
 	.ndpl-sidebar__logo{
@@ -1245,7 +1245,7 @@
 	}
 	.ndpl-nav__items{
 		line-height: 56px;
-		border-top: 1px solid #e0e6ed;
+		border-top: 1px solid #DCDCDC;
 	}
 	.ndpl-nav__child-item{
 		line-height: 30px;
@@ -1255,10 +1255,10 @@
 		line-height: 1.2;
 	}
 	.ndpl-nav__child-item{
-		border-bottom: 1px solid #e0e6ed;
+		border-bottom: 1px solid #DCDCDC;
 	}
 	.ndpl-component__description h4{
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 2.2;
 		padding-top: 8px;
 	}
@@ -1358,9 +1358,18 @@
 	}
 	.status{
 		padding-bottom: 8px;
+		display: inline-block;
+		padding: 4px 6px;
+		border-radius: 4px;
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 12px;
+		line-height: 1;
 	}
 	.status.complete{
-		color: green;
+		color: #196600;
+		background-color: #E6F5CF;
 	}
 	.status.refactor{
 		color: red;
