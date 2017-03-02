@@ -1224,6 +1224,14 @@
 		width: 330px;
 		background-color: #f4f4f4;
 		padding-top: 20px;
+		border-right: 1px solid #DCDCDC;
+		box-shadow: none;
+	}
+	.ndpl-sidebar__title{
+		font-size: 20px;
+	}
+	.ndpl-header__title{
+		font-size: 20px;
 	}
 	@media only screen and (min-width: 60em){
 		.ndpl-content{
@@ -1263,6 +1271,9 @@
 	}
 	.ndpl-nav__items{
 		line-height: 56px;
+		border-top: 1px solid #DCDCDC;
+	}
+	.ndpl-nav__page{
 		border-top: 1px solid #DCDCDC;
 	}
 	.ndpl-nav__child-item{
@@ -1333,13 +1344,31 @@
 	.ndpl-component__description{
 		font-size: 13px;
 		line-height: 21px;
+		color: #333;
+	}
+	.ndpl-component__sample{
+		border-top: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
 	}
 	.ndpl-component__code{
 		position: relative;
+		border-bottom: 1px solid #dcdcdc;
 	}
 	.ndpl-component__code:hover .clipbrd-btn{
 		opacity: 1;
 		transition: opacity .4s;
+	}
+	.ndpl-component__color div{
+		border-radius: 4px;
+	}
+	.ndpl-component__color:first-of-type .ndpl-component__color:last-of-type{
+		border-radius: 0 4px 4px 0;
+	}
+	.ndpl-component__color:first-of-type .ndpl-component__color:last-of-type{
+		border-radius: 4px;
+	}
+	.ndpl-info {
+		border-radius: 4px;
 	}
 	.clipbrd-btn{
 		opacity: 0;
@@ -1379,6 +1408,28 @@
 	@media only screen and (min-width: 60em){
 		.ndpl-component--half{
 			align-self: flex-end;
+		}
+		.ndpl-component__color:first-of-type {
+			border-radius: 4px 4px 0 0;
+		}
+		ndpl-component__color:last-of-type {
+			border-radius: 0 0 4px 4px;
+		}
+		ndpl-component__sample {
+			border-radius: 4px 4px 0 0;
+			border: 1px solid #dcdcdc;
+		}
+		ndpl-component__sample--disabled-code {
+			border-radius: 4px;
+		}
+		ndpl-component__code .ndpl-code{
+			font-size: 16px;
+		}
+		ndpl-component__code {
+			border: 1px solid #dcdcdc;
+		}
+		ndpl-component__code-toggle {
+			border-radius: 0 0 4px 4px;
 		}
 	}
 	.status{
@@ -1516,6 +1567,7 @@
 
 	.ndpl-page{
 		margin: 0; /* dirty hack */
+		color: #949494;
 	}
 	.ndpl-page h1 { 
 		font-size: 28px;
@@ -1541,6 +1593,7 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
+		color: #333;
 	}
 	.ndpl-preloaded{
 		display: none;
