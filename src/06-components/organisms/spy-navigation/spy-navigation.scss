@@ -118,7 +118,6 @@ $spy-height: 55px;
     top: 0;
     right: 0;
     height: $spy-height;
-    z-index: 2;
     padding: $L $L #{$M+1};
 
     @include mqmax(#{$viewportM - 1}) {
@@ -182,7 +181,6 @@ $spy-height: 55px;
     transition: border .3s ease;
     background: white;
     top: 100%;
-    z-index: 1;
     width: 100%;
     opacity: 0;
 
@@ -218,7 +216,6 @@ $spy-height: 55px;
 
     &--active {
       color: $orange-100;
-      z-index: 1;
       border-bottom: 3px solid $orange-100 !important;
       padding: $L $L 14px;
       &:nth-child(2){
