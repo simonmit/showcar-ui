@@ -109,3 +109,7 @@ See [LICENSE.md](LICENSE.md)
 ## Changelog / History
 
 See [History.md](History.md)
+
+## Z-indexes table
+
+See [here](https://docs.google.com/spreadsheets/d/1B_PHfNSwqWI76jiBCK2JHRc3HwvGyVP8aNWlsmwba0A/edit#gid=0) published 02.03.2017
