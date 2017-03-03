@@ -917,7 +917,7 @@
 	!important
 	;
 	}</style>
-	<link rel="stylesheet" href="docs/app/css/styles.min.css">
+	<link rel="stylesheet" href="docs/app/css/styles.css">
 
 	<!-- Font Libraries -->
 	<link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
@@ -1175,7 +1175,7 @@
 																		   id="copy_js-{{component.id}}-{{component.name}}"></code></pre>
 											</div>
 											<a v-if="!component.options.disable_code_sample"
-											   class="ndpl-component__code-toggle ndpl-c-highlight ndpl-c-border"
+											   class=.ndpl-c-highlight-toggle ndpl-c-highlight ndpl-c-border"
 											   @click.prevent="component.js_show = ! component.js_show"
 											   v-text="component.js_show ? 'Hide js sample' : 'Show js sample'"></a>
 										</template>
@@ -1273,23 +1273,25 @@
 		line-height: 56px;
 		border-top: 1px solid #DCDCDC;
 	}
-	.ndpl-nav__page{
-		border-top: 1px solid #DCDCDC;
-	}
+
 	.ndpl-nav__child-item{
 		line-height: 30px;
 	}
 	.ndpl-library__title{
-		font-size: 28px;
+		font-size: 40px;
 		line-height: 1.2;
 	}
 	.ndpl-nav__child-item{
 		border-bottom: 1px solid #DCDCDC;
 	}
 	.ndpl-component__description h4{
-		font-size: 16px;
+		font-size: 13px;
+		letter-spacing: 1px;
 		line-height: 2.2;
 		padding-top: 8px;
+		margin-top: 4px;
+		display: inline-block;
+		text-transform: uppercase;
 	}
 	.search{
 		width: 90%;
@@ -1339,11 +1341,11 @@
 		margin-bottom: 50px;
 	}
 	.ndpl-component__title{
-		font-size: 20px;
+		font-size: 24px;
 	}
 	.ndpl-component__description{
-		font-size: 13px;
-		line-height: 21px;
+		font-size: 16px;
+		line-height: 24px;
 		color: #333;
 	}
 	.ndpl-component__sample{
@@ -1441,6 +1443,7 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		margin-bottom: 12px;
+		margin-left: 4px;
 		line-height: 1;
 	}
 	.status.complete{
@@ -1448,10 +1451,12 @@
 		background-color: #E6F5CF;
 	}
 	.status.refactor{
-		color: red;
+		color: #99171d;
+		background-color: #ffdddc;
 	}
 	.status.review{
-		color: orange;
+		color: #994200;
+		background-color: #fff1c0;
 	}
 	/* lightbox samples */
 	.example-lightbox .desc-text{
@@ -1480,7 +1485,8 @@
 		fill: #1e4c7a;
 	}
 	.example-background{
-		background-color: #808080;
+		background-color: #949494;
+		padding: 20px;
 	}
 	.example-block{
 		padding: 20px;
@@ -1569,12 +1575,12 @@
 		margin: 0; /* dirty hack */
 		color: #949494;
 	}
-	.ndpl-page h1 { 
+	.ndpl-page h1 {
 		font-size: 28px;
 		font-weight: 400;
 		line-height: 36px;
 	}
-	.ndpl-page h2 { 
+	.ndpl-page h2 {
 		font-size: 24px;
 		font-weight: 300;
 		line-height: 36px;
@@ -1600,6 +1606,8 @@
 	}
 	.ndpl-page code, .ndpl-component__description code, .ndpl-group__description code{
 		color: #ff7500;
+		font-family: monospace !important;
+		font-size: 15px;
 	}
 	.ndpl-group__description {
 		border-radius: 4px;
@@ -1612,7 +1620,8 @@
 	}
 	.ndpl-c-brand-ca a[href]:hover, .ndpl-c-brand-ca a:hover{
 		text-decoration: underline;
-		color: #000;}
+		color: #000;
+	}
 </style>
 <script>
     var clipboard = new Clipboard('.clipbrd-btn');
