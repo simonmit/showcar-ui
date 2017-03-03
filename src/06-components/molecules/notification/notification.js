@@ -1,25 +1,23 @@
-let ContainerHandler = require('./notification/ContainerHandler');
-let containerHandler = new ContainerHandler();
-
-function onElementCreated() {
-    containerHandler.createNotification(this);
-}
-
-function onElementChanged(attributeName, previous, value) {
-    containerHandler.updateNotification(this, attributeName, previous, value);
-}
-
-let tagName = 'as24-notification';
-
-try {
-    module.exports = document.registerElement(tagName, {
-        prototype: Object.create(HTMLElement.prototype, {
-            createdCallback: { value: onElementCreated },
-            attributeChangedCallback: { value: onElementChanged }
-        })
-    });
-} catch (e) {
-    if (window && window.console) {
-        window.console.warn('Failed to register CustomElement "' + tagName + '".', e);
+import registerElement from '../../../07-utilities/helpers.js';
+import ContainerHandler from './notification/ContainerHandler';
+let i =0
+export default function(tagName) {
+    let containerHandler = new ContainerHandler();
+    let items = [];
+    function attachedCallback() {
+        if(items.indexOf(this.id) != -1){ // prevent of appearing twice. TODO check on new polyfill
+            return
+        }
+        items.push(this.id);
+        containerHandler.createNotification(this);
     }
+    function attributeChangedCallback(attributeName, previous, value) {
+        containerHandler.updateNotification(this, attributeName, previous, value);
+    }
+
+    registerElement({
+        attachedCallback,
+        attributeChangedCallback,
+        tagName
+    });
 }

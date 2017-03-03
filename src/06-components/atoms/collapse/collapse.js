@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
     function init() {
         Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), (collapsable) => {
             collapsable.onclick = () => {
@@ -16,7 +16,7 @@ module.exports = () => {
             }
         });
     };
-    
+
     init();
     document.addEventListener('as24-collapse:update', init);
 };

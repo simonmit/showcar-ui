@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="ndpl-c-background">
 <head>
+	<!--<script src="http://zeptojs.com/zepto.min.js"></script>-->
+	<!--<script src="docs/lib/showcar-ui.js"></script>-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 
@@ -1511,11 +1513,13 @@
         e.clearSelection();
     });
     document.querySelector('body').addEventListener('click', event => {
-        if (event.target.className.toLowerCase().includes('notification-demo')) {
-            const id = event.target.getAttribute('data-id');
-            const el = document.querySelector('#' + id);
-            el.classList.toggle('show');
-        }
+        try {
+            if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
+                const id = event.target.getAttribute('data-id');
+                const el = document.querySelector('#' + id);
+                el.classList.toggle('show');
+            }
+        }catch (e){};
     });
     window.addEventListener('resize', () => {
         if (location.hash) {
@@ -1524,6 +1528,20 @@
             window.scrollTo(0, posstion);
         }
     });
+
+    setTimeout(()=>{ // temporary hack
+        (function ($) {
+            var paginationElement = document.querySelector('.sc-pagination'),
+                itemsPerPage = 20,
+                activePage = 1,
+                totalCount = 800,
+                urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+            if (paginationElement) {
+                new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+            }
+        })(window.Zepto);
+    },7000)
 </script>
 </body>
 </html>

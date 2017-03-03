@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
     const $target = $('as24-icon[title]');
     if (!$target.length) return;
     const $tooltip = $('<div class="sc-font-s tooltip tooltip-top tooltip-hidden"></div>');

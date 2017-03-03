@@ -1,5 +1,5 @@
-let Notification = require('./Notification');
-let Container    = require('./Container');
+import Notification from './Notification';
+import Container from './Container';
 
 class ContainerHandler {
 
@@ -115,4 +115,4 @@ class ContainerHandler {
 
 }
 
-module.exports = ContainerHandler;
+export default ContainerHandler;

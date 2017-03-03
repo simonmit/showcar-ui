@@ -109,7 +109,7 @@ class Navigation {
             // TODO: fix it properly
             return;
         }
-        
+
         this.activeMenu.addClass('open');
         this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
         this.menuIsOpen = true;
@@ -262,10 +262,11 @@ class Navigation {
     }
 }
 
-let navigationElement = document.querySelector('.sc-navigation'),
-    navigation        = null;
-if (navigationElement) {
-    navigation = new Navigation(navigationElement);
+export default function () {
+    let navigationElement = document.querySelector('.sc-navigation'),
+        navigation        = null;
+    if (navigationElement) {
+        navigation = new Navigation(navigationElement);
+    }
+    return navigation;
 }
-module.exports = navigation;
-

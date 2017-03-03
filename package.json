@@ -42,6 +42,7 @@
     "grunt-replace": "^1.0.1",
     "grunt-sass": "^1.1.0",
     "grunt-webpack": "^1.0.18",
+    "gulp": "^3.9.1",
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",
     "load-grunt-config": "^0.19.2",
@@ -61,10 +62,11 @@
     "lazysizes": "^2.0.2",
     "promiz": "^1.0.5",
     "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#v0.4.0",
-    "showcar-storage": "git+https://github.com/AutoScout24/showcar-storage.git#v1.0.2",
+    "showcar-storage": "^1.1.0",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
     "whatwg-fetch": "^1.0.0",
-    "zepto-browserify": "^1.0.0"
+    "zepto-browserify": "^1.0.0",
+    "showcar-gulp": "^2.0.0"
   }
 }
