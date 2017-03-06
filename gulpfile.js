@@ -7,6 +7,16 @@ gulp.task('js', scgulp.js({
     // watch: 'test/js-src/**/*.js',
 }));
 
+gulp.task('icons', scgulp.js({
+    entry: 'src/js/showcar-icons.js',
+    out: 'dist/showcar-icons.js',
+}));
+
+gulp.task('tracking', scgulp.js({
+    entry: 'src/js/showcar-tracking.js',
+    out: 'dist/showcar-tracking.js',
+}));
+
 gulp.task('js:watch', () => {
     gulp.watch(['src/**/*.js'], ['js']);
 });
@@ -87,6 +97,6 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('build', ['js', 'scss', 'copy:fragments','replace']);
+gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments','replace']);
 
 gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve', 'docs:watch']);
