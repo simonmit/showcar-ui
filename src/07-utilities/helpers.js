@@ -3,10 +3,10 @@ const registerElement = element => {
         document.registerElement(element.tagName, {
             prototype: Object.create(HTMLElement.prototype, {
                 createdCallback: {
-                    value: element.createdCallback || null
+                    value: element.createdCallback
                 },
                 attributeChangedCallback: {
-                    value: element.attributeChangedCallback || null
+                    value: element.attributeChangedCallback
                 },
                 attachedCallback: {
                     value: element.attachedCallback
