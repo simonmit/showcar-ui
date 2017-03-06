@@ -1,33 +1,6 @@
 # showcar-ui
 
-This module provides several predefined classes, scss mixins and variables for simple page styling with the showcar ui library
-
-## Using Sass version
-
-In order to use showcar-ui sass files, you need to include this importer in your sass pipeline
-
-```js
-importer: function(url, prev, done) {
-    return done(url.split(':')[0].toLowerCase() === 'npm'
-        ? { file: require.resolve(url.split(':')[1]) }
-        : null);
-}
-```
-
-In case of grunt-sass you'll have:
-
-```
-sass: {
-    options: {
-        importer: function(url, prev, done) {
-            return done(url.split(':')[0].toLowerCase() === 'npm'
-                ? { file: require.resolve(url.split(':')[1]) }
-                : null);
-        }
-    },
-    files: []
-}
-```
+This library provides several predefined classes and variables for simple page styling with the showcar ui library
 
 ## Installation:
 
@@ -35,50 +8,29 @@ To install showcar-ui within your project use npm.
 
     npm install git@github.com:AutoScout24/showcar-ui.git --save
 
+## How to build:
+
+For building on your local machine install all npm packages first. Then you can use the gulp command to run the build:
+
+    npm install
+    gulp build
 
 ## How to include:
-To make the ShowCar-UI Library available within you frontend, it is necessary to include some javascript and (s)css
 
-### Simple Include
+You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page.
+The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.
 
-The simple include only needs some additions in your html code:
+    <link rel="stylesheet" href="@@ASSET_PATH/showcar-ui.css">
+    <script src="@@ASSET_PATH/showcar-ui.js"></script>
 
-#### CSS
-
-    <link href="./src/lib/showcar-ui/dist/showcar-ui.css" ... >
-
-#### CSS (Namespaced version)
-
-If you want to use the showcar ui styling only in a certain part of your application, you can use the namespaced version.
-Therefor you have to include the namespaced version of the css and add the data-showcar-ui attribute to the element you want to apply the styles to.
-
-    <link href="./src/lib/showcar-ui/dist/showcar-ui-namespaced.css" ... >
-
-    <body data-showcar-ui>
-
-#### JavaScript
-
-You only need to include one JavaScript file. It enables all supported elements by default and exports some global variables, such as Storage.
-
-    <script async src="./src/lib/showcar-ui/dist/showcar-ui.min.js"></script>
-
-
-### Advanced Include
-
-The advanced include needs some changes in your main scss file:
-
-#### CSS
-
-    @import "../lib/showcar-ui/src/scss/showcar-ui";
-
-With this method, you can use all the mixins defined in the library within your own scss code.
+Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
 ## Additional information
 
 The showcar-ui library includes some other libraries:
 
 * showcar-storage
-* showcar-icons
+* showcar-icons (also available as standalone fragment)
 * Zepto
 
 ### showcar-storage
@@ -96,7 +48,7 @@ For a detailed usage guide, have a look at http://zeptojs.com/
 
 ## How to use:
 
-for the use of the library have a look at the [documentation](https://web-experience.gitlab.io/showcar-ui/).
+for the use of the library have a look at the [documentation](https://autoscout24.github.io/showcar-ui/).
 
 ## How to contribute:
 
