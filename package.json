@@ -47,7 +47,7 @@
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
     "whatwg-fetch": "^1.0.0",
-    "zepto-browserify": "^1.1.6-1",
+    "zepto-browserify": "^1.0.0",
     "zepto-modules": "^1.0.0"
   }
 }
