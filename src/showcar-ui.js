@@ -1,6 +1,6 @@
 // Todo: remove Zepto
 // but now we are using modules, so we can import only that we need
-import Zepto from '../node_modules/zepto-modules';
+import Zepto from 'zepto-modules';
 if (! window.jQuery) {
     window.$ = window.Zepto = Zepto;
 }
