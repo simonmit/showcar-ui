@@ -11,9 +11,8 @@
     "url": "git+https://github.com/AutoScout24/showcar-ui.git"
   },
   "scripts": {
-    "grunt": "grunt",
-    "build": "grunt build",
-    "docs": "grunt docs",
+    "build": "gulp build",
+    "docs": "gulp docs",
     "test-sanity": "mocha tests/index.js -t 120000",
     "test-css-cleanup": "rm -rf ./backstop_data/bitmaps_test",
     "test-css": "npm run test-css-cleanup && backstop test",
@@ -36,6 +35,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-replace": "^1.0.1",
     "gulp": "^3.9.1",
+    "gulp-string-replace": "^0.4.0",
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",
     "load-grunt-config": "^0.19.2",
@@ -43,7 +43,7 @@
   },
   "main": "src/js/showcar-ui.js",
   "dependencies": {
-    "document-register-element": "^0.5.4",
+    "document-register-element": "^1.4.1",
     "dom4": "^1.8.3",
     "es6-collections": "^0.5.6",
     "lazysizes": "^2.0.2",

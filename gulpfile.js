@@ -29,6 +29,11 @@ gulp.task('serve', scgulp.serve({
     dir: 'dist'
 }));
 
+gulp.task('copy:fragments', () => {
+    gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
+    gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
+})
+
 
 gulp.task('clean:docs', scgulp.clean({
     files: ['docs/components/*']
@@ -47,16 +52,41 @@ gulp.task('copy:docs', ['clean:docs'], () => {
     gulp.src('docs/helpers/globals/description.md').pipe(gulp.dest('docs/components/globals'));
 })
 
+const fs = require('fs');
+const UglifyJS = require("uglify-js");
+const readFile = filename => fs.readFileSync(filename, 'utf-8');
+const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
+const stringReplace = require('gulp-string-replace');
+var replaceOptions = {
+    logs: {
+        enabled: false
+    }
+};
+gulp.task('replace', function () {
+    gulp.src(['src/html/index.html', 'src/html/index-standalone.html'])
+        .pipe(stringReplace('@@POLYFILL_DOCUMENT_REGISTER_ELEMENT', readFile('node_modules/document-register-element/build/document-register-element.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_DOM4', readFile('node_modules/dom4/build/dom4.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_ARRAY', readJsFile('src/js/polyfills/array.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_OBJECT', readJsFile('src/js/polyfills/object.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_PROMISE', readJsFile('node_modules/promiz/promiz.min.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_FETCH', readJsFile('node_modules/whatwg-fetch/fetch.js'), replaceOptions))
+        .pipe(stringReplace('@@POLYFILL_ES6_COLLECTIONS', readJsFile('node_modules/es6-collections/es6-collections.js'), replaceOptions))
+        .pipe(stringReplace('@@SCRIPT_ERROR_COLLECTOR', readJsFile('src/js/inline-js/js-error-collector.js'), replaceOptions))
+        .pipe(stringReplace('@@SCRIPT_FONT_LOADER', readJsFile('src/js/inline-js/font-loader.js'), replaceOptions))
+        .pipe(gulp.dest('dist/'))
+});
+
+
 gulp.task('docs:watch', () => {
     gulp.watch(['src/**/docs/*', 'dist/*'], ['copy:docs']);
 });
 
-gulp.task('docs', ['copy:docs', 'docs:watch']);
+gulp.task('docs', ['copy:docs']);
 
 gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('build', ['js', 'scss']);
+gulp.task('build', ['js', 'scss', 'copy:fragments','replace']);
 
 gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve', 'docs:watch']);
