@@ -27,11 +27,26 @@ Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
 ## Additional information
 
-The showcar-ui library includes some other libraries:
+The showcar-ui library includes some libraries and polyfills:
 
-* showcar-storage
-* showcar-icons (also available as standalone fragment)
-* Zepto
+### Libraries
+
+* showcar-storage (https://github.com/AutoScout24/showcar-storage)
+* showcar-icons (also available as standalone fragment) (https://github.com/AutoScout24/showcar-icons)
+* showcar-tracking (also available as standalone fragment) (https://github.com/AutoScout24/showcar-tracking)
+* Zepto (zepto-browserify v1.0.0) (http://zeptojs.com/)
+* lazysizes (https://github.com/aFarkas/lazysizes)
+
+
+### Polyfills
+
+* document-register-element
+* dom4
+* es6-collections
+* whatwg-fetch (fetch)
+* promiz (promises)
+
+
 
 ### showcar-storage
 
