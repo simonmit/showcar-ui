@@ -1,9 +1,5 @@
 // Todo: remove Zepto
-// but now we are using modules, so we can import only that we need
-import Zepto from 'zepto-modules';
-if (! window.jQuery) {
-    window.$ = window.Zepto = Zepto;
-}
+if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
 // Make sure these variables are initialized in case somebody uses them unintialized before they are loaded
 window.ut = window.ut || [];
