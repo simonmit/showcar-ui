@@ -1,4 +1,4 @@
-module.exports = () => {
+export default function() {
 
     /**
      * add an class to the given dom element
@@ -46,9 +46,9 @@ module.exports = () => {
      */
     function getDocumentHeight() {
         return Math.max(
-            document.body.scrollHeight, document.documentElement.scrollHeight,
-            document.body.offsetHeight, document.documentElement.offsetHeight,
-            document.body.clientHeight, document.documentElement.clientHeight
+            document.documentElement.scrollHeight,
+            document.documentElement.offsetHeight,
+            document.documentElement.clientHeight
         );
     }
 
@@ -66,9 +66,9 @@ module.exports = () => {
     function handleStickies() {
 
         // get some basic values element like: scroll position, document and window height and the sticky elements
-        let scrollPosition  = document.body.scrollTop || document.documentElement.scrollTop;
+        let scrollPosition  = window.pageYOffset || document.documentElement.scrollTop || 0;
         let stickies        = document.querySelectorAll('[data-sticky]');
-        let bodyOffset      = document.body.getBoundingClientRect().top;
+        let bodyOffset      = document.documentElement.getBoundingClientRect().top;
         let documentHeight  = getDocumentHeight();
         let windowHeight    = getWindowHeight();
 

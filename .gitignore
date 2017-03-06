@@ -17,3 +17,4 @@ backstop.json
 .vscode
 docs/lib
 docs/components
+.tmp

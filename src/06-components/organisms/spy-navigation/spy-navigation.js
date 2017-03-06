@@ -1,5 +1,6 @@
-module.exports = function(config) {
-    const smoothScroll = require('../../../js/scroll/scroll.js');
+import smoothScroll from '../../../js/scroll/scroll.js';
+
+export default function(config) {
     // This one is needed for check whether active link element has changed or not
     var activeNavItemCache;
     var componentClass = '.sc-spy-navigation';

@@ -267,7 +267,6 @@ Vue.component('ndpl-script', ndplScript);
  */
 new Vue({
     el: 'html',
-
     data: {
         intro: null,
         project_logo: null,
@@ -829,7 +828,6 @@ new Vue({
             _this.open_group = _this.open_group == group.id ? null : group.id;
             _this.active_page = null;
         },
-
         /**
          * Load content page.
          * @param page

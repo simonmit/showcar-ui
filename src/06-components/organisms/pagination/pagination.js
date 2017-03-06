@@ -56,7 +56,7 @@ class Pager {
         if (!isFirstPage) {
             a.attr('href', this.getPageUrl(this.activePage - 1));
         }
-        
+
         a.text(' ' + previousText);
         icon.attr('type', 'arrow');
 
@@ -276,5 +276,4 @@ class Pager {
         return numberOfPages;
     }
 }
-
-module.exports = Pager;
+export default Pager;
