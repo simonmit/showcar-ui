@@ -16,6 +16,7 @@
 
 [data-toggle="arrow"] {
   &::after {
+    cursor: pointer;
     display: inline-block;
     content: '';
     width: 20px;

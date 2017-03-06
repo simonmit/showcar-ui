@@ -123,4 +123,4 @@ class Notification {
 
 }
 
-module.exports = Notification;
+export default Notification;
