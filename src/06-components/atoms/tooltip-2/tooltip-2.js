@@ -30,8 +30,6 @@ let tooltip, content, shown, arrow, timeoutID;
         timeoutID = window.setTimeout(() => {
             shown = false;
             content.classList.remove('tooltip-shown');
-            content.style.top = 0 + 'px';
-            content.style.left = 0 + 'px';
         }, 300);
     };
 
