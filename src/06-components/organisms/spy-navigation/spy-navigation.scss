@@ -201,13 +201,16 @@ $spy-height: 55px;
       padding: $L 24px 14px 24px;
       position: static;
       width: auto;
+
       &:first-child {
         @include invisible;
         padding: $L 24px 14px $L;
       }
+
       &:nth-child(2){
         padding: $L 24px 14px 24px;
       }
+
       &:last-child {
         @include invisible;
         padding: $L $L 14px 24px;
@@ -215,18 +218,21 @@ $spy-height: 55px;
     }
 
     &--active {
+      @include visible;
       color: $orange-100;
       border-bottom: 3px solid $orange-100 !important;
       padding: $L $L 14px;
+
+      //&:first-child {
+      //  @include visible;
+      //}
+
       &:nth-child(2){
         padding: $L $L 14px;
       }
+
       &:last-child{
         padding: $L $L 14px;
-      }
-      @include visible;
-      &:first-child {
-        @include visible;
       }
     }
   }
