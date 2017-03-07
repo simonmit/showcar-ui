@@ -222,12 +222,22 @@ $spy-height: 55px;
       border-bottom: 3px solid $orange-100 !important;
       padding: $L $L 14px;
 
-      @include mqmax(#{$viewportM - 1}) {
-        @include visible;
+      &:nth-child(2){
+        padding: $L $L 14px;
+      }
 
-        &:first-child {
-          @include visible;
-        }
+      &:last-child{
+        padding: $L $L 14px;
+      }
+
+      @include visible;
+
+      &:first-child {
+        @include visible;
+      }
+
+      @include mqmin($viewportM) {
+        @include invisible;
       }
     }
   }
