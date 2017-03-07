@@ -5,14 +5,14 @@
 
 $spy-height: 55px;
 
-@mixin invisible {
+@mixin visibleOnML {
   opacity: 1;
   transform: translateY(0);
 }
 
-@mixin visible {
+@mixin visibleOnS {
   opacity: 1;
-  transform: translateY(-55px);
+  transform: translateY(-$spy-height);
 }
 
 .sc-spy-navigation {
@@ -46,11 +46,11 @@ $spy-height: 55px;
     #{$nav}__link {
       position: static;
       padding: 12px $L 12px;
-      @include invisible;
+      @include visibleOnML;
       &:first-child {
         position: static;
         padding: $L $L 14px;
-        @include invisible;
+        @include visibleOnML;
       }
       &:nth-child(2){
         padding: $L $L 12px;
@@ -186,7 +186,7 @@ $spy-height: 55px;
 
     &:first-child {
       padding: $L $L 14px;
-      @include visible;
+      @include visibleOnS;
     }
     &:nth-child(2){
       padding: $L $L 12px;
@@ -196,14 +196,14 @@ $spy-height: 55px;
     }
 
     @include mqmin($viewportM) {
-      @include invisible;
+      @include visibleOnML;
       display: inline-block;
       padding: $L 24px 14px 24px;
       position: static;
       width: auto;
 
       &:first-child {
-        @include invisible;
+        @include visibleOnML;
         padding: $L 24px 14px $L;
       }
 
@@ -212,7 +212,7 @@ $spy-height: 55px;
       }
 
       &:last-child {
-        @include invisible;
+        @include visibleOnML;
         padding: $L $L 14px 24px;
       }
     }
@@ -230,14 +230,10 @@ $spy-height: 55px;
         padding: $L $L 14px;
       }
 
-      @include visible;
-
-      &:first-child {
-        @include visible;
-      }
+      @include visibleOnS;
 
       @include mqmin($viewportM) {
-        @include invisible;
+        @include visibleOnML;
       }
     }
   }
