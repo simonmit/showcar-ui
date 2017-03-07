@@ -218,14 +218,9 @@ $spy-height: 55px;
     }
 
     &--active {
-      @include visible;
       color: $orange-100;
       border-bottom: 3px solid $orange-100 !important;
       padding: $L $L 14px;
-
-      //&:first-child {
-      //  @include visible;
-      //}
 
       &:nth-child(2){
         padding: $L $L 14px;
