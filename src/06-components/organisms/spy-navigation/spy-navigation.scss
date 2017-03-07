@@ -22,6 +22,7 @@ $spy-height: 55px;
   border-bottom: 1px solid $black-30;
   position: relative;
   background-color: white;
+
   &:before {
     top: 0;
     left: 0;
@@ -31,6 +32,7 @@ $spy-height: 55px;
     height: 100%;
     z-index: -1;
   }
+
   &--expanded {
     #{$nav}__links {
       height: auto;
@@ -52,20 +54,26 @@ $spy-height: 55px;
         padding: $L $L 14px;
         @include visibleOnML;
       }
+
       &:nth-child(2){
         padding: $L $L 12px;
       }
+
       &:last-child{
         padding: 12px $L $L;
       }
+
       @include mqmin($viewportM) {
         padding: $L 24px 13px 24px;
+
         &:first-child {
           padding: $L 24px 13px $L;
         }
+
         &:nth-child(2){
           padding: $L 24px 13px 24px;
         }
+
         &:last-child {
           padding: $L $L 13px 24px;
         }
@@ -77,10 +85,12 @@ $spy-height: 55px;
         @include rotating-arrow('up');
         background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
       }
+
       &--visible {
         height: $spy-height;
         border-left: 1px solid $black-30;
       }
+
       &__text {
         color: $orange-100;
       }
@@ -94,9 +104,11 @@ $spy-height: 55px;
     top: 0;
     background-color: white;
     z-index: 21;
+
     &:before {
       box-shadow: 0 3px 6px -2px rgba(0,0,0,.15);
     }
+
     #{$nav}__links {
       background: white;
       @include mqmax($viewportM) {
@@ -188,9 +200,11 @@ $spy-height: 55px;
       padding: $L $L 14px;
       @include visibleOnS;
     }
+
     &:nth-child(2){
       padding: $L $L 12px;
     }
+
     &:last-child{
       padding: 12px $L $L;
     }
@@ -239,13 +253,19 @@ $spy-height: 55px;
         @include visibleOnML;
         padding-bottom: 14px;
 
+        &:first-child {
+          padding-left: 16px;
+          padding-right: 24px;
+        }
+
         &:first-child,
         &:last-child {
           padding-bottom: 14px;
         }
 
         &:last-child {
-          padding-right: 24px;
+          padding-left: 24px;
+          padding-right: 16px;
         }
       }
     }
