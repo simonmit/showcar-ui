@@ -5,8 +5,8 @@ export default function(tagName) {
     }
 
     const clickHandler = e => {
-        const openTrigger = e.target.closest('.sc-lightbox-trigger');
-        const closeTrigger = e.target.closest('.sc-lightbox-close') || ! e.target.closest('.sc-lightbox');
+        const openTrigger = e.target.closest('[data-lightbox-trigger]');
+        const closeTrigger = e.target.closest('[data-lightbox-close]') || ! e.target.closest('.sc-lightbox');
         if (! openTrigger && ! closeTrigger) { return; }
         if (openTrigger) {
             show(openTrigger);
@@ -16,7 +16,7 @@ export default function(tagName) {
     };
 
     const touchHandler = e => {
-        const closeTrigger = e.target.closest('.sc-lightbox-close') || ! e.target.closest('.sc-lightbox');
+        const closeTrigger = e.target.closest('[data-lightbox-close]') || ! e.target.closest('.sc-lightbox');
         if (! closeTrigger) { return; }
         hide();
     };
