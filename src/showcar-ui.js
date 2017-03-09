@@ -50,7 +50,10 @@ lightbox('as24-lightbox');
 
 // navigation
 import navigation from './06-components/organisms/navigation/navigation';
-navigation();
+document.addEventListener('DOMContentLoaded', function() {
+    navigation();
+});
+
 
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
