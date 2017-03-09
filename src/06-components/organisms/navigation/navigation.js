@@ -262,11 +262,13 @@ class Navigation {
     }
 }
 
-export default function () {
+export default function() {
     let navigationElement = document.querySelector('.sc-navigation'),
         navigation        = null;
     if (navigationElement) {
         navigation = new Navigation(navigationElement);
     }
+
+    console.log('navigation: ', navigation);
     return navigation;
 }
