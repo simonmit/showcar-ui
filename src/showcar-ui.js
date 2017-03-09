@@ -30,7 +30,9 @@ rotatingArrow();
 
 // Collapse
 import collapse from './06-components/atoms/collapse/collapse';
-collapse();
+document.addEventListener('DOMContentLoaded', function() {
+    collapse();
+});
 
 // stepper
 import stepper from './06-components/atoms/stepper/stepper';
