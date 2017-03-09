@@ -269,6 +269,5 @@ export default function() {
         navigation = new Navigation(navigationElement);
     }
 
-    console.log('navigation: ', navigation);
     return navigation;
 }
