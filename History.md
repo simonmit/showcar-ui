@@ -1,4 +1,13 @@
 
+2.1.1 / 2017-03-09
+==================
+
+  * downgraded document-register-element to old version again due to tracking issues
+  * removing console.log for debugging the navigation
+  * loading navigation on DOM ready - trying to solve IE11 bug
+  * added console.log for navigation debugging
+  * updated changelog
+
 2.1.0 / 2017-03-09
 ==================
 
