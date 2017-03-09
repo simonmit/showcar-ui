@@ -1,4 +1,183 @@
 
+2.1.0 / 2017-03-09
+==================
+
+  * refactored tooltip-2
+  * refactored lightbox
+  * fixing spy-navigation link padding
+  * small refactoring of spy-navigation
+  * fixing spy-navigation on large screens
+  * fixed spy-navigation issue with active element + adjusted docs
+  * Merge pull request #101 from passij/styles-improvements
+  * repair tooltip2
+  * added more information on libraries and polyfills to readme
+  * clean up
+  * updated README.md
+  * back to old zepto
+  * update package.json
+  * replace zepto-modules to old zepto-browserify
+  * update showcar storage, remove unused grunt
+  * add build for icons and tracking
+  * add replace task, repair tasks
+  * remove unused dependencies
+  * Merge remote-tracking branch 'origin/docs-gulp'
+  * remove unused lines
+  * add some styles
+  * replace to es6 modules and gulp
+  * added z-indexes table
+  * removed unused z-indexes
+  * added styles from PJ
+  * style changes from PJ
+  * fixed anchores in links
+  * Only track users on the live page
+  * fixed 404 for clors md files
+  * fixed name collisions
+  * added first draft o refactored tooltip
+  * added fix  for colors
+  * Added Google Analytics
+  * add padding
+  * added spacer to sticky exmple
+  * added tips to notification examples
+  * added notifications examples
+  * colories links
+  * add/replace colors to orange
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * add scroll to group name on resize
+  * added colors example
+  * added references to overview
+  * add notification func
+  * comment out search
+  * added html example
+  * added responsive images example
+  * fixed classes in responsive grid example
+  * added scrolling example
+  * removed box spacings from docs
+  * add color.sass
+  * Update responsive-images-srcset.md
+  * fixed grid example
+  * added alignments to docs examples
+  * added horizontal line example to docs
+  * added floats example to docs
+  * added ellipsis example to docs
+  * added center-block example to docs
+  * added example to center absolute
+  * added box spacings
+  * fixed backgrounds
+  * added huge text to docs
+  * adjusted sticky element status text
+  * added utilities files to docs
+  * fixed fonts docs rendering
+  * added fonts to docs
+  * added generic and utilities to grunt task
+  * fixed spacings
+  * added samples for utilities docs
+  * added first draft of layout docs
+  * added samples for layout
+  * fixed data.json
+  * added settings docs to new structure
+  * added responsive image docs
+  * added docs samples
+  * remove unused tasks from travis
+  * testing commit
+  * add docs task
+  * add files, add docs to travis, rebuild structure
+  * disable code sample
+  * temporary copy description.md from atoms to globals
+  * add globals
+  * add globals folder
+  * repair recursive
+  * mkdir recursive
+  * add settings & layout
+  * moved examples to docs folders
+  * added grid example
+  * cleaned up variables examples
+  * remove unused polyfils
+  * repair clipboard
+  * removed unused classes
+  * added viewports
+  * added first draft of spacings
+  * changed order in titles
+  * fixed lightbox sample classes
+  * repair pages
+  * add pages
+  * repair access to travis
+  * seperate release and docs tasks
+  * removed unused polyfils
+  * add polyfils
+  * add .map files to docs task
+  * replace placehold.it to https
+  * update google fonts to https
+  * replace loremflickr to placeimg for https
+  * add new favicon
+  * remove unused fonts
+  * removed unused custom-dropdown-icons
+  * added status to md
+  * added md files
+  * added md files
+  * added md files
+  * added md files
+  * added tootlips to docs
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * remove docs task from build
+  * updated docs for links
+  * added stepper to docs
+  * remove docs/lib folder
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * remove files after clone
+  * added link status
+  * added spinner to docs
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * add task to remove all on doc branch
+  * added rotating arrow to docs
+  * added links to docs
+  * added lazy image to docs
+  * update travis
+  * add tooltip2 info
+  * remove comment
+  * remove exclude lib folder from docs
+  * remove unused lines
+  * Merge branch 'master' of https://github.com/AutoScout24/showcar-ui
+  * remove unused folders
+  * added checkboxes and radio-buttons
+  * repair components link
+  * added inputs to docs
+  * update travis for gh-pages
+  * change id's, repair scrolling
+  * added lightbox docs
+  * added cursor to closing link
+  * added organisms to data.json + cleaned up color-selector
+  * added molecules to data.json
+  * remove components from the docs
+  * add show_js param, move some staff
+  * move index.html to root folder
+  * added lightbox to docs
+  * added contributing guidelines and PR template from carbon
+  * adjusted docs status
+  * added spy-navigation docs + moved sticky to layout
+  * updated status for color selectors
+  * added icons to docs
+  * added custom dropdowns
+  * added color selectors to docs
+  * added pagination docs
+  * added navigation docs
+  * added docs for notifications
+  * added docs for input-groups
+  * added docs for expandable-box
+  * added card docs
+  * added breadcrumb docs
+  * added collapse elements to docs
+  * removed line-height from button/submit input since it is already set by the button classes
+  * removed old docs build code
+  * fixed scroll reference
+  * added new dummy docs files + adjusted library styles
+  * copying dist files to docs folder
+  * creating new docs
+  * remove subgrouping items from nav
+  * move docs folder
+  * align blocks to bottom
+  * add new library
+  * renamed docs folder
+
 2.0.0 / 2017-02-13
 ==================
 
