@@ -1,0 +1,1087 @@
+
+        <!DOCTYPE html>
+        <html lang="en" class="ndpl-c-background">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width">
+                <title v-text="ShowCar UI docs"></title>
+                <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+                <script src="/assets/dist/showcar-icons.js"></script>
+<script src="/assets/dist/showcar-tracking.js"></script>
+<script src="/assets/dist/showcar-ui.js"></script>
+<script src="/assets/docs/assets/js/highlight.min.js"></script>
+                <link rel="stylesheet" href="/assets/dist/showcar-ui.css">
+<link rel="stylesheet" href="/assets/docs/assets/styles/docs.css">
+<link rel="stylesheet" href="/assets/docs/assets/styles/github.min.css">
+             </head>
+             <body>
+    <ul><li><a href="/docs/atoms">atoms</a><ul><li><a href="/docs/atoms/button">button</a></li>
+<li><a href="/docs/atoms/collapse">collapse</a></li>
+<li><a href="/docs/atoms/color-selector">color-selector</a></li>
+<li><a href="/docs/atoms/custom-dropdown">custom-dropdown</a></li>
+<li><a href="/docs/atoms/custom-dropdown-icon">custom-dropdown-icon</a></li>
+<li><a href="/docs/atoms/input">input</a></li>
+<li><a href="/docs/atoms/lazy-image">lazy-image</a></li>
+<li><a href="/docs/atoms/lightbox">lightbox</a></li>
+<li><a href="/docs/atoms/link">link</a></li>
+<li><a href="/docs/atoms/rotating-arrow">rotating-arrow</a></li>
+<li><a href="/docs/atoms/spinner">spinner</a></li>
+<li><a href="/docs/atoms/stepper">stepper</a></li>
+<li><a href="/docs/atoms/tooltip-2">tooltip-2</a></li></ul></li></ul>
+<ul><li><a href="/docs/molecules">molecules</a><ul><li><a href="/docs/molecules/tooltip">tooltip</a></li>
+<li><a href="/docs/molecules/breadcrumb">breadcrumb</a></li>
+<li><a href="/docs/molecules/card">card</a></li>
+<li><a href="/docs/molecules/expandable-box">expandable-box</a></li>
+<li><a href="/docs/molecules/input-group">input-group</a></li>
+<li><a href="/docs/molecules/notification">notification</a></li></ul></li></ul>
+<ul><li><a href="/docs/organisms">organisms</a><ul><li><a href="/docs/organisms/navigation">navigation</a></li>
+<li><a href="/docs/organisms/pagination">pagination</a></li>
+<li><a href="/docs/organisms/spy-navigation">spy-navigation</a></li></ul></li></ul>
+        <a href="/" style="font-size: 20px; color:#f04040; border-bottom:1px solid #000;display: block; padding-bottom:20px;">HOME</a><br/>
+        <h2>Button Defalut <p class="status complete">Complete</p></h2>
+
+<button class="sc-btn-bob">I am Bob!</button>
+<button class="sc-btn-ross">I am Ross!</button>
+<pre><code class="html js css scss">&lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/button&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<button class="sc-btn-bob" disabled="">I am Bob!</button>
+<button class="sc-btn-ross" disabled="">I am Ross!</button>
+<pre><code class="html js css scss">&lt;button class=&quot;sc-btn-bob&quot; disabled=&quot;&quot;&gt;I am Bob!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-ross&quot; disabled=&quot;&quot;&gt;I am Ross!&lt;/button&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<button class="sc-btn-bob sc-btn-block">I am Bob!</button><pre><code class="html js css scss">&lt;button class=&quot;sc-btn-bob sc-btn-block&quot;&gt;I am Bob!&lt;/button&gt;</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<a class="sc-btn-bob">I am Bob!</a>
+<a class="sc-btn-ross">I am Ross!</a><pre><code class="html js css scss">&lt;a class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/a&gt;
+&lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;</code></pre><h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
+    More Content
+</a>
+<div class="sc-collapse sc-collapse-target">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</div>
+<a data-toggle="sc-collapse" data-target=".sc-collapse-target" class="sc-collapse sc-collapse-target">
+    Less Content
+</a>
+<pre><code class="html js css scss">&lt;a class=&quot;sc-collapse sc-collapse-target in&quot; data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot;&gt;
+    More Content
+&lt;/a&gt;
+&lt;div class=&quot;sc-collapse sc-collapse-target&quot;&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/div&gt;
+&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot; class=&quot;sc-collapse sc-collapse-target&quot;&gt;
+    Less Content
+&lt;/a&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<a data-toggle="sc-collapse" data-target="#collapse">
+    Toggle Content
+</a>
+<div id="collapse" class="sc-collapse">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</div>
+<pre><code class="html js css scss">&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse&quot;&gt;
+    Toggle Content
+&lt;/a&gt;
+&lt;div id=&quot;collapse&quot; class=&quot;sc-collapse&quot;&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/div&gt;
+</code></pre><pre><code class="html js css scss"></code></pre><h4 id="status">Status</h4>
+<p class="status refactor">Needs refactoring!</p>
+<div class="sc-color-selector">
+    <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
+    <label for="as24-cb-cp-5">blue</label>
+
+    <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l other">
+    <label for="as24-cb-cp-6">other</label>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-color-selector&quot;&gt;
+    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;other&lt;/label&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status refactor">Needs refactoring!</p>
+<div class="sc-color-selector">
+    <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
+    <label for="as24-cb-cp-1">red</label>
+
+    <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
+    <label for="as24-cb-cp-2">yellow</label>
+
+    <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
+    <label for="as24-cb-cp-7">green</label>
+
+    <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
+    <label for="as24-cb-cp-8">gold</label>
+
+    <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
+    <label for="as24-cb-cp-3">blue</label>
+
+    <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l other">
+    <label for="as24-cb-cp-4">other</label>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-color-selector&quot;&gt;
+    &lt;input id=&quot;as24-cb-cp-1&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input red&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-1&quot;&gt;red&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-2&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input yellow&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-2&quot;&gt;yellow&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input green&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-7&quot;&gt;green&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-8&quot;&gt;gold&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-3&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-3&quot;&gt;blue&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-4&quot;&gt;other&lt;/label&gt;
+&lt;/div&gt;
+</code></pre><custom-dropdown class="sc-input" checkboxgroup disabled>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="cd1" class="sc-input">
+        <label for="cd1">Value1</label>
+    </div>
+</custom-dropdown>
+<pre><code class="html js css scss">&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup disabled&gt;
+    &lt;div&gt;
+        &lt;p&gt;All&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+
+<custom-dropdown class="sc-input icon" checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" class="sc-input" id="cabrio-3">
+        <label for="cabrio-3">
+            <as24-icon type="bodytypes/roadster"></as24-icon>
+            <span>
+                Cabrio
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="coupe-3">
+        <label for="coupe-3">
+            <as24-icon type="bodytypes/sports"></as24-icon>
+            <span>
+                Coupé
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="compact-3">
+        <label for="compact-3">
+            <as24-icon type="bodytypes/compact"></as24-icon>
+            <span>
+                Kleinwagen
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="station-3">
+        <label for="station-3">
+            <as24-icon type="bodytypes/station"></as24-icon>
+            <span>
+                Kombi
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="limousine-3">
+        <label for="limousine-3">
+            <as24-icon type="bodytypes/limousine"></as24-icon>
+            <span>
+                Limousine
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="offroad-3">
+        <label for="offroad-3">
+            <as24-icon type="bodytypes/offroad"></as24-icon>
+            <span>
+                SUV/Geländewagen
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="delivery-3">
+        <label for="delivery-3">
+            <as24-icon type="bodytypes/delivery"></as24-icon>
+            <span>
+                Transporter
+            </span>
+        </label>
+        <input type="checkbox" class="sc-input" id="van-3">
+        <label for="van-3">
+            <as24-icon type="bodytypes/van"></as24-icon>
+            <span>
+                Van
+            </span>
+        </label>
+    </div>
+</custom-dropdown>
+<pre><code class="html js css scss">
+&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;
+    &lt;div&gt;
+        &lt;p&gt;All&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;cabrio-3&quot;&gt;
+        &lt;label for=&quot;cabrio-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Cabrio
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;coupe-3&quot;&gt;
+        &lt;label for=&quot;coupe-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Coup&eacute;
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;compact-3&quot;&gt;
+        &lt;label for=&quot;compact-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Kleinwagen
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;station-3&quot;&gt;
+        &lt;label for=&quot;station-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Kombi
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;limousine-3&quot;&gt;
+        &lt;label for=&quot;limousine-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Limousine
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;offroad-3&quot;&gt;
+        &lt;label for=&quot;offroad-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                SUV/Gel&auml;ndewagen
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;delivery-3&quot;&gt;
+        &lt;label for=&quot;delivery-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Transporter
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;van-3&quot;&gt;
+        &lt;label for=&quot;van-3&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Van
+            &lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<custom-dropdown class="sc-input icon" checkboxgroup>
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="cabrio">
+        <label class="sc-block" for="cabrio">
+            <as24-icon type="bodytypes/roadster"></as24-icon>
+            <span>
+                Cabrio
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="coupe">
+        <label class="sc-block" for="coupe">
+            <as24-icon type="bodytypes/sports"></as24-icon>
+            <span>
+                Coupé
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="compact">
+        <label class="sc-block" for="compact">
+            <as24-icon type="bodytypes/compact"></as24-icon>
+            <span>
+                Kleinwagen
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="station">
+        <label class="sc-block" for="station">
+            <as24-icon type="bodytypes/station"></as24-icon>
+            <span>
+                Kombi
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="limousine">
+        <label class="sc-block" for="limousine">
+            <as24-icon type="bodytypes/limousine"></as24-icon>
+            <span>
+                Limousine
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="offroad">
+        <label class="sc-block" for="offroad">
+            <as24-icon type="bodytypes/offroad"></as24-icon>
+            <span>
+                SUV/Geländewagen
+            </span>
+        </label>
+        <input name="custom-radio" type="radio" class="sc-hidden" id="delivery">
+        <label class="sc-block" for="delivery">
+            <as24-icon type="bodytypes/delivery"></as24-icon>
+            <span>
+                Transporter
+            </span>
+        </label>
+        <inputname="custom-radio"  type="radio" class="sc-hidden" id="van">
+        <label class="sc-block" for="van">
+            <as24-icon type="bodytypes/van"></as24-icon>
+            <span>
+                Van
+            </span>
+        </label>
+    </div>
+</custom-dropdown>
+<pre><code class="html js css scss">&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;
+    &lt;div&gt;
+        &lt;p&gt;All&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;cabrio&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cabrio&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Cabrio
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;coupe&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;coupe&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Coup&eacute;
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;compact&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;compact&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Kleinwagen
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;station&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;station&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Kombi
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;limousine&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;limousine&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Limousine
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;offroad&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;offroad&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                SUV/Gel&auml;ndewagen
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;delivery&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;delivery&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Transporter
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;inputname=&quot;custom-radio&quot;  type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;van&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;van&quot;&gt;
+            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;
+                Van
+            &lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code></pre><custom-dropdown class="sc-input" checkboxgroup data-test="custom-dropdown-1">
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="cd1" class="sc-input">
+        <label for="cd1">Value1</label>
+        <input type="checkbox" id="cd2" class="sc-input">
+        <label for="cd2">Value2</label>
+        <input type="checkbox" id="cd3" class="sc-input">
+        <label for="cd3">Value3</label>
+    </div>
+</custom-dropdown>
+<pre><code class="html js css scss">&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup data-test=&quot;custom-dropdown-1&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;All&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd2&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd2&quot;&gt;Value2&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd3&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd3&quot;&gt;Value3&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code></pre><pre><code class="html js css scss"></code></pre><h4 id="usage-">Usage:</h4>
+<p>What should be here?</p>
+<pre><code class="html js css scss"></code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Should be a separate atom</p>
+<div>
+    <input class="sc-input" id="as24-checkbox-1" type="checkbox" />
+    <label for="as24-checkbox-1">Checkbox</label>
+
+    <input class="sc-input" id="as24-checkbox-2" type="checkbox" disabled />
+    <label for="as24-checkbox-2">Checkbox (disabled)</label>
+</div>
+<pre><code class="html js css scss">&lt;div&gt;
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-1&quot; type=&quot;checkbox&quot; /&gt;
+    &lt;label for=&quot;as24-checkbox-1&quot;&gt;Checkbox&lt;/label&gt;
+
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-2&quot; type=&quot;checkbox&quot; disabled /&gt;
+    &lt;label for=&quot;as24-checkbox-2&quot;&gt;Checkbox (disabled)&lt;/label&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<input type="text" class="sc-input" placeholder=".sc-input">
+<pre><code class="html js css scss">&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<input type="text" class="sc-input" placeholder=".sc-input disabled" disabled>
+<pre><code class="html js css scss">&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input disabled&quot; disabled&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<input type="text" class="sc-input error" placeholder=".sc-input error">
+<pre><code class="html js css scss">&lt;input type=&quot;text&quot; class=&quot;sc-input error&quot; placeholder=&quot;.sc-input error&quot;&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<input type="text" class="sc-input info" placeholder=".sc-input info">
+<pre><code class="html js css scss">&lt;input type=&quot;text&quot; class=&quot;sc-input info&quot; placeholder=&quot;.sc-input info&quot;&gt;
+</code></pre><pre><code class="html js css scss"></code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Should be a separate atom</p>
+<div>
+    <input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
+    <label for="as24-radio-1">Radio 1</label>
+
+    <input class="sc-input" id="as24-radio-2" type="radio" name="example-radios-1">
+    <label for="as24-radio-2">Radio 2</label>
+
+    <input class="sc-input" id="as24-radio-3" type="radio" disabled name="example-radios-1">
+    <label for="as24-radio-3">Radio 3 (disabled)</label>
+</div>
+<pre><code class="html js css scss">&lt;div&gt;
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-1&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;
+    &lt;label for=&quot;as24-radio-1&quot;&gt;Radio 1&lt;/label&gt;
+
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-2&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;
+    &lt;label for=&quot;as24-radio-2&quot;&gt;Radio 2&lt;/label&gt;
+
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-3&quot; type=&quot;radio&quot; disabled name=&quot;example-radios-1&quot;&gt;
+    &lt;label for=&quot;as24-radio-3&quot;&gt;Radio 3 (disabled)&lt;/label&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<select class="sc-input" disabled placeholder="sc-input disabled">
+    ...
+</select>
+<pre><code class="html js css scss">&lt;select class=&quot;sc-input&quot; disabled placeholder=&quot;sc-input disabled&quot;&gt;
+    ...
+&lt;/select&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<select class="sc-input" placeholder="sc-input">
+    <option>...</option>
+    <option>Value 1</option>
+    <option>Value 2</option>
+</select>
+<pre><code class="html js css scss">&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;
+    &lt;option&gt;...&lt;/option&gt;
+    &lt;option&gt;Value 1&lt;/option&gt;
+    &lt;option&gt;Value 2&lt;/option&gt;
+&lt;/select&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<input type="text" class="sc-input success" placeholder=".sc-input success">
+<pre><code class="html js css scss">&lt;input type=&quot;text&quot; class=&quot;sc-input success&quot; placeholder=&quot;.sc-input success&quot;&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<textarea class="sc-input" placeholder=".sc-input">...</textarea>
+<pre><code class="html js css scss">&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt;
+</code></pre><p>If you want to make you images lazy, you need to add two classes to you img tag: sc-lazy-image and lazyload. Also you need to use data-src instead of src attribute.
+In the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>
+<h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<img width="300" height="200" data-src="https://placeimg.com/640/480?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+<pre><code class="html js css scss">&lt;img width=&quot;300&quot; height=&quot;200&quot; data-src=&quot;https://placeimg.com/640/480?1&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; class=&quot;sc-lazy-image lazyload&quot; alt=&quot;&quot;&gt;
+</code></pre><p>An overlay that requires the user to interact with it and designed to elicit a response from the user. </p>
+<h4 id="usage-">Usage:</h4>
+<p>In order to use it add following elements to your html: </p>
+<ol>
+<li>1) link, button or any other clickable element which has .sc-lightbox-trigger class and data-id attribute, that points to the as24-lightbox container to show (lightbox-div-1 in example). To prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. It&#39;s a valid HTML5 syntax </li>
+<li>2) as24-lightbox container with appropriate id. Inside of th econtainer you may paste div with content of your choice </li>
+<li>3) div may contain closing elements. To close modal window by clicking on the element add .sc-lightbox-close class to it </li>
+<li>4) please note, that all styles that starts with example are NOT included in library. They are used only for sample styling</li>
+</ol>
+<h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<a class="sc-lightbox-trigger" data-id="lightbox-div-1">Try me</a> 
+<as24-lightbox class="example-lightbox" id="lightbox-div-1"> 
+    <div> 
+        <h5>The modal window title</h5> 
+        <as24-icon type="close" class="sc-lightbox-close"></as24-icon> 
+        <label>The input label</label> 
+        <input type="text" class="sc-input" placeholder="share your thoughts with us"> 
+        <p class="desc-text sc-font-s">small text under</p> 
+        <button class="sc-btn-bob sc-btn-block sc-lightbox-close">Button bob</button> 
+    </div> 
+</as24-lightbox> 
+<pre><code class="html js css scss">&lt;a class=&quot;sc-lightbox-trigger&quot; data-id=&quot;lightbox-div-1&quot;&gt;Try me&lt;/a&gt; 
+&lt;as24-lightbox class=&quot;example-lightbox&quot; id=&quot;lightbox-div-1&quot;&gt; 
+    &lt;div&gt; 
+        &lt;h5&gt;The modal window title&lt;/h5&gt; 
+        &lt;as24-icon type=&quot;close&quot; class=&quot;sc-lightbox-close&quot;&gt;&lt;/as24-icon&gt; 
+        &lt;label&gt;The input label&lt;/label&gt; 
+        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt; 
+        &lt;p class=&quot;desc-text sc-font-s&quot;&gt;small text under&lt;/p&gt; 
+        &lt;button class=&quot;sc-btn-bob sc-btn-block sc-lightbox-close&quot;&gt;Button bob&lt;/button&gt; 
+    &lt;/div&gt; 
+&lt;/as24-lightbox&gt; 
+</code></pre><h4 id="status-">Status:</h4>
+<a href="#group-atoms-component-link">Default link</a>
+<pre><code class="html js css scss">&lt;a href=&quot;#group-atoms-component-link&quot;&gt;Default link&lt;/a&gt;
+</code></pre><h4 id="status">Status</h4>
+<a href="#group-atoms-component-link" class="sc-inline-link">Inline link</a>
+<pre><code class="html js css scss">&lt;a href=&quot;#group-atoms-component-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status review">Needs review</p>
+<pre><code class="html js css scss"></code></pre><h4 id="status">Status</h4>
+<p class="status complete">Complete</p>
+<div id="myId">
+    Look at the arrow right of me! <span data-toggle="arrow" data-target="#myId"></span>
+</div>
+<pre><code class="html js css scss">&lt;div id=&quot;myId&quot;&gt;
+    Look at the arrow right of me! &lt;span data-toggle=&quot;arrow&quot; data-target=&quot;#myId&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status review">Needs review</p>
+
+<h4 id="usage-">Usage:</h4>
+<p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>
+<div class="sc-absolute-center example-background">
+  <div class="sc-spinner-loading"></div>
+  <div class="sc-spinner-loading orange"></div>
+  <div class="sc-spinner-loading grey"></div>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-absolute-center example-background&quot;&gt;
+  &lt;div class=&quot;sc-spinner-loading&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-spinner-loading orange&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-spinner-loading grey&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status">Status</h4>
+<p class="status review">Needs review</p>
+<div class="sc-stepper">
+    <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
+    <input type="number" value="0" class="sc-stepper-input" min="0" max="10" step="1"/>
+    <button class="sc-stepper-button sc-stepper-button-increment">+</button>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-stepper&quot;&gt;
+    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;
+    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;
+    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status review">Acceptance</p>
+<label>Hover or click me
+    <sc-tooltip>
+        <as24-icon type="info" style="width: 16px;"></as24-icon>
+        <div class="sc-tooltip-content">Shiny new tooltip with <a>link</a></div>
+    </sc-tooltip>
+</label>
+<pre><code class="html js css scss">&lt;label&gt;Hover or click me
+    &lt;sc-tooltip&gt;
+        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
+        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Shiny new tooltip with &lt;a&gt;link&lt;/a&gt;&lt;/div&gt;
+    &lt;/sc-tooltip&gt;
+&lt;/label&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<label>That text needs to be explaned
+    <as24-tooltip class="sc-tooltip">
+        <as24-icon type="info" style="width: 16px;"></as24-icon>
+        <div class="sc-tooltip-content">Information in tooltip <a href="/">link</a></div>
+    </as24-tooltip>
+</label>
+<pre><code class="html js css scss">&lt;label&gt;That text needs to be explaned
+    &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;
+        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
+        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;
+    &lt;/as24-tooltip&gt;
+&lt;/label&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<ul class="sc-breadcrumbs">
+    <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+    <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+    <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+</ul>
+<pre><code class="html js css scss">&lt;ul class=&quot;sc-breadcrumbs&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<div class="sc-card">
+    <div class="sc-card__media">
+        <img src="https://placehold.it/170x130?text=170x130">
+    </div>
+    <div class="sc-card__content sc-text-center">
+        <a href="#">Show more</a>
+    </div>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-card&quot;&gt;
+    &lt;div class=&quot;sc-card__media&quot;&gt;
+        &lt;img src=&quot;https://placehold.it/170x130?text=170x130&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-card__content sc-text-center&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Show more&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs explaination</p>
+<div class="sc-expandable-box sc-expandable-box--adaptive">
+    <input id="exb3" type="checkbox" class="sc-expandable-box__toggle">
+    <h3 class="sc-font sc-expandable-box__title"><label for="exb3" class="sc-expandable-box__label">Look ma, I am expandalbe!</label></h3>
+    <div class="sc-expandable-box__content">
+        Hello Kitty!
+    </div>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
+    &lt;input id=&quot;exb3&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb3&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandalbe!&lt;/label&gt;&lt;/h3&gt;
+    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;
+        Hello Kitty!
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>This component is CSS-only implementation. Thus, you have to follow the markup structure. In other words, it is important to keep class structure like it is shown in the examples.
+Note: You can spot H3 and H5 tags being used here. You can use any element according to the requirements as long as you have &quot;.sc-expandable-box__title&quot; class in place.</p>
+<h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<div class="sc-expandable-box">
+    <input id="exb1" type="checkbox" class="sc-expandable-box__toggle">
+    <h3 class="sc-font sc-expandable-box__title"><label for="exb1" class="sc-expandable-box__label">Look ma, I am expandalbe!</label></h3>
+    <div class="sc-expandable-box__content">
+        Hello Kitty!
+    </div>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-expandable-box&quot;&gt;
+    &lt;input id=&quot;exb1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb1&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandalbe!&lt;/label&gt;&lt;/h3&gt;
+    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;
+        Hello Kitty!
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<div class="sc-input-group-radio">
+    <input class="sc-input" id="as24-radio-7" name="as24-radio" type="radio">
+    <label for="as24-radio-7">Option 1</label>
+
+    <input class="sc-input" id="as24-radio-8" name="as24-radio" type="radio" checked="">
+    <label for="as24-radio-8">Option 2</label>
+
+    <input class="sc-input" id="as24-radio-9" name="as24-radio" type="radio">
+    <label for="as24-radio-9">Option 3</label>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-input-group-radio&quot;&gt;
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-7&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;
+    &lt;label for=&quot;as24-radio-7&quot;&gt;Option 1&lt;/label&gt;
+
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-8&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot; checked=&quot;&quot;&gt;
+    &lt;label for=&quot;as24-radio-8&quot;&gt;Option 2&lt;/label&gt;
+
+    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-9&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;
+    &lt;label for=&quot;as24-radio-9&quot;&gt;Option 3&lt;/label&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status complete">Complete</p>
+<div class="sc-input-group">
+    <input class="sc-input" type="text" placeholder="Text input 1">
+    <input class="sc-input" type="text" placeholder="Text input 2">
+    <button class="sc-btn-bob">Submit</button>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-input-group&quot;&gt;
+    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 1&quot;&gt;
+    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 2&quot;&gt;
+    &lt;button class=&quot;sc-btn-bob&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<as24-notification type="success" id="succ2" target="#example-notification-target" title="Success with close button" close="true">
+    Success!
+</as24-notification>
+<as24-notification type="information" id="info2" target="#example-notification-target" title="Information for you, but without body text" close="true">
+    Close me, please.
+</as24-notification>
+<as24-notification type="error" id="error2" target="#example-notification-target" title="Error occurred" close="true">
+    Error here...
+</as24-notification>
+
+<div class="sc-text-center">
+    <button class="notification-demo sc-btn-bob" data-id="succ2">Show success note with cross</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="info2">Toggle info note with cross</button>&nbsp;
+    <button class="notification-demo sc-btn-bob" data-id="error2">Toggle error note with cross</button>
+</div>
+<pre><code class="html js css scss">&lt;as24-notification type=&quot;success&quot; id=&quot;succ2&quot; target=&quot;#example-notification-target&quot; title=&quot;Success with close button&quot; close=&quot;true&quot;&gt;
+    Success!
+&lt;/as24-notification&gt;
+&lt;as24-notification type=&quot;information&quot; id=&quot;info2&quot; target=&quot;#example-notification-target&quot; title=&quot;Information for you, but without body text&quot; close=&quot;true&quot;&gt;
+    Close me, please.
+&lt;/as24-notification&gt;
+&lt;as24-notification type=&quot;error&quot; id=&quot;error2&quot; target=&quot;#example-notification-target&quot; title=&quot;Error occurred&quot; close=&quot;true&quot;&gt;
+    Error here...
+&lt;/as24-notification&gt;
+
+&lt;div class=&quot;sc-text-center&quot;&gt;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ2&quot;&gt;Show success note with cross&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info2&quot;&gt;Toggle info note with cross&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error2&quot;&gt;Toggle error note with cross&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<as24-notification type="success" id="succ1" target="#example-notification-target" title="Vehicle is added to watchlist." timeout="2500">
+    Success!
+</as24-notification>
+<as24-notification type="information" id="info1" target="#example-notification-target" title="Information for you" timeout="2500">
+    Usefull info.
+</as24-notification>
+<as24-notification type="error" id="error1" target="#example-notification-target" title="Error occurred" timeout="2500">
+    Error here...
+</as24-notification>
+
+<div class="sc-text-center">
+	<button class="notification-demo sc-btn-bob" data-id="succ1">Show success note (timeout)</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="info1">Show info note (timeout)</button>&nbsp;
+	<button class="notification-demo sc-btn-bob" data-id="error1">Show error note (timeout)</button>
+</div>
+<pre><code class="html js css scss">&lt;as24-notification type=&quot;success&quot; id=&quot;succ1&quot; target=&quot;#example-notification-target&quot; title=&quot;Vehicle is added to watchlist.&quot; timeout=&quot;2500&quot;&gt;
+    Success!
+&lt;/as24-notification&gt;
+&lt;as24-notification type=&quot;information&quot; id=&quot;info1&quot; target=&quot;#example-notification-target&quot; title=&quot;Information for you&quot; timeout=&quot;2500&quot;&gt;
+    Usefull info.
+&lt;/as24-notification&gt;
+&lt;as24-notification type=&quot;error&quot; id=&quot;error1&quot; target=&quot;#example-notification-target&quot; title=&quot;Error occurred&quot; timeout=&quot;2500&quot;&gt;
+    Error here...
+&lt;/as24-notification&gt;
+
+&lt;div class=&quot;sc-text-center&quot;&gt;
+&Tab;&lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ1&quot;&gt;Show success note (timeout)&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info1&quot;&gt;Show info note (timeout)&lt;/button&gt;&amp;nbsp;
+&Tab;&lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error1&quot;&gt;Show error note (timeout)&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><div class="sc-content-container example-notification-target example-size-s" id="example-notification-target-s">
+    Tip Notification Target container
+</div>
+
+<h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<as24-notification type="tip" id="tip1" target="#example-notification-target-s" title="Small Tip for you" close="true">
+    Tip tip hurra...
+</as24-notification>
+<div class="sc-text-center">
+    <button class="notification-demo sc-btn-ross" data-id="tip1">Show small tip notification</button>
+</div>
+<pre><code class="html js css scss">&lt;as24-notification type=&quot;tip&quot; id=&quot;tip1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Small Tip for you&quot; close=&quot;true&quot;&gt;
+    Tip tip hurra...
+&lt;/as24-notification&gt;
+&lt;div class=&quot;sc-text-center&quot;&gt;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show small tip notification&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><div class="sc-content-container example-notification-target" id="example-notification-target">
+    Notification Target container
+</div>
+<pre><code class="html js css scss"></code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring!</p>
+<div class="sc-navigation">
+    <div class="bar">
+        <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+        <a href="https://www.autoscout24.de" class="icon-auto24"><as24-icon type="auto24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 35"><path fill="#003468" d="M0 0v17h74V0H0z"></path><path d="M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z" fill="#ff7500"></path><g fill="#003468"><path d="M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z"></path></g><path d="M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z" fill="#fff"></path></svg></as24-icon></a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <span class="title" tabindex="1">Menu 1</span>
+                <ul>
+                    <li><a href="http://google.de/" target="_blank">Menu 1 Link to Google</a></li>
+                    <li><a href="http://microsoft.de/">Menu 1 Link to Microsoft</a></li>
+                    <li><a href="http://apple.com/de">Menu 1 Link to Apple</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="title" tabindex="2">Menu 2</span>
+                <ul>
+                    <li><a href="#navigation">Menu 2 Link 1</a></li>
+                    <li><a href="#navigation">Menu 2 Link 2</a></li>
+                    <li><a href="#navigation">Menu 2 Link 3</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="title" tabindex="3">Menu 3</span>
+                <ul class="submenu">
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 1</li>
+                            <li><a href="#navigation">Submenu 1 Link 1</a></li>
+                            <li><a href="#navigation">Submenu 1 Link 2</a></li>
+                            <li><a href="#navigation">Submenu 1 Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 2</li>
+                            <li><a href="#navigation">Submenu 2 Link 1</a></li>
+                            <li><a href="#navigation">Submenu 2 Link 2</a></li>
+                            <li><a href="#navigation">Submenu 2 Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 3</li>
+                            <li><a href="#navigation">Submenu 3 Link 1</a></li>
+                            <li><a href="#navigation">Submenu 3 Link 2</a></li>
+                            <li><a href="#navigation">Submenu 3 Link 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="right">
+            <li>
+                <span class="title" tabindex="4">My Menu</span>
+                <ul>
+                    <li><a href="#navigation">My Menu Link 1</a></li>
+                    <li>
+                        <button class="sc-btn-ross sc-btn-block">Login</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<pre><code class="html js css scss">&lt;div class=&quot;sc-navigation&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;&lt;as24-icon type=&quot;auto24&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 74 35&quot;&gt;&lt;path fill=&quot;#003468&quot; d=&quot;M0 0v17h74V0H0z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z&quot; fill=&quot;#ff7500&quot;&gt;&lt;/path&gt;&lt;g fill=&quot;#003468&quot;&gt;&lt;path d=&quot;M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;path d=&quot;M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z&quot; fill=&quot;#fff&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/as24-icon&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;1&quot;&gt;Menu 1&lt;/span&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Menu 1 Link to Google&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;http://microsoft.de/&quot;&gt;Menu 1 Link to Microsoft&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;http://apple.com/de&quot;&gt;Menu 1 Link to Apple&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Menu 2&lt;/span&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;3&quot;&gt;Menu 3&lt;/span&gt;
+                &lt;ul class=&quot;submenu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 1&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 2&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 3&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;hr&gt;
+
+        &lt;ul class=&quot;right&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;4&quot;&gt;My Menu&lt;/span&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;My Menu Link 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;button class=&quot;sc-btn-ross sc-btn-block&quot;&gt;Login&lt;/button&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre><p>If you want to use the pagination component, you just need to add the ul element with the .sc-pagination class as shown below and the corresponding javascript snippet.
+You need following properties to instantiate the &quot;Pager&quot;:
+the name of the &quot;root&quot; element (in fact you can use document.querySelector(&#39;.sc-pagination&#39;) to obtain the right element)
+number of items per page (itemsPerPage)
+the currently active page (activePage)
+total number of items (totalCount)
+the url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.
+The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</p>
+<h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<ul class="sc-pagination">
+    <li class="previous-page">
+        <a class="disabled">
+            <as24-icon type="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z"></path>
+                </svg>
+            </as24-icon>
+            Previous
+        </a>
+    </li>
+    <li data-page="1"><a href="#" class="active">1</a></li>
+    <li data-page="2"><a href="#">2</a></li>
+    <li data-page="3"><a href="#">3</a></li>
+    <li data-page="4"><a href="#">4</a></li>
+    <li data-page="5"><a href="#">5</a></li>
+    <li data-page="6"><a href="#">6</a></li>
+    <li data-page="7"><a href="#">7</a></li>
+    <li data-page="8"><a href="#">8</a></li>
+    <li data-page="9"><a href="#">9</a></li>
+    <li data-page="etc"><a href="#" class="disabled">...</a></li>
+    <li data-page="20"><a href="#">20</a></li>
+    <li class="next-page">
+        <a href="http://www.autoscout24.com/listWithPagination?page=2&amp;size=20">Next
+            <as24-icon type="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z"></path>
+                </svg>
+            </as24-icon>
+        </a>
+    </li>
+</ul>
+<pre><code class="html js css scss">&lt;ul class=&quot;sc-pagination&quot;&gt;
+    &lt;li class=&quot;previous-page&quot;&gt;
+        &lt;a class=&quot;disabled&quot;&gt;
+            &lt;as24-icon type=&quot;arrow&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 13 7&quot;&gt;
+                    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z&quot;&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/as24-icon&gt;
+            Previous
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li data-page=&quot;1&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;2&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;3&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;4&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;5&quot;&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;6&quot;&gt;&lt;a href=&quot;#&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;7&quot;&gt;&lt;a href=&quot;#&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;8&quot;&gt;&lt;a href=&quot;#&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;9&quot;&gt;&lt;a href=&quot;#&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;etc&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-page=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;20&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;next-page&quot;&gt;
+        &lt;a href=&quot;http://www.autoscout24.com/listWithPagination?page=2&amp;amp;size=20&quot;&gt;Next
+            &lt;as24-icon type=&quot;arrow&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 13 7&quot;&gt;
+                    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z&quot;&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/as24-icon&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h4 id="status-">Status:</h4>
+<p class="status refactor">Needs refactoring</p>
+<div id="page-subnav-stick"></div>
+<div class="sc-spy-navigation" data-stick-when="#page-subnav-stick">
+    <div class="sc-grid-row">
+        <div class="sc-grid-col-12">
+            Any content here...
+            <div class="sc-spy-navigation__wrapper">
+                <nav class="sc-spy-navigation__links">
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-1">Sectino 1</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-2">Sectino 2</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-3">Sectino 3</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-4">Sectino 4</a>
+                </nav>
+                <div class="sc-spy-navigation__toggle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<pre><code class="html js css scss">&lt;div id=&quot;page-subnav-stick&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;sc-spy-navigation&quot; data-stick-when=&quot;#page-subnav-stick&quot;&gt;
+    &lt;div class=&quot;sc-grid-row&quot;&gt;
+        &lt;div class=&quot;sc-grid-col-12&quot;&gt;
+            Any content here...
+            &lt;div class=&quot;sc-spy-navigation__wrapper&quot;&gt;
+                &lt;nav class=&quot;sc-spy-navigation__links&quot;&gt;
+                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-1&quot;&gt;Sectino 1&lt;/a&gt;
+                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-2&quot;&gt;Sectino 2&lt;/a&gt;
+                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-3&quot;&gt;Sectino 3&lt;/a&gt;
+                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-4&quot;&gt;Sectino 4&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;sc-spy-navigation__toggle&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    
+        <script >hljs.initHighlightingOnLoad();</script>
+        </body>
+        </html>
+    
