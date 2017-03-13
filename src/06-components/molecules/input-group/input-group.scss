@@ -65,7 +65,7 @@
       
       &:checked {
         & + label {
-          color: $black-50;
+          color: $black-60;
           background-color: $black-30;
           &:hover {
             background-color: $black-30;
@@ -115,8 +115,7 @@
     }
     
     &:checked + label {
-      color: $white;
-      background: $black-60;
+      background: $black-40;
       
     }
     
