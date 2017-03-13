@@ -21,6 +21,10 @@ gulp.task('js:watch', () => {
     gulp.watch(['src/**/*.js'], ['js']);
 });
 
+gulp.task('eslint', scgulp.eslint({
+    files: 'src/**/*.js'
+}));
+
 gulp.task('scss', scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
@@ -30,6 +34,10 @@ gulp.task('scss', scgulp.scss({
 gulp.task('scss:watch', () => {
     gulp.watch(['src/**/*.scss'], ['scss']);
 });
+
+gulp.task('stylelint', scgulp.stylelint({
+    files: 'src/**/*.scss'
+}));
 
 gulp.task('clean', scgulp.clean({
     files: ['dist/**/*']
@@ -65,7 +73,7 @@ gulp.task('copy:docs', ['clean:docs'], () => {
 const fs = require('fs');
 const UglifyJS = require("uglify-js");
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
-const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
+const readJsFile = filename => UglifyJS.minify(readFile(filename), {fromString: true}).code;
 const stringReplace = require('gulp-string-replace');
 var replaceOptions = {
     logs: {
@@ -97,6 +105,10 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments','replace']);
+gulp.task('lint', ['eslint', 'stylelint']);
+
+gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 
 gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve', 'docs:watch']);
+
+gulp.task('default', ['build']);

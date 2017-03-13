@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../../../06-components/atoms/link/link";
+@import '../../../01-settings/variables';
+@import '../../../06-components/atoms/link/link';
 
 .sc-navigation {
   position: relative;
@@ -201,7 +201,7 @@
       as24-icon {
         width: 85px;
         height: 40px;
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
   }
