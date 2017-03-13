@@ -82,7 +82,7 @@ See [History.md](History.md)
 Published 13.03.2017
 
 | ShowcarUI       |               |       |      |notes    |
-| --------------- |:-------------:|:-----:|-----:|         |
+| --------------- |---------------|-------|------|---------|
 | lightbox        | overlay       |  140  |useful|         |
 |                 | modal window  |  139  |useful|         |
 | spy-navigation  | wrapper       |  21   |useful|         |
