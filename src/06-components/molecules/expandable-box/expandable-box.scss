@@ -56,6 +56,10 @@
     &:after {
       @include rotating-arrow('down');
     }
+
+    @include mqmin($viewportM) {
+      padding: $XXL 0;
+    }
   }
 
   &__content {
