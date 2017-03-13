@@ -2,7 +2,7 @@
 @import "../../../03-generic/fonts";
 
 @mixin button {
-  max-width: 288px;
+  // max-width: 288px;
   user-select: none;
   @include font(M, $bold: true, $silent: false, $line-height: 1.3);
 
