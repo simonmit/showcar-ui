@@ -21,7 +21,6 @@ $breakpoint-XL: 1099;
   }
 
   &__show {
-    display: block;
     margin-top: $XXL;
     text-align: center;
     cursor: pointer;
@@ -34,6 +33,10 @@ $breakpoint-XL: 1099;
       display: none;
       padding: $XXXL $L 60px;
     }
+
+    @include mqmax($breakpoint-S) { // hack. @include mq problem, it floats top when rendering
+      display: block;
+     }
   }
 
   &__state {
