@@ -2,24 +2,15 @@
 @import "../../../02-sass-tools/sass-mq";
 
 //TODO remove or move to grid
-
 $breakpoint-S: 640;
 $breakpoint-M: 720;
 $breakpoint-L: 1024;
 $breakpoint-XL: 1099;
 
-%mobile-only {
-  @include mqmin($breakpoint-S) {
-    display: none;
-  }
-}
-
 .sc-cards {
   padding: $XXL $L $XXXL;
-  @include mqmin($breakpoint-S) {
-    padding: $XXXL $L 60px;
-  }
   $list: &__list;
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -28,8 +19,8 @@ $breakpoint-XL: 1099;
     position: relative;
     margin: #{-$L} 0 0 #{-$L};
   }
+
   &__show {
-    @extend %mobile-only;
     display: block;
     margin-top: $XXL;
     text-align: center;
@@ -38,7 +29,13 @@ $breakpoint-XL: 1099;
     &:hover {
       color: $blue-100;
     }
+
+    @include mqmin($breakpoint-S) {
+      display: none;
+      padding: $XXXL $L 60px;
+    }
   }
+
   &__state {
     display: none;
     & ~ .sc-cards__list {
@@ -49,6 +46,7 @@ $breakpoint-XL: 1099;
         }
       }
     }
+
     &:checked {
       & ~ .sc-cards__show {
         display: none;
@@ -69,15 +67,19 @@ $breakpoint-XL: 1099;
   border-left: $L solid transparent;
   border-top: $L solid transparent;
   flex: 0 0 50%;
+
   @include mqmin($breakpoint-S) {
     flex: 0 0 33%;
   }
+
   @include mqmin($breakpoint-M) {
     flex: 0 0 25%;
   }
+
   @include mqmin($breakpoint-L) {
     flex: 0 0 20%;
   }
+
   &__link {
     display: block;
     overflow: hidden;
@@ -88,6 +90,7 @@ $breakpoint-XL: 1099;
       border: 1px solid $black-60;
     }
   }
+
   &__label {
     overflow: hidden;
     white-space: nowrap;
@@ -100,6 +103,7 @@ $breakpoint-XL: 1099;
       font-size: 16px;
     }
   }
+
   &__image {
     display: block;
     width: 100%;
