@@ -42,12 +42,12 @@ $spy-height: 55px;
     }
 
     #{$nav}__wrapper {
-      overflow: visible;
+      overflow-y: visible;
     }
 
     #{$nav}__link {
       position: static;
-      padding: 12px $L 12px;
+      padding: 12px $L 14px;
       @include visibleOnML;
       &:first-child {
         position: static;
@@ -56,7 +56,7 @@ $spy-height: 55px;
       }
 
       &:nth-child(2){
-        padding: $L $L 12px;
+        padding: $L $L 14px;
       }
 
       &:last-child{
@@ -64,14 +64,18 @@ $spy-height: 55px;
       }
 
       @include mqmin($viewportM) {
-        padding: $L 24px 14px 24px;
+        padding: $L 24px 13px 24px;
 
         &:first-child {
-          padding: $L 24px 14px $L;
+          padding: $L 24px 13px $L;
+        }
+
+        &:nth-child(2){
+          padding: $L 24px 13px 24px;
         }
 
         &:last-child {
-          padding: $L $L 14px 24px;
+          padding: $L $L 13px 24px;
         }
       }
     }
@@ -237,7 +241,10 @@ $spy-height: 55px;
 
       &:first-child,
       &:last-child {
-        padding: $L $L 14px;
+        padding-top: 14px;
+        padding-bottom: 16px;
+        padding-left: $L;
+        padding-right: $L;
       }
 
       @include visibleOnS;
