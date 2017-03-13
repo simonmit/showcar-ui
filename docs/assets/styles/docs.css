@@ -91,7 +91,7 @@ body{
 #content{
 }
 .element{
-    margin: 10px 0 50px;
+    padding: 10px 0 50px;
 }
 .sample{
     border: 1px solid #dcdcdc;
@@ -100,13 +100,18 @@ body{
     background-color: #fff;
     position: relative;
 }
-.code{
+.element .code{
+    display: none;
     border: 1px solid #dcdcdc;
     border-top: none;
     background-color: #f4f4f4;
     position: relative;
 }
-code.hljs{
+.element .code.show{
+    display: block;
+}
+
+.element code.hljs{
     box-sizing: border-box;
     color: #646464;
     font-size: 16px;
@@ -140,7 +145,7 @@ code.hljs{
 #content pre{
     white-space: pre-wrap;
 }
-.hide-code-sample{
+.code-sample-toggle{
     border-radius: 0 0 4px 4px;
     color: #949494;
     cursor: pointer;
@@ -193,7 +198,7 @@ code.hljs{
     transform: translate(-50%, -50%);
     left: 50%;
 }
-.code:hover .clipbrd-btn{
+.element .code:hover .clipbrd-btn{
     opacity: 1;
     transition: opacity .4s;
 }
