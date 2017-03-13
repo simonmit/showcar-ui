@@ -35,7 +35,7 @@ $spy-height: 55px;
 
   &--expanded {
     #{$nav}__links {
-      height: auto;
+      height: #{$spy-height - 1};
       @include mqmax($viewportM) {
         border-bottom: 1px solid $black-30;
       }
@@ -65,18 +65,18 @@ $spy-height: 55px;
       }
 
       @include mqmin($viewportM) {
-        padding: $L 24px 13px 24px;
+        padding: $L 24px 14px 24px;
 
         &:first-child {
-          padding: $L 24px 13px $L;
+          padding: $L 24px 14px $L;
         }
 
         &:nth-child(2){
-          padding: $L 24px 13px 24px;
+          padding: $L 24px 14px 24px;
         }
 
         &:last-child {
-          padding: $L $L 13px 24px;
+          padding: $L $L 14px 24px;
         }
       }
     }
