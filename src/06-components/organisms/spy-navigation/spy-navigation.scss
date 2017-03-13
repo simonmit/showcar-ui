@@ -65,18 +65,18 @@ $spy-height: 55px;
       }
 
       @include mqmin($viewportM) {
-        padding: $L 24px 14px 24px;
+        padding: $L 24px 13px 24px;
 
         &:first-child {
-          padding: $L 24px 14px $L;
+          padding: $L 24px 13px $L;
         }
 
         &:nth-child(2){
-          padding: $L 24px 14px 24px;
+          padding: $L 24px 13px 24px;
         }
 
         &:last-child {
-          padding: $L $L 14px 24px;
+          padding: $L $L 13px 24px;
         }
       }
     }
@@ -190,7 +190,7 @@ $spy-height: 55px;
     display: block;
     position: absolute;
     padding: 12px $L 12px;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: color .2s ease-in;
     background: white;
     top: 100%;
