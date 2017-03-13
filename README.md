@@ -79,4 +79,20 @@ See [History.md](History.md)
 
 ## Z-indexes table
 
-See [here](https://docs.google.com/spreadsheets/d/1B_PHfNSwqWI76jiBCK2JHRc3HwvGyVP8aNWlsmwba0A/edit#gid=0) published 02.03.2017
+Published 13.03.2017
+
+| ShowcarUI       |               |       |      |notes    |
+| --------------- |:-------------:|:-----:|-----:|         |
+| lightbox        | overlay       |  140  |useful|         |
+|                 | modal window  |  139  |useful|         |
+| spy-navigation  | wrapper       |  21   |useful|         |
+| tooltip         |               |  2    |useful|         |
+| input group     | focus         |  2    |useful|         |
+| ad              |               |  110  |useful|         |
+| custom dropdown |               |  1    |useful|         |
+| sticky          |               |  2    |useful| Could have bigger z-index but lover than overlay        |
+| navigation      | ::before li   |  100  |useful| Can be 10        |
+| notification    |               |  120  |useful|         |
+| **Contentservice**     |        |       |      |         |
+| header          |               |  130  |useful|         |
+| notification    |               |  9999 |remove!|         |
