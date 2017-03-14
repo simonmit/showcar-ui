@@ -1,7 +1,7 @@
 @import '../../../01-settings/variables';
-@import '../../../02-sass-tools/sass-mq';
-@import '../../../06-components/atoms/link/link';
-@import '../../../06-components/atoms/rotating-arrow/rotating-arrow';
+@import '../../../02-tools/sass-mq';
+@import '../../../02-tools/link';
+@import '../../../02-tools/rotating-arrow';
 
 $spy-height: 55px;
 
