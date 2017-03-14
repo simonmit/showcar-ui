@@ -4,6 +4,11 @@ ShowCars default `font-family` is Source Sans Pro. Please use the predefined cla
 
 Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.
 
+#### Headlines
+
+For styling `<h*>` elements please use `sc-font-*` classes directly.
+For example `<h2 class='sc-font-m'>`
+
 #### Status:
 
 <p class="status review">Needs review</p>
