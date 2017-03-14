@@ -37,7 +37,7 @@ Several helper classes for font styling are available, the font sizes follow sim
             <td>2rem (32px)</td>
         </tr>
         <tr>
-            <td><code>.sc-font-xxxl</code></td>
+            <td><code>.sc-font-hero</code></td>
             <td>2.5rem (40px)</td>
         </tr>
     </tbody>
