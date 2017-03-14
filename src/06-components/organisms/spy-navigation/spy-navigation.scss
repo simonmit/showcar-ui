@@ -218,7 +218,7 @@ $spy-height: 55px;
     @include mqmin($viewportM) {
       @include visibleOnML;
       display: inline-block;
-      padding: $L 24px 14px 24px;
+      padding: $L 24px 12px 24px;
       position: static;
       width: auto;
 
@@ -248,25 +248,21 @@ $spy-height: 55px;
       &:first-child,
       &:last-child {
         padding-top: 14px;
-        padding-bottom: 16px;
+        padding-bottom: 14px;
         padding-left: $L;
         padding-right: $L;
+        top: $spy-height;
       }
 
       @include visibleOnS;
 
       @include mqmin($viewportM) {
         @include visibleOnML;
-        padding-bottom: 14px;
+        padding-bottom: 12px;
 
         &:first-child {
           padding-left: 16px;
           padding-right: 24px;
-        }
-
-        &:first-child,
-        &:last-child {
-          padding-bottom: 14px;
         }
 
         &:last-child {
