@@ -1,12 +1,11 @@
 const fs = require('fs');
-const renderMenu = require('/Users/asolovev/scout24/source/showcar-ui/docs/helpers/renderMenu.js')
+const renderMenu = require('./renderMenu.js')
 module.exports = (globalJSON, content) => {
-    
     if (! globalJSON) {
-        globalJSON = JSON.parse(fs.readFileSync('/Users/asolovev/scout24/source/showcar-ui/docs/globalJSON.json', 'utf8'));
+        globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }
-    if (! globalJSON && content){
-        content+='<style>#left-menu a.open-separate{display: none}</style>';
+    if (! globalJSON && content) {
+        content += '<style>#left-menu a.open-separate{display: none}</style>';
     }
     
     if (! content) {
@@ -51,7 +50,7 @@ module.exports = (globalJSON, content) => {
                         type.push(globalJSON[el].type);
                         content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
                     }
-                        content += wrap(globalJSON[el])
+                    content += wrap(globalJSON[el])
                     
                     group.push(globalJSON[el].group);
                     return content;
@@ -80,6 +79,7 @@ module.exports = (globalJSON, content) => {
     stylesFiles = stylesFiles.map(style => {
         return `<link rel="stylesheet" href="/assets/${style}">`
     }).join('\n');
+    const polyfils = require('./polyfils.js')
     
     const head = `
         <!DOCTYPE html>
@@ -89,6 +89,7 @@ module.exports = (globalJSON, content) => {
                 <meta name="viewport" content="width=device-width">
                 <title v-text="ShowCar UI docs"></title>
                 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+                <script>${polyfils}</script>
                 ${scriptsFiles}
                 ${stylesFiles}
              </head>
@@ -120,18 +121,21 @@ module.exports = (globalJSON, content) => {
             /*clipboard.on('success', function (e) {
                 e.clearSelection();
             });*/
+              if (location.hostname === 'autoscout24.github.io') {
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-92435213-1', 'auto');
+              ga('set', 'anonymizeIp', true);
+              ga('send', 'pageview');
+              }
             </script>
         </body>
         </html>
     `;
     
     const html = head + leftMenu + body + footer;
-    /*    fs.writeFile("/Users/asolovev/scout24/source/showcar-ui/docs/index.html", html, err => {
-     if(err) {
-     return console.log(err);
-     }
-     console.log("HTML file was saved!");
-     });*/
     return html;
 }
 

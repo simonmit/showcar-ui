@@ -74,10 +74,10 @@ window.addEventListener('load', function () {
     
     function activateMenu() {
         var section = {}, i = 0;
-        window.onscroll = function() {
-             [].forEach.call(positonAnchors, function (positonAnchor) {
-                 section[positonAnchor.id] = positonAnchor.offsetTop;
-             });
+        window.onscroll = function () {
+            [].forEach.call(positonAnchors, function (positonAnchor) {
+                section[positonAnchor.id] = positonAnchor.offsetTop;
+            });
             var windowPosition = document.body.scrollTop;
             for (i in section) {
                 var sectionHeight = document.getElementById(i).offsetHeight;
@@ -94,6 +94,45 @@ window.addEventListener('load', function () {
             }
         }
     }
+    
     activateMenu();
     document.addEventListener('resize', activateMenu)
 })
+
+
+/*
+ window.addEventListener('resize', () => {
+ if (location.hash) {
+ const targetEl = document.querySelector(location.hash);
+ const posstion = targetEl.offsetTop;
+ window.scrollTo(0, posstion);
+ }
+ });
+*/
+
+
+/*
+    document.querySelector('body').addEventListener('click', event => {
+ try {
+ if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
+ const id = event.target.getAttribute('data-id');
+ const el = document.querySelector('#' + id);
+ el.classList.toggle('show');
+ }
+ }catch (e){};
+ });*/
+
+
+/*setTimeout(()=>{ // temporary hack
+ (function ($) {
+ var paginationElement = document.querySelector('.sc-pagination'),
+ itemsPerPage = 20,
+ activePage = 1,
+ totalCount = 800,
+ urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+ 
+ if (paginationElement) {
+ new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+ }
+ })(window.Zepto);
+ },7000)*/

@@ -34,19 +34,19 @@
 }
 @mixin font($size: null, $bold: false, $silent: false, $line-height: null) {
   $font-sizes: (S: 0.8125rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 2rem, XXXL: 2.5rem);
-  
+
   @if $size{
     font-size: map-get($font-sizes, to-upper_case($size));
   }
-  
+
   @if $bold{
     font-weight: 600;
   }
-  
+
   @if $silent{
     color: $black-60;
   }
-  
+
   @if $line-height{
     line-height: $line-height;
   }
@@ -60,7 +60,7 @@
   @if not $bold{
     font-weight: normal;
   }
-  
+
   @include mqmin($viewportM){
     @include font($sizeM, $boldM);
     @if not $boldM{
@@ -74,7 +74,7 @@
   transition: color $transition-time ease-in;
   background: none;
   border: none;
-  
+
   $link-colors: (
     blue: (
       normal: $color-link,
@@ -87,23 +87,23 @@
       active: $orange-100
     )
   );
-  
+
   $color: map-get(map-get($link-colors, $variant), normal);
-  
+
   color: $color;
-  
+
   &:hover{
     $hover-color: map-get(map-get($link-colors, $variant), hover);
-    
+
     color: $hover-color;
   }
-  
+
   &:active{
     $active-color: map-get(map-get($link-colors, $variant), active);
-    
+
     color: $active-color;
   }
-  
+
   @if ($size){
     @include font($size);
   }
@@ -111,10 +111,10 @@
 @mixin button {
   user-select: none;
   @include font(M, $bold: true, $silent: false, $line-height: 1.3);
-  
+
   display: inline-block;
   padding: 10px;
-  
+
   appearance: none;
   border: none;
   border-radius: $form-border-radius;
@@ -123,11 +123,11 @@
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
-  
+
   &:hover {
     color: #fff;
   }
-  
+
   [class^="icon-"] {
     width: $L;
     height: $L;
@@ -170,71 +170,71 @@
   transition: all $transition-time ease-in;
   outline: none;
   cursor: pointer;
-  
+
   &.error{
     border-color: $color-error;
     background-color: $color-error-message;
   }
-  
+
   &.success{
     border-color: $color-success;
     background-color: $color-success-message;
   }
-  
+
   &.info{
     border-color: $color-info;
     background-color: $color-info-message;
   }
-  
+
   &:disabled{
     background-color: $white;
     border-color: $black-40;
     color: $black-40;
     cursor: not-allowed;
   }
-  
+
   &:hover:enabled{
     border-color: $black-100;
   }
-  
+
   &:focus:enabled{
     box-shadow: 0 0 1px 0 $blue-80;
     border-color: $blue-80;
   }
-  
+
   &:invalid{
     box-shadow: none;
   }
-  
+
   &::-webkit-input-placeholder{
     color: #939393;
   }
-  
+
   // CHECK: color correct?
   &:-moz-placeholder{
     color: #939393;
   }
-  
+
   &::-moz-placeholder{
     color: #939393;
   }
-  
+
   &:-ms-input-placeholder{
     color: #939393;
   }
-  
+
   &:focus::-webkit-input-placeholder{
     color: transparent;
   }
-  
+
   &:focus:-moz-placeholder{
     color: transparent;
   }
-  
+
   &:focus::-moz-placeholder{
     color: transparent;
   }
-  
+
   &:focus:-ms-input-placeholder{
     color: transparent;
   }

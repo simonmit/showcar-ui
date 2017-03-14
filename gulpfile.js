@@ -44,20 +44,6 @@ gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
 })
 
-
-gulp.task('clean:docs', scgulp.clean({
-    files: ['docs/components/*']
-}));
-
-gulp.task('copy:docs', ['clean:docs'], () => {
-    gulp.src('dist/*.{css,js,map}').pipe(gulp.dest('docs/lib'));
-    gulp.src(['src/06-components/**/docs/*']).pipe(gulp.dest('docs/components'));
-    gulp.src('src/01-settings/docs/*').pipe(gulp.dest('docs/components/globals/settings/docs'));
-    gulp.src('src/03-generic/docs/*').pipe(gulp.dest('docs/components/globals/generic/docs'));
-    gulp.src('src/05-layout/docs/*').pipe(gulp.dest('docs/components/globals/layout/docs'));
-    gulp.src('src/07-utilities/docs/*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
-})
-
 const fs = require('fs');
 const UglifyJS = require("uglify-js");
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
@@ -82,38 +68,44 @@ gulp.task('replace', function () {
         .pipe(gulp.dest('dist/'))
 });
 
-
-gulp.task('docs:watch', () => {
-    gulp.watch(['src/**/docs/*', 'dist/*'], ['copy:docs']);
-});
-
-// gulp.task('docs', ['copy:docs']);
-
 gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
+/*
+ gulp.task('clean:docs', scgulp.clean({
+ files: ['docs/components/!*']
+ }));
+ gulp.task('copy:docs', ['clean:docs'], () => {
+ gulp.src('dist/!*.{css,js,map}').pipe(gulp.dest('docs/lib'));
+ gulp.src(['src/06-components/!**!/docs/!*']).pipe(gulp.dest('docs/components'));
+ gulp.src('src/01-settings/docs/!*').pipe(gulp.dest('docs/components/globals/settings/docs'));
+ gulp.src('src/03-generic/docs/!*').pipe(gulp.dest('docs/components/globals/generic/docs'));
+ gulp.src('src/05-layout/docs/!*').pipe(gulp.dest('docs/components/globals/layout/docs'));
+ gulp.src('src/07-utilities/docs/!*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
+ })
+ gulp.task('docs:watch', () => {
+ gulp.watch(['src/!**!/docs/!*', 'dist/!*'], ['copy:docs']);
+ });
+ gulp.task('docs', ['copy:docs']);
+ */
+
+
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 
-gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve', 'docs:watch']);
+gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve']);
 
 
+const generateJsonDocs = require('./docs/tasks/generateJson');
+gulp.task('generateJsonDocs', () => {
+    generateJsonDocs()
+});
+
+const generateHtmlDocs = require('./docs/tasks/generateHtml');
+gulp.task('generateHtmlDocs', ['generateJsonDocs'], () => {
+    generateHtmlDocs()
+});
 
 
-
-gulp.task('docs', scgulp.docs());
-
-/*
-const docsData =
-    globals: {
-        variables: '/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs/',
-        fonst: '/Users/asolovev/scout24/source/showcar-ui/src/03-generic/docs',
-        layout: '/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs',
-        utilities: '/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs',
-    },
-    atoms: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/!**!/docs',
-    molecules: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/!**!/docs',
-    organisms: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/organisms**!/docs',
-    extras: '/Users/asolovev/scout24/source/showcar-ui/docs/helpers/extras'
-}
-*/
+const serveDocs = require('./docs/tasks/docs');
+gulp.task('docs', () => {serveDocs(gulp)});
