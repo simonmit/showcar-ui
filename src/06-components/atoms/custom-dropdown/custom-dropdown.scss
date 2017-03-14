@@ -1,42 +1,41 @@
-@import "../../../01-settings/variables";
+@import '../../../01-settings/variables';
 
-custom-dropdown.sc-input{
+custom-dropdown.sc-input {
   padding: 0;
   position: relative;
   background-color: $white;
   display: block;
-  
-  &[disabled='']{
+
+  &[disabled=''] {
     opacity: 0.55;
     cursor: not-allowed;
-    
-    div:first-child{
+
+    div:first-child {
       pointer-events: none;
     }
   }
-  
-  div:first-child{
+
+  div:first-child {
     padding: $XS 12px;
     width: 100%;
     height: 38px;
-    
-    & > p{
+
+    & > p {
       user-select: none;
-      -moz-text-overflow: ellipsis;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      
+
       overflow: hidden;
       padding-right: 26px;
       padding-top: 3px;
-      
-      &::after{
+
+      &::after {
         background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E');
         background-repeat: no-repeat;
         background-color: #fff;
         background-position: 4px center;
-        
+
         position: absolute;
         top: $form-border-radius;
         bottom: $form-border-radius;
@@ -46,23 +45,23 @@ custom-dropdown.sc-input{
       }
     }
   }
-  
-  &.sc-open{
-    div:first-child{
+
+  &.sc-open {
+    div:first-child {
       border: 1px solid $blue-80;
       border-radius: $XS;
       width: calc(100% + 2px);
       position: relative;
       top: -1px;
       left: -1px;
-      
-      & > p::after{
+
+      & > p::after {
         margin-top: 2px;
       }
     }
   }
-  
-  & > div:last-child{
+
+  & > div:last-child {
     display: none;
     position: relative;
     top: -1px;
@@ -75,21 +74,21 @@ custom-dropdown.sc-input{
     z-index: 1;
     padding: 7px 11px 11px 11px;
     margin-top: -4px;
-    
-    label{
+
+    label {
       padding-top: 1px;
     }
   }
-  
-  &.sc-open > div:last-child{
+
+  &.sc-open > div:last-child {
     display: block;
   }
-  
-  div label{
+
+  div label {
     margin-top: $S;
     width: 100%;
-    
-    &:hover{
+
+    &:hover {
       cursor: pointer;
     }
   }

@@ -1,7 +1,7 @@
 import registerElement from '../../../07-utilities/helpers.js';
+
 export default function(tagName) {
     function createdCallback() {
-
         let el = $(this);
         let titleElement = el.find('p');
         let defaultTitle = titleElement.text();
@@ -20,7 +20,7 @@ export default function(tagName) {
             let updateCaption = () => {
                 let checkboxes = el.find(':checked');
                 let texts = [];
-                checkboxes.filter(":checked").forEach((element) => {
+                checkboxes.filter(':checked').forEach((element) => {
                     texts.push(element.nextElementSibling.innerHTML);
                 });
 
@@ -39,6 +39,7 @@ export default function(tagName) {
                 closeAllDropdowns(this);
                 this.classList.toggle('sc-open');
             });
+
             attachEventListeners();
         }
     }

@@ -32,7 +32,7 @@ function createdCallback() {
         let updateCaption = () => {
             let checkboxes = el.find(':checked');
             let texts = [];
-            checkboxes.filter(":checked").forEach((element) => {
+            checkboxes.filter(':checked').forEach((element) => {
                 texts.push(element.nextElementSibling.innerHTML);
             });
 

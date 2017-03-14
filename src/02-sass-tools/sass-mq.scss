@@ -1,19 +1,23 @@
 //TODO: replace with sass-mq
 
 @mixin mqmin($min, $media: all) {
-    @media #{$media} and (min-width: $min + 0px) {
-        @content;
-    }
+  // adding 0px for adding unit number - https://css-tricks.com/snippets/sass/correctly-adding-unit-number/
+  /* stylelint-disable-next-line length-zero-no-unit */
+  @media #{$media} and (min-width: $min + 0px) {
+    @content;
+  }
 }
 
 @mixin mqmax($max, $media: all) {
-    @media #{$media} and (max-width: $max + 0px) {
-        @content;
-    }
+  /* stylelint-disable-next-line length-zero-no-unit */
+  @media #{$media} and (max-width: $max + 0px) {
+    @content;
+  }
 }
 
 @mixin mqminmax($min, $max, $media: all) {
-    @media #{$media} and (min-width: $min + 0px) and (max-width: $max + 0px) {
-        @content;
-    }
+  /* stylelint-disable-next-line length-zero-no-unit */
+  @media #{$media} and (min-width: $min + 0px) and (max-width: $max + 0px) {
+    @content;
+  }
 }

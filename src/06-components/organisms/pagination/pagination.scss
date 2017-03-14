@@ -6,12 +6,12 @@
   flex-direction: row;
   justify-content: center;
   font-size: 0;
-  
+
   /* CSS Hack, target IE10 and IE11 */
   @media all and (-ms-high-contrast: none) {
     justify-content: flex-start;
   }
-  
+
   li {
     text-align: center;
     line-height: 48px;
@@ -22,35 +22,36 @@
     flex: auto;
     border-top: 1px solid $black-20;
     border-bottom: 1px solid $black-30;
-    
+
     &.previous-page, &.next-page {
       max-width: 200px;
       width: 100px;
-      
+
       a.disabled {
         svg {
           fill: $black-40;
         }
       }
     }
-    
+
     &.previous-page {
       svg {
         transform: rotate(90deg);
       }
     }
-    
+
     &.next-page {
       border-right: 1px solid $black-20;
+
       svg {
         transform: rotate(-90deg);
       }
     }
-    
+
     &.info-page {
       max-width: inherit;
     }
-    
+
     a {
       @include link(M);
       display: block;
@@ -58,24 +59,24 @@
       transition: background-color .3s ease-in;
       background-color: $white;
       border-left: 1px solid $black-20;
-      
+
       &:hover {
         background-color: $black-30;
         border-left: 1px solid $black-30;
       }
-      
+
       &.active {
         pointer-events: none;
         color: $black-100;
         background-color: $black-40;
         border-left: 1px solid $black-30;
       }
-      
+
       &.disabled {
         pointer-events: none;
         color: $black-40;
       }
-      
+
       as24-icon {
         bottom: 2px;
         display: inline;
@@ -84,17 +85,17 @@
         fill: $color-link;
         transition: fill $transition-time ease-in;
         width: 13px;
-        
+
         svg {
           width: 13px;
           height: 7px;
         }
       }
     }
-    
+
     @include mqmax($viewportS - 1) {
       display: none;
-      
+
       &.previous-page, &.next-page {
         display: inline;
       }

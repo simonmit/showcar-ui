@@ -1,4 +1,4 @@
-@import "../../../01-settings/variables";
+@import '../../../01-settings/variables';
 
 $types: (
   'success': (
@@ -43,8 +43,6 @@ $types: (
   background-position: $L map-get($type, background-position-y);
 }
 
-
-
 as24-notification {
   display: block;
   overflow: hidden;
@@ -72,7 +70,7 @@ as24-notification {
         @include notification-icon($value);
       }
 
-      as24-icon[type="close"] {
+      as24-icon[type='close'] {
         width: 16px;
         height: 16px;
 
@@ -102,7 +100,6 @@ as24-notification {
       right: 16px;
     }
   }
-
 }
 
 .sc-notification-container {
@@ -127,5 +124,4 @@ as24-notification {
     left: 0;
     top: 0;
   }
-
 }

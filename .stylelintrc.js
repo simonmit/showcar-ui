@@ -7,10 +7,11 @@ module.exports = {
         "string-quotes": "single",
         "value-no-vendor-prefix": true,
         "property-no-vendor-prefix": true,
-        "declaration-block-no-duplicate-properties": true,
         "block-no-empty": true,
         "selector-no-id": true,
-        "rule-empty-line-before": "always-multi-line",
+        "rule-empty-line-before": ["always-multi-line", {
+            "ignore": ["after-comment", "inside-block"]
+        }],
         "no-extra-semicolons": true
     }
 };

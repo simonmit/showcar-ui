@@ -18,6 +18,6 @@ const registerElement = element => {
             window.console.warn('Failed to register CustomElement "' + element.tagName + '".', e);
         }
     }
-}
+};
 
 export default registerElement;

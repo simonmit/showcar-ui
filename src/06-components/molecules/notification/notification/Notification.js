@@ -1,6 +1,4 @@
 class Notification {
-
-
     /**
      * @param {HTMLElement} element
      */
@@ -82,7 +80,7 @@ class Notification {
             this.titleTag.innerHTML = value;
         }
         if ('close' === attribute) {
-            if (!this.closeBtn && "true" === value) {
+            if (!this.closeBtn && 'true' === value) {
                 this.closeBtn = this.createCloseButton();
             } else {
                 this.closeBtn.remove();

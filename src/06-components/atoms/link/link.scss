@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../../../03-generic/fonts";
+@import '../../../01-settings/variables';
+@import '../../../03-generic/fonts';
 
 @mixin link($size: null, $variant: blue) {
   cursor: pointer;
@@ -20,32 +20,30 @@
       active: $orange-100
     )
   );
-  
+
   $color: map-get(map-get($link-colors, $variant), normal);
-  
   color: $color;
-  
-  &:hover{
+
+  &:hover {
     $hover-color: map-get(map-get($link-colors, $variant), hover);
-    
     color: $hover-color;
   }
-  
-  &:active{
+
+  &:active {
     $active-color: map-get(map-get($link-colors, $variant), active);
-    
     color: $active-color;
   }
-  
-  @if ($size){
+
+  @if ($size) {
     @include font($size);
   }
 }
 
 a,
-.sc-link{
+.sc-link {
   @include link;
 }
-.sc-inline-link{
+
+.sc-inline-link {
   @include link($variant: black);
 }
