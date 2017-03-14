@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../../../06-components/atoms/link/link";
+@import '../../../01-settings/variables';
+@import '../../../06-components/atoms/link/link';
 
 .sc-navigation {
   position: relative;
@@ -122,6 +122,7 @@
       }
     }
 
+    /* stylelint-disable-next-line no-duplicate-selectors */
     > ul {
       border: none;
     }
@@ -143,6 +144,7 @@
         }
       }
     }
+
     &:hover,
     &:active,
     &:focus {
@@ -201,7 +203,7 @@
       as24-icon {
         width: 85px;
         height: 40px;
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
   }
@@ -289,6 +291,7 @@
         display: none;
       }
 
+      /* stylelint-disable-next-line no-duplicate-selectors */
       > ul {
         margin-left: 120px;
       }

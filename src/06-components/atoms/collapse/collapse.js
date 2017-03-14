@@ -13,9 +13,9 @@ export default () => {
                     bubbles: true
                 });
                 document.dispatchEvent(event);
-            }
+            };
         });
-    };
+    }
 
     init();
     document.addEventListener('as24-collapse:update', init);

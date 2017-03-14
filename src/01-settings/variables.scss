@@ -120,12 +120,12 @@ $side-ad-width: 160px;
 $gap-between-ad-and-grid: 10px;
 
 $susy: (
-        columns: 12,
-        global-box-sizing: border-box,
-        gutters: $gutter-width / $grid-column-width,
-        gutter-position: split,
-        container: $grid-max-width,
-        debug: (
-                image: $susy-grid-background,
-        )
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: $gutter-width / $grid-column-width,
+  gutter-position: split,
+  container: $grid-max-width,
+  debug: (
+    image: $susy-grid-background,
+  )
 );

@@ -1,23 +1,22 @@
 class Navigation {
-
     get KEY_DOWN() {
-      return 40;
+        return 40;
     }
 
     get KEY_UP() {
-      return 38;
+        return 38;
     }
 
     get KEY_LEFT() {
-      return 37;
+        return 37;
     }
 
     get KEY_RIGHT() {
-      return  39;
+        return 39;
     }
 
     get KEY_TAB() {
-       return 9;
+        return 9;
     }
 
     get KEY_RETURN() {
@@ -32,14 +31,14 @@ class Navigation {
      * @param {HTMLElement} root
      */
     constructor(root) {
-        this.document    = $(document);
+        this.document = $(document);
         this.rootElement = $(root);
-        this.menuBtn     = $('.sc-btn-mobile-menu', this.rootElement);
-        this.activeItem  = null;
-        this.activeMenu  = null;
-        this.menuIsOpen  = false;
-        this.menus       = $('nav > ul > li', this.rootElement);
-        this.items       = [];
+        this.menuBtn = $('.sc-btn-mobile-menu', this.rootElement);
+        this.activeItem = null;
+        this.activeMenu = null;
+        this.menuIsOpen = false;
+        this.menus = $('nav > ul > li', this.rootElement);
+        this.items = [];
         this.initEvents();
     }
 
@@ -118,7 +117,7 @@ class Navigation {
     /**
      * @param {Object} event
      */
-    escapeMenu(event) {
+    escapeMenu() {
         this.activeMenu && this.menuIsOpen && this.closeMenu();
     }
 
@@ -171,7 +170,7 @@ class Navigation {
                 this.handleJumpUp();
                 break;
             case this.KEY_TAB:
-                !!event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+                event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
                 break;
             case this.KEY_RIGHT:
                 this.handleJumpRight();
@@ -262,9 +261,9 @@ class Navigation {
     }
 }
 
-export default function() {
+export default function () {
     let navigationElement = document.querySelector('.sc-navigation'),
-        navigation        = null;
+        navigation = null;
     if (navigationElement) {
         navigation = new Navigation(navigationElement);
     }

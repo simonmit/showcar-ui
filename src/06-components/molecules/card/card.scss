@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../../../02-sass-tools/sass-mq";
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
 
 //TODO remove or move to grid
 $breakpoint-S: 640;
@@ -25,6 +25,7 @@ $breakpoint-XL: 1099;
     text-align: center;
     cursor: pointer;
     color: $color-link;
+
     &:hover {
       color: $blue-100;
     }
@@ -36,11 +37,12 @@ $breakpoint-XL: 1099;
 
     @include mqmax($breakpoint-S) { // hack. @include mq problem, it floats top when rendering
       display: block;
-     }
+    }
   }
 
   &__state {
     display: none;
+
     & ~ .sc-cards__list {
       .sc-card:nth-child(1n+5) {
         display: none;
@@ -54,6 +56,7 @@ $breakpoint-XL: 1099;
       & ~ .sc-cards__show {
         display: none;
       }
+
       & ~ .sc-cards__list {
         .sc-card {
           display: block;
@@ -89,6 +92,7 @@ $breakpoint-XL: 1099;
     border: 1px solid $black-30;
     border-radius: $XS;
     transition: border .3s ease;
+
     &:hover {
       border: 1px solid $black-60;
     }
@@ -102,6 +106,7 @@ $breakpoint-XL: 1099;
     text-align: center;
     background: white;
     font-size: 13px;
+
     @include mqmin($breakpoint-S) {
       font-size: 16px;
     }

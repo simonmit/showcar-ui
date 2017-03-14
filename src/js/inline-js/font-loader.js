@@ -42,7 +42,6 @@
 
         } catch(ex) {
             loadStylesheetSync();
-            console.error(ex);
         }
 
         function loadStylesheetSync() {
@@ -77,7 +76,6 @@
             script.parentNode.insertBefore(link, script);
         }
 
-
         var currentFrame;
 
         function onObjectSizeChange() {
@@ -105,10 +103,9 @@
                         div.parentNode.removeChild(div);
                     });
 
-                    onObjectSizeChange = function(){};
+                    onObjectSizeChange = function() {};
                 }
             });
-
         }
     }
 

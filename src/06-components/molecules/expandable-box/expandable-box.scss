@@ -1,6 +1,6 @@
-@import "../../../01-settings/variables";
-@import "../../../02-sass-tools/sass-mq";
-@import "../../../06-components/atoms/rotating-arrow/rotating-arrow";
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+@import '../../../06-components/atoms/rotating-arrow/rotating-arrow';
 
 .sc-expandable-box {
   @include clearfix();
@@ -38,6 +38,7 @@
       & ~ .sc-expandable-box__content {
         display: block;
       }
+
       & ~ .sc-expandable-box__title > .sc-expandable-box__label {
         &:after {
           @include rotating-arrow('up');
@@ -66,5 +67,4 @@
     display: none;
     padding-bottom: $XL;
   }
-
 }

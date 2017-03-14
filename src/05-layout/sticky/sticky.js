@@ -15,7 +15,7 @@ export default function() {
                 classesString = classList.concat(className).join(' ');
             }
         } else {
-            classesString = className
+            classesString = className;
         }
         domEl.setAttribute('class', classesString);
         return domEl;
@@ -113,9 +113,9 @@ export default function() {
     /**
      * adding several event listeners needed for updating the positions of the stickies
      */
-    window.addEventListener("deviceorientation", () => handleStickies());
-    window.addEventListener("resize", () => handleStickies());
-    window.addEventListener("pageSizeChanged", () => handleStickies());
+    window.addEventListener('deviceorientation', () => handleStickies());
+    window.addEventListener('resize', () => handleStickies());
+    window.addEventListener('pageSizeChanged', () => handleStickies());
     document.addEventListener('scroll', () => handleStickies());
     document.addEventListener('collapse', () => handleStickies());
-};
+}

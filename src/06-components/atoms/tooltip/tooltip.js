@@ -12,7 +12,7 @@ export default () => {
 
     let timer = null;
 
-    $target.on("mousedown mouseover", function() {
+    $target.on('mousedown mouseover', function() {
         const $this = $(this);
         if (!$this.data('title')) return;
 
@@ -60,23 +60,23 @@ export default () => {
 
     });
 
-    $target.on("mouseleave", function() {
+    $target.on('mouseleave', function() {
         clearTimeout(timer);
         timer = setTimeout(hideTooltip, 300);
     }).data('title', function() {
         return this.title ? this.title : false;
     }).removeAttr('title');
 
-    $tooltip.on("mouseenter", function() {
+    $tooltip.on('mouseenter', function() {
         clearTimeout(timer);
     });
 
-    $tooltip.on("mouseleave", function() {
+    $tooltip.on('mouseleave', function() {
         clearTimeout(timer);
         timer = setTimeout(hideTooltip, 300);
     });
 
-    $(window).on("resize", function() {
+    $(window).on('resize', function() {
         clearTimeout(timer);
         hideTooltip();
     });
