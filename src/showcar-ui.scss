@@ -1,37 +1,35 @@
-@import "03-generic/reset";
-@import "03-generic/fonts";
+@import '03-generic/reset';
+@import '03-generic/fonts';
 
-@import "04-elements/elements";
+@import '04-elements/elements';
 
-@import "05-layout/grid";
-@import "05-layout/ad";
-@import "05-layout/sticky/sticky";
+@import '05-layout/grid';
+@import '05-layout/ad';
+@import '05-layout/sticky/sticky';
 
-@import "06-components/atoms/button/button";
-@import "06-components/atoms/collapse/collapse";
-@import "06-components/atoms/color-selector/color-selector";
-@import "06-components/atoms/custom-dropdown/custom-dropdown";
-@import "06-components/atoms/custom-dropdown-icon/custom-dropdown-icon";
-@import "06-components/atoms/input/input";
-@import "06-components/atoms/lazy-image/lazy-image";
-@import "06-components/atoms/lightbox/lightbox";
-@import "06-components/atoms/link/link";
-@import "06-components/atoms/rotating-arrow/rotating-arrow";
-@import "06-components/atoms/spinner/spinner";
-@import "06-components/atoms/stepper/stepper";
-@import "06-components/atoms/tooltip/tooltip";
-@import "06-components/atoms/tooltip-2/tooltip-2";
+@import '06-components/atoms/button/button';
+@import '06-components/atoms/collapse/collapse';
+@import '06-components/atoms/color-selector/color-selector';
+@import '06-components/atoms/custom-dropdown/custom-dropdown';
+@import '06-components/atoms/custom-dropdown-icon/custom-dropdown-icon';
+@import '06-components/atoms/input/input';
+@import '06-components/atoms/lazy-image/lazy-image';
+@import '06-components/atoms/lightbox/lightbox';
+@import '06-components/atoms/link/link';
+@import '06-components/atoms/rotating-arrow/rotating-arrow';
+@import '06-components/atoms/spinner/spinner';
+@import '06-components/atoms/stepper/stepper';
+@import '06-components/atoms/tooltip/tooltip';
+@import '06-components/atoms/tooltip-2/tooltip-2';
 
+@import '06-components/molecules/breadcrumb/breadcrumb';
+@import '06-components/molecules/card/card';
+@import '06-components/molecules/expandable-box/expandable-box';
+@import '06-components/molecules/input-group/input-group';
+@import '06-components/molecules/notification/notification';
 
-@import "06-components/molecules/breadcrumb/breadcrumb";
-@import "06-components/molecules/card/card";
-@import "06-components/molecules/expandable-box/expandable-box";
-@import "06-components/molecules/input-group/input-group";
-@import "06-components/molecules/notification/notification";
+@import '06-components/organisms/navigation/navigation';
+@import '06-components/organisms/pagination/pagination';
+@import '06-components/organisms/spy-navigation/spy-navigation';
 
-
-@import "06-components/organisms/navigation/navigation";
-@import "06-components/organisms/pagination/pagination";
-@import "06-components/organisms/spy-navigation/spy-navigation";
-
-@import "07-utilities/utils";
+@import '07-utilities/utils';

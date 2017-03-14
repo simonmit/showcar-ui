@@ -1,4 +1,4 @@
-@import "../../01-settings/variables";
+@import '../../01-settings/variables';
 
 .sc-sticky {
   display: block;
@@ -8,7 +8,7 @@
   width: calc(100% - 32px);
   z-index: 2;
   left: $L;
-  
+
   @media only screen and (min-width: 500px) {
     width: 320px;
     left: 50%;

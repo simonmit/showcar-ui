@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../../../03-generic/fonts";
+@import '../../../01-settings/variables';
+@import '../../../03-generic/fonts';
 
 @mixin button {
   // max-width: 288px;
@@ -22,7 +22,7 @@
     color: #fff;
   }
 
-  [class^="icon-"] {
+  [class^='icon-'] {
     width: $L;
     height: $L;
     display: inline-block;
@@ -79,17 +79,17 @@
 .sc-btn-bob-l,
 .sc-btn-bob-m {
   @include button;
-  
+
   background-color: $orange-100;
-  
+
   &:hover {
     background-color: $orange-120;
   }
-  
+
   &:active {
     background-color: $orange-130;
   }
-  
+
   &[disabled] {
     background-color: $orange-50;
   }
@@ -98,17 +98,17 @@
 .sc-btn-ross-l,
 .sc-btn-ross-m {
   @include button;
-  
+
   background-color: $blue-80;
-  
+
   &:hover {
     background-color: $blue-90;
   }
-  
+
   &:active {
     background-color: $blue-100;
   }
-  
+
   &[disabled] {
     background-color: $blue-40;
   }

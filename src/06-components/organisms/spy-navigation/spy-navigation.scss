@@ -1,7 +1,7 @@
-@import "../../../01-settings/variables";
-@import "../../../02-sass-tools/sass-mq";
-@import "../../../06-components/atoms/link/link";
-@import "../../../06-components/atoms/rotating-arrow/rotating-arrow";
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+@import '../../../06-components/atoms/link/link';
+@import '../../../06-components/atoms/rotating-arrow/rotating-arrow';
 
 $spy-height: 55px;
 
@@ -36,6 +36,7 @@ $spy-height: 55px;
   &--expanded {
     #{$nav}__links {
       height: #{$spy-height - 1};
+
       @include mqmax($viewportM) {
         border-bottom: 1px solid $black-30;
       }
@@ -50,17 +51,18 @@ $spy-height: 55px;
       position: static;
       padding: 12px $L 14px;
       @include visibleOnML;
+
       &:first-child {
         position: static;
         padding: $L $L 14px;
         @include visibleOnML;
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         padding: $L $L 14px;
       }
 
-      &:last-child{
+      &:last-child {
         padding: 12px $L $L;
       }
 
@@ -71,7 +73,7 @@ $spy-height: 55px;
           padding: $L 24px 14px $L;
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
           padding: $L 24px 14px 24px;
         }
 
@@ -107,7 +109,7 @@ $spy-height: 55px;
     z-index: 21;
 
     &:before {
-      box-shadow: 0 3px 6px -2px rgba(0,0,0,.15);
+      box-shadow: 0 3px 6px -2px rgba(0, 0, 0, .15);
     }
 
     #{$nav}__links {
@@ -153,6 +155,7 @@ $spy-height: 55px;
       &:after {
         background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
       }
+
       #{$toggle}__text {
         color: $orange-100;
       }
@@ -166,6 +169,7 @@ $spy-height: 55px;
       visibility: visible !important;
       width: auto;
       background: white;
+
       #{$toggle}__text {
         visibility: visible;
         margin-right: $XXL;
@@ -178,6 +182,7 @@ $spy-height: 55px;
     display: inline-block;
     white-space: nowrap;
     width: 100%;
+
     @include mqmin($viewportM) {
       width: auto;
     }
@@ -202,11 +207,11 @@ $spy-height: 55px;
       @include visibleOnS;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       padding: $L $L 15px;
     }
 
-    &:last-child{
+    &:last-child {
       padding: 12px $L $L;
     }
 
@@ -222,7 +227,7 @@ $spy-height: 55px;
         padding: $L 24px 14px $L;
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         padding: $L 24px 14px 24px;
       }
 

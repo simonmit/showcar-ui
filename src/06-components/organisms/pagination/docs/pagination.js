@@ -1,6 +1,6 @@
 // This needs to be build in your webpack:
 
-(function ($) {
+(function () {
     var paginationElement = document.querySelector('.sc-pagination'),
         itemsPerPage = 20,
         activePage = 1,
@@ -10,4 +10,4 @@
     if (paginationElement) {
         new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
     }
-})(window.Zepto);
+})();

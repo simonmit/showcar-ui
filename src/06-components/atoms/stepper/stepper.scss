@@ -1,5 +1,5 @@
-@import "../../../01-settings/variables";
-@import "../input/input";
+@import '../../../01-settings/variables';
+@import '../input/input';
 
 .sc-stepper {
   display: flex;
@@ -14,6 +14,7 @@
   width: 50%;
   text-align: center;
   outline: none;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
   -moz-appearance: textfield; // Don't show spinners in firefox
 }
 
@@ -51,6 +52,6 @@
 // Don't show spinners in webkit browsers
 .sc-stepper-input::-webkit-inner-spin-button,
 .sc-stepper-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
   margin: 0;
 }

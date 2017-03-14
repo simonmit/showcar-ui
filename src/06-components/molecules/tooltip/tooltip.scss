@@ -1,4 +1,4 @@
-@import "../../../01-settings/variables";
+@import '../../../01-settings/variables';
 
 sc-tooltip.sc-tooltip-content {
   visibility: hidden;
@@ -21,11 +21,10 @@ sc-tooltip.sc-tooltip-content {
       color: $black-50;
     }
 
-    &:hover{
+    &:hover {
       color: $black-40;
     }
   }
-
 }
 
 .sc-tooltip-content--shown {

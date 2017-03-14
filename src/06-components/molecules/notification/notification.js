@@ -1,13 +1,14 @@
 import registerElement from '../../../07-utilities/helpers.js';
 import ContainerHandler from './notification/ContainerHandler';
-let i =0
+
 export default function(tagName) {
     let containerHandler = new ContainerHandler();
     let items = [];
     function attachedCallback() {
         if(items.indexOf(this.id) != -1){ // prevent of appearing twice. TODO check on new polyfill
-            return
+            return;
         }
+
         items.push(this.id);
         containerHandler.createNotification(this);
     }

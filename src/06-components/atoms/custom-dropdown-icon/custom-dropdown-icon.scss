@@ -1,4 +1,4 @@
-@import "../../../01-settings/variables";
+@import '../../../01-settings/variables';
 
 custom-dropdown {
   div:first-child {
@@ -9,10 +9,12 @@ custom-dropdown {
       margin-top: 0;
       margin-bottom: 0;
     }
+
     span {
       padding-left: $XS;
     }
   }
+
   div:last-child {
     span {
       padding-left: $M;
@@ -21,6 +23,7 @@ custom-dropdown {
       display: inline-block;
     }
   }
+
   as24-icon {
     width: auto;
     height: auto;

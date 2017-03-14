@@ -1,16 +1,15 @@
-@import "../../../01-settings/variables";
+@import '../../../01-settings/variables';
 
 @mixin input-group() {
   display: flex;
   flex-direction: row;
   width: 100%;
-  
+
   > * {
     display: inline-block;
     min-width: 0;
   }
 }
-
 
 .sc-input-group {
   @include input-group;
@@ -50,49 +49,48 @@
   border: 1px solid $black-60;
   border-radius: $form-border-radius;
   font-weight: 400;
-  
+
   input[type=radio] {
     display: none;
-    
-    
+
     &:disabled {
-      
       & + label {
         cursor: not-allowed;
         color: $black-40;
         border-right: 1px solid $black-40;
       }
-      
-      &:checked {
-        & + label {
-          color: $black-60;
+
+      &:checked + label {
+        color: $black-60;
+        background-color: $black-30;
+
+        &:hover {
           background-color: $black-30;
-          &:hover {
-            background-color: $black-30;
-          }
         }
       }
-      
-      &:not(:checked) {
-        & + label {
+
+      &:not(:checked) + label {
+        background-color: $black-20;
+
+        &:hover {
           background-color: $black-20;
-          &:hover {
-            background-color: $black-20;
-          }
-        }
-      }
-      
-    }
-    
-    &:checked {
-      & + label {
-        &::before {
-          border: none;
-          background-image: none;
         }
       }
     }
-    
+
+    &:checked + label {
+      background: $black-40;
+
+      &::before {
+        border: none;
+        background-image: none;
+      }
+    }
+
+    &:not(:checked) + label:hover {
+      background: $black-30;
+    }
+
     & + label {
       padding: 5px 0;
       margin: 0;
@@ -103,24 +101,15 @@
       line-height: 1.8rem;
       height: 38px;
       transition: background-color $transition-time ease-in;
-      
+
       &:last-of-type {
         border: none;
       }
-      
+
       &::before {
         border: none;
         background-image: none;
       }
-    }
-    
-    &:checked + label {
-      background: $black-40;
-      
-    }
-    
-    &:not(:checked) + label:hover {
-      background: $black-30;
     }
   }
 
