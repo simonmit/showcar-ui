@@ -5,6 +5,9 @@ module.exports = (globalJSON, content) => {
     if (! globalJSON) {
         globalJSON = JSON.parse(fs.readFileSync('/Users/asolovev/scout24/source/showcar-ui/docs/globalJSON.json', 'utf8'));
     }
+    if (! globalJSON && content){
+        content+='<style>#left-menu a.open-separate{display: none}</style>';
+    }
     
     if (! content) {
         const wrap = (el) => {
@@ -35,26 +38,24 @@ module.exports = (globalJSON, content) => {
         let type = [];
         let group = [];
         content = Object.keys(globalJSON)
-                .map(el => {
+                .map((el, index) => {
                     let content = '';
+                    if (group.indexOf(globalJSON[el].group) === - 1) {
+                        if (index != 0) {
+                            content += `<hr>`;
+                            content += '</div>';
+                        }
+                        content += `<div id="${globalJSON[el].group}-link" class="positon-anchor">`
+                    }
                     if (type.indexOf(globalJSON[el].type) === - 1) {
                         type.push(globalJSON[el].type);
-                        group.push(globalJSON[el].group);
-                        content += `<div id="${globalJSON[el].group}-link"  class="positon-anchor">`
                         content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
-                        content += wrap(globalJSON[el])
-                        content+='</div>'
-                    } else {
-                        if (group.indexOf(globalJSON[el].group) === - 1) {
-                            group.push(globalJSON[el].group);
-                            content += `<div id="${globalJSON[el].group}-link" class="positon-anchor">`
-                            content += `<hr>`
-                            content += wrap(globalJSON[el])
-                            content+='</div>'
-                        }
                     }
+                        content += wrap(globalJSON[el])
+                    
+                    group.push(globalJSON[el].group);
                     return content;
-                }).join('') || 'empty';
+                }).join('\n') || 'empty';
     }
     
     let scriptsFiles = [
@@ -100,7 +101,7 @@ module.exports = (globalJSON, content) => {
         <div id="sidebar">
             <a href="/"><div id="sidebar-logo"></div></a>
             <h1>ShowCar UI</h1>
-            <div id="all-code-toggler">Are you developer?</div>
+            <div id="all-code-toggler"><span>Show</span> all code samples</div>
             <div id="left-menu">
                 ${menu}
             </div>

@@ -2,11 +2,18 @@ module.exports  = (globalJSON)=>{
     let removeDuplicates = [];
     const renderLink = (rec) => `<li>
             <a data-scroll href="#${rec.label}-link">${rec.label}</a>
-            <!--<a href="${rec.dir}">${rec.label}</a>-->
+            <a href="${rec.dir}" class="open-separate"></a>
         </li>`;
     const renderSubs = (subs) => subs.map(renderLink).join('\n');
     const renderNode = (node) => {
-        return `<ul><li><a href="${node.dir}">${node.label}</a><ul>${renderSubs(node.subs)}</ul></li></ul>`
+        return `
+        <ul>
+            <li>
+                <span>${node.label}</span>
+                <a href="${node.dir}" class="open-separate"></a>
+                <ul>${renderSubs(node.subs)}</ul>
+            </li>
+        </ul>`
     }
     const metaTree = Object.keys(globalJSON)
         .map(key => globalJSON[key])
@@ -29,5 +36,8 @@ module.exports  = (globalJSON)=>{
             })
             return res;
         }, {});
-    return Object.keys(metaTree).map(key => metaTree[key]).map(renderNode).join('\n');
+    return Object.keys(metaTree)
+        .map(key => metaTree[key])
+        .map(renderNode)
+        .join('\n');
 }
