@@ -1,0 +1,41 @@
+@import '../01-settings/variables';
+@import '../02-tools/sass-mq';
+
+@mixin font($size: null, $bold: false, $silent: false, $line-height: null) {
+  $font-sizes: (S: 0.8125rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 2rem, hero: 1.5rem);
+
+  @if $size {
+    font-size: map-get($font-sizes, to-upper_case($size));
+  }
+
+  @if $bold {
+    font-weight: 600;
+  }
+
+  @if $silent {
+    color: $black-60;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+/// @param string $size - default size that is used, use the same variables as font mixin
+/// @param string $sizeM - font size that is used starting at viewportM, use the same variables as font mixin
+/// @param bool $bold - default font weight (true = bold)
+/// @param bool $boldM - font weight that is used starting at viewportM
+@mixin headline($size, $sizeM, $bold: false, $boldM: false) {
+  @include font($size, $bold);
+  @if not $bold {
+    font-weight: normal;
+  }
+
+  @include mqmin($viewportM) {
+    @include font($sizeM, $boldM);
+
+    @if not $boldM {
+      font-weight: normal;
+    }
+  }
+}
