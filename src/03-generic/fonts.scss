@@ -2,12 +2,27 @@
 @import "../02-sass-tools/sass-mq";
 
 @mixin font($size: null, $bold: false, $silent: false, $line-height: null) {
-  $font-sizes: (S: 0.8125rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 2rem, XXXL: 2.5rem);
-  
-  @if $size{
+  $font-sizes: (S: 0.8125rem, M: 1rem, L: 1.25rem, XL: 1.5rem, XXL: 1.75rem, XXXL: 1.5rem);
+
+  @if $size {
     font-size: map-get($font-sizes, to-upper_case($size));
+    @if $size == S {
+      line-height: 1.5;
+    } @else if $size == M {
+      line-height: 1.5;
+    } @else if $size == L {
+      line-height: 1.4;
+    } @else if $size == XL {
+      line-height: 1.3;
+    } @else if $size == XXL {
+      line-height: 1.25;
+    } @else if $size == XXXL {
+      line-height: 1.3;
+    } @else {
+      @error '=> ERROR: FONT HAS WRONG SIZE! <= | Your $font-size #{$font-size} did not match any of the values in the mixin.';
+    }
   }
-  
+
   @if $bold{
     font-weight: 600;
   }
@@ -18,6 +33,17 @@
   
   @if $line-height{
     line-height: $line-height;
+  }
+
+  @include mqmin($viewportM) {
+    @if $size == XL {
+      font-size: 1.75rem; /*28px*/
+    } @else if $size == XXL {
+      font-size: 2rem; /*32px*/
+    } @else if $size == XXXL {
+      font-size: 2.5rem; /*40px*/
+      line-height: 1.2;
+    }
   }
 }
 /// @param string $size - default size that is used, use the same variables as font mixin
@@ -61,6 +87,9 @@
 }
 .sc-font-bold{
   font-weight: 600;
+}
+.sc-font-uppercase {
+  text-transform: uppercase;
 }
 h1.sc-font{
   padding: 0 $L; //TODO rewrite padding
