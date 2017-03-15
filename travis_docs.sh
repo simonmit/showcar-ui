@@ -21,8 +21,8 @@ rm -rf !(.git*)
 
 cp -r ../docs/* .
 mkdir -p docs/assets/
-mv assets/ docs/assets/
-cp -r ../dist .
+mv assets/ docs/
+cp -r ../dist* dist/
 
 git add . -A
 
