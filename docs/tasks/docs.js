@@ -8,7 +8,6 @@ module.exports = (gulp) => {
         proxy: "http://localhost:5000",
         open:false,
         port: 3000,
-        ignore:[]
     });
     return new Promise((resolve, reject) => {
             nodemon({

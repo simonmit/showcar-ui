@@ -1,11 +1,13 @@
 const fs = require('fs');
 const renderMenu = require('./renderMenu.js')
 module.exports = (globalJSON, content) => {
-    if (! globalJSON) {
-        globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
-    }
+    
     if (! globalJSON && content) {
         content += '<style>#left-menu a.open-separate{display: none}</style>';
+    }
+    
+    if (! globalJSON) {
+        globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }
     
     if (! content) {
@@ -51,7 +53,6 @@ module.exports = (globalJSON, content) => {
                         content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
                     }
                     content += wrap(globalJSON[el])
-                    
                     group.push(globalJSON[el].group);
                     return content;
                 }).join('\n') || 'empty';
@@ -118,9 +119,9 @@ module.exports = (globalJSON, content) => {
             hljs.initHighlightingOnLoad();
             
             var clipboard = new Clipboard('.clipbrd-btn');
-            /*clipboard.on('success', function (e) {
-                e.clearSelection();
-            });*/
+            clipboard.on('success', function (e) {
+//                e.clearSelection();
+            });
               if (location.hostname === 'autoscout24.github.io') {
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
