@@ -3,7 +3,7 @@
         "name": "colors-primary-black",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -12,7 +12,7 @@
         "name": "colors-primary-blue",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -21,7 +21,7 @@
         "name": "colors-primary-orange",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -30,7 +30,7 @@
         "name": "colors-secondary",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -39,7 +39,7 @@
         "name": "colors",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -48,7 +48,7 @@
         "name": "settings",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -57,7 +57,7 @@
         "name": "spacings",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\\n<table class=\\\"docs-table\\\">\\n    <thead>\\n    <tr>\\n        <th>variable</th>\\n        <th>value</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td>$XS</td>\\n        <td>4px</td>\\n    </tr>\\n    <tr>\\n        <td>$S</td>\\n        <td>8px</td>\\n    </tr>\\n    <tr>\\n        <td>$M</td>\\n        <td>12px</td>\\n    </tr>\\n    <tr>\\n        <td>$L</td>\\n        <td>16px</td>\\n    </tr>\\n    <tr>\\n        <td>$XL</td>\\n        <td>20px</td>\\n    </tr>\\n    <tr>\\n        <td>$XXL</td>\\n        <td>28px</td>\\n    </tr>\\n    <tr>\\n        <td>$XXXL</td>\\n        <td>40px</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -66,7 +66,7 @@
         "name": "viewports",
         "type": "globals",
         "group": "variables",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs",
+        "srcDir": "src/01-settings/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.<br>Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  </p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\\n\\n<table class=\\\"docs-table\\\">\\n    <thead>\\n    <tr>\\n        <th>variable</th>\\n        <th>value</th>\\n        <th>size, from/to</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td>$viewportXS</td>\\n        <td>0</td>\\n        <td>0 - 320px</td>\\n    </tr>\\n    <tr>\\n        <td>$viewportS</td>\\n        <td>321px</td>\\n        <td>321px - 767px</td>\\n    </tr>\\n    <tr>\\n        <td>$viewportM</td>\\n        <td>768px</td>\\n        <td>768px - 1023px</td>\\n    </tr>\\n    <tr>\\n        <td>$viewportL</td>\\n        <td>1024px</td>\\n        <td>1024px - 1099px</td>\\n    </tr>\\n    <tr>\\n        <td>$viewportXL</td>\\n        <td>1100px</td>\\n        <td>1100px - 1269px</td>\\n    </tr>\\n    <tr>\\n        <td>$viewportXXL</td>\\n        <td>1270px</td>\\n        <td>1270px - ∞</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -75,7 +75,7 @@
         "name": "fonts",
         "type": "globals",
         "group": "fonts",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/03-generic/docs",
+        "srcDir": "src/03-generic/docs",
         "markDown": "\"<p>ShowCars default <code>font-family</code> is Source Sans Pro. Please use the predefined classes to increase or decrease the font size. You should not define explicit font sizes. To use the Source Sans Pro font, you don&#39;t have to do anything.</p>\\n<h4 id=\\\"font-sizes\\\">Font sizes</h4>\\n<p>Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>\\n<h4 id=\\\"headlines\\\">Headlines</h4>\\n<p>For styling <code>&lt;h*&gt;</code> elements please use <code>sc-font-*</code> classes directly.\\nFor example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\\n<table class=\\\"docs-table\\\">\\n    <thead>\\n        <tr>\\n            <th>class</th>\\n            <th>font-size</th>\\n        </tr>\\n    </thead>\\n    <tbody>\\n        <tr>\\n            <td><code>.sc-font-s</code></td>\\n            <td>0.8125rem (13px)</td>\\n        </tr>\\n        <tr>\\n            <td><code>.sc-font-m</code></td>\\n            <td>1rem (16px)</td>\\n        </tr>\\n        <tr>\\n            <td><code>.sc-font-l</code></td>\\n            <td>1.25rem (20px)</td>\\n        </tr>\\n        <tr>\\n            <td><code>.sc-font-xl</code></td>\\n            <td>1.5rem (24px)</td>\\n        </tr>\\n        <tr>\\n            <td><code>.sc-font-xxl</code></td>\\n            <td>2rem (32px)</td>\\n        </tr>\\n        <tr>\\n            <td><code>.sc-font-hero</code></td>\\n            <td>2.5rem (40px)</td>\\n        </tr>\\n    </tbody>\\n</table>\\n\"",
         "html": "\"<p class=\\\"sc-font-s\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-m\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-l\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-xl\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-xxl\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-hero\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-silent\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<p class=\\\"sc-font-bold\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\\n<br>\\n<h2 class=\\\"sc-font-m\\\">I'm a headline 2</h2>\\n\"",
         "codeExample": "\"&lt;p class=&quot;sc-font-s&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-m&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-l&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-xl&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-xxl&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-hero&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-silent&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;p class=&quot;sc-font-bold&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;\\n&lt;br&gt;\\n&lt;h2 class=&quot;sc-font-m&quot;&gt;I&apos;m a headline 2&lt;/h2&gt;\\n\""
@@ -84,7 +84,7 @@
         "name": "generic",
         "type": "globals",
         "group": "fonts",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/03-generic/docs",
+        "srcDir": "src/03-generic/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -93,7 +93,7 @@
         "name": "button-default",
         "type": "atoms",
         "group": "button",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/button/docs",
+        "srcDir": "src/06-components/atoms/button/docs",
         "markDown": "\"<h2>Button<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<button class=\\\"sc-btn-bob\\\">I am Bob!</button>\\n<button class=\\\"sc-btn-ross\\\">I am Ross!</button>\\n\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/button&gt;\\n\""
@@ -102,7 +102,7 @@
         "name": "button-disabled",
         "type": "atoms",
         "group": "button",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/button/docs",
+        "srcDir": "src/06-components/atoms/button/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<button class=\\\"sc-btn-bob\\\" disabled=\\\"\\\">I am Bob!</button>\\n<button class=\\\"sc-btn-ross\\\" disabled=\\\"\\\">I am Ross!</button>\\n\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-bob&quot; disabled=&quot;&quot;&gt;I am Bob!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-ross&quot; disabled=&quot;&quot;&gt;I am Ross!&lt;/button&gt;\\n\""
@@ -111,7 +111,7 @@
         "name": "button-full-width",
         "type": "atoms",
         "group": "button",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/button/docs",
+        "srcDir": "src/06-components/atoms/button/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<button class=\\\"sc-btn-bob sc-btn-block\\\">I am Bob!</button>\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-bob sc-btn-block&quot;&gt;I am Bob!&lt;/button&gt;\""
@@ -120,7 +120,7 @@
         "name": "button-link",
         "type": "atoms",
         "group": "button",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/button/docs",
+        "srcDir": "src/06-components/atoms/button/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<a class=\\\"sc-btn-bob\\\">I am Bob!</a>\\n<a class=\\\"sc-btn-ross\\\">I am Ross!</a>\"",
         "codeExample": "\"&lt;a class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/a&gt;\\n&lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;\""
@@ -129,7 +129,7 @@
         "name": "collapse-more-less",
         "type": "atoms",
         "group": "collapse",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/collapse/docs",
+        "srcDir": "src/06-components/atoms/collapse/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<a class=\\\"sc-collapse sc-collapse-target in\\\" data-toggle=\\\"sc-collapse\\\" data-target=\\\".sc-collapse-target\\\">\\n    More Content\\n</a>\\n<div class=\\\"sc-collapse sc-collapse-target\\\">\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n</div>\\n<a data-toggle=\\\"sc-collapse\\\" data-target=\\\".sc-collapse-target\\\" class=\\\"sc-collapse sc-collapse-target\\\">\\n    Less Content\\n</a>\\n\"",
         "codeExample": "\"&lt;a class=&quot;sc-collapse sc-collapse-target in&quot; data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot;&gt;\\n    More Content\\n&lt;/a&gt;\\n&lt;div class=&quot;sc-collapse sc-collapse-target&quot;&gt;\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;/div&gt;\\n&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot; class=&quot;sc-collapse sc-collapse-target&quot;&gt;\\n    Less Content\\n&lt;/a&gt;\\n\""
@@ -138,7 +138,7 @@
         "name": "collapse-toggle",
         "type": "atoms",
         "group": "collapse",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/collapse/docs",
+        "srcDir": "src/06-components/atoms/collapse/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<a data-toggle=\\\"sc-collapse\\\" data-target=\\\"#collapse\\\">\\n    Toggle Content\\n</a>\\n<div id=\\\"collapse\\\" class=\\\"sc-collapse\\\">\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n</div>\\n\"",
         "codeExample": "\"&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse&quot;&gt;\\n    Toggle Content\\n&lt;/a&gt;\\n&lt;div id=&quot;collapse&quot; class=&quot;sc-collapse&quot;&gt;\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;/div&gt;\\n\""
@@ -147,7 +147,7 @@
         "name": "collapse",
         "type": "atoms",
         "group": "collapse",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/collapse/docs",
+        "srcDir": "src/06-components/atoms/collapse/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -156,7 +156,7 @@
         "name": "color-selector-checkbox",
         "type": "atoms",
         "group": "color-selector",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/color-selector/docs",
+        "srcDir": "src/06-components/atoms/color-selector/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring!</p>\\n\"",
         "html": "\"<div class=\\\"sc-color-selector\\\">\\n    <input id=\\\"as24-cb-cp-5\\\" type=\\\"checkbox\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l blue\\\">\\n    <label for=\\\"as24-cb-cp-5\\\">blue</label>\\n\\n    <input id=\\\"as24-cb-cp-6\\\" type=\\\"checkbox\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l other\\\">\\n    <label for=\\\"as24-cb-cp-6\\\">other</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-color-selector&quot;&gt;\\n    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;other&lt;/label&gt;\\n&lt;/div&gt;\\n\""
@@ -165,7 +165,7 @@
         "name": "color-selector",
         "type": "atoms",
         "group": "color-selector",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/color-selector/docs",
+        "srcDir": "src/06-components/atoms/color-selector/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring!</p>\\n\"",
         "html": "\"<div class=\\\"sc-color-selector\\\">\\n    <input id=\\\"as24-cb-cp-1\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input red\\\">\\n    <label for=\\\"as24-cb-cp-1\\\">red</label>\\n\\n    <input id=\\\"as24-cb-cp-2\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input yellow\\\">\\n    <label for=\\\"as24-cb-cp-2\\\">yellow</label>\\n\\n    <input id=\\\"as24-cb-cp-7\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input green\\\">\\n    <label for=\\\"as24-cb-cp-7\\\">green</label>\\n\\n    <input id=\\\"as24-cb-cp-8\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input gold\\\">\\n    <label for=\\\"as24-cb-cp-8\\\">gold</label>\\n\\n    <input id=\\\"as24-cb-cp-3\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l blue\\\">\\n    <label for=\\\"as24-cb-cp-3\\\">blue</label>\\n\\n    <input id=\\\"as24-cb-cp-4\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l other\\\">\\n    <label for=\\\"as24-cb-cp-4\\\">other</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-color-selector&quot;&gt;\\n    &lt;input id=&quot;as24-cb-cp-1&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input red&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-1&quot;&gt;red&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-2&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input yellow&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-2&quot;&gt;yellow&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input green&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-7&quot;&gt;green&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-8&quot;&gt;gold&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-3&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-3&quot;&gt;blue&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-4&quot;&gt;other&lt;/label&gt;\\n&lt;/div&gt;\\n\""
@@ -174,7 +174,7 @@
         "name": "custom-dropdown-disabled",
         "type": "atoms",
         "group": "custom-dropdown",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"\"",
         "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup disabled>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1\\\">Value1</label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup disabled&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
@@ -183,7 +183,7 @@
         "name": "custom-dropdown-icons-checkbox",
         "type": "atoms",
         "group": "custom-dropdown",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"\\n<custom-dropdown class=\\\"sc-input icon\\\" checkboxgroup>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"cabrio-3\\\">\\n        <label for=\\\"cabrio-3\\\">\\n            <as24-icon type=\\\"bodytypes/roadster\\\"></as24-icon>\\n            <span>\\n                Cabrio\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"coupe-3\\\">\\n        <label for=\\\"coupe-3\\\">\\n            <as24-icon type=\\\"bodytypes/sports\\\"></as24-icon>\\n            <span>\\n                Coupé\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"compact-3\\\">\\n        <label for=\\\"compact-3\\\">\\n            <as24-icon type=\\\"bodytypes/compact\\\"></as24-icon>\\n            <span>\\n                Kleinwagen\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"station-3\\\">\\n        <label for=\\\"station-3\\\">\\n            <as24-icon type=\\\"bodytypes/station\\\"></as24-icon>\\n            <span>\\n                Kombi\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"limousine-3\\\">\\n        <label for=\\\"limousine-3\\\">\\n            <as24-icon type=\\\"bodytypes/limousine\\\"></as24-icon>\\n            <span>\\n                Limousine\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"offroad-3\\\">\\n        <label for=\\\"offroad-3\\\">\\n            <as24-icon type=\\\"bodytypes/offroad\\\"></as24-icon>\\n            <span>\\n                SUV/Geländewagen\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"delivery-3\\\">\\n        <label for=\\\"delivery-3\\\">\\n            <as24-icon type=\\\"bodytypes/delivery\\\"></as24-icon>\\n            <span>\\n                Transporter\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"van-3\\\">\\n        <label for=\\\"van-3\\\">\\n            <as24-icon type=\\\"bodytypes/van\\\"></as24-icon>\\n            <span>\\n                Van\\n            </span>\\n        </label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"\\n&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;cabrio-3&quot;&gt;\\n        &lt;label for=&quot;cabrio-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Cabrio\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;coupe-3&quot;&gt;\\n        &lt;label for=&quot;coupe-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Coup&eacute;\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;compact-3&quot;&gt;\\n        &lt;label for=&quot;compact-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kleinwagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;station-3&quot;&gt;\\n        &lt;label for=&quot;station-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kombi\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;limousine-3&quot;&gt;\\n        &lt;label for=&quot;limousine-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Limousine\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;offroad-3&quot;&gt;\\n        &lt;label for=&quot;offroad-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                SUV/Gel&auml;ndewagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;delivery-3&quot;&gt;\\n        &lt;label for=&quot;delivery-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Transporter\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;van-3&quot;&gt;\\n        &lt;label for=&quot;van-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Van\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
@@ -192,7 +192,7 @@
         "name": "custom-dropdown-icons",
         "type": "atoms",
         "group": "custom-dropdown",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<custom-dropdown class=\\\"sc-input icon\\\" checkboxgroup>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"cabrio\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"cabrio\\\">\\n            <as24-icon type=\\\"bodytypes/roadster\\\"></as24-icon>\\n            <span>\\n                Cabrio\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"coupe\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"coupe\\\">\\n            <as24-icon type=\\\"bodytypes/sports\\\"></as24-icon>\\n            <span>\\n                Coupé\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"compact\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"compact\\\">\\n            <as24-icon type=\\\"bodytypes/compact\\\"></as24-icon>\\n            <span>\\n                Kleinwagen\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"station\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"station\\\">\\n            <as24-icon type=\\\"bodytypes/station\\\"></as24-icon>\\n            <span>\\n                Kombi\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"limousine\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"limousine\\\">\\n            <as24-icon type=\\\"bodytypes/limousine\\\"></as24-icon>\\n            <span>\\n                Limousine\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"offroad\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"offroad\\\">\\n            <as24-icon type=\\\"bodytypes/offroad\\\"></as24-icon>\\n            <span>\\n                SUV/Geländewagen\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"delivery\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"delivery\\\">\\n            <as24-icon type=\\\"bodytypes/delivery\\\"></as24-icon>\\n            <span>\\n                Transporter\\n            </span>\\n        </label>\\n        <inputname=\\\"custom-radio\\\"  type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"van\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"van\\\">\\n            <as24-icon type=\\\"bodytypes/van\\\"></as24-icon>\\n            <span>\\n                Van\\n            </span>\\n        </label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;cabrio&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;cabrio&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Cabrio\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;coupe&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;coupe&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Coup&eacute;\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;compact&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;compact&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kleinwagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;station&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;station&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kombi\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;limousine&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;limousine&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Limousine\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;offroad&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;offroad&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                SUV/Gel&auml;ndewagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;delivery&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;delivery&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Transporter\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;inputname=&quot;custom-radio&quot;  type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;van&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;van&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Van\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
@@ -201,7 +201,7 @@
         "name": "custom-dropdown-simple",
         "type": "atoms",
         "group": "custom-dropdown",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"\"",
         "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup data-test=\\\"custom-dropdown-1\\\">\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1\\\">Value1</label>\\n        <input type=\\\"checkbox\\\" id=\\\"cd2\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd2\\\">Value2</label>\\n        <input type=\\\"checkbox\\\" id=\\\"cd3\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd3\\\">Value3</label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup data-test=&quot;custom-dropdown-1&quot;&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd2&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd2&quot;&gt;Value2&lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd3&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd3&quot;&gt;Value3&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\"",
@@ -211,7 +211,7 @@
         "name": "custom-dropdown",
         "type": "atoms",
         "group": "custom-dropdown",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -220,7 +220,7 @@
         "name": "custom-dropdown-icon",
         "type": "atoms",
         "group": "custom-dropdown-icon",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/custom-dropdown-icon/docs",
+        "srcDir": "src/06-components/atoms/custom-dropdown-icon/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>What should be here?</p>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -229,7 +229,7 @@
         "name": "checkbox",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Should be a separate atom</p>\\n\"",
         "html": "\"<div>\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-1\\\" type=\\\"checkbox\\\" />\\n    <label for=\\\"as24-checkbox-1\\\">Checkbox</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-2\\\" type=\\\"checkbox\\\" disabled />\\n    <label for=\\\"as24-checkbox-2\\\">Checkbox (disabled)</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-1&quot; type=&quot;checkbox&quot; /&gt;\\n    &lt;label for=&quot;as24-checkbox-1&quot;&gt;Checkbox&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-2&quot; type=&quot;checkbox&quot; disabled /&gt;\\n    &lt;label for=&quot;as24-checkbox-2&quot;&gt;Checkbox (disabled)&lt;/label&gt;\\n&lt;/div&gt;\\n\""
@@ -238,7 +238,7 @@
         "name": "default-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;\\n\""
@@ -247,7 +247,7 @@
         "name": "disabled-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input disabled\\\" disabled>\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input disabled&quot; disabled&gt;\\n\""
@@ -256,7 +256,7 @@
         "name": "error-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input error\\\" placeholder=\\\".sc-input error\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input error&quot; placeholder=&quot;.sc-input error&quot;&gt;\\n\""
@@ -265,7 +265,7 @@
         "name": "info-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input info\\\" placeholder=\\\".sc-input info\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input info&quot; placeholder=&quot;.sc-input info&quot;&gt;\\n\""
@@ -274,7 +274,7 @@
         "name": "input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -283,7 +283,7 @@
         "name": "radio-button",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Should be a separate atom</p>\\n\"",
         "html": "\"<div>\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-1\\\" type=\\\"radio\\\" name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-1\\\">Radio 1</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-2\\\" type=\\\"radio\\\" name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-2\\\">Radio 2</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-3\\\" type=\\\"radio\\\" disabled name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-3\\\">Radio 3 (disabled)</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-1&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-1&quot;&gt;Radio 1&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-2&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-2&quot;&gt;Radio 2&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-3&quot; type=&quot;radio&quot; disabled name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-3&quot;&gt;Radio 3 (disabled)&lt;/label&gt;\\n&lt;/div&gt;\\n\""
@@ -292,7 +292,7 @@
         "name": "select-box-disabled",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<select class=\\\"sc-input\\\" disabled placeholder=\\\"sc-input disabled\\\">\\n    ...\\n</select>\\n\"",
         "codeExample": "\"&lt;select class=&quot;sc-input&quot; disabled placeholder=&quot;sc-input disabled&quot;&gt;\\n    ...\\n&lt;/select&gt;\\n\""
@@ -301,7 +301,7 @@
         "name": "select-box",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<select class=\\\"sc-input\\\" placeholder=\\\"sc-input\\\">\\n    <option>...</option>\\n    <option>Value 1</option>\\n    <option>Value 2</option>\\n</select>\\n\"",
         "codeExample": "\"&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;\\n    &lt;option&gt;...&lt;/option&gt;\\n    &lt;option&gt;Value 1&lt;/option&gt;\\n    &lt;option&gt;Value 2&lt;/option&gt;\\n&lt;/select&gt;\\n\""
@@ -310,14 +310,14 @@
         "name": "select-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\""
     },
     "success-input": {
         "name": "success-input",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input success\\\" placeholder=\\\".sc-input success\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input success&quot; placeholder=&quot;.sc-input success&quot;&gt;\\n\""
@@ -326,7 +326,7 @@
         "name": "textarea",
         "type": "atoms",
         "group": "input",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/input/docs",
+        "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<textarea class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">...</textarea>\\n\"",
         "codeExample": "\"&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt;\\n\""
@@ -335,7 +335,7 @@
         "name": "lazy-image",
         "type": "atoms",
         "group": "lazy-image",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/lazy-image/docs",
+        "srcDir": "src/06-components/atoms/lazy-image/docs",
         "markDown": "\"<p>If you want to make you images lazy, you need to add two classes to you img tag: sc-lazy-image and lazyload. Also you need to use data-src instead of src attribute.\\nIn the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>\\n<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<img width=\\\"300\\\" height=\\\"200\\\" data-src=\\\"https://placeimg.com/640/480?1\\\" src=\\\"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==\\\" class=\\\"sc-lazy-image lazyload\\\" alt=\\\"\\\">\\n\"",
         "codeExample": "\"&lt;img width=&quot;300&quot; height=&quot;200&quot; data-src=&quot;https://placeimg.com/640/480?1&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; class=&quot;sc-lazy-image lazyload&quot; alt=&quot;&quot;&gt;\\n\""
@@ -344,7 +344,7 @@
         "name": "lightbox",
         "type": "atoms",
         "group": "lightbox",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/lightbox/docs",
+        "srcDir": "src/06-components/atoms/lightbox/docs",
         "markDown": "\"<p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>\\n<h4 id=\\\"usage-\\\">usage:</h4>\\n<p>in order to use it add following elements to your html:</p>\\n<ol>\\n<li>1) link, button or any other clickable element which has [data-lightbox-trigger] attribute and data-id attribute, that points to the as24-lightbox container to show (lightbox-1 in example). to prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. it&#39;s a valid html5 syntax.</li>\\n<li>2) as24-lightbox container with appropriate id. inside of the container you may paste div with content of your choice.</li>\\n<li>3) div may contain closing elements. to close modal window by clicking on the element add [data-lightbox-close] attribute to it.</li>\\n</ol>\\n<h4 id=\\\"status-\\\">status:</h4>\\n<p class=\\\"status complete\\\">complete</p>\\n\"",
         "html": "\"<a data-id=\\\"lightbox-1\\\" data-lightbox-trigger>Try me</a>\\n<as24-lightbox id=\\\"lightbox-1\\\">\\n    <div>\\n        <h5 class=\\\"sc-lightbox-title\\\">The modal window title</h5><br>\\n        <as24-icon type=\\\"close\\\" class=\\\"sc-lightbox-close\\\" data-lightbox-close></as24-icon>\\n        <label>The input label</label><br>\\n        <input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\"share your thoughts with us\\\">\\n        <button class=\\\"sc-btn-bob sc-btn-block\\\" data-lightbox-close style=\\\"margin-top: 16px;\\\">Button bob</button>\\n    </div> \\n</as24-lightbox>\\n\"",
         "codeExample": "\"&lt;a data-id=&quot;lightbox-1&quot; data-lightbox-trigger&gt;Try me&lt;/a&gt;\\n&lt;as24-lightbox id=&quot;lightbox-1&quot;&gt;\\n    &lt;div&gt;\\n        &lt;h5 class=&quot;sc-lightbox-title&quot;&gt;The modal window title&lt;/h5&gt;&lt;br&gt;\\n        &lt;as24-icon type=&quot;close&quot; class=&quot;sc-lightbox-close&quot; data-lightbox-close&gt;&lt;/as24-icon&gt;\\n        &lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;\\n        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;\\n        &lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close style=&quot;margin-top: 16px;&quot;&gt;Button bob&lt;/button&gt;\\n    &lt;/div&gt; \\n&lt;/as24-lightbox&gt;\\n\""
@@ -353,7 +353,7 @@
         "name": "default-link",
         "type": "atoms",
         "group": "link",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/link/docs",
+        "srcDir": "src/06-components/atoms/link/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n\"",
         "html": "\"<a href=\\\"#group-atoms-component-link\\\">Default link</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot;&gt;Default link&lt;/a&gt;\\n\""
@@ -362,7 +362,7 @@
         "name": "inline-link",
         "type": "atoms",
         "group": "link",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/link/docs",
+        "srcDir": "src/06-components/atoms/link/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n\"",
         "html": "\"<a href=\\\"#group-atoms-component-link\\\" class=\\\"sc-inline-link\\\">Inline link</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;\\n\""
@@ -371,7 +371,7 @@
         "name": "link",
         "type": "atoms",
         "group": "link",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/link/docs",
+        "srcDir": "src/06-components/atoms/link/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -380,7 +380,7 @@
         "name": "rotating-arrow",
         "type": "atoms",
         "group": "rotating-arrow",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/rotating-arrow/docs",
+        "srcDir": "src/06-components/atoms/rotating-arrow/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<div id=\\\"myId\\\">\\n    Look at the arrow right of me! <span data-toggle=\\\"arrow\\\" data-target=\\\"#myId\\\"></span>\\n</div>\\n\"",
         "codeExample": "\"&lt;div id=&quot;myId&quot;&gt;\\n    Look at the arrow right of me! &lt;span data-toggle=&quot;arrow&quot; data-target=&quot;#myId&quot;&gt;&lt;/span&gt;\\n&lt;/div&gt;\\n\""
@@ -389,7 +389,7 @@
         "name": "spinner",
         "type": "atoms",
         "group": "spinner",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/spinner/docs",
+        "srcDir": "src/06-components/atoms/spinner/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\\n<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>\\n\"",
         "html": "\"<div class=\\\"sc-absolute-center example-background\\\">\\n  <div class=\\\"sc-spinner-loading\\\"></div>\\n  <div class=\\\"sc-spinner-loading orange\\\"></div>\\n  <div class=\\\"sc-spinner-loading grey\\\"></div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-absolute-center example-background&quot;&gt;\\n  &lt;div class=&quot;sc-spinner-loading&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading orange&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading grey&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -398,7 +398,7 @@
         "name": "stepper",
         "type": "atoms",
         "group": "stepper",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/stepper/docs",
+        "srcDir": "src/06-components/atoms/stepper/docs",
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<div class=\\\"sc-stepper\\\">\\n    <button class=\\\"sc-stepper-button sc-stepper-button-decrement\\\">-</button>\\n    <input type=\\\"number\\\" value=\\\"0\\\" class=\\\"sc-stepper-input\\\" min=\\\"0\\\" max=\\\"10\\\" step=\\\"1\\\"/>\\n    <button class=\\\"sc-stepper-button sc-stepper-button-increment\\\">+</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-stepper&quot;&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;\\n    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -407,7 +407,7 @@
         "name": "tooltip",
         "type": "atoms",
         "group": "tooltip",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/tooltip/docs",
+        "srcDir": "src/06-components/atoms/tooltip/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-icon type=\\\"info\\\" title='More information' style='width: 16px;'></as24-icon>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-icon type=&quot;info&quot; title=&apos;More information&apos; style=&apos;width: 16px;&apos;&gt;&lt;/as24-icon&gt;\\n&lt;/label&gt;\\n\""
@@ -416,7 +416,7 @@
         "name": "tooltip-2",
         "type": "atoms",
         "group": "tooltip-2",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/tooltip-2/docs",
+        "srcDir": "src/06-components/atoms/tooltip-2/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-tooltip class=\\\"sc-tooltip\\\">\\n        <as24-icon type=\\\"info\\\" style=\\\"width: 16px;\\\"></as24-icon>\\n        <div class=\\\"sc-tooltip-content\\\">Information in tooltip <a href=\\\"/\\\">link</a></div>\\n    </as24-tooltip>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;\\n        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;\\n        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;\\n    &lt;/as24-tooltip&gt;\\n&lt;/label&gt;\\n\""
@@ -425,7 +425,7 @@
         "name": "breadcrumb",
         "type": "molecules",
         "group": "breadcrumb",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/breadcrumb/docs",
+        "srcDir": "src/06-components/molecules/breadcrumb/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<ul class=\\\"sc-breadcrumbs\\\">\\n    <li><a href=\\\"#/url/to/home\\\" data-breadcrumb=\\\"home\\\">Home page</a></li>\\n    <li><a href=\\\"#/url/to/list\\\" data-breadcrumb=\\\"list\\\">List results</a></li>\\n    <li><a href=\\\"#/url/to/detail\\\" data-breadcrumb=\\\"detail\\\">Detail</a></li>\\n</ul>\\n\"",
         "codeExample": "\"&lt;ul class=&quot;sc-breadcrumbs&quot;&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;\\n&lt;/ul&gt;\\n\""
@@ -434,7 +434,7 @@
         "name": "card",
         "type": "molecules",
         "group": "card",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/card/docs",
+        "srcDir": "src/06-components/molecules/card/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<div class=\\\"sc-card\\\">\\n    <div class=\\\"sc-card__media\\\">\\n        <img src=\\\"https://placehold.it/170x130?text=170x130\\\">\\n    </div>\\n    <div class=\\\"sc-card__content sc-text-center\\\">\\n        <a href=\\\"#\\\">Show more</a>\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-card&quot;&gt;\\n    &lt;div class=&quot;sc-card__media&quot;&gt;\\n        &lt;img src=&quot;https://placehold.it/170x130?text=170x130&quot;&gt;\\n    &lt;/div&gt;\\n    &lt;div class=&quot;sc-card__content sc-text-center&quot;&gt;\\n        &lt;a href=&quot;#&quot;&gt;Show more&lt;/a&gt;\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -443,7 +443,7 @@
         "name": "expandable-box-adaptive",
         "type": "molecules",
         "group": "expandable-box",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/expandable-box/docs",
+        "srcDir": "src/06-components/molecules/expandable-box/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs explaination</p>\\n\"",
         "html": "\"<div class=\\\"sc-expandable-box sc-expandable-box--adaptive\\\">\\n    <input id=\\\"exb3\\\" type=\\\"checkbox\\\" class=\\\"sc-expandable-box__toggle\\\">\\n    <h3 class=\\\"sc-font sc-expandable-box__title\\\"><label for=\\\"exb3\\\" class=\\\"sc-expandable-box__label\\\">Look ma, I am expandalbe!</label></h3>\\n    <div class=\\\"sc-expandable-box__content\\\">\\n        Hello Kitty!\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;\\n    &lt;input id=&quot;exb3&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;\\n    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb3&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandalbe!&lt;/label&gt;&lt;/h3&gt;\\n    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;\\n        Hello Kitty!\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -452,7 +452,7 @@
         "name": "expandable-box",
         "type": "molecules",
         "group": "expandable-box",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/expandable-box/docs",
+        "srcDir": "src/06-components/molecules/expandable-box/docs",
         "markDown": "\"<p>This component is CSS-only implementation. Thus, you have to follow the markup structure. In other words, it is important to keep class structure like it is shown in the examples.\\nNote: You can spot H3 and H5 tags being used here. You can use any element according to the requirements as long as you have &quot;.sc-expandable-box__title&quot; class in place.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<div class=\\\"sc-expandable-box\\\">\\n    <input id=\\\"exb1\\\" type=\\\"checkbox\\\" class=\\\"sc-expandable-box__toggle\\\">\\n    <h3 class=\\\"sc-font sc-expandable-box__title\\\"><label for=\\\"exb1\\\" class=\\\"sc-expandable-box__label\\\">Look ma, I am expandalbe!</label></h3>\\n    <div class=\\\"sc-expandable-box__content\\\">\\n        Hello Kitty!\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-expandable-box&quot;&gt;\\n    &lt;input id=&quot;exb1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;\\n    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb1&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandalbe!&lt;/label&gt;&lt;/h3&gt;\\n    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;\\n        Hello Kitty!\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -461,7 +461,7 @@
         "name": "input-group-radio",
         "type": "molecules",
         "group": "input-group",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/input-group/docs",
+        "srcDir": "src/06-components/molecules/input-group/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<div class=\\\"sc-input-group-radio\\\">\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-7\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\">\\n    <label for=\\\"as24-radio-7\\\">Option 1</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-8\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\" checked=\\\"\\\">\\n    <label for=\\\"as24-radio-8\\\">Option 2</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-9\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\">\\n    <label for=\\\"as24-radio-9\\\">Option 3</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-input-group-radio&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-7&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;\\n    &lt;label for=&quot;as24-radio-7&quot;&gt;Option 1&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-8&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot; checked=&quot;&quot;&gt;\\n    &lt;label for=&quot;as24-radio-8&quot;&gt;Option 2&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-9&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;\\n    &lt;label for=&quot;as24-radio-9&quot;&gt;Option 3&lt;/label&gt;\\n&lt;/div&gt;\\n\""
@@ -470,7 +470,7 @@
         "name": "input-group",
         "type": "molecules",
         "group": "input-group",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/input-group/docs",
+        "srcDir": "src/06-components/molecules/input-group/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<div class=\\\"sc-input-group\\\">\\n    <input class=\\\"sc-input\\\" type=\\\"text\\\" placeholder=\\\"Text input 1\\\">\\n    <input class=\\\"sc-input\\\" type=\\\"text\\\" placeholder=\\\"Text input 2\\\">\\n    <button class=\\\"sc-btn-bob\\\">Submit</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-input-group&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 1&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 2&quot;&gt;\\n    &lt;button class=&quot;sc-btn-bob&quot;&gt;Submit&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -479,7 +479,7 @@
         "name": "notification-closeable",
         "type": "molecules",
         "group": "notification",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/notification/docs",
+        "srcDir": "src/06-components/molecules/notification/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<as24-notification type=\\\"success\\\" id=\\\"succ2\\\" target=\\\"#example-notification-target\\\" title=\\\"Success with close button\\\" close=\\\"true\\\">\\n    Success!\\n</as24-notification>\\n<as24-notification type=\\\"information\\\" id=\\\"info2\\\" target=\\\"#example-notification-target\\\" title=\\\"Information for you, but without body text\\\" close=\\\"true\\\">\\n    Close me, please.\\n</as24-notification>\\n<as24-notification type=\\\"error\\\" id=\\\"error2\\\" target=\\\"#example-notification-target\\\" title=\\\"Error occurred\\\" close=\\\"true\\\">\\n    Error here...\\n</as24-notification>\\n\\n<div class=\\\"sc-text-center\\\">\\n    <button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"succ2\\\">Show success note with cross</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"info2\\\">Toggle info note with cross</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"error2\\\">Toggle error note with cross</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;success&quot; id=&quot;succ2&quot; target=&quot;#example-notification-target&quot; title=&quot;Success with close button&quot; close=&quot;true&quot;&gt;\\n    Success!\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;information&quot; id=&quot;info2&quot; target=&quot;#example-notification-target&quot; title=&quot;Information for you, but without body text&quot; close=&quot;true&quot;&gt;\\n    Close me, please.\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;error&quot; id=&quot;error2&quot; target=&quot;#example-notification-target&quot; title=&quot;Error occurred&quot; close=&quot;true&quot;&gt;\\n    Error here...\\n&lt;/as24-notification&gt;\\n\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ2&quot;&gt;Show success note with cross&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info2&quot;&gt;Toggle info note with cross&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error2&quot;&gt;Toggle error note with cross&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -488,7 +488,7 @@
         "name": "notification-timeout",
         "type": "molecules",
         "group": "notification",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/notification/docs",
+        "srcDir": "src/06-components/molecules/notification/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<as24-notification type=\\\"success\\\" id=\\\"succ1\\\" target=\\\"#example-notification-target\\\" title=\\\"Vehicle is added to watchlist.\\\" timeout=\\\"2500\\\">\\n    Success!\\n</as24-notification>\\n<as24-notification type=\\\"information\\\" id=\\\"info1\\\" target=\\\"#example-notification-target\\\" title=\\\"Information for you\\\" timeout=\\\"2500\\\">\\n    Usefull info.\\n</as24-notification>\\n<as24-notification type=\\\"error\\\" id=\\\"error1\\\" target=\\\"#example-notification-target\\\" title=\\\"Error occurred\\\" timeout=\\\"2500\\\">\\n    Error here...\\n</as24-notification>\\n\\n<div class=\\\"sc-text-center\\\">\\n\\t<button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"succ1\\\">Show success note (timeout)</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"info1\\\">Show info note (timeout)</button>&nbsp;\\n\\t<button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"error1\\\">Show error note (timeout)</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;success&quot; id=&quot;succ1&quot; target=&quot;#example-notification-target&quot; title=&quot;Vehicle is added to watchlist.&quot; timeout=&quot;2500&quot;&gt;\\n    Success!\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;information&quot; id=&quot;info1&quot; target=&quot;#example-notification-target&quot; title=&quot;Information for you&quot; timeout=&quot;2500&quot;&gt;\\n    Usefull info.\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;error&quot; id=&quot;error1&quot; target=&quot;#example-notification-target&quot; title=&quot;Error occurred&quot; timeout=&quot;2500&quot;&gt;\\n    Error here...\\n&lt;/as24-notification&gt;\\n\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n&Tab;&lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ1&quot;&gt;Show success note (timeout)&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info1&quot;&gt;Show info note (timeout)&lt;/button&gt;&amp;nbsp;\\n&Tab;&lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error1&quot;&gt;Show error note (timeout)&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -497,7 +497,7 @@
         "name": "notification-tip",
         "type": "molecules",
         "group": "notification",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/notification/docs",
+        "srcDir": "src/06-components/molecules/notification/docs",
         "markDown": "\"<div class=\\\"sc-content-container example-notification-target example-size-s\\\" id=\\\"example-notification-target-s\\\">\\n    Tip Notification Target container\\n</div>\\n\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<as24-notification type=\\\"tip\\\" id=\\\"tip1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Small Tip for you\\\" close=\\\"true\\\">\\n    Tip tip hurra...\\n</as24-notification>\\n<div class=\\\"sc-text-center\\\">\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"tip1\\\">Show small tip notification</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;tip&quot; id=&quot;tip1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Small Tip for you&quot; close=&quot;true&quot;&gt;\\n    Tip tip hurra...\\n&lt;/as24-notification&gt;\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show small tip notification&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -506,7 +506,7 @@
         "name": "notification",
         "type": "molecules",
         "group": "notification",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/notification/docs",
+        "srcDir": "src/06-components/molecules/notification/docs",
         "markDown": "\"<div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target\\\">\\n    Notification Target container\\n</div>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -515,7 +515,7 @@
         "name": "navigation",
         "type": "organisms",
         "group": "navigation",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/organisms/navigation/docs",
+        "srcDir": "src/06-components/organisms/navigation/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring!</p>\\n\"",
         "html": "\"<div class=\\\"sc-navigation\\\">\\n    <div class=\\\"bar\\\">\\n        <button class=\\\"sc-btn-mobile-menu\\\"><span></span>Menu</button>\\n        <a href=\\\"https://www.autoscout24.de\\\" class=\\\"icon-auto24\\\"><as24-icon type=\\\"auto24\\\"><svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 74 35\\\"><path fill=\\\"#003468\\\" d=\\\"M0 0v17h74V0H0z\\\"></path><path d=\\\"M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z\\\" fill=\\\"#ff7500\\\"></path><g fill=\\\"#003468\\\"><path d=\\\"M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z\\\"></path></g><path d=\\\"M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z\\\" fill=\\\"#fff\\\"></path></svg></as24-icon></a>\\n    </div>\\n    <nav>\\n        <ul>\\n            <li>\\n                <span class=\\\"title\\\" tabindex=\\\"1\\\">Menu 1</span>\\n                <ul>\\n                    <li><a href=\\\"http://google.de/\\\" target=\\\"_blank\\\">Menu 1 Link to Google</a></li>\\n                    <li><a href=\\\"http://microsoft.de/\\\">Menu 1 Link to Microsoft</a></li>\\n                    <li><a href=\\\"http://apple.com/de\\\">Menu 1 Link to Apple</a></li>\\n                </ul>\\n            </li>\\n\\n            <li>\\n                <span class=\\\"title\\\" tabindex=\\\"2\\\">Menu 2</span>\\n                <ul>\\n                    <li><a href=\\\"#navigation\\\">Menu 2 Link 1</a></li>\\n                    <li><a href=\\\"#navigation\\\">Menu 2 Link 2</a></li>\\n                    <li><a href=\\\"#navigation\\\">Menu 2 Link 3</a></li>\\n                </ul>\\n            </li>\\n\\n            <li>\\n                <span class=\\\"title\\\" tabindex=\\\"3\\\">Menu 3</span>\\n                <ul class=\\\"submenu\\\">\\n                    <li>\\n                        <ul>\\n                            <li class=\\\"subheadline\\\">Submenu 1</li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 1 Link 1</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 1 Link 2</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 1 Link 3</a></li>\\n                        </ul>\\n                    </li>\\n                    <li>\\n                        <ul>\\n                            <li class=\\\"subheadline\\\">Submenu 2</li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 2 Link 1</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 2 Link 2</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 2 Link 3</a></li>\\n                        </ul>\\n                    </li>\\n                    <li>\\n                        <ul>\\n                            <li class=\\\"subheadline\\\">Submenu 3</li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 3 Link 1</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 3 Link 2</a></li>\\n                            <li><a href=\\\"#navigation\\\">Submenu 3 Link 3</a></li>\\n                        </ul>\\n                    </li>\\n                </ul>\\n            </li>\\n        </ul>\\n\\n        <hr>\\n\\n        <ul class=\\\"right\\\">\\n            <li>\\n                <span class=\\\"title\\\" tabindex=\\\"4\\\">My Menu</span>\\n                <ul>\\n                    <li><a href=\\\"#navigation\\\">My Menu Link 1</a></li>\\n                    <li>\\n                        <button class=\\\"sc-btn-ross sc-btn-block\\\">Login</button>\\n                    </li>\\n                </ul>\\n            </li>\\n        </ul>\\n    </nav>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-navigation&quot;&gt;\\n    &lt;div class=&quot;bar&quot;&gt;\\n        &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;\\n        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;&lt;as24-icon type=&quot;auto24&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 74 35&quot;&gt;&lt;path fill=&quot;#003468&quot; d=&quot;M0 0v17h74V0H0z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z&quot; fill=&quot;#ff7500&quot;&gt;&lt;/path&gt;&lt;g fill=&quot;#003468&quot;&gt;&lt;path d=&quot;M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;path d=&quot;M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z&quot; fill=&quot;#fff&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/as24-icon&gt;&lt;/a&gt;\\n    &lt;/div&gt;\\n    &lt;nav&gt;\\n        &lt;ul&gt;\\n            &lt;li&gt;\\n                &lt;span class=&quot;title&quot; tabindex=&quot;1&quot;&gt;Menu 1&lt;/span&gt;\\n                &lt;ul&gt;\\n                    &lt;li&gt;&lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Menu 1 Link to Google&lt;/a&gt;&lt;/li&gt;\\n                    &lt;li&gt;&lt;a href=&quot;http://microsoft.de/&quot;&gt;Menu 1 Link to Microsoft&lt;/a&gt;&lt;/li&gt;\\n                    &lt;li&gt;&lt;a href=&quot;http://apple.com/de&quot;&gt;Menu 1 Link to Apple&lt;/a&gt;&lt;/li&gt;\\n                &lt;/ul&gt;\\n            &lt;/li&gt;\\n\\n            &lt;li&gt;\\n                &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Menu 2&lt;/span&gt;\\n                &lt;ul&gt;\\n                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 1&lt;/a&gt;&lt;/li&gt;\\n                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 2&lt;/a&gt;&lt;/li&gt;\\n                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Menu 2 Link 3&lt;/a&gt;&lt;/li&gt;\\n                &lt;/ul&gt;\\n            &lt;/li&gt;\\n\\n            &lt;li&gt;\\n                &lt;span class=&quot;title&quot; tabindex=&quot;3&quot;&gt;Menu 3&lt;/span&gt;\\n                &lt;ul class=&quot;submenu&quot;&gt;\\n                    &lt;li&gt;\\n                        &lt;ul&gt;\\n                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 1&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;\\n                        &lt;/ul&gt;\\n                    &lt;/li&gt;\\n                    &lt;li&gt;\\n                        &lt;ul&gt;\\n                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 2&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 1&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 2&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 2 Link 3&lt;/a&gt;&lt;/li&gt;\\n                        &lt;/ul&gt;\\n                    &lt;/li&gt;\\n                    &lt;li&gt;\\n                        &lt;ul&gt;\\n                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 3&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 1&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 2&lt;/a&gt;&lt;/li&gt;\\n                            &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Submenu 3 Link 3&lt;/a&gt;&lt;/li&gt;\\n                        &lt;/ul&gt;\\n                    &lt;/li&gt;\\n                &lt;/ul&gt;\\n            &lt;/li&gt;\\n        &lt;/ul&gt;\\n\\n        &lt;hr&gt;\\n\\n        &lt;ul class=&quot;right&quot;&gt;\\n            &lt;li&gt;\\n                &lt;span class=&quot;title&quot; tabindex=&quot;4&quot;&gt;My Menu&lt;/span&gt;\\n                &lt;ul&gt;\\n                    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;My Menu Link 1&lt;/a&gt;&lt;/li&gt;\\n                    &lt;li&gt;\\n                        &lt;button class=&quot;sc-btn-ross sc-btn-block&quot;&gt;Login&lt;/button&gt;\\n                    &lt;/li&gt;\\n                &lt;/ul&gt;\\n            &lt;/li&gt;\\n        &lt;/ul&gt;\\n    &lt;/nav&gt;\\n&lt;/div&gt;\\n\""
@@ -524,7 +524,7 @@
         "name": "pagination",
         "type": "organisms",
         "group": "pagination",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/organisms/pagination/docs",
+        "srcDir": "src/06-components/organisms/pagination/docs",
         "markDown": "\"<p>If you want to use the pagination component, you just need to add the ul element with the .sc-pagination class as shown below and the corresponding javascript snippet.\\nYou need following properties to instantiate the &quot;Pager&quot;:\\nthe name of the &quot;root&quot; element (in fact you can use document.querySelector(&#39;.sc-pagination&#39;) to obtain the right element)\\nnumber of items per page (itemsPerPage)\\nthe currently active page (activePage)\\ntotal number of items (totalCount)\\nthe url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.\\nThe {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<ul class=\\\"sc-pagination\\\">\\n    <li class=\\\"previous-page\\\">\\n        <a class=\\\"disabled\\\">\\n            <as24-icon type=\\\"arrow\\\">\\n                <svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 13 7\\\">\\n                    <path fill-rule=\\\"evenodd\\\" clip-rule=\\\"evenodd\\\" d=\\\"M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z\\\"></path>\\n                </svg>\\n            </as24-icon>\\n            Previous\\n        </a>\\n    </li>\\n    <li data-page=\\\"1\\\"><a href=\\\"#\\\" class=\\\"active\\\">1</a></li>\\n    <li data-page=\\\"2\\\"><a href=\\\"#\\\">2</a></li>\\n    <li data-page=\\\"3\\\"><a href=\\\"#\\\">3</a></li>\\n    <li data-page=\\\"4\\\"><a href=\\\"#\\\">4</a></li>\\n    <li data-page=\\\"5\\\"><a href=\\\"#\\\">5</a></li>\\n    <li data-page=\\\"6\\\"><a href=\\\"#\\\">6</a></li>\\n    <li data-page=\\\"7\\\"><a href=\\\"#\\\">7</a></li>\\n    <li data-page=\\\"8\\\"><a href=\\\"#\\\">8</a></li>\\n    <li data-page=\\\"9\\\"><a href=\\\"#\\\">9</a></li>\\n    <li data-page=\\\"etc\\\"><a href=\\\"#\\\" class=\\\"disabled\\\">...</a></li>\\n    <li data-page=\\\"20\\\"><a href=\\\"#\\\">20</a></li>\\n    <li class=\\\"next-page\\\">\\n        <a href=\\\"http://www.autoscout24.com/listWithPagination?page=2&amp;size=20\\\">Next\\n            <as24-icon type=\\\"arrow\\\">\\n                <svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 13 7\\\">\\n                    <path fill-rule=\\\"evenodd\\\" clip-rule=\\\"evenodd\\\" d=\\\"M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z\\\"></path>\\n                </svg>\\n            </as24-icon>\\n        </a>\\n    </li>\\n</ul>\\n\"",
         "codeExample": "\"&lt;ul class=&quot;sc-pagination&quot;&gt;\\n    &lt;li class=&quot;previous-page&quot;&gt;\\n        &lt;a class=&quot;disabled&quot;&gt;\\n            &lt;as24-icon type=&quot;arrow&quot;&gt;\\n                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 13 7&quot;&gt;\\n                    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z&quot;&gt;&lt;/path&gt;\\n                &lt;/svg&gt;\\n            &lt;/as24-icon&gt;\\n            Previous\\n        &lt;/a&gt;\\n    &lt;/li&gt;\\n    &lt;li data-page=&quot;1&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;1&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;2&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;3&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;4&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;5&quot;&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;6&quot;&gt;&lt;a href=&quot;#&quot;&gt;6&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;7&quot;&gt;&lt;a href=&quot;#&quot;&gt;7&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;8&quot;&gt;&lt;a href=&quot;#&quot;&gt;8&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;9&quot;&gt;&lt;a href=&quot;#&quot;&gt;9&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;etc&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;...&lt;/a&gt;&lt;/li&gt;\\n    &lt;li data-page=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;20&lt;/a&gt;&lt;/li&gt;\\n    &lt;li class=&quot;next-page&quot;&gt;\\n        &lt;a href=&quot;http://www.autoscout24.com/listWithPagination?page=2&amp;amp;size=20&quot;&gt;Next\\n            &lt;as24-icon type=&quot;arrow&quot;&gt;\\n                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 13 7&quot;&gt;\\n                    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M6.5 7L0 .5.5 0l6 6 5.9-6 .6.5z&quot;&gt;&lt;/path&gt;\\n                &lt;/svg&gt;\\n            &lt;/as24-icon&gt;\\n        &lt;/a&gt;\\n    &lt;/li&gt;\\n&lt;/ul&gt;\\n\"",
@@ -534,7 +534,7 @@
         "name": "spy-navigation",
         "type": "organisms",
         "group": "spy-navigation",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/06-components/organisms/spy-navigation/docs",
+        "srcDir": "src/06-components/organisms/spy-navigation/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<div id=\\\"page-subnav-stick\\\"></div>\\n<div class=\\\"sc-spy-navigation\\\" data-stick-when=\\\"#page-subnav-stick\\\">\\n    <div class=\\\"sc-grid-row\\\">\\n        <div class=\\\"sc-grid-col-12\\\">\\n            Any content here...\\n            <div class=\\\"sc-spy-navigation__wrapper\\\">\\n                <nav class=\\\"sc-spy-navigation__links\\\">\\n                    <a class=\\\"sc-spy-navigation__link sc-spy-navigation__link--active\\\" href=\\\"#\\\" data-href=\\\"section-1\\\">Section 1</a>\\n                    <a class=\\\"sc-spy-navigation__link\\\" href=\\\"#\\\" data-href=\\\"section-2\\\">Section 2</a>\\n                    <a class=\\\"sc-spy-navigation__link\\\" href=\\\"#\\\" data-href=\\\"section-3\\\">Section 3</a>\\n                    <a class=\\\"sc-spy-navigation__link\\\" href=\\\"#\\\" data-href=\\\"section-4\\\">Section 4</a>\\n                </nav>\\n                <div class=\\\"sc-spy-navigation__toggle\\\"></div>\\n            </div>\\n        </div>\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div id=&quot;page-subnav-stick&quot;&gt;&lt;/div&gt;\\n&lt;div class=&quot;sc-spy-navigation&quot; data-stick-when=&quot;#page-subnav-stick&quot;&gt;\\n    &lt;div class=&quot;sc-grid-row&quot;&gt;\\n        &lt;div class=&quot;sc-grid-col-12&quot;&gt;\\n            Any content here...\\n            &lt;div class=&quot;sc-spy-navigation__wrapper&quot;&gt;\\n                &lt;nav class=&quot;sc-spy-navigation__links&quot;&gt;\\n                    &lt;a class=&quot;sc-spy-navigation__link sc-spy-navigation__link--active&quot; href=&quot;#&quot; data-href=&quot;section-1&quot;&gt;Section 1&lt;/a&gt;\\n                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-2&quot;&gt;Section 2&lt;/a&gt;\\n                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-3&quot;&gt;Section 3&lt;/a&gt;\\n                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-4&quot;&gt;Section 4&lt;/a&gt;\\n                &lt;/nav&gt;\\n                &lt;div class=&quot;sc-spy-navigation__toggle&quot;&gt;&lt;/div&gt;\\n            &lt;/div&gt;\\n        &lt;/div&gt;\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\"",
@@ -544,7 +544,7 @@
         "name": "content-container",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use <code>sc-content-container</code> class on your page once!</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\\n<table class=\\\"docs-table\\\">\\n    <thead>\\n    <tr>\\n        <th>viewport</th>\\n        <th>container width</th>\\n        <th>container alignment</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td>&lt; 1100px</td>\\n        <td>100%</td>\\n        <td></td>\\n    </tr>\\n    <tr>\\n        <td>&gt;= 1100px, &lt;1440px</td>\\n        <td>1100px</td>\\n        <td>center</td>\\n    </tr>\\n    <tr>\\n        <td>&gt;= 1440px</td>\\n        <td>1100px</td>\\n        <td>center</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\"",
         "html": "\"<div class=\\\"sc-content-container\\\">...and one div to wrap them all</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-content-container&quot;&gt;...and one div to wrap them all&lt;/div&gt;\\n\""
@@ -553,7 +553,7 @@
         "name": "grid",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\\n<div class=\\\"example-grid\\\">\\n    <div class=\\\"sc-content-container\\\">\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-12\\\">\\n                .sc-grid-col-12\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-6\\\">\\n                .sc-grid-col-6\\n            </div>\\n            <div class=\\\"sc-grid-col-6\\\">\\n                .sc-grid-col-6\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-4\\\">\\n                .sc-grid-col-4\\n            </div>\\n            <div class=\\\"sc-grid-col-4\\\">\\n                .sc-grid-col-4\\n            </div>\\n            <div class=\\\"sc-grid-col-4\\\">\\n                .sc-grid-col-4\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n            <div class=\\\"sc-grid-col-2\\\">\\n                .sc-grid-col-2\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n            <div class=\\\"sc-grid-col-1\\\">\\n                .sc-grid-col-1\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-8\\\">\\n                .sc-grid-col-8\\n            </div>\\n            <div class=\\\"sc-grid-col-4\\\">\\n                .sc-grid-col-4\\n            </div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n            <div class=\\\"sc-grid-col-6\\\">\\n                .sc-grid-col-6\\n            </div>\\n            <div class=\\\"sc-grid-col-3\\\">\\n                .sc-grid-col-3\\n            </div>\\n        </div>\\n    </div>\\n</div>\\n\"",
         "html": "\"<div class=\\\"example-grid\\\">\\n    <div class=\\\"sc-content-container\\\">\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-6\\\">.sc-grid-col-6</div>\\n            <div class=\\\"sc-grid-col-6\\\">.sc-grid-col-6</div>\\n        </div>\\n        <div class=\\\"sc-grid-row\\\">\\n            <div class=\\\"sc-grid-col-3\\\">.sc-grid-col-3</div>\\n            <div class=\\\"sc-grid-col-3\\\">.sc-grid-col-3</div>\\n            <div class=\\\"sc-grid-col-3\\\">.sc-grid-col-3</div>\\n            <div class=\\\"sc-grid-col-3\\\">.sc-grid-col-3</div>\\n        </div>\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;example-grid&quot;&gt;\\n    &lt;div class=&quot;sc-content-container&quot;&gt;\\n        &lt;div class=&quot;sc-grid-row&quot;&gt;\\n            &lt;div class=&quot;sc-grid-col-6&quot;&gt;.sc-grid-col-6&lt;/div&gt;\\n            &lt;div class=&quot;sc-grid-col-6&quot;&gt;.sc-grid-col-6&lt;/div&gt;\\n        &lt;/div&gt;\\n        &lt;div class=&quot;sc-grid-row&quot;&gt;\\n            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;\\n            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;\\n            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;\\n            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;\\n        &lt;/div&gt;\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -562,7 +562,7 @@
         "name": "layout",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -571,7 +571,7 @@
         "name": "responsive-grid",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\\n<table class=\\\"docs-table\\\">\\n    <thead>\\n    <tr>\\n        <th>Grid column classes</th>\\n        <th>device<br>min-width</th>\\n        <th>device<br>max-width</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td><code>.sc-grid-col-*</code><br>(default)</td>\\n        <td></td>\\n        <td></td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-grid-col-xl-*</code></td>\\n        <td>1100px</td>\\n        <td>∞</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-grid-col-l-*</code></td>\\n        <td></td>\\n        <td>1099px</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-grid-col-m-*</code></td>\\n        <td></td>\\n        <td>1023px</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-grid-col-s-*</code></td>\\n        <td></td>\\n        <td>767px</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-grid-col-xs-*</code></td>\\n        <td></td>\\n        <td>320px</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\\n<p>With the responsive grid column classes, you are able, to set the column width in dependency to the viewport. For Example if you define a grid with the classes <code>sc-grid-col-4 sc-grid-col-m-6 sc-grid-col-s-12</code> it will be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns wide in devices with S-Viewport.<br>You can simply check the behavior of the grid by resizing the current page.</p>\\n\"",
         "html": "\"<div class=\\\"example-grid\\\">\\n    <div class=\\\"sc-grid-row\\\">\\n        <div class=\\\"sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3\\\">\\n            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3\\n        </div>\\n        <div class=\\\"sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3\\\">\\n            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        </div>\\n        <div class=\\\"sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3\\\">\\n            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        </div>\\n        <div class=\\\"sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3\\\">\\n            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        </div>\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;example-grid&quot;&gt;\\n    &lt;div class=&quot;sc-grid-row&quot;&gt;\\n        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3&quot;&gt;\\n            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3\\n        &lt;/div&gt;\\n        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;\\n            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        &lt;/div&gt;\\n        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;\\n            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        &lt;/div&gt;\\n        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;\\n            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3\\n        &lt;/div&gt;\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -580,7 +580,7 @@
         "name": "responsive-images-picture",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>Art direction - cropping the image differently on diffrent. E.g. hero image that contains text and providing a smaller version of the image won’t work because the text will be unreadable.<br>Use <code>&lt;picture&gt;</code> tag.<br>Also see demo <a href=\\\"https://scottjehl.github.io/picturefill/examples/demo-02.html\\\">here</a></p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<picture>\\n    <source srcset=\\\"https://placehold.it/468x150\\\" media=\\\"(max-width: 468px)\\\">\\n    <source srcset=\\\"https://placehold.it/780x150\\\" media=\\\"(max-width: 780px)\\\">\\n    <source srcset=\\\"https://placehold.it/1024x150\\\" media=\\\"(max-width: 1024px)\\\">\\n    <source srcset=\\\"https://placehold.it/1400x150\\\">\\n    <img srcset=\\\"https://placehold.it/1400x150\\\" alt=\\\"My default image\\\">\\n</picture>\\n\"",
         "codeExample": "\"&lt;picture&gt;\\n    &lt;source srcset=&quot;https://placehold.it/468x150&quot; media=&quot;(max-width: 468px)&quot;&gt;\\n    &lt;source srcset=&quot;https://placehold.it/780x150&quot; media=&quot;(max-width: 780px)&quot;&gt;\\n    &lt;source srcset=&quot;https://placehold.it/1024x150&quot; media=&quot;(max-width: 1024px)&quot;&gt;\\n    &lt;source srcset=&quot;https://placehold.it/1400x150&quot;&gt;\\n    &lt;img srcset=&quot;https://placehold.it/1400x150&quot; alt=&quot;My default image&quot;&gt;\\n&lt;/picture&gt;\\n\""
@@ -589,7 +589,7 @@
         "name": "responsive-images-srcset",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>In the resolution switching use case, when you need to select a different source of the same image because you need a different resolution.<br>Use srcset attribute on the <img>.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\\n<p>The height and width of the image should remain fixed.</p>\\n<pre><code class=\\\"lang-html\\\">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;\\n</code></pre>\\n<p>Сustom height and width of the image based on the viewport.</p>\\n<pre><code class=\\\"lang-html\\\">&lt;img src=&quot;images/space-needle.jpg&quot; sizes=&quot;(max-width: 40em) 100vw, 50vw&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;\\n</code></pre>\\n<p>Also see demo page <a href=\\\"https://scottjehl.github.io/picturefill/examples/demo-01.html\\\">here</a></p>\\n\"",
         "html": "\"<img src=\\\"https://placehold.it/468x150\\\" sizes=\\\"(max-width: 40em) 100vw, 50vw\\\" srcset=\\\"https://placehold.it/468x150/FFE494 468w, https://placehold.it/780x150/e494ff 780w, https://placehold.it/1024x150/94FFE4 1024w\\\">\\n\"",
         "codeExample": "\"&lt;img src=&quot;https://placehold.it/468x150&quot; sizes=&quot;(max-width: 40em) 100vw, 50vw&quot; srcset=&quot;https://placehold.it/468x150/FFE494 468w, https://placehold.it/780x150/e494ff 780w, https://placehold.it/1024x150/94FFE4 1024w&quot;&gt;\\n\""
@@ -598,7 +598,7 @@
         "name": "sticky",
         "type": "utilities",
         "group": "layout",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs",
+        "srcDir": "src/05-layout/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review. Check example centring</p>\\n\"",
         "html": "\"<div data-sticky-undock=\\\"myBtn\\\"></div>\\n<div class=\\\"spacer\\\">\\n    Sticky Spacer\\n</div>\\n<div data-sticky-dock=\\\"myBtn\\\"></div>\\n<div data-sticky=\\\"myBtn\\\" class=\\\"sc-text-center\\\">\\n    <button class=\\\"sc-btn-bob\\\">Sticky Button</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div data-sticky-undock=&quot;myBtn&quot;&gt;&lt;/div&gt;\\n&lt;div class=&quot;spacer&quot;&gt;\\n    Sticky Spacer\\n&lt;/div&gt;\\n&lt;div data-sticky-dock=&quot;myBtn&quot;&gt;&lt;/div&gt;\\n&lt;div data-sticky=&quot;myBtn&quot; class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;sc-btn-bob&quot;&gt;Sticky Button&lt;/button&gt;\\n&lt;/div&gt;\\n\""
@@ -607,7 +607,7 @@
         "name": "center-absolute",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<div class=\\\"sc-absolute-center\\\">\\n    <p>Look ma, I am totally centered</p>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-absolute-center&quot;&gt;\\n    &lt;p&gt;Look ma, I am totally centered&lt;/p&gt;\\n&lt;/div&gt;\\n\""
@@ -616,7 +616,7 @@
         "name": "center-blocks",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<div class=\\\"sc-block-center example-block\\\">.sc-block-center</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-block-center example-block&quot;&gt;.sc-block-center&lt;/div&gt;\\n\""
@@ -625,7 +625,7 @@
         "name": "ellipsis",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<div class=\\\"sc-ellipsis example-ellipsis\\\" title=\\\"Loooong title\\\">Fun with ellipsis</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-ellipsis example-ellipsis&quot; title=&quot;Loooong title&quot;&gt;Fun with ellipsis&lt;/div&gt;\\n\""
@@ -634,7 +634,7 @@
         "name": "floats",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<div class=\\\"sc-clearfix example-floats\\\">\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n</div>\\n<hr>\\n<div class=\\\"sc-clearfix example-floats\\\">\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n&lt;hr&gt;\\n&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
@@ -643,7 +643,7 @@
         "name": "horizontal-line",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>To separate some content you can use a horizontal line.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n<hr>\\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n\"",
         "codeExample": "\"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;hr&gt;\\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n\""
@@ -652,7 +652,7 @@
         "name": "scrolling",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h3 id=\\\"usage-\\\">Usage:</h3>\\n<p>Adds some nice animated scrolling functionality. In order to use it add the <code>sc-smooth-scroll</code> class to any anchor link.<br>As an additional example see detail_page</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review. Should it be in Utilities section?</p>\\n\"",
         "html": "\"<a href=\\\"#top\\\" class=\\\"sc-smooth-scroll\\\">To Top</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#top&quot; class=&quot;sc-smooth-scroll&quot;&gt;To Top&lt;/a&gt;\\n\""
@@ -661,7 +661,7 @@
         "name": "text-alignments",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
         "html": "\"<strong>Text aligned left</strong>\\n<p class=\\\"sc-text-left\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\\n<hr>\\n<strong>Text aligned right</strong>\\n<p class=\\\"sc-text-right\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\\n<hr>\\n<strong>Centered text</strong>\\n<p class=\\\"sc-text-center\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\\n<hr>\\n<strong>Justified text</strong>\\n<p class=\\\"sc-text-justify\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\\n<hr>\\n<strong>Text without wrapping</strong>\\n<p class=\\\"sc-text-nowrap\\\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\\n\"",
         "codeExample": "\"&lt;strong&gt;Text aligned left&lt;/strong&gt;\\n&lt;p class=&quot;sc-text-left&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;\\n&lt;hr&gt;\\n&lt;strong&gt;Text aligned right&lt;/strong&gt;\\n&lt;p class=&quot;sc-text-right&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;\\n&lt;hr&gt;\\n&lt;strong&gt;Centered text&lt;/strong&gt;\\n&lt;p class=&quot;sc-text-center&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;\\n&lt;hr&gt;\\n&lt;strong&gt;Justified text&lt;/strong&gt;\\n&lt;p class=&quot;sc-text-justify&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;\\n&lt;hr&gt;\\n&lt;strong&gt;Text without wrapping&lt;/strong&gt;\\n&lt;p class=&quot;sc-text-nowrap&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;\\n\""
@@ -670,7 +670,7 @@
         "name": "utilities",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"\"",
         "html": "\"\"",
         "codeExample": "\"\""
@@ -679,7 +679,7 @@
         "name": "visibility",
         "type": "utilities",
         "group": "utilities",
-        "srcDir": "/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs",
+        "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>Utility classes to show/hide elements based on the current viewport (media queries).<br>IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device&#39;s presentation.</p>\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\\n<table class=\\\"docs-table docs-table-visibility\\\">\\n    <thead>\\n    <tr>\\n        <th></th>\\n        <th>S Viewport</th>\\n        <th>M Viewport</th>\\n        <th>L Viewport</th>\\n        <th>XL Viewport</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td><code>.sc-visible</code></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-xl</code></td>\\n        <td></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-l</code></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-m</code></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-s</code></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden</code></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-xl</code></td>\\n        <td></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-l</code></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-m</code></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-s</code></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\"",
         "html": "\"\"",
         "codeExample": "\"\""

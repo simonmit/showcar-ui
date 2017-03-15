@@ -6,17 +6,17 @@ const entities = require('html-entities').AllHtmlEntities;
 
 const docsData = {
     globals: {
-        variables: '/Users/asolovev/scout24/source/showcar-ui/src/01-settings/docs/',
-        fonts: '/Users/asolovev/scout24/source/showcar-ui/src/03-generic/docs',
+        variables: 'src/01-settings/docs/',
+        fonts: 'src/03-generic/docs',
     },
-    atoms: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/atoms/',
-    molecules: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/molecules/',
-    organisms: '/Users/asolovev/scout24/source/showcar-ui/src/06-components/organisms/',
+    atoms: 'src/06-components/atoms/',
+    molecules: 'src/06-components/molecules/',
+    organisms: 'src/06-components/organisms/',
     utilities: {
-        layout: '/Users/asolovev/scout24/source/showcar-ui/src/05-layout/docs',
-        utilities: '/Users/asolovev/scout24/source/showcar-ui/src/07-utilities/docs',
+        layout: 'src/05-layout/docs',
+        utilities: 'src/07-utilities/docs',
     }
-    // extras: '/Users/asolovev/scout24/source/showcar-ui/docs/helpers/extras'
+    // extras: 'docs/helpers/extras'
 }
 
 
