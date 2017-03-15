@@ -82,23 +82,26 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-/*
- gulp.task('clean:docs', scgulp.clean({
- files: ['docs/components/!*']
- }));
- gulp.task('copy:docs', ['clean:docs'], () => {
- gulp.src('dist/!*.{css,js,map}').pipe(gulp.dest('docs/lib'));
- gulp.src(['src/06-components/!**!/docs/!*']).pipe(gulp.dest('docs/components'));
- gulp.src('src/01-settings/docs/!*').pipe(gulp.dest('docs/components/globals/settings/docs'));
- gulp.src('src/03-generic/docs/!*').pipe(gulp.dest('docs/components/globals/generic/docs'));
- gulp.src('src/05-layout/docs/!*').pipe(gulp.dest('docs/components/globals/layout/docs'));
- gulp.src('src/07-utilities/docs/!*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
- })
- gulp.task('docs:watch', () => {
- gulp.watch(['src/!**!/docs/!*', 'dist/!*'], ['copy:docs']);
- });
- gulp.task('docs', ['copy:docs']);
- */
+
+gulp.task('clean:docs', scgulp.clean({
+    files: ['docs/components/!*']
+}));
+
+gulp.task('copy:docs', ['clean:docs'], () => {
+    gulp.src('dist/*.{css,js,map}').pipe(gulp.dest('docs/lib'));
+    gulp.src(['src/06-components/**/docs/*']).pipe(gulp.dest('docs/components'));
+    gulp.src('src/01-settings/docs/*').pipe(gulp.dest('docs/components/globals/settings/docs'));
+    gulp.src('src/03-generic/docs/*').pipe(gulp.dest('docs/components/globals/generic/docs'));
+    gulp.src('src/05-layout/docs/*').pipe(gulp.dest('docs/components/globals/layout/docs'));
+    gulp.src('src/07-utilities/docs/*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
+});
+
+gulp.task('docs:watch', () => {
+    gulp.watch(['src/**/docs/*', 'dist/*'], ['copy:docs']);
+});
+
+gulp.task('docs', ['copy:docs']);
+
 
 const generateJsonDocs = require('./docs/tasks/generateJson');
 gulp.task('generateJsonDocs', () => {
