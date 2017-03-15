@@ -20,7 +20,8 @@ shopt -s extglob
 rm -rf !(.git*)
 
 cp -r ../docs/* .
-mv assets/ docs/
+mkdir -p docs/assets/
+mv assets/ docs/assets/
 cp -r ../dist .
 
 git add . -A
