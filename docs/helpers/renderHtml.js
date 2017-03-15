@@ -2,10 +2,6 @@ const fs = require('fs');
 const renderMenu = require('./renderMenu.js')
 module.exports = (globalJSON, content) => {
     
-    if (! globalJSON && content) {
-        content += '<style>#left-menu a.open-separate{display: none}</style>';
-    }
-    
     if (! globalJSON) {
         globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }
@@ -123,6 +119,9 @@ module.exports = (globalJSON, content) => {
 //                e.clearSelection();
             });
               if (location.hostname === 'autoscout24.github.io') {
+                   [].forEach.call(document.querySelectorAll('#left-menu a.open-separate'), function (openSeparate) {
+                        openSeparate.style.display = "none";
+                    })
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
