@@ -19,9 +19,10 @@ git config push.default simple
 shopt -s extglob
 rm -rf !(.git*)
 
-cp -r ../docs .
-cp -r ../dist docs/lib
-cp  ../index.html .
+cp -r ../docs/* .
+mkdir -R assets/docs/assets
+cp -r assetes/* assets/docs/assetes/
+cp -r ../dist assetes/
 
 git add . -A
 

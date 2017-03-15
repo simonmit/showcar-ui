@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "docs": "gulp docs",
+    "docs": "gulp docs:generate",
     "test-sanity": "mocha tests/index.js -t 120000",
     "test-css-cleanup": "rm -rf ./backstop_data/bitmaps_test",
     "test-css": "npm run test-css-cleanup && backstop test",

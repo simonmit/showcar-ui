@@ -113,12 +113,12 @@ gulp.task('generateJsonDocs', () => {
 });
 
 const generateHtmlDocs = require('./docs/tasks/generateHtml');
-gulp.task('generateHtmlDocs', ['generateJsonDocs'], () => {
+gulp.task('docs:generate', ['generateJsonDocs'], () => {
     generateHtmlDocs()
 });
 
 
 const serveDocs = require('./docs/tasks/docs');
-gulp.task('docs', () => {serveDocs(gulp)});
+gulp.task('docs:serve', () => {serveDocs(gulp)});
 
 gulp.task('default', ['build']);
