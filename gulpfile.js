@@ -57,11 +57,13 @@ const UglifyJS = require("uglify-js");
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
 const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
 const stringReplace = require('gulp-string-replace');
+
 var replaceOptions = {
     logs: {
         enabled: false
     }
 };
+
 gulp.task('replace', function () {
     gulp.src(['src/html/index.html', 'src/html/index-standalone.html'])
         .pipe(stringReplace('@@POLYFILL_DOCUMENT_REGISTER_ELEMENT', readFile('node_modules/document-register-element/build/document-register-element.js'), replaceOptions))
@@ -80,9 +82,6 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('lint', ['eslint', 'stylelint']);
-
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 /*
  gulp.task('clean:docs', scgulp.clean({
  files: ['docs/components/!*']
@@ -101,12 +100,6 @@ gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replac
  gulp.task('docs', ['copy:docs']);
  */
 
-
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
-
-gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve']);
-
-
 const generateJsonDocs = require('./docs/tasks/generateJson');
 gulp.task('generateJsonDocs', () => {
     generateJsonDocs()
@@ -117,8 +110,9 @@ gulp.task('docs:generate', ['generateJsonDocs'], () => {
     generateHtmlDocs()
 });
 
-
 const serveDocs = require('./docs/tasks/docs');
-gulp.task('docs:serve', () => {serveDocs(gulp)});
 
+gulp.task('docs:serve', () => {serveDocs(gulp)});
+gulp.task('lint', ['eslint', 'stylelint']);
+gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
