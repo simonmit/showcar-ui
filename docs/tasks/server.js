@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const port = 5000;
 
-const globalJSON = require('/Users/asolovev/scout24/source/showcar-ui/docs/helpers/renderContentJson.js')();
-const generateHtml = require('/Users/asolovev/scout24/source/showcar-ui/docs/helpers/renderHtml.js')
+const globalJSON = require('../helpers/renderContentJson.js')();
+const generateHtml = require('../helpers/renderHtml.js')
 
 const gspec = (items) => {
     let gspecFiles = [];
@@ -58,6 +58,7 @@ app.get('/docs/:type/:group', (req, res) => {
     }
 })
 
+// TODO: fix path
 app.use('/showcar-ui', express.static('/Users/asolovev/scout24/source/showcar-ui/'));
 
 app.get('*', (req, res) => {
