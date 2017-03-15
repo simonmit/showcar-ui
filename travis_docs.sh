@@ -15,9 +15,9 @@ git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git config push.default simple
 
-#remove all files except .gitignore and all inside.git "shopt -s extglob" extends bash
+#remove all files except all inside .git "shopt -s extglob" extends bash
 shopt -s extglob
-rm -rf !(.git/)
+rm -rf !(.git)
 
 cp -r ../docs/* .
 mkdir -p docs/assets/
