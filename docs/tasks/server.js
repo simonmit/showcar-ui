@@ -58,7 +58,7 @@ app.get('/docs/:type/:group', (req, res) => {
     }
 })
 
-app.use('/assets', express.static('/Users/asolovev/scout24/source/showcar-ui/'));
+app.use('/showcar-ui', express.static('/Users/asolovev/scout24/source/showcar-ui/'));
 
 app.get('*', (req, res) => {
     res.send('WTF???');

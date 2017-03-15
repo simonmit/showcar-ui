@@ -74,11 +74,11 @@ module.exports = (globalJSON, content) => {
     ];
     
     scriptsFiles = scriptsFiles.map(script => {
-        return `<script src="/assets/${script}"></script>`
+        return `<script src="/showcar-ui/${script}"></script>`
     }).join('\n');
     
     stylesFiles = stylesFiles.map(style => {
-        return `<link rel="stylesheet" href="/assets/${style}">`
+        return `<link rel="stylesheet" href="/showcar-ui/${style}">`
     }).join('\n');
     const polyfils = require('./polyfils.js')
     
