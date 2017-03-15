@@ -20,7 +20,7 @@ shopt -s extglob
 rm -rf !(.git*)
 
 cp -r ../docs/* .
-mkdir -R assets/docs/assets
+mkdir -p assets/docs/assets
 cp -r assetes/* assets/docs/assetes/
 cp -r ../dist assetes/
 
