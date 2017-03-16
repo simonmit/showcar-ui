@@ -95,6 +95,7 @@ gulp.task('docs:generate', ['generateJsonDocs'], () => {
 const serveDocs = require('./docs/tasks/docs');
 
 gulp.task('docs:serve', () => {serveDocs(gulp)});
+
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
