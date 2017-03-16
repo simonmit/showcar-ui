@@ -1,7 +1,8 @@
-@import "../../../01-settings/variables";
-@import "../../../02-sass-tools/sass-mq";
-@import "../../../05-layout/grid";
-.sc-lightbox{
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+@import '../../../05-layout/grid';
+
+.sc-lightbox {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -9,13 +10,16 @@
   border-radius: $form-border-radius;
   padding: $L;
   background-color: $white;
-  @include mqmin($viewportXL){
+
+  @include mqmin($viewportXL) {
     width: 550px;
   }
-  @include mqminmax($viewportM, $viewportXL - 1){
+
+  @include mqminmax($viewportM, $viewportXL - 1) {
     @include span(6);
   }
-  @include mqmax($viewportM - 1){
+
+  @include mqmax($viewportM - 1) {
     width: 288px;
   }
 
@@ -24,16 +28,43 @@
 
   max-height: calc(100vh - 80px);
   overflow-y: auto;
-  h5{
+
+  h5 {
     font-weight: 700;
     padding-right: 25px;
   }
 }
-.sc-lightbox-scroll{
-  @include mqmin($viewportM){
+
+.sc-lightbox-scroll {
+  @include mqmin($viewportM) {
     overflow-y: hidden;
   }
 }
+
+// remove this selector!
+body {
+  position: relative;
+}
+
+.sc-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  fill: #007cca;
+  cursor: pointer;
+}
+
+.sc-lightbox-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 139; // less than modal window by one
+}
+
 // TODO: fix the input centring problem
 // body.sc-lightbox-open {
 //     &::before {
@@ -50,29 +81,3 @@
 //         background-color: rgba(0, 0, 0, 0.6);
 //     }
 // }
-
-body{
-  position: relative;
-}
-.sc-lightbox-scroll{
-  @include mqmin($viewportM){
-    overflow-y: hidden;
-  }
-}
-.sc-lightbox-close{
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 16px;
-  fill: #007cca;
-  cursor: pointer;
-}
-.sc-lightbox-overlay{
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 139; // less than modal window by one
-}
