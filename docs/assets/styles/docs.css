@@ -155,7 +155,7 @@ body {
     color: #646464;
     font-size: 16px;
     line-height: 21px;
-    padding: 36px;
+    padding: 36px 36px 15px;
     opacity: 0.75;
     overflow-x: auto;
     overflow-y: hidden;
