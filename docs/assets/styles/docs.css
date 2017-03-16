@@ -179,7 +179,7 @@ body {
 #content hr {
     padding: 0px 0 40px;
 }
-#content hr:first-child {
+#content hr:first-child :not(#horizontal-line) {
     display: none;
 }
 #content pre {
