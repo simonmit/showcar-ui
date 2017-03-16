@@ -272,8 +272,8 @@
         "group": "link",
         "srcDir": "src/06-components/atoms/link/docs",
         "markDown": "\"<h2>Link default<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
-        "html": "\"<a href=\\\"#group-atoms-component-link\\\">Default link</a>\\n\"",
-        "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot;&gt;Default link&lt;/a&gt;\\n\""
+        "html": "\"<a href=\\\"#link-link\\\">Default link</a>\\n\"",
+        "codeExample": "\"&lt;a href=&quot;#link-link&quot;&gt;Default link&lt;/a&gt;\\n\""
     },
     "inline-link": {
         "name": "inline-link",
@@ -281,8 +281,8 @@
         "group": "link",
         "srcDir": "src/06-components/atoms/link/docs",
         "markDown": "\"<h2>Link inline<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
-        "html": "\"<a href=\\\"#group-atoms-component-link\\\" class=\\\"sc-inline-link\\\">Inline link</a>\\n\"",
-        "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;\\n\""
+        "html": "\"<a href=\\\"#link-link\\\" class=\\\"sc-inline-link\\\">Inline link</a>\\n\"",
+        "codeExample": "\"&lt;a href=&quot;#link-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;\\n\""
     },
     "rotating-arrow": {
         "name": "rotating-arrow",
