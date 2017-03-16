@@ -1,3 +1,4 @@
+<h2>Colors Secondary<span class="status complete">Complete</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 
 <div class="ndpl-component__color-container">
