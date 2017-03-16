@@ -1,6 +1,4 @@
-#### Status:
-
-<p class="status review">Needs review</p>
+<h2>Spinner<span class="status review">Needs tech review</span></h2>
 
 #### Usage:
 
