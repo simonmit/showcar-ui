@@ -21,20 +21,16 @@ body {
 
     }
 }
-
 .markdown ul {
     list-style: inherit;
     padding-top: 12px;
 }
-
 .markdown ul > li {
     margin-left: 20px;
 }
-
 .markdown p {
     padding-top: 12px;
 }
-
 #sidebar {
     float: left;
     width: 330px;
@@ -163,7 +159,7 @@ body {
     white-space: pre;
     width: 100%;
     border: none;
-    border-radius:0;
+    border-radius: 0;
     background-color: #f4f4f4;
 }
 .element code.hljs.js {
@@ -290,8 +286,65 @@ body {
     background-color: #994200;
     border-color: #994200;
 }
-
-
+.markdown h4 {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 2.2;
+    padding-top: 8px;
+    margin-top: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.markdown code.hljs {
+    padding: 10px;
+    border-radius: 4px;
+}
+pre code:before {
+    content: '';
+}
+code {
+    color: #ff7500;
+    display: inline-block;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 0 3px;
+}
+.docs-table {
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    border-collapse: separate;
+    margin: 20px 0;
+}
+.docs-table th {
+    background-color: #c4c4c4;
+    font-weight: bold;
+}
+.docs-table th, td {
+    width: 200px;
+    padding: 8px;
+    border-left: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+    word-break: break-all;
+}
+.docs-table th, td:first-child {
+    border-left: 0;
+}
+.docs-table th, tr:nth-child(even) td {
+    background-color: #f4f4f4;
+}
+.docs-table th, tr:last-child td {
+    border-bottom: none;
+}
+.docs-table-visibility tr td.cell-visible {
+    background-color: #e6f5cf;
+}
+.docs-table-visibility tr td.cell-hidden {
+    background-color: #ffdddc;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /**
  * Component - Colours
@@ -329,9 +382,9 @@ body {
     width: 100%;
 }
 .ndpl-component__color div {
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     border-radius: 3px;
-    color: #FFF;
+    color: #fff;
     display: inline-block;
     font-size: 13px;
     letter-spacing: 1px;
@@ -343,7 +396,9 @@ body {
     color: #646464 !important;
     border-color: #949494;
 }
-
+.ndpl-component__color div {
+    text-transform: none;
+}
 @media only screen and (min-width: 60em) {
 
     .ndpl-component__colors {
@@ -372,67 +427,4 @@ body {
     .ndpl-component__color:last-of-type {
         border-radius: 0 0 4px 4px;
     }
-}
-.markdown h4{
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 1px;
-    line-height: 2.2;
-    padding-top: 8px;
-    margin-top: 4px;
-    display: inline-block;
-    text-transform: uppercase;
-}
-.markdown code.hljs{
-    padding: 10px;
-    border-radius: 4px;
-}
-pre code:before{
-    content: '';
-}
-code{
-    color: #ff7500;
-    display: inline-block;
-    border: 1px solid #E1E1E1 ;
-    border-radius: 3px;
-    line-height: 18px;
-    padding: 0 3px;
-}
-
-.docs-table{
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-    border-collapse: separate;
-    margin: 20px 0;
-}
-.docs-table th{
-    background-color: #c4c4c4;
-    font-weight: bold;
-}
-.docs-table th, td{
-    width: 200px;
-    padding: 8px;
-    border-left: 1px solid #dcdcdc;
-    border-bottom: 1px solid #dcdcdc;
-    text-align: center;
-    word-break: break-all;
-}
-.docs-table th, td:first-child{
-    border-left: 0;
-}
-.docs-table th, tr:nth-child(even) td{
-    background-color: #f4f4f4;
-}
-.docs-table th, tr:last-child td{
-    border-bottom: none;
-}
-.docs-table-visibility tr td.cell-visible{
-    background-color: #e6f5cf;
-}
-.docs-table-visibility tr td.cell-hidden{
-    background-color: #ffdddc;
-}
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.ndpl-component__color div{
-    text-transform: none;
 }
