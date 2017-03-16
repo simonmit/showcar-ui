@@ -1,9 +1,9 @@
 import registerElement from '../../../07-utilities/helpers.js';
-import ContainerHandler from './notification/ContainerHandler';
+import ContainerHandler from './js/ContainerHandler';
 
 export default function(tagName) {
     let containerHandler = new ContainerHandler();
-    let items = [];
+    let items = [];// prevent of appearing twice
     function attachedCallback() {
         if(items.indexOf(this.id) != -1){ // prevent of appearing twice. TODO check on new polyfill
             return;
