@@ -1,11 +1,9 @@
+<h2>Visible/hidden classes<span class="status refactor">Needs refactoring</span></h2>
+
 #### Usage:
 
 Utility classes to show/hide elements based on the current viewport (media queries).  
 IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
-
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
 
 <table class="docs-table docs-table-visibility">
     <thead>
