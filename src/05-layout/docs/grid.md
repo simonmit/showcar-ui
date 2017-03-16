@@ -1,12 +1,10 @@
+<h2>Grid<span class="status refactor">Needs refactoring</span></h2>
+
 #### Usage:
 ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.  
 Every grid row should be placed within a `.sc-content-container`.  
 Every grid row is represented as `.sc-grid-row`.  
 Every grid cell is a `.sc-grid-col-*` container.  
-
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
 
 <div class="example-grid">
     <div class="sc-content-container">

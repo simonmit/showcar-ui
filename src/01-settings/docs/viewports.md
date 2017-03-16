@@ -1,11 +1,8 @@
+<h2>Viewports<span class="status refactor">Needs refactoring</span></h2>
+
 #### Usage:
 All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.  
 Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  
-
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
-
 
 <table class="docs-table">
     <thead>
