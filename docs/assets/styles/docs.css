@@ -474,15 +474,6 @@ pre code:before{
 .docs-table-visibility tr td.cell-hidden{
     background-color: #ffdddc;
 }
-.example-grid .sc-grid-row > div{
-    border: 1px solid #dcdcdc;
-    background: #f4f4f4;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-.example-grid .sc-grid-row > div [class*='sc-grid-col-']{
-    word-break: break-all;
-}
 .example-notification-target {
     border-bottom: 1px solid #dcdcdc;
     background-color: #c4c4c4;

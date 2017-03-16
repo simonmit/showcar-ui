@@ -674,7 +674,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
     </tbody>
 </table></p>
 <style>
-#fonts-link .sample p{
+#fonts .sample p{
 margin-bottom:15px;
 }
 </style>
@@ -1719,7 +1719,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
 
 <h4>Usage:</h4><p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>
 <style>
-#spinner-link .sample{
+#spinner .sample{
      background-color: #808080;
 }
 </style>
@@ -1778,7 +1778,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                 <div class="element" id="tooltip">
                     <div class="markdown"><p><h2>Tooltip old<span class="status complete">Complete</span></h2></p>
 <style>
-#tooltip-link .sample{
+#tooltip .sample{
     padding-top:60px;
 }
 </style>
@@ -1806,7 +1806,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                 <div class="element" id="tooltip-2">
                     <div class="markdown"><p><h2>Tooltip new<span class="status complete">Complete</span></h2></p>
 <style>
-#tooltip-2-link .sample{
+#tooltip-2 .sample{
     padding-top:60px;
 }
 </style>
@@ -2176,7 +2176,7 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
                 <div class="element" id="navigation">
                     <div class="markdown"><p><h2>Navigation <span class="status refactor">Needs refactoring</span></h2></p>
 <style>
-#navigation-link #navigation .sample{
+#navigation #navigation .sample{
 background-color: #f4f4f4;
 }
 </style>
@@ -2600,158 +2600,256 @@ showcar.spyNavigation({
                     <div class="markdown"><h2>Grid<span class="status refactor">Needs refactoring</span></h2>
 
 <h4>Usage:</h4><p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
-<div class="example-grid">
-    <div class="sc-content-container">
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-12">
-                .sc-grid-col-12
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-6">
-                .sc-grid-col-6
-            </div>
-            <div class="sc-grid-col-6">
-                .sc-grid-col-6
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-4">
-                .sc-grid-col-4
-            </div>
-            <div class="sc-grid-col-4">
-                .sc-grid-col-4
-            </div>
-            <div class="sc-grid-col-4">
-                .sc-grid-col-4
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-            <div class="sc-grid-col-2">
-                .sc-grid-col-2
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-            <div class="sc-grid-col-1">
-                .sc-grid-col-1
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-8">
-                .sc-grid-col-8
-            </div>
-            <div class="sc-grid-col-4">
-                .sc-grid-col-4
-            </div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-            <div class="sc-grid-col-6">
-                .sc-grid-col-6
-            </div>
-            <div class="sc-grid-col-3">
-                .sc-grid-col-3
-            </div>
-        </div>
-    </div>
+<style>
+#grid .sample .sc-grid-row > div{
+    border: 1px solid #dcdcdc;
+    background: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+#grid .sample .sc-grid-row > div [class*='sc-grid-col-']{
+    word-break: break-all;
+}
+</style>
 </div>
-</div>
-                   <div class="sample"><div class="example-grid">
-    <div class="sc-content-container">
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-6">.sc-grid-col-6</div>
-            <div class="sc-grid-col-6">.sc-grid-col-6</div>
-        </div>
-        <div class="sc-grid-row">
-            <div class="sc-grid-col-3">.sc-grid-col-3</div>
-            <div class="sc-grid-col-3">.sc-grid-col-3</div>
-            <div class="sc-grid-col-3">.sc-grid-col-3</div>
-            <div class="sc-grid-col-3">.sc-grid-col-3</div>
-        </div>
-    </div>
+                   <div class="sample"><div class="sc-content-container">
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-12">
+			.sc-grid-col-12
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-6">
+			.sc-grid-col-6
+		</div>
+		<div class="sc-grid-col-6">
+			.sc-grid-col-6
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-4">
+			.sc-grid-col-4
+		</div>
+		<div class="sc-grid-col-4">
+			.sc-grid-col-4
+		</div>
+		<div class="sc-grid-col-4">
+			.sc-grid-col-4
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+		<div class="sc-grid-col-2">
+			.sc-grid-col-2
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+		<div class="sc-grid-col-1">
+			.sc-grid-col-1
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-8">
+			.sc-grid-col-8
+		</div>
+		<div class="sc-grid-col-4">
+			.sc-grid-col-4
+		</div>
+	</div>
+	<div class="sc-grid-row">
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+		<div class="sc-grid-col-6">
+			.sc-grid-col-6
+		</div>
+		<div class="sc-grid-col-3">
+			.sc-grid-col-3
+		</div>
+	</div>
 </div>
 </div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-grid"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-code-grid" class="hjs html">&lt;div class=&quot;example-grid&quot;&gt;
-    &lt;div class=&quot;sc-content-container&quot;&gt;
-        &lt;div class=&quot;sc-grid-row&quot;&gt;
-            &lt;div class=&quot;sc-grid-col-6&quot;&gt;.sc-grid-col-6&lt;/div&gt;
-            &lt;div class=&quot;sc-grid-col-6&quot;&gt;.sc-grid-col-6&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;sc-grid-row&quot;&gt;
-            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;
-            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;
-            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;
-            &lt;div class=&quot;sc-grid-col-3&quot;&gt;.sc-grid-col-3&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                <code id="copy_code-code-grid" class="hjs html">&lt;div class=&quot;sc-content-container&quot;&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-12&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-12
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-6&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-6
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-6&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-6
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-4&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-4
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-4&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-4
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-4&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-4
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-2&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-2
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-1&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-1
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-8&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-8
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-4&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-4
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&Tab;&lt;div class=&quot;sc-grid-row&quot;&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-6&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-6
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-grid-col-3&quot;&gt;
+&Tab;&Tab;&Tab;.sc-grid-col-3
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
 &lt;/div&gt;
 </code>
                             </pre>
