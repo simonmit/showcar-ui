@@ -3,6 +3,8 @@
 @import '../../../02-sass-tools/rotating-arrow';
 
 .sc-expandable-box {
+  cursor: pointer;
+
   @include clearfix();
   border-top: 1px solid $black-30;
 
