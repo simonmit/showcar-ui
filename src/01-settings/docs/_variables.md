@@ -2,5 +2,7 @@
 
 To use variables in your scss code you just need to import the specific file based on your directory structure:
 <pre>
-@import "path/to/variables";
+    <code>
+    @import "path/to/variables";
+    </code>
 </pre>
