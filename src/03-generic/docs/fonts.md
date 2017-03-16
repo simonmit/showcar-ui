@@ -57,7 +57,7 @@ Library also provides `sc-font-bold`, `sc-font-silent` and `sc-font-uppercase` c
     </tbody>
 </table>
 <style>
-#fonts-link .sample p{
+#fonts .sample p{
 margin-bottom:15px;
 }
 </style>
