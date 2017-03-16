@@ -176,7 +176,7 @@ body {
     line-height: 32px;
     font-size: 24px;
 }
-#content hr :not(.sample){
+#content :not(.sample) > hr{
     padding: 0px 0 40px;
 }
 #content hr:first-child :not(.sample) {
