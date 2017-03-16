@@ -15,9 +15,7 @@ module.exports = (globalJSON, content) => {
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-${type}-${el.name}"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-${type}-${el.name}" class="hjs ${type === 'js' ? 'js javascript' : 'html'}">
-                                    ${content}
-                                </code>
+                                <code id="copy_code-${type}-${el.name}" class="hjs ${type === 'js' ? 'js javascript' : 'html'}">${content}</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> ${type} sample</div>
