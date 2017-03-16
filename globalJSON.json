@@ -306,8 +306,8 @@
         "group": "spinner",
         "srcDir": "src/06-components/atoms/spinner/docs",
         "markDown": "\"<h2>Spinner<span class=\\\"status review\\\">Needs tech review</span></h2>\\n\\n<h4>Usage:</h4><p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>\\n<style>\\n#spinner-link .sample{\\n     background-color: #808080;\\n}\\n</style>\\n\"",
-        "html": "\"<div class=\\\"sc-absolute-center example-background\\\">\\n  <div class=\\\"sc-spinner-loading\\\"></div>\\n  <div class=\\\"sc-spinner-loading orange\\\"></div>\\n  <div class=\\\"sc-spinner-loading grey\\\"></div>\\n</div>\\n\"",
-        "codeExample": "\"&lt;div class=&quot;sc-absolute-center example-background&quot;&gt;\\n  &lt;div class=&quot;sc-spinner-loading&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading orange&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading grey&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
+        "html": "\"<div class=\\\"sc-absolute-center\\\">\\n  <div class=\\\"sc-spinner-loading\\\"></div>\\n  <div class=\\\"sc-spinner-loading orange\\\"></div>\\n  <div class=\\\"sc-spinner-loading grey\\\"></div>\\n</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-absolute-center&quot;&gt;\\n  &lt;div class=&quot;sc-spinner-loading&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading orange&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading grey&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
     },
     "stepper": {
         "name": "stepper",
