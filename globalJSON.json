@@ -395,7 +395,7 @@
         "type": "molecules",
         "group": "notification",
         "srcDir": "src/06-components/molecules/notification/docs",
-        "markDown": "\"<p><div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target\\\">\\n    Notification Target container\\n</div></p>\\n<script>\\n    document.querySelector('body').addEventListener('click', event => {\\n try {\\n if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {\\n const id = event.target.getAttribute('data-id');\\n const el = document.querySelector('#' + id);\\n el.classList.toggle('show');\\n }\\n }catch (e){};\\n });\\n</script>\\n\""
+        "markDown": "\"<p><div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target\\\">\\n    Notification Target container\\n</div></p>\\n<p><style>\\n.example-notification-target {\\n    border-bottom: 1px solid #dcdcdc;\\n    background-color: #c4c4c4;\\n    padding: 16px;\\n    margin-bottom: 30px;\\n}\\n</style></p>\\n<script>\\ndocument.querySelector('body').addEventListener('click', event => {\\n try {\\n if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {\\n const id = event.target.getAttribute('data-id');\\n const el = document.querySelector('#' + id);\\n el.classList.toggle('show');\\n }\\n }catch (e){};\\n });\\n</script>\\n\""
     },
     "notification-closeable": {
         "name": "notification-closeable",

@@ -2030,8 +2030,16 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
                     <div class="markdown"><p><div class="sc-content-container example-notification-target" id="example-notification-target">
     Notification Target container
 </div></p>
+<p><style>
+.example-notification-target {
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #c4c4c4;
+    padding: 16px;
+    margin-bottom: 30px;
+}
+</style></p>
 <script>
-    document.querySelector('body').addEventListener('click', event => {
+document.querySelector('body').addEventListener('click', event => {
  try {
  if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
  const id = event.target.getAttribute('data-id');

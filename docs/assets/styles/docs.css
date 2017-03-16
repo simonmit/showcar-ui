@@ -474,12 +474,6 @@ pre code:before{
 .docs-table-visibility tr td.cell-hidden{
     background-color: #ffdddc;
 }
-.example-notification-target {
-    border-bottom: 1px solid #dcdcdc;
-    background-color: #c4c4c4;
-    padding: 16px;
-    margin-bottom: 30px;
-}
 .example-size-s {
     max-width: 640px;
     height: 70px;
