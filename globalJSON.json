@@ -420,7 +420,7 @@
         "type": "molecules",
         "group": "notification",
         "srcDir": "src/06-components/molecules/notification/docs",
-        "markDown": "\"<h2>Notification tip<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\\n<div class=\\\"sc-content-container example-notification-target example-size-s\\\" id=\\\"example-notification-target-s\\\">\\n    Tip Notification Target container\\n</div>\\n\"",
+        "markDown": "\"<h2>Notification tip<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\\n<p><div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target-s\\\">\\n    Tip Notification Target container\\n</div></p>\\n<style>\\n#notification-tip .markdown #example-notification-target-s{\\n    max-width: 640px;\\n    height: 70px;\\n    width: 100%;\\n}\\n</style>\\n\\n\"",
         "html": "\"<as24-notification type=\\\"tip\\\" id=\\\"tip1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Small Tip for you\\\" close=\\\"true\\\">\\n    Tip tip hurra...\\n</as24-notification>\\n<div class=\\\"sc-text-center\\\">\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"tip1\\\">Show small tip notification</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;tip&quot; id=&quot;tip1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Small Tip for you&quot; close=&quot;true&quot;&gt;\\n    Tip tip hurra...\\n&lt;/as24-notification&gt;\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show small tip notification&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -503,7 +503,7 @@
         "type": "utilities",
         "group": "layout",
         "srcDir": "src/05-layout/docs",
-        "markDown": "\"<h2>Sticky elements<span class=\\\"status review\\\">Needs review. Check example centring</span></h2>\\n\\n<h4>Usage:</h4><p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>\\n\"",
+        "markDown": "\"<h2>Sticky elements<span class=\\\"status review\\\">Needs review. Check example centring</span></h2>\\n\\n<h4>Usage:</h4><p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>\\n<style>\\n#sticky .sample .spacer{\\n    height: 200px;\\n    border: 1px solid black;\\n}\\n</style>\\n\"",
         "html": "\"<div data-sticky-undock=\\\"myBtn\\\"></div>\\n<div class=\\\"spacer\\\">\\n    Sticky Spacer\\n</div>\\n<div data-sticky-dock=\\\"myBtn\\\"></div>\\n<div data-sticky=\\\"myBtn\\\" class=\\\"sc-text-center\\\">\\n    <button class=\\\"sc-btn-bob\\\">Sticky Button</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div data-sticky-undock=&quot;myBtn&quot;&gt;&lt;/div&gt;\\n&lt;div class=&quot;spacer&quot;&gt;\\n    Sticky Spacer\\n&lt;/div&gt;\\n&lt;div data-sticky-dock=&quot;myBtn&quot;&gt;&lt;/div&gt;\\n&lt;div data-sticky=&quot;myBtn&quot; class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;sc-btn-bob&quot;&gt;Sticky Button&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -521,27 +521,27 @@
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Block centring<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
-        "html": "\"<div class=\\\"sc-block-center example-block\\\">.sc-block-center</div>\\n\"",
-        "codeExample": "\"&lt;div class=&quot;sc-block-center example-block&quot;&gt;.sc-block-center&lt;/div&gt;\\n\""
+        "markDown": "\"<p><h2>Block centring<span class=\\\"status review\\\">Needs review</span></h2></p>\\n<style>\\n#center-blocks .sample .sc-block-center{\\npadding: 20px;\\n    width: 80%;\\n    max-width: 600px;\\n    background-color: #ff7500;\\n}\\n</style>\\n\"",
+        "html": "\"<div class=\\\"sc-block-center\\\">.sc-block-center</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-block-center&quot;&gt;.sc-block-center&lt;/div&gt;\\n\""
     },
     "ellipsis": {
         "name": "ellipsis",
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Ellipsis<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<h4>Usage:</h4><p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>\\n\"",
-        "html": "\"<div class=\\\"sc-ellipsis example-ellipsis\\\" title=\\\"Loooong title\\\">Fun with ellipsis</div>\\n\"",
-        "codeExample": "\"&lt;div class=&quot;sc-ellipsis example-ellipsis&quot; title=&quot;Loooong title&quot;&gt;Fun with ellipsis&lt;/div&gt;\\n\""
+        "markDown": "\"<h2>Ellipsis<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<h4>Usage:</h4><p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>\\n<style>\\n#ellipsis .sample .sc-ellipsis{\\nwidth: 100px;\\n    border: 1px solid #808080;\\n}\\n</style>\\n\"",
+        "html": "\"<div class=\\\"sc-ellipsis\\\" title=\\\"Loooong title\\\">Fun with ellipsis</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-ellipsis&quot; title=&quot;Loooong title&quot;&gt;Fun with ellipsis&lt;/div&gt;\\n\""
     },
     "floats": {
         "name": "floats",
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Floats<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
-        "html": "\"<div class=\\\"sc-clearfix example-floats\\\">\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n</div>\\n<hr>\\n<div class=\\\"sc-clearfix example-floats\\\">\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n</div>\\n\"",
-        "codeExample": "\"&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n&lt;hr&gt;\\n&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
+        "markDown": "\"<p><h2>Floats<span class=\\\"status review\\\">Needs review</span></h2></p>\\n<style>\\n#floats .sample .sc-pull-left{\\n    width: 100px;\\n    height: 100px;\\n    background: #ff7500;\\n    margin: 10px;\\n}\\n#floats .sample .sc-pull-right{\\n    width: 100px;\\n    height: 100px;\\n    background: #ff7500;\\n    margin: 10px;\\n}\\n</style>\\n\"",
+        "html": "\"<div class=\\\"sc-clearfix\\\">\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n    <div class=\\\"sc-pull-left\\\"></div>\\n</div>\\n<hr>\\n<div class=\\\"sc-clearfix\\\">\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n    <div class=\\\"sc-pull-right\\\"></div>\\n</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-clearfix&quot;&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n&lt;hr&gt;\\n&lt;div class=&quot;sc-clearfix&quot;&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
     },
     "horizontal-line": {
         "name": "horizontal-line",

@@ -2151,9 +2151,17 @@ document.querySelector('body').addEventListener('click', event => {
                 <div class="element" id="notification-tip">
                     <div class="markdown"><h2>Notification tip<span class="status refactor">Needs refactoring</span></h2>
 
-<div class="sc-content-container example-notification-target example-size-s" id="example-notification-target-s">
+<p><div class="sc-content-container example-notification-target" id="example-notification-target-s">
     Tip Notification Target container
-</div>
+</div></p>
+<style>
+#notification-tip .markdown #example-notification-target-s{
+    max-width: 640px;
+    height: 70px;
+    width: 100%;
+}
+</style>
+
 </div>
                    <div class="sample"><as24-notification type="tip" id="tip1" target="#example-notification-target-s" title="Small Tip for you" close="true">
     Tip tip hurra...
@@ -3027,6 +3035,12 @@ showcar.spyNavigation({
                     <div class="markdown"><h2>Sticky elements<span class="status review">Needs review. Check example centring</span></h2>
 
 <h4>Usage:</h4><p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
+<style>
+#sticky .sample .spacer{
+    height: 200px;
+    border: 1px solid black;
+}
+</style>
 </div>
                    <div class="sample"><div data-sticky-undock="myBtn"></div>
 <div class="spacer">
@@ -3082,15 +3096,23 @@ showcar.spyNavigation({
             
 
                 <div class="element" id="center-blocks">
-                    <div class="markdown"><h2>Block centring<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><p><h2>Block centring<span class="status review">Needs review</span></h2></p>
+<style>
+#center-blocks .sample .sc-block-center{
+padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #ff7500;
+}
+</style>
 </div>
-                   <div class="sample"><div class="sc-block-center example-block">.sc-block-center</div>
+                   <div class="sample"><div class="sc-block-center">.sc-block-center</div>
 </div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-center-blocks"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-code-center-blocks" class="hjs html">&lt;div class=&quot;sc-block-center example-block&quot;&gt;.sc-block-center&lt;/div&gt;
+                                <code id="copy_code-code-center-blocks" class="hjs html">&lt;div class=&quot;sc-block-center&quot;&gt;.sc-block-center&lt;/div&gt;
 </code>
                             </pre>
                         </div>
@@ -3104,14 +3126,20 @@ showcar.spyNavigation({
                     <div class="markdown"><h2>Ellipsis<span class="status review">Needs review</span></h2>
 
 <h4>Usage:</h4><p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+<style>
+#ellipsis .sample .sc-ellipsis{
+width: 100px;
+    border: 1px solid #808080;
+}
+</style>
 </div>
-                   <div class="sample"><div class="sc-ellipsis example-ellipsis" title="Loooong title">Fun with ellipsis</div>
+                   <div class="sample"><div class="sc-ellipsis" title="Loooong title">Fun with ellipsis</div>
 </div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-ellipsis"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-code-ellipsis" class="hjs html">&lt;div class=&quot;sc-ellipsis example-ellipsis&quot; title=&quot;Loooong title&quot;&gt;Fun with ellipsis&lt;/div&gt;
+                                <code id="copy_code-code-ellipsis" class="hjs html">&lt;div class=&quot;sc-ellipsis&quot; title=&quot;Loooong title&quot;&gt;Fun with ellipsis&lt;/div&gt;
 </code>
                             </pre>
                         </div>
@@ -3122,15 +3150,29 @@ showcar.spyNavigation({
             
 
                 <div class="element" id="floats">
-                    <div class="markdown"><h2>Floats<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><p><h2>Floats<span class="status review">Needs review</span></h2></p>
+<style>
+#floats .sample .sc-pull-left{
+    width: 100px;
+    height: 100px;
+    background: #ff7500;
+    margin: 10px;
+}
+#floats .sample .sc-pull-right{
+    width: 100px;
+    height: 100px;
+    background: #ff7500;
+    margin: 10px;
+}
+</style>
 </div>
-                   <div class="sample"><div class="sc-clearfix example-floats">
+                   <div class="sample"><div class="sc-clearfix">
     <div class="sc-pull-left"></div>
     <div class="sc-pull-left"></div>
     <div class="sc-pull-left"></div>
 </div>
 <hr>
-<div class="sc-clearfix example-floats">
+<div class="sc-clearfix">
     <div class="sc-pull-right"></div>
     <div class="sc-pull-right"></div>
     <div class="sc-pull-right"></div>
@@ -3140,13 +3182,13 @@ showcar.spyNavigation({
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-floats"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-code-floats" class="hjs html">&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;
+                                <code id="copy_code-code-floats" class="hjs html">&lt;div class=&quot;sc-clearfix&quot;&gt;
     &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;sc-pull-left&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;div class=&quot;sc-clearfix example-floats&quot;&gt;
+&lt;div class=&quot;sc-clearfix&quot;&gt;
     &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;sc-pull-right&quot;&gt;&lt;/div&gt;
