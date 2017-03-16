@@ -26,7 +26,6 @@ module.exports = (globalJSON, content) => {
             
             return `
                 <div class="element" id="${el.name}">
-                    <h2 style="text-transform: capitalize">${el.name}</h2>
                     <div class="markdown">${JSON.parse(el.markDown)}</div>
                    ${html} ${codeSample} ${jsSample}
                 </div>
