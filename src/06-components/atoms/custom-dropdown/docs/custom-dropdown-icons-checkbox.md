@@ -1,3 +1,1 @@
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
+<h2>Custom dropdown with icons and checkboxes<span class="status refactor">Needs refactoring</span></h2>
