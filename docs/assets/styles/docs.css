@@ -115,6 +115,7 @@ body {
 }
 .element {
     padding: 10px 0 50px;
+    clear: both;
 }
 .sample {
     border: 1px solid #dcdcdc;

@@ -14,7 +14,7 @@ module.exports = (gulp) => {
                 // the script to run the app
                 script: serverScript,
                 // this listens to changes in any of these files/routes and restarts the application
-                watch: ['dist/**/*','docs/**/*'],
+                watch: ['dist/**/*','docs/**/*','src/**/*'],
                 ext: 'js, html, scss, css, md',
                 stdout: false
                 // readable: false
