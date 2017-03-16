@@ -32,11 +32,11 @@ app.get('/docs/:type/', (req, res) => {
     } else {
         let content = Object.keys(globalJSON)
                 .filter((el) => {
-                    return globalJSON[el].type === req.params.type &&
-                        globalJSON[el].html;
+                    return globalJSON[el].type === req.params.type;
                 })
                 .map(el => {
-                    return JSON.parse(globalJSON[el].html)+'<br>';
+                    let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
+                    return JSON.parse(globalJSON[el].markDown) + html + '<br>';
                 }).join('') || 'empty';
         res.send(generateHtml(globalJSON, content));
     }
@@ -48,11 +48,11 @@ app.get('/docs/:type/:group', (req, res) => {
     } else {
         let content = Object.keys(globalJSON)
                 .filter((el) => {
-                    return globalJSON[el].group === req.params.group &&
-                        globalJSON[el].html;
+                    return globalJSON[el].group === req.params.group;
                 })
                 .map(el => {
-                    return JSON.parse(globalJSON[el].html)+'<br>';
+                    let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
+                    return JSON.parse(globalJSON[el].markDown) + html + '<br>';
                 }).join('') || 'empty';
         res.send(generateHtml(globalJSON, content));
     }
