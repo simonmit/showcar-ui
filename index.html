@@ -2947,7 +2947,22 @@ total number of items (totalCount)
 the url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.
 The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</p>
 <h4 id="status-">Status:</h4>
-<p class="status refactor">Needs refactoring</p>
+<p><p class="status refactor">Needs refactoring</p></p>
+<script>
+window.onload = function(){
+ (function ($) {
+ var paginationElement = document.querySelector('.sc-pagination'),
+ itemsPerPage = 20,
+ activePage = 1,
+ totalCount = 800,
+ urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+
+ if (paginationElement) {
+ new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+ }
+ })(window.Zepto);
+ }
+</script>
 </div>
                    <div class="sample"><ul class="sc-pagination">
     <li class="previous-page">
