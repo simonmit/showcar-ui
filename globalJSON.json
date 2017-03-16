@@ -167,8 +167,8 @@
         "html": "\"<div>\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-1\\\" type=\\\"checkbox\\\" />\\n    <label for=\\\"as24-checkbox-1\\\">Checkbox</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-2\\\" type=\\\"checkbox\\\" disabled />\\n    <label for=\\\"as24-checkbox-2\\\">Checkbox (disabled)</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-1&quot; type=&quot;checkbox&quot; /&gt;\\n    &lt;label for=&quot;as24-checkbox-1&quot;&gt;Checkbox&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-2&quot; type=&quot;checkbox&quot; disabled /&gt;\\n    &lt;label for=&quot;as24-checkbox-2&quot;&gt;Checkbox (disabled)&lt;/label&gt;\\n&lt;/div&gt;\\n\""
     },
-    "default-input": {
-        "name": "default-input",
+    "input-default": {
+        "name": "input-default",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
@@ -176,8 +176,8 @@
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;\\n\""
     },
-    "disabled-input": {
-        "name": "disabled-input",
+    "input-disabled": {
+        "name": "input-disabled",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
@@ -185,8 +185,8 @@
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input disabled\\\" disabled>\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input disabled&quot; disabled&gt;\\n\""
     },
-    "error-input": {
-        "name": "error-input",
+    "input-error": {
+        "name": "input-error",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
@@ -194,14 +194,30 @@
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input error\\\" placeholder=\\\".sc-input error\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input error&quot; placeholder=&quot;.sc-input error&quot;&gt;\\n\""
     },
-    "info-input": {
-        "name": "info-input",
+    "input-info": {
+        "name": "input-info",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
         "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input info\\\" placeholder=\\\".sc-input info\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input info&quot; placeholder=&quot;.sc-input info&quot;&gt;\\n\""
+    },
+    "input-select": {
+        "name": "input-select",
+        "type": "atoms",
+        "group": "input",
+        "srcDir": "src/06-components/atoms/input/docs",
+        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\""
+    },
+    "input-success": {
+        "name": "input-success",
+        "type": "atoms",
+        "group": "input",
+        "srcDir": "src/06-components/atoms/input/docs",
+        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "html": "\"<input type=\\\"text\\\" class=\\\"sc-input success\\\" placeholder=\\\".sc-input success\\\">\\n\"",
+        "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input success&quot; placeholder=&quot;.sc-input success&quot;&gt;\\n\""
     },
     "radio-button": {
         "name": "radio-button",
@@ -229,22 +245,6 @@
         "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
         "html": "\"<select class=\\\"sc-input\\\" placeholder=\\\"sc-input\\\">\\n    <option>...</option>\\n    <option>Value 1</option>\\n    <option>Value 2</option>\\n</select>\\n\"",
         "codeExample": "\"&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;\\n    &lt;option&gt;...&lt;/option&gt;\\n    &lt;option&gt;Value 1&lt;/option&gt;\\n    &lt;option&gt;Value 2&lt;/option&gt;\\n&lt;/select&gt;\\n\""
-    },
-    "select-input": {
-        "name": "select-input",
-        "type": "atoms",
-        "group": "input",
-        "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\""
-    },
-    "success-input": {
-        "name": "success-input",
-        "type": "atoms",
-        "group": "input",
-        "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
-        "html": "\"<input type=\\\"text\\\" class=\\\"sc-input success\\\" placeholder=\\\".sc-input success\\\">\\n\"",
-        "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input success&quot; placeholder=&quot;.sc-input success&quot;&gt;\\n\""
     },
     "textarea": {
         "name": "textarea",
