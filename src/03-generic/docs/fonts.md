@@ -56,3 +56,8 @@ Library also provides `sc-font-bold`, `sc-font-silent` and `sc-font-uppercase` c
         </tr>
     </tbody>
 </table>
+<style>
+#fonts-link .sample p{
+margin-bottom:15px;
+}
+</style>
