@@ -1,5 +1,3 @@
-The following color variables are defined by the UX-Team.
-
 <h2>Colors Primary Black<span class="status complete">Complete</span></h2>
 
 <div class="ndpl-component__colors ndpl-cf">
