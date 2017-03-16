@@ -912,6 +912,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
 <p>We created a special type of radio buttons and checkboxes for you to easily implement a color selection. In this case you have to write a little custom scss to define the background color of the elements. You can also choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.</p>
 <h3 id="additional-scss">additional scss</h3>
 <pre>
+    <code class="css">
     @import "path/to/mixins/color-selector";
     .sc-color-selector {
         input.sc-input {
@@ -924,6 +925,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
             }
         }
     }
+    </code>
 </pre>
 </div>
                    <div class="sample"><div class="sc-color-selector">
