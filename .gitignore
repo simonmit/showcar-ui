@@ -15,6 +15,7 @@ backstop_data
 backstop.json
 .sass-cache
 .vscode
-docs/lib
-docs/components
 .tmp
+
+docs/index.html
+docs/globalJSON.json
