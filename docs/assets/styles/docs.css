@@ -374,6 +374,7 @@ body {
     }
 }
 .markdown h4{
+    font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
     line-height: 2.2;

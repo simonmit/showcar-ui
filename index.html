@@ -203,8 +203,7 @@
             
 
                 <div class="element" id="colors-primary-black">
-                    <div class="markdown"><p>The following color variables are defined by the UX-Team.</p>
-<h2>Colors Primary Black<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Colors Primary Black<span class="status complete">Complete</span></h2>
 
 <div class="ndpl-component__colors ndpl-cf">
     <div class="ndpl-component__color-container">
@@ -531,8 +530,7 @@
                 <div class="element" id="spacings">
                     <div class="markdown"><h2>Spacings<span class="status complete">Complete</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>
+<h4>Usage:</h4><p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -579,8 +577,7 @@
                 <div class="element" id="viewports">
                     <div class="markdown"><h2>Viewports<span class="status refactor">Needs refactoring</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.<br>Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  </p>
+<h4>Usage:</h4><p>All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.<br>Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  </p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -631,10 +628,8 @@
                     <div class="markdown"><h2>Fonts and headlines<span class="status complete">Complete</span></h2>
 
 <p>ShowCars default <code>font-family</code> is Source Sans Pro. Please use the predefined classes to increase or decrease the font size. You should not define explicit font sizes. To use the Source Sans Pro font, you don&#39;t have to do anything.</p>
-<h4 id="font-sizes">Font sizes</h4>
-<p>Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
-<h4 id="headlines">Headlines</h4>
-<p>For styling <code>&lt;h*&gt;</code> elements please use <code>sc-font-*</code> classes directly.
+<h4>Font sizes</h4><p>Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
+<h4>Headlines</h4><p>For styling <code>&lt;h*&gt;</code> elements please use <code>sc-font-*</code> classes directly.
 For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
 <table class="docs-table">
     <thead>
@@ -912,8 +907,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
                     <div class="markdown"><h2>Color selector radio<span class="status refactor">Needs refactoring</span></h2>
 
 <p>We created a special type of radio buttons and checkboxes for you to easily implement a color selection. In this case you have to write a little custom scss to define the background color of the elements. You can also choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.</p>
-<h3 id="additional-scss">additional scss</h3>
-<pre>
+<h3>additional scss</h3><pre>
     <code class="css">
     @import "path/to/mixins/color-selector";
     .sc-color-selector {
@@ -1638,8 +1632,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                     <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span></h2>
 
 <p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>
-<h4 id="usage-">usage:</h4>
-<p>in order to use it add following elements to your html:</p>
+<h4>usage:</h4><p>in order to use it add following elements to your html:</p>
 <ol>
 <li>1) link, button or any other clickable element which has [data-lightbox-trigger] attribute and data-id attribute, that points to the as24-lightbox container to show (lightbox-1 in example). to prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. it&#39;s a valid html5 syntax.</li>
 <li>2) as24-lightbox container with appropriate id. inside of the container you may paste div with content of your choice.</li>
@@ -1752,8 +1745,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                 <div class="element" id="spinner">
                     <div class="markdown"><h2>Spinner<span class="status review">Needs tech review</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>
+<h4>Usage:</h4><p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>
 <style>
 #spinner-link .sample{
      background-color: #808080;
@@ -2619,8 +2611,7 @@ showcar.spyNavigation({
                 <div class="element" id="content-container">
                     <div class="markdown"><h2>Content container<span class="status review">Needs review</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use <code>sc-content-container</code> class on your page once!</p>
+<h4>Usage:</h4><p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use <code>sc-content-container</code> class on your page once!</p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -2669,8 +2660,7 @@ showcar.spyNavigation({
                 <div class="element" id="grid">
                     <div class="markdown"><h2>Grid<span class="status refactor">Needs refactoring</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
+<h4>Usage:</h4><p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
 <div class="example-grid">
     <div class="sc-content-container">
         <div class="sc-grid-row">
@@ -2838,8 +2828,7 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-grid">
                     <div class="markdown"><h2>Responsive grid<span class="status refactor">Needs refactoring</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
+<h4>Usage:</h4><p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -2935,8 +2924,7 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-images-picture">
                     <div class="markdown"><h2>Responsive images - art direction<span class="status complete">Complete</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>Art direction - cropping the image differently on diffrent. E.g. hero image that contains text and providing a smaller version of the image won’t work because the text will be unreadable.<br>Use <code>&lt;picture&gt;</code> tag.<br>Also see demo <a href="https://scottjehl.github.io/picturefill/examples/demo-02.html">here</a></p>
+<h4>Usage:</h4><p>Art direction - cropping the image differently on diffrent. E.g. hero image that contains text and providing a smaller version of the image won’t work because the text will be unreadable.<br>Use <code>&lt;picture&gt;</code> tag.<br>Also see demo <a href="https://scottjehl.github.io/picturefill/examples/demo-02.html">here</a></p>
 </div>
                    <div class="sample"><picture>
     <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
@@ -2971,8 +2959,7 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-images-srcset">
                     <div class="markdown"><h2>Responsive images - resolution switching<span class="status complete">Complete</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>In the resolution switching use case, when you need to select a different source of the same image because you need a different resolution.<br>Use srcset attribute on the <img>.</p>
+<h4>Usage:</h4><p>In the resolution switching use case, when you need to select a different source of the same image because you need a different resolution.<br>Use srcset attribute on the <img>.</p>
 <p>The height and width of the image should remain fixed.</p>
 <pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;
 </code></pre>
@@ -3002,8 +2989,7 @@ showcar.spyNavigation({
                 <div class="element" id="sticky">
                     <div class="markdown"><h2>Sticky elements<span class="status review">Needs review. Check example centring</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
+<h4>Usage:</h4><p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
 </div>
                    <div class="sample"><div data-sticky-undock="myBtn"></div>
 <div class="spacer">
@@ -3086,8 +3072,7 @@ showcar.spyNavigation({
                 <div class="element" id="ellipsis">
                     <div class="markdown"><h2>Ellipsis<span class="status review">Needs review</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+<h4>Usage:</h4><p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
 </div>
                    <div class="sample"><div class="sc-ellipsis example-ellipsis" title="Loooong title">Fun with ellipsis</div>
 </div> 
@@ -3151,8 +3136,7 @@ showcar.spyNavigation({
                 <div class="element" id="horizontal-line">
                     <div class="markdown"><h2>Horizontal line<span class="status review">Needs review</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>To separate some content you can use a horizontal line.</p>
+<h4>Usage:</h4><p>To separate some content you can use a horizontal line.</p>
 </div>
                    <div class="sample">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 <hr>
@@ -3179,8 +3163,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                 <div class="element" id="scrolling">
                     <div class="markdown"><h2>Smooth scrolling<span class="status review">Needs review</span></h2>
 
-<h3 id="usage-">Usage:</h3>
-<p>Adds some nice animated scrolling functionality. In order to use it add the <code>sc-smooth-scroll</code> class to any anchor link.<br>As an additional example see detail_page</p>
+<h3>Usage:</h3><p>Adds some nice animated scrolling functionality. In order to use it add the <code>sc-smooth-scroll</code> class to any anchor link.<br>As an additional example see detail_page</p>
 </div>
                    <div class="sample"><a href="#top" class="sc-smooth-scroll">To Top</a>
 </div> 
@@ -3250,8 +3233,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                 <div class="element" id="visibility">
                     <div class="markdown"><h2>Visible/hidden classes<span class="status refactor">Needs refactoring</span></h2>
 
-<h4 id="usage-">Usage:</h4>
-<p>Utility classes to show/hide elements based on the current viewport (media queries).<br>IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device&#39;s presentation.</p>
+<h4>Usage:</h4><p>Utility classes to show/hide elements based on the current viewport (media queries).<br>IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device&#39;s presentation.</p>
 <table class="docs-table docs-table-visibility">
     <thead>
     <tr>
