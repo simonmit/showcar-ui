@@ -872,39 +872,6 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
 <hr></div><div id="color-selector-link" class="positon-anchor">
                 <div class="element" id="color-selector-checkbox">
                     <div class="markdown"><h2>Color selector checkbox<span class="status refactor">Needs refactoring</span></h2>
-</div>
-                   <div class="sample"><div class="sc-color-selector">
-    <input id="as24-cb-cp-5" type="checkbox" name="xx" class="sc-input sc-input-l blue">
-    <label for="as24-cb-cp-5">blue</label>
-
-    <input id="as24-cb-cp-6" type="checkbox" name="xx" class="sc-input sc-input-l other">
-    <label for="as24-cb-cp-6">other</label>
-</div>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-color-selector-checkbox"  alt="Copy to clipboard"><span></span></button>
-                            <pre>
-                                <code id="copy_code-code-color-selector-checkbox" class="hjs html">
-                                    &lt;div class=&quot;sc-color-selector&quot;&gt;
-    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;
-
-    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;other&lt;/label&gt;
-&lt;/div&gt;
-
-                                </code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-
-                <div class="element" id="color-selector">
-                    <div class="markdown"><h2>Color selector radio<span class="status refactor">Needs refactoring</span></h2>
 
 <p>We created a special type of radio buttons and checkboxes for you to easily implement a color selection. In this case you have to write a little custom scss to define the background color of the elements. You can also choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.</p>
 <h3>additional scss</h3><pre>
@@ -925,23 +892,65 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
 </pre>
 </div>
                    <div class="sample"><div class="sc-color-selector">
+    <input id="as24-cb-cp-8" type="checkbox" name="xx" class="sc-input sc-input-l blue">
+    <label for="as24-cb-cp-8">blue</label>
+
+    <input id="as24-cb-cp-9" type="checkbox" name="xx" class="sc-input sc-input-l red" disabled>
+    <label for="as24-cb-cp-9">red</label>
+
+    <input id="as24-cb-cp-10" type="checkbox" name="xx" class="sc-input sc-input-l other">
+    <label for="as24-cb-cp-10">other</label>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-color-selector-checkbox"  alt="Copy to clipboard"><span></span></button>
+                            <pre>
+                                <code id="copy_code-code-color-selector-checkbox" class="hjs html">
+                                    &lt;div class=&quot;sc-color-selector&quot;&gt;
+    &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-8&quot;&gt;blue&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-9&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l red&quot; disabled&gt;
+    &lt;label for=&quot;as24-cb-cp-9&quot;&gt;red&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-10&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-10&quot;&gt;other&lt;/label&gt;
+&lt;/div&gt;
+
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="color-selector">
+                    <div class="markdown"><h2>Color selector radio<span class="status refactor">Needs refactoring</span></h2>
+</div>
+                   <div class="sample"><div class="sc-color-selector">
     <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
     <label for="as24-cb-cp-1">red</label>
 
     <input id="as24-cb-cp-2" type="radio" name="xx" class="sc-input yellow">
     <label for="as24-cb-cp-2">yellow</label>
 
-    <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input green">
-    <label for="as24-cb-cp-7">green</label>
+    <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input green">
+    <label for="as24-cb-cp-3">green</label>
 
-    <input id="as24-cb-cp-8" type="radio" name="xx" class="sc-input gold">
-    <label for="as24-cb-cp-8">gold</label>
+    <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input gold">
+    <label for="as24-cb-cp-4">gold</label>
 
-    <input id="as24-cb-cp-3" type="radio" name="xx" class="sc-input sc-input-l blue">
-    <label for="as24-cb-cp-3">blue</label>
+    <input id="as24-cb-cp-5" type="radio" name="xx" class="sc-input sc-input-l blue">
+    <label for="as24-cb-cp-5">blue</label>
 
-    <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input sc-input-l other">
-    <label for="as24-cb-cp-4">other</label>
+    <input id="as24-cb-cp-6" type="radio" name="xx" class="sc-input sc-input-l brown" disabled>
+    <label for="as24-cb-cp-6">brown</label>
+
+    <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input sc-input-l other">
+    <label for="as24-cb-cp-7">other</label>
 </div>
 </div> 
                     <div class="code-sample">
@@ -956,17 +965,20 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
     &lt;input id=&quot;as24-cb-cp-2&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input yellow&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-2&quot;&gt;yellow&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input green&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-7&quot;&gt;green&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-3&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input green&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-3&quot;&gt;green&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-8&quot;&gt;gold&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-4&quot;&gt;gold&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-3&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-3&quot;&gt;blue&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-4&quot;&gt;other&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l brown&quot; disabled&gt;
+    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;brown&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-7&quot;&gt;other&lt;/label&gt;
 &lt;/div&gt;
 
                                 </code>
