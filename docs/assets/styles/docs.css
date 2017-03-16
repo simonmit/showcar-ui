@@ -114,11 +114,11 @@ body {
 #content {
 }
 .element {
-    padding: 10px 0 50px;
+    padding: 20px 0 50px;
     clear: both;
 }
 .sample {
-    margin-top: 20px;
+    margin-top: 30px;
     border: 1px solid #dcdcdc;
     border-radius: 4px 4px 0 0;
     padding: 36px;
@@ -149,7 +149,7 @@ body {
     width: 100%;
 }
 #content .type_name {
-    padding: 40px 0 60px;
+    padding: 40px 0;
     font-size: 40px;
     line-height: 1.2;
     text-transform: capitalize;
@@ -160,7 +160,7 @@ body {
     font-size: 24px;
 }
 #content hr {
-    padding: 82px 0 52px;
+    padding: 0px 0 40px;
 }
 #content hr:first-child {
     display: none;
