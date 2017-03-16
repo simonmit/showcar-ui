@@ -2635,6 +2635,26 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
                 </div>
             
 <hr></div><div id="notification-link" class="positon-anchor">
+                <div class="element" id="_notification">
+                    <div class="markdown"><p><div class="sc-content-container example-notification-target" id="example-notification-target">
+    Notification Target container
+</div></p>
+<script>
+    document.querySelector('body').addEventListener('click', event => {
+ try {
+ if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
+ const id = event.target.getAttribute('data-id');
+ const el = document.querySelector('#' + id);
+ el.classList.toggle('show');
+ }
+ }catch (e){};
+ });
+</script>
+</div>
+                     
+                </div>
+            
+
                 <div class="element" id="notification-closeable">
                     <div class="markdown"><h4 id="status-">Status:</h4>
 <p class="status refactor">Needs refactoring</p>
@@ -2756,15 +2776,6 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
                     </div>
                  
-                </div>
-            
-
-                <div class="element" id="notification">
-                    <div class="markdown"><div class="sc-content-container example-notification-target" id="example-notification-target">
-    Notification Target container
-</div>
-</div>
-                     
                 </div>
             
 <hr></div><div id="navigation-link" class="positon-anchor"><h2 class="type_name">organisms</h2>

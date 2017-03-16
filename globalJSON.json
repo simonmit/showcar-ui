@@ -383,6 +383,13 @@
         "html": "\"<div class=\\\"sc-input-group\\\">\\n    <input class=\\\"sc-input\\\" type=\\\"text\\\" placeholder=\\\"Text input 1\\\">\\n    <input class=\\\"sc-input\\\" type=\\\"text\\\" placeholder=\\\"Text input 2\\\">\\n    <button class=\\\"sc-btn-bob\\\">Submit</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-input-group&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 1&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; type=&quot;text&quot; placeholder=&quot;Text input 2&quot;&gt;\\n    &lt;button class=&quot;sc-btn-bob&quot;&gt;Submit&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
+    "_notification": {
+        "name": "_notification",
+        "type": "molecules",
+        "group": "notification",
+        "srcDir": "src/06-components/molecules/notification/docs",
+        "markDown": "\"<p><div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target\\\">\\n    Notification Target container\\n</div></p>\\n<script>\\n    document.querySelector('body').addEventListener('click', event => {\\n try {\\n if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {\\n const id = event.target.getAttribute('data-id');\\n const el = document.querySelector('#' + id);\\n el.classList.toggle('show');\\n }\\n }catch (e){};\\n });\\n</script>\\n\""
+    },
     "notification-closeable": {
         "name": "notification-closeable",
         "type": "molecules",
@@ -409,13 +416,6 @@
         "markDown": "\"<div class=\\\"sc-content-container example-notification-target example-size-s\\\" id=\\\"example-notification-target-s\\\">\\n    Tip Notification Target container\\n</div>\\n\\n<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
         "html": "\"<as24-notification type=\\\"tip\\\" id=\\\"tip1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Small Tip for you\\\" close=\\\"true\\\">\\n    Tip tip hurra...\\n</as24-notification>\\n<div class=\\\"sc-text-center\\\">\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"tip1\\\">Show small tip notification</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;tip&quot; id=&quot;tip1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Small Tip for you&quot; close=&quot;true&quot;&gt;\\n    Tip tip hurra...\\n&lt;/as24-notification&gt;\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show small tip notification&lt;/button&gt;\\n&lt;/div&gt;\\n\""
-    },
-    "notification": {
-        "name": "notification",
-        "type": "molecules",
-        "group": "notification",
-        "srcDir": "src/06-components/molecules/notification/docs",
-        "markDown": "\"<div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target\\\">\\n    Notification Target container\\n</div>\\n\""
     },
     "navigation": {
         "name": "navigation",

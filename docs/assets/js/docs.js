@@ -111,18 +111,6 @@ window.addEventListener('load', function () {
 */
 
 
-/*
-    document.querySelector('body').addEventListener('click', event => {
- try {
- if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
- const id = event.target.getAttribute('data-id');
- const el = document.querySelector('#' + id);
- el.classList.toggle('show');
- }
- }catch (e){};
- });*/
-
-
 /*setTimeout(()=>{ // temporary hack
  (function ($) {
  var paginationElement = document.querySelector('.sc-pagination'),
