@@ -1,3 +1,1 @@
-#### Status
-
-<p class="status refactor">Needs refactoring!</p>
+<h2>Color selector checkbox<span class="status refactor">Needs refactoring</span></h2>
