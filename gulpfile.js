@@ -57,11 +57,13 @@ const UglifyJS = require("uglify-js");
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
 const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
 const stringReplace = require('gulp-string-replace');
+
 var replaceOptions = {
     logs: {
         enabled: false
     }
 };
+
 gulp.task('replace', function () {
     gulp.src(['src/html/index.html', 'src/html/index-standalone.html'])
         .pipe(stringReplace('@@POLYFILL_DOCUMENT_REGISTER_ELEMENT', readFile('node_modules/document-register-element/build/document-register-element.js'), replaceOptions))
@@ -80,31 +82,25 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('lint', ['eslint', 'stylelint']);
 
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
-/*
- gulp.task('clean:docs', scgulp.clean({
- files: ['docs/components/!*']
- }));
- gulp.task('copy:docs', ['clean:docs'], () => {
- gulp.src('dist/!*.{css,js,map}').pipe(gulp.dest('docs/lib'));
- gulp.src(['src/06-components/!**!/docs/!*']).pipe(gulp.dest('docs/components'));
- gulp.src('src/01-settings/docs/!*').pipe(gulp.dest('docs/components/globals/settings/docs'));
- gulp.src('src/03-generic/docs/!*').pipe(gulp.dest('docs/components/globals/generic/docs'));
- gulp.src('src/05-layout/docs/!*').pipe(gulp.dest('docs/components/globals/layout/docs'));
- gulp.src('src/07-utilities/docs/!*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
- })
- gulp.task('docs:watch', () => {
- gulp.watch(['src/!**!/docs/!*', 'dist/!*'], ['copy:docs']);
- });
- gulp.task('docs', ['copy:docs']);
- */
+gulp.task('clean:docs', scgulp.clean({
+    files: ['docs/components/!*']
+}));
 
+gulp.task('copy:docs', ['clean:docs'], () => {
+    gulp.src('dist/*.{css,js,map}').pipe(gulp.dest('docs/lib'));
+    gulp.src(['src/06-components/**/docs/*']).pipe(gulp.dest('docs/components'));
+    gulp.src('src/01-settings/docs/*').pipe(gulp.dest('docs/components/globals/settings/docs'));
+    gulp.src('src/03-generic/docs/*').pipe(gulp.dest('docs/components/globals/generic/docs'));
+    gulp.src('src/05-layout/docs/*').pipe(gulp.dest('docs/components/globals/layout/docs'));
+    gulp.src('src/07-utilities/docs/*').pipe(gulp.dest('docs/components/globals/utilities/docs'));
+});
 
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
+gulp.task('docs:watch', () => {
+    gulp.watch(['src/**/docs/*', 'dist/*'], ['copy:docs']);
+});
 
-gulp.task('dev', ['set-dev', 'build', 'js:watch', 'scss:watch', 'serve']);
+gulp.task('docs', ['copy:docs']);
 
 
 const generateJsonDocs = require('./docs/tasks/generateJson');
@@ -117,8 +113,9 @@ gulp.task('docs:generate', ['generateJsonDocs'], () => {
     generateHtmlDocs()
 });
 
-
 const serveDocs = require('./docs/tasks/docs');
-gulp.task('docs:serve', () => {serveDocs(gulp)});
 
+gulp.task('docs:serve', () => {serveDocs(gulp)});
+gulp.task('lint', ['eslint', 'stylelint']);
+gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
