@@ -118,6 +118,7 @@ body {
     clear: both;
 }
 .sample {
+    margin-top: 20px;
     border: 1px solid #dcdcdc;
     border-radius: 4px 4px 0 0;
     padding: 36px;
@@ -353,164 +354,10 @@ body {
 }
 
 
-/*---------------------------------------------------------------------------------------------------------*/
-/*own style*/
-.ndpl-nav__title, .ndpl-nav__title .ndpl-nsc{
-    font-size: 1rem !important;
-}
-*{
-    font-family: "Source Sans Pro" !important
-}
-.ndpl-library{
-    padding: 0 0;
-}
-.ndpl-sidebar{
-    width: 300px;
-    background-color: #f4f4f4;
-    padding-top: 20px;
-}
-@media only screen and (min-width: 60em){
-    .ndpl-content{
-        padding: 36px 48px 36px 330px;
-    }
-}
-.ndpl-sidebar__logo{
-    height: 35px;
-    width: 74px;
-}
-.ndpl-sidebar__title.ndpl-c-brand-ca small{
-    font-size: 1.25rem;
-    margin-bottom: 1em;
-    line-height: 1.4;
-}
-.ndpl-nav__group.ndpl-nsc.ndpl-c-border-b{
-    font-size: 16px;
-    font-weight: normal;
-}
-.ndpl-nav__items{
-    line-height: 56px;
-    border-top: 1px solid #e0e6ed;
-}
-.ndpl-nav__child-item{
-    line-height: 30px;
-}
-.ndpl-library__title{
-    font-size: 2.5rem !important;
-    line-height: 1.2;
-}
-.ndpl-nav__child-item{
-    border-bottom: 1px solid #e0e6ed;
-}
-.ndpl-component__description h4{
-    font-size: 18px;
-    line-height: 2.2;
-    padding-top: 8px;
-}
-.search{
-    width: 90%;
-    padding-left: 5%;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 60px;
-}
-.search input{
-    width: 70%;
-    height: 40px;
-    border: 1px solid #c4c4c4;
-    border-radius: 4px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right-color: #fff;
-    transition: all 100ms ease-out;
-    cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.search button{
-    width: 30%;
-    padding: 10px;
-    margin-left: -1px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    transition: all 100ms ease-out;
-    background: #ff7500;
-    border: none;
-    color: #fff;
-    line-height: 16px;
-    font-size: 16px;
-}
-.ndpl-nav__component.active, .ndpl-nav__component:hover{
-    border-left-color: #ff7500;
-}
-.ndpl-nav__title, .ndpl-nav__title .ndpl-nsc{
-    font-size: 13px !important;
-    font-weight: normal;
-}
-.ndpl-component{
-    margin-bottom: 50px;
-}
-.ndpl-component__code{
-    position: relative;
-}
-.ndpl-component__code:hover .clipbrd-btn{
-    opacity: 1;
-    transition: opacity .4s;
-}
-.clipbrd-btn{
-    opacity: 0;
-    transition: opacity .4s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    padding: 6px 12px;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 20px;
-    color: #333;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #eee;
-    background-image: linear-gradient(#fcfcfc, #eee);
-    border: 1px solid #d5d5d5;
-    border-radius: 3px;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-appearance: none;
-    width: 38px;
-    height: 34px;
-    z-index: 1;
-}
-.clipbrd-btn img{
-    margin-top: -3px;
-    position: relative;
-    top: 3px;
-    max-width: 100%;
-}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 pre code:before{
     content: '';
-}
-@media only screen and (min-width: 60em){
-    .ndpl-component--half{
-        align-self: flex-end;
-    }
-}
-.status{
-    padding-bottom: 8px;
-}
-.status.complete{
-    color: green;
-}
-.status.refactor{
-    color: red;
-}
-.status.review{
-    color: orange;
 }
 /* lightbox samples */
 .example-lightbox .desc-text{
@@ -620,14 +467,13 @@ pre code:before{
     height: 200px;
     border: 1px solid black;
 }
-.ndpl-page{
-    margin: 0; /* dirty hack */
-}
-.ndpl-preloaded{
-    display: none;
-}
-.ndpl-page code, .ndpl-component__description code, .ndpl-group__description code{
+code{
     color: #ff7500;
+    display: inline-block;
+    border: 1px solid #E1E1E1 ;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 0 3px;
 }
 .ndpl-nav__page.active, .ndpl-nav__page:hover{
     border-left-color: #ff7500;
