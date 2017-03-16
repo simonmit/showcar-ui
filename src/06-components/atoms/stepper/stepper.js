@@ -1,5 +1,5 @@
 export default () => {
-    (function() {
+    window.addEventListener('DOMContentLoaded', function() {
         Array.prototype.forEach.call(document.querySelectorAll('.sc-stepper'), (stepperContainer) => {
             const stepperEl = stepperContainer.querySelector('.sc-stepper-input');
             const decrementEl = stepperContainer.querySelector('.sc-stepper-button-decrement');
@@ -33,5 +33,5 @@ export default () => {
             decrementEl.addEventListener('click', decrement);
             incrementEl.addEventListener('click', increment);
         });
-    }());
+    });
 };
