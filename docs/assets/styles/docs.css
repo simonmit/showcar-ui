@@ -21,6 +21,20 @@ body {
 
     }
 }
+
+.markdown ul {
+    list-style: inherit;
+    padding-top: 12px;
+}
+
+.markdown ul > li {
+    margin-left: 20px;
+}
+
+.markdown p {
+    padding-top: 12px;
+}
+
 #sidebar {
     float: left;
     width: 330px;
@@ -148,6 +162,12 @@ body {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     white-space: pre;
     width: 100%;
+    border: none;
+    border-radius:0;
+    background-color: #f4f4f4;
+}
+.element code.hljs.js {
+    color: #d14;
 }
 #content .type_name {
     padding: 40px 0;

@@ -15,7 +15,7 @@ module.exports = (globalJSON, content) => {
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-${type}-${el.name}"  alt="Copy to clipboard"><span></span></button>
                             <pre>
-                                <code id="copy_code-${type}-${el.name}">
+                                <code id="copy_code-${type}-${el.name}" class="hjs ${type === 'js' ? 'js javascript' : 'html'}">
                                     ${content}
                                 </code>
                             </pre>
@@ -79,7 +79,7 @@ module.exports = (globalJSON, content) => {
     stylesFiles = stylesFiles.map(style => {
         return `<link rel="stylesheet" href="/showcar-ui/${style}">`
     }).join('\n');
-    const polyfils = require('./polyfils.js')
+    const polyfils = require('../../dist/polyfills.js');
     
     const head = `
         <!DOCTYPE html>
@@ -89,7 +89,7 @@ module.exports = (globalJSON, content) => {
                 <meta name="viewport" content="width=device-width">
                 <title v-text="ShowCar UI docs"></title>
                 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-                <script>${polyfils}</script>
+                <script>(${polyfils})()</script>
                 ${scriptsFiles}
                 ${stylesFiles}
              </head>
