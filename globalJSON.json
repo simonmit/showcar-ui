@@ -64,7 +64,7 @@
         "type": "atoms",
         "group": "button",
         "srcDir": "src/06-components/atoms/button/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Button disabled<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<button class=\\\"sc-btn-bob\\\" disabled=\\\"\\\">I am Bob!</button>\\n<button class=\\\"sc-btn-ross\\\" disabled=\\\"\\\">I am Ross!</button>\\n\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-bob&quot; disabled=&quot;&quot;&gt;I am Bob!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-ross&quot; disabled=&quot;&quot;&gt;I am Ross!&lt;/button&gt;\\n\""
     },
@@ -73,7 +73,7 @@
         "type": "atoms",
         "group": "button",
         "srcDir": "src/06-components/atoms/button/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Button fullwidth<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<button class=\\\"sc-btn-bob sc-btn-block\\\">I am Bob!</button>\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-bob sc-btn-block&quot;&gt;I am Bob!&lt;/button&gt;\""
     },
@@ -82,7 +82,7 @@
         "type": "atoms",
         "group": "button",
         "srcDir": "src/06-components/atoms/button/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Link as a button<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<a class=\\\"sc-btn-bob\\\">I am Bob!</a>\\n<a class=\\\"sc-btn-ross\\\">I am Ross!</a>\"",
         "codeExample": "\"&lt;a class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/a&gt;\\n&lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;\""
     },
@@ -91,7 +91,7 @@
         "type": "atoms",
         "group": "collapse",
         "srcDir": "src/06-components/atoms/collapse/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Collapse more&amp;less<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<a class=\\\"sc-collapse sc-collapse-target in\\\" data-toggle=\\\"sc-collapse\\\" data-target=\\\".sc-collapse-target\\\">\\n    More Content\\n</a>\\n<div class=\\\"sc-collapse sc-collapse-target\\\">\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n</div>\\n<a data-toggle=\\\"sc-collapse\\\" data-target=\\\".sc-collapse-target\\\" class=\\\"sc-collapse sc-collapse-target\\\">\\n    Less Content\\n</a>\\n\"",
         "codeExample": "\"&lt;a class=&quot;sc-collapse sc-collapse-target in&quot; data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot;&gt;\\n    More Content\\n&lt;/a&gt;\\n&lt;div class=&quot;sc-collapse sc-collapse-target&quot;&gt;\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;/div&gt;\\n&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;.sc-collapse-target&quot; class=&quot;sc-collapse sc-collapse-target&quot;&gt;\\n    Less Content\\n&lt;/a&gt;\\n\""
     },
@@ -100,7 +100,7 @@
         "type": "atoms",
         "group": "collapse",
         "srcDir": "src/06-components/atoms/collapse/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Collapse toggle<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<a data-toggle=\\\"sc-collapse\\\" data-target=\\\"#collapse\\\">\\n    Toggle Content\\n</a>\\n<div id=\\\"collapse\\\" class=\\\"sc-collapse\\\">\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n</div>\\n\"",
         "codeExample": "\"&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse&quot;&gt;\\n    Toggle Content\\n&lt;/a&gt;\\n&lt;div id=&quot;collapse&quot; class=&quot;sc-collapse&quot;&gt;\\n    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;/div&gt;\\n\""
     },
@@ -109,7 +109,7 @@
         "type": "atoms",
         "group": "color-selector",
         "srcDir": "src/06-components/atoms/color-selector/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring!</p>\\n\"",
+        "markDown": "\"<h2>Color selector checkbox<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"<div class=\\\"sc-color-selector\\\">\\n    <input id=\\\"as24-cb-cp-5\\\" type=\\\"checkbox\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l blue\\\">\\n    <label for=\\\"as24-cb-cp-5\\\">blue</label>\\n\\n    <input id=\\\"as24-cb-cp-6\\\" type=\\\"checkbox\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l other\\\">\\n    <label for=\\\"as24-cb-cp-6\\\">other</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-color-selector&quot;&gt;\\n    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;other&lt;/label&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -118,7 +118,7 @@
         "type": "atoms",
         "group": "color-selector",
         "srcDir": "src/06-components/atoms/color-selector/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring!</p>\\n\"",
+        "markDown": "\"<h2>Color selector radio<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"<div class=\\\"sc-color-selector\\\">\\n    <input id=\\\"as24-cb-cp-1\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input red\\\">\\n    <label for=\\\"as24-cb-cp-1\\\">red</label>\\n\\n    <input id=\\\"as24-cb-cp-2\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input yellow\\\">\\n    <label for=\\\"as24-cb-cp-2\\\">yellow</label>\\n\\n    <input id=\\\"as24-cb-cp-7\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input green\\\">\\n    <label for=\\\"as24-cb-cp-7\\\">green</label>\\n\\n    <input id=\\\"as24-cb-cp-8\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input gold\\\">\\n    <label for=\\\"as24-cb-cp-8\\\">gold</label>\\n\\n    <input id=\\\"as24-cb-cp-3\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l blue\\\">\\n    <label for=\\\"as24-cb-cp-3\\\">blue</label>\\n\\n    <input id=\\\"as24-cb-cp-4\\\" type=\\\"radio\\\" name=\\\"xx\\\" class=\\\"sc-input sc-input-l other\\\">\\n    <label for=\\\"as24-cb-cp-4\\\">other</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-color-selector&quot;&gt;\\n    &lt;input id=&quot;as24-cb-cp-1&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input red&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-1&quot;&gt;red&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-2&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input yellow&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-2&quot;&gt;yellow&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input green&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-7&quot;&gt;green&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-8&quot;&gt;gold&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-3&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-3&quot;&gt;blue&lt;/label&gt;\\n\\n    &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;\\n    &lt;label for=&quot;as24-cb-cp-4&quot;&gt;other&lt;/label&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -127,7 +127,7 @@
         "type": "atoms",
         "group": "custom-dropdown",
         "srcDir": "src/06-components/atoms/custom-dropdown/docs",
-        "markDown": "\"\"",
+        "markDown": "\"<h2>Custom dropdown disabled<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup disabled>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1\\\">Value1</label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup disabled&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
     },
@@ -136,7 +136,7 @@
         "type": "atoms",
         "group": "custom-dropdown",
         "srcDir": "src/06-components/atoms/custom-dropdown/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
+        "markDown": "\"<h2>Custom dropdown with icons (multiple choice possible)<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"\\n<custom-dropdown class=\\\"sc-input icon\\\" checkboxgroup>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"cabrio-3\\\">\\n        <label for=\\\"cabrio-3\\\">\\n            <as24-icon type=\\\"bodytypes/roadster\\\"></as24-icon>\\n            <span>\\n                Cabrio\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"coupe-3\\\">\\n        <label for=\\\"coupe-3\\\">\\n            <as24-icon type=\\\"bodytypes/sports\\\"></as24-icon>\\n            <span>\\n                Coupé\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"compact-3\\\">\\n        <label for=\\\"compact-3\\\">\\n            <as24-icon type=\\\"bodytypes/compact\\\"></as24-icon>\\n            <span>\\n                Kleinwagen\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"station-3\\\">\\n        <label for=\\\"station-3\\\">\\n            <as24-icon type=\\\"bodytypes/station\\\"></as24-icon>\\n            <span>\\n                Kombi\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"limousine-3\\\">\\n        <label for=\\\"limousine-3\\\">\\n            <as24-icon type=\\\"bodytypes/limousine\\\"></as24-icon>\\n            <span>\\n                Limousine\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"offroad-3\\\">\\n        <label for=\\\"offroad-3\\\">\\n            <as24-icon type=\\\"bodytypes/offroad\\\"></as24-icon>\\n            <span>\\n                SUV/Geländewagen\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"delivery-3\\\">\\n        <label for=\\\"delivery-3\\\">\\n            <as24-icon type=\\\"bodytypes/delivery\\\"></as24-icon>\\n            <span>\\n                Transporter\\n            </span>\\n        </label>\\n        <input type=\\\"checkbox\\\" class=\\\"sc-input\\\" id=\\\"van-3\\\">\\n        <label for=\\\"van-3\\\">\\n            <as24-icon type=\\\"bodytypes/van\\\"></as24-icon>\\n            <span>\\n                Van\\n            </span>\\n        </label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"\\n&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;cabrio-3&quot;&gt;\\n        &lt;label for=&quot;cabrio-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Cabrio\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;coupe-3&quot;&gt;\\n        &lt;label for=&quot;coupe-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Coup&eacute;\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;compact-3&quot;&gt;\\n        &lt;label for=&quot;compact-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kleinwagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;station-3&quot;&gt;\\n        &lt;label for=&quot;station-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kombi\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;limousine-3&quot;&gt;\\n        &lt;label for=&quot;limousine-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Limousine\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;offroad-3&quot;&gt;\\n        &lt;label for=&quot;offroad-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                SUV/Gel&auml;ndewagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;delivery-3&quot;&gt;\\n        &lt;label for=&quot;delivery-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Transporter\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; class=&quot;sc-input&quot; id=&quot;van-3&quot;&gt;\\n        &lt;label for=&quot;van-3&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Van\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
     },
@@ -145,7 +145,7 @@
         "type": "atoms",
         "group": "custom-dropdown",
         "srcDir": "src/06-components/atoms/custom-dropdown/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Needs refactoring</p>\\n\"",
+        "markDown": "\"<h2>Custom dropdown with icons (one choice possible)<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"<custom-dropdown class=\\\"sc-input icon\\\" checkboxgroup>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"cabrio\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"cabrio\\\">\\n            <as24-icon type=\\\"bodytypes/roadster\\\"></as24-icon>\\n            <span>\\n                Cabrio\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"coupe\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"coupe\\\">\\n            <as24-icon type=\\\"bodytypes/sports\\\"></as24-icon>\\n            <span>\\n                Coupé\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"compact\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"compact\\\">\\n            <as24-icon type=\\\"bodytypes/compact\\\"></as24-icon>\\n            <span>\\n                Kleinwagen\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"station\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"station\\\">\\n            <as24-icon type=\\\"bodytypes/station\\\"></as24-icon>\\n            <span>\\n                Kombi\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"limousine\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"limousine\\\">\\n            <as24-icon type=\\\"bodytypes/limousine\\\"></as24-icon>\\n            <span>\\n                Limousine\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"offroad\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"offroad\\\">\\n            <as24-icon type=\\\"bodytypes/offroad\\\"></as24-icon>\\n            <span>\\n                SUV/Geländewagen\\n            </span>\\n        </label>\\n        <input name=\\\"custom-radio\\\" type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"delivery\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"delivery\\\">\\n            <as24-icon type=\\\"bodytypes/delivery\\\"></as24-icon>\\n            <span>\\n                Transporter\\n            </span>\\n        </label>\\n        <inputname=\\\"custom-radio\\\"  type=\\\"radio\\\" class=\\\"sc-hidden\\\" id=\\\"van\\\">\\n        <label class=\\\"sc-block\\\" for=\\\"van\\\">\\n            <as24-icon type=\\\"bodytypes/van\\\"></as24-icon>\\n            <span>\\n                Van\\n            </span>\\n        </label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;cabrio&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;cabrio&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/roadster&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Cabrio\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;coupe&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;coupe&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/sports&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Coup&eacute;\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;compact&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;compact&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/compact&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kleinwagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;station&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;station&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/station&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Kombi\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;limousine&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;limousine&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/limousine&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Limousine\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;offroad&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;offroad&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/offroad&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                SUV/Gel&auml;ndewagen\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;input name=&quot;custom-radio&quot; type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;delivery&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;delivery&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/delivery&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Transporter\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n        &lt;inputname=&quot;custom-radio&quot;  type=&quot;radio&quot; class=&quot;sc-hidden&quot; id=&quot;van&quot;&gt;\\n        &lt;label class=&quot;sc-block&quot; for=&quot;van&quot;&gt;\\n            &lt;as24-icon type=&quot;bodytypes/van&quot;&gt;&lt;/as24-icon&gt;\\n            &lt;span&gt;\\n                Van\\n            &lt;/span&gt;\\n        &lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
     },
@@ -154,7 +154,7 @@
         "type": "atoms",
         "group": "custom-dropdown",
         "srcDir": "src/06-components/atoms/custom-dropdown/docs",
-        "markDown": "\"\"",
+        "markDown": "\"<h2>Custom dropdown default<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
         "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup data-test=\\\"custom-dropdown-1\\\">\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1\\\">Value1</label>\\n        <input type=\\\"checkbox\\\" id=\\\"cd2\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd2\\\">Value2</label>\\n        <input type=\\\"checkbox\\\" id=\\\"cd3\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd3\\\">Value3</label>\\n    </div>\\n</custom-dropdown>\\n\"",
         "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup data-test=&quot;custom-dropdown-1&quot;&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd2&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd2&quot;&gt;Value2&lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd3&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd3&quot;&gt;Value3&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
     },
@@ -163,7 +163,7 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Should be a separate atom</p>\\n\"",
+        "markDown": "\"<h2>Checkbox<span class=\\\"status refactor\\\">Should be a separate atom</span></h2>\\n\"",
         "html": "\"<div>\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-1\\\" type=\\\"checkbox\\\" />\\n    <label for=\\\"as24-checkbox-1\\\">Checkbox</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-checkbox-2\\\" type=\\\"checkbox\\\" disabled />\\n    <label for=\\\"as24-checkbox-2\\\">Checkbox (disabled)</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-1&quot; type=&quot;checkbox&quot; /&gt;\\n    &lt;label for=&quot;as24-checkbox-1&quot;&gt;Checkbox&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-checkbox-2&quot; type=&quot;checkbox&quot; disabled /&gt;\\n    &lt;label for=&quot;as24-checkbox-2&quot;&gt;Checkbox (disabled)&lt;/label&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -172,7 +172,7 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Input default<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;\\n\""
     },
@@ -181,7 +181,7 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Input disabled<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input disabled\\\" disabled>\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input disabled&quot; disabled&gt;\\n\""
     },
@@ -190,7 +190,7 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Input error<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input error\\\" placeholder=\\\".sc-input error\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input error&quot; placeholder=&quot;.sc-input error&quot;&gt;\\n\""
     },
@@ -199,23 +199,16 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Input info<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input info\\\" placeholder=\\\".sc-input info\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input info&quot; placeholder=&quot;.sc-input info&quot;&gt;\\n\""
-    },
-    "input-select": {
-        "name": "input-select",
-        "type": "atoms",
-        "group": "input",
-        "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\""
     },
     "input-success": {
         "name": "input-success",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Input success<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<input type=\\\"text\\\" class=\\\"sc-input success\\\" placeholder=\\\".sc-input success\\\">\\n\"",
         "codeExample": "\"&lt;input type=&quot;text&quot; class=&quot;sc-input success&quot; placeholder=&quot;.sc-input success&quot;&gt;\\n\""
     },
@@ -224,34 +217,34 @@
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status refactor\\\">Should be a separate atom</p>\\n\"",
+        "markDown": "\"<h2>Radio button<span class=\\\"status refactor\\\">Should be a separate atom</span></h2>\\n\"",
         "html": "\"<div>\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-1\\\" type=\\\"radio\\\" name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-1\\\">Radio 1</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-2\\\" type=\\\"radio\\\" name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-2\\\">Radio 2</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-3\\\" type=\\\"radio\\\" disabled name=\\\"example-radios-1\\\">\\n    <label for=\\\"as24-radio-3\\\">Radio 3 (disabled)</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-1&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-1&quot;&gt;Radio 1&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-2&quot; type=&quot;radio&quot; name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-2&quot;&gt;Radio 2&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-3&quot; type=&quot;radio&quot; disabled name=&quot;example-radios-1&quot;&gt;\\n    &lt;label for=&quot;as24-radio-3&quot;&gt;Radio 3 (disabled)&lt;/label&gt;\\n&lt;/div&gt;\\n\""
+    },
+    "select-box-default": {
+        "name": "select-box-default",
+        "type": "atoms",
+        "group": "input",
+        "srcDir": "src/06-components/atoms/input/docs",
+        "markDown": "\"<h2>Select box<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
+        "html": "\"<select class=\\\"sc-input\\\" placeholder=\\\"sc-input\\\">\\n    <option>...</option>\\n    <option>Value 1</option>\\n    <option>Value 2</option>\\n</select>\\n\"",
+        "codeExample": "\"&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;\\n    &lt;option&gt;...&lt;/option&gt;\\n    &lt;option&gt;Value 1&lt;/option&gt;\\n    &lt;option&gt;Value 2&lt;/option&gt;\\n&lt;/select&gt;\\n\""
     },
     "select-box-disabled": {
         "name": "select-box-disabled",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Select box disabled<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<select class=\\\"sc-input\\\" disabled placeholder=\\\"sc-input disabled\\\">\\n    ...\\n</select>\\n\"",
         "codeExample": "\"&lt;select class=&quot;sc-input&quot; disabled placeholder=&quot;sc-input disabled&quot;&gt;\\n    ...\\n&lt;/select&gt;\\n\""
-    },
-    "select-box": {
-        "name": "select-box",
-        "type": "atoms",
-        "group": "input",
-        "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
-        "html": "\"<select class=\\\"sc-input\\\" placeholder=\\\"sc-input\\\">\\n    <option>...</option>\\n    <option>Value 1</option>\\n    <option>Value 2</option>\\n</select>\\n\"",
-        "codeExample": "\"&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;\\n    &lt;option&gt;...&lt;/option&gt;\\n    &lt;option&gt;Value 1&lt;/option&gt;\\n    &lt;option&gt;Value 2&lt;/option&gt;\\n&lt;/select&gt;\\n\""
     },
     "textarea": {
         "name": "textarea",
         "type": "atoms",
         "group": "input",
         "srcDir": "src/06-components/atoms/input/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Textarea<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<textarea class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">...</textarea>\\n\"",
         "codeExample": "\"&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt;\\n\""
     },
@@ -260,7 +253,7 @@
         "type": "atoms",
         "group": "lazy-image",
         "srcDir": "src/06-components/atoms/lazy-image/docs",
-        "markDown": "\"<p>If you want to make you images lazy, you need to add two classes to you img tag: sc-lazy-image and lazyload. Also you need to use data-src instead of src attribute.\\nIn the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>\\n<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Lazy images<span class=\\\"status complete\\\">Complete</span></h2>\\n\\n<p>If you want to make you images lazy, you need to add two classes to you img tag: sc-lazy-image and lazyload. Also you need to use data-src instead of src attribute.\\nIn the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>\\n\"",
         "html": "\"<img width=\\\"300\\\" height=\\\"200\\\" data-src=\\\"https://placeimg.com/640/480?1\\\" src=\\\"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==\\\" class=\\\"sc-lazy-image lazyload\\\" alt=\\\"\\\">\\n\"",
         "codeExample": "\"&lt;img width=&quot;300&quot; height=&quot;200&quot; data-src=&quot;https://placeimg.com/640/480?1&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; class=&quot;sc-lazy-image lazyload&quot; alt=&quot;&quot;&gt;\\n\""
     },
@@ -269,7 +262,7 @@
         "type": "atoms",
         "group": "lightbox",
         "srcDir": "src/06-components/atoms/lightbox/docs",
-        "markDown": "\"<p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>\\n<h4 id=\\\"usage-\\\">usage:</h4>\\n<p>in order to use it add following elements to your html:</p>\\n<ol>\\n<li>1) link, button or any other clickable element which has [data-lightbox-trigger] attribute and data-id attribute, that points to the as24-lightbox container to show (lightbox-1 in example). to prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. it&#39;s a valid html5 syntax.</li>\\n<li>2) as24-lightbox container with appropriate id. inside of the container you may paste div with content of your choice.</li>\\n<li>3) div may contain closing elements. to close modal window by clicking on the element add [data-lightbox-close] attribute to it.</li>\\n</ol>\\n<h4 id=\\\"status-\\\">status:</h4>\\n<p class=\\\"status complete\\\">complete</p>\\n\"",
+        "markDown": "\"<h2>Lightbox<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\\n<p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>\\n<h4 id=\\\"usage-\\\">usage:</h4>\\n<p>in order to use it add following elements to your html:</p>\\n<ol>\\n<li>1) link, button or any other clickable element which has [data-lightbox-trigger] attribute and data-id attribute, that points to the as24-lightbox container to show (lightbox-1 in example). to prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. it&#39;s a valid html5 syntax.</li>\\n<li>2) as24-lightbox container with appropriate id. inside of the container you may paste div with content of your choice.</li>\\n<li>3) div may contain closing elements. to close modal window by clicking on the element add [data-lightbox-close] attribute to it.</li>\\n</ol>\\n<h4 id=\\\"status-\\\">status:</h4>\\n<p class=\\\"status complete\\\">complete</p>\\n\"",
         "html": "\"<a data-id=\\\"lightbox-1\\\" data-lightbox-trigger>Try me</a>\\n<as24-lightbox id=\\\"lightbox-1\\\">\\n    <div>\\n        <h5 class=\\\"sc-lightbox-title\\\">The modal window title</h5><br>\\n        <as24-icon type=\\\"close\\\" class=\\\"sc-lightbox-close\\\" data-lightbox-close></as24-icon>\\n        <label>The input label</label><br>\\n        <input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\"share your thoughts with us\\\">\\n        <button class=\\\"sc-btn-bob sc-btn-block\\\" data-lightbox-close style=\\\"margin-top: 16px;\\\">Button bob</button>\\n    </div> \\n</as24-lightbox>\\n\"",
         "codeExample": "\"&lt;a data-id=&quot;lightbox-1&quot; data-lightbox-trigger&gt;Try me&lt;/a&gt;\\n&lt;as24-lightbox id=&quot;lightbox-1&quot;&gt;\\n    &lt;div&gt;\\n        &lt;h5 class=&quot;sc-lightbox-title&quot;&gt;The modal window title&lt;/h5&gt;&lt;br&gt;\\n        &lt;as24-icon type=&quot;close&quot; class=&quot;sc-lightbox-close&quot; data-lightbox-close&gt;&lt;/as24-icon&gt;\\n        &lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;\\n        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;\\n        &lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close style=&quot;margin-top: 16px;&quot;&gt;Button bob&lt;/button&gt;\\n    &lt;/div&gt; \\n&lt;/as24-lightbox&gt;\\n\""
     },
@@ -278,7 +271,7 @@
         "type": "atoms",
         "group": "link",
         "srcDir": "src/06-components/atoms/link/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n\"",
+        "markDown": "\"<h2>Link default<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<a href=\\\"#group-atoms-component-link\\\">Default link</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot;&gt;Default link&lt;/a&gt;\\n\""
     },
@@ -287,7 +280,7 @@
         "type": "atoms",
         "group": "link",
         "srcDir": "src/06-components/atoms/link/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n\"",
+        "markDown": "\"<h2>Link inline<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<a href=\\\"#group-atoms-component-link\\\" class=\\\"sc-inline-link\\\">Inline link</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#group-atoms-component-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;\\n\""
     },
@@ -296,7 +289,7 @@
         "type": "atoms",
         "group": "rotating-arrow",
         "srcDir": "src/06-components/atoms/rotating-arrow/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Rotating arrow<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<div id=\\\"myId\\\">\\n    Look at the arrow right of me! <span data-toggle=\\\"arrow\\\" data-target=\\\"#myId\\\"></span>\\n</div>\\n\"",
         "codeExample": "\"&lt;div id=&quot;myId&quot;&gt;\\n    Look at the arrow right of me! &lt;span data-toggle=&quot;arrow&quot; data-target=&quot;#myId&quot;&gt;&lt;/span&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -305,7 +298,7 @@
         "type": "atoms",
         "group": "spinner",
         "srcDir": "src/06-components/atoms/spinner/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\\n<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>\\n\"",
+        "markDown": "\"<h2>Spinner<span class=\\\"status review\\\">Needs tech review</span></h2>\\n\\n<h4 id=\\\"usage-\\\">Usage:</h4>\\n<p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>\\n\"",
         "html": "\"<div class=\\\"sc-absolute-center example-background\\\">\\n  <div class=\\\"sc-spinner-loading\\\"></div>\\n  <div class=\\\"sc-spinner-loading orange\\\"></div>\\n  <div class=\\\"sc-spinner-loading grey\\\"></div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-absolute-center example-background&quot;&gt;\\n  &lt;div class=&quot;sc-spinner-loading&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading orange&quot;&gt;&lt;/div&gt;\\n  &lt;div class=&quot;sc-spinner-loading grey&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -314,7 +307,7 @@
         "type": "atoms",
         "group": "stepper",
         "srcDir": "src/06-components/atoms/stepper/docs",
-        "markDown": "\"<h4 id=\\\"status\\\">Status</h4>\\n<p class=\\\"status review\\\">Needs review</p>\\n\"",
+        "markDown": "\"<h2>Stepper<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
         "html": "\"<div class=\\\"sc-stepper\\\">\\n    <button class=\\\"sc-stepper-button sc-stepper-button-decrement\\\">-</button>\\n    <input type=\\\"number\\\" value=\\\"0\\\" class=\\\"sc-stepper-input\\\" min=\\\"0\\\" max=\\\"10\\\" step=\\\"1\\\"/>\\n    <button class=\\\"sc-stepper-button sc-stepper-button-increment\\\">+</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-stepper&quot;&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;\\n    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
@@ -323,7 +316,7 @@
         "type": "atoms",
         "group": "tooltip",
         "srcDir": "src/06-components/atoms/tooltip/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Tooltip old<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-icon type=\\\"info\\\" title='More information' style='width: 16px;'></as24-icon>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-icon type=&quot;info&quot; title=&apos;More information&apos; style=&apos;width: 16px;&apos;&gt;&lt;/as24-icon&gt;\\n&lt;/label&gt;\\n\""
     },
@@ -332,7 +325,7 @@
         "type": "atoms",
         "group": "tooltip-2",
         "srcDir": "src/06-components/atoms/tooltip-2/docs",
-        "markDown": "\"<h4 id=\\\"status-\\\">Status:</h4>\\n<p class=\\\"status complete\\\">Complete</p>\\n\"",
+        "markDown": "\"<h2>Tooltip new<span class=\\\"status complete\\\">Complete</span></h2>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-tooltip class=\\\"sc-tooltip\\\">\\n        <as24-icon type=\\\"info\\\" style=\\\"width: 16px;\\\"></as24-icon>\\n        <div class=\\\"sc-tooltip-content\\\">Information in tooltip <a href=\\\"/\\\">link</a></div>\\n    </as24-tooltip>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;\\n        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;\\n        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;\\n    &lt;/as24-tooltip&gt;\\n&lt;/label&gt;\\n\""
     },
