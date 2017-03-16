@@ -4,7 +4,7 @@
         "type": "globals",
         "group": "variables",
         "srcDir": "src/01-settings/docs",
-        "markDown": "\"<h2>Variables</h2>\\n\\n<p>To use variables in your scss code you just need to import the specific file based on your directory structure:</p>\\n<pre>\\n@import \\\"path/to/variables\\\";\\n</pre>\\n\""
+        "markDown": "\"<h2>Variables</h2>\\n\\n<p>To use variables in your scss code you just need to import the specific file based on your directory structure:</p>\\n<pre>\\n    <code>\\n    @import \\\"path/to/variables\\\";\\n    </code>\\n</pre>\\n\""
     },
     "colors-primary-black": {
         "name": "colors-primary-black",
