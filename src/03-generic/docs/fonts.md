@@ -1,3 +1,5 @@
+<h2>Fonts and headlines<span class="status complete">Complete</span></h2>
+
 ShowCars default `font-family` is Source Sans Pro. Please use the predefined classes to increase or decrease the font size. You should not define explicit font sizes. To use the Source Sans Pro font, you don't have to do anything.
 
 #### Font sizes
@@ -8,10 +10,6 @@ Several helper classes for font styling are available, the font sizes follow sim
 
 For styling `<h*>` elements please use `sc-font-*` classes directly.
 For example `<h2 class='sc-font-m'>`
-
-#### Status:
-
-<p class="status review">Needs review</p>
 
 <table class="docs-table">
     <thead>

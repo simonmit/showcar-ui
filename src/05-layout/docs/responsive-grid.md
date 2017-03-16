@@ -1,11 +1,9 @@
+<h2>Responsive grid<span class="status refactor">Needs refactoring</span></h2>
+
 #### Usage:
 
 In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general `.sc-grid-col-*` class first and override it, depending on your needs with the necessary viewport specific grid class `.sc-grid-col-*-*`.  
 Always keep in mind, that smaller viewport grid classes override bigger ones.
-
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
 
 <table class="docs-table">
     <thead>

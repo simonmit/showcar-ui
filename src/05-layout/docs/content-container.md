@@ -1,10 +1,8 @@
+<h2>Content container<span class="status review">Needs review</span></h2>
+
 #### Usage:
 
 The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use `sc-content-container` class on your page once!
-
-#### Status:
-
-<p class="status review">Needs review</p>
 
 <table class="docs-table">
     <thead>

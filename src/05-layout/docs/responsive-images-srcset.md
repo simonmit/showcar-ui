@@ -1,11 +1,9 @@
+<h2>Responsive images - resolution switching<span class="status complete">Complete</span></h2>
+
 #### Usage:
 
 In the resolution switching use case, when you need to select a different source of the same image because you need a different resolution.  
 Use srcset attribute on the <img>.
-
-#### Status: 
-
-<p class="status review">Needs review</p>
 
 The height and width of the image should remain fixed.
 ```html
