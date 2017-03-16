@@ -5,6 +5,7 @@ We created a special type of radio buttons and checkboxes for you to easily impl
 ### additional scss
 
 <pre>
+	<code class="css">
     @import "path/to/mixins/color-selector";
     .sc-color-selector {
         input.sc-input {
@@ -17,4 +18,5 @@ We created a special type of radio buttons and checkboxes for you to easily impl
             }
         }
     }
+    </code>
 </pre>
