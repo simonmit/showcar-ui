@@ -1041,9 +1041,27 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
 
                 <div class="element" id="custom-dropdown-icons-checkbox">
                     <div class="markdown"><h2>Custom dropdown with icons (multiple choice possible)<span class="status refactor">Needs refactoring</span></h2>
+
+<p>You may use custom dropdown with any icons of your choice and style them as you wish. In this examples we added following css to style general icons from showcar-icon library:</p>
+<pre>
+    <code>
+    as24-icon[type^='bodytypes'] svg {
+      fill: #949494;
+      width: 44px;
+      vertical-align: text-bottom;
+    }
+    </code>
+</pre>
+
+<style>
+#custom-dropdown-icons-checkbox .sample as24-icon[type^='bodytypes'] svg {
+  fill: #949494;
+  width: 44px;
+  vertical-align: text-bottom;
+}
+</style>
 </div>
-                   <div class="sample">
-<custom-dropdown class="sc-input icon" checkboxgroup>
+                   <div class="sample"><custom-dropdown class="sc-input icon" checkboxgroup>
     <div>
         <p>All</p>
     </div>
@@ -1112,8 +1130,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-custom-dropdown-icons-checkbox"  alt="Copy to clipboard"><span></span></button>
                             <pre>
                                 <code id="copy_code-code-custom-dropdown-icons-checkbox" class="hjs html">
-                                    
-&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;
+                                    &lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup&gt;
     &lt;div&gt;
         &lt;p&gt;All&lt;/p&gt;
     &lt;/div&gt;
@@ -2254,7 +2271,7 @@ Note: You can spot H3 and H5 tags being used here. You can use any element accor
                 <div class="element" id="navigation">
                     <div class="markdown"><p><h2>Navigation <span class="status refactor">Needs refactoring</span></h2></p>
 <style>
-#navigation-link .sample{
+#navigation-link #navigation .sample{
 background-color: #f4f4f4;
 }
 </style>
