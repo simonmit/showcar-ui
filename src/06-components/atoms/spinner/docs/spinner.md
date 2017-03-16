@@ -4,7 +4,7 @@
 
 Note that `example-spinners-background` and `sc-absolute-center` classes are used only for example styling  
 <style>
-#spinner-link .sample{
+#spinner .sample{
      background-color: #808080;
 }
 </style>
