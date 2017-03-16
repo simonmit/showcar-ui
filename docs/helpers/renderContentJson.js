@@ -2,6 +2,11 @@ const path = require('path');
 const fs = require('fs');
 const recursiveSync = require('recursive-readdir-sync');
 const marked = require('marked');
+var renderer = new marked.Renderer();
+renderer.heading = (text, level) => {
+    return `<h${level}>${text}</h${level}>`;
+}
+    
 const entities = require('html-entities').AllHtmlEntities;
 
 const docsData = {
@@ -43,7 +48,7 @@ const setObj = (type, route, name) => {
             const paths = file.mdPath;
             const srcDir = path.parse(paths).dir;
             const name = path.parse(paths).name;
-            const markDown = marked(fs.readFileSync(paths, 'utf8'));
+            const markDown = marked(fs.readFileSync(paths, 'utf8'), { renderer: renderer });
             
             const element = {
                 name,
