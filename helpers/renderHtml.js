@@ -1,7 +1,6 @@
-const fs = require('fs');
-const renderMenu = require('./renderMenu.js')
 module.exports = (globalJSON, content) => {
-    
+    const fs = require('fs');
+    const renderMenu = require('./renderMenu.js')
     if (! globalJSON) {
         globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }

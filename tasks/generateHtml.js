@@ -1,7 +1,7 @@
-const fs = require('fs');
-const html = require('../helpers/renderHtml.js')();
 module.exports = () => {
-    fs.writeFile("./docs/index.html", html, err => {
+    const fs = require('fs');
+    const html = require('../helpers/renderHtml.js')();
+    fs.writeFileSync("./docs/index.html", html, err => {
         if (err) {
             return console.log(err);
         }

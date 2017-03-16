@@ -59,7 +59,7 @@ app.get('/docs/:type/:group', (req, res) => {
 })
 
 // TODO: fix path
-app.use('/showcar-ui', express.static('/Users/asolovev/scout24/source/showcar-ui/'));
+app.use('/showcar-ui', express.static('./'));
 
 app.get('*', (req, res) => {
     res.send('WTF???');
