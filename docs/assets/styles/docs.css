@@ -112,6 +112,7 @@ body {
     }
 }
 #content {
+    overflow: hidden;
 }
 .element {
     padding: 20px 0 50px;
@@ -392,9 +393,6 @@ pre code:before{
 }
 .example-lightbox as24-icon.sc-lightbox-close:hover{
     fill: #1e4c7a;
-}
-.example-background{
-    background-color: #808080;
 }
 .example-block{
     padding: 20px;
