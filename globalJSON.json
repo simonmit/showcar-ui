@@ -128,8 +128,8 @@
         "group": "custom-dropdown",
         "srcDir": "src/06-components/atoms/custom-dropdown/docs",
         "markDown": "\"<h2>Custom dropdown disabled<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\"",
-        "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup disabled>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1\\\">Value1</label>\\n    </div>\\n</custom-dropdown>\\n\"",
-        "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup disabled&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
+        "html": "\"<custom-dropdown class=\\\"sc-input\\\" checkboxgroup disabled>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1d\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1d\\\">Value1</label>\\n    </div>\\n</custom-dropdown>\\n\"",
+        "codeExample": "\"&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup disabled&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1d&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1d&quot;&gt;Value1&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\""
     },
     "custom-dropdown-icons-checkbox": {
         "name": "custom-dropdown-icons-checkbox",
