@@ -1,3 +1,1 @@
-#### Status:
-
-<p class="status refactor">Needs refactoring</p>
+<h2>Spy Navigation <span class="status refactor">Needs refactoring</span></h2>
