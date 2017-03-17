@@ -512,7 +512,7 @@
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Absolute centring<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
+        "markDown": "\"<p><h2>Absolute centring<span class=\\\"status review\\\">Needs review</span></h2></p>\\n<style>\\n#center-absolute .sample{\\nborder: 1px solid black;\\nheight: 200px;\\n}\\n</style>\\n\"",
         "html": "\"<div class=\\\"sc-absolute-center\\\">\\n    <p>Look ma, I am totally centered</p>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-absolute-center&quot;&gt;\\n    &lt;p&gt;Look ma, I am totally centered&lt;/p&gt;\\n&lt;/div&gt;\\n\""
     },
