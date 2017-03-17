@@ -10,7 +10,7 @@
 %customInputStyles {
   font-family: inherit;
   border-radius: $form-border-radius;
-  border: 1px solid #959595; // TODO: color: correct?
+  border: 1px solid $black-60;
   color: $black-100;
   width: 100%;
   line-height: 1.5;
@@ -54,20 +54,20 @@
   }
 
   &::-webkit-input-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   // CHECK: color correct?
   &:-moz-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &::-moz-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &:-ms-input-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &:focus::-webkit-input-placeholder {
@@ -164,7 +164,7 @@ input[type='checkbox'] {
         height: 24px;
         width: 24px;
         top: 0;
-        border: 1px solid #939393;
+        border: 1px solid $black-60;
         transition: border-color $transition-time ease-in;
       }
 
