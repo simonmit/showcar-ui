@@ -220,20 +220,20 @@
   }
 
   &::-webkit-input-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   // CHECK: color correct?
   &:-moz-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &::-moz-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &:-ms-input-placeholder {
-    color: #939393;
+    color: $black-60;
   }
 
   &:focus::-webkit-input-placeholder {
