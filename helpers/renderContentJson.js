@@ -20,7 +20,7 @@ const docsData = {
     utilities: {
         layout: 'src/05-layout/docs',
         utilities: 'src/07-utilities/docs',
-    }
+    },
     // extras: 'docs/helpers/extras'
 }
 
