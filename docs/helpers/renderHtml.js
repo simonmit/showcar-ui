@@ -13,7 +13,9 @@ module.exports = (globalJSON, content) => {
                 return `
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-${type}-${el.name}"  alt="Copy to clipboard"><span></span></button>
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-${type}-${el.name}" title="Copy to clipboard">
+                                <span></span>
+                             </button>
                             <pre>
                                 <code id="copy_code-${type}-${el.name}" class="hjs ${type === 'js' ? 'js javascript' : 'html'}">${content}</code>
                             </pre>
@@ -113,12 +115,24 @@ module.exports = (globalJSON, content) => {
     
     const footer = `
         <script>
-            hljs.initHighlightingOnLoad();
-            
             var clipboard = new Clipboard('.clipbrd-btn');
             clipboard.on('success', function (e) {
-//                e.clearSelection();
+                e.clearSelection();
+                showTooltip(e.trigger,'Copied!');
             });
+            var clpbdbtns = document.querySelectorAll('.clipbrd-btn');
+            for(var i=0;i<clpbdbtns.length;i++){
+                clpbdbtns[i].addEventListener('mouseleave',function(e){
+                    e.currentTarget.classList.remove('tooltipped');
+                    e.currentTarget.removeAttribute('aria-label');
+                });
+            }
+            function showTooltip(elem,msg){
+                elem.classList.add('tooltipped');
+                elem.setAttribute('aria-label',msg);
+            }
+
+              hljs.initHighlightingOnLoad();
               if (location.hostname === 'autoscout24.github.io') {
                    [].forEach.call(document.querySelectorAll('#left-menu a.open-separate'), function (openSeparate) {
                         openSeparate.style.display = "none";
