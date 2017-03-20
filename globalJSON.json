@@ -548,7 +548,7 @@
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Horizontal line<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<h4>Usage:</h4><p>To separate some content you can use a horizontal line.</p>\\n<!-- for smooth scrolling example -->\\n<p><a name=\\\"horizontal-line\\\"></a></p>\\n\"",
+        "markDown": "\"<h2>Horizontal line<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<h4>Usage:</h4><p>To separate some content you can use a horizontal line.</p>\\n\"",
         "html": "\"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n<hr>\\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n\"",
         "codeExample": "\"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n&lt;hr&gt;\\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\n\""
     },
@@ -558,8 +558,8 @@
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h2>Smooth scrolling<span class=\\\"status complete\\\">Complete</span></h2>\\n\\n<h3>Usage:</h3><p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.\\nIn case you want to trigger the smooth scrolling via JS have a look at the JS example below.</p>\\n\"",
-        "html": "\"<a href=\\\"#horizontal-line\\\" data-smooth-scroll>To Top</a>\\n\"",
-        "codeExample": "\"&lt;a href=&quot;#horizontal-line&quot; data-smooth-scroll&gt;To Top&lt;/a&gt;\\n\"",
+        "html": "\"<a href=\\\"#utilities-link\\\" data-smooth-scroll>To Top</a>\\n\"",
+        "codeExample": "\"&lt;a href=&quot;#utilities-link&quot; data-smooth-scroll&gt;To Top&lt;/a&gt;\\n\"",
         "jsExample": "\"// In case you want to trigger the smooth scrolling via JS\\nimport { smoothScroll } from '07-utilities/scroll.js';\\n\\nconst target = document.querySelector('#target');\\nconst duration = 300 //default\\n\\n// Default call\\nsmoothScroll(target, duration);\\n\\n// Or add a callback for additional handling (like in spy navigation)\\nsmoothScroll(target, duration, () => {\\n    // Your OPTIONAL callback code here\\n});\\n\""
     },
     "text-alignments": {
