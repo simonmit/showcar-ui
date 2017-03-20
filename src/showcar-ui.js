@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation();
 });
 
-
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
 // TODO do we still need it?
@@ -66,6 +65,10 @@ if (! window.notification) {
 } else {
     warn('window.notification is already registered.');
 }
+
+import registerSmoothScrolling from './07-utilities/scroll';
+registerSmoothScrolling();
+
 // storage
 window.Storage = require('showcar-storage');
 
