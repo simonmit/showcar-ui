@@ -1,4 +1,4 @@
-import smoothScroll from '../../../js/scroll/scroll.js';
+import { smoothScroll } from '../../../07-utilities/scroll.js';
 
 export default function(config) {
     // This one is needed for check whether active link element has changed or not
@@ -122,20 +122,13 @@ export default function(config) {
     }
 
     function navigateToAnchor($item) {
-        var targetName, target, targetTopOffset, navEl, navHeight, targetOffset;
-
-        targetName = $item.getAttribute('data-href');
-        navEl = document.querySelector(componentClass);
-        target = document.querySelector('[name="' + targetName + '"]');
+        const target = document.querySelector('[name="' + $item.getAttribute('data-href') + '"]');
 
         if (target) {
-            targetTopOffset = target.offsetTop;
-            navHeight = navEl.getBoundingClientRect().height;
-            targetOffset = targetTopOffset - navHeight;
-            smoothScroll(target, targetOffset, 300, function() {
+            smoothScroll(target, { cb: function() {
                 spyOnHold = false;
                 spyScroll();
-            });
+            } });
         }
     }
 

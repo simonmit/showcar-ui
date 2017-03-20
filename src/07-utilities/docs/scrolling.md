@@ -1,6 +1,5 @@
-<h2>Smooth scrolling<span class="status review">Needs review</span></h2>
+<h2>Smooth scrolling<span class="status complete">Complete</span></h2>
 
 ### Usage:
 
-Adds some nice animated scrolling functionality. In order to use it add the `sc-smooth-scroll` class to any anchor link.  
-As an additional example see detail_page
+Adds animated scrolling when anchoring to elements. In order to use it add the `data-smooth-scroll` attribute to any anchor link.
