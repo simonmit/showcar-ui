@@ -1,25 +1,15 @@
 export function smoothScroll(target, duration = 300, cb) {
     let targetSelector = '';
-    let targetName = '';
     const hrefTarget = $(target).attr('href');
     const nameTarget = $(target).attr('name');
 
     // We need to handle href and name since spy navigation is using name as target
-    if (hrefTarget) {
-        targetName = hrefTarget.split('#')[1]
-        targetSelector = 'a[name="' + targetName + '"]';
+    if (hrefTarget.length > 0) {
+        targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';
     }
 
-    if (nameTarget) {
-        targetName = nameTarget;
+    if (nameTarget.length > 0) {
         targetSelector = 'a[name="' + nameTarget + '"]';
-    }
-
-    if ($(targetSelector).length === 0) {
-        targetSelector = '#' + targetName;
-        if ($(targetSelector).length === 0) {
-            return;
-        }
     }
 
     const to = $(targetSelector).offset().top;

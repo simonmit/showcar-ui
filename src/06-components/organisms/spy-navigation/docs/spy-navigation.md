@@ -1,10 +1,5 @@
 <h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
 
-<a name="section-1"></a>
-<a name="section-2"></a>
-<a name="section-3"></a>
-<a name="section-4"></a>
-
 <script>
 
 window.onload = function() {
