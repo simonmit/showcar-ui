@@ -5,7 +5,7 @@ export function smoothScroll(target, duration = 300, cb) {
 
     // We need to handle href and name since spy navigation is using name as target
     if (hrefTarget.length > 0) {
-        targetSelector = hrefTarget;
+        targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';;
     }
 
     if (nameTarget.length > 0) {
