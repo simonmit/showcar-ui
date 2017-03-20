@@ -122,13 +122,14 @@ export default function(config) {
     }
 
     function navigateToAnchor($item) {
-        const target = document.querySelector('[name="' + $item.getAttribute('data-href') + '"]');
+        const targetName = $item.getAttribute('data-href');
+        const target = document.querySelector('[name="' + targetName + '"]');
 
         if (target) {
-            smoothScroll(target, { cb: function() {
+            smoothScroll(target, 300, function() {
                 spyOnHold = false;
                 spyScroll();
-            } });
+            });
         }
     }
 
