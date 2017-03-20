@@ -1,1 +1,1 @@
-<h2>Card<span class="status refactor">Needs refactoring</span></h2>
+<h2>Card<span class="status review">Needs review</span></h2>
