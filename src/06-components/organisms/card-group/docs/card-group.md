@@ -1,1 +1,1 @@
-<h2>Card group<span class="status review">Needs review</span></h2>
+<h2>Card group<span class="status complete">Complete</span></h2>
