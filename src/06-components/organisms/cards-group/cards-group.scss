@@ -1,0 +1,67 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+//TODO remove or move to grid
+$breakpoint-S: 640;
+$breakpoint-M: 720;
+$breakpoint-L: 1024;
+$breakpoint-XL: 1099;
+
+.sc-cards {
+  padding: $XXL $L $XXXL;
+  $list: &__list;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin: #{-$L} 0 0 #{-$L};
+  }
+
+  &__show {
+    margin-top: $XXL;
+    text-align: center;
+    cursor: pointer;
+    color: $color-link;
+
+    &:hover {
+      color: $blue-100;
+    }
+
+    @include mqmin($breakpoint-S) {
+      display: none;
+      padding: $XXXL $L 60px;
+    }
+
+    @include mqmax($breakpoint-S) { // hack. @include mq problem, it floats top when rendering
+      display: block;
+    }
+  }
+
+  &__state {
+    display: none;
+
+    & ~ .sc-cards__list {
+      .sc-card:nth-child(1n+5) {
+        display: none;
+        @include mqmin($breakpoint-S) {
+          display: block;
+        }
+      }
+    }
+
+    &:checked {
+      & ~ .sc-cards__show {
+        display: none;
+      }
+
+      & ~ .sc-cards__list {
+        .sc-card {
+          display: block;
+        }
+      }
+    }
+  }
+}
