@@ -3,6 +3,3 @@
 #### Usage:
 
 To separate some content you can use a horizontal line.
-
-<!-- for smooth scrolling example -->
-<a name="horizontal-line"></a>
