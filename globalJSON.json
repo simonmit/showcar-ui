@@ -557,9 +557,10 @@
         "type": "utilities",
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
-        "markDown": "\"<h2>Smooth scrolling<span class=\\\"status complete\\\">Complete</span></h2>\\n\\n<h3>Usage:</h3><p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.</p>\\n\"",
+        "markDown": "\"<h2>Smooth scrolling<span class=\\\"status complete\\\">Complete</span></h2>\\n\\n<h3>Usage:</h3><p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.\\nIn case you want to trigger the smooth scrolling via JS have a look at the JS example below.</p>\\n\"",
         "html": "\"<a href=\\\"#utilities-link\\\" data-smooth-scroll>To Top</a>\\n\"",
-        "codeExample": "\"&lt;a href=&quot;#utilities-link&quot; data-smooth-scroll&gt;To Top&lt;/a&gt;\\n\""
+        "codeExample": "\"&lt;a href=&quot;#utilities-link&quot; data-smooth-scroll&gt;To Top&lt;/a&gt;\\n\"",
+        "jsExample": "\"// In case you want to trigger the smooth scrolling via JS\\nimport { smoothScroll } from '07-utilities/scroll.js';\\n\\nconst target = document.querySelector('#target');\\nconst duration = 300 //default\\n\\n// Default call\\nsmoothScroll(target, duration);\\n\\n// Or add a callback for additional handling (like in spy navigation)\\nsmoothScroll(target, duration, () => {\\n    // Your OPTIONAL callback code here\\n});\\n\""
     },
     "text-alignments": {
         "name": "text-alignments",
