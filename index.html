@@ -2515,17 +2515,17 @@ background-color: #f4f4f4;
 <script>
 window.onload = function(){
  (function ($) {
- var paginationElement = document.querySelector('.sc-pagination'),
- itemsPerPage = 20,
- activePage = 1,
- totalCount = 800,
- urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+   var paginationElement = document.querySelector('.sc-pagination'),
+   itemsPerPage = 20,
+   activePage = 1,
+   totalCount = 800,
+   urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
 
- if (paginationElement) {
- new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
- }
+   if (paginationElement) {
+   new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
+   }
  })(window.Zepto);
- }
+}
 </script>
 </div>
                    <div class="sample"><ul class="sc-pagination">
@@ -2634,13 +2634,31 @@ window.onload = function(){
             
 <hr></div><div id="spy-navigation-link" class="positon-anchor">
                 <div class="element" id="spy-navigation">
-                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
+
+<p><a name="section-1"></a>
+<a name="section-2"></a>
+<a name="section-3"></a>
+<a name="section-4"></a></p>
+<script>
+
+window.onload = function() {
+  (function ($, showcar) {
+    const stickyYStartPosition = $('.sc-spy-navigation').offset().top;
+
+    showcar.spyNavigation({
+      stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > stickyYStartPosition,
+      unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
+    });
+  })(window.Zepto, window.showcar);
+}
+
+</script>
 </div>
                    <div class="sample"><div id="page-subnav-stick"></div>
 <div class="sc-spy-navigation" data-stick-when="#page-subnav-stick">
     <div class="sc-grid-row">
         <div class="sc-grid-col-12">
-            Any content here...
             <div class="sc-spy-navigation__wrapper">
                 <nav class="sc-spy-navigation__links">
                     <a class="sc-spy-navigation__link sc-spy-navigation__link--active" href="#" data-href="section-1">Section 1</a>
@@ -2664,7 +2682,6 @@ window.onload = function(){
 &lt;div class=&quot;sc-spy-navigation&quot; data-stick-when=&quot;#page-subnav-stick&quot;&gt;
     &lt;div class=&quot;sc-grid-row&quot;&gt;
         &lt;div class=&quot;sc-grid-col-12&quot;&gt;
-            Any content here...
             &lt;div class=&quot;sc-spy-navigation__wrapper&quot;&gt;
                 &lt;nav class=&quot;sc-spy-navigation__links&quot;&gt;
                     &lt;a class=&quot;sc-spy-navigation__link sc-spy-navigation__link--active&quot; href=&quot;#&quot; data-href=&quot;section-1&quot;&gt;Section 1&lt;/a&gt;
@@ -3410,11 +3427,11 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
             
 
                 <div class="element" id="scrolling">
-                    <div class="markdown"><h2>Smooth scrolling<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><h2>Smooth scrolling<span class="status complete">Complete</span></h2>
 
-<h3>Usage:</h3><p>Adds some nice animated scrolling functionality. In order to use it add the <code>sc-smooth-scroll</code> class to any anchor link.<br>As an additional example see detail_page</p>
+<h3>Usage:</h3><p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.</p>
 </div>
-                   <div class="sample"><a href="#top" class="sc-smooth-scroll">To Top</a>
+                   <div class="sample"><a href="#utilities-link" data-smooth-scroll>To Top</a>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -3422,7 +3439,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-scrolling" class="hjs html">&lt;a href=&quot;#top&quot; class=&quot;sc-smooth-scroll&quot;&gt;To Top&lt;/a&gt;
+                                <code id="copy_code-code-scrolling" class="hjs html">&lt;a href=&quot;#utilities-link&quot; data-smooth-scroll&gt;To Top&lt;/a&gt;
 </code>
                             </pre>
                         </div>
