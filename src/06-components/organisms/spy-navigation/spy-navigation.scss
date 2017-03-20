@@ -258,7 +258,7 @@ $spy-height: 55px;
 
       @include mqmin($viewportM) {
         @include visibleOnML;
-        padding-bottom: 12px;
+        padding-bottom: 14px;
 
         &:first-child {
           padding-left: 16px;
