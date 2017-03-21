@@ -1,8 +1,5 @@
 <h2>Spinner<span class="status review">Needs tech review</span></h2>
-
-#### Usage:
-
-Note that `example-spinners-background` and `sc-absolute-center` classes are used only for example styling  
+Note that background-color and `sc-absolute-center` class are added only for example styling
 <style>
 #spinner .sample{
      background-color: #808080;

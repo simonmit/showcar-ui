@@ -1,6 +1,5 @@
-<h2>Viewports<span class="status refactor">Needs refactoring</span></h2>
+<h2>Viewports<span class="status complete">Complete</span></h2>
 
-#### Usage:
 All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.  
 Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  
 
@@ -13,11 +12,6 @@ Use the following variables instead of variables previously known from showcar-s
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>$viewportXS</td>
-        <td>0</td>
-        <td>0 - 320px</td>
-    </tr>
     <tr>
         <td>$viewportS</td>
         <td>321px</td>

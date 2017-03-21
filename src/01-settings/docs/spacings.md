@@ -1,6 +1,5 @@
 <h2>Spacings<span class="status complete">Complete</span></h2>
 
-#### Usage:
 There are several variables that should be used for the spacing inside and between elements.  
 Use the variables only for the spacing and not for other properties like e.g. font-sizes.  
 

@@ -1,4 +1,4 @@
-<h2>Block centring<span class="status review">Needs review</span></h2>
+<h2>Block centring<span class="status complete">Complete</span></h2>
 <style>
 #center-blocks .sample .sc-block-center{
 padding: 20px;

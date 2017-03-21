@@ -1,4 +1,4 @@
-<h2>Floats<span class="status review">Needs review</span></h2>
+<h2>Floats<span class="status complete">Complete</span></h2>
 <style>
 #floats .sample .sc-pull-left{
     width: 100px;
