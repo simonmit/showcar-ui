@@ -13,7 +13,7 @@ For example `<h2 class='sc-font-m'>`
 
 #### Variations
 
-Library also provides `sc-font-bold`, `sc-font-silent` and `sc-font-uppercase` classes.
+Library also provides `sc-font-bold`, `sc-font-silent`, `sc-font-uppercase` and `sc-font-error` classes.
 
 <table class="docs-table">
     <thead>

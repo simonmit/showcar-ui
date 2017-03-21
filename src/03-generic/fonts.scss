@@ -51,6 +51,11 @@
   text-transform: uppercase;
 }
 
+.sc-font-error {
+    color: $color-error-text;
+    margin-top: 4px;
+}
+
 // DEPRECATED. Use sc-font-* classes instead. Don't remove yet due to compatibility.
 h1.sc-font {
   padding: 0 $L; //TODO rewrite padding
