@@ -530,7 +530,7 @@
                 <div class="element" id="spacings">
                     <div class="markdown"><h2>Spacings<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>
+<p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -575,9 +575,9 @@
             
 
                 <div class="element" id="viewports">
-                    <div class="markdown"><h2>Viewports<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Viewports<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.<br>Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  </p>
+<p>All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.<br>Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  </p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -587,11 +587,6 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>$viewportXS</td>
-        <td>0</td>
-        <td>0 - 320px</td>
-    </tr>
     <tr>
         <td>$viewportS</td>
         <td>321px</td>
@@ -889,16 +884,42 @@ margin-bottom:15px;
     }
     </code>
 </pre>
+
+<style>
+.sc-color-selector input.red+label:before{background:#d91a2a;background-position:50% 50%}.sc-color-selector input.red:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),#d91a2a;background-position:50% 50%}
+.sc-color-selector input.red[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),#d91a2a;background-position:50% 50%}
+.sc-color-selector input.yellow+label:before{background:#f7c81e;background-position:50% 50%}.sc-color-selector input.yellow:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),#f7c81e;background-position:50% 50%}
+.sc-color-selector input.yellow[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23333333%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),#f7c81e;background-position:50% 50%}
+.sc-color-selector input.green+label:before{background:#38a614;background-position:50% 50%}.sc-color-selector input.green:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),#38a614;background-position:50% 50%}
+.sc-color-selector input.green[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),#38a614;background-position:50% 50%}
+.sc-color-selector input.gold+label:before{background:-webkit-linear-gradient(#f7e994,#d9a600);background:linear-gradient(#f7e994,#d9a600);background-position:50% 50%}.sc-color-selector input.gold:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23old%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),-webkit-linear-gradient(#f7e994,#d9a600);background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23old%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),linear-gradient(#f7e994,#d9a600);background-position:50% 50%}
+.sc-color-selector input.gold[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23old%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),-webkit-linear-gradient(#f7e994,#d9a600);background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23old%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),linear-gradient(#f7e994,#d9a600);background-position:50% 50%}
+.sc-color-selector input.blue+label:before{background:#0059b2;background-position:50% 50%}
+.sc-color-selector input.blue:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),#0059b2;background-position:50% 50%}
+.sc-color-selector input.blue[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),#0059b2;background-position:50% 50%}
+.sc-color-selector input.orange+label:before{background:#ff7500;background-position:50% 50%}
+.sc-color-selector input.orange:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),#ff7500;background-position:50% 50%}
+.sc-color-selector input.orange[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),#ff7500;background-position:50% 50%}
+.sc-color-selector input.other+label:before{background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHN0eWxlPjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojQzZDNkM2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCl1dPjwvc3R5bGU+PHBhdGggZD0iTTAgMGgzMHYzMEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDAgNDBsNTAtNTBNLTMwIDQwbDUwLTUwTS0yMCA0MGw1MC01ME0tMTAgNDBsNTAtNTBNMCA0MGw1MC01ME0xMCA0MGw1MC01ME0yMCA0MGw1MC01MCIvPjwvc3ZnPg==);background-position:50% 50%}
+.sc-color-selector input.other:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%20width%3D%2226%22%3E%3Cstyle%20id%3D%22style3%22%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22polygon7%22%20class%3D%22st0%22%20d%3D%22M18.8%206.8l-7.9%207.8-3.8-3.7L5%2013l6%206L21%209z%22%2F%3E%3C%2Fsvg%3E),url(data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHN0eWxlPjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojQzZDNkM2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCl1dPjwvc3R5bGU+PHBhdGggZD0iTTAgMGgzMHYzMEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDAgNDBsNTAtNTBNLTMwIDQwbDUwLTUwTS0yMCA0MGw1MC01ME0tMTAgNDBsNTAtNTBNMCA0MGw1MC01ME0xMCA0MGw1MC01ME0yMCA0MGw1MC01MCIvPjwvc3ZnPg==);background-position:50% 50%}
+.sc-color-selector input.other[type=radio]:checked+label:before{background:url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fff%3B%7D%3C%2Fstyle%3E%3Ccircle%20cy%3D%2213%22%20cx%3D%2213%22%20r%3D%225%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E),url(data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHN0eWxlPjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojQzZDNkM2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCl1dPjwvc3R5bGU+PHBhdGggZD0iTTAgMGgzMHYzMEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDAgNDBsNTAtNTBNLTMwIDQwbDUwLTUwTS0yMCA0MGw1MC01ME0tMTAgNDBsNTAtNTBNMCA0MGw1MC01ME0xMCA0MGw1MC01ME0yMCA0MGw1MC01MCIvPjwvc3ZnPg==);background-position:50% 50%}
+</style>
 </div>
                    <div class="sample"><div class="sc-color-selector">
     <input id="as24-cb-cp-8" type="checkbox" name="xx" class="sc-input sc-input-l blue">
     <label for="as24-cb-cp-8">blue</label>
 
-    <input id="as24-cb-cp-9" type="checkbox" name="xx" class="sc-input sc-input-l red" disabled>
+    <input id="as24-cb-cp-9" type="checkbox" name="xx" class="sc-input sc-input-l red">
     <label for="as24-cb-cp-9">red</label>
 
-    <input id="as24-cb-cp-10" type="checkbox" name="xx" class="sc-input sc-input-l other">
-    <label for="as24-cb-cp-10">other</label>
+    <input id="as24-cb-cp-10" type="checkbox" name="xx" class="sc-input sc-input-l yellow">
+    <label for="as24-cb-cp-10">yellow</label>
+
+    <input id="as24-cb-cp-11" type="checkbox" name="xx" class="sc-input sc-input-l green" disabled>
+    <label for="as24-cb-cp-11">green</label>
+
+    <input id="as24-cb-cp-12" type="checkbox" name="xx" class="sc-input sc-input-l other">
+    <label for="as24-cb-cp-12">other</label>
 </div>
 </div> 
                     <div class="code-sample">
@@ -911,11 +932,17 @@ margin-bottom:15px;
     &lt;input id=&quot;as24-cb-cp-8&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-8&quot;&gt;blue&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-9&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l red&quot; disabled&gt;
+    &lt;input id=&quot;as24-cb-cp-9&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l red&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-9&quot;&gt;red&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-10&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-10&quot;&gt;other&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-10&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l yellow&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-10&quot;&gt;yellow&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-11&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l green&quot; disabled&gt;
+    &lt;label for=&quot;as24-cb-cp-11&quot;&gt;green&lt;/label&gt;
+
+    &lt;input id=&quot;as24-cb-cp-12&quot; type=&quot;checkbox&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-12&quot;&gt;other&lt;/label&gt;
 &lt;/div&gt;
 </code>
                             </pre>
@@ -930,6 +957,9 @@ margin-bottom:15px;
                     <div class="markdown"><h2>Color selector radio<span class="status refactor">Needs refactoring</span></h2>
 </div>
                    <div class="sample"><div class="sc-color-selector">
+    <input id="as24-cb-cp-5" type="radio" name="xx" class="sc-input sc-input-l blue">
+    <label for="as24-cb-cp-5">blue</label>
+
     <input id="as24-cb-cp-1" type="radio" name="xx" class="sc-input red">
     <label for="as24-cb-cp-1">red</label>
 
@@ -942,11 +972,8 @@ margin-bottom:15px;
     <input id="as24-cb-cp-4" type="radio" name="xx" class="sc-input gold">
     <label for="as24-cb-cp-4">gold</label>
 
-    <input id="as24-cb-cp-5" type="radio" name="xx" class="sc-input sc-input-l blue">
-    <label for="as24-cb-cp-5">blue</label>
-
-    <input id="as24-cb-cp-6" type="radio" name="xx" class="sc-input sc-input-l brown" disabled>
-    <label for="as24-cb-cp-6">brown</label>
+    <input id="as24-cb-cp-6" type="radio" name="xx" class="sc-input sc-input-l orange" disabled>
+    <label for="as24-cb-cp-6">orange</label>
 
     <input id="as24-cb-cp-7" type="radio" name="xx" class="sc-input sc-input-l other">
     <label for="as24-cb-cp-7">other</label>
@@ -959,6 +986,9 @@ margin-bottom:15px;
                              </button>
                             <pre>
                                 <code id="copy_code-code-color-selector" class="hjs html">&lt;div class=&quot;sc-color-selector&quot;&gt;
+    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
+    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;
+
     &lt;input id=&quot;as24-cb-cp-1&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input red&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-1&quot;&gt;red&lt;/label&gt;
 
@@ -971,11 +1001,8 @@ margin-bottom:15px;
     &lt;input id=&quot;as24-cb-cp-4&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input gold&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-4&quot;&gt;gold&lt;/label&gt;
 
-    &lt;input id=&quot;as24-cb-cp-5&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l blue&quot;&gt;
-    &lt;label for=&quot;as24-cb-cp-5&quot;&gt;blue&lt;/label&gt;
-
-    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l brown&quot; disabled&gt;
-    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;brown&lt;/label&gt;
+    &lt;input id=&quot;as24-cb-cp-6&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l orange&quot; disabled&gt;
+    &lt;label for=&quot;as24-cb-cp-6&quot;&gt;orange&lt;/label&gt;
 
     &lt;input id=&quot;as24-cb-cp-7&quot; type=&quot;radio&quot; name=&quot;xx&quot; class=&quot;sc-input sc-input-l other&quot;&gt;
     &lt;label for=&quot;as24-cb-cp-7&quot;&gt;other&lt;/label&gt;
@@ -989,6 +1016,51 @@ margin-bottom:15px;
                 </div>
             
 <hr></div><div id="custom-dropdown-link" class="positon-anchor">
+                <div class="element" id="custom-dropdown-default">
+                    <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span></h2>
+</div>
+                   <div class="sample"><custom-dropdown class="sc-input" checkboxgroup data-test="custom-dropdown-1">
+    <div>
+        <p>All</p>
+    </div>
+    <div>
+        <input type="checkbox" id="cd1" class="sc-input">
+        <label for="cd1">Value1</label>
+        <input type="checkbox" id="cd2" class="sc-input">
+        <label for="cd2">Value2</label>
+        <input type="checkbox" id="cd3" class="sc-input">
+        <label for="cd3">Value3</label>
+    </div>
+</custom-dropdown>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-custom-dropdown-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-custom-dropdown-default" class="hjs html">&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup data-test=&quot;custom-dropdown-1&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;All&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd2&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd2&quot;&gt;Value2&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cd3&quot; class=&quot;sc-input&quot;&gt;
+        &lt;label for=&quot;cd3&quot;&gt;Value3&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
                 <div class="element" id="custom-dropdown-disabled">
                     <div class="markdown"><h2>Custom dropdown disabled<span class="status refactor">Needs refactoring</span></h2>
 </div>
@@ -1342,51 +1414,6 @@ margin-bottom:15px;
                  
                 </div>
             
-
-                <div class="element" id="custom-dropdown-simple">
-                    <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span></h2>
-</div>
-                   <div class="sample"><custom-dropdown class="sc-input" checkboxgroup data-test="custom-dropdown-1">
-    <div>
-        <p>All</p>
-    </div>
-    <div>
-        <input type="checkbox" id="cd1" class="sc-input">
-        <label for="cd1">Value1</label>
-        <input type="checkbox" id="cd2" class="sc-input">
-        <label for="cd2">Value2</label>
-        <input type="checkbox" id="cd3" class="sc-input">
-        <label for="cd3">Value3</label>
-    </div>
-</custom-dropdown>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-custom-dropdown-simple" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-custom-dropdown-simple" class="hjs html">&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup data-test=&quot;custom-dropdown-1&quot;&gt;
-    &lt;div&gt;
-        &lt;p&gt;All&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;input type=&quot;checkbox&quot; id=&quot;cd1&quot; class=&quot;sc-input&quot;&gt;
-        &lt;label for=&quot;cd1&quot;&gt;Value1&lt;/label&gt;
-        &lt;input type=&quot;checkbox&quot; id=&quot;cd2&quot; class=&quot;sc-input&quot;&gt;
-        &lt;label for=&quot;cd2&quot;&gt;Value2&lt;/label&gt;
-        &lt;input type=&quot;checkbox&quot; id=&quot;cd3&quot; class=&quot;sc-input&quot;&gt;
-        &lt;label for=&quot;cd3&quot;&gt;Value3&lt;/label&gt;
-    &lt;/div&gt;
-&lt;/custom-dropdown&gt;
-</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
 <hr></div><div id="input-link" class="positon-anchor">
                 <div class="element" id="checkbox">
                     <div class="markdown"><h2>Checkbox<span class="status refactor">Should be a separate atom</span></h2>
@@ -1660,11 +1687,11 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                     <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span></h2>
 
 <p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>
-<h4>usage:</h4><p>in order to use it add following elements to your html:</p>
+<h4>usage:</h4><p>In order to use it add following elements to your html:</p>
 <ol>
-<li>1) link, button or any other clickable element which has [data-lightbox-trigger] attribute and data-id attribute, that points to the as24-lightbox container to show (lightbox-1 in example). to prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. it&#39;s a valid html5 syntax.</li>
-<li>2) as24-lightbox container with appropriate id. inside of the container you may paste div with content of your choice.</li>
-<li>3) div may contain closing elements. to close modal window by clicking on the element add [data-lightbox-close] attribute to it.</li>
+<li>1) link, button or any other clickable element which has <code>data-lightbox-trigger</code> attribute and <code>data-id</code> attribute, that points to the <code>as24-lightbox</code> container to show (lightbox-1 in example). To prevent link from jumping to the top of the page and appending chars to page&#39;s url use a element without href attribute. It&#39;s a valid html5 syntax.</li>
+<li>2) <code>as24-lightbox</code> container with appropriate id. Inside of the container you may paste div with content of your choice.</li>
+<li>3) div may contain closing elements. To close modal window by clicking on the element add <code>data-lightbox-close</code> attribute to it.</li>
 </ol>
 </div>
                    <div class="sample"><a data-id="lightbox-1" data-lightbox-trigger>Try me</a>
@@ -1771,9 +1798,8 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
             
 <hr></div><div id="spinner-link" class="positon-anchor">
                 <div class="element" id="spinner">
-                    <div class="markdown"><h2>Spinner<span class="status review">Needs tech review</span></h2>
-
-<h4>Usage:</h4><p>Note that <code>example-spinners-background</code> and <code>sc-absolute-center</code> classes are used only for example styling  </p>
+                    <div class="markdown"><p><h2>Spinner<span class="status review">Needs tech review</span></h2>
+Note that background-color and <code>sc-absolute-center</code> class are added only for example styling</p>
 <style>
 #spinner .sample{
      background-color: #808080;
@@ -1931,8 +1957,9 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
             
 <hr></div><div id="expandable-box-link" class="positon-anchor">
                 <div class="element" id="expandable-box-adaptive">
-                    <div class="markdown"><h2>Expandable box adaptive<span class="status refactor">Needs explaination</span></h2>
+                    <div class="markdown"><h2>Expandable box adaptive<span class="status review">Needs review</span></h2>
 
+<p>Expandable boxes are CSS-only implementation. Thus, you have to follow the markup structure. In other words, it is important to keep class structure like it is shown in the examples.<br>Note: You can spot H3 and H5 tags being used here. You can use any element according to the requirements as long as you have <code>.sc-expandable-box__title</code> class in place.  </p>
 <p>The adaptive version of expandable box is opened on devices with 768px and higher screen width. On smaller devices it has a clickable arrow to expand the box.</p>
 </div>
                    <div class="sample"><div class="sc-expandable-box sc-expandable-box--adaptive">
@@ -1968,8 +1995,7 @@ In the example we used <code>&lt;img&gt;</code> tag. Note the default value for 
                 <div class="element" id="expandable-box">
                     <div class="markdown"><h2>Expandable box<span class="status review">Needs review</span></h2>
 
-<p>This component is CSS-only implementation. Thus, you have to follow the markup structure. In other words, it is important to keep class structure like it is shown in the examples.
-Note: You can spot H3 and H5 tags being used here. You can use any element according to the requirements as long as you have <code>.sc-expandable-box__title</code> class in place.</p>
+<p>Normal version of expandable box is opened by click on all devices.</p>
 </div>
                    <div class="sample"><div class="sc-expandable-box">
     <input id="exb1" type="checkbox" class="sc-expandable-box__toggle">
@@ -2813,7 +2839,7 @@ showcar.spyNavigation({
                 <div class="element" id="content-container">
                     <div class="markdown"><h2>Content container<span class="status review">Needs review</span></h2>
 
-<h4>Usage:</h4><p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use <code>sc-content-container</code> class on your page once!</p>
+<p>The content container is a responsive element containing the entire content section. It takes care of the proper positioning of the content. NOTICE: Only use <code>sc-content-container</code> class on your page once!</p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -2860,9 +2886,9 @@ showcar.spyNavigation({
             
 
                 <div class="element" id="grid">
-                    <div class="markdown"><h2>Grid<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Grid<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
+<p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
 <style>
 #grid .sample .sc-grid-row > div{
     border: 1px solid #dcdcdc;
@@ -3126,9 +3152,9 @@ showcar.spyNavigation({
             
 
                 <div class="element" id="responsive-grid">
-                    <div class="markdown"><h2>Responsive grid<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Responsive grid<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
+<p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -3171,22 +3197,31 @@ showcar.spyNavigation({
     </tbody>
 </table>
 
-<p>With the responsive grid column classes, you are able, to set the column width in dependency to the viewport. For Example if you define a grid with the classes <code>sc-grid-col-4 sc-grid-col-m-6 sc-grid-col-s-12</code> it will be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns wide in devices with S-Viewport.<br>You can simply check the behavior of the grid by resizing the current page.</p>
+<p>With the responsive grid column classes, you are able to set the column width in dependency to the viewport. For example, if you define a grid with the classes <code>sc-grid-col-4 sc-grid-col-m-6 sc-grid-col-s-12</code> it will be 4 columns wide on devices larger than M-Viewport, 6 columns wide on devices with M-Viewport and 12 columns wide in devices with S-Viewport.<br>You can simply check the behavior of the grid by resizing the current page.</p>
+<style>
+#responsive-grid .sample .sc-grid-row > div{
+    border: 1px solid #dcdcdc;
+    background: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+#responsive-grid .sample .sc-grid-row > div [class*='sc-grid-col-']{
+    word-break: break-all;
+}
+</style>
 </div>
-                   <div class="sample"><div class="example-grid">
-    <div class="sc-grid-row">
-        <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
-        <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3">
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        </div>
+                   <div class="sample"><div class="sc-grid-row">
+    <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3">
+        .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
+    </div>
+    <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
+        .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
+    </div>
+    <div class="sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3">
+        .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
+    </div>
+    <div class="sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3">
+        .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
     </div>
 </div>
 </div> 
@@ -3196,20 +3231,18 @@ showcar.spyNavigation({
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-responsive-grid" class="hjs html">&lt;div class=&quot;example-grid&quot;&gt;
-    &lt;div class=&quot;sc-grid-row&quot;&gt;
-        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3&quot;&gt;
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
-        &lt;/div&gt;
-        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        &lt;/div&gt;
-        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
-            .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        &lt;/div&gt;
-        &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
-            .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
-        &lt;/div&gt;
+                                <code id="copy_code-code-responsive-grid" class="hjs html">&lt;div class=&quot;sc-grid-row&quot;&gt;
+    &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-12 sc-grid-col-xs-3&quot;&gt;
+        .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-12 .sc-grid-col-xs-3
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
+        .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-6 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
+        .sc-grid-col-3 .sc-grid-col-s-6 .sc-grid-col-m-4 .sc-grid-col-xs-3
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-grid-col-3 sc-grid-col-s-12 sc-grid-col-m-4 sc-grid-col-xs-3&quot;&gt;
+        .sc-grid-col-3 .sc-grid-col-s-12 .sc-grid-col-m-4 .sc-grid-col-xs-3
     &lt;/div&gt;
 &lt;/div&gt;
 </code>
@@ -3224,7 +3257,7 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-images-picture">
                     <div class="markdown"><h2>Responsive images - art direction<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>Art direction - cropping the image differently on diffrent. E.g. hero image that contains text and providing a smaller version of the image won’t work because the text will be unreadable.<br>Use <code>&lt;picture&gt;</code> tag.<br>Also see demo <a href="https://scottjehl.github.io/picturefill/examples/demo-02.html">here</a></p>
+<p>Art direction - cropping the image differently in diffrent device resolutions. It is used when providing a smaller version of the image won’t work because text or other small elements will be unreadable (e.g. hero image).<br>Use <code>&lt;picture&gt;</code> tag.<br>Also see demo <a href="https://scottjehl.github.io/picturefill/examples/demo-02.html">here</a></p>
 </div>
                    <div class="sample"><picture>
     <source srcset="https://placehold.it/468x150" media="(max-width: 468px)">
@@ -3259,7 +3292,7 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-images-srcset">
                     <div class="markdown"><h2>Responsive images - resolution switching<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>In the resolution switching use case, when you need to select a different source of the same image because you need a different resolution.<br>Use srcset attribute on the <img>.</p>
+<p>Use <code>srcset</code> attribute in the <code>&lt;img&gt;</code> tag when you need to select a different source of the same image because you need a different resolution.</p>
 <p>The height and width of the image should remain fixed.</p>
 <pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;
 </code></pre>
@@ -3289,7 +3322,13 @@ showcar.spyNavigation({
                 <div class="element" id="sticky">
                     <div class="markdown"><h2>Sticky elements<span class="status review">Needs review. Check example centring</span></h2>
 
-<h4>Usage:</h4><p>A sticky element represents any HTML element that keeps in view even if you scroll.<br>A sticky element consists of three parts:<br>The sticky element itself, identified by a data-sticky attribute with a unique identifier for the element as value.<br>A marker where it undocks (starts scrolling), identified by a data-sticky-undock attribute with the identifier as value.<br>And a marker where it docks (stops scrolling), identified by a data-sticky-dock attribute with the identifier as value.<br>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
+<p>Sticky element represents any HTML element that keeps in view even if you scroll.<br>It consists of three parts:  </p>
+<ul>
+<li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier for the element as value.  </li>
+<li>Marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as value.  </li>
+<li>Marker where it docks (stops scrolling), identified by a <code>data-sticky-dock</code> attribute with the identifier as value.  </li>
+</ul>
+<p>Both markers are optional. If you omit the undock marker, the start of the document is used. If you omit the dock marker the end of the document is used.</p>
 <style>
 #sticky .sample .spacer{
     height: 200px;
@@ -3330,11 +3369,14 @@ showcar.spyNavigation({
             
 <hr></div><div id="utilities-link" class="positon-anchor">
                 <div class="element" id="center-absolute">
-                    <div class="markdown"><p><h2>Absolute centring<span class="status review">Needs review</span></h2></p>
+                    <div class="markdown"><h2>Absolute centring<span class="status complete">Complete</span></h2>
+
 <style>
 #center-absolute .sample{
 border: 1px solid black;
-height: 200px;
+}
+#center-absolute .sc-absolute-center{
+height: 100px;
 }
 </style>
 </div>
@@ -3361,7 +3403,7 @@ height: 200px;
             
 
                 <div class="element" id="center-blocks">
-                    <div class="markdown"><p><h2>Block centring<span class="status review">Needs review</span></h2></p>
+                    <div class="markdown"><p><h2>Block centring<span class="status complete">Complete</span></h2></p>
 <style>
 #center-blocks .sample .sc-block-center{
 padding: 20px;
@@ -3390,13 +3432,13 @@ padding: 20px;
             
 
                 <div class="element" id="ellipsis">
-                    <div class="markdown"><h2>Ellipsis<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><h2>Ellipsis<span class="status complete">Complete</span></h2>
 
-<h4>Usage:</h4><p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.</p>
+<p>If the content gets too long, an ellipsis will be placed and the text is cut off. Add a <code>title</code> attribute to display the whole text on mouseover.</p>
 <style>
 #ellipsis .sample .sc-ellipsis{
 width: 100px;
-    border: 1px solid #808080;
+border: 1px solid #808080;
 }
 </style>
 </div>
@@ -3419,7 +3461,7 @@ width: 100px;
             
 
                 <div class="element" id="floats">
-                    <div class="markdown"><p><h2>Floats<span class="status review">Needs review</span></h2></p>
+                    <div class="markdown"><p><h2>Floats<span class="status complete">Complete</span></h2></p>
 <style>
 #floats .sample .sc-pull-left{
     width: 100px;
@@ -3474,9 +3516,8 @@ width: 100px;
             
 
                 <div class="element" id="horizontal-line">
-                    <div class="markdown"><h2>Horizontal line<span class="status review">Needs review</span></h2>
-
-<h4>Usage:</h4><p>To separate some content you can use a horizontal line.</p>
+                    <div class="markdown"><p><h2>Horizontal line<span class="status complete">Complete</span></h2>
+To separate some content you can use a horizontal line.</p>
 </div>
                    <div class="sample">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 <hr>
@@ -3503,7 +3544,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                 <div class="element" id="scrolling">
                     <div class="markdown"><h2>Smooth scrolling<span class="status complete">Complete</span></h2>
 
-<h3>Usage:</h3><p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.
+<p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.
 In case you want to trigger the smooth scrolling via JS have a look at the JS example below.</p>
 </div>
                    <div class="sample"><a href="#utilities-link" data-smooth-scroll>To Top</a>
