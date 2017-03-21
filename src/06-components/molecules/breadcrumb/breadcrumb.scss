@@ -14,14 +14,14 @@
 
   @if $direction == 'left' {
     transform: rotate(90deg);
-    height: 12px;
+    height: 8px;
     margin-left: 3px; //adjust to match minimal text offset of following h1
   }
 
   @if $direction == 'right' {
     transform: rotate(-90deg);
     margin-left: 10px;
-    height: 8px;
+    height: 12px;
   }
 }
 
