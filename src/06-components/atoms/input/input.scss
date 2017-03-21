@@ -110,7 +110,7 @@ select.sc-input {
 
   // Hiding arrows in webkit and firefox based browsers
   background-position: 99% center; // fallback for older devices
-  background-position: right 8px center;
+  background-position: right 14px center;
   -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
   -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
   appearance: none;
