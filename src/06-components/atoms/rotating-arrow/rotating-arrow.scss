@@ -1,10 +1,13 @@
-@import '../../../02-sass-tools/rotating-arrow';
-
 [data-toggle='arrow'] {
   &::after {
     cursor: pointer;
     display: inline-block;
-    @include rotating-arrow('down');
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22%2F%3E%3C%2Fsvg%3E');
+    background-position: right center;
+    transition: 0.3s ease-in-out;
   }
 
   &.open::after {
