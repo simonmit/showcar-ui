@@ -1,7 +1,5 @@
 <h2>Responsive images - art direction<span class="status complete">Complete</span></h2>
 
-#### Usage:
-
-Art direction - cropping the image differently on diffrent. E.g. hero image that contains text and providing a smaller version of the image won’t work because the text will be unreadable.  
+Art direction - cropping the image differently in diffrent device resolutions. It is used when providing a smaller version of the image won’t work because text or other small elements will be unreadable (e.g. hero image).  
 Use `<picture>` tag.  
 Also see demo [here](https://scottjehl.github.io/picturefill/examples/demo-02.html)

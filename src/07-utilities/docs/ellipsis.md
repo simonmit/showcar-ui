@@ -1,11 +1,9 @@
-<h2>Ellipsis<span class="status review">Needs review</span></h2>
+<h2>Ellipsis<span class="status complete">Complete</span></h2>
 
-#### Usage:
-
-If the content gets too long, an ellipsis will be placed and the text is cut off. Add a title attribute to display the whole text on mouseover.
+If the content gets too long, an ellipsis will be placed and the text is cut off. Add a `title` attribute to display the whole text on mouseover.
 <style>
 #ellipsis .sample .sc-ellipsis{
 width: 100px;
-    border: 1px solid #808080;
+border: 1px solid #808080;
 }
 </style>
