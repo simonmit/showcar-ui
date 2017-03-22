@@ -143,6 +143,10 @@
 <li>
             <a data-scroll href="#notification-link">notification</a>
             <a href="/docs/molecules/notification" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#validations-link">validations</a>
+            <a href="/docs/molecules/validations" class="open-separate"></a>
         </li></ul>
             </li>
         </ul>
@@ -619,14 +623,13 @@
                 </div>
             
 <hr></div><div id="fonts-link" class="positon-anchor">
-                <div class="element" id="fonts">
+                <div class="element" id="fonts-default">
                     <div class="markdown"><h2>Fonts and headlines<span class="status complete">Complete</span></h2>
 
 <p>ShowCars default <code>font-family</code> is Source Sans Pro. Please use the predefined classes to increase or decrease the font size. You should not define explicit font sizes. To use the Source Sans Pro font, you don&#39;t have to do anything.</p>
 <h4>Font sizes</h4><p>Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
 <h4>Headlines</h4><p>For styling <code>&lt;h*&gt;</code> elements please use <code>sc-font-*</code> classes directly.
 For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
-<h4>Variations</h4><p>Library also provides <code>sc-font-bold</code>, <code>sc-font-silent</code> and <code>sc-font-uppercase</code> classes.</p>
 <p><table class="docs-table">
     <thead>
         <tr>
@@ -680,27 +683,50 @@ margin-bottom:15px;
 <p class="sc-font-xl">XL Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <p class="sc-font-xxl">XXL Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <p class="sc-font-hero">HERO Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-<p class="sc-font-silent">Silent Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-<p class="sc-font-bold">BOLD Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-<p class="sc-font-uppercase">UPPERCASE Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <h2 class="sc-font-m">HEADLINE2 Lorem ipsum dolor sit amet</h2>
 </div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-fonts" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-fonts-default" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-fonts" class="hjs html">&lt;p class=&quot;sc-font-s&quot;&gt; S Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
+                                <code id="copy_code-code-fonts-default" class="hjs html">&lt;p class=&quot;sc-font-s&quot;&gt; S Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-m&quot;&gt;M Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-l&quot;&gt;L Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-xl&quot;&gt;XL Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-xxl&quot;&gt;XXL Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-hero&quot;&gt;HERO Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
-&lt;p class=&quot;sc-font-silent&quot;&gt;Silent Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
+&lt;h2 class=&quot;sc-font-m&quot;&gt;HEADLINE2 Lorem ipsum dolor sit amet&lt;/h2&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="fonts-variations">
+                    <div class="markdown"> <h2>Fonts variations<span class="status complete">Complete</span></h2>
+
+<p>Library also provides <code>sc-font-bold</code>, <code>sc-font-silent</code>, <code>sc-font-uppercase</code> and <code>sc-font-error</code> classes for styling.</p>
+</div>
+                   <div class="sample"><p class="sc-font-silent">Silent Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+<p class="sc-font-bold">BOLD Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+<p class="sc-font-uppercase">UPPERCASE Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+<span class="sc-font-error">ERROR message</h2>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-fonts-variations" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-fonts-variations" class="hjs html">&lt;p class=&quot;sc-font-silent&quot;&gt;Silent Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-bold&quot;&gt;BOLD Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
 &lt;p class=&quot;sc-font-uppercase&quot;&gt;UPPERCASE Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
-&lt;h2 class=&quot;sc-font-m&quot;&gt;HEADLINE2 Lorem ipsum dolor sit amet&lt;/h2&gt;
+&lt;span class=&quot;sc-font-error&quot;&gt;ERROR message&lt;/h2&gt;
 </code>
                             </pre>
                         </div>
@@ -715,6 +741,7 @@ margin-bottom:15px;
 </div>
                    <div class="sample"><button class="sc-btn-bob">I am Bob!</button>
 <button class="sc-btn-ross">I am Ross!</button>
+<button class="sc-btn-ghost">I am Ghost!</button>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -724,6 +751,7 @@ margin-bottom:15px;
                             <pre>
                                 <code id="copy_code-code-button-default" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-ghost&quot;&gt;I am Ghost!&lt;/button&gt;
 </code>
                             </pre>
                         </div>
@@ -738,6 +766,7 @@ margin-bottom:15px;
 </div>
                    <div class="sample"><button class="sc-btn-bob" disabled="">I am Bob!</button>
 <button class="sc-btn-ross" disabled="">I am Ross!</button>
+<button class="sc-btn-ghost" disabled="">I am Ghost!</button>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -747,6 +776,7 @@ margin-bottom:15px;
                             <pre>
                                 <code id="copy_code-code-button-disabled" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot; disabled=&quot;&quot;&gt;I am Bob!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ross&quot; disabled=&quot;&quot;&gt;I am Ross!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-ghost&quot; disabled=&quot;&quot;&gt;I am Ghost!&lt;/button&gt;
 </code>
                             </pre>
                         </div>
@@ -779,7 +809,9 @@ margin-bottom:15px;
                     <div class="markdown"><h2>Link as a button<span class="status complete">Complete</span></h2>
 </div>
                    <div class="sample"><a class="sc-btn-bob">I am Bob!</a>
-<a class="sc-btn-ross">I am Ross!</a></div> 
+<a class="sc-btn-ross">I am Ross!</a>
+<a class="sc-btn-ghost">I am Ghost!</a>
+</div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-link" title="Copy to clipboard">
@@ -787,7 +819,9 @@ margin-bottom:15px;
                              </button>
                             <pre>
                                 <code id="copy_code-code-button-link" class="hjs html">&lt;a class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/a&gt;
-&lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;</code>
+&lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;
+&lt;a class=&quot;sc-btn-ghost&quot;&gt;I am Ghost!&lt;/a&gt;
+</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
@@ -1862,7 +1896,7 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="tooltip-link" class="positon-anchor">
                 <div class="element" id="tooltip">
-                    <div class="markdown"><p><h2>Tooltip old<span class="status complete">Complete</span></h2></p>
+                    <div class="markdown"><p><h2>Tooltip old<span class="status refactoring">Deprecated</span></h2></p>
 <style>
 #tooltip .sample{
     padding-top:60px;
@@ -2255,6 +2289,29 @@ document.querySelector('body').addEventListener('click', event => {
 &lt;div class=&quot;sc-text-center&quot;&gt;
     &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show small tip notification&lt;/button&gt;
 &lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="validations-link" class="positon-anchor">
+                <div class="element" id="validation">
+                    <div class="markdown"><h2>Validation<span class="status complete">Complete</span></h2>
+</div>
+                   <div class="sample"><input type="text" class="sc-input error" placeholder="First name">
+<span class="sc-font-s sc-block sc-font-error">Provide your name</span>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-validation" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-validation" class="hjs html">&lt;input type=&quot;text&quot; class=&quot;sc-input error&quot; placeholder=&quot;First name&quot;&gt;
+&lt;span class=&quot;sc-font-s sc-block sc-font-error&quot;&gt;Provide your name&lt;/span&gt;
 </code>
                             </pre>
                         </div>
@@ -2727,7 +2784,7 @@ window.onload = function() {
 <br>
 <br>
 
-<a name="section-4">Section 4</a>
+<a name="section-5">Section 4</a>
 <div>
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </div>
@@ -2789,7 +2846,7 @@ window.onload = function() {
 &lt;br&gt;
 &lt;br&gt;
 
-&lt;a name=&quot;section-4&quot;&gt;Section 4&lt;/a&gt;
+&lt;a name=&quot;section-5&quot;&gt;Section 4&lt;/a&gt;
 &lt;div&gt;
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 &lt;/div&gt;
