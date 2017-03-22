@@ -11,10 +11,6 @@ Several helper classes for font styling are available, the font sizes follow sim
 For styling `<h*>` elements please use `sc-font-*` classes directly.
 For example `<h2 class='sc-font-m'>`
 
-#### Variations
-
-Library also provides `sc-font-bold`, `sc-font-silent`, `sc-font-uppercase` and `sc-font-error` classes.
-
 <table class="docs-table">
     <thead>
         <tr>
