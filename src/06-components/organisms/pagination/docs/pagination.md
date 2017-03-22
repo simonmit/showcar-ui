@@ -12,7 +12,7 @@ You need the following properties to instantiate the "Pager":
 * The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.
 
 <script>
-window.onload = function(){
+document.addEventListener('DOMContentLoaded', function() {
  (function ($) {
    var paginationElement = document.querySelector('.sc-pagination'),
    itemsPerPage = 20,
@@ -24,5 +24,5 @@ window.onload = function(){
    new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
    }
  })(window.Zepto);
-}
+ });
 </script>
