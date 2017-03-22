@@ -106,6 +106,13 @@ module.exports = (globalJSON, content) => {
             <div id="left-menu">
                 ${menu}
             </div>
+            <div id="open-menu">
+                <div id="open-menu__container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
          </div>
     `;
     

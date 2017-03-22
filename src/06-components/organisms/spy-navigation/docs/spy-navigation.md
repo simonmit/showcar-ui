@@ -1,8 +1,7 @@
 <h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
 
 <script>
-
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
   (function ($, showcar) {
     const stickyYStartPosition = $('.sc-spy-navigation').offset().top;
 
@@ -11,6 +10,5 @@ window.onload = function() {
       unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
     });
   })(window.Zepto, window.showcar);
-}
-
+})
 </script>
