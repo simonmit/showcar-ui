@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     var codeSampes = document.querySelectorAll('.code-sample-toggle');
-
+    
     function codeSampleToggle() {
         var toggleClass = function (codeSamle) {
             if (codeSamle.classList.contains('hide-sample') !== true) {
@@ -14,14 +14,14 @@ window.addEventListener('load', function () {
             }
             activateMenu();
         };
-
+        
         [].forEach.call(codeSampes, function (codeSamle) {
             codeSamle.addEventListener('click', function () {
                 toggleClass(codeSamle)
             })
         })
     }
-
+    
     function allCodeSample() {
         var toggleClass = function (toggler) {
             if (toggler.classList.contains('active') !== true) {
@@ -47,32 +47,39 @@ window.addEventListener('load', function () {
             toggleClass(this);
         });
     }
-
+    
     codeSampleToggle();
     allCodeSample();
-
-
+    
+    
     smoothScroll.init({
         selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInSine', // Easing pattern to use
-        offset: -1, // Integer. How far to offset the scrolling anchor location in pixels
+        offset: - 1, // Integer. How far to offset the scrolling anchor location in pixels
+    });
+    
+    smoothScroll.init({
+        selector: '#sidebar.open [data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+        speed: 0, // Integer. How fast to complete the scroll in milliseconds
+        offset: - 1, // Integer. How far to offset the scrolling anchor location in pixels
         callback: function (anchor, toggle) {
+            document.getElementById('sidebar').classList.remove('open');
         }
     });
-
+    
     function animateOnLoad() {
         if (window.location.hash) {
             var anchor = document.querySelector(window.location.hash);
             smoothScroll.animateScroll(anchor);
         }
     }
-
+    
     animateOnLoad();
-
-
+    
+    
     var positonAnchors = document.querySelectorAll('.positon-anchor');
-
+    
     function activateMenu() {
         var section = {}, i = 0;
         window.onscroll = function () {
@@ -95,7 +102,10 @@ window.addEventListener('load', function () {
             }
         }
     }
-
+    
     activateMenu();
     document.addEventListener('resize', activateMenu)
+    document.getElementById('open-menu').addEventListener('click', function () {
+        document.getElementById('sidebar').classList.toggle('open');
+    })
 });

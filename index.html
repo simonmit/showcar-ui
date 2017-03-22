@@ -189,6 +189,13 @@
             </li>
         </ul>
             </div>
+            <div id="open-menu">
+                <div id="open-menu__container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
          </div>
     
         <div id="content"><div id="variables-link" class="positon-anchor"><h2 class="type_name">globals</h2>
@@ -2596,7 +2603,7 @@ background-color: #f4f4f4;
 <li>The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</li>
 </ul>
 <script>
-window.onload = function(){
+document.addEventListener('DOMContentLoaded', function() {
  (function ($) {
    var paginationElement = document.querySelector('.sc-pagination'),
    itemsPerPage = 20,
@@ -2608,7 +2615,7 @@ window.onload = function(){
    new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
    }
  })(window.Zepto);
-}
+ });
 </script>
 </div>
                    <div class="sample"><ul class="sc-pagination">
@@ -2720,8 +2727,7 @@ window.onload = function(){
                     <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
 
 <script>
-
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
   (function ($, showcar) {
     const stickyYStartPosition = $('.sc-spy-navigation').offset().top;
 
@@ -2730,8 +2736,7 @@ window.onload = function() {
       unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
     });
   })(window.Zepto, window.showcar);
-}
-
+})
 </script>
 </div>
                    <div class="sample"><div id="page-subnav-stick"></div>
