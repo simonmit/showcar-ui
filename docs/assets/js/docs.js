@@ -108,4 +108,11 @@ window.addEventListener('load', function () {
     document.getElementById('open-menu').addEventListener('click', function () {
         document.getElementById('sidebar').classList.toggle('open');
     })
+    window.addEventListener('resize', () => {
+        if (location.hash) {
+            const targetEl = document.querySelector(location.hash);
+            const posstion = targetEl.offsetTop;
+            window.scrollTo(0, posstion);
+        }
+    });
 });
