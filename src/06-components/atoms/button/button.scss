@@ -67,6 +67,29 @@
   }
 }
 
+.sc-btn-ghost {
+  @include button;
+
+  background-color: transparent;
+  border: solid $orange-100 1px;
+  color: $orange-100;
+
+  &:hover {
+    border: solid $orange-120 1px;
+    color: $orange-120;
+  }
+
+  &:active {
+    border: solid $orange-130 1px;
+    color: $orange-130;
+  }
+
+  &[disabled] {
+    border: solid $orange-50 1px;
+    color: $orange-50;
+  }
+}
+
 .sc-btn-block {
   display: block;
   width: 100%;

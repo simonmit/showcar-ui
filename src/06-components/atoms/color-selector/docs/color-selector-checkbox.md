@@ -6,7 +6,7 @@ We created a special type of radio buttons and checkboxes for you to easily impl
 
 <pre>
     <code class="css">
-    @import "path/to/mixins/color-selector";
+    @import "path/to/showcar-ui/src/legacy-mixins";
     .sc-color-selector {
         input.sc-input {
             &.red {
