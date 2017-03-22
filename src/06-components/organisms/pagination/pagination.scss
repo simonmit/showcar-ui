@@ -28,8 +28,8 @@
       width: 100px;
 
       a.disabled {
-        svg {
-          fill: $black-40;
+        svg path {
+          stroke: $black-40;
         }
       }
     }
@@ -82,13 +82,16 @@
         display: inline;
         position: relative;
         height: 7px;
-        fill: $color-link;
         transition: fill $transition-time ease-in;
         width: 13px;
 
         svg {
           width: 13px;
           height: 7px;
+
+          path {
+            stroke: $color-link;
+          }
         }
       }
     }
