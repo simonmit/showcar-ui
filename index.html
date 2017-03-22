@@ -198,7 +198,7 @@
 <p>To use variables in your scss code you just need to import the specific file based on your directory structure:</p>
 <pre>
     <code class="hljs css">
-    @import "path/to/variables";
+    @import "path/to/showcar-ui/src/01-settings/variables";
     </code>
 </pre>
 </div>
@@ -904,7 +904,7 @@ margin-bottom:15px;
 <p>We created a special type of radio buttons and checkboxes for you to easily implement a color selection. In this case you have to write a little custom scss to define the background color of the elements. You can also choose the color of the checkmark. Therefor you have to use the <code>color-selector-color</code> mixin which takes the background color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.</p>
 <h3>additional scss</h3><pre>
     <code class="css">
-    @import "path/to/mixins/color-selector";
+    @import "path/to/showcar-ui/src/legacy-mixins";
     .sc-color-selector {
         input.sc-input {
             &.red {
