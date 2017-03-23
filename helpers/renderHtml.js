@@ -89,7 +89,7 @@ module.exports = (globalJSON, content) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width">
-                <title v-text="ShowCar UI docs"></title>
+                <title>ShowCar UI docs</title>
                 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
                 <script>(${polyfils})()</script>
                 ${scriptsFiles}
