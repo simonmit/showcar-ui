@@ -6,7 +6,7 @@ var renderer = new marked.Renderer();
 renderer.heading = (text, level) => {
     return `<h${level}>${text}</h${level}>`;
 }
-    
+
 const entities = require('html-entities').AllHtmlEntities;
 
 const docsData = {
@@ -34,7 +34,7 @@ const docsData = {
 
 
 const getFiles = (route, name, routesArr) => {
-    let routes = route ?  recursiveSync(route) : routesArr ;
+    let routes = route ? recursiveSync(route) : routesArr;
     return routes
         .filter(fileName => {
             return path.parse(fileName).ext === '.md';
@@ -87,9 +87,9 @@ module.exports = () => {
             if (docsData[key] === Object(docsData[key])) {
                 return Object.keys(docsData[key])
                     .map((deepKey) => {
-                    if(path.parse(docsData[key][deepKey]).ext === '.md'){
-                        return setObj(key, getFiles(false , deepKey, [docsData[key][deepKey]]))
-                    }
+                        if (path.parse(docsData[key][deepKey]).ext === '.md') {
+                            return setObj(key, getFiles(false, deepKey, [docsData[key][deepKey]]))
+                        }
                         return setObj(key, getFiles(docsData[key][deepKey], deepKey))
                     });
             }
