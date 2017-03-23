@@ -1,2 +1,2 @@
 <h2>About</h2>
-<p>Placeholder</p>
+This library provides several predefined classes and variables for simple page styling with the showcar ui library
