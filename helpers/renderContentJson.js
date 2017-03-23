@@ -28,7 +28,12 @@ const docsData = {
         utilities: 'src/07-utilities/docs',
     },
     "extra packages": {
-        carousel: 'src/08-docs-info/extra-packages/carousel.md'
+        icons: 'src/08-docs-info/extra-packages/icons.md',
+        pictures: 'src/08-docs-info/extra-packages/pictures.md',
+        carousel: 'src/08-docs-info/extra-packages/carousel.md',
+        ads: 'src/08-docs-info/extra-packages/ads.md',
+        storage: 'src/08-docs-info/extra-packages/storage.md',
+        tracking: 'src/08-docs-info/extra-packages/tracking.md',
     }
 }
 
