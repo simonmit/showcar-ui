@@ -36,7 +36,7 @@ app.get('/docs/:type/', (req, res) => {
                 })
                 .map(el => {
                     let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-                    return JSON.parse(globalJSON[el].markDown) + html + '<br>';
+                    return `<div id="${globalJSON[el].name}">`+JSON.parse(globalJSON[el].markDown+html)+'</div><br>';
                 }).join('') || 'empty';
         res.send(generateHtml(globalJSON, content));
     }
