@@ -10,6 +10,12 @@ renderer.heading = (text, level) => {
 const entities = require('html-entities').AllHtmlEntities;
 
 const docsData = {
+    "general information": {
+        about: 'src/08-docs-info/general-information/about.md',
+        "how to include": 'src/08-docs-info/general-information/how-to-include.md',
+        contribution: 'src/08-docs-info/general-information/contribution.md',
+        faq: 'src/08-docs-info/general-information/faq.md',
+    },
     globals: {
         variables: 'src/01-settings/docs/',
         fonts: 'src/03-generic/docs',
@@ -21,12 +27,15 @@ const docsData = {
         layout: 'src/05-layout/docs',
         utilities: 'src/07-utilities/docs',
     },
-    // extras: 'docs/helpers/extras'
+    "extra packages": {
+        carousel: 'src/08-docs-info/extra-packages/carousel.md'
+    }
 }
 
 
-const getFiles = (route, name) => {
-    let routes = recursiveSync(route)
+const getFiles = (route, name, routesArr) => {
+    let routes = route ?  recursiveSync(route) : routesArr ;
+    return routes
         .filter(fileName => {
             return path.parse(fileName).ext === '.md';
         }).map((mdPath) => {
@@ -37,11 +46,9 @@ const getFiles = (route, name) => {
                 mdPath
             }
         })
-    return routes;
 }
 
-const setObj = (type, route, name) => {
-    let files = getFiles(route, name);
+const setObj = (type, files) => {
     return files
         .map((file) => {
             const group = file.group;
@@ -73,16 +80,20 @@ const setObj = (type, route, name) => {
         })
 }
 
+
 module.exports = () => {
     let obj = Object.keys(docsData)
         .map((key) => {
             if (docsData[key] === Object(docsData[key])) {
                 return Object.keys(docsData[key])
                     .map((deepKey) => {
-                        return setObj(key, docsData[key][deepKey], deepKey)
+                    if(path.parse(docsData[key][deepKey]).ext === '.md'){
+                        return setObj(key, getFiles(false , deepKey, [docsData[key][deepKey]]))
+                    }
+                        return setObj(key, getFiles(docsData[key][deepKey], deepKey))
                     });
             }
-            return setObj(key, docsData[key]);
+            return setObj(key, getFiles(docsData[key]));
         })
         .reduce((acc, val) =>
                 acc.concat(val),
