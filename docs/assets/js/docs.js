@@ -51,32 +51,19 @@ window.addEventListener('load', function () {
     codeSampleToggle();
     allCodeSample();
     
-    
-    smoothScroll.init({
-        selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
-        speed: 500, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInSine', // Easing pattern to use
-        offset: - 1, // Integer. How far to offset the scrolling anchor location in pixels
-    });
-    
-    smoothScroll.init({
-        selector: '#sidebar.open [data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
-        speed: 0, // Integer. How fast to complete the scroll in milliseconds
-        offset: - 1, // Integer. How far to offset the scrolling anchor location in pixels
-        callback: function (anchor, toggle) {
-            document.getElementById('sidebar').classList.remove('open');
-        }
-    });
-    
-    function animateOnLoad() {
-        if (window.location.hash) {
-            var anchor = document.querySelector(window.location.hash);
-            smoothScroll.animateScroll(anchor);
-        }
-    }
-    
-    animateOnLoad();
-    
+    var sidebar = document.getElementById('sidebar');
+    [].forEach.call(document.querySelectorAll('[data-scroll]'), function (el) {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = document.querySelector(el.getAttribute('href'));
+            if (sidebar.classList.contains('open')) {
+                smoothScroll.animateScroll(target, el, { speed: 0 });
+                sidebar.classList.remove('open');
+            } else {
+                smoothScroll.animateScroll(target, el, { speed: 500, easing: 'easeInSine', offset: - 1 });
+            }
+        })
+    })
     
     var positonAnchors = document.querySelectorAll('.positon-anchor');
     
@@ -108,11 +95,17 @@ window.addEventListener('load', function () {
     document.getElementById('open-menu').addEventListener('click', function () {
         document.getElementById('sidebar').classList.toggle('open');
     })
-    window.addEventListener('resize', () => {
-        if (location.hash) {
-            const targetEl = document.querySelector(location.hash);
-            const posstion = targetEl.offsetTop;
-            window.scrollTo(0, posstion);
+    
+    function scrollLocationHash() {
+        if (window.location.hash) {
+            var anchor = document.querySelector(window.location.hash);
+            if (anchor) {
+                smoothScroll.animateScroll(anchor, false, { speed: 0 });
+                document.getElementById('sidebar').classList.remove('open');
+            }
         }
-    });
+    }
+    
+    window.addEventListener('resize', scrollLocationHash);
+    scrollLocationHash();
 });

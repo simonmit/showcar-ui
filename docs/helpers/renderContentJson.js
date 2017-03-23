@@ -12,7 +12,7 @@ const entities = require('html-entities').AllHtmlEntities;
 const docsData = {
     "general information": {
         about: 'src/08-docs-info/general-information/about.md',
-        "how to include": 'src/08-docs-info/general-information/how-to-include.md',
+        "how-to-include": 'src/08-docs-info/general-information/how-to-include.md',
         contribution: 'src/08-docs-info/general-information/contribution.md',
         faq: 'src/08-docs-info/general-information/faq.md',
     },

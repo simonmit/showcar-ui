@@ -471,14 +471,14 @@ code {
     display: none;
 }
 @media all and (max-width: 1000px) {
-    #sidebar.open {
+    #sidebar.open{
         max-height: 100%;
         transition: max-height .2s;
     }
     #sidebar {
         position: fixed;
         width: 100%;
-        transition: max-height 0s;
+        transition: max-height .05s;
         float: none;
         background: #fff;
         max-height: 50px;
@@ -517,21 +517,20 @@ code {
         top: 55px;
         width: 100%;
         background: #fff;
-        bottom: 0;
-        position: fixed;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        bottom:0;
+        position:fixed;
+        overflow-y:scroll;
+        overflow-x:hidden;
     }
-    #sidebar.open #left-menu {
+    #sidebar.open #left-menu{
         visibility: visible;
     }
     #left-menu a.open-separate {
         display: none;
     }
-    #left-menu > ul > li span {
+    #left-menu > ul > li span{
         padding: 0px 24px;
-        font-weight: bold;
-    }
+        font-weight: bold;}
     #content {
         margin: 40px 15px 0;
     }
