@@ -1,4 +1,32 @@
 {
+    "about": {
+        "name": "about",
+        "type": "general information",
+        "group": "about",
+        "srcDir": "src/08-docs-info/general-information",
+        "markDown": "\"<p><h2>About</h2></p>\\n<p>Placeholder</p>\\n\""
+    },
+    "how-to-include": {
+        "name": "how-to-include",
+        "type": "general information",
+        "group": "how to include",
+        "srcDir": "src/08-docs-info/general-information",
+        "markDown": "\"<p><h2>How to include</h2></p>\\n<p>Placeholder</p>\\n\""
+    },
+    "contribution": {
+        "name": "contribution",
+        "type": "general information",
+        "group": "contribution",
+        "srcDir": "src/08-docs-info/general-information",
+        "markDown": "\"<p><h2>Contribution</h2></p>\\n<p>Placeholder</p>\\n\""
+    },
+    "faq": {
+        "name": "faq",
+        "type": "general information",
+        "group": "faq",
+        "srcDir": "src/08-docs-info/general-information",
+        "markDown": "\"<p><h2>FAQ</h2></p>\\n<p>Placeholder</p>\\n\""
+    },
     "_variables": {
         "name": "_variables",
         "type": "globals",
@@ -595,5 +623,12 @@
         "group": "utilities",
         "srcDir": "src/07-utilities/docs",
         "markDown": "\"<h2>Visible/hidden classes<span class=\\\"status refactor\\\">Needs refactoring</span></h2>\\n\\n<h4>Usage:</h4><p>Utility classes to show/hide elements based on the current viewport (media queries).<br>IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device&#39;s presentation.</p>\\n<table class=\\\"docs-table docs-table-visibility\\\">\\n    <thead>\\n    <tr>\\n        <th></th>\\n        <th>S Viewport</th>\\n        <th>M Viewport</th>\\n        <th>L Viewport</th>\\n        <th>XL Viewport</th>\\n    </tr>\\n    </thead>\\n    <tbody>\\n    <tr>\\n        <td><code>.sc-visible</code></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-xl</code></td>\\n        <td></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-l</code></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-m</code></td>\\n        <td></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-visible-s</code></td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n        <td class=\\\"cell-visible\\\">Visible</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden</code></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-xl</code></td>\\n        <td></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-l</code></td>\\n        <td></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-m</code></td>\\n        <td></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    <tr>\\n        <td><code>.sc-hidden-s</code></td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n        <td class=\\\"cell-hidden\\\">Hidden</td>\\n    </tr>\\n    </tbody>\\n</table>\\n\""
+    },
+    "carousel": {
+        "name": "carousel",
+        "type": "extra packages",
+        "group": "carousel",
+        "srcDir": "src/08-docs-info/extra-packages",
+        "markDown": "\"<p><h2>Carousel</h2></p>\\n<p>Placeholder</p>\\n\""
     }
 }
