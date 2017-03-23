@@ -55,6 +55,8 @@ module.exports = (globalJSON, content) => {
                     group.push(globalJSON[el].group);
                     return content;
                 }).join('\n') || 'empty';
+    }else{
+        content = `<div id="">${content}</div>`
     }
     
     let scriptsFiles = [
