@@ -9,7 +9,7 @@
     "how-to-include": {
         "name": "how-to-include",
         "type": "general information",
-        "group": "how to include",
+        "group": "how-to-include",
         "srcDir": "src/08-docs-info/general-information",
         "markDown": "\"<p><h2>How to include</h2></p>\\n<p>Placeholder</p>\\n\""
     },
@@ -629,6 +629,8 @@
         "type": "extra packages",
         "group": "carousel",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Carousel</h2></p>\\n<p>Placeholder</p>\\n\""
+        "markDown": "\"<p><h2>Carousel</h2></p>\\n<p>Placeholder</p>\\n\"",
+        "html": "\"\"",
+        "codeExample": "\"\""
     }
 }
