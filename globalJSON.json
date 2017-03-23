@@ -4,21 +4,14 @@
         "type": "general information",
         "group": "about",
         "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>About</h2></p>\\n<p>Placeholder</p>\\n\""
+        "markDown": "\"<p><h2>About</h2>\\nThis library provides several predefined classes and variables for simple page styling with the showcar ui library</p>\\n\""
     },
     "how-to-include": {
         "name": "how-to-include",
         "type": "general information",
         "group": "how-to-include",
         "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>How to include</h2></p>\\n<p>Placeholder</p>\\n\""
-    },
-    "contribution": {
-        "name": "contribution",
-        "type": "general information",
-        "group": "contribution",
-        "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>Contribution</h2></p>\\n<p>Placeholder</p>\\n\""
+        "markDown": "\"<p><h2>How to include</h2>\\nYou can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>\\n<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;\\n&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;\\n</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>\\n\""
     },
     "faq": {
         "name": "faq",
@@ -26,6 +19,13 @@
         "group": "faq",
         "srcDir": "src/08-docs-info/general-information",
         "markDown": "\"<p><h2>FAQ</h2></p>\\n<p>Placeholder</p>\\n\""
+    },
+    "contribution": {
+        "name": "contribution",
+        "type": "general information",
+        "group": "contribution",
+        "srcDir": "src/08-docs-info/general-information",
+        "markDown": "\"<p><h2>Contribution</h2></p>\\n<p>Placeholder</p>\\n\""
     },
     "_variables": {
         "name": "_variables",

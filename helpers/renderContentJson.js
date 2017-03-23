@@ -9,34 +9,7 @@ renderer.heading = (text, level) => {
 
 const entities = require('html-entities').AllHtmlEntities;
 
-const docsData = {
-    "general information": {
-        about: 'src/08-docs-info/general-information/about.md',
-        "how-to-include": 'src/08-docs-info/general-information/how-to-include.md',
-        contribution: 'src/08-docs-info/general-information/contribution.md',
-        faq: 'src/08-docs-info/general-information/faq.md',
-    },
-    globals: {
-        variables: 'src/01-settings/docs/',
-        fonts: 'src/03-generic/docs',
-    },
-    atoms: 'src/06-components/atoms/',
-    molecules: 'src/06-components/molecules/',
-    organisms: 'src/06-components/organisms/',
-    utilities: {
-        layout: 'src/05-layout/docs',
-        utilities: 'src/07-utilities/docs',
-    },
-    "extra packages": {
-        icons: 'src/08-docs-info/extra-packages/icons.md',
-        carousel: 'src/08-docs-info/extra-packages/carousel.md',
-        pictures: 'src/08-docs-info/extra-packages/pictures.md',
-        tracking: 'src/08-docs-info/extra-packages/tracking.md',
-        ads: 'src/08-docs-info/extra-packages/ads.md',
-        storage: 'src/08-docs-info/extra-packages/storage.md',
-    }
-}
-
+const docsData = JSON.parse(fs.readFileSync('./docs/docsData.json', 'utf8'));
 
 const getFiles = (route, name, routesArr) => {
     let routes = route ? recursiveSync(route) : routesArr;
