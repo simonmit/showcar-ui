@@ -2,24 +2,39 @@ import { Selector } from 'testcafe';
 
 const nonstickyNavigation = Selector('.sc-spy-navigation');
 const stickyNavigation = Selector('.sc-spy-navigation--sticked');
+const lastLink = Selector('.sc-spy-navigation__link:last-child');
+const activeLink = Selector('.sc-spy-navigation__link--active');
 
 fixture `Spy-navigation`
-    .page `https://autoscout24.github.io/showcar-ui/#spy-navigation-link`;
+    .page `http://localhost:5000/docs/organisms/spy-navigation`;
 
-test('Sticky when scrolling', async t => {
+test('Initial state is non-sticky and inactive', async t => {
+    const activeLinkExists = Selector(activeLink).exists;
+
     await t
-        .wait(500)
         .expect(nonstickyNavigation.getStyleProperty('position')).eql('relative')
-        .pressKey('down') // simulate scrolling
-        .expect(stickyNavigation.getStyleProperty('position')).eql('fixed');
+        .expect(activeLinkExists).notOk();
 })
 
-//test('Set active tab', async t => {
-//    await t
-//
-//})
-//
-//test('Scroll to anchor', async t => {
-//    await t
-//
-//})
+test('Sticky behaviour', async t => {
+    const activeLinkExists = Selector(activeLink).exists;
+
+    await t
+        .resizeWindowToFitDevice('iPad', {
+            portraitOrientation: false
+        })
+        .click(lastLink) // simulate scrolling
+        .expect(stickyNavigation.getStyleProperty('position')).eql('fixed')
+        .expect(activeLinkExists).ok();
+})
+
+test('Scroll to anchor and set active tab', async t => {
+    const activeLinkExists = Selector(activeLink).exists;
+    const secondLink = Selector('.sc-spy-navigation__link:nth-child(2)');
+
+    await t
+        .click(secondLink)
+        .expect(activeLinkExists).ok()
+        .expect(activeLink.count).eql(1)
+        .expect(secondLink.hasClass('sc-spy-navigation__link--active')).ok()
+})

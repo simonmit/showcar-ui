@@ -102,6 +102,7 @@ const serveDocs = require('./docs/tasks/docs');
 
 gulp.task('docs:serve', () => {serveDocs(gulp)});
 
+gulp.task('test', ['docs:serve', 'test:interaction']);
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
