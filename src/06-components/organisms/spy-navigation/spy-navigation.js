@@ -149,7 +149,6 @@ export default function(config) {
         activeNavItem = linkTargetPairs.filter(function(pair) {
             if(!pair.target){
                 throw new Error('Check hash name on target');
-                return false;
             }
             return pair.target.offsetTop <= scrollTop + componentHeight + 5;
         }).pop();
