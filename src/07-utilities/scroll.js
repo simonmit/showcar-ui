@@ -8,7 +8,7 @@ export function smoothScroll(target, duration = 300, cb) {
         targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';
 
         if ($(targetSelector).length === 0) {
-            targetSelector = hrefTarget;
+            return
         }
     }
 
