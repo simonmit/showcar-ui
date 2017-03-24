@@ -56,7 +56,7 @@ module.exports = (globalJSON, content) => {
                     return content;
                 }).join('\n') || 'empty';
     }else{
-        content = `<div id="">${content}</div>`
+        content = `<div id="separate-content">${content}</div>`
     }
     
     let scriptsFiles = [
