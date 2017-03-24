@@ -42,8 +42,7 @@
     "html-entities": "^1.2.0",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.0.4",
-    "yargs": "^4.6.0"
+    "showcar-gulp": "^2.0.4"
   },
   "main": "src/js/showcar-ui.js",
   "dependencies": {

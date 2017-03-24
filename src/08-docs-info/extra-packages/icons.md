@@ -42,7 +42,6 @@ height: 40px;
 font-size: 13px;
 }
 </style>
-
 <script type="text/javascript">
 var iconsList = document.querySelector('#as24-icons-list');
 window.showcarIconNames.forEach(function(name) {
