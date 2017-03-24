@@ -6,26 +6,26 @@
         "srcDir": "src/08-docs-info/general-information",
         "markDown": "\"<p><h2>About</h2>\\nThis library provides several predefined classes and variables for simple page styling with the showcar ui library</p>\\n\""
     },
-    "how-to-include": {
-        "name": "how-to-include",
+    "getting-started": {
+        "name": "getting-started",
         "type": "general information",
-        "group": "how-to-include",
+        "group": "getting-started",
         "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>How to include</h2>\\nYou can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>\\n<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;\\n&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;\\n</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>\\n\""
+        "markDown": "\"<p><h2>Getting started</h2>\\nYou can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>\\n<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;\\n&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;\\n</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>\\n\""
     },
     "faq": {
         "name": "faq",
         "type": "general information",
         "group": "faq",
         "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>FAQ</h2></p>\\n<p>Placeholder</p>\\n\""
+        "markDown": "\"<h2>FAQ</h2><p>As we just started with new documentation we are collecting your questions. Is it easy to find elements? Is it obvious how to include them? Have you succeed with running library locally in dev mode?<br>Feel free to ask us in slack #as24_web_experience or write an <a href=\\\"https://github.com/AutoScout24/showcar-ui/issues/new\\\" target=\\\"_blank\\\">issue</a> on GitHub.</p>\\n\""
     },
     "contribution": {
         "name": "contribution",
         "type": "general information",
         "group": "contribution",
         "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<p><h2>Contribution</h2></p>\\n<p>Placeholder</p>\\n\""
+        "markDown": "\"<h2>Contribution</h2><p>Bug reports and pull requests are welcome! Please take a look at our <a href=\\\"https://github.com/AutoScout24/showcar-ui/contribution.md\\\" target=\\\"_blank\\\">contribution guideline</a> on GitHub for details.</p>\\n\""
     },
     "_variables": {
         "name": "_variables",
@@ -629,14 +629,14 @@
         "type": "extra packages",
         "group": "icons",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Icons</h2>\\nYou can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[[icon-name]]&quot;&gt;&lt;/as24-icon&gt;</code>.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-icons\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-icons</a></p>\\n<p>The following icon names are currently available:</p>\\n<p><ul id=\\\"as24-icons-list\\\" class=\\\"icons-list\\\"></ul></p>\\n<style type=\\\"text/css\\\">\\n#icons as24-icon {\\ndisplay: inline-block;\\nwidth: 16px;\\nheight: 16px;\\n}\\n#icons as24-icon svg {\\nmax-width: 100%;\\nmax-height: 100%;\\n}\\n#icons .icons-list:after {\\ncontent: \\\"\\\";\\ndisplay: table;\\nclear: both;\\n}\\n#icons .icons-list li {\\npadding: 10px;\\nfloat: left;\\nbackground: #f4f4f4;\\nborder: 1px solid #fff;\\nwidth: 120px;\\nheight: 160px;\\nlist-style: none;\\ntext-align: center;\\nmargin-bottom: 20px;\\n}\\n#icons .icons-list li:hover {\\nbackground: #acacac;\\n}\\n#icons .icons-list li as24-icon {\\nwidth: 80px;\\nheight: 80px;\\n}\\n#icons .icons-list li p {\\npadding-top: 0;\\nword-break: break-all;\\nheight: 40px;\\n}\\n</style>\\n\\n<script type=\\\"text/javascript\\\">\\nvar iconsList = document.querySelector('#as24-icons-list');\\nwindow.showcarIconNames.forEach(function(name) {\\nvar item = document.createElement('li');\\nitem.innerHTML = '<as24-icon type=\\\"' + name + '\\\"></as24-icon><p>' + name + '</p>';\\niconsList.appendChild(item);\\n});\\n</script>\\n\""
+        "markDown": "\"<p><h2>Icons</h2>\\nYou can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[[icon-name]]&quot;&gt;&lt;/as24-icon&gt;</code>.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-icons\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-icons</a></p>\\n<p>The following icon names are currently available:</p>\\n<p><ul id=\\\"as24-icons-list\\\" class=\\\"icons-list\\\"></ul></p>\\n<p><style type=\\\"text/css\\\"></p>\\n<p>#icons as24-icon {\\ndisplay: inline-block;\\nwidth: 50px;\\nheight: 50px;\\n}</p>\\n<p>#icons as24-icon svg {\\nmax-width: 100%;\\nmax-height: 100%;\\n}</p>\\n<p>#icons .icons-list:after {\\ncontent: &quot;&quot;;\\ndisplay: table;\\nclear: both;\\n}</p>\\n<p>#icons .icons-list li {\\npadding: 20px 10px 10px;\\nfloat: left;\\nbackground: #f4f4f4;\\nborder: 1px solid #fff;\\nwidth: 108px;\\nheight: 130px;\\nlist-style: none;\\ntext-align: center;\\nmargin-bottom: 20px;\\n}</p>\\n<p>#icons .icons-list li:hover {\\nbackground: #acacac;\\n}</p>\\n<p>#icons .icons-list li p {\\npadding-top: 0;\\nword-break: break-all;\\nheight: 40px;\\nfont-size: 13px;\\n}\\n</style></p>\\n<script type=\\\"text/javascript\\\">\\nvar iconsList = document.querySelector('#as24-icons-list');\\nwindow.showcarIconNames.forEach(function(name) {\\nvar item = document.createElement('li');\\nitem.innerHTML = '<as24-icon type=\\\"' + name + '\\\"></as24-icon><p>' + name + '</p>';\\niconsList.appendChild(item);\\n});\\n</script>\\n\""
     },
     "carousel": {
         "name": "carousel",
         "type": "extra packages",
         "group": "carousel",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Carousel</h2>\\n\\n<p>Showcar-carousel is a component for cycling through elements (images, videos).<br>This is how carousel looks in general<br><img src=\\\"/showcar-ui/docs/assets/images/showcar-carousel.jpg\\\" alt=\\\"Showcar-carousel\\\"></p>\\n<p>For how-to-use see documentation <a href=\\\"https://github.com/AutoScout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-carousel</a></p>\\n\""
+        "markDown": "\"<h2>Carousel</h2>\\n\\n<p>Showcar-carousel is a component for cycling through elements (images, videos).<br>This is how carousel looks in general<br><img src=\\\"/showcar-ui/docs/assets/images/showcar-carousel.jpg\\\" alt=\\\"Showcar-carousel\\\"></p>\\n<p>Example: <a href=\\\"https://autoscout24.github.io/showcar-carousel/\\\" target=\\\"_blank\\\">https://autoscout24.github.io/showcar-carousel</a></p>\\n<p>For how-to-use see read.me <a href=\\\"https://github.com/AutoScout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-carousel</a></p>\\n\""
     },
     "pictures": {
         "name": "pictures",
