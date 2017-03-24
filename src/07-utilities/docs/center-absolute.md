@@ -1,4 +1,4 @@
-<h2>Absolute centring<span class="status complete">Complete</span></h2>
+<h2>Absolute centering<span class="status complete">Complete</span></h2>
 
 <style>
 #center-absolute .sample{
