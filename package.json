@@ -22,7 +22,10 @@
   "author": "AutoScout24 GmbH",
   "license": "ISC",
   "homepage": "https://github.com/AutoScout24/showcar-ui#readme",
-  "browserslist": ["last 2 versions", "ie 9"],
+  "browserslist": [
+    "last 2 versions",
+    "ie 9"
+  ],
   "devDependencies": {
     "assemble": "^0.8.0",
     "browser-sync": "^2.18.8",
@@ -35,10 +38,9 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-string-replace": "^0.4.0",
+    "gulp-testcafe": "^0.9.1",
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",
-    "showcar-gulp": "^2.1.1",
-    "yargs": "^4.6.0",
     "html-entities": "^1.2.0",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",

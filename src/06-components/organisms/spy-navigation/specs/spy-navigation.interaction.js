@@ -1,19 +1,17 @@
 import { Selector } from 'testcafe';
 
-//const trigger = Selector('#lightbox [data-lightbox-trigger]');
-//const lightbox = Selector('as24-lightbox');
-//const lightboxCloseIcon = Selector('as24-lightbox as24-icon[data-lightbox-close]');
-//const lightboxCloseButton = Selector('as24-lightbox button[data-lightbox-close]');
-//const lightboxTitle = Selector('as24-lightbox .sc-lightbox-title');
+const nonstickyNavigation = Selector('.sc-spy-navigation');
+const stickyNavigation = Selector('.sc-spy-navigation--sticked');
 
 fixture `Spy-navigation`
-    .page `https://autoscout24.github.io/showcar-ui/#lightbox-link`;
+    .page `https://autoscout24.github.io/showcar-ui/#spy-navigation-link`;
 
 test('Sticky when scrolling', async t => {
     await t
-        .click(trigger)
-        .expect(lightbox.getStyleProperty('display')).notEql('none')
-        .expect(lightboxTitle.innerText).contains('The modal window title', { timeout: 100 });
+        .wait(500)
+        .expect(nonstickyNavigation.getStyleProperty('position')).eql('relative')
+        .pressKey('down') // simulate scrolling
+        .expect(stickyNavigation.getStyleProperty('position')).eql('fixed');
 })
 
 //test('Set active tab', async t => {

@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
+const testcafe = require('gulp-testcafe');
 
 gulp.task('js', scgulp.js({
     entry: 'src/showcar-ui.js',
@@ -46,6 +47,11 @@ gulp.task('clean', scgulp.clean({
 gulp.task('serve', scgulp.serve({
     dir: 'dist'
 }));
+
+gulp.task('test:interaction', () => {
+    gulp.src('src/**/specs/*.interaction.js')
+        .pipe(testcafe({ browsers: ['chrome'] }));
+});
 
 gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
