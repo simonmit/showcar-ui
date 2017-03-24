@@ -1,7 +1,7 @@
 {
     "general information": {
         "about": "src/08-docs-info/general-information/about.md",
-        "how-to-include": "src/08-docs-info/general-information/getting-started.md",
+        "getting-started": "src/08-docs-info/general-information/getting-started.md",
         "faq": "src/08-docs-info/general-information/faq.md",
         "contribution": "src/08-docs-info/general-information/contribution.md"
     },
