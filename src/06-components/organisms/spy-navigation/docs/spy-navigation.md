@@ -3,7 +3,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   (function ($, showcar) {
-    const stickyYStartPosition = $('.sc-spy-navigation').offset().top;
+    const stickyYStartPosition = $('.sc-spy-navigation').offset().top + 280;
 
     showcar.spyNavigation({
       stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > stickyYStartPosition,
