@@ -3869,22 +3869,22 @@ You can use all the icons defined by showcar-icons with the custom tag <code>&lt
 <p>For further information see the documentation under <a href="https://github.com/AutoScout24/showcar-icons" target="_blank">https://github.com/AutoScout24/showcar-icons</a></p>
 <p>The following icon names are currently available:</p>
 <p><ul id="as24-icons-list" class="icons-list"></ul></p>
-<p><style type="text/css"></p>
-<p>#icons as24-icon {
+<style type="text/css">
+#icons as24-icon {
 display: inline-block;
 width: 50px;
 height: 50px;
-}</p>
-<p>#icons as24-icon svg {
+}
+#icons as24-icon svg {
 max-width: 100%;
 max-height: 100%;
-}</p>
-<p>#icons .icons-list:after {
-content: &quot;&quot;;
+}
+#icons .icons-list:after {
+content: "";
 display: table;
 clear: both;
-}</p>
-<p>#icons .icons-list li {
+}
+#icons .icons-list li {
 padding: 20px 10px 10px;
 float: left;
 background: #f4f4f4;
@@ -3894,17 +3894,18 @@ height: 130px;
 list-style: none;
 text-align: center;
 margin-bottom: 20px;
-}</p>
-<p>#icons .icons-list li:hover {
+}
+#icons .icons-list li:hover {
 background: #acacac;
-}</p>
-<p>#icons .icons-list li p {
+}
+#icons .icons-list li p {
 padding-top: 0;
 word-break: break-all;
 height: 40px;
 font-size: 13px;
 }
-</style></p>
+</style>
+
 <script type="text/javascript">
 var iconsList = document.querySelector('#as24-icons-list');
 window.showcarIconNames.forEach(function(name) {
