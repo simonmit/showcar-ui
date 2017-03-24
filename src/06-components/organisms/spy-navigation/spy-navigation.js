@@ -147,6 +147,10 @@ export default function(config) {
             componentHeight = componentElem.getBoundingClientRect().height;
 
         activeNavItem = linkTargetPairs.filter(function(pair) {
+            if(!pair.target){
+                throw new Error('Check hash name on target');
+                return;
+            }
             return pair.target.offsetTop <= scrollTop + componentHeight + 5;
         }).pop();
 
