@@ -1,1 +1,1 @@
-<h2>Select box<span class="status complete">Complete</span></h2>
+<h2>Dropdown default<span class="status complete">Complete</span></h2>

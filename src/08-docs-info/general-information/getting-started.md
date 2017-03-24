@@ -8,7 +8,6 @@ You can either include showcar-ui as a fragment or directly include the JS, CSS 
 Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
 #### How to run locally:
-
 Download
 ```bash
 git clone git@github.com:AutoScout24/showcar-ui.git
