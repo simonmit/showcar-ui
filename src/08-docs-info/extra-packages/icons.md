@@ -9,8 +9,8 @@ The following icon names are currently available:
 <style type="text/css">
 #icons as24-icon {
 display: inline-block;
-width: 16px;
-height: 16px;
+width: 50px;
+height: 50px;
 }
 #icons as24-icon svg {
 max-width: 100%;
@@ -22,12 +22,12 @@ display: table;
 clear: both;
 }
 #icons .icons-list li {
-padding: 10px;
+padding: 20px 10px 10px;
 float: left;
 background: #f4f4f4;
 border: 1px solid #fff;
-width: 120px;
-height: 160px;
+width: 108px;
+height: 130px;
 list-style: none;
 text-align: center;
 margin-bottom: 20px;
@@ -35,17 +35,13 @@ margin-bottom: 20px;
 #icons .icons-list li:hover {
 background: #acacac;
 }
-#icons .icons-list li as24-icon {
-width: 80px;
-height: 80px;
-}
 #icons .icons-list li p {
 padding-top: 0;
 word-break: break-all;
 height: 40px;
+font-size: 13px;
 }
 </style>
-
 <script type="text/javascript">
 var iconsList = document.querySelector('#as24-icons-list');
 window.showcarIconNames.forEach(function(name) {
