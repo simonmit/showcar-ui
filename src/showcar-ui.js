@@ -66,6 +66,7 @@ if (! window.notification) {
     warn('window.notification is already registered.');
 }
 
+//Scroll
 import registerSmoothScrolling from './07-utilities/scroll';
 registerSmoothScrolling();
 
