@@ -9,14 +9,19 @@ const generateHtml = require('../helpers/renderHtml.js');
 const gspec = (elementsArray) => {
     let gspecFiles = [];
     elementsArray.forEach((el) => {
-        let directUrl = globalJSON[el].srcDir.split('/').slice(0, - 1); // TODO refactor
-        let name = directUrl[directUrl.length - 1];// TODO refactor
+        let directUrl = globalJSON[el].srcDir.split('/').slice(0, - 1);
+        let name = directUrl[directUrl.length - 1];
         let gspec = directUrl.join('/') + '/specs/' + name + '.gspec';
         if (gspecFiles.indexOf(gspec) === - 1 && fs.existsSync(gspec)) {
             gspecFiles.push(gspec);
         }
     });
     return gspecFiles;
+};
+
+const renderContent = (el)=>{
+    let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
+    return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
 };
 
 app.get('/', (req, res) => {
@@ -28,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/docs/:type/', (req, res) => {
-    let elementsArray = Object.keys(globalJSON).filter((el) => {
+    const elementsArray = Object.keys(globalJSON).filter((el) => {
         return globalJSON[el].type === req.params.type;
     });
     if (req.query['gspec']) {
@@ -38,15 +43,14 @@ app.get('/docs/:type/', (req, res) => {
     let content = `<div id="${req.params.type}-link">`;
     content += elementsArray
             .map(el => {
-                let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-                return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
+                return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
     res.send(generateHtml(globalJSON, content));
 });
 
 app.get('/docs/:type/:group', (req, res) => {
-    let elementsArray = Object.keys(globalJSON).filter((el) => {
+    const elementsArray = Object.keys(globalJSON).filter((el) => {
         return globalJSON[el].group === req.params.group;
     });
     if (req.query['gspec']) {
@@ -56,21 +60,18 @@ app.get('/docs/:type/:group', (req, res) => {
     let content = `<div id="${req.params.group}-link">`;
     content += elementsArray
             .map(el => {
-                let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-                return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
+                return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
     res.send(generateHtml(globalJSON, content));
 });
 
-// TODO: fix path
 app.use('/showcar-ui', express.static('./'));
 
 app.get('*', (req, res) => {
     res.send('WTF???');
 });
 
-
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Express docs server runs on port ${port}!`);
 });

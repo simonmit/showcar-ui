@@ -17,20 +17,20 @@ module.exports = (gulp) => {
             tasks: (changedFiles) => {
                 let tasks = [];
                 changedFiles.forEach((file) => {
+                    if (file.includes('/docs/')) {return;} // exclude docs folder from gulp tasks
                     if (path.extname(file) === '.js') tasks.push('js');
                     if (path.extname(file) === '.scss') tasks.push('scss');
                 });
                 return tasks;
             },
             stdout: false
-            // readable: false
         })
             .on('start', () => {
                 browserSync.reload();
             })
             .on('readable', function () {
                 this.stdout.on('data', (chunk) => {
-                    if (/Example app listening on port 5000!/.test(chunk)) {
+                    if (/Express docs server runs on port 5000!/.test(chunk)) {
                         browserSync.reload();
                         resolve();
                     }
