@@ -50,10 +50,10 @@ gulp.task('serve', scgulp.serve({
 gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
-})
+});
 
 const fs = require('fs');
-const UglifyJS = require("uglify-js");
+const UglifyJS = require('uglify-js');
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
 const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
 const stringReplace = require('gulp-string-replace');
@@ -75,7 +75,7 @@ gulp.task('replace', function () {
         .pipe(stringReplace('@@POLYFILL_ES6_COLLECTIONS', readJsFile('node_modules/es6-collections/es6-collections.js'), replaceOptions))
         .pipe(stringReplace('@@SCRIPT_ERROR_COLLECTOR', readJsFile('src/js/inline-js/js-error-collector.js'), replaceOptions))
         .pipe(stringReplace('@@SCRIPT_FONT_LOADER', readJsFile('src/js/inline-js/font-loader.js'), replaceOptions))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('set-dev', () => {
@@ -84,17 +84,18 @@ gulp.task('set-dev', () => {
 
 const generateJsonDocs = require('./docs/tasks/generateJson');
 gulp.task('generateJsonDocs', () => {
-    generateJsonDocs()
+    generateJsonDocs();
 });
 
 const generateHtmlDocs = require('./docs/tasks/generateHtml');
 gulp.task('docs:generate', ['generateJsonDocs'], () => {
-    generateHtmlDocs()
+    generateHtmlDocs();
 });
 
 const serveDocs = require('./docs/tasks/docs');
 
-gulp.task('docs:serve', () => {serveDocs(gulp)});
+gulp.task('docs:serve', () => {serveDocs(gulp);});
+gulp.task('docs:edit', ['build'], ()=>{serveDocs(gulp);});
 
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
