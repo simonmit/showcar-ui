@@ -1834,7 +1834,7 @@ margin-bottom:15px;
             
 <hr></div><div id="lazy-image-link" class="positon-anchor">
                 <div class="element" id="lazy-image">
-                    <div class="markdown"><h2>Lazy images<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Lazy loading images<span class="status complete">Complete</span></h2>
 
 <p>If you want to make you images lazy, you need to add <code>lazyload</code> class to your img tag. We advice you also to add <code>sc-lazy-image</code> class. With it you will have a fancy loading spinner when picture is loading. Don&#39;t forget to use <code>data-src</code> instead of <code>src</code> attribute.<br>In the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>
 </div>
@@ -2035,7 +2035,9 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="tooltip-link" class="positon-anchor">
                 <div class="element" id="tooltip">
-                    <div class="markdown"><p><h2>Tooltip old<span class="status refactoring">Deprecated</span></h2></p>
+                    <div class="markdown"><h2>Tooltip old<span class="status refactor">Deprecated</span></h2>
+
+<p>Use &quot;tooltip new&quot; instead</p>
 <style>
 #tooltip .sample{
     padding-top:60px;
@@ -2598,7 +2600,9 @@ document.querySelector('body').addEventListener('click', event => {
             
 <hr></div><div id="navigation-link" class="positon-anchor">
                 <div class="element" id="navigation">
-                    <div class="markdown"><p><h2>Navigation <span class="status refactor">Needs refactoring</span></h2></p>
+                    <div class="markdown"><h2>Navigation <span class="status refactor">Needs refactoring</span></h2>
+
+<p>The navigation currently only works when used in combination with contentservice fragment.</p>
 <style>
 #navigation .sample{
 background-color: #f4f4f4;
@@ -2900,6 +2904,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="element" id="spy-navigation">
                     <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
 
+<p>Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below.
+The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
+The anchor tag defines the start of the section you want to jump to or select when scrolling there.</p>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     (function($, showcar) {
@@ -2939,7 +2946,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="sc-grid-col-12">
             <div class="sc-spy-navigation__wrapper">
                 <nav class="sc-spy-navigation__links">
-                    <a class="sc-spy-navigation__link sc-spy-navigation__link--active" href="#" data-href="section-1">Section 1</a>
+                    <a class="sc-spy-navigation__link" href="#" data-href="section-1">Section 1</a>
                     <a class="sc-spy-navigation__link" href="#" data-href="section-2">Section 2</a>
                     <a class="sc-spy-navigation__link" href="#" data-href="section-3">Section 3</a>
                     <a class="sc-spy-navigation__link" href="#" data-href="section-4">Section 4</a>
@@ -2951,7 +2958,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!--example content - DON'T COPY & PASTE-->
-
 <br>
 <br>
 <br>
@@ -3001,7 +3007,7 @@ document.addEventListener('DOMContentLoaded', function() {
         &lt;div class=&quot;sc-grid-col-12&quot;&gt;
             &lt;div class=&quot;sc-spy-navigation__wrapper&quot;&gt;
                 &lt;nav class=&quot;sc-spy-navigation__links&quot;&gt;
-                    &lt;a class=&quot;sc-spy-navigation__link sc-spy-navigation__link--active&quot; href=&quot;#&quot; data-href=&quot;section-1&quot;&gt;Section 1&lt;/a&gt;
+                    &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-1&quot;&gt;Section 1&lt;/a&gt;
                     &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-2&quot;&gt;Section 2&lt;/a&gt;
                     &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-3&quot;&gt;Section 3&lt;/a&gt;
                     &lt;a class=&quot;sc-spy-navigation__link&quot; href=&quot;#&quot; data-href=&quot;section-4&quot;&gt;Section 4&lt;/a&gt;
@@ -3013,7 +3019,6 @@ document.addEventListener('DOMContentLoaded', function() {
 &lt;/div&gt;
 
 &lt;!--example content - DON&apos;T COPY &amp; PASTE--&gt;
-
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -3064,25 +3069,27 @@ document.addEventListener('DOMContentLoaded', function() {
                             <pre>
                                 <code id="copy_code-js-spy-navigation" class="hjs js javascript">// This component have to be initialized with an object with two functions:
 
-showcar.spyNavigation({
-    stickPosFn: function(scrollTop, stickToElem, componentElem) {
-        // scrollTop - amount of window scroll
-        // stickToElem - in the example, #data-stick-when
-        // componentElem - in the example, .sc-spy-navigation
-        // Do your calculations, return Boolean
-    },
-    unstickPosFn: function(scrollTop, stickToElem, componentElem) {
-        // scrollTop - amount of window scroll
-        // stickToElem - in the example, #data-stick-when
-        // componentElem - in the example, .sc-spy-navigation
-        // Do your calculations, return Boolean
-    }
-});
-
 // Each function takes 3 arguments:
 // scrollTop - scroll amount
 // stickToElem - the element to which the navigation should stick to
 // componentElem - the component element (the one with the root class ".sc-spy-navigation")
+
+showcar.spyNavigation({
+    stickPosFn: function(scrollTop, stickToElem, componentElem) {
+        // Define when the navigation should be sticky, return Boolean
+    },
+    unstickPosFn: function(scrollTop, stickToElem, componentElem) {
+        // Define when the navigation should not be sticky, return Boolean
+    }
+});
+
+// Example
+const stickyYStartPosition = $('.sc-spy-navigation').offset().top;
+
+showcar.spyNavigation({
+    stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > stickyYStartPosition,
+    unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
+});
 </code>
                             </pre>
                         </div>
