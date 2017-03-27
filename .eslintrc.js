@@ -28,7 +28,10 @@ module.exports = {
             "single",
             { "allowTemplateLiterals": true }
         ],
-        "no-console": "warn",
+        "no-console": [
+            "error",
+            { allow: ["warn", "error"] }
+        ],
         "semi": [
             "error",
             "always"
