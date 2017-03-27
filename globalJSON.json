@@ -1,30 +1,30 @@
 {
     "about": {
         "name": "about",
-        "type": "general information",
+        "type": "getting started",
         "group": "about",
-        "srcDir": "src/08-docs-info/general-information",
+        "srcDir": "src/08-docs-info/getting-started",
         "markDown": "\"<p><h2>About</h2>\\nThis library provides several predefined classes and variables for simple page styling with the showcar ui library</p>\\n\""
     },
-    "getting-started": {
-        "name": "getting-started",
-        "type": "general information",
-        "group": "getting-started",
-        "srcDir": "src/08-docs-info/general-information",
-        "markDown": "\"<h2>Getting started</h2>\\n\\n<h4>How to include:</h4><p>You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>\\n<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;\\n&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;\\n</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>\\n<h4>How to run locally:</h4><p>Download</p>\\n<pre><code class=\\\"lang-bash\\\">git clone git@github.com:AutoScout24/showcar-ui.git\\n</code></pre>\\n<p>Setup  </p>\\n<pre><code class=\\\"lang-bash\\\">brew install node # install node if you didn&#39;t do it before\\nbrew install yarn # we use yarn instead of npm to manage node package dependencies\\nyarn global add gulp # install gulp globally\\nyarn install\\n</code></pre>\\n<p>Build and run</p>\\n<pre><code class=\\\"lang-bash\\\">gulp build; gulp docs:generate; gulp docs:serve\\n</code></pre>\\n\""
+    "how-to": {
+        "name": "how-to",
+        "type": "getting started",
+        "group": "how-to",
+        "srcDir": "src/08-docs-info/getting-started",
+        "markDown": "\"<h2>How To</h2>\\n\\n<h4>How to include:</h4><p>You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>\\n<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;\\n&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;\\n</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>\\n<h4>How to run locally:</h4><p>Download</p>\\n<pre><code class=\\\"lang-bash\\\">git clone git@github.com:AutoScout24/showcar-ui.git\\n</code></pre>\\n<p>Setup  </p>\\n<pre><code class=\\\"lang-bash\\\">brew install node # install node if you didn&#39;t do it before\\nbrew install yarn # we use yarn instead of npm to manage node package dependencies\\nyarn global add gulp # install gulp globally\\nyarn install\\n</code></pre>\\n<p>Build and run</p>\\n<pre><code class=\\\"lang-bash\\\">gulp build; gulp docs:generate; gulp docs:serve\\n</code></pre>\\n\""
     },
     "faq": {
         "name": "faq",
-        "type": "general information",
+        "type": "getting started",
         "group": "faq",
-        "srcDir": "src/08-docs-info/general-information",
+        "srcDir": "src/08-docs-info/getting-started",
         "markDown": "\"<h2>FAQ</h2><p>As we just started with new documentation we are collecting your questions. Is it easy to find elements? Is it obvious how to include them? Have you succeed with running library locally in dev mode?<br>Feel free to ask us in slack #as24_web_experience or write an <a href=\\\"https://github.com/AutoScout24/showcar-ui/issues/new\\\" target=\\\"_blank\\\">issue</a> on GitHub.</p>\\n\""
     },
     "contribution": {
         "name": "contribution",
-        "type": "general information",
+        "type": "getting started",
         "group": "contribution",
-        "srcDir": "src/08-docs-info/general-information",
+        "srcDir": "src/08-docs-info/getting-started",
         "markDown": "\"<h2>Contribution</h2><p>Bug reports and pull requests are welcome! Please take a look at our <a href=\\\"https://github.com/AutoScout24/showcar-ui/contribution.md\\\" target=\\\"_blank\\\">contribution guideline</a> on GitHub for details.</p>\\n\""
     },
     "_variables": {
