@@ -1,23 +1,6 @@
-export function smoothScroll(target, duration = 300, cb) {
-    let targetSelector = '';
-    const hrefTarget = $(target).attr('href');
-    const nameTarget = $(target).attr('name');
+let i = 0;
 
-    // We need to handle href and name since spy navigation is using name as target
-    if (hrefTarget.length > 0) {
-        targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';
-
-        if ($(targetSelector).length === 0) {
-            targetSelector = hrefTarget;
-        }
-    }
-
-    if (nameTarget.length > 0) {
-        targetSelector = 'a[name="' + nameTarget + '"]';
-    }
-
-    const to = $(targetSelector).offset().top;
-
+const scroll = (to, duration, cb) => {
     if (duration <= 0) {
         if (cb) cb();
         window.scrollTo(0, to);
@@ -26,12 +9,42 @@ export function smoothScroll(target, duration = 300, cb) {
 
         let perTick = difference / duration * 10;
         $(this).scrollToTimerCache = setTimeout(() => {
-            if (!isNaN(parseInt(perTick, 10))) {
+            if (! isNaN(parseInt(perTick, 10))) {
                 window.scrollTo(0, window.pageYOffset + perTick);
-                smoothScroll(target, duration - 10, cb);
+                scroll(to, duration - 10, cb);
             }
         }, 10);
     }
+};
+
+export function smoothScroll(target, duration = 300) {
+    i ++;
+    console.log(i);
+
+    let targetSelector = '';
+    const hrefTarget = $(target).attr('href');
+    const nameTarget = $(target).attr('name');
+
+    // We need to handle href and name since spy navigation is using name as target
+    if (hrefTarget.length) {
+        targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';
+        if (! $(targetSelector).length) {
+            targetSelector = hrefTarget;
+        }
+    }
+
+    if (nameTarget.length) {
+        targetSelector = 'a[name="' + nameTarget + '"]';
+    }
+
+    if (! $(targetSelector).length) {
+        console.warn('No target for scroll');
+        return;
+    }
+
+    const to = $(targetSelector).offset().top;
+
+    scroll(to, duration);
 }
 
 export default function registerSmoothScrolling() {
