@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
+const galen = require('gulp-galen');
 
 gulp.task('js', scgulp.js({
     entry: 'src/showcar-ui.js',
@@ -100,3 +101,20 @@ gulp.task('docs:edit', ['build'], ()=>{serveDocs(gulp);});
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
+
+gulp.task('galen', function () {
+    gulp.src('galen.test.js').pipe(
+        galen.test({
+            'htmlreport': 'galen-report/',
+            'galenPath': './node_modules/galenframework/bin/galen',
+            'parallel-tests': process.env.PARALLEL_TEST_PROCESS || 1,
+            'properties': {
+                'test.url': 'https://localhost:3000/',
+                'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
+                'sauce.enabled': process.env.SAUCE_ENABLED,
+                'sauce.username': process.env.SAUCE_USERNAME,
+                'sauce.accessKey': process.env.SAUCE_ACCESS_KEY
+            }
+        })
+    );
+});
