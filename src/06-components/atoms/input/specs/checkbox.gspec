@@ -1,0 +1,12 @@
+@objects
+  checkboxInput           .sc-input[type=checkbox]
+  checkboxLabel           .sc-input[type=checkbox] ~ label
+
+= Main section =
+  @on *
+    checkboxInput:
+      absent
+
+    checkboxLabel:
+      visible
+      height 24px
