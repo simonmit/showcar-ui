@@ -26,15 +26,13 @@ export function smoothScroll(target, duration = 300) {
         if (! $(targetSelector).length) {
             targetSelector = hrefTarget;
         }
-    }
-
-    if (nameTarget.length) {
-        targetSelector = 'a[name="' + nameTarget + '"]';
-    }
-
-    if (! $(targetSelector).length) {
-        console.warn('No target for scroll');
-        return;
+    }else{
+        if (nameTarget.length) {
+            targetSelector = 'a[name="' + nameTarget + '"]';
+        }else{
+            console.warn('No target for scroll');
+            return;
+        }
     }
 
     const to = $(targetSelector).offset().top;
