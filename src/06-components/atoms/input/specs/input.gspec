@@ -1,0 +1,13 @@
+@objects
+  inputText           input[type=text].sc-input
+  inputTextarea       textarea.sc-input
+  body                body
+
+= Main section =
+  @on *
+    inputText:
+      height 40px
+      width 100 % of body/width
+
+    inputTextarea:
+      width 100 % of body/width

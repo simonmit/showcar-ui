@@ -1,0 +1,21 @@
+@objects
+  buttonBob             .sc-btn-bob
+  buttonRoss            .sc-btn-ross
+  buttonGhost           .sc-btn-ghost
+  buttonBobDisabled     .sc-btn-bob[disabled]
+  buttonRossDisabled    .sc-btn-ross[disabled]
+  buttonGhostDisabled   .sc-btn-ghost[disabled]
+  buttonBobFullWidth    .sc-btn-bob.sc-block
+  body                  body
+
+@groups
+  (fullWidthButtons, buttons)     buttonBobFullWidth, buttonRossFullWidth, buttonGhostFullWidth
+  buttons                         buttonBob, buttonRoss, buttonGhost, buttonBobDisabled, buttonRossDisabled, buttonGhostDisabled
+
+= Main section =
+  @on *
+    &buttons:
+      height 40px
+
+//    &fullWidthButtons:
+//      width 100 % of body/width

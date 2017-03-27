@@ -1,0 +1,12 @@
+@objects
+  radioButtonInput           .sc-input[type=radio]
+  radioButtonLabel           .sc-input[type=radio] ~ label
+
+= Main section =
+  @on *
+    radioButtonInput:
+      absent
+
+    radioButtonLabel:
+      visible
+      height 24px
