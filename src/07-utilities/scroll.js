@@ -1,5 +1,3 @@
-let i = 0;
-
 const scroll = (to, duration, cb) => {
     if (duration <= 0) {
         if (cb) cb();
@@ -18,9 +16,6 @@ const scroll = (to, duration, cb) => {
 };
 
 export function smoothScroll(target, duration = 300) {
-    i ++;
-    console.log(i);
-
     let targetSelector = '';
     const hrefTarget = $(target).attr('href');
     const nameTarget = $(target).attr('name');
