@@ -12,10 +12,6 @@ export function smoothScroll(target, duration = 300, cb) {
         }
     }
 
-    if (nameTarget.length > 0) {
-        targetSelector = 'a[name="' + nameTarget + '"]';
-    }
-
     const to = $(targetSelector).offset().top;
 
     if (duration <= 0) {
