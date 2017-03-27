@@ -111,6 +111,7 @@ gulp.task('galen', function () {
             'properties': {
                 'test.url': 'http://localhost:3000/',
                 'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
+                'test.filter': (process.argv[3] || '').replace('--',''),
                 'sauce.enabled': process.env.SAUCE_ENABLED,
                 'sauce.username': process.env.SAUCE_USERNAME,
                 'sauce.accessKey': process.env.SAUCE_ACCESS_KEY

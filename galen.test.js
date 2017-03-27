@@ -4,6 +4,7 @@ var sauceAccessKey = System.getProperty('sauce.accessKey');
 var gridUrl = 'http://'+ sauceUsername + ':' + sauceAccessKey + '@ondemand.saucelabs.com:80/wd/hub';
 var buildId = System.getProperty('test.buildId');
 var testUrl = System.getProperty('test.url');
+var specFilter = System.getProperty('test.filter') || '';
 
 var sauceBrowsers = {
     chrome_latest: {
@@ -84,8 +85,11 @@ var getSpecs = function() {
   return JSON.parse(specs);
 }
 
-var specs = getSpecs().map(function(s) {
-  return [s];
+var specs = getSpecs().filter(function(value) {
+    value.indexOf(specFilter) >= 0;
+    return value.indexOf(specFilter) >= 0;
+}).map(function(s) {
+    return [s];
 });
 
 var drivers = {};
