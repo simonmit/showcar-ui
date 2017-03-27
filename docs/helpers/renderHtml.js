@@ -1,6 +1,6 @@
 module.exports = (globalJSON, content) => {
     const fs = require('fs');
-    const renderMenu = require('./renderMenu.js')
+    const renderMenu = require('./renderMenu.js');
     if (! globalJSON) {
         globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }
@@ -22,8 +22,8 @@ module.exports = (globalJSON, content) => {
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> ${type} sample</div>
                     </div>
-                `
-            }
+                `;
+            };
 
             const codeSample = el.codeExample ? sample('code', JSON.parse(el.codeExample)) : '';
             const jsSample = el.jsExample ? sample('js', JSON.parse(el.jsExample)) : '';
@@ -33,8 +33,8 @@ module.exports = (globalJSON, content) => {
                     <div class="markdown">${JSON.parse(el.markDown)}</div>
                    ${html} ${codeSample} ${jsSample}
                 </div>
-            `
-        }
+            `;
+        };
         let type = [];
         let group = [];
         content = Object.keys(globalJSON)
@@ -45,18 +45,18 @@ module.exports = (globalJSON, content) => {
                             content += `<hr>`;
                             content += '</div>';
                         }
-                        content += `<div id="${globalJSON[el].group}-link" class="positon-anchor">`
+                        content += `<div id="${globalJSON[el].group}-link" class="positon-anchor">`;
                     }
                     if (type.indexOf(globalJSON[el].type) === - 1) {
                         type.push(globalJSON[el].type);
                         content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
                     }
-                    content += wrap(globalJSON[el])
+                    content += wrap(globalJSON[el]);
                     group.push(globalJSON[el].group);
                     return content;
                 }).join('\n') || 'empty';
     }else{
-        content = `<div id="separate-content">${content}</div>`
+        content = `<div id="separate-content">${content}</div>`;
     }
 
     let scriptsFiles = [
@@ -75,11 +75,11 @@ module.exports = (globalJSON, content) => {
     ];
 
     scriptsFiles = scriptsFiles.map(script => {
-        return `<script src="/showcar-ui/${script}"></script>`
+        return `<script src="/showcar-ui/${script}"></script>`;
     }).join('\n');
 
     stylesFiles = stylesFiles.map(style => {
-        return `<link rel="stylesheet" href="/showcar-ui/${style}">`
+        return `<link rel="stylesheet" href="/showcar-ui/${style}">`;
     }).join('\n');
     const polyfils = require('../../dist/polyfills.js');
 
@@ -161,6 +161,6 @@ module.exports = (globalJSON, content) => {
 
     const html = head + leftMenu + body + footer;
     return html;
-}
+};
 
 

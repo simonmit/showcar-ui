@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     var codeSampes = document.querySelectorAll('.code-sample-toggle');
-    
+
     function codeSampleToggle() {
         var toggleClass = function (codeSamle) {
             if (codeSamle.classList.contains('hide-sample') !== true) {
@@ -14,14 +14,14 @@ window.addEventListener('load', function () {
             }
             activateMenu();
         };
-        
+
         [].forEach.call(codeSampes, function (codeSamle) {
             codeSamle.addEventListener('click', function () {
-                toggleClass(codeSamle)
-            })
-        })
+                toggleClass(codeSamle);
+            });
+        });
     }
-    
+
     function allCodeSample() {
         var toggleClass = function (toggler) {
             if (toggler.classList.contains('active') !== true) {
@@ -42,15 +42,15 @@ window.addEventListener('load', function () {
                 });
             }
             activateMenu();
-        }
+        };
         document.getElementById('all-code-toggler').addEventListener('click', function () {
             toggleClass(this);
         });
     }
-    
+
     codeSampleToggle();
     allCodeSample();
-    
+
     var sidebar = document.getElementById('sidebar');
     [].forEach.call(document.querySelectorAll('[data-scroll]'), function (el) {
         el.addEventListener('click', function (e) {
@@ -62,11 +62,11 @@ window.addEventListener('load', function () {
             } else {
                 smoothScroll.animateScroll(target, el, { speed: 500, easing: 'easeInSine', offset: - 1 });
             }
-        })
-    })
-    
+        });
+    });
+
     var positonAnchors = document.querySelectorAll('.positon-anchor');
-    
+
     function activateMenu() {
         var section = {}, i = 0;
         window.onscroll = function () {
@@ -87,15 +87,15 @@ window.addEventListener('load', function () {
                     target.classList.remove('active');
                 }
             }
-        }
+        };
     }
-    
+
     activateMenu();
-    document.addEventListener('resize', activateMenu)
+    document.addEventListener('resize', activateMenu);
     document.getElementById('open-menu').addEventListener('click', function () {
         document.getElementById('sidebar').classList.toggle('open');
-    })
-    
+    });
+
     function scrollLocationHash() {
         if (window.location.hash) {
             var anchor = document.querySelector(window.location.hash);
@@ -105,7 +105,7 @@ window.addEventListener('load', function () {
             }
         }
     }
-    
+
     window.addEventListener('resize', scrollLocationHash);
     scrollLocationHash();
 });
