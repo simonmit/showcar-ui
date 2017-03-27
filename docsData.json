@@ -1,7 +1,7 @@
 {
     "getting started": {
         "about": "src/08-docs-info/getting-started/about.md",
-        "how-to": "src/08-docs-info/getting-started/how-to.md",
+        "usage": "src/08-docs-info/getting-started/usage.md",
         "faq": "src/08-docs-info/getting-started/faq.md",
         "contribution": "src/08-docs-info/getting-started/contribution.md"
     },

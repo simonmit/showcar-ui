@@ -59,8 +59,8 @@
             <a href="/docs/getting started/about" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#how-to-link">how-to</a>
-            <a href="/docs/getting started/how-to" class="open-separate"></a>
+            <a data-scroll href="#usage-link">usage</a>
+            <a href="/docs/getting started/usage" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#faq-link">faq</a>
@@ -274,25 +274,57 @@ The structure of all elements follows the <a href="http://bradfrost.com/blog/pos
                      
                 </div>
             
-<hr></div><div id="how-to-link" class="positon-anchor">
-                <div class="element" id="how-to">
-                    <div class="markdown"><h2>How To</h2>
+<hr></div><div id="usage-link" class="positon-anchor">
+                <div class="element" id="usage">
+                    <div class="markdown"><h2>Usage</h2>
 
-<h4>How to include:</h4><p>You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;@@ASSET_PATH/showcar-ui.css&quot;&gt;
-&lt;script src=&quot;@@ASSET_PATH/showcar-ui.js&quot;&gt;&lt;/script&gt;
-</code></pre><p>Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.</p>
-<h4>How to run locally:</h4><p>Download</p>
+<p>You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>
+<p><br></p>
+<h4>Include jigsaw fragment (prefered):</h4><p>If you are using UI-Composition you can use the showcar-ui fragment by adding the following line after the beginning of the BODY tag in your HTML:</p>
+<pre><code class="lang-html">&lt;body&gt;
+    &lt;!--#include virtual=&quot;/fragment/assets/external/showcar-ui/showcar-ui-standalone-fragment.html&quot; --&gt;
+&lt;/body&gt;
+</code></pre>
+<p><br></p>
+<h4>Include pre-built dist files:</h4><p>In case you can not use the fragment to include showcar-ui you can also include the pre-built files directly from the release branch in the github repository.
+In order to do so follow these steps:</p>
+<p>1.
+Add showcar-ui to your package.json to install it locally, referencing the release branch:</p>
+<pre><code class="lang-js">&quot;dependencies&quot;: {
+    &quot;showcar-ui&quot;: &quot;git@github.com:AutoScout24/showcar-ui.git#release&quot;
+}
+</code></pre>
+<p>2.
+Include the files on your page:</p>
+<pre><code class="lang-html">&lt;html&gt;
+  &lt;head&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/showcar-ui/dist/showcar-ui.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;script src=&quot;node_modules/showcar-ui/dist/showcar-ui.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>CAUTION: Be aware that you will not get any polyfills if you only include the JS/CSS files. In order to make the showcar-ui
+library work properly cross browser you also need to include the inlined JS/CSS that we provide with our index-standalone.html
+file. This file can also be found in the dist folder. Please make sure you also include this html file on your page. If you
+need assistance please contact the Web Experience Team.</p>
+<p><br></p>
+<h4>Build locally:</h4><p>For building locally you can use the showcar-gulp build pipeline template: <a href="https://github.com/AutoScout24/showcar-gulp">https://github.com/AutoScout24/showcar-gulp</a></p>
+<p>1.
+Clone repository</p>
 <pre><code class="lang-bash">git clone git@github.com:AutoScout24/showcar-ui.git
 </code></pre>
-<p>Setup  </p>
+<p>2.
+Setup</p>
 <pre><code class="lang-bash">brew install node # install node if you didn&#39;t do it before
 brew install yarn # we use yarn instead of npm to manage node package dependencies
 yarn global add gulp # install gulp globally
 yarn install
 </code></pre>
-<p>Build and run</p>
-<pre><code class="lang-bash">gulp build; gulp docs:generate; gulp docs:serve
+<p>3.
+Build and run</p>
+<pre><code class="lang-bash">gulp build
 </code></pre>
 </div>
                      
