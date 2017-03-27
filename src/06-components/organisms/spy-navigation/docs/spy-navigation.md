@@ -1,5 +1,10 @@
 <h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
 
+Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below.
+The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
+The anchor tag defines the start of the section you want to jump to or select when scrolling there.
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     (function($, showcar) {
