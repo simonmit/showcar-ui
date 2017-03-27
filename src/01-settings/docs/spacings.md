@@ -1,3 +1,4 @@
+<br>
 <h2>Spacings<span class="status complete">Complete</span></h2>
 
 There are several variables that should be used for the spacing inside and between elements.  
