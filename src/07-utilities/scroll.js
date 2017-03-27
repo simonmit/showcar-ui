@@ -1,6 +1,5 @@
-const scroll = (to, duration, cb) => {
+const scroll = (to, duration) => {
     if (duration <= 0) {
-        if (cb) cb();
         window.scrollTo(0, to);
     } else {
         let difference = to - window.pageYOffset;
@@ -9,7 +8,7 @@ const scroll = (to, duration, cb) => {
         $(this).scrollToTimerCache = setTimeout(() => {
             if (! isNaN(parseInt(perTick, 10))) {
                 window.scrollTo(0, window.pageYOffset + perTick);
-                scroll(to, duration - 10, cb);
+                scroll(to, duration - 10);
             }
         }, 10);
     }
