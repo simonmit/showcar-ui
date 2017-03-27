@@ -5,11 +5,11 @@
   buttonBobDisabled     .sc-btn-bob[disabled]
   buttonRossDisabled    .sc-btn-ross[disabled]
   buttonGhostDisabled   .sc-btn-ghost[disabled]
-  buttonBobFullWidth    .sc-btn-bob.sc-block
-  body                  body
+  buttonBobFullWidth    .sc-btn-bob.sc-btn-block
+  container             #separate-content
 
 @groups
-  (fullWidthButtons, buttons)     buttonBobFullWidth, buttonRossFullWidth, buttonGhostFullWidth
+  (fullWidthButtons, buttons)     buttonBobFullWidth
   buttons                         buttonBob, buttonRoss, buttonGhost, buttonBobDisabled, buttonRossDisabled, buttonGhostDisabled
 
 = Main section =
@@ -17,5 +17,5 @@
     &buttons:
       height 40px
 
-//    &fullWidthButtons:
-//      width 100 % of body/width
+    &fullWidthButtons:
+      width 100 % of container/width

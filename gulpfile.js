@@ -109,7 +109,7 @@ gulp.task('galen', function () {
             'galenPath': './node_modules/galenframework/bin/galen',
             'parallel-tests': process.env.PARALLEL_TEST_PROCESS || 1,
             'properties': {
-                'test.url': 'https://localhost:3000/',
+                'test.url': 'http://localhost:3000/',
                 'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
                 'sauce.enabled': process.env.SAUCE_ENABLED,
                 'sauce.username': process.env.SAUCE_USERNAME,

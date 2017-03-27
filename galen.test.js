@@ -112,14 +112,15 @@ forAll(browsers, function (browser) {
         forAll(specs, function (spec_path) {
             test('Test ' + spec_path.split('/').slice(-1)[0] + ' on ' + browser.name + ' ' + viewport.name, function (browser, viewport, spec_path) {
                 var driver;
+                var testDocUrl = testUrl + '/docs/' + spec_path.split('/').slice(-4,-2).join('/');
                 if(sauceEnabled) {
                     browser.desiredCapabilities['build'] = buildId;
                     browser.desiredCapabilities['name'] = this.name;
                     browser.desiredCapabilities['public'] = 'public';
                     driver = createGridDriver(gridUrl, { size: viewport.size, desiredCapabilities: browser.desiredCapabilities });
-                    driver.get(testUrl);
+                    driver.get(testDocUrl);
                 } else {
-                    driver = createDriver(testUrl, viewport.size, browser.name);
+                    driver = createDriver(testDocUrl, viewport.size, browser.name);
                 }
                 drivers[this.name] = driver;
                 checkLayout(driver, spec_path, [viewport.tags, browser.name]);
