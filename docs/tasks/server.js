@@ -6,11 +6,13 @@ const port = 5000;
 const globalJSON = require('../helpers/renderContentJson.js')();
 const generateHtml = require('../helpers/renderHtml.js');
 
-const gspec = (items) => {
+const gspec = (elementsArray) => {
     let gspecFiles = [];
-    Object.keys(items).forEach((el) => {
-        let gspec = items[el].srcDir + '/' + el + '.gspec';
-        if (fs.existsSync(gspec)) {
+    elementsArray.forEach((el) => {
+        let directUrl = globalJSON[el].srcDir.split('/').slice(0, - 1); // TODO refactor
+        let name = directUrl[directUrl.length - 1];// TODO refactor
+        let gspec = directUrl.join('/') + '/specs/' + name + '.gspec';
+        if (gspecFiles.indexOf(gspec) === - 1 && fs.existsSync(gspec)) {
             gspecFiles.push(gspec);
         }
     });
@@ -26,39 +28,39 @@ app.get('/', (req, res) => {
 });
 
 app.get('/docs/:type/', (req, res) => {
+    let elementsArray = Object.keys(globalJSON).filter((el) => {
+        return globalJSON[el].type === req.params.type;
+    });
     if (req.query['gspec']) {
-        res.send(gspec(globalJSON));
-    } else {
-        let content = `<div id="${req.params.type}-link">`;
-        content += Object.keys(globalJSON)
-                .filter((el) => {
-                    return globalJSON[el].type === req.params.type;
-                })
-                .map(el => {
-                    let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-                    return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
-                }).join('') || 'empty';
-        content += '</div>';
-        res.send(generateHtml(globalJSON, content));
+        res.send(gspec(elementsArray));
+        return;
     }
+    let content = `<div id="${req.params.type}-link">`;
+    content += elementsArray
+            .map(el => {
+                let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
+                return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
+            }).join('') || 'empty';
+    content += '</div>';
+    res.send(generateHtml(globalJSON, content));
 });
 
 app.get('/docs/:type/:group', (req, res) => {
+    let elementsArray = Object.keys(globalJSON).filter((el) => {
+        return globalJSON[el].group === req.params.group;
+    });
     if (req.query['gspec']) {
-        res.send(gspec(globalJSON));
-    } else {
-        let content = `<div id="${req.params.group}-link">`;
-        content += Object.keys(globalJSON)
-                .filter((el) => {
-                    return globalJSON[el].group === req.params.group;
-                })
-                .map(el => {
-                    let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-                    return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
-                }).join('') || 'empty';
-        content += '</div>';
-        res.send(generateHtml(globalJSON, content));
+        res.send(gspec(elementsArray));
+        return;
     }
+    let content = `<div id="${req.params.group}-link">`;
+    content += elementsArray
+            .map(el => {
+                let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
+                return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
+            }).join('') || 'empty';
+    content += '</div>';
+    res.send(generateHtml(globalJSON, content));
 });
 
 // TODO: fix path
