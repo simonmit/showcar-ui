@@ -1,9 +1,9 @@
 {
-    "general information": {
-        "about": "src/08-docs-info/general-information/about.md",
-        "getting-started": "src/08-docs-info/general-information/getting-started.md",
-        "faq": "src/08-docs-info/general-information/faq.md",
-        "contribution": "src/08-docs-info/general-information/contribution.md"
+    "getting started": {
+        "about": "src/08-docs-info/getting-started/about.md",
+        "how-to": "src/08-docs-info/getting-started/how-to.md",
+        "faq": "src/08-docs-info/getting-started/faq.md",
+        "contribution": "src/08-docs-info/getting-started/contribution.md"
     },
     "globals": {
         "variables": "src/01-settings/docs/",
