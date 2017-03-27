@@ -4,11 +4,11 @@ module.exports = (globalJSON, content) => {
     if (! globalJSON) {
         globalJSON = JSON.parse(fs.readFileSync('./docs/globalJSON.json', 'utf8'));
     }
-    
+
     if (! content) {
         const wrap = (el) => {
             const html = el.html ? `<div class="sample">${JSON.parse(el.html)}</div>` : '';
-            
+
             const sample = (type, content) => {
                 return `
                     <div class="code-sample">
@@ -24,10 +24,10 @@ module.exports = (globalJSON, content) => {
                     </div>
                 `
             }
-            
+
             const codeSample = el.codeExample ? sample('code', JSON.parse(el.codeExample)) : '';
             const jsSample = el.jsExample ? sample('js', JSON.parse(el.jsExample)) : '';
-            
+
             return `
                 <div class="element" id="${el.name}">
                     <div class="markdown">${JSON.parse(el.markDown)}</div>
@@ -58,14 +58,14 @@ module.exports = (globalJSON, content) => {
     }else{
         content = `<div id="separate-content">${content}</div>`
     }
-    
+
     let scriptsFiles = [
         'dist/showcar-icons.js',
         'dist/showcar-tracking.js',
         'dist/showcar-ui.js',
         'docs/assets/js/highlight.min.js',
         'docs/assets/js/clipboard.min.js',
-        'docs/assets/js/smooth-scroll.min.js',
+        // 'docs/assets/js/smooth-scroll.min.js',
         'docs/assets/js/docs.js',
     ];
     let stylesFiles = [
@@ -73,16 +73,16 @@ module.exports = (globalJSON, content) => {
         'dist/showcar-ui.css',
         'docs/assets/styles/docs.css',
     ];
-    
+
     scriptsFiles = scriptsFiles.map(script => {
         return `<script src="/showcar-ui/${script}"></script>`
     }).join('\n');
-    
+
     stylesFiles = stylesFiles.map(style => {
         return `<link rel="stylesheet" href="/showcar-ui/${style}">`
     }).join('\n');
     const polyfils = require('../../dist/polyfills.js');
-    
+
     const head = `
         <!DOCTYPE html>
         <html lang="en" class="ndpl-c-background">
@@ -97,9 +97,9 @@ module.exports = (globalJSON, content) => {
              </head>
              <body>
     `;
-    
+
     const menu = renderMenu(globalJSON);
-    
+
     const leftMenu = `
         <div id="sidebar">
             <a href="/"><div id="sidebar-logo"></div></a>
@@ -117,11 +117,11 @@ module.exports = (globalJSON, content) => {
             </div>
          </div>
     `;
-    
+
     const body = `
         <div id="content">${content}</div>
     `;
-    
+
     const footer = `
         <script>
             var clipboard = new Clipboard('.clipbrd-btn');
@@ -158,7 +158,7 @@ module.exports = (globalJSON, content) => {
         </body>
         </html>
     `;
-    
+
     const html = head + leftMenu + body + footer;
     return html;
 }
