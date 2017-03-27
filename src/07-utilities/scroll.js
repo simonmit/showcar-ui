@@ -35,7 +35,9 @@ export function smoothScroll(target, duration = 300, cb) {
     }
 
     const to = $(targetSelector).offset().top;
+    
     scroll(to, duration);
+
     if (cb) {cb();}
 }
 
