@@ -1,11 +1,10 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 const fs = require('fs');
-const path = require('path');
 const port = 5000;
 
 const globalJSON = require('../helpers/renderContentJson.js')();
-const generateHtml = require('../helpers/renderHtml.js')
+const generateHtml = require('../helpers/renderHtml.js');
 
 const gspec = (items) => {
     let gspecFiles = [];
@@ -16,7 +15,7 @@ const gspec = (items) => {
         }
     });
     return gspecFiles;
-}
+};
 
 app.get('/', (req, res) => {
     if (req.query['gspec']) {
@@ -24,13 +23,14 @@ app.get('/', (req, res) => {
     } else {
         res.send(generateHtml(globalJSON));
     }
-})
+});
 
 app.get('/docs/:type/', (req, res) => {
     if (req.query['gspec']) {
         res.send(gspec(globalJSON));
     } else {
-        let content = Object.keys(globalJSON)
+        let content = `<div id="${req.params.type}-link">`;
+        content += Object.keys(globalJSON)
                 .filter((el) => {
                     return globalJSON[el].type === req.params.type;
                 })
@@ -38,15 +38,17 @@ app.get('/docs/:type/', (req, res) => {
                     let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
                     return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
                 }).join('') || 'empty';
+        content += '</div>';
         res.send(generateHtml(globalJSON, content));
     }
-})
+});
 
 app.get('/docs/:type/:group', (req, res) => {
     if (req.query['gspec']) {
         res.send(gspec(globalJSON));
     } else {
-        let content = Object.keys(globalJSON)
+        let content = `<div id="${req.params.group}-link">`;
+        content += Object.keys(globalJSON)
                 .filter((el) => {
                     return globalJSON[el].group === req.params.group;
                 })
@@ -54,9 +56,10 @@ app.get('/docs/:type/:group', (req, res) => {
                     let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
                     return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
                 }).join('') || 'empty';
+        content += '</div>';
         res.send(generateHtml(globalJSON, content));
     }
-})
+});
 
 // TODO: fix path
 app.use('/showcar-ui', express.static('./'));
@@ -67,5 +70,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
-})
+    console.log(`Example app listening on port ${port}!`);
+});
