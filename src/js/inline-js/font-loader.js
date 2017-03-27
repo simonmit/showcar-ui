@@ -33,7 +33,7 @@
                                 this.contentDocument.defaultView.addEventListener('resize', onObjectSizeChange);
                                 onObjectSizeChange();
                             };
-                            // obj.data = 'about:blank';
+
                             div.style.fontFamily = family + ',' + testFamily;
                         });
                     });
@@ -95,7 +95,6 @@
                 }
 
                 if (allLoaded) {
-                    // console.log('All font weights loaded');
                     document.documentElement.className += ' ' + className;
                     updateLocalStorage();
 
@@ -111,6 +110,7 @@
 
     var styleElement = document.createElement('style');
     styleElement.innerHTML = '.font-loaded body{font-family:Source Sans Pro,sans-serif;}';
+
     var firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(styleElement, firstScript);
 

@@ -5,7 +5,7 @@ as24-tooltip.sc-tooltip {
     visibility: hidden;
     transition: visibility 0.4s, opacity 0.4s linear;
     max-width: 220px;
-    background-color: rgba(0,0,0,.75); // we want only transparent background, but not text
+    background-color: rgba(0, 0, 0, .75); // we want only transparent background, but not text
     border-color: $black-120;
     color: white;
     padding: 6px 8px;
@@ -35,7 +35,7 @@ as24-tooltip.sc-tooltip {
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-top-color: rgba(0,0,0,.75);;
+    border-top-color: rgba(0, 0, 0, .75);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -43,7 +43,7 @@ as24-tooltip.sc-tooltip {
   }
 
   .tooltip-bottom .tooltip-arrow {
-    border-bottom-color: rgba(0,0,0,.75);;
+    border-bottom-color: rgba(0, 0, 0, .75);
     border-top-color: transparent;
     top: auto;
     bottom: 100%;
