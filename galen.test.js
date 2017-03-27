@@ -1,6 +1,7 @@
 var sauceEnabled = System.getProperty('sauce.enabled');
 var sauceUsername = System.getProperty('sauce.username');
 var sauceAccessKey = System.getProperty('sauce.accessKey');
+var tunnelIdentifier = System.getProperty('sauce.tunnelIdentifier');
 var gridUrl = 'http://'+ sauceUsername + ':' + sauceAccessKey + '@ondemand.saucelabs.com:80/wd/hub';
 var buildId = System.getProperty('test.buildId');
 var testUrl = System.getProperty('test.url');
@@ -33,8 +34,8 @@ var sauceBrowsers = {
         name: 'safari',
         desiredCapabilities: {
             browserName: 'safari',
-            platform: 'OS X 10.11',
-            version: '10.0'
+            platform: 'OS X 10.12',
+            version: 'latest'
         }
     },
     edge: {
@@ -95,7 +96,7 @@ var specs = getSpecs().filter(function(value) {
 var drivers = {};
 
 afterTest(function (testInfo) {
-    driver = drivers[testInfo.name];
+    var driver = drivers[testInfo.name];
     if (sauceEnabled) {
         driver.executeScript("sauce:job-result=" + !testInfo.isFailed());
     }
@@ -118,6 +119,7 @@ forAll(browsers, function (browser) {
                 var driver;
                 var testDocUrl = testUrl + '/docs/' + spec_path.split('/').slice(-4,-2).join('/');
                 if(sauceEnabled) {
+                    browser.desiredCapabilities['tunnel-identifier'] = tunnelIdentifier;
                     browser.desiredCapabilities['build'] = buildId;
                     browser.desiredCapabilities['name'] = this.name;
                     browser.desiredCapabilities['public'] = 'public';

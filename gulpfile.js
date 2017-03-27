@@ -102,8 +102,8 @@ gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);
 
-gulp.task('galen', function () {
-    gulp.src('galen.test.js').pipe(
+gulp.task('galen',['docs:serve'], function () {
+    return gulp.src('galen.test.js').pipe(
         galen.test({
             'htmlreport': 'galen-report/',
             'galenPath': './node_modules/galenframework/bin/galen',
@@ -113,9 +113,15 @@ gulp.task('galen', function () {
                 'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
                 'test.filter': (process.argv[3] || '').replace('--',''),
                 'sauce.enabled': process.env.SAUCE_ENABLED,
+                'sauce.tunnelIdentifier': process.env.SAUCE_TUNNEL_ID,
                 'sauce.username': process.env.SAUCE_USERNAME,
                 'sauce.accessKey': process.env.SAUCE_ACCESS_KEY
             }
         })
-    );
+    ).on('end', () => {
+        process.exit(0);
+    })
+    .on('error', () => {
+        process.exit(1);
+    });
 });
