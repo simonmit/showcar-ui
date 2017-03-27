@@ -65,7 +65,7 @@ module.exports = (globalJSON, content) => {
         'dist/showcar-ui.js',
         'docs/assets/js/highlight.min.js',
         'docs/assets/js/clipboard.min.js',
-        'docs/assets/js/smooth-scroll.min.js',
+        // 'docs/assets/js/smooth-scroll.min.js',
         'docs/assets/js/docs.js',
     ];
     let stylesFiles = [
