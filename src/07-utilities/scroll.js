@@ -15,10 +15,9 @@ const scroll = (to, duration, cb) => {
     }
 };
 
-export function smoothScroll(target, duration = 300) {
+export function smoothScroll(target, duration = 300, cb) {
     let targetSelector = '';
     const hrefTarget = $(target).attr('href');
-    const nameTarget = $(target).attr('name');
 
     // We need to handle href and name since spy navigation is using name as target
     if (hrefTarget.length) {
@@ -26,18 +25,19 @@ export function smoothScroll(target, duration = 300) {
         if (! $(targetSelector).length) {
             targetSelector = hrefTarget;
         }
-    }else{
+    } else {
+        const nameTarget = $(target).attr('name');
         if (nameTarget.length) {
             targetSelector = 'a[name="' + nameTarget + '"]';
-        }else{
+        } else {
             console.warn('No target for scroll');
             return;
         }
     }
 
     const to = $(targetSelector).offset().top;
-
     scroll(to, duration);
+    if (cb) {cb();}
 }
 
 export default function registerSmoothScrolling() {
