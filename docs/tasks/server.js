@@ -26,7 +26,7 @@ const renderContent = (el)=>{
 
 app.get('/', (req, res) => {
     if (req.query['gspec']) {
-        res.send(gspec(globalJSON));
+        res.send(gspec(Object.keys(globalJSON)));
     } else {
         res.send(generateHtml(globalJSON));
     }

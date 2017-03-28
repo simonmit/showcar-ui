@@ -87,7 +87,6 @@ var getSpecs = function() {
 }
 
 var specs = getSpecs().filter(function(value) {
-    value.indexOf(specFilter) >= 0;
     return value.indexOf(specFilter) >= 0;
 }).map(function(s) {
     return [s];
