@@ -103,7 +103,7 @@ afterTest(function (testInfo) {
 });
 
 testRetry(function (test, retryCount) {
-    if (retryCount < 3) {
+    if (retryCount < 2) {
         return true;
     }
     else {
