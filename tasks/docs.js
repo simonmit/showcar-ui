@@ -17,7 +17,7 @@ module.exports = (gulp) => {
             tasks: (changedFiles) => {
                 let tasks = [];
                 changedFiles.forEach((file) => {
-                    if (file.includes('/docs/')) {return;} // exclude docs folder from gulp tasks
+                    if (! file.includes('/src/')) {return;} // exclude docs folder from gulp tasks
                     if (path.extname(file) === '.js') tasks.push('js');
                     if (path.extname(file) === '.scss') tasks.push('scss');
                 });
