@@ -216,7 +216,9 @@ $spy-height: 55px;
     }
 
     &:last-of-type {
-      border-bottom: 1px solid $black-30;
+      @include mqmax($viewportM) {
+        border-bottom: 1px solid $black-30;
+      }
     }
 
     @include mqmin($viewportM) {
