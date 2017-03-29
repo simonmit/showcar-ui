@@ -64,6 +64,7 @@ $spy-height: 55px;
 
       &:last-child {
         padding: 12px $L $L;
+        border-bottom: 1px solid $black-30;
       }
 
       @include mqmin($viewportM) {
@@ -213,7 +214,6 @@ $spy-height: 55px;
 
     &:last-child {
       padding: 12px $L $L;
-      border-bottom: 1px solid $black-30;
     }
 
     @include mqmin($viewportM) {
