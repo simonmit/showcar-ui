@@ -16,3 +16,13 @@ This documentation follows the following structure:
 * <h4>Organisms:</h4> Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
 * <h4>Utilities:</h4> Information about utility classes and layout.
 * <h4>Extra packages:</h4> Here you can find more information about additional showcar-* NPM packages that can be used with showcar-ui (e.g. gallery, icons, etc.).
+
+<br>
+
+Label description:
+
+<span class="status complete">Complete</span> - Element is completely implemented and can be used. <br>
+<span class="status complete">JS</span> - Element depends on JavaScript (showcar-ui.js). <br>
+<span class="status review">Needs review</span> - Element is implemented and can be used but needs to be reviewed. <br>
+<span class="status refactor">Needs refactoring</span> - Element is implemented and can be used but needs improvement. <br>
+<span class="status refactor">Deprecated</span> - Don't use this element.

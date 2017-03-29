@@ -1,4 +1,4 @@
-<h2>Notifications closable<span class="status refactor">Needs refactoring</span></h2>
+<h2>Notifications closable<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <div class="sc-content-container example-notification-target" id="example-notification-target">
     Notification Target container

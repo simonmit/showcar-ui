@@ -1,4 +1,4 @@
-<h2>Lightbox<span class="status refactor">Needs refactoring</span></h2>
+<h2>Lightbox<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 an overlay that requires the user to interact with it and designed to elicit a response from the user.
 

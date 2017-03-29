@@ -1,1 +1,1 @@
-<h2>Custom dropdown disabled<span class="status refactor">Needs refactoring</span></h2>
+<h2>Custom dropdown disabled<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
