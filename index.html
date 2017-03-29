@@ -270,6 +270,13 @@ The structure of all elements follows the <a href="http://bradfrost.com/blog/pos
 <li><h4>Utilities:</h4> Information about utility classes and layout.</li>
 <li><h4>Extra packages:</h4> Here you can find more information about additional showcar-* NPM packages that can be used with showcar-ui (e.g. gallery, icons, etc.).</li>
 </ul>
+<p><br></p>
+<p>Label description:</p>
+<p><span class="status complete">Complete</span> - Element is completely implemented and can be used. <br>
+<span class="status complete">JS</span> - Element depends on JavaScript (showcar-ui.js). <br>
+<span class="status review">Needs review</span> - Element is implemented and can be used but needs to be reviewed. <br>
+<span class="status refactor">Needs refactoring</span> - Element is implemented and can be used but needs improvement. <br>
+<span class="status refactor">Deprecated</span> - Don&#39;t use this element.</p>
 </div>
                      
                 </div>
@@ -971,7 +978,7 @@ margin-bottom:15px;
             
 <hr></div><div id="collapse-link" class="positon-anchor">
                 <div class="element" id="collapse-more-less">
-                    <div class="markdown"><h2>Collapse more&amp;less<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Collapse more&amp;less<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
     More Content
@@ -1008,7 +1015,7 @@ margin-bottom:15px;
             
 
                 <div class="element" id="collapse-toggle">
-                    <div class="markdown"><h2>Collapse toggle<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Collapse toggle<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><a data-toggle="sc-collapse" data-target="#collapse">
     Toggle Content
@@ -1191,7 +1198,7 @@ margin-bottom:15px;
             
 <hr></div><div id="custom-dropdown-link" class="positon-anchor">
                 <div class="element" id="custom-dropdown-default">
-                    <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><custom-dropdown class="sc-input" checkboxgroup data-test="custom-dropdown-1">
     <div>
@@ -1236,7 +1243,7 @@ margin-bottom:15px;
             
 
                 <div class="element" id="custom-dropdown-disabled">
-                    <div class="markdown"><h2>Custom dropdown disabled<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Custom dropdown disabled<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><custom-dropdown class="sc-input" checkboxgroup disabled>
     <div>
@@ -1273,7 +1280,7 @@ margin-bottom:15px;
             
 
                 <div class="element" id="custom-dropdown-icons-checkbox">
-                    <div class="markdown"><h2>Custom dropdown with icons (multiple choice possible)<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Custom dropdown with icons (multiple choice possible)<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>You may use custom dropdown with any icons of your choice and style them as you wish. In this examples we added following css to style general icons from showcar-icon library:</p>
 <pre>
@@ -1437,7 +1444,7 @@ margin-bottom:15px;
             
 
                 <div class="element" id="custom-dropdown-icons">
-                    <div class="markdown"><h2>Custom dropdown with icons (one choice possible)<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Custom dropdown with icons (one choice possible)<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <style>
 #custom-dropdown-icons .sample as24-icon[type^='bodytypes'] svg {
@@ -1590,7 +1597,7 @@ margin-bottom:15px;
             
 <hr></div><div id="input-link" class="positon-anchor">
                 <div class="element" id="checkbox">
-                    <div class="markdown"><h2>Checkbox<span class="status refactor">Should be a separate atom</span></h2>
+                    <div class="markdown"><h2>Checkbox<span class="status refactor">Needs refactoring</span></h2>
 </div>
                    <div class="sample"><input class="sc-input" id="as24-checkbox-1" type="checkbox"/>
 <label for="as24-checkbox-1">Checkbox</label>
@@ -1724,7 +1731,7 @@ margin-bottom:15px;
             
 
                 <div class="element" id="radio-button">
-                    <div class="markdown"><h2>Radio button<span class="status refactor">Should be a separate atom</span></h2>
+                    <div class="markdown"><h2>Radio button<span class="status refactor">Needs refactoring</span></h2>
 </div>
                    <div class="sample"><input class="sc-input" id="as24-radio-1" type="radio" name="example-radios-1">
 <label for="as24-radio-1">Radio 1</label>
@@ -1834,7 +1841,7 @@ margin-bottom:15px;
             
 <hr></div><div id="lazy-image-link" class="positon-anchor">
                 <div class="element" id="lazy-image">
-                    <div class="markdown"><h2>Lazy loading images<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Lazy loading images<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
 
 <p>If you want to make you images lazy, you need to add <code>lazyload</code> class to your img tag. We advice you also to add <code>sc-lazy-image</code> class. With it you will have a fancy loading spinner when picture is loading. Don&#39;t forget to use <code>data-src</code> instead of <code>src</code> attribute.<br>In the example we used <code>&lt;img&gt;</code> tag. Note the default value for the src. This is needed for ommiting the default view for the &quot;empty&quot; image.</p>
 </div>
@@ -1857,7 +1864,7 @@ margin-bottom:15px;
             
 <hr></div><div id="lightbox-link" class="positon-anchor">
                 <div class="element" id="lightbox">
-                    <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>an overlay that requires the user to interact with it and designed to elicit a response from the user.</p>
 <h4>usage:</h4><p>In order to use it add following elements to your html:</p>
@@ -1946,7 +1953,7 @@ margin-bottom:15px;
             
 <hr></div><div id="rotating-arrow-link" class="positon-anchor">
                 <div class="element" id="rotating-arrow">
-                    <div class="markdown"><h2>Rotating arrow<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Rotating arrow<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><div id="myId">
     Look at the arrow right of me! <span data-toggle="arrow" data-target="#myId"></span>
@@ -1971,7 +1978,7 @@ margin-bottom:15px;
             
 <hr></div><div id="spinner-link" class="positon-anchor">
                 <div class="element" id="spinner">
-                    <div class="markdown"><p><h2>Spinner<span class="status review">Needs tech review</span></h2>
+                    <div class="markdown"><p><h2>Spinner<span class="status review">Needs review</span></h2>
 Note that background-color and <code>sc-absolute-center</code> class are added only for example styling</p>
 <style>
 #spinner .sample{
@@ -2006,7 +2013,7 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="stepper-link" class="positon-anchor">
                 <div class="element" id="stepper">
-                    <div class="markdown"><h2>Stepper<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><h2>Stepper<span class="status review">Needs review</span><span class="status complete">JS</span></h2>
 </div>
                    <div class="sample"><div class="sc-stepper">
     <button class="sc-stepper-button sc-stepper-button-decrement">-</button>
@@ -2035,7 +2042,7 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="tooltip-link" class="positon-anchor">
                 <div class="element" id="tooltip">
-                    <div class="markdown"><h2>Tooltip old<span class="status refactor">Deprecated</span></h2>
+                    <div class="markdown"><h2>Tooltip old<span class="status refactor">Deprecated</span><span class="status complete">JS</span></h2>
 
 <p>Use &quot;tooltip new&quot; instead</p>
 <style>
@@ -2067,7 +2074,7 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="tooltip-2-link" class="positon-anchor">
                 <div class="element" id="tooltip-2">
-                    <div class="markdown"><p><h2>Tooltip new<span class="status complete">Complete</span></h2></p>
+                    <div class="markdown"><p><h2>Tooltip new<span class="status complete">Complete</span><span class="status complete">JS</span></h2></p>
 <style>
 #tooltip-2 .sample{
     padding-top:60px;
@@ -2271,7 +2278,7 @@ Note that background-color and <code>sc-absolute-center</code> class are added o
             
 <hr></div><div id="notification-link" class="positon-anchor">
                 <div class="element" id="_notification">
-                    <div class="markdown"><h2>Notifications<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Notifications<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>To add notifications you need 3 elements on your page:</p>
 <ul>
@@ -2341,7 +2348,7 @@ document.querySelector('body').addEventListener('click', event => {
             
 
                 <div class="element" id="notification-closable">
-                    <div class="markdown"><h2>Notifications closable<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Notifications closable<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <div class="sc-content-container example-notification-target" id="example-notification-target">
     Notification Target container
@@ -2412,7 +2419,7 @@ document.querySelector('body').addEventListener('click', event => {
             
 
                 <div class="element" id="notification-timeout">
-                    <div class="markdown"><h2>Notifications with timeout<span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Notifications with timeout<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <div class="sc-content-container example-notification-target" id="example-notification-target-s">
     Small Notification Target container
@@ -2600,7 +2607,7 @@ document.querySelector('body').addEventListener('click', event => {
             
 <hr></div><div id="navigation-link" class="positon-anchor">
                 <div class="element" id="navigation">
-                    <div class="markdown"><h2>Navigation <span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Navigation <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>The navigation currently only works when used in combination with contentservice fragment.</p>
 <style>
@@ -2768,7 +2775,7 @@ background-color: #f4f4f4;
             
 <hr></div><div id="pagination-link" class="positon-anchor">
                 <div class="element" id="pagination">
-                    <div class="markdown"><h2>Pagination <span class="status refactor">Needs refactoring</span></h2>
+                    <div class="markdown"><h2>Pagination <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>If you want to use the pagination component, you need to add the ul element with the .sc-pagination class as shown below and the corresponding javascript snippet.</p>
 <p>You need the following properties to instantiate the &quot;Pager&quot;:</p>
@@ -2902,7 +2909,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
 <hr></div><div id="spy-navigation-link" class="positon-anchor">
                 <div class="element" id="spy-navigation">
-                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs explaination</span></h2>
+                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
 
 <p>Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below.
 The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
@@ -3805,7 +3812,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
             
 
                 <div class="element" id="scrolling">
-                    <div class="markdown"><h2>Smooth scrolling<span class="status complete">Complete</span></h2>
+                    <div class="markdown"><h2>Smooth scrolling<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
 
 <p>Adds animated scrolling when anchoring to elements. In order to use it add the <code>data-smooth-scroll</code> attribute to any anchor link.
 In case you want to trigger the smooth scrolling via JS have a look at the JS example below.</p>
