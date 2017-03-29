@@ -1,1 +1,1 @@
-<h2>Checkbox<span class="status refactor">Should be a separate atom</span></h2>
+<h2>Checkbox<span class="status refactor">Needs refactoring</span></h2>

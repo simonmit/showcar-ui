@@ -1,1 +1,1 @@
-<h2>Rotating arrow<span class="status complete">Complete</span></h2>
+<h2>Rotating arrow<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
