@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
 const galen = require('gulp-galen');
+const testcafe = require('gulp-testcafe');
 
 gulp.task('js', scgulp.js({
     entry: 'src/showcar-ui.js',
@@ -47,6 +48,11 @@ gulp.task('clean', scgulp.clean({
 gulp.task('serve', scgulp.serve({
     dir: 'dist'
 }));
+
+gulp.task('test:interaction', () => {
+    gulp.src('src/**/specs/*.interaction.js')
+        .pipe(testcafe({ browsers: ['chrome'] }));
+});
 
 gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
@@ -98,6 +104,7 @@ const serveDocs = require('./docs/tasks/docs');
 gulp.task('docs:serve', () => {serveDocs(gulp);});
 gulp.task('docs:edit', ['build'], ()=>{serveDocs(gulp);});
 
+gulp.task('test', ['docs:serve', 'test:interaction']);
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['build']);

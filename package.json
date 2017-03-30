@@ -42,6 +42,7 @@
     "gulp-galen": "^1.1.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-string-replace": "^0.4.0",
+    "gulp-testcafe": "^0.9.1",
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",
     "showcar-gulp": "2.1.1",
