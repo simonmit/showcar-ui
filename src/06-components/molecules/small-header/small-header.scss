@@ -1,0 +1,38 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-small-header {
+  position: relative;
+  z-index: 3;
+  background-color: $white;
+  overflow: hidden;
+  border-bottom: solid 1px $black-30;
+  padding: 11px 0;
+  height: 56px;
+
+  .sc-bar {
+    text-align: center;
+  }
+
+  as24-icon {
+    width: 75px;
+    height: 35px;
+  }
+
+  @include mqmin(923px) {
+    height: 71px;
+    width: 100%;
+    overflow: visible;
+    display: inline-block;
+    padding: 15px;
+
+    .sc-bar {
+      text-align: left;
+    }
+
+    as24-icon {
+      width: 85px;
+      height: 40px;
+    }
+  }
+}
