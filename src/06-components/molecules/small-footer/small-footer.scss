@@ -3,7 +3,10 @@
 
 .sc-small-footer {
   color: $black-60;
-  padding: $L;
+  padding-bottom: $M;
+  padding-top: $L;
+  padding-left: $L;
+  padding-right: $L;
   background-color: $black-30;
 
   p {
@@ -16,7 +19,7 @@
   }
 
   a:nth-child(2), a:nth-child(3) {
-    margin-left: 12px;
+    margin-left: $M;
   }
 
   .sc-pull-left, .sc-pull-right {
