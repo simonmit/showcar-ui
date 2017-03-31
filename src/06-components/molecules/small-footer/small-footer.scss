@@ -1,0 +1,27 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-small-footer {
+  color: $black-60;
+  padding: $L;
+  background-color: $black-30;
+
+  p {
+    margin-top: 8px;
+  }
+
+  as24-icon {
+    width: 75px;
+    height: 35px;
+  }
+
+  a:nth-child(2), a:nth-child(3) {
+    margin-left: 12px;
+  }
+
+  .sc-pull-left, .sc-pull-right {
+    @include mqmax($viewportM - 1) {
+      width: 100%;
+    }
+  }
+}
