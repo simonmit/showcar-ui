@@ -8,7 +8,7 @@
   overflow: hidden;
   border-bottom: solid 1px $black-30;
   padding: $M 0;
-  height: 60px;
+  height: 56px;
 
   .sc-bar {
     text-align: center;
@@ -21,7 +21,7 @@
   }
 
   @include mqmin(923px) {
-    height: 70px;
+    height: 71px;
     width: 100%;
     overflow: visible;
     display: inline-block;
