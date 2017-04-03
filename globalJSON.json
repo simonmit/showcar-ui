@@ -457,7 +457,7 @@
         "type": "molecules",
         "group": "small-header",
         "srcDir": "src/06-components/molecules/small-header/docs",
-        "markDown": "\"<p><h2>Small Header<span class=\\\"status complete\\\">Complete</span></h2>\\nThis component uses navigation.scss</p>\\n<style>\\n#small-header .sample{\\nbackground-color: #f4f4f4;\\n}\\n</style>\\n\"",
+        "markDown": "\"<h2>Small Header<span class=\\\"status complete\\\">Complete</span></h2>\\n\\n<style>\\n#small-header .sample{\\nbackground-color: #f4f4f4;\\n}\\n</style>\\n\"",
         "html": "\"<header class=\\\"sc-small-header\\\" role=\\\"navigation\\\">\\n    <div class=\\\"sc-bar\\\">\\n        <a href=\\\"https://www.autoscout24.de/\\\">\\n            <as24-icon type=\\\"auto24\\\"></as24-icon>\\n        </a>\\n    </div>\\n</header>\\n\"",
         "codeExample": "\"&lt;header class=&quot;sc-small-header&quot; role=&quot;navigation&quot;&gt;\\n    &lt;div class=&quot;sc-bar&quot;&gt;\\n        &lt;a href=&quot;https://www.autoscout24.de/&quot;&gt;\\n            &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;/as24-icon&gt;\\n        &lt;/a&gt;\\n    &lt;/div&gt;\\n&lt;/header&gt;\\n\""
     },
