@@ -1,6 +1,6 @@
 module.exports = frame => {
     describe('Buttons', function () {
-        it('All buttons are visible', function () {
+        it('All buttons are rendered', function () {
             var buttons = frame.getAll('[class*="sc-btn-"]');
 
             for (var i = 0; i < buttons.length() - 1; i++) {
