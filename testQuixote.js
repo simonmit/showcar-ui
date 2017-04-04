@@ -15,7 +15,7 @@ var runTest = function (browserWidth) {
     });
     describe('Device width: ' + browserWidth, function () {
         require('./src/06-components/atoms/button/specs/button.layout.js')(frame, assert);
-        require('./src/06-components/atoms/collapse/specs/collapse.test.layout.js')(frame, assert);
+        require('./src/06-components/atoms/custom-dropdown/specs/custom-dropdown.layout.js')(frame, assert);
     });
     beforeEach(function () {
         frame.reset();
