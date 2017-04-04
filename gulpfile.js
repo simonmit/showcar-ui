@@ -49,11 +49,6 @@ gulp.task('serve', scgulp.serve({
     dir: 'dist'
 }));
 
-gulp.task('test:interaction', () => {
-    gulp.src('src/**/specs/*.interaction.js')
-        .pipe(testcafe({ browsers: ['chrome'] }));
-});
-
 gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
@@ -136,13 +131,18 @@ gulp.task('galen', ['docs:serve'], () => {
 });
 
 
-gulp.task('karma', ['docs:serve'], scgulp.karma({
+gulp.task('test:interaction', () => {
+    gulp.src('src/**/specs/*.interaction.js')
+        .pipe(testcafe({ browsers: ['chrome'] }));
+});
+
+gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     files: ['testQuixote.js'],
     proxies: {
         '/': 'http://localhost:3000/',
     },
     preprocessors: {
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
-    },
+    }
     // watch: 'test/js-src/**/*.js',
 }));

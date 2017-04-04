@@ -14,7 +14,7 @@ var runTest = function (browserWidth) {
 
     });
     describe('Device width: ' + browserWidth, function () {
-        require('./src/06-components/atoms/button/specs/button.test.layout.js')(frame, assert);
+        require('./src/06-components/atoms/button/specs/button.layout.js')(frame, assert);
         require('./src/06-components/atoms/collapse/specs/collapse.test.layout.js')(frame, assert);
     });
     beforeEach(function () {
@@ -25,4 +25,4 @@ var runTest = function (browserWidth) {
     });
 };
 
-[1000, 1500, 1400, 1300, 1200, 400].forEach(runTest);
+[320, 640].forEach(runTest);
