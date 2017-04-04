@@ -32,6 +32,26 @@ app.get('/', (req, res) => {
     }
 });
 
+app.get('/docs/', (req, res) => {
+    const elementsArray = Object.keys(globalJSON).filter((el) => {
+        const type = globalJSON[el].type;
+        return type ==='atoms'||
+            type === 'molecules'||
+            type === 'organisms';
+    });
+    if (req.query['gspec']) {
+        res.send(gspec(elementsArray));
+        return;
+    }
+    let content = `<div id="${req.params.type}-link">`;
+    content += elementsArray
+            .map(el => {
+                return renderContent(el);
+            }).join('') || 'empty';
+    content += '</div>';
+    res.send(generateHtml(globalJSON, content));
+});
+
 app.get('/docs/:type/', (req, res) => {
     const elementsArray = Object.keys(globalJSON).filter((el) => {
         return globalJSON[el].type === req.params.type;
