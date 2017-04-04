@@ -14,9 +14,13 @@ var runTest = function (browserWidth) {
 
     });
     describe('Device width: ' + browserWidth, function () {
-        require('./src/06-components/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
-            file.module(frame, assert);
-        });
+        require('./src/06-components/atoms/button/specs/button.layout.js')(frame, assert); 
+        require('./src/06-components/atoms/custom-dropdown/specs/custom-dropdown.layout.js')(frame, assert);
+        require('./src/06-components/atoms/input/specs/input.layout.js')(frame, assert);
+        // not working, please fix
+        // require('./src/06-components/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
+        //     file.module(frame, assert);
+        // });
     });
     beforeEach(function () {
         frame.reset();
