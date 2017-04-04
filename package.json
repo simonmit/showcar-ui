@@ -47,13 +47,10 @@
     "handlebars-helper-include": "^0.2.0",
     "handlebars-helpers": "^0.5.8",
     "html-entities": "^1.2.0",
-    "karma-commonjs": "^1.0.0",
-    "karma-source-map-support": "^1.2.0",
     "marked": "^0.3.6",
     "quixote": "^0.12.5",
     "recursive-readdir-sync": "^1.0.6",
     "showcar-gulp": "^2.2.1",
-    "sourcemapify": "^1.1.1",
     "yargs": "^4.6.0"
   },
   "main": "src/js/showcar-ui.js",
