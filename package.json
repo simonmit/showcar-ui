@@ -52,7 +52,6 @@
     "marked": "^0.3.6",
     "quixote": "^0.12.5",
     "recursive-readdir-sync": "^1.0.6",
-    "require-globify": "^1.4.1",
     "showcar-gulp": "^2.2.1",
     "sourcemapify": "^1.1.1",
     "yargs": "^4.6.0"
