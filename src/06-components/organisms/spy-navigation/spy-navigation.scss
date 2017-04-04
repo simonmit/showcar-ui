@@ -86,7 +86,7 @@ $spy-height: 55px;
     #{$nav}__toggle {
       &:after {
         @include rotating-arrow('up');
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
+        //background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
       }
 
       &--visible {
@@ -153,7 +153,7 @@ $spy-height: 55px;
 
     &:hover {
       &:after {
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
+        //background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ff7500%22%20d%3D%22M16.363%206.11L10%2012.476%203.636%206.11l-.707.708%206.363%206.364.707.707.707-.708%206.363-6.364z%22/%3E%3C/svg%3E');
       }
 
       #{$toggle}__text {
