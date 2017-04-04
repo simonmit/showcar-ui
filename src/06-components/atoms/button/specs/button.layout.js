@@ -1,4 +1,4 @@
-module.exports = (frame, assert) => {
+module.exports = frame => {
     describe('Buttons', function () {
         it('All buttons are visible', function () {
             var buttons = frame.getAll('[class*="sc-btn-"]');
