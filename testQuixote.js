@@ -8,7 +8,7 @@ setTimeout(function () {
 
 var runTest = function (browserWidth) {
     frame = quixote.createFrame({
-        src: 'http://localhost:9876/docs/atoms/',     // karma url with port //change to http://localhost:9876
+        src: 'http://localhost:9876/docs/',     // karma url with port
         width: browserWidth
     }, function () { //keep callback
 
