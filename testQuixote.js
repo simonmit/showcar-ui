@@ -15,14 +15,18 @@ var runTest = function (browserWidth) {
     });
     describe('Device width: ' + browserWidth, function () {
         // require('./src/06-components/atoms/button/specs/button.layout.js')(frame, assert); not working if we open /docs/ page, only works with /docs/atoms/button
-        require('./src/06-components/atoms/custom-dropdown/specs/custom-dropdown.layout.js')(frame, assert);
-        require('./src/06-components/atoms/input/specs/input.layout.js')(frame, assert);
-        require('./src/06-components/atoms/spinner/specs/spinner.layout.js')(frame, assert);
-        require('./src/06-components/atoms/stepper/specs/stepper.layout.js')(frame, assert);
-        // not working, please fix
-        // require('./src/06-components/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
-        //     file.module(frame, assert);
-        // });
+        // require('./src/06-components/atoms/custom-dropdown/specs/custom-dropdown.layout.js')(frame, assert);
+        // require('./src/06-components/atoms/input/specs/input.layout.js')(frame, assert);
+        // require('./src/06-components/atoms/spinner/specs/spinner.layout.js')(frame, assert);
+        // require('./src/06-components/atoms/stepper/specs/stepper.layout.js')(frame, assert);
+
+        // require('./src/06-components/molecules/breadcrumb/specs/breadcrumb.layout.js')(frame, assert, browserWidth);
+        // require('./src/06-components/molecules/input-group/specs/input-group.layout.js')(frame, assert);
+        // require('./src/06-components/molecules/small-footer/specs/small-footer.layout.js')(frame, assert, browserWidth);
+        // require('./src/06-components/molecules/small-header/specs/small-header.layout.js')(frame, assert, browserWidth);
+        require('./src/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
+            file.module(frame, assert, browserWidth);
+        });
     });
     beforeEach(function () {
         frame.reset();
@@ -32,4 +36,4 @@ var runTest = function (browserWidth) {
     });
 };
 
-[320, 640].forEach(runTest);
+[320, 768, 1024].forEach(runTest);
