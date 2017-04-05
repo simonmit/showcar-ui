@@ -52,6 +52,7 @@ gulp.task('serve', scgulp.serve({
 gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
+    gulp.src('src/html/showcar-ui-toggled-fragment.html').pipe(gulp.dest('dist/'));
 });
 
 const fs = require('fs');
