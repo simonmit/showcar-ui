@@ -38,3 +38,21 @@ $off-grey: #D2D2D2;
   }
 }
 
+.sc-spinner-value-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+
+  .sc-spinner-value {
+    position: absolute;
+  }
+
+  .orange ~ .sc-spinner-value {
+    color: $orange;
+  }
+
+  .grey ~ .sc-spinner-value {
+    color: $grey;
+  }
+}
