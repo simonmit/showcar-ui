@@ -43,9 +43,16 @@ $off-grey: #D2D2D2;
   flex-direction: column;
   align-items: center;
   color: $white;
+  position: relative;
 
   .sc-spinner-value {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translateY(32%)
   }
 
   .orange ~ .sc-spinner-value {
