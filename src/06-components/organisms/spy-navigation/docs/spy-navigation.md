@@ -4,10 +4,10 @@ Make sure you always set the target for each navigation link by providing the da
 The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
 The anchor tag defines the start of the section you want to jump to or select when scrolling there.
 
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     (function($, showcar) {
+        document.querySelector('.sc-spy-navigation').style.marginLeft = '-15px'; // to show on top of menu
         var stickyYStartPosition = $('.sc-spy-navigation').offset().top;
         if (document.querySelector('.markdown-sdf')) { //block temporary
             stickyYStartPosition += 275;
