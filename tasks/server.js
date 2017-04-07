@@ -21,7 +21,7 @@ const gspec = (elementsArray) => {
 
 const renderContent = (el)=>{
     let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
-    return `<div id="${globalJSON[el].name}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
+    return `<div id="${globalJSON[el].name}" class="group-${globalJSON[el].group}">` + JSON.parse(globalJSON[el].markDown) + html + '</div><br>';
 };
 
 app.get('/', (req, res) => {
@@ -43,12 +43,10 @@ app.get('/test/', (req, res) => {
         res.send(gspec(elementsArray));
         return;
     }
-    let content = `<div id="${req.params.type}-link">`;
-    content += elementsArray
+    let content = elementsArray
             .map(el => {
                 return renderContent(el);
             }).join('') || 'empty';
-    content += '</div>';
     res.send(generateHtml(globalJSON, content,true));
 });
 
