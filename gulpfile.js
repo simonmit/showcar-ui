@@ -139,6 +139,17 @@ gulp.task('test:interaction', () => {
 });
 
 gulp.task('test:layout', ['docs:serve'], scgulp.karma({
+    files: ['testQuixote.js'],
+    proxies: {
+        '/': 'http://localhost:3000/',
+    },
+    preprocessors: {
+        'testQuixote.js': ['browserify'] //providing browserify to use require in test files
+    }
+    // watch: 'test/js-src/**/*.js',
+}));
+
+gulp.task('test:layout:sause', ['docs:serve'], scgulp.karma({
     sauceLabs: {
         testName: 'Web App Unit Tests'
     },
@@ -149,5 +160,4 @@ gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     preprocessors: {
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
     }
-    // watch: 'test/js-src/**/*.js',
 }));
