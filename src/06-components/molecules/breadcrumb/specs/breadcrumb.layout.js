@@ -19,7 +19,7 @@ module.exports = (frame, assert, browserWidth) => {
 
                 firstBreadcrumb.assert({
                     rendered: true,
-                    // right: lastBreadcrumb.right.minus(60) how can we detect is it on the left side of lastBreadcrumb?
+                    // right: lastBreadcrumb.right.minus(60) how can we detect is it on the left side of lastBreadcrumb? %?
                 });
                 lastBreadcrumb.assert({
                     rendered: true
