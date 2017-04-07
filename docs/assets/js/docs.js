@@ -43,9 +43,12 @@ window.addEventListener('load', function () {
             }
             activateMenu();
         };
-        document.getElementById('all-code-toggler').addEventListener('click', function () {
-            toggleClass(this);
-        });
+        var allCodeToggler = document.getElementById('all-code-toggler');
+        if (allCodeToggler) {
+            allCodeToggler.addEventListener('click', function () {
+                toggleClass(this);
+            });
+        }
     }
 
     codeSampleToggle();
@@ -92,9 +95,12 @@ window.addEventListener('load', function () {
 
     activateMenu();
     document.addEventListener('resize', activateMenu);
-    document.getElementById('open-menu').addEventListener('click', function () {
-        document.getElementById('sidebar').classList.toggle('open');
-    });
+    var openMenu = document.getElementById('open-menu');
+    if (openMenu) {
+        openMenu.addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('open');
+        });
+    }
 
     function scrollLocationHash() {
         if (window.location.hash) {
