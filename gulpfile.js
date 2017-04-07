@@ -98,12 +98,12 @@ gulp.task('docs:generate', ['generateJsonDocs'], () => {
 const serveDocs = require('./docs/tasks/docs');
 
 gulp.task('docs:serve', () => {serveDocs(gulp);});
-gulp.task('docs:edit', ['build'], () => {serveDocs(gulp);});
+gulp.task('docs:watch', ['build'], () => {serveDocs(gulp);});
 
 gulp.task('test', ['docs:serve', 'test:interaction']);
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
-gulp.task('default', ['build']);
+gulp.task('default', ['docs:watch']);
 
 gulp.task('galen', ['docs:serve'], () => {
     return gulp.src('galen.test.js')

@@ -25,9 +25,11 @@ var runTest = function (browserWidth) {
         // require('./src/06-components/molecules/small-footer/specs/small-footer.layout.js')(frame, assert, browserWidth);
         // require('./src/06-components/molecules/small-header/specs/small-header.layout.js')(frame, assert, browserWidth);
         // require('./src/06-components/molecules/validations/specs/validation.layout.js')(frame, assert);
-        require('./src/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
-            file.module(frame, assert, browserWidth);
-        });
+
+        require('./src/06-components/organisms/spy-navigation/specs/spy-navigation.layout.js')(assert, browserWidth);
+        // require('./src/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
+        //     file.module(frame, assert, browserWidth);
+        // });
     });
     beforeEach(function () {
         frame.reset();
