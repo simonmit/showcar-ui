@@ -108,28 +108,28 @@ gulp.task('default', ['docs:watch']);
 
 gulp.task('galen', ['docs:serve'], () => {
     /*return gulp.src('galen.test.js')
-        .pipe(
-            galen.test({
-                'htmlreport': 'galen-report/',
-                'galenPath': './node_modules/galenframework/bin/galen',
-                'parallel-tests': process.env.PARALLEL_TEST_PROCESS || 1,
-                'properties': {
-                    'test.url': 'http://localhost:3000/',
-                    'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
-                    'test.filter': (process.argv[3] || '').replace('--', ''),
-                    'sauce.enabled': process.env.SAUCE_ENABLED,
-                    'sauce.tunnelIdentifier': process.env.SAUCE_TUNNEL_ID,
-                    'sauce.username': process.env.SAUCE_USERNAME,
-                    'sauce.accessKey': process.env.SAUCE_ACCESS_KEY
-                }
-            })
-        )
-        .on('end', () => {
-            process.exit(0);
-        })
-        .on('error', () => {
-            process.exit(1);
-        });*/
+     .pipe(
+     galen.test({
+     'htmlreport': 'galen-report/',
+     'galenPath': './node_modules/galenframework/bin/galen',
+     'parallel-tests': process.env.PARALLEL_TEST_PROCESS || 1,
+     'properties': {
+     'test.url': 'http://localhost:3000/',
+     'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
+     'test.filter': (process.argv[3] || '').replace('--', ''),
+     'sauce.enabled': process.env.SAUCE_ENABLED,
+     'sauce.tunnelIdentifier': process.env.SAUCE_TUNNEL_ID,
+     'sauce.username': process.env.SAUCE_USERNAME,
+     'sauce.accessKey': process.env.SAUCE_ACCESS_KEY
+     }
+     })
+     )
+     .on('end', () => {
+     process.exit(0);
+     })
+     .on('error', () => {
+     process.exit(1);
+     });*/
 });
 
 
@@ -143,15 +143,17 @@ gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     proxies: {
         '/': 'http://localhost:3000/',
     },
+    browsers: ['Safari'],
+    // browsers: ['Firefox'],
     preprocessors: {
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
     }
     // watch: 'test/js-src/**/*.js',
 }));
 
-gulp.task('test:layout:sause', ['docs:serve'], scgulp.karma({
+gulp.task('test:layout:sauce', ['docs:serve'], scgulp.karma({
     sauceLabs: {
-        testName: 'Web App Unit Tests'
+        testName: 'Showcar UI Layout test at ' + new Date().toLocaleString()
     },
     files: ['testQuixote.js'],
     proxies: {

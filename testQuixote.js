@@ -3,9 +3,6 @@ var quixote = require('quixote');
 var assert = require('chai').assert;
 var frame;
 var deviceWidth = [320, 768, 1024];
-setTimeout(function () {
-    window.__karma__.start(); //execute mocha; Wait while frame will load https://github.com/karma-runner/karma/blob/v0.8.6/adapter/mocha.wrapper#L6
-}, 1000);
 
 var runTests = function (browserWidth, index) {
     frame = quixote.createFrame({
@@ -13,7 +10,9 @@ var runTests = function (browserWidth, index) {
         width: browserWidth
     }, function () {
         if (index === 0) {
-            // window.__karma__.start(); //execute mocha
+            setTimeout(function () {
+                window.__karma__.start(); //execute mocha (sauce lab extra timeout)
+            }, 1000);
         }
     });
     describe('Device width: ' + browserWidth, function () {
