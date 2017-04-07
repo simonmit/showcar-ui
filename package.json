@@ -46,7 +46,7 @@
     "marked": "^0.3.6",
     "quixote": "^0.12.5",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.2.1",
+    "showcar-gulp": "^2.3.1",
     "yargs": "^4.6.0"
   },
   "main": "src/js/showcar-ui.js",
