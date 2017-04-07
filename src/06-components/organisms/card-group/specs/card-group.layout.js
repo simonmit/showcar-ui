@@ -1,4 +1,4 @@
-module.exports = (frame,assert, browserWidth) => {
+module.exports = (frame, assert, browserWidth) => {
     describe('Card group', function () {
         it('car element text is centered', function () {
             var cards = frame.getAll('#card-group .sc-card__image');
