@@ -1,7 +1,7 @@
 module.exports = frame => {
     describe('Buttons', function () {
         it('All buttons are rendered', function () {
-            var buttons = frame.getAll('[class*="sc-btn-"]');
+            var buttons = frame.getAll('.group-button [class*="sc-btn-"]');
 
             for (var i = 0; i < buttons.length() - 1; i++) {
                 buttons.at(i).assert({
@@ -11,7 +11,7 @@ module.exports = frame => {
         });
 
         it('Buttons have the correct height', function () {
-            var buttons = frame.getAll('[class*="sc-btn-"]');
+            var buttons = frame.getAll('.group-button [class*="sc-btn-"]');
 
             for (var i = 0; i < buttons.length() - 1; i++) {
                 buttons.at(i).assert({
