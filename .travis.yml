@@ -28,7 +28,7 @@ notifications:
 script:
   - npm run build
   - npm run docs
-  - npm run test-galen
+#  - npm run test-galen
 
 after_success:
   # only run for master branch, we don't want to release PRs and other branches
