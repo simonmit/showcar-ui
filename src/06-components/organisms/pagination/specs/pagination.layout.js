@@ -29,7 +29,6 @@ module.exports = (frame,assert, browserWidth) => {
             it('renders correctly on tablets and desktops', function () {
                 var pagination = frame.get('#pagination .sc-pagination');
                 var previousPage = frame.get('#pagination .previous-page');
-                // var info = frame.get('#pagination .info-page');
                 var nextPage = frame.get('#pagination .next-page');
 
                 // shall we check state when 5/7/9/11 pages shown?
@@ -40,14 +39,8 @@ module.exports = (frame,assert, browserWidth) => {
                     top: pagination.top,
                     left: pagination.left
                 });
-                // info.assert({
-                //     top: pagination.top,
-                //     center: pagination.center,
-                //     left: previousPage.right
-                // });
                 nextPage.assert({
                     top: pagination.top,
-                    // left: info.right,
                     right: pagination.right
                 });
             });
