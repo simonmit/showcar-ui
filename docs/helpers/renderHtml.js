@@ -1,4 +1,4 @@
-module.exports = (globalJSON, content) => {
+module.exports = (globalJSON, content, withOutMenu) => {
     const fs = require('fs');
     const renderMenu = require('./renderMenu.js');
     if (! globalJSON) {
@@ -55,7 +55,7 @@ module.exports = (globalJSON, content) => {
                     group.push(globalJSON[el].group);
                     return content;
                 }).join('\n') || 'empty';
-    }else{
+    } else {
         content = `<div id="separate-content">${content}</div>`;
     }
 
@@ -95,12 +95,12 @@ module.exports = (globalJSON, content) => {
                 ${scriptsFiles}
                 ${stylesFiles}
              </head>
-             <body>
+             <body id="${withOutMenu ? 'withoutmenu' : ''}">
     `;
 
-    const menu = renderMenu(globalJSON);
+    const menu = withOutMenu ? '' : renderMenu(globalJSON);
 
-    const leftMenu = `
+    const leftMenu = withOutMenu ? '' : `
         <div id="sidebar">
             <a href="/"><div id="sidebar-logo"></div></a>
             <h1>ShowCar UI</h1>

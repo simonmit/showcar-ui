@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
     }
 });
 
-app.get('/docs/', (req, res) => {
+app.get('/test/', (req, res) => {
     const elementsArray = Object.keys(globalJSON).filter((el) => {
         const type = globalJSON[el].type;
         return type ==='atoms'||
@@ -49,7 +49,7 @@ app.get('/docs/', (req, res) => {
                 return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
-    res.send(generateHtml(globalJSON, content));
+    res.send(generateHtml(globalJSON, content,true));
 });
 
 app.get('/docs/:type/', (req, res) => {

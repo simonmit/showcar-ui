@@ -6,7 +6,7 @@ var deviceWidth = [320, 768, 1024];
 
 var runTests = function (browserWidth, index) {
     frame = quixote.createFrame({
-        src: 'http://localhost:9876/docs/',     // karma url with port
+        src: 'http://localhost:9876/test/',     // karma url with port
         width: browserWidth
     }, function () {
         if (index === 0) {
