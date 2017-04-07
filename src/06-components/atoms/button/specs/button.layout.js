@@ -1,4 +1,4 @@
-module.exports = frame => {
+module.exports = function (frame) {
     describe('Buttons', function () {
         it('All buttons are rendered', function () {
             var buttons = frame.getAll('.group-button [class*="sc-btn-"]');
