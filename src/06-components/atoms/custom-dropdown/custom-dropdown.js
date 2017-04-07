@@ -60,7 +60,7 @@ export default function(tagName) {
         // this should only be done at most once
         // when the first of this element gets attached
         document.addEventListener('mousedown', closeAllDropdowns);
-        attachEventListeners = () => {}; // so that we only attach at most once
+        attachEventListeners = () => {}; // eslint-disable-line no-func-assign
     }
 
     registerElement({

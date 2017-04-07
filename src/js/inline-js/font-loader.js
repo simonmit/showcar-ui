@@ -102,7 +102,7 @@
                         div.parentNode.removeChild(div);
                     });
 
-                    onObjectSizeChange = function() {};
+                    onObjectSizeChange = function() {}; // eslint-disable-line no-func-assign
                 }
             });
         }

@@ -3,18 +3,18 @@ const scgulp = require('showcar-gulp')(gulp);
 const galen = require('gulp-galen');
 const testcafe = require('gulp-testcafe');
 
-gulp.task('js', scgulp.js({
+gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
     // watch: 'test/js-src/**/*.js',
 }));
 
-gulp.task('icons', scgulp.js({
+gulp.task('icons', ['eslint'], scgulp.js({
     entry: 'src/js/showcar-icons.js',
     out: 'dist/showcar-icons.js',
 }));
 
-gulp.task('tracking', scgulp.js({
+gulp.task('tracking', ['eslint'], scgulp.js({
     entry: 'src/js/showcar-tracking.js',
     out: 'dist/showcar-tracking.js',
 }));
@@ -27,7 +27,7 @@ gulp.task('eslint', scgulp.eslint({
     files: 'src/**/*.js'
 }));
 
-gulp.task('scss', scgulp.scss({
+gulp.task('scss', ['stylelint'], scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
     // watch: 'test/scss-src/**/*.scss'
