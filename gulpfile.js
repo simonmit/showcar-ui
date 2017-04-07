@@ -107,7 +107,7 @@ gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replac
 gulp.task('default', ['docs:watch']);
 
 gulp.task('galen', ['docs:serve'], () => {
-    return gulp.src('galen.test.js')
+    /*return gulp.src('galen.test.js')
         .pipe(
             galen.test({
                 'htmlreport': 'galen-report/',
@@ -129,7 +129,7 @@ gulp.task('galen', ['docs:serve'], () => {
         })
         .on('error', () => {
             process.exit(1);
-        });
+        });*/
 });
 
 
