@@ -1,4 +1,4 @@
-module.exports = frame => {
+module.exports = function (frame) {
     describe('Custom dropdown', function () {
         it('is rendered', function () {
             var dropdown = frame.get('#custom-dropdown-default custom-dropdown');

@@ -1,4 +1,4 @@
-module.exports = (frame, assert, browserWidth) => {
+module.exports = function (frame, assert, browserWidth) {
     describe('Small header', function () {
         if (browserWidth < 923) {
             it('shown correctly on viewports smaller than 923', function () {
