@@ -2,6 +2,7 @@
 @import '../../../02-sass-tools/fonts';
 
 @mixin button {
+  height: 40px;
   // max-width: 288px;
   user-select: none;
   @include font(M, $bold: true, $silent: false, $line-height: 1.3);
