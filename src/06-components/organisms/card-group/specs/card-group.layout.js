@@ -5,6 +5,9 @@ module.exports = function (frame, assert, browserWidth) {
             var textModel = frame.getAll('#card-group .sc-card__label div:first-child');
             var textOffer = frame.getAll('#card-group .sc-card__label div:nth-child(2)');
 
+            assert(cards.length() > 0, 'we have no cards on page');
+            assert(textModel.length() > 0, 'we have no model texts on page');
+            assert(textOffer.length() > 0, 'we have no offer texts on page');
             for (var i = 0; i < cards.length() - 1; i++) {
                 textModel.at(i).assert({
                     center: cards.at(i).center,
