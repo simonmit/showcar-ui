@@ -1,4 +1,4 @@
-module.exports = frame => {
+module.exports = function (frame) {
     describe('Input groups', function () {
         it('are full width', function () {
             var container = frame.get('#separate-content');

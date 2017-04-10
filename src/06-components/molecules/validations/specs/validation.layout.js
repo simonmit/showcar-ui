@@ -1,4 +1,4 @@
-module.exports = frame => {
+module.exports = function (frame) {
     describe('Validation', function () {
         it('error label positioned right', function () {
             var input = frame.get('#validation .sc-input.error');

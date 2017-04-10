@@ -1,4 +1,4 @@
-module.exports = (frame,assert, browserWidth) => {
+module.exports = function (frame,assert, browserWidth) {
     describe('Pagination', function () {
         if (browserWidth <= 320) {
             it('renders correctly on smallest devices', function () {

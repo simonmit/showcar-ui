@@ -1,4 +1,4 @@
-module.exports = (frame, assert) => {
+module.exports = function (frame, assert) {
     describe('Stepper', function () {
         it('is rendered', function () {
             var stepper = frame.get('#stepper .sc-stepper');

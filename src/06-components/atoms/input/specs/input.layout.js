@@ -1,4 +1,4 @@
-module.exports = (frame, assert) => {
+module.exports = function (frame, assert) {
     describe('Checkbox', function () {
         it('default input is hidden', function () {
             var checkboxInput = frame.get('#checkbox #as24-checkbox-1');

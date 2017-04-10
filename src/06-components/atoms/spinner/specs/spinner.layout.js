@@ -1,4 +1,4 @@
-module.exports = frame => {
+module.exports = function (frame) {
     describe('Spinner', function () {
         it('circles are rendered', function () {
             var circles = frame.getAll('#spinner .sc-spinner-loading');

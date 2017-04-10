@@ -1,4 +1,4 @@
-module.exports = (frame, assert, browserWidth) => {
+module.exports = function (frame, assert, browserWidth) {
     describe('Small footer', function () {
         if (browserWidth < 768) {
             it('shown correctly on mobile and tablets', function () {

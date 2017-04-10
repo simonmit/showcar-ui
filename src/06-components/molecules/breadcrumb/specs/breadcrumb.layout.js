@@ -1,4 +1,4 @@
-module.exports = (frame, assert, browserWidth) => {
+module.exports = function (frame, assert, browserWidth) {
     describe('Breadcrumbs', function () {
         if (browserWidth < 500) {
             it('shown correctly on mobile', function () {

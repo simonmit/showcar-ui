@@ -1,4 +1,4 @@
-module.exports = (frame,assert, browserWidth) => {
+module.exports = function (frame,assert, browserWidth) {
     describe('Navigation', function () {
         if (browserWidth < 923) {
             it('renders correctly on viewports less than 923', function () {
