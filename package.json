@@ -47,6 +47,7 @@
     "quixote": "^0.12.5",
     "recursive-readdir-sync": "^1.0.6",
     "showcar-gulp": "^2.4.1",
+    "update-notifier": "^2.1.0",
     "yargs": "^4.6.0"
   },
   "main": "src/js/showcar-ui.js",
