@@ -153,10 +153,10 @@ gulp.task('test:layout', ['update-notifier', 'docs:serve'], scgulp.karma({
 
 gulp.task('test:layout:bs', ['update-notifier', 'docs:serve'], scgulp.karma({
     browserStack: true,
-    credentials: {
+    /*credentials: {
         username: '',
         accessKey: ''
-    },
+    },*/
     files: ['testQuixote.js'],
     proxies: {
         '/': 'http://localhost:3000/',
