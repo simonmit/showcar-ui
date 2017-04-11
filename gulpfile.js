@@ -138,7 +138,7 @@ gulp.task('test:interaction', () => {
         .pipe(testcafe({ browsers: ['chrome'] }));
 });
 
-gulp.task('test:layout', ['docs:serve'], scgulp.karma({
+gulp.task('test:layout', ['update-notifier', 'docs:serve'], scgulp.karma({
     files: ['testQuixote.js'],
     proxies: {
         '/': 'http://localhost:3000/',
@@ -151,9 +151,11 @@ gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     // watch: 'test/js-src/**/*.js',
 }));
 
-gulp.task('test:layout:sauce', ['docs:serve'], scgulp.karma({
-    sauceLabs: {
-        testName: 'Showcar UI Layout test at ' + new Date().toLocaleString()
+gulp.task('test:layout:bs', ['update-notifier', 'docs:serve'], scgulp.karma({
+    browserStack: true,
+    credentials: {
+        username: '',
+        accessKey: ''
     },
     files: ['testQuixote.js'],
     proxies: {
@@ -163,3 +165,12 @@ gulp.task('test:layout:sauce', ['docs:serve'], scgulp.karma({
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
     }
 }));
+
+gulp.task('update-notifier', () => {
+    const pkg = require('./node_modules/showcar-gulp/package.json');
+    const updateNotifier = require('update-notifier');
+    updateNotifier({
+        pkg,
+        updateCheckInterval: 1 //check each time
+    }).notify({ defer: false, isGlobal: false });
+});
