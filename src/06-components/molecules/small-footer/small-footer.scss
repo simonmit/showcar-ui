@@ -8,6 +8,7 @@
   padding-left: $L;
   padding-right: $L;
   background-color: $black-30;
+  overflow-y: hidden; // to assure that IE11 doen't have a scroll-bar
 
   p {
     margin-top: 8px;

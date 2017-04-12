@@ -11,8 +11,6 @@ $breakpoint-XL: 1099;
   display: block;
   position: relative;
   overflow: hidden;
-  border-left: $L solid transparent;
-  border-top: $L solid transparent;
   flex: 0 0 50%;
 
   @include mqmin($breakpoint-S) {
@@ -33,6 +31,8 @@ $breakpoint-XL: 1099;
     border: 1px solid $black-30;
     border-radius: $XS;
     transition: border .3s ease;
+    margin-top: $L;
+    margin-left: $L;
 
     &:hover {
       border: 1px solid $black-60;

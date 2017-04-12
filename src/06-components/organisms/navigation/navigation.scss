@@ -19,6 +19,7 @@
     padding: $S 0;
     margin-top: -2px;
     left: $L;
+    max-height: 38px; // to assure IE11 sizes
 
     @include font(M);
 
