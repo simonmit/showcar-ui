@@ -14,7 +14,7 @@
     "build": "gulp build",
     "docs": "gulp docs:generate",
     "test-sanity": "mocha tests/index.js -t 120000",
-    "test-layout": "test:layout:bs"
+    "test-layout": "gulp test:layout:bs"
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",
