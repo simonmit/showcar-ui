@@ -4,3 +4,4 @@ yarn\.lock
 .*\.s?css
 travis-release-key\.enc
 \.travis\.yml
+README.md
