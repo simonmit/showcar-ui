@@ -44,7 +44,7 @@
     "handlebars-helpers": "^0.5.8",
     "html-entities": "^1.2.0",
     "marked": "^0.3.6",
-    "quixote": "^0.12.5",
+    "quixote": "git+https://github.com/anders0l/quixote.git#tolerance",
     "recursive-readdir-sync": "^1.0.6",
     "showcar-gulp": "^2.4.1",
     "update-notifier": "^2.1.0",

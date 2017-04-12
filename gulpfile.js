@@ -143,8 +143,8 @@ gulp.task('test:layout', ['update-notifier', 'docs:serve'], scgulp.karma({
     proxies: {
         '/': 'http://localhost:3000/',
     },
-    browsers: ['Safari'],
-    // browsers: ['Firefox'],
+    // browsers: ['Safari'],
+    browsers: ['Firefox'],
     preprocessors: {
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
     }
