@@ -151,7 +151,7 @@ gulp.task('test:layout', ['update-notifier', 'docs:serve'], scgulp.karma({
     // watch: 'test/js-src/**/*.js',
 }));
 
-gulp.task('test:layout:bs', ['update-notifier', 'docs:serve'], scgulp.karma({
+gulp.task('test:layout:bs', ['update-notifier', 'docs:edit'], scgulp.karma({
     browserStack: true,
     /*credentials: {
         username: '',
