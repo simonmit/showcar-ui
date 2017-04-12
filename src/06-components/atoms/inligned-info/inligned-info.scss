@@ -1,0 +1,13 @@
+@import '../../../01-settings/variables';
+
+.sc-inligned-info__container {
+  position: relative;
+}
+
+.sc-inligned-info {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  color: $black-60;
+  background-color: $white;
+}
