@@ -1,4 +1,4 @@
-![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=https://www.browserstack.com/automate/projects/375213/badge_key=V3R5K2lFTFVkRG5Ed0p1M0tiM1lhaFJ1Wm9JSllPUFlUMHlVYlp3TVdTdz0tLVhIUFdDVHZwSVk1ME9BWUU2alY0UUE9PQ==--15b92933cc78eb4b925a0778e21e88ae4fe38065)
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=V3R5K2lFTFVkRG5Ed0p1M0tiM1lhaFJ1Wm9JSllPUFlUMHlVYlp3TVdTdz0tLVhIUFdDVHZwSVk1ME9BWUU2alY0UUE9PQ==--15b92933cc78eb4b925a0778e21e88ae4fe38065)
 # showcar-ui
 
 This library provides several predefined classes and variables for simple page styling with the showcar ui library
