@@ -242,17 +242,22 @@ body {
     margin-bottom: 12px;
     line-height: 1;
 }
-.status.complete {
+.status.approved {
     color: #196600;
     background-color: #e6f5cf;
 }
-.status.refactor {
-    color: #99171d;
-    background-color: #ffdddc;
-}
+.status.refactor,
 .status.review {
     color: #994200;
     background-color: #fff1c0;
+}
+.status.deprecated {
+    color: #994200;
+    background-color: #ffdddc;
+}
+.status.js {
+    color: #FFFFFF;
+    background-color: #b6c5d3;
 }
 #all-code-toggler {
     margin: 5px 24px 50px;
