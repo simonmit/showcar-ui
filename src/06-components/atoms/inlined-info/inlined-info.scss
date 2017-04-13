@@ -11,3 +11,16 @@
   color: $black-60;
   background-color: $white;
 }
+
+.sc-inlined-info__container2 {
+  position: relative;
+}
+
+.sc-inlined-info__container2::after {
+  content: attr(data-inline);
+  position: absolute;
+  color: $black-60;
+  background-color: $white;
+  right: 10px;
+  top: 9px;
+}
