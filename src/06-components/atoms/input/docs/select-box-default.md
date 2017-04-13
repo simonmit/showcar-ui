@@ -1,1 +1,1 @@
-<h2>Dropdown default<span class="status complete">Complete</span></h2>
+<h2>Dropdown default<span class="status approved">Approved</span></h2>

@@ -1,4 +1,4 @@
-<h2>Colors Secondary<span class="status complete">Complete</span></h2>
+<h2>Colors Secondary<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 <div class="ndpl-component__color-container">
 <div class="ndpl-component__color" style="background-color: rgb(217, 26, 42);">

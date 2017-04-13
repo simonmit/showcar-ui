@@ -1,4 +1,4 @@
-<h2>Notifications<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
+<h2>Notifications<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
 To add notifications you need 3 elements on your page:
 * target container element with uniq id below which notifications are shown  

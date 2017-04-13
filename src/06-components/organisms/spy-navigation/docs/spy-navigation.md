@@ -1,4 +1,4 @@
-<h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
+<h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
 Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below.
 The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.

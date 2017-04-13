@@ -1,4 +1,4 @@
-<h2>Spinner with percentage value<span class="status complete">Complete</span></h2>
+<h2>Spinner with percentage value<span class="status approved">Approved</span></h2>
 
 #### How to choose spinner?
 We suggest you these simple rules:  

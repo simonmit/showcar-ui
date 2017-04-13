@@ -1,1 +1,1 @@
-<h2>Collapse toggle<span class="status complete">Complete</span><span class="status complete">JS</span></h2>
+<h2>Collapse toggle<span class="status approved">Approved</span><span class="status js">JS</span></h2>

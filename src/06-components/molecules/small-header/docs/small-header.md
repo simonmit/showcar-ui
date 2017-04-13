@@ -1,4 +1,4 @@
-<h2>Small Header<span class="status complete">Complete</span></h2>
+<h2>Small Header<span class="status approved">Approved</span></h2>
 
 <style>
 #small-header .sample{

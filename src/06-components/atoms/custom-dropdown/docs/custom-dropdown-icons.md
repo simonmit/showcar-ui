@@ -1,4 +1,4 @@
-<h2>Custom dropdown with icons (one choice possible)<span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
+<h2>Custom dropdown with icons (one choice possible)<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
 <style>
 #custom-dropdown-icons .sample as24-icon[type^='bodytypes'] svg {

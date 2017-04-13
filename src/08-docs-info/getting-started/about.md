@@ -21,8 +21,8 @@ This documentation follows the following structure:
 
 Label description:
 
-<span class="status complete">Complete</span> - Element is completely implemented and can be used. <br>
-<span class="status complete">JS</span> - Element depends on JavaScript (showcar-ui.js). <br>
+<span class="status approved">Approved</span> - Element is completely implemented and approved. <br>
 <span class="status review">Needs review</span> - Element is implemented and can be used but needs to be reviewed. <br>
 <span class="status refactor">Needs refactoring</span> - Element is implemented and can be used but needs improvement. <br>
-<span class="status refactor">Deprecated</span> - Don't use this element.
+<span class="status deprecated">Deprecated</span> - Don't use this element. <br>
+<span class="status js">JS</span> - Element depends on JavaScript (showcar-ui.js).

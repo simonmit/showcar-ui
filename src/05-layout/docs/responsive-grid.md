@@ -1,4 +1,4 @@
-<h2>Responsive grid<span class="status complete">Complete</span></h2>
+<h2>Responsive grid<span class="status approved">Approved</span></h2>
 
 In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general `.sc-grid-col-*` class first and override it, depending on your needs with the necessary viewport specific grid class `.sc-grid-col-*-*`.  
 Always keep in mind, that smaller viewport grid classes override bigger ones.

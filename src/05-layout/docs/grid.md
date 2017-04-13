@@ -1,4 +1,4 @@
-<h2>Grid<span class="status complete">Complete</span></h2>
+<h2>Grid<span class="status approved">Approved</span></h2>
 
 ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.  
 Every grid row should be placed within a `.sc-content-container`.  
