@@ -378,7 +378,7 @@
         "type": "atoms",
         "group": "tooltip",
         "srcDir": "src/06-components/atoms/tooltip/docs",
-        "markDown": "\"<h2>Tooltip old<span class=\\\"status refactor\\\">Deprecated</span><span class=\\\"status js\\\">JS</span></h2>\\n\\n<p>Use &quot;tooltip new&quot; instead</p>\\n<style>\\n#tooltip .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
+        "markDown": "\"<h2>Tooltip old<span class=\\\"status deprecated\\\">Deprecated</span><span class=\\\"status js\\\">JS</span></h2>\\n\\n<p>Use &quot;tooltip new&quot; instead</p>\\n<style>\\n#tooltip .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-icon type=\\\"info\\\" title='More information' style='width: 16px;'></as24-icon>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-icon type=&quot;info&quot; title=&apos;More information&apos; style=&apos;width: 16px;&apos;&gt;&lt;/as24-icon&gt;\\n&lt;/label&gt;\\n\""
     },
