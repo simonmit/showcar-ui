@@ -1,4 +1,4 @@
-<h2>Pagination <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
+<h2>Pagination <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
 If you want to use the pagination component, you need to add the ul element with the .sc-pagination class as shown below and the corresponding javascript snippet.
 

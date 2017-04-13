@@ -1,4 +1,4 @@
-<h2>Viewports<span class="status complete">Complete</span></h2>
+<h2>Viewports<span class="status approved">Approved</span></h2>
 
 All responsive elements that are based on media queries use the following breakpoints. These dimension should be usefull in most of the cases.  
 Use the following variables instead of variables previously known from showcar-styles (<code>$mobile</code>, <code>$tablet</code>, <code>$desktop</code>)  

@@ -1,4 +1,4 @@
-<h2>Responsive images - resolution switching<span class="status complete">Complete</span></h2>
+<h2>Responsive images - resolution switching<span class="status approved">Approved</span></h2>
 
 Use `srcset` attribute in the `<img>` tag when you need to select a different source of the same image because you need a different resolution.
 

@@ -1,2 +1,2 @@
-<h2>Horizontal line<span class="status complete">Complete</span></h2>
+<h2>Horizontal line<span class="status approved">Approved</span></h2>
 To separate some content you can use a horizontal line.

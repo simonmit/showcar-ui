@@ -1,4 +1,4 @@
-<h2>Navigation <span class="status refactor">Needs refactoring</span><span class="status complete">JS</span></h2>
+<h2>Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
 The navigation currently only works when used in combination with contentservice fragment.
 

@@ -1,1 +1,1 @@
-<h2>Link as a button<span class="status complete">Complete</span></h2>
+<h2>Link as a button<span class="status approved">Approved</span></h2>

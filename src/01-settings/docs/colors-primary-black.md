@@ -1,4 +1,4 @@
-<h2>Colors Primary Black<span class="status complete">Complete</span></h2>
+<h2>Colors Primary Black<span class="status approved">Approved</span></h2>
 
 <div class="ndpl-component__colors ndpl-cf">
     <div class="ndpl-component__color-container">

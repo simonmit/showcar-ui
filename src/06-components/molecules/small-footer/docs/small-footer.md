@@ -1,1 +1,1 @@
-<h2>Small Footer<span class="status complete">Complete</span></h2>
+<h2>Small Footer<span class="status approved">Approved</span></h2>
