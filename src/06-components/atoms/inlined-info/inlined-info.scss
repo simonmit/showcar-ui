@@ -1,10 +1,10 @@
 @import '../../../01-settings/variables';
 
-.sc-inlined-info__container {
+.sc-inlined-info {
   position: relative;
 }
 
-.sc-inlined-info {
+.sc-inlined-info__addon {
   position: absolute;
   right: 10px;
   top: 9px;

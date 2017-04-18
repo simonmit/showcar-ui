@@ -1,1 +1,1 @@
-<h2>Inlined info<span class="status review">Needs UX & dev review</span></h2>
+<h2>Inlined info<span class="status approved">Approved</span></h2>
