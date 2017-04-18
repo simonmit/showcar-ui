@@ -207,9 +207,9 @@
         "type": "atoms",
         "group": "inlined-info",
         "srcDir": "src/06-components/atoms/inlined-info/docs",
-        "markDown": "\"<h2>Inlined info<span class=\\\"status review\\\">Needs UX &amp; dev review</span></h2>\\n\"",
-        "html": "\"<div class=\\\"sc-inlined-info__container\\\">\\n    <input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\"Type car price\\\">\\n    <span class=\\\"sc-inlined-info\\\">€</span>\\n</div>\\n\"",
-        "codeExample": "\"&lt;div class=&quot;sc-inlined-info__container&quot;&gt;\\n    &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Type car price&quot;&gt;\\n    &lt;span class=&quot;sc-inlined-info&quot;&gt;&euro;&lt;/span&gt;\\n&lt;/div&gt;\\n\""
+        "markDown": "\"<h2>Inlined info<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
+        "html": "\"<div class=\\\"sc-inlined-info\\\">\\n    <input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\"Type car price\\\">\\n    <span class=\\\"sc-inlined-info__addon\\\">€</span>\\n</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-inlined-info&quot;&gt;\\n    &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Type car price&quot;&gt;\\n    &lt;span class=&quot;sc-inlined-info__addon&quot;&gt;&euro;&lt;/span&gt;\\n&lt;/div&gt;\\n\""
     },
     "checkbox": {
         "name": "checkbox",
