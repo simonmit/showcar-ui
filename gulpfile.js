@@ -109,26 +109,26 @@ gulp.task('test:interaction', () => {
 });
 
 gulp.task('test:layout', ['docs:serve'], scgulp.karma({
-    files: ['testQuixote.js'],
+    browsers: ['Electron'],
+    files: ['quixote.config.js'],
+    preprocessors: {
+        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
+    },
     proxies: {
         '/': 'http://localhost:3000/',
     },
-    browsers: ['Electron'],
-    preprocessors: {
-        'testQuixote.js': ['browserify'] //providing browserify to use require in test files
-    }
 }));
 
 gulp.task('test:layout:bs', ['docs:serve'], scgulp.karma({
     browserStack: true,
     browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7', 'bs_samsungS5_android', 'bs_samsungS5_chrome'],
-    files: ['testQuixote.js'],
+    files: ['quixote.config.js'],
+    preprocessors: {
+        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
+    },
     proxies: {
         '/': 'http://localhost:3000/',
     },
-    preprocessors: {
-        'testQuixote.js': ['browserify'] //providing browserify to use require in test files
-    }
 }));
 
 // Don't put in separate task. Runs async on each gulp task
