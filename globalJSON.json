@@ -692,5 +692,33 @@
         "group": "storage",
         "srcDir": "src/08-docs-info/extra-packages",
         "markDown": "\"<p><h2>Storage</h2>\\nThis module provides an abstraction layer for storing information on the client-side.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-storage\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-storage</a></p>\\n\""
+    },
+    "videotron": {
+        "name": "videotron",
+        "type": "extra packages",
+        "group": "videotron",
+        "srcDir": "src/08-docs-info/extra-packages",
+        "markDown": "\"<h2>Videotron</h2>\\n\\n<p>&quot;showcar-videotron&quot; is a component for including youtube and glomex videos in a simple way to your site.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-videotron.jpg\\\" alt=\\\"showcar-videotron\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C06Videotron.html&path=/content/skoda-kodiak-suv-test-page&site=content.autoscout24.de\\\" target=\\\"_blank\\\">showcar-videotron</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-videotron\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+    },
+    "jumbotron": {
+        "name": "jumbotron",
+        "type": "extra packages",
+        "group": "jumbotron",
+        "srcDir": "src/08-docs-info/extra-packages",
+        "markDown": "\"<h2>Jumbotron</h2>\\n\\n<p>&quot;showcar-jumbotron&quot; is a component for augmenting a header image with custom content... the following image says more then a thousand words.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-jumbotron.jpg\\\" alt=\\\"showcar-jumbotron\\\"></p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-jumbotron\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+    },
+    "introtext": {
+        "name": "introtext",
+        "type": "extra packages",
+        "group": "introtext",
+        "srcDir": "src/08-docs-info/extra-packages",
+        "markDown": "\"<h2>Intro Text</h2>\\n\\n<p>&quot;showcar-introtext&quot; is a component for adding media ( carousel, video, image ) and text content in a side to side layout.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-introtext.jpg\\\" alt=\\\"showcar-introtext\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C08Intro.html&path=/content/skoda-kodiak-suv-test-page&site=content.autoscout24.de\\\" target=\\\"_blank\\\">showcar-introtext</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-introtext\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+    },
+    "socialbuttons": {
+        "name": "socialbuttons",
+        "type": "extra packages",
+        "group": "socialbuttons",
+        "srcDir": "src/08-docs-info/extra-packages",
+        "markDown": "\"<h2>Social Button</h2>\\n\\n<p>&quot;showcar-social&quot; is a component for adding social media share buttons to your site</p>\\n<p><h3>on Mobile:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-mobile.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p><h3>on Desktop:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-desktop.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p>Visit the <a href=\\\"https://jigsaw-a.a.autoscout24.com/content-management-service/fragments/testsocialbuttons.html?url=www.google.de&title=as24\\\" target=\\\"_blank\\\">showcar-social</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-social\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
     }
 }
