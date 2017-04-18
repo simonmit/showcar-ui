@@ -1,26 +1,13 @@
 @import '../../../01-settings/variables';
 
-.sc-inlined-info__container {
-  position: relative;
-}
-
 .sc-inlined-info {
-  position: absolute;
-  right: 10px;
-  top: 9px;
-  color: $black-60;
-  background-color: $white;
-}
-
-.sc-inlined-info__container2 {
   position: relative;
 }
 
-.sc-inlined-info__container2::after {
-  content: attr(data-inline);
+.sc-inlined-info__addon {
   position: absolute;
-  color: $black-60;
-  background-color: $white;
   right: 10px;
   top: 9px;
+  color: $black-60;
+  background-color: $white;
 }
