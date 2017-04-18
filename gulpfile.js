@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
-const galen = require('gulp-galen');
 const testcafe = require('gulp-testcafe');
 
 gulp.task('js', ['eslint'], scgulp.js({
@@ -60,13 +59,11 @@ const UglifyJS = require('uglify-js');
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
 const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
 const stringReplace = require('gulp-string-replace');
-
 var replaceOptions = {
     logs: {
         enabled: false
     }
 };
-
 gulp.task('replace', function () {
     gulp.src(['src/html/index.html', 'src/html/index-standalone.html', 'docs/helpers/polyfills.js'])
         .pipe(stringReplace('@@POLYFILL_DOCUMENT_REGISTER_ELEMENT', readFile('node_modules/document-register-element/build/document-register-element.js'), replaceOptions))
@@ -106,57 +103,25 @@ gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['docs:watch']);
 
-gulp.task('galen', ['docs:serve'], () => {
-    /*return gulp.src('galen.test.js')
-     .pipe(
-     galen.test({
-     'htmlreport': 'galen-report/',
-     'galenPath': './node_modules/galenframework/bin/galen',
-     'parallel-tests': process.env.PARALLEL_TEST_PROCESS || 1,
-     'properties': {
-     'test.url': 'http://localhost:3000/',
-     'test.buildId': process.env.TRAVIS_BUILD_NUMBER || process.env.USER,
-     'test.filter': (process.argv[3] || '').replace('--', ''),
-     'sauce.enabled': process.env.SAUCE_ENABLED,
-     'sauce.tunnelIdentifier': process.env.SAUCE_TUNNEL_ID,
-     'sauce.username': process.env.SAUCE_USERNAME,
-     'sauce.accessKey': process.env.SAUCE_ACCESS_KEY
-     }
-     })
-     )
-     .on('end', () => {
-     process.exit(0);
-     })
-     .on('error', () => {
-     process.exit(1);
-     });*/
-});
-
-
 gulp.task('test:interaction', () => {
     gulp.src('src/**/specs/*.interaction.js')
         .pipe(testcafe({ browsers: ['chrome'] }));
 });
 
-gulp.task('test:layout', ['update-notifier', 'docs:serve'], scgulp.karma({
+gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     files: ['testQuixote.js'],
     proxies: {
         '/': 'http://localhost:3000/',
     },
-    // browsers: ['Safari'],
-    browsers: ['Firefox'],
+    browsers: ['Electron'],
     preprocessors: {
         'testQuixote.js': ['browserify'] //providing browserify to use require in test files
     }
-    // watch: 'test/js-src/**/*.js',
 }));
 
-gulp.task('test:layout:bs', ['update-notifier', 'docs:edit'], scgulp.karma({
+gulp.task('test:layout:bs', ['docs:serve'], scgulp.karma({
     browserStack: true,
-    /*credentials: {
-        username: '',
-        accessKey: ''
-    },*/
+    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7', 'bs_samsungS5_android', 'bs_samsungS5_chrome'],
     files: ['testQuixote.js'],
     proxies: {
         '/': 'http://localhost:3000/',
@@ -166,11 +131,10 @@ gulp.task('test:layout:bs', ['update-notifier', 'docs:edit'], scgulp.karma({
     }
 }));
 
-gulp.task('update-notifier', () => {
-    const pkg = require('./node_modules/showcar-gulp/package.json');
-    const updateNotifier = require('update-notifier');
-    updateNotifier({
-        pkg,
-        updateCheckInterval: 1 //check each time
-    }).notify({ defer: false, isGlobal: false });
-});
+// Don't put in separate task. Runs async on each gulp task
+const pkg = require('showcar-gulp/package.json');
+const updateNotifier = require('update-notifier');
+updateNotifier({
+    pkg,
+    updateCheckInterval: 1 //check each time
+}).notify({ defer: false, isGlobal: false });

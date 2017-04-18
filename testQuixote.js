@@ -11,17 +11,14 @@ var runTests = function (browserWidth, index) {
     }, function () {
         if (index === 0) {
             setTimeout(function () {
-                window.__karma__.start(); //execute mocha (sauce lab extra timeout)
-            }, 1000);
+                window.__karma__.start(); //execute mocha
+            }, 2000); // browserStack - safari extra timeout
         }
     });
     describe('Device width: ' + browserWidth, function () {
         require('./src/**/specs/*layout.js', { mode: 'list' }).forEach(function (file) {
             file.module(frame, assert, browserWidth);
         });
-    });
-    beforeEach(function () {
-        frame.reset();
     });
     after(function () {
         frame.remove();
