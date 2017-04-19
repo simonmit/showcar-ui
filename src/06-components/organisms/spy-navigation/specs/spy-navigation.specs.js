@@ -1,3 +1,7 @@
+module.exports = function (frame, assert, browserWidth, helper) {
+
+}
+/*
 import { Selector } from 'testcafe';
 
 const nonstickyNavigation = Selector('.sc-spy-navigation');
@@ -38,3 +42,4 @@ test('Scroll to anchor and set active tab', async t => {
         .expect(activeLink.count).eql(1)
         .expect(secondLink.hasClass('sc-spy-navigation__link--active')).ok()
 })
+*/
