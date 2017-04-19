@@ -1,3 +1,7 @@
+module.exports = function (frame, assert, browserWidth, helper) {
+    
+}
+/*
 import { Selector } from 'testcafe';
 
 const tooltip = Selector('#tooltip-2 as24-tooltip');
@@ -17,3 +21,4 @@ test('Click tooltip', async t => {
         .click(tooltip)
         .expect(tooltipContent.innerText).contains('Information in tooltip', { timeout: 100 });
 });
+*/
