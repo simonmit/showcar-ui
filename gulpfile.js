@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
-const testcafe = require('gulp-testcafe');
+
 
 gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
@@ -98,15 +98,9 @@ gulp.task('docs:serve', () => {serveDocs(gulp);});
 gulp.task('docs:edit', ['build'], () => {serveDocs(gulp);});
 gulp.task('docs:watch', ['build'], () => {serveDocs(gulp);});
 
-gulp.task('test', ['docs:serve', 'test:interaction']);
 gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['docs:watch']);
-
-gulp.task('test:interaction', () => {
-    gulp.src('src/**/specs/*.interaction.js')
-        .pipe(testcafe({ browsers: ['chrome'] }));
-});
 
 gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     browsers: ['Electron'],
