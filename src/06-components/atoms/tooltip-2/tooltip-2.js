@@ -11,7 +11,7 @@ export default function (tagName) {
             timeoutID: 0
         };
 
-        tt.arrow.classList.add('tooltip-arrow');
+        tt.arrow.classList.add('sc-tooltip-arrow');
         tt.content.appendChild(tt.arrow);
 
         tt.tooltip.addEventListener('mouseover', () => show(tt), false);
@@ -25,14 +25,14 @@ export default function (tagName) {
     function show(tt) {
         clearTimeout(tt.timeoutID);
         if (tt.shown === true) return;
-        tt.content.classList.add('tooltip-shown');
+        tt.content.classList.add('sc-tooltip-shown');
         setPosition(tt);
     }
 
     function hide(tt) {
         tt.timeoutID = window.setTimeout(() => {
             tt.shown = false;
-            tt.content.classList.remove('tooltip-shown');
+            tt.content.classList.remove('sc-tooltip-shown');
         }, 300);
     }
 
@@ -43,6 +43,7 @@ export default function (tagName) {
             width: tt.content.offsetWidth,
             height: tt.content.offsetHeight
         };
+
         const wrapperDim = {
             top: tt.tooltip.offsetTop,
             left: tt.tooltip.offsetLeft,
@@ -53,27 +54,30 @@ export default function (tagName) {
         let top = wrapperDim.top - contentDim.height - distance.vertical;
         let left = wrapperDim.left - (contentDim.width / 2) + (wrapperDim.width / 2);
 
-        const scrollPosition = document.documentElement.scrollTop;
+        const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
-        if (top - scrollPosition <= 0) {
+        const wrapperDimClientRect = tt.tooltip.getBoundingClientRect();
+        const ttTop = wrapperDimClientRect.top + document.body.scrollTop;
+
+        if ((ttTop - wrapperDim.top) - scrollPosition <= 0) {
             top = wrapperDim.top + wrapperDim.height + distance.vertical;
-            tt.content.classList.remove('tooltip-top');
-            tt.content.classList.add('tooltip-bottom');
+            tt.content.classList.remove('sc-tooltip-top');
+            tt.content.classList.add('sc-tooltip-bottom');
         } else {
-            tt.content.classList.remove('tooltip-bottom');
-            tt.content.classList.add('tooltip-top');
+            tt.content.classList.remove('sc-tooltip-bottom');
+            tt.content.classList.add('sc-tooltip-top');
         }
 
-        tt.content.classList.remove('tooltip-right', 'tooltip-left');
+        tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left');
 
         if (left + contentDim.width > window.innerWidth) {
             left = wrapperDim.left - contentDim.width + wrapperDim.width + distance.horizontal;
-            tt.content.classList.remove('tooltip-right');
-            tt.content.classList.add('tooltip-left');
+            tt.content.classList.remove('sc-tooltip-right');
+            tt.content.classList.add('sc-tooltip-left');
         } else if (left <= 0) {
             left = wrapperDim.left - distance.horizontal;
-            tt.content.classList.remove('tooltip-left');
-            tt.content.classList.add('tooltip-right');
+            tt.content.classList.remove('sc-tooltip-left');
+            tt.content.classList.add('sc-tooltip-right');
         }
 
         tt.content.style.top = top + 'px';
