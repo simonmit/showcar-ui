@@ -26,11 +26,12 @@ as24-tooltip.sc-tooltip {
       }
     }
 
-    &.tooltip-shown {
+    &.sc-tooltip-shown {
       visibility: visible;
     }
   }
-  .tooltip-arrow {
+
+  .sc-tooltip-arrow {
     display: block;
     width: 0;
     height: 0;
@@ -42,25 +43,25 @@ as24-tooltip.sc-tooltip {
     margin-left: -6px;
   }
 
-  .tooltip-bottom .tooltip-arrow {
+  .sc-tooltip-bottom .sc-tooltip-arrow {
     border-bottom-color: rgba(0, 0, 0, .75);
     border-top-color: transparent;
     top: auto;
     bottom: 100%;
   }
 
-  .tooltip-right .tooltip-arrow {
+  .sc-tooltip-right .sc-tooltip-arrow {
     left: 10px;
     margin: 0;
   }
 
-  .tooltip-left .tooltip-arrow {
+  .sc-tooltip-left .sc-tooltip-arrow {
     right: 10px;
     left: auto;
     margin: 0;
   }
 
-  .tooltip-hidden {
+  .sc-tooltip-hidden {
     display: none;
   }
 }
