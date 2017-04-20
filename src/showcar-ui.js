@@ -74,8 +74,8 @@ registerSmoothScrolling();
 window.Storage = require('showcar-storage');
 
 //lazysizes
-window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac:0 };
-require('lazysizes');
+window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac: 0 };
+import 'lazysizes';
 
 window.showcar = window.showcar || showcar;
 
