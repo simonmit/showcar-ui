@@ -373,21 +373,12 @@
         "html": "\"<div class=\\\"sc-stepper\\\">\\n    <button class=\\\"sc-stepper-button sc-stepper-button-decrement\\\">-</button>\\n    <input type=\\\"number\\\" value=\\\"0\\\" class=\\\"sc-stepper-input\\\" min=\\\"0\\\" max=\\\"10\\\" step=\\\"1\\\"/>\\n    <button class=\\\"sc-stepper-button sc-stepper-button-increment\\\">+</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-stepper&quot;&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;\\n    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
-    "tooltip": {
-        "name": "tooltip",
-        "type": "atoms",
-        "group": "tooltip",
-        "srcDir": "src/06-components/atoms/tooltip/docs",
-        "markDown": "\"<h2>Tooltip old<span class=\\\"status deprecated\\\">Deprecated</span><span class=\\\"status js\\\">JS</span></h2>\\n\\n<p>Use &quot;tooltip new&quot; instead</p>\\n<style>\\n#tooltip .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
-        "html": "\"<label>That text needs to be explaned\\n    <as24-icon type=\\\"info\\\" title='More information' style='width: 16px;'></as24-icon>\\n</label>\\n\"",
-        "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-icon type=&quot;info&quot; title=&apos;More information&apos; style=&apos;width: 16px;&apos;&gt;&lt;/as24-icon&gt;\\n&lt;/label&gt;\\n\""
-    },
     "tooltip-2": {
         "name": "tooltip-2",
         "type": "atoms",
         "group": "tooltip-2",
         "srcDir": "src/06-components/atoms/tooltip-2/docs",
-        "markDown": "\"<p><h2>Tooltip new<span class=\\\"status approved\\\">Approved</span><span class=\\\"status js\\\">JS</span></h2></p>\\n<style>\\n#tooltip-2 .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
+        "markDown": "\"<p><h2>Tooltip<span class=\\\"status approved\\\">Approved</span><span class=\\\"status js\\\">JS</span></h2></p>\\n<style>\\n#tooltip-2 .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
         "html": "\"<label>That text needs to be explaned\\n    <as24-tooltip class=\\\"sc-tooltip\\\">\\n        <as24-icon type=\\\"info\\\" style=\\\"width: 16px;\\\"></as24-icon>\\n        <div class=\\\"sc-tooltip-content\\\">Information in tooltip <a href=\\\"/\\\">link</a></div>\\n    </as24-tooltip>\\n</label>\\n\"",
         "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;\\n        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;\\n        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;\\n    &lt;/as24-tooltip&gt;\\n&lt;/label&gt;\\n\""
     },
