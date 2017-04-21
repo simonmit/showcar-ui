@@ -23,12 +23,10 @@ In case you can not use the fragment to include showcar-ui you can also include 
 In order to do so follow these steps:
 
 1.
-Add showcar-ui to your package.json to install it locally, referencing the release branch:
+Install showcar-ui NPM package:
 
 ```js
-"dependencies": {
-    "showcar-ui": "git@github.com:AutoScout24/showcar-ui.git#release"
-}
+npm install showcar-ui --save
 ```
 
 2.
