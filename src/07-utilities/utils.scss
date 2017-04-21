@@ -1,6 +1,7 @@
 @import '../01-settings/variables';
 @import '../02-sass-tools/sass-mq';
 
+// TODO: remove mixin and use class instead
 @mixin clearfix() {
   &:before,
   &:after {
