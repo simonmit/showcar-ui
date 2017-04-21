@@ -1,24 +1,33 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-    
-}
-/*
-import { Selector } from 'testcafe';
+    describe('Tooltip 2', function () {
+        var tooltip;
+        var tooltipContent;
 
-const tooltip = Selector('#tooltip-2 as24-tooltip');
-const tooltipContent = Selector('#tooltip-2 .tooltip-shown');
+        beforeEach(function () {
+            frame.reset();
+            tooltip = frame.get('#tooltip-2 as24-tooltip').toDomElement();
+        })
 
-fixture `Tooltip 2`
-    .page `https://autoscout24.github.io/showcar-ui/#tooltip-2-link`;
+        it('Hover tooltip', function (done) {
+            setTimeout(function () {
+                helper.hoverOn(tooltip);
+                setTimeout(function () {
+                    tooltipContent = frame.get('#tooltip-2 .tooltip-shown').toDomElement();
+                    assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
+                    done();
+                }, 100); //wait for text
+            }, 100); //wait for reseting
+        });
 
-test('Hover tooltip', async t => {
-    await t
-        .hover(tooltip)
-        .expect(tooltipContent.innerText).contains('Information in tooltip', { timeout: 100 });
-});
-
-test('Click tooltip', async t => {
-    await t
-        .click(tooltip)
-        .expect(tooltipContent.innerText).contains('Information in tooltip', { timeout: 100 });
-});
-*/
+        it('Click tooltip', function (done) {
+            return setTimeout(function () {
+                helper.click(tooltip);
+                setTimeout(function () {
+                    tooltipContent = frame.get('#tooltip-2 .tooltip-shown').toDomElement();
+                    assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
+                    done();
+                }, 100); //wait for text
+            }, 100); //wait for reseting
+        });
+    });
+};
