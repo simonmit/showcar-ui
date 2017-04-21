@@ -141,8 +141,8 @@
             <a href="/docs/atoms/stepper" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#tooltip-2-link">tooltip-2</a>
-            <a href="/docs/atoms/tooltip-2" class="open-separate"></a>
+            <a data-scroll href="#tooltip-link">tooltip</a>
+            <a href="/docs/atoms/tooltip" class="open-separate"></a>
         </li></ul>
             </li>
         </ul>
@@ -320,10 +320,8 @@ The structure of all elements follows the <a href="http://bradfrost.com/blog/pos
 <h4>Include pre-built dist files:</h4><p>In case you can not use the fragment to include showcar-ui you can also include the pre-built files directly from the release branch in the github repository.
 In order to do so follow these steps:</p>
 <p>1.
-Add showcar-ui to your package.json to install it locally, referencing the release branch:</p>
-<pre><code class="lang-js">&quot;dependencies&quot;: {
-    &quot;showcar-ui&quot;: &quot;git@github.com:AutoScout24/showcar-ui.git#release&quot;
-}
+Install showcar-ui NPM package:</p>
+<pre><code class="lang-js">npm install showcar-ui --save
 </code></pre>
 <p>2.
 Include the files on your page:</p>
@@ -2147,8 +2145,8 @@ margin-bottom:15px;
                  
                 </div>
             
-<hr></div><div id="tooltip-2-link" class="positon-anchor">
-                <div class="element" id="tooltip-2">
+<hr></div><div id="tooltip-link" class="positon-anchor">
+                <div class="element" id="tooltip">
                     <div class="markdown"><p><h2>Tooltip<span class="status approved">Approved</span><span class="status js">JS</span></h2></p>
 <style>
 #tooltip-2 .sample{
@@ -2165,11 +2163,11 @@ margin-bottom:15px;
 </div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-tooltip-2" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-tooltip" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-tooltip-2" class="hjs html">&lt;label&gt;That text needs to be explaned
+                                <code id="copy_code-code-tooltip" class="hjs html">&lt;label&gt;That text needs to be explaned
     &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;
         &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
         &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;
