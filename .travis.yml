@@ -13,7 +13,6 @@ env:
 
 before_install: |
     set -ev
-    set -o pipefail
 
 branches:
   except:
