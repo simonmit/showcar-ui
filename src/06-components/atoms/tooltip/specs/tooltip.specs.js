@@ -12,7 +12,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             setTimeout(function () {
                 helper.hoverOn(tooltip);
                 setTimeout(function () {
-                    tooltipContent = frame.get('#tooltip .tooltip-shown').toDomElement();
+                    tooltipContent = frame.get('#tooltip .sc-tooltip-shown').toDomElement();
                     assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
                     done();
                 }, 100); //wait for text
@@ -23,7 +23,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             return setTimeout(function () {
                 helper.click(tooltip);
                 setTimeout(function () {
-                    tooltipContent = frame.get('#tooltip .tooltip-shown').toDomElement();
+                    tooltipContent = frame.get('#tooltip .sc-tooltip-shown').toDomElement();
                     assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
                     done();
                 }, 100); //wait for text
