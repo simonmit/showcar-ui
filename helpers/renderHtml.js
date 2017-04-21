@@ -102,7 +102,7 @@ module.exports = (globalJSON, content, withOutMenu) => {
 
     const leftMenu = withOutMenu ? '' : `
         <div id="sidebar">
-            <a href="/"><div id="sidebar-logo"></div></a>
+            <a href="#about-link"><div id="sidebar-logo"></div></a>
             <h1>ShowCar UI</h1>
             <div id="all-code-toggler"><span>Show</span> all code samples</div>
             <div id="left-menu">
