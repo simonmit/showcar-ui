@@ -39,11 +39,11 @@ import stepper from './06-components/atoms/stepper/stepper';
 stepper();
 
 // tooltip
-import tooltip from './06-components/atoms/tooltip/tooltip';
+import tooltip from './06-components/atoms/tooltip-old/tooltip-old';
 tooltip();
 
 // tooltip2
-import tooltip2 from './06-components/atoms/tooltip-2/tooltip-2';
+import tooltip2 from './06-components/atoms/tooltip/tooltip';
 tooltip2('as24-tooltip');
 
 // lightbox
