@@ -30,7 +30,7 @@ module.exports = {
         ],
         "no-console": [
             "error",
-            { allow: ["warn", "error"] }
+            { allow: ["log","warn", "error"] }
         ],
         "semi": [
             "error",

@@ -1,5 +1,5 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Tooltip 2', function () {
+    describe('Tooltip', function () {
         var tooltip;
         var tooltipContent;
 
@@ -29,5 +29,18 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 }, 100); //wait for text
             }, 100); //wait for reseting
         });
+/*
+        it('Check position of tooltip', function (done) {
+            setTimeout(function () {
+                helper.hoverOn(tooltip);
+                setTimeout(function () {
+                    tooltipContent = frame.get('#tooltip .sc-tooltip-shown').toDomElement();
+                    assert.isOk(helper.hasClass(tooltipContent,'sc-tooltip-top'), 'position top');
+                    done();
+                }, 100); //wait for text
+            }, 100); //wait for reseting
+        });
+        */
+
     });
 };
