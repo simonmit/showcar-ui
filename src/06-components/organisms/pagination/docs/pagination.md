@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
    itemsPerPage = 20,
    activePage = 1,
    totalCount = 800,
-   urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+   urlTemplate = 'https://autoscout24.github.io/showcar-ui/?page={page}&size={size}';
 
    if (paginationElement) {
    new Pager(paginationElement, itemsPerPage, activePage, totalCount, urlTemplate);
