@@ -6,8 +6,9 @@ class Pager {
      * @param {Number} activePage
      * @param {Number} totalItems
      * @param {String} urlTemplate
+     * @param {Boolean} unlimited
      */
-    constructor (root, itemsPerPage, activePage, totalItems, urlTemplate) {
+    constructor (root, itemsPerPage, activePage, totalItems, urlTemplate, unlimited) {
 
         this.ETC          = '...';
         this.rootElement  = $(root);
@@ -15,6 +16,7 @@ class Pager {
         this.activePage   = parseInt(activePage);
         this.totalCount   = parseInt(totalItems);
         this.urlTemplate  = urlTemplate;
+        this.unlimited = unlimited;
         this.maxPage      = this.calculatePageCount();
         this.tileWidth    = 48;
 
@@ -39,6 +41,7 @@ class Pager {
      */
     set maxPage(pages) {
         this._maxPage = pages;
+        console.log(pages);
     }
 
     /**
@@ -268,6 +271,10 @@ class Pager {
      */
     calculatePageCount() {
         let numberOfPages = Math.ceil(this.totalCount / this.itemsPerPage);
+
+        if (this.unlimited) {
+            return numberOfPages;
+        }
 
         if (numberOfPages >= 20) {
             return 20;
