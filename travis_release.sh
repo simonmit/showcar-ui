@@ -22,7 +22,6 @@ rm -rf !(.git*)
 cp -r ../dist .
 cp -r ../src .
 cp ../package.json .
-cp ../History.md .
 
 git add . -A
 
