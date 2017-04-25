@@ -2942,9 +2942,9 @@ background-color: #f4f4f4;
             
 <hr></div><div id="pagination-link" class="positon-anchor">
                 <div class="element" id="pagination">
-                    <div class="markdown"><h2>Pagination <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
+                    <div class="markdown"><h2>Pagination <span class="status approved">Approved</span><span class="status js">JS</span></h2>
 
-<p>If you want to use the pagination component, you need to add the ul element with the .sc-pagination class as shown below and the corresponding javascript snippet.</p>
+<p>If you want to use the pagination component, you need to add the ul element with the <code>sc-pagination</code> class as shown below and the corresponding javascript snippet.</p>
 <p>You need the following properties to instantiate the &quot;Pager&quot;:</p>
 <ul>
 <li>The name of the &quot;root&quot; element (in fact you can use document.querySelector(&#39;.sc-pagination&#39;) to obtain the right element)</li>
@@ -2952,6 +2952,7 @@ background-color: #f4f4f4;
 <li>The currently active page (activePage)</li>
 <li>Total number of items (totalCount)</li>
 <li>The url-template which is used for the a-tag (urlTemplate) with the {page} and the {size} placeholders.</li>
+<li>(Optional) If you want to use pagination without page limit provide unlimited property <code>true</code>. Otherwise you will be limited by 20 pages.</li>
 <li>The {size} placeholder hold the value for the items per page. The {page} placeholder will be filled with the currently active page.</li>
 </ul>
 <script>
@@ -3061,7 +3062,7 @@ document.addEventListener('DOMContentLoaded', function() {
         itemsPerPage = 20,
         activePage = 1,
         totalCount = 800,
-        urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}';
+        urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}',
         unlimited = true;
 
         if (paginationElement) {
