@@ -41,7 +41,6 @@ class Pager {
      */
     set maxPage(pages) {
         this._maxPage = pages;
-        console.log(pages);
     }
 
     /**
