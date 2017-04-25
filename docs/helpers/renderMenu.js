@@ -1,7 +1,7 @@
 module.exports = (globalJSON) => {
     let removeDuplicates = [];
     const renderLink = (rec) => `<li>
-            <a data-scroll href="#${rec.label}-link">${rec.label}</a>
+            <a data-scroll href="#${rec.label}-target">${rec.label}</a>
             <a href="${rec.dir}" class="open-separate"></a>
         </li>`;
     const renderSubs = (subs) => subs.map(renderLink).join('\n');

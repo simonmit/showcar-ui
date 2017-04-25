@@ -13,8 +13,7 @@
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",
-    "test-sanity": "mocha tests/index.js -t 120000",
-    "test-layout": "gulp test:layout:bs"
+    "test": "gulp test:bs"
   },
   "author": "AutoScout24 GmbH",
   "license": "ISC",

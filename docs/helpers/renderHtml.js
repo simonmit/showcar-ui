@@ -45,7 +45,7 @@ module.exports = (globalJSON, content, withOutMenu) => {
                             content += `<hr>`;
                             content += '</div>';
                         }
-                        content += `<div id="${globalJSON[el].group}-link" class="positon-anchor">`;
+                        content += `<div id="${globalJSON[el].group}-target" class="positon-anchor">`;
                     }
                     if (type.indexOf(globalJSON[el].type) === - 1) {
                         type.push(globalJSON[el].type);
@@ -102,7 +102,7 @@ module.exports = (globalJSON, content, withOutMenu) => {
 
     const leftMenu = withOutMenu ? '' : `
         <div id="sidebar">
-            <a href="#about-link"><div id="sidebar-logo"></div></a>
+            <a href="#about-target"><div id="sidebar-logo"></div></a>
             <h1>ShowCar UI</h1>
             <div id="all-code-toggler"><span>Show</span> all code samples</div>
             <div id="left-menu">

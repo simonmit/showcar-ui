@@ -1,11 +1,18 @@
 const gulp = require('gulp');
 const scgulp = require('showcar-gulp')(gulp);
 
+// Don't put in separate task. Runs async on each gulp task
+const pkg = require('showcar-gulp/package.json');
+const updateNotifier = require('update-notifier');
+updateNotifier({
+    pkg,
+    updateCheckInterval: 1 //check each time
+}).notify({ defer: false, isGlobal: false });
+
 
 gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
-    // watch: 'test/js-src/**/*.js',
 }));
 
 gulp.task('icons', ['eslint'], scgulp.js({
@@ -18,26 +25,18 @@ gulp.task('tracking', ['eslint'], scgulp.js({
     out: 'dist/showcar-tracking.js',
 }));
 
-gulp.task('js:watch', () => {
-    gulp.watch(['src/**/*.js'], ['js']);
-});
-
 gulp.task('eslint', scgulp.eslint({
     files: 'src/**/*.js'
+}));
+
+gulp.task('stylelint', scgulp.stylelint({
+    files: 'src/**/*.scss'
 }));
 
 gulp.task('scss', ['stylelint'], scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
     // watch: 'test/scss-src/**/*.scss'
-}));
-
-gulp.task('scss:watch', () => {
-    gulp.watch(['src/**/*.scss'], ['scss']);
-});
-
-gulp.task('stylelint', scgulp.stylelint({
-    files: 'src/**/*.scss'
 }));
 
 gulp.task('clean', scgulp.clean({
@@ -82,13 +81,10 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-const generateJsonDocs = require('./docs/tasks/generateJson');
-gulp.task('generateJsonDocs', () => {
+gulp.task('docs:generate', () => {
+    const generateJsonDocs = require('./docs/tasks/generateJson');
+    const generateHtmlDocs = require('./docs/tasks/generateHtml');
     generateJsonDocs();
-});
-
-const generateHtmlDocs = require('./docs/tasks/generateHtml');
-gulp.task('docs:generate', ['generateJsonDocs'], () => {
     generateHtmlDocs();
 });
 
@@ -98,13 +94,11 @@ gulp.task('docs:serve', () => {serveDocs(gulp);});
 gulp.task('docs:edit', ['build'], () => {serveDocs(gulp);});
 gulp.task('docs:watch', ['build'], () => {serveDocs(gulp);});
 
-gulp.task('lint', ['eslint', 'stylelint']);
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['docs:watch']);
 
-gulp.task('test:layout', ['docs:serve'], scgulp.karma({
+gulp.task('test', ['docs:serve'], scgulp.karma({
     browsers: ['Firefox', 'Electron'],
-    // browsers: ['Electron'],
     files: ['quixote.config.js'],
     preprocessors: {
         'quixote.config.js': ['browserify'] //providing browserify to use require in test files
@@ -114,9 +108,9 @@ gulp.task('test:layout', ['docs:serve'], scgulp.karma({
     },
 }));
 
-gulp.task('test:layout:bs', ['docs:serve'], scgulp.karma({
+gulp.task('test:bs', ['docs:serve'], scgulp.karma({
     browserStack: {
-        build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'}), //remove on travis
+        build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }), //remove on travis
         project: 'Showcar-ui',
     },
     browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7', 'bs_samsungS5_android', 'bs_samsungS5_chrome'],
@@ -128,11 +122,3 @@ gulp.task('test:layout:bs', ['docs:serve'], scgulp.karma({
         '/': 'http://localhost:3000/',
     },
 }));
-
-// Don't put in separate task. Runs async on each gulp task
-const pkg = require('showcar-gulp/package.json');
-const updateNotifier = require('update-notifier');
-updateNotifier({
-    pkg,
-    updateCheckInterval: 1 //check each time
-}).notify({ defer: false, isGlobal: false });
