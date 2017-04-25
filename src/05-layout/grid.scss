@@ -4,25 +4,19 @@
 @import '../07-utilities/utils';
 
 .sc-content-container {
-  @include container;
   position: relative;
   overflow-x: hidden;
   box-sizing: content-box;
 }
 
 .sc-grid-row {
-  @include clearfix;
-  $negativMargin: percentage(map-get($susy, gutters) / susy-sum(map-get($susy, columns), map-get($susy, gutters), wide)) / 2;
-  margin-left: -$negativMargin;
-  margin-right: -$negativMargin;
-
-  > *:empty {
-    min-height: 1px;
-  }
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
 
   @for $i from 1 through 12 {
     .sc-grid-col-#{$i} {
-      @include span($i);
+      grid-column: span $i;
     }
   }
 
@@ -30,7 +24,7 @@
   @include mqmin($viewportXL) {
     @for $i from 1 through 12 {
       .sc-grid-col-xl-#{$i} {
-        @include span($i);
+        grid-column: span $i;
       }
     }
   }
@@ -39,7 +33,7 @@
   @include mqmax($viewportXL - 1) {
     @for $i from 1 through 12 {
       .sc-grid-col-l-#{$i} {
-        @include span($i);
+        grid-column: span $i;
       }
     }
   }
@@ -48,7 +42,7 @@
   @include mqmax($viewportL - 1) {
     @for $i from 1 through 12 {
       .sc-grid-col-m-#{$i} {
-        @include span($i);
+        grid-column: span $i;
       }
     }
   }
@@ -57,7 +51,7 @@
   @include mqmax($viewportM - 1) {
     @for $i from 1 through 12 {
       .sc-grid-col-s-#{$i} {
-        @include span($i);
+        grid-column: span $i;
       }
     }
   }
@@ -66,7 +60,7 @@
   @include mqmax($viewportS - 1) {
     @for $i from 1 through 12 {
       .sc-grid-col-xs-#{$i} {
-        @include span($i);
+        grid-column: span $i;
       }
     }
   }
