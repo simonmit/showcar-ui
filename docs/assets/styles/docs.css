@@ -393,7 +393,7 @@ code {
 }
 @media only screen and (min-width: 1001px) {
     #content {
-        padding: 36px 60px 36px 390px;
+        padding: 36px 40px 36px 370px;
     }
     #sidebar {
         left: 0;
