@@ -19,6 +19,7 @@ module.exports = (gulp) => {
                 let tasks = [];
                 changedFiles.forEach((file) => {
                     if (! file.includes('/src/' || file.includes('specs.js'))) {return;} // exclude docs folder from gulp tasks
+                    if (file.includes('/docs/') || file.includes('08-docs-info')) tasks.push('docs:generate');
                     if (path.extname(file) === '.js') tasks.push('js');
                     if (path.extname(file) === '.scss') tasks.push('scss');
                 });

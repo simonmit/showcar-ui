@@ -5,7 +5,7 @@ const marked = require('marked');
 var renderer = new marked.Renderer();
 renderer.heading = (text, level) => {
     return `<h${level}>${text}</h${level}>`;
-}
+};
 
 const entities = require('html-entities').AllHtmlEntities;
 
@@ -22,9 +22,9 @@ const getFiles = (route, name, routesArr) => {
                 name: path.parse(mdPath).name,
                 group,
                 mdPath
-            }
-        })
-}
+            };
+        });
+};
 
 const setObj = (type, files) => {
     return files
@@ -34,29 +34,29 @@ const setObj = (type, files) => {
             const srcDir = path.parse(paths).dir;
             const name = path.parse(paths).name;
             const markDown = marked(fs.readFileSync(paths, 'utf8'), { renderer: renderer });
-            
+
             const element = {
                 name,
                 type: type,
                 group: group,
                 srcDir,
                 markDown: JSON.stringify(markDown),
-            }
-            
+            };
+
             const htmlPaths = paths.split('.md')[0] + '.html';
             if (fs.existsSync(htmlPaths)) {
                 const html = fs.readFileSync(htmlPaths, 'utf8');
                 element.html = JSON.stringify(html);
                 element.codeExample = JSON.stringify(entities.encode(html));
             }
-            
+
             const jsPaths = paths.split('.md')[0] + '.js';
             if (fs.existsSync(jsPaths)) {
                 element.jsExample = JSON.stringify(fs.readFileSync(jsPaths, 'utf8'));
             }
             return element;
-        })
-}
+        });
+};
 
 
 module.exports = () => {
@@ -66,9 +66,9 @@ module.exports = () => {
                 return Object.keys(docsData[key])
                     .map((deepKey) => {
                         if (path.parse(docsData[key][deepKey]).ext === '.md') {
-                            return setObj(key, getFiles(false, deepKey, [docsData[key][deepKey]]))
+                            return setObj(key, getFiles(false, deepKey, [docsData[key][deepKey]]));
                         }
-                        return setObj(key, getFiles(docsData[key][deepKey], deepKey))
+                        return setObj(key, getFiles(docsData[key][deepKey], deepKey));
                     });
             }
             return setObj(key, getFiles(docsData[key]));
@@ -85,5 +85,5 @@ module.exports = () => {
             res[obj.name] = obj;
             return res;
         }, ({}));
-    return obj
-}
+    return obj;
+};
