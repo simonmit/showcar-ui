@@ -15,17 +15,22 @@ module.exports = function (frame, assert, browserWidth, helper) {
         });
 
         it('Close lightbox using icon', function () {
-            var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
-            helper.click(trigger);
-            helper.click(lightboxCloseIcon);
-            assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+            setTimeout(function () {
+                var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
+                helper.click(trigger);
+                helper.click(lightboxCloseIcon);
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+            }, 100); //wait for fadeIn
+
         });
 
         it('Close lightbox using button', function () {
-            var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
-            helper.click(trigger);
-            helper.click(lightboxCloseButton);
-            assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+            setTimeout(function () {
+                var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
+                helper.click(trigger);
+                helper.click(lightboxCloseButton);
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+            }, 100); //wait for fadeIn
         });
     });
 };
