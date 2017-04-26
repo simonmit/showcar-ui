@@ -22,8 +22,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 setTimeout(function () {
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
-                }, 200); //wait for fadeOut
-            }, 200); //wait for fadeIn
+                }, 1000); //wait for fadeOut
+            }, 1000); //wait for fadeIn
 
         });
 
@@ -35,8 +35,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 setTimeout(function () {
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
-                }, 200); //wait for fadeOut
-            }, 200); //wait for fadeIn
+                }, 1000); //wait for fadeOut
+            }, 1000); //wait for fadeIn
         });
     });
 };
