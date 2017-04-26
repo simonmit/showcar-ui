@@ -1,13 +1,13 @@
 import registerElement from '../../../07-utilities/helpers.js';
-export default function(tagName) {
+export default function (tagName) {
     function createdCallback() {
         this.classList.add('sc-hidden');
     }
 
     const clickHandler = e => {
         const openTrigger = e.target.closest('[data-lightbox-trigger]');
-        const closeTrigger = e.target.closest('[data-lightbox-close]') || ! e.target.closest('.sc-lightbox');
-        if (! openTrigger && ! closeTrigger) { return; }
+        const closeTrigger = e.target.closest('[data-lightbox-close]') || !e.target.closest('.sc-lightbox');
+        if (!openTrigger && !closeTrigger) { return; }
         if (openTrigger) {
             show(openTrigger);
         } else {
@@ -16,8 +16,8 @@ export default function(tagName) {
     };
 
     const touchHandler = e => {
-        const closeTrigger = e.target.closest('[data-lightbox-close]') || ! e.target.closest('.sc-lightbox');
-        if (! closeTrigger) { return; }
+        const closeTrigger = e.target.closest('[data-lightbox-close]') || !e.target.closest('.sc-lightbox');
+        if (!closeTrigger) { return; }
         hide();
     };
 
@@ -34,19 +34,37 @@ export default function(tagName) {
         const dataId = lightboxTrigger.getAttribute('data-id');
         const overlay = document.getElementById(dataId);
         const container = overlay.firstElementChild;
-        overlay.classList.remove('sc-hidden');
         overlay.classList.add('sc-lightbox-overlay');
+        overlay.classList.remove('sc-hidden');
 
         document.body.insertBefore(overlay, document.body.firstChild);
+
+        overlay.style.opacity = 0;
+        fadeIn(overlay);
 
         container.classList.add('sc-lightbox');
         container.classList.remove('sc-hidden');
     };
 
+    const fadeIn = (overlay) => {
+        let opacity = parseFloat(overlay.style.opacity);
+        if (opacity == 1) { return; }
+        overlay.style.opacity = opacity + 0.1;
+        setTimeout(() => fadeIn(overlay), 10);
+    };
+
     const hide = () => {
-        [].forEach.call(document.querySelectorAll('.sc-lightbox-overlay'), el => {
-            el.classList.add('sc-hidden');
-        });
+        (document.querySelectorAll('.sc-lightbox-overlay') || []).forEach(fadeOut);
+    };
+
+    const fadeOut = (overlay) => {
+        let opacity = parseFloat(overlay.style.opacity);
+        if (opacity == 0) {
+            overlay.classList.add('sc-hidden');
+            return;
+        }
+        overlay.style.opacity = opacity - 0.1;
+        setTimeout(() => fadeOut(overlay), 10);
     };
 
     registerElement({
