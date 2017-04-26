@@ -58,6 +58,12 @@
   right: 0;
   bottom: 0;
   z-index: 139; // less than modal window by one
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+
+.sc-fade-in {
+  opacity: 1;
 }
 
 // TODO: fix the input centring problem
