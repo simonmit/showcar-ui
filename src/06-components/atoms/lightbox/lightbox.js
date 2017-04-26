@@ -39,19 +39,9 @@ export default function (tagName) {
 
         document.body.insertBefore(overlay, document.body.firstChild);
 
-        // overlay.style.opacity = 1;
-        // fadeIn(overlay);
-
         container.classList.add('sc-lightbox');
         container.classList.remove('sc-hidden');
         setTimeout(() => overlay.classList.add('sc-fade-in'), 20);
-    };
-
-    const fadeIn = (overlay) => {
-        let opacity = parseFloat(overlay.style.opacity);
-        if (opacity == 1) { return; }
-        overlay.style.opacity = opacity + 0.1;
-        setTimeout(() => fadeIn(overlay), 10);
     };
 
     const hide = () => {
@@ -59,14 +49,8 @@ export default function (tagName) {
     };
 
     const fadeOut = (overlay) => {
-        // let opacity = parseFloat(overlay.style.opacity);
-        // if (opacity == 0) {
         overlay.classList.remove('sc-fade-in');
         setTimeout(() => overlay.classList.add('sc-hidden'), 250);
-            // return;
-        // }
-        // overlay.style.opacity = opacity - 0.1;
-        // setTimeout(() => fadeOut(overlay), 10);
     };
 
     registerElement({
