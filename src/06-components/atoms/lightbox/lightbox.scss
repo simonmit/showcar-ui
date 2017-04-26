@@ -59,7 +59,7 @@
   bottom: 0;
   z-index: 139; // less than modal window by one
   opacity: 0;
-  transition: opacity .2s linear;
+  transition: opacity .1s ease;
 }
 
 .sc-fade-in {
