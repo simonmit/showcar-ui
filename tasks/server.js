@@ -38,7 +38,7 @@ app.get('/docs/:type/', (req, res) => {
                 return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
-    res.send(generateHtml(globalJSON, content));
+    res.send(generateHtml(globalJSON, content,true));
 });
 
 app.get('/docs/:type/:group', (req, res) => {
@@ -51,7 +51,7 @@ app.get('/docs/:type/:group', (req, res) => {
                 return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
-    res.send(generateHtml(globalJSON, content));
+    res.send(generateHtml(globalJSON, content,true));
 });
 
 app.use('/showcar-ui', express.static('./'));
