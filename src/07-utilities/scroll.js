@@ -15,6 +15,7 @@ const scroll = (to, duration) => {
 };
 
 export function smoothScroll(target, duration = 300, cb) {
+
     let targetSelector = '';
     const hrefTarget = $(target).attr('href');
 
@@ -34,8 +35,9 @@ export function smoothScroll(target, duration = 300, cb) {
         }
     }
 
-    const to = $(targetSelector).offset().top;
-    
+    const offset = $(targetSelector).offset();
+    const to = (offset && offset.top) || 0;
+
     scroll(to, duration);
 
     if (cb) {cb();}
