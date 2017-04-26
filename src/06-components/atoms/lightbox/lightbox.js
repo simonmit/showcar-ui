@@ -34,16 +34,17 @@ export default function (tagName) {
         const dataId = lightboxTrigger.getAttribute('data-id');
         const overlay = document.getElementById(dataId);
         const container = overlay.firstElementChild;
-        overlay.classList.add('sc-lightbox-overlay');
         overlay.classList.remove('sc-hidden');
+        overlay.classList.add('sc-lightbox-overlay');
 
         document.body.insertBefore(overlay, document.body.firstChild);
 
-        overlay.style.opacity = 0;
-        fadeIn(overlay);
+        // overlay.style.opacity = 1;
+        // fadeIn(overlay);
 
         container.classList.add('sc-lightbox');
         container.classList.remove('sc-hidden');
+        setTimeout(() => overlay.classList.add('sc-fade-in'), 20);
     };
 
     const fadeIn = (overlay) => {
@@ -58,13 +59,14 @@ export default function (tagName) {
     };
 
     const fadeOut = (overlay) => {
-        let opacity = parseFloat(overlay.style.opacity);
-        if (opacity == 0) {
-            overlay.classList.add('sc-hidden');
-            return;
-        }
-        overlay.style.opacity = opacity - 0.1;
-        setTimeout(() => fadeOut(overlay), 10);
+        // let opacity = parseFloat(overlay.style.opacity);
+        // if (opacity == 0) {
+        overlay.classList.remove('sc-fade-in');
+        setTimeout(() => overlay.classList.add('sc-hidden'), 250);
+            // return;
+        // }
+        // overlay.style.opacity = opacity - 0.1;
+        // setTimeout(() => fadeOut(overlay), 10);
     };
 
     registerElement({

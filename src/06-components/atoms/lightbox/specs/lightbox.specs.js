@@ -16,10 +16,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-            return setTimeout(function () {
+            setTimeout(function () {
                 var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
                 helper.click(lightboxCloseIcon);
                 setTimeout(function () {
+                    lightbox = frame.get('as24-lightbox');
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
                 }, 1000); //wait for fadeOut
@@ -29,10 +30,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-            return setTimeout(function () {
+            setTimeout(function () {
                 var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
                 helper.click(lightboxCloseButton);
                 setTimeout(function () {
+                    lightbox = frame.get('as24-lightbox');
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
                 }, 1000); //wait for fadeOut
