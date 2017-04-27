@@ -379,8 +379,8 @@
         "group": "tooltip",
         "srcDir": "src/06-components/atoms/tooltip/docs",
         "markDown": "\"<p><h2>Tooltip<span class=\\\"status approved\\\">Approved</span><span class=\\\"status js\\\">JS</span></h2></p>\\n<style>\\n#tooltip-2 .sample{\\n    padding-top:60px;\\n}\\n</style>\\n\"",
-        "html": "\"<label>That text needs to be explaned\\n    <as24-tooltip class=\\\"sc-tooltip\\\">\\n        <as24-icon type=\\\"info\\\" style=\\\"width: 16px;\\\"></as24-icon>\\n        <div class=\\\"sc-tooltip-content\\\">Information in tooltip <a href=\\\"/\\\">link</a></div>\\n    </as24-tooltip>\\n</label>\\n\"",
-        "codeExample": "\"&lt;label&gt;That text needs to be explaned\\n    &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;\\n        &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;\\n        &lt;div class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/div&gt;\\n    &lt;/as24-tooltip&gt;\\n&lt;/label&gt;\\n\""
+        "html": "\"<p>That text needs to be explaned\\n\\t<as24-tooltip class=\\\"sc-tooltip\\\">\\n\\t\\t<as24-icon type=\\\"info\\\" style=\\\"width: 16px;\\\"></as24-icon>\\n\\t\\t<span class=\\\"sc-tooltip-content\\\">Information in tooltip <a href=\\\"/\\\">link</a></span>\\n\\t</as24-tooltip>\\n</p>\\n\"",
+        "codeExample": "\"&lt;p&gt;That text needs to be explaned\\n&Tab;&lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;\\n&Tab;&Tab;&lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;\\n&Tab;&Tab;&lt;span class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/span&gt;\\n&Tab;&lt;/as24-tooltip&gt;\\n&lt;/p&gt;\\n\""
     },
     "breadcrumb": {
         "name": "breadcrumb",
