@@ -35,16 +35,19 @@ export default function (tagName) {
         clearTimeout(tt.timeoutID);
         if (tt.shown === true) return;
         tt.content.classList.add('sc-tooltip-shown');
+        setTimeout(() => tt.content.classList.add('sc-fade-in'), 20);
         setPosition(tt);
     }
 
     function hide(tt) {
         tt.timeoutID = window.setTimeout(() => {
             tt.shown = false;
-            tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left');
-            tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
-            tt.content.style.top = null;
-            tt.content.style.left = null;
+            tt.content.classList.remove('sc-fade-in');
+            setTimeout(() => {
+                tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
+                tt.content.style.top = null;
+                tt.content.style.left = null;
+            }, 350);
         }, 300);
     }
 

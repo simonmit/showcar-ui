@@ -1,5 +1,5 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Lightbox', function () {
+    /*describe('Lightbox', function () {
         var trigger;
         var lightbox;
 
@@ -38,5 +38,5 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 }, 300); //wait for fadeOut
             }, 300); //wait for fadeIn
         });
-    });
+    });*/
 };
