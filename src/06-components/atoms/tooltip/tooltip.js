@@ -32,6 +32,7 @@ export default function (tagName) {
     }
 
     function show(tt) {
+        document.body.appendChild(tt.content);
         clearTimeout(tt.timeoutID);
         if (tt.shown === true) return;
         tt.content.classList.add('sc-tooltip-shown');
@@ -44,6 +45,7 @@ export default function (tagName) {
             tt.shown = false;
             tt.content.classList.remove('sc-fade-in');
             setTimeout(() => {
+                tt.tooltip.appendChild(tt.content);
                 tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
                 tt.content.style.top = null;
                 tt.content.style.left = null;
