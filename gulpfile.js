@@ -10,7 +10,8 @@ updateNotifier({
 }).notify({ defer: false, isGlobal: false });
 
 
-gulp.task('js', ['eslint'], scgulp.js({
+gulp.task('js', ['set-dev'], scgulp.js({
+// gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
 }));
@@ -36,7 +37,6 @@ gulp.task('stylelint', scgulp.stylelint({
 gulp.task('scss', ['stylelint'], scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
-    // watch: 'test/scss-src/**/*.scss'
 }));
 
 gulp.task('clean', scgulp.clean({

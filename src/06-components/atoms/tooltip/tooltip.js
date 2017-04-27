@@ -2,10 +2,19 @@ import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
 
+    function offset(el) {
+        const rect = el.getBoundingClientRect(), bodyEl = document.body;
+        return {
+            top: rect.top + bodyEl.scrollTop,
+            left: rect.left + bodyEl.scrollLeft
+        };
+    }
+
     function attachedCallback() {
         let tt = {
             tooltip: this,
             shown: false,
+            indentTop: 8,
             arrow: document.createElement('span'),
             content: this.querySelector('.sc-tooltip-content'),
             timeoutID: 0
@@ -32,51 +41,31 @@ export default function (tagName) {
     function hide(tt) {
         tt.timeoutID = window.setTimeout(() => {
             tt.shown = false;
-            tt.content.classList.remove('sc-tooltip-shown');
+            tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left');
+            tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
+            tt.content.style.top = null;
+            tt.content.style.left = null;
         }, 300);
     }
 
     function setPosition(tt) {
         tt.shown = true;
-        const distance = { vertical: 6, horizontal: 8 };
-        const contentDim = {
-            width: tt.content.offsetWidth,
-            height: tt.content.offsetHeight
-        };
-
-        const wrapperDim = {
-            top: tt.tooltip.offsetTop,
-            left: tt.tooltip.offsetLeft,
-            width: tt.tooltip.offsetWidth,
-            height: tt.tooltip.offsetHeight
-        };
-
-        let top = wrapperDim.top - contentDim.height - distance.vertical;
-        let left = wrapperDim.left - (contentDim.width / 2) + (wrapperDim.width / 2);
-
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
-        const wrapperDimClientRect = tt.tooltip.getBoundingClientRect();
-        const ttTop = wrapperDimClientRect.top + document.body.scrollTop;
-
-        if ((ttTop - wrapperDim.top) - scrollPosition <= 0) {
-            top = wrapperDim.top + wrapperDim.height + distance.vertical;
-            tt.content.classList.remove('sc-tooltip-top');
+        let top = offset(tt.tooltip).top - tt.content.offsetHeight - tt.indentTop;
+        if (top - scrollPosition <= 0) {
+            top = offset(tt.tooltip).top + tt.tooltip.offsetHeight + tt.indentTop;
             tt.content.classList.add('sc-tooltip-bottom');
         } else {
-            tt.content.classList.remove('sc-tooltip-bottom');
             tt.content.classList.add('sc-tooltip-top');
         }
 
-        tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left');
-
-        if (left + contentDim.width > window.innerWidth) {
-            left = wrapperDim.left - contentDim.width + wrapperDim.width + distance.horizontal;
-            tt.content.classList.remove('sc-tooltip-right');
+        let left = offset(tt.tooltip).left - (tt.content.offsetWidth / 2) + (tt.tooltip.offsetWidth / 2);
+        if (left + tt.content.offsetWidth > window.innerWidth) {
+            left = offset(tt.tooltip).left - tt.content.offsetWidth + tt.tooltip.offsetWidth + 8;
             tt.content.classList.add('sc-tooltip-left');
         } else if (left <= 0) {
-            left = wrapperDim.left - distance.horizontal;
-            tt.content.classList.remove('sc-tooltip-left');
+            left = offset(tt.tooltip).left - (tt.tooltip.offsetWidth/2);
             tt.content.classList.add('sc-tooltip-right');
         }
 
