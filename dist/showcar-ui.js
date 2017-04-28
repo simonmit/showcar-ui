@@ -3055,9 +3055,9 @@ module.exports.Zepto = Zepto;
 
     function offset(el) {
         var rect = el.getBoundingClientRect(),
-            bodyEl = document.body;
+            bodyEl = document.documentElement;
         return {
-            top: rect.top + bodyEl.scrollTop,
+            top: rect.top + (document.body.scrollTop || document.documentElement.scrollTop),
             left: rect.left + bodyEl.scrollLeft
         };
     }
@@ -3127,9 +3127,9 @@ module.exports.Zepto = Zepto;
         tt.timeoutID = window.setTimeout(function () {
             tt.shown = false;
             tt.content.classList.remove('sc-fade-in');
-            setTimeout(function () {
+            tt.timeoutID = setTimeout(function () {
                 tt.tooltip.appendChild(tt.content);
-                tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
+                tt.content.classList.remove('sc-tooltip-shown');
                 tt.content.style.top = null;
                 tt.content.style.left = null;
             }, 350);
@@ -3139,7 +3139,7 @@ module.exports.Zepto = Zepto;
     function setPosition(tt) {
         tt.shown = true;
         var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-
+        tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
         var top = offset(tt.tooltip).top - tt.content.offsetHeight - tt.indentTop;
         if (top - scrollPosition <= 0) {
             top = offset(tt.tooltip).top + tt.tooltip.offsetHeight + tt.indentTop;
@@ -3157,8 +3157,8 @@ module.exports.Zepto = Zepto;
             tt.content.classList.add('sc-tooltip-right');
         }
 
-        tt.content.style.top = top + 'px';
-        tt.content.style.left = left + 'px';
+        tt.content.style.top = Math.round(top) + 'px';
+        tt.content.style.left = Math.round(left) + 'px';
     }
 
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__07_utilities_helpers_js__["a" /* default */])({
