@@ -33,38 +33,35 @@
   &.sc-fade-in {
     opacity: 1;
   }
-}
 
-.sc-tooltip-arrow {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-top-color: rgba(0, 0, 0, .75);
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6px;
-}
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, .75);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+  }
 
-.sc-tooltip-bottom .sc-tooltip-arrow {
-  border-bottom-color: rgba(0, 0, 0, .75);
-  border-top-color: transparent;
-  top: auto;
-  bottom: 100%;
-}
+  &.sc-tooltip-bottom:after {
+    border-bottom-color: rgba(0, 0, 0, .75);
+    border-top-color: transparent;
+    top: auto;
+    bottom: 100%;
+  }
 
-.sc-tooltip-right .sc-tooltip-arrow {
-  left: 10px;
-  margin: 0;
-}
+  &.sc-tooltip-right:after {
+    left: 10px;
+    margin: 0;
+  }
 
-.sc-tooltip-left .sc-tooltip-arrow {
-  right: 10px;
-  left: auto;
-  margin: 0;
-}
-
-.sc-tooltip-hidden {
-  display: none;
+  &.sc-tooltip-left:after {
+    right: 10px;
+    left: auto;
+    margin: 0;
+  }
 }

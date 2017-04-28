@@ -3,10 +3,10 @@ import registerElement from '../../../07-utilities/helpers.js';
 export default function (tagName) {
 
     function offset(el) {
-        const rect = el.getBoundingClientRect(), bodyEl = document.documentElement;
+        const rect = el.getBoundingClientRect();
         return {
             top: rect.top + (document.body.scrollTop || document.documentElement.scrollTop),
-            left: rect.left + bodyEl.scrollLeft
+            left: rect.left + (document.body.scrollLeft || document.documentElement.scrollLeft)
         };
     }
 
@@ -15,13 +15,9 @@ export default function (tagName) {
             tooltip: this,
             shown: false,
             indentTop: 8,
-            arrow: document.createElement('span'),
             content: this.querySelector('.sc-tooltip-content'),
             timeoutID: 0
         };
-
-        tt.arrow.classList.add('sc-tooltip-arrow');
-        tt.content.appendChild(tt.arrow);
 
         tt.tooltip.addEventListener('mouseover', () => show(tt), false);
         tt.tooltip.addEventListener('mousedown', () => show(tt), false);
@@ -48,7 +44,7 @@ export default function (tagName) {
     }
 
     function hide(tt) {
-        tt.timeoutID = window.setTimeout(() => {
+        tt.timeoutID = setTimeout(() => {
             tt.shown = false;
             tt.content.classList.remove('sc-fade-in');
             tt.timeoutID = setTimeout(() => {
@@ -74,7 +70,7 @@ export default function (tagName) {
 
         let left = offset(tt.tooltip).left - (tt.content.offsetWidth / 2) + (tt.tooltip.offsetWidth / 2);
         if (left + tt.content.offsetWidth > window.innerWidth) {
-            left = offset(tt.tooltip).left - tt.content.offsetWidth + tt.tooltip.offsetWidth + 8;
+            left = offset(tt.tooltip).left - tt.content.offsetWidth + tt.tooltip.offsetWidth + 8; // small gap
             tt.content.classList.add('sc-tooltip-left');
         } else if (left <= 0) {
             left = offset(tt.tooltip).left - (tt.tooltip.offsetWidth/2);
