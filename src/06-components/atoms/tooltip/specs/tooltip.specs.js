@@ -15,7 +15,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                     tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
                     assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
                     done();
-                }, 200); //wait for text
+                }, 250); //wait for text
             }, 100); //wait for reseting
         });
 
@@ -26,7 +26,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                     tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
                     assert.include(tooltipContent.innerText, 'Information in tooltip', 'contains');
                     done();
-                }, 200); //wait for text
+                }, 250); //wait for text
             }, 100); //wait for reseting
         });
 /*
