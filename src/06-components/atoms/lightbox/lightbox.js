@@ -45,7 +45,7 @@ export default function (tagName) {
     };
 
     const hide = () => {
-        (document.querySelectorAll('.sc-lightbox-overlay') || []).forEach(fadeOut);
+        [...document.querySelectorAll('.sc-lightbox-overlay')].forEach(fadeOut);
     };
 
     const fadeOut = (overlay) => {
