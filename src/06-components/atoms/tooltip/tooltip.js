@@ -3,9 +3,9 @@ import registerElement from '../../../07-utilities/helpers.js';
 export default function (tagName) {
 
     function offset(el) {
-        const rect = el.getBoundingClientRect(), bodyEl = document.body;
+        const rect = el.getBoundingClientRect(), bodyEl = document.documentElement;
         return {
-            top: rect.top + bodyEl.scrollTop,
+            top: rect.top + (document.body.scrollTop || document.documentElement.scrollTop),
             left: rect.left + bodyEl.scrollLeft
         };
     }
@@ -51,9 +51,9 @@ export default function (tagName) {
         tt.timeoutID = window.setTimeout(() => {
             tt.shown = false;
             tt.content.classList.remove('sc-fade-in');
-            setTimeout(() => {
+            tt.timeoutID = setTimeout(() => {
                 tt.tooltip.appendChild(tt.content);
-                tt.content.classList.remove('sc-tooltip-shown', 'sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
+                tt.content.classList.remove('sc-tooltip-shown');
                 tt.content.style.top = null;
                 tt.content.style.left = null;
             }, 350);
@@ -63,7 +63,7 @@ export default function (tagName) {
     function setPosition(tt) {
         tt.shown = true;
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-
+        tt.content.classList.remove('sc-tooltip-right', 'sc-tooltip-left', 'sc-tooltip-top', 'sc-tooltip-bottom');
         let top = offset(tt.tooltip).top - tt.content.offsetHeight - tt.indentTop;
         if (top - scrollPosition <= 0) {
             top = offset(tt.tooltip).top + tt.tooltip.offsetHeight + tt.indentTop;
@@ -81,8 +81,8 @@ export default function (tagName) {
             tt.content.classList.add('sc-tooltip-right');
         }
 
-        tt.content.style.top = top + 'px';
-        tt.content.style.left = left + 'px';
+        tt.content.style.top = Math.round(top) + 'px';
+        tt.content.style.left = Math.round(left) + 'px';
     }
 
     registerElement({
