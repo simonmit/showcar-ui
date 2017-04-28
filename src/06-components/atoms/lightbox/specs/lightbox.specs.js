@@ -1,12 +1,14 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-    /*describe('Lightbox', function () {
+    describe('Lightbox', function () {
         var trigger;
         var lightbox;
 
-        beforeEach(function () {
-            frame.reset();
-            trigger = frame.get('#lightbox [data-lightbox-trigger]').toDomElement();
-            lightbox = frame.get('as24-lightbox');
+        beforeEach(function (done) {
+            frame.reload(function () {
+                trigger = frame.get('#lightbox [data-lightbox-trigger]').toDomElement();
+                lightbox = frame.get('as24-lightbox');
+                done();
+            });
         })
 
         it('Open lightbox', function () {
@@ -16,27 +18,22 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-            setTimeout(function () {
                 var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
                 helper.click(lightboxCloseIcon);
                 setTimeout(function () {
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
-                }, 300); //wait for fadeOut
-            }, 300); //wait for fadeIn
-
+                }, 250); //wait for fadeOut
         });
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-            setTimeout(function () {
                 var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
                 helper.click(lightboxCloseButton);
                 setTimeout(function () {
                     assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
                     done();
-                }, 300); //wait for fadeOut
-            }, 300); //wait for fadeIn
+                }, 250); //wait for fadeOut
         });
-    });*/
+    });
 };
