@@ -3090,6 +3090,23 @@ module.exports.Zepto = Zepto;
         tt.tooltip.addEventListener('mouseleave', function () {
             return hide(tt);
         }, false);
+
+        tt.content.addEventListener('mouseover', function () {
+            return show(tt);
+        }, false);
+        tt.content.addEventListener('mousedown', function () {
+            return show(tt);
+        }, false);
+        tt.content.addEventListener('touchstart', function () {
+            return show(tt);
+        }, false);
+        tt.content.addEventListener('click', function () {
+            return show(tt);
+        }, false);
+        tt.content.addEventListener('mouseleave', function () {
+            return hide(tt);
+        }, false);
+
         document.addEventListener('touchstart', function () {
             return hide(tt);
         }, false);
