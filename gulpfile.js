@@ -10,8 +10,8 @@ updateNotifier({
 }).notify({ defer: false, isGlobal: false });
 
 
-gulp.task('js', ['set-dev'], scgulp.js({
-// gulp.task('js', ['eslint'], scgulp.js({
+// gulp.task('js', ['set-dev'], scgulp.js({
+gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
 }));
