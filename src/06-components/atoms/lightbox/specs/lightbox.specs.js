@@ -18,22 +18,22 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-                var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
-                helper.click(lightboxCloseIcon);
-                setTimeout(function () {
-                    assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
-                    done();
-                }, 250); //wait for fadeOut
+            var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
+            helper.click(lightboxCloseIcon);
+            setTimeout(function () {
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                done();
+            }, 250); //wait for fadeOut
         });
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-                var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
-                helper.click(lightboxCloseButton);
-                setTimeout(function () {
-                    assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
-                    done();
-                }, 250); //wait for fadeOut
+            var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
+            helper.click(lightboxCloseButton);
+            setTimeout(function () {
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                done();
+            }, 250); //wait for fadeOut
         });
     });
 };
