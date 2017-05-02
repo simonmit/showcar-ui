@@ -3,12 +3,13 @@ module.exports = function (frame, assert, browserWidth, helper) {
         var trigger;
         var lightbox;
 
-        beforeEach(function (done) {
-            frame.reload(function () {
-                trigger = frame.get('#lightbox [data-lightbox-trigger]').toDomElement();
-                lightbox = frame.get('as24-lightbox');
-                done();
-            });
+        beforeEach(function () {
+            trigger = frame.get('#lightbox [data-lightbox-trigger]').toDomElement();
+            lightbox = frame.get('as24-lightbox');
+        })
+
+        afterEach(function (done) {
+            frame.reload(done);
         })
 
         it('Open lightbox', function () {
