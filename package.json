@@ -1,7 +1,7 @@
 {
   "name": "showcar-ui",
   "version": "3.0.1",
-  "description": "",
+  "description": "showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.",
   "directories": {
     "doc": "docs",
     "example": "examples"
@@ -41,7 +41,7 @@
     "html-entities": "^1.2.0",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.6.4",
+    "showcar-gulp": "^2.6.6",
     "update-notifier": "^2.1.0",
     "yargs": "^4.6.0"
   },

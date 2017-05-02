@@ -1,45 +1,51 @@
 module.exports = function (frame, assert, browserWidth, helper) {
+/*    describe('Spy-navigation', function () {
+        var spyNavigation;
+        var links;
 
-}
-/*
-import { Selector } from 'testcafe';
-
-const nonstickyNavigation = Selector('.sc-spy-navigation');
-const stickyNavigation = Selector('.sc-spy-navigation--sticked');
-const lastLink = Selector('.sc-spy-navigation__link:last-child');
-const activeLink = Selector('.sc-spy-navigation__link--active');
-
-fixture `Spy-navigation`
-    .page `http://localhost:5000/docs/organisms/spy-navigation`;
-
-test('Initial state is non-sticky and inactive', async t => {
-    const activeLinkExists = Selector(activeLink).exists;
-
-    await t
-        .expect(nonstickyNavigation.getStyleProperty('position')).eql('relative')
-        .expect(activeLinkExists).notOk();
-})
-
-test('Sticky behaviour', async t => {
-    const activeLinkExists = Selector(activeLink).exists;
-
-    await t
-        .resizeWindowToFitDevice('iPad', {
-            portraitOrientation: false
+        beforeEach(function () {
+            spyNavigation = frame.get('.sc-spy-navigation');
+            links = frame.getAll('.sc-spy-navigation__link');
         })
-        .click(lastLink) // simulate scrolling
-        .expect(stickyNavigation.getStyleProperty('position')).eql('fixed')
-        .expect(activeLinkExists).ok();
-})
 
-test('Scroll to anchor and set active tab', async t => {
-    const activeLinkExists = Selector(activeLink).exists;
-    const secondLink = Selector('.sc-spy-navigation__link:nth-child(2)');
+        afterEach(function (done) {
+            frame.reload(done);
+        })
 
-    await t
-        .click(secondLink)
-        .expect(activeLinkExists).ok()
-        .expect(activeLink.count).eql(1)
-        .expect(secondLink.hasClass('sc-spy-navigation__link--active')).ok()
-})
-*/
+        it('Initial state is non-sticky and inactive', function () {
+            assert.equal(spyNavigation.getRawStyle('position'), 'relative', 'position should be relative');
+            assert(links.length() > 0, 'we have no links on page');
+            for (var i = 0; i < links.length() - 1; i ++) {
+                assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
+            }
+        });
+
+        it('Sticky behaviour, scroll to anchor and set active tab', function (done) {
+            //as timeout is too long, we must check all behaviours in one test
+            var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
+            helper.click(lastLink);
+            setTimeout(function () {
+                assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
+
+                var lastSection = frame.get('a[name="section-4"]');
+                assert.equal(Math.floor(lastSection.getRawPosition().top), 0, 'position should be on top');
+
+                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+                done();
+            }, 1500); //timeout for scrolling
+        });
+
+        it('Change class by scrolling to the section', function (done) {
+            //as timeout is too long, we must check all behaviours in one test
+            var lastSection = frame.get('a[name="section-4"]').toDomElement();
+            var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
+            lastSection.scrollIntoView(true);
+            setTimeout(function () {
+                assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
+                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+                done();
+            }, 400); //timeout for scrolling
+        });
+
+    });*/
+};
