@@ -1,5 +1,5 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-    /*describe('Spy-navigation', function () {
+    describe('Spy-navigation', function () {
         var spyNavigation;
         var links;
 
@@ -7,6 +7,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             spyNavigation = frame.get('.sc-spy-navigation');
             links = frame.getAll('.sc-spy-navigation__link');
         })
+
         afterEach(function (done) {
             frame.reload(done);
         })
@@ -25,11 +26,26 @@ module.exports = function (frame, assert, browserWidth, helper) {
             helper.click(lastLink);
             setTimeout(function () {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
-                assert.isOk(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+
+                var lastSection = frame.get('a[name="section-4"]');
+                assert.equal(Math.floor(lastSection.getRawPosition().top), 0, 'position should be on top');
+
+                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
                 done();
-            }, 1000); //timeout for scrolling
+            }, 700); //timeout for scrolling
         });
 
-        //TODO add scrolling check
-    });*/
+        it('Change class by scrolling to the section', function (done) {
+            //as timeout is too long, we must check all behaviours in one test
+            var lastSection = frame.get('a[name="section-4"]').toDomElement();
+            var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
+            lastSection.scrollIntoView(true);
+            setTimeout(function () {
+                assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
+                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+                done();
+            }, 400); //timeout for scrolling
+        });
+
+    });
 };
