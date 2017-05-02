@@ -30,6 +30,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 done();
             }, 1000); //timeout for scrolling
         });
+        
     //TODO add scrolling check
     });
 };
