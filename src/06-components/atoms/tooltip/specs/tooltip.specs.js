@@ -3,11 +3,12 @@ module.exports = function (frame, assert, browserWidth, helper) {
         var tooltip;
         var tooltipContent;
 
-        beforeEach(function (done) {
-            frame.reload(function () {
-                tooltip = frame.get('#tooltip as24-tooltip').toDomElement();
-                done();
-            });
+        beforeEach(function () {
+            tooltip = frame.get('#tooltip as24-tooltip').toDomElement();
+        })
+
+        afterEach(function (done) {
+            frame.reload(done);
         })
 
         it('Hover tooltip', function () {
@@ -25,7 +26,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         it('Check normal position of tooltip', function () {
             helper.hoverOn(tooltip);
             tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position top');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position top');
         });
 
         it('Check top-left position of tooltip', function () {
@@ -34,8 +35,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             tooltip.style.top = 0;
             helper.hoverOn(tooltip);
             tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-bottom'), 'position top');
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-right'), 'position left');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-bottom'), 'position top');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-right'), 'position left');
         });
 
         it('Check top-right position of tooltip', function () {
@@ -44,8 +45,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             tooltip.style.top = 0;
             helper.hoverOn(tooltip);
             tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-bottom'), 'position top');
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-bottom'), 'position top');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
         });
 
         it('Check bottom-left position of tooltip', function () {
@@ -54,8 +55,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             tooltip.style.bottom = 0;
             helper.hoverOn(tooltip);
             tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-right'), 'position left');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-right'), 'position left');
         });
 
         it('Check bottom-right position of tooltip', function () {
@@ -64,8 +65,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             tooltip.style.bottom = 0;
             helper.hoverOn(tooltip);
             tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
-            assert.isOk(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
+            assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
         });
 
     });
