@@ -98,7 +98,7 @@ gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replac
 gulp.task('default', ['docs:watch']);
 
 gulp.task('test', ['docs:serve'], scgulp.karma({
-    browsers: ['Firefox', 'Electron'],
+    browsers: ['Firefox', 'Electron', 'Safari'],
     files: ['quixote.config.js'],
     preprocessors: {
         'quixote.config.js': ['browserify'] //providing browserify to use require in test files
