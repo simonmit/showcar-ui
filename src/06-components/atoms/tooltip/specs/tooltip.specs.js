@@ -4,10 +4,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         var tooltipContent;
 
         beforeEach(function () {
-            // frame.reload(function () {
             tooltip = frame.get('#tooltip as24-tooltip').toDomElement();
-                // done();
-            // });
         })
 
         afterEach(function (done) {
