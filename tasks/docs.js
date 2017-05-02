@@ -7,6 +7,7 @@ module.exports = (gulp) => {
     browserSync.init(null, {
         proxy: 'http://localhost:5000',
         open: false,
+        ghostMode: false,
         port: 3000,
     });
     return new Promise((resolve) => {
