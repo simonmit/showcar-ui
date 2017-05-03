@@ -30,19 +30,26 @@ module.exports = function (frame, assert, browserWidth, helper) {
             assert.include(trigger.innerText, 'Less Content', 'contains');
         });
     });
-    /*describe('Collapse more-less {LAYOUT}', function () {
+    describe('Collapse more-less {LAYOUT}', function () {
+        var trigger;
 
-     afterEach(function (done) {
-     frame.reload(done);
-     })
+        beforeEach(function () {
+            trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
+        })
 
-     it('content is shown under more link', function () {
-     });
+        afterEach(function (done) {
+            frame.reload(done);
+        })
 
-     it('less link is shown under content', function () {
-     helper.click(trigger);
-     });
-     });*/
+        it('less link is shown under content', function () {
+            helper.click(trigger);
+            var content = frame.get('#collapse-more-less div.sc-collapse-target.in');
+            var link = frame.get('#collapse-more-less a.sc-collapse-target.in');
+            content.assert({
+                bottom: link.top
+            });
+        });
+    });
     describe('Collapse toggle {INTERACTION}', function () {
         var trigger;
         var content;
@@ -72,9 +79,24 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
     });
-    /* describe('Toggle {LAYOUT}', function () {
-     // frame.reset();
-     it('content is shown under toggle', function () {
-     });
-     });*/
+    describe('Toggle {LAYOUT}', function () {
+        var trigger;
+
+        beforeEach(function () {
+            trigger = frame.get('#collapse-toggle [data-toggle="sc-collapse"]').toDomElement();
+        })
+
+        afterEach(function (done) {
+            frame.reload(done);
+        })
+
+        it('content is shown under toggle', function () {
+            helper.click(trigger);
+            var content = frame.get('#collapse');
+            var link = frame.get('#collapse-toggle [data-toggle="sc-collapse"]');
+            content.assert({
+                top: link.bottom
+            });
+        });
+    });
 };
