@@ -9,7 +9,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('content is shown after first click', function () {
