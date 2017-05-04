@@ -7,6 +7,7 @@ export default function(tagName) {
         let defaultTitle = titleElement.text();
 
         el.removeClass('sc-open');
+        // TODO: rewrite to click
         el.on('touchstart, mousedown', (e) => {
             e.stopPropagation();
         });
