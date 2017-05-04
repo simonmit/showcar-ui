@@ -9,17 +9,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            function timeOut() {
-                frame.reload(function () {
-                    clearTimeout(timeOutSet);
-                    done();
-                });
-            }
-            timeOut();
-            var timeOutSet = setTimeout(function () {
-                timeOut();
-            }, 10000)
-
+            helper.reload(frame, done)
         })
 
         it('Open lightbox', function () {
