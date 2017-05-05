@@ -32,7 +32,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
                 assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
                 done();
-            }, 1500); //timeout for scrolling
+            }, 4000); //timeout for scrolling
         });
 
         it('Change class by scrolling to the section', function (done) {
@@ -44,7 +44,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
                 assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
                 done();
-            }, 400); //timeout for scrolling
+            }, 4000); //timeout for scrolling
         });
 
     });
