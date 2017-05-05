@@ -1,5 +1,5 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-/*    describe('Spy-navigation', function () {
+    describe('Spy-navigation', function () {
         var spyNavigation;
         var links;
 
@@ -9,7 +9,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('Initial state is non-sticky and inactive', function () {
@@ -47,5 +47,5 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 400); //timeout for scrolling
         });
 
-    });*/
+    });
 };

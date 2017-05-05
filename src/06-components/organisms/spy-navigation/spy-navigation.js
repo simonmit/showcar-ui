@@ -1,6 +1,6 @@
 import { smoothScroll } from '../../../07-utilities/scroll.js';
 
-export default function(config) {
+export default function (config) {
     // This one is needed for check whether active link element has changed or not
     var activeNavItemCache;
     var componentClass = '.sc-spy-navigation';
@@ -18,9 +18,9 @@ export default function(config) {
     var stickElem = document.querySelector(stickElemSelector);
     var links = componentElem.querySelectorAll(linkClass);
 
-    if (!links.length) return;
+    if (! links.length) return;
 
-    var linkTargetPairs = Array.prototype.map.call(links, function(link) {
+    var linkTargetPairs = Array.prototype.map.call(links, function (link) {
         var href = link.getAttribute('data-href');
         var target = document.querySelector('[name="' + href + '"]');
         return { link: link, target: target };
@@ -32,13 +32,13 @@ export default function(config) {
 
     function stick() {
         var navHeight = componentElem.getBoundingClientRect().height;
-        stickElem.style.marginTop = navHeight + 'px';
+        stickElem.style.paddingTop = navHeight + 'px';
         componentElem.classList.add(stickedStateModifier);
     }
 
     function unstick() {
         componentElem.classList.remove(stickedStateModifier);
-        stickElem.style.marginTop = '0px';
+        stickElem.style.paddingTop = '0px';
     }
 
     function defaultStickWhenFn(scrollTop, stickToElem) {
@@ -50,12 +50,12 @@ export default function(config) {
     }
 
     function handleStickiness() {
-        if (!stickElem) return;
+        if (! stickElem) return;
 
         var needToStick = ((config && config.stickPosFn) || defaultStickWhenFn)(window.pageYOffset, stickElem);
         var needToUnstick = ((config && config.unstickPosFn) || defaultUnstickWhen)(window.pageYOffset, stickElem, componentElem);
 
-        if (!componentSticked() && needToStick) {
+        if (! componentSticked() && needToStick) {
             stick();
         } else if (componentSticked() && needToUnstick) {
             unstick();
@@ -80,33 +80,33 @@ export default function(config) {
         var count = elements.length;
         var minWidth = 0;
 
-        Array.prototype.forEach.call(elements, function(element) {
+        Array.prototype.forEach.call(elements, function (element) {
             element.style.width = 'auto';
-            if(element.offsetWidth + toggleIconWidth > minWidth){
+            if (element.offsetWidth + toggleIconWidth > minWidth) {
                 minWidth = element.offsetWidth + toggleIconWidth;
             }
         });
 
         var first = true;
 
-        Array.prototype.forEach.call(elements, function(element) {
+        Array.prototype.forEach.call(elements, function (element) {
             navigationWidth += element.offsetWidth + 10;
 
             if (navigationWidth > containerWidth - toggleWidth && containerWidth >= 768) {
                 toggle.classList.add(toggleVisibleClass);
                 element.style.position = 'absolute';
-                element.style.top = elementY +'px';
+                element.style.top = elementY + 'px';
                 element.style.right = 0;
                 element.style.borderLeft = '1px solid #dcdcdc';
-                element.style.width = minWidth +'px';
+                element.style.width = minWidth + 'px';
                 element.style.padding = '12px 16px';
 
-                if (first){
+                if (first) {
                     first = false;
                     element.style.padding = '20px 16px 12px 16px';
                 }
 
-                if (index === count - 1){
+                if (index === count - 1) {
                     element.style.borderBottom = '1px solid #dcdcdc';
                     element.style.padding = '12px 16px 20px 16px';
                 }
@@ -117,7 +117,7 @@ export default function(config) {
                 element.removeAttribute('style');
             }
 
-            index++;
+            index ++;
         });
     }
 
@@ -126,7 +126,7 @@ export default function(config) {
         const target = document.querySelector('[name="' + targetName + '"]');
 
         if (target) {
-            smoothScroll(target, 300, function() {
+            smoothScroll(target, 300, function () {
                 spyOnHold = false;
                 spyScroll();
             });
@@ -134,29 +134,28 @@ export default function(config) {
     }
 
     function closeNavigation() {
-        if (!componentElem) return;
+        if (! componentElem) return;
 
         componentElem.classList.remove('sc-spy-navigation--expanded');
     }
 
-    var spyScroll = function() {
+    var spyScroll = function () {
         if (spyOnHold) return;
 
         var activeNavItem,
             scrollTop = window.pageYOffset,
             componentHeight = componentElem.getBoundingClientRect().height;
-
-        activeNavItem = linkTargetPairs.filter(function(pair) {
-            if(!pair.target){
+        activeNavItem = linkTargetPairs.filter(function (pair) {
+            if (! pair.target) {
                 throw new Error('Check hash name on target');
             }
-            return pair.target.offsetTop <= scrollTop + componentHeight + 5;
+            return pair.target.getBoundingClientRect().top + (document.body.scrollTop || document.documentElement.scrollTop) <= scrollTop + componentHeight + 5;
         }).pop();
 
         if (activeNavItemCache !== activeNavItem) {
             activeNavItemCache = activeNavItem;
 
-            linkTargetPairs.forEach(function(pair) {
+            linkTargetPairs.forEach(function (pair) {
                 pair.link.classList.remove(activeLinkModifier);
             });
 
@@ -166,11 +165,11 @@ export default function(config) {
         }
     };
 
-    var initMobileToggle = function() {
+    var initMobileToggle = function () {
         var rootEl = document.querySelector(componentClass);
         var toggle = rootEl.querySelector(toggleClass);
 
-        toggle.addEventListener('click', function() {
+        toggle.addEventListener('click', function () {
             rootEl.classList.toggle(expandedStateModifier);
         });
     };
@@ -178,11 +177,11 @@ export default function(config) {
     function debounce(func, wait) {
         var timeout;
 
-        return function() {
+        return function () {
             var context = this, args = arguments;
 
             if (timeout) return;
-            timeout = setTimeout(function() {
+            timeout = setTimeout(function () {
                 func.apply(context, args);
                 clearTimeout(timeout);
                 timeout = null;
@@ -190,8 +189,8 @@ export default function(config) {
         };
     }
 
-    Array.prototype.forEach.call(componentElem.querySelectorAll(linkClass), function(linkEl) {
-        linkEl.addEventListener('click', function(evt) {
+    Array.prototype.forEach.call(componentElem.querySelectorAll(linkClass), function (linkEl) {
+        linkEl.addEventListener('click', function (evt) {
             evt.preventDefault();
             closeNavigation();
             spyOnHold = true;
@@ -201,13 +200,13 @@ export default function(config) {
 
     var debSpyScroll = debounce(spyScroll, 300);
 
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         handleStickiness();
         handleResize();
         debSpyScroll();
     });
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         handleStickiness();
         debSpyScroll();
     });
@@ -215,7 +214,7 @@ export default function(config) {
     handleStickiness();
     spyScroll();
     initMobileToggle();
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         handleResize();
     });
 }
