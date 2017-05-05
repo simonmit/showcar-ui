@@ -126,6 +126,8 @@ class Pager {
         if (this.ETC === pageNumber) {
             tile.data('page', 'etc');
             a.addClass('disabled');
+            a.removeAttr('href');
+            a.attr('rel','nofollow');
         }
 
         if (this.activePage === pageNumber) {
