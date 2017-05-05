@@ -36,17 +36,17 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 1000); //timeout for scrolling
         });*/
 
-        it('Change class by scrolling to the section', function (done) {
-            //as timeout is too long, we must check all behaviours in one test
-            var lastSection = frame.get('a[name="section-4"]').toDomElement();
-            var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
-            lastSection.scrollIntoView(true);
-            setTimeout(function () {
-                assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
-                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
-                done();
-            }, 400); //timeout for scrolling
-        });
+        // it('Change class by scrolling to the section', function (done) {
+        //     //as timeout is too long, we must check all behaviours in one test
+        //     var lastSection = frame.get('a[name="section-4"]').toDomElement();
+        //     var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
+        //     lastSection.scrollIntoView(true);
+        //     setTimeout(function () {
+        //         assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
+        //         assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+        //         done();
+        //     }, 400); //timeout for scrolling
+        // });
 
     });
 };
