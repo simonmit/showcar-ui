@@ -9,7 +9,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('content is shown correctly after first click', function () {
@@ -62,7 +62,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('disabled dropdown is unclickable', function () {
@@ -89,7 +89,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('dropdown with icons have only one choice', function () {
