@@ -21,6 +21,7 @@ module.exports = function (frame, assert) {
             });
         });
     });
+
     describe('Input', function () {
         it('has a proper height', function () {
             var input = frame.get('#input-default input[type=text].sc-input');
@@ -39,6 +40,7 @@ module.exports = function (frame, assert) {
             });
         });
     });
+
     describe('Radio button', function () {
         it('default input is hidden', function () {
             var radioInput = frame.get('#radio-button #as24-radio-1');
@@ -61,6 +63,16 @@ module.exports = function (frame, assert) {
             });
         });
     });
+
+    describe('Default dropdown', function () {
+        it('has proper height', function () {
+            var dropdown = frame.get('#select-box-default select');
+            dropdown.assert({
+                height: 40
+            });
+        });
+    });
+
     describe('Textarea', function () {
         it('is rendered', function () {
             var textarea = frame.get('#textarea');
