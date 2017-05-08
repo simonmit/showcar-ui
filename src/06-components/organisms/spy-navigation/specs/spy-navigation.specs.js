@@ -1,5 +1,5 @@
 module.exports = function (frame, assert, browserWidth, helper) {
-/*    describe('Spy-navigation', function () {
+    describe('Spy-navigation', function () {
         var spyNavigation;
         var links;
 
@@ -9,7 +9,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('Initial state is non-sticky and inactive', function () {
@@ -19,7 +19,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
             }
         });
-
+/*
         it('Sticky behaviour, scroll to anchor and set active tab', function (done) {
             //as timeout is too long, we must check all behaviours in one test
             var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
@@ -28,24 +28,25 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
 
                 var lastSection = frame.get('a[name="section-4"]');
-                assert.equal(Math.floor(lastSection.getRawPosition().top), 0, 'position should be on top');
+                //ie calculates differently than other browsers
+                assert.oneOf(Math.round(lastSection.getRawPosition().top), [- 1, 0, 1], 'position should be on top');
 
                 assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
                 done();
-            }, 1500); //timeout for scrolling
-        });
+            }, 1000); //timeout for scrolling
+        });*/
 
-        it('Change class by scrolling to the section', function (done) {
-            //as timeout is too long, we must check all behaviours in one test
-            var lastSection = frame.get('a[name="section-4"]').toDomElement();
-            var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
-            lastSection.scrollIntoView(true);
-            setTimeout(function () {
-                assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
-                assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
-                done();
-            }, 400); //timeout for scrolling
-        });
+        // it('Change class by scrolling to the section', function (done) {
+        //     //as timeout is too long, we must check all behaviours in one test
+        //     var lastSection = frame.get('a[name="section-4"]').toDomElement();
+        //     var lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
+        //     lastSection.scrollIntoView(true);
+        //     setTimeout(function () {
+        //         assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
+        //         assert.isTrue(helper.hasClass(lastLink, 'sc-spy-navigation__link--active'), 'last link has active class');
+        //         done();
+        //     }, 400); //timeout for scrolling
+        // });
 
-    });*/
+    });
 };

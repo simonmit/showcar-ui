@@ -38,7 +38,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
         })
 
         afterEach(function (done) {
-            frame.reload(done);
+            helper.reload(frame, done)
         })
 
         it('less link is shown under content', function () {
@@ -47,55 +47,6 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var link = frame.get('#collapse-more-less a.sc-collapse-target.in');
             content.assert({
                 bottom: link.top
-            });
-        });
-    });
-    describe('Collapse toggle {INTERACTION}', function () {
-        var trigger;
-        var content;
-
-        beforeEach(function () {
-            trigger = frame.get('#collapse-toggle [data-toggle="sc-collapse"]').toDomElement();
-            content = frame.get('#collapse');
-        })
-
-
-        afterEach(function (done) {
-            frame.reload(done);
-        })
-
-        it('content is shown after first click', function () {
-            helper.click(trigger);
-            content.assert({
-                rendered: true
-            });
-        });
-
-        it('content is hidden after second click', function () {
-            helper.click(trigger);
-            helper.click(trigger); //add one more click
-            content.assert({
-                rendered: false
-            });
-        });
-    });
-    describe('Toggle {LAYOUT}', function () {
-        var trigger;
-
-        beforeEach(function () {
-            trigger = frame.get('#collapse-toggle [data-toggle="sc-collapse"]').toDomElement();
-        })
-
-        afterEach(function (done) {
-            frame.reload(done);
-        })
-
-        it('content is shown under toggle', function () {
-            helper.click(trigger);
-            var content = frame.get('#collapse');
-            var link = frame.get('#collapse-toggle [data-toggle="sc-collapse"]');
-            content.assert({
-                top: link.bottom
             });
         });
     });
