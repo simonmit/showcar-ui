@@ -36,5 +36,25 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 done();
             }, 250); //wait for fadeOut
         });
+
+        it('Close lightbox clicking on overlay', function (done) {
+            helper.click(trigger);
+            var lightboxOverlay = frame.get('.sc-lightbox-overlay').toDomElement();
+            helper.click(lightboxOverlay);
+            setTimeout(function () {
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                done();
+            }, 250); //wait for fadeOut
+        });
+
+        it('Lightbox stays open if click is inside of it', function (done) {
+            helper.click(trigger);
+            var lightboxInput = frame.get('as24-lightbox input').toDomElement();
+            helper.click(lightboxInput);
+            setTimeout(function () {
+                assert.equal(lightbox.getRawStyle('display'), 'block', 'showd be shown');
+                done();
+            }, 250); //wait for fadeOut
+        });
     });
 };
