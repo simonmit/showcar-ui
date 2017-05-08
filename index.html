@@ -3087,43 +3087,43 @@ document.addEventListener('DOMContentLoaded', function() {
             
 <hr></div><div id="spy-navigation-target" class="positon-anchor">
                 <div class="element" id="spy-navigation">
-                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
-
-<p>Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below.
-The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
+                    <div class="markdown"><p><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
 The anchor tag defines the start of the section you want to jump to or select when scrolling there.</p>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    (function($, showcar) {
-        document.querySelector('.sc-spy-navigation').style.marginLeft = '-15px'; // to show on top of menu
-        var stickyYStartPosition = $('.sc-spy-navigation').offset().top;
-        if (document.querySelector('.markdown-sdf')) { //block temporary
-            stickyYStartPosition += 275;
-            var spyNavSample = document.querySelector('#spy-navigation .sample');
-            var spyNavSampleOffsetBottom = spyNavSample.offsetTop + spyNavSample.offsetHeight;
-            document.addEventListener('scroll', function() {
-                if (window.pageYOffset > spyNavSampleOffsetBottom + 250) {
-                    document.querySelector('.sc-spy-navigation').classList.remove('sc-spy-navigation--sticked');
-                    document.querySelector('#page-subnav-stick').style.marginTop = '0px';
-                    showcar.spyNavigation({
-                        stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > 10000000000,
-                        unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= 10000000000
-                    });
-                } else {
-                    showcar.spyNavigation({
-                        stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > stickyYStartPosition,
-                        unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
-                    });
-                }
-            })
-        } else {
-            showcar.spyNavigation({
-                stickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop > stickyYStartPosition,
-                unstickPosFn: (scrollTop, stickToElem, componentElem) => scrollTop <= stickyYStartPosition
-            });
-        }
-    })(window.Zepto, window.showcar);
-})
+  document.addEventListener('DOMContentLoaded', function() {
+
+    function offset(el) {
+      var rect = el.getBoundingClientRect();
+      var posTop = rect.top + (document.body.scrollTop || document.documentElement.scrollTop);
+      return {
+        top: posTop,
+        bottom: posTop + rect.height
+      };
+    }
+
+    var subnav = document.querySelector('#page-subnav-stick');
+    var subnavOffsetTop;
+    var lastElement = document.querySelector('#spy-navigation a[name^="section-"]:last-of-type');
+    var lastElementOfsetBottom;
+
+
+    window.showcar.spyNavigation({
+      stickPosFn: function(scrollTop, stickToElem) {
+        containerOffsetTop = offset(subnav).top;
+        lastElementOfsetBottom = offset(lastElement).bottom +150;
+
+        return scrollTop > containerOffsetTop && scrollTop < lastElementOfsetBottom;
+      },
+
+      unstickPosFn: function(scrollTop, stickToElem, componentElem) {
+        containerOffsetTop = offset(subnav).top;
+        lastElementOfsetBottom = offset(lastElement).bottom +150;
+
+        return scrollTop < containerOffsetTop || scrollTop > lastElementOfsetBottom;
+
+      }
+    });
+  })
 </script>
 </div>
                    <div class="sample"><div id="page-subnav-stick"></div>
