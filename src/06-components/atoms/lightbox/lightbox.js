@@ -15,13 +15,6 @@ export default function (tagName) {
         }
     };
 
-    const touchHandler = e => {
-        const closeTrigger = e.target.closest('[data-lightbox-close]') || !e.target.closest('.sc-lightbox');
-        if (!closeTrigger) { return; }
-        hide();
-    };
-
-    document.documentElement.addEventListener('touchstart', touchHandler);
     document.documentElement.addEventListener('click', clickHandler);
 
     document.addEventListener('keydown', e => {
