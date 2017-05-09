@@ -67,7 +67,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
             helper.click(firstEltrigger);
             setTimeout(function () {
-                assert.equal(secondEl.getRawStyle('background-color'), 'rgba(0, 0, 0, 0)', 'should be transparent');
+                assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
                 assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
                 done();
             }, 500); //wait for transition
