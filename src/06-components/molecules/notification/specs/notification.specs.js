@@ -54,5 +54,18 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 done();
             }, 500); //waiting for animation
         });
+
+        it('notification is sticky', function (done) {
+            helper.click(trigger);
+            var header = frame.get('#small-footer').toDomElement();
+            var notification = frame.get('.sc-notification-container');
+            header.scrollIntoView(true);
+            setTimeout(function () {
+                notification.assert({
+                    top: frame.viewport().top
+                });
+                done();
+            }, 500); //waiting for scrolling
+        });
     });
 };
