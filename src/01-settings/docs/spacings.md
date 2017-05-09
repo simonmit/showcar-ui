@@ -40,5 +40,9 @@ Use the variables only for the spacing and not for other properties like e.g. fo
         <td>$XXXL</td>
         <td>40px</td>
     </tr>
+    <tr>
+        <td>$XXXXL</td>
+        <td>60px</td>
+    </tr>
     </tbody>
 </table>

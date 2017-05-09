@@ -1,5 +1,5 @@
-module.exports = function (frame) {
-    describe('Input groups', function () {
+module.exports = function (frame, assert, browserWidth, helper) {
+    describe('Input groups {LAYOUT}', function () {
         it('are full width', function () {
             var container = frame.get('#separate-content');
             var inputGroup = frame.get('#input-group .sc-input-group');
@@ -49,6 +49,28 @@ module.exports = function (frame) {
             secondEl.assert({
                 right: thirdEl.left
             });
+        });
+
+        it('option 2 is checked by default', function () {
+            var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
+            assert.equal(secondEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
+        });
+    });
+    describe('Input group toggle {INTERACTION}', function () {
+        afterEach(function (done) {
+            helper.reload(frame, done)
+        })
+
+        it('option 1 changes color after click', function (done) {
+            var firstEltrigger = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type').toDomElement();
+            var firstEl = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type');
+            var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
+            helper.click(firstEltrigger);
+            setTimeout(function () {
+                assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
+                assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
+                done();
+            }, 500); //wait for transition
         });
     });
 };
