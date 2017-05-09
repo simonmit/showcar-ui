@@ -14,7 +14,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Open lightbox', function () {
             helper.click(trigger);
-            assert.notEqual(lightbox.getRawStyle('display'), 'none', 'showd be shown');
+            assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
         });
 
         it('Close lightbox using icon', function (done) {
@@ -22,7 +22,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
             helper.click(lightboxCloseIcon);
             setTimeout(function () {
-                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
                 done();
             }, 250); //wait for fadeOut
         });
@@ -32,7 +32,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
             helper.click(lightboxCloseButton);
             setTimeout(function () {
-                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
                 done();
             }, 250); //wait for fadeOut
         });
@@ -42,7 +42,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var lightboxOverlay = frame.get('.sc-lightbox-overlay').toDomElement();
             helper.click(lightboxOverlay);
             setTimeout(function () {
-                assert.equal(lightbox.getRawStyle('display'), 'none', 'showd not be shown');
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
                 done();
             }, 250); //wait for fadeOut
         });
@@ -52,7 +52,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             var lightboxInput = frame.get('as24-lightbox input').toDomElement();
             helper.click(lightboxInput);
             setTimeout(function () {
-                assert.equal(lightbox.getRawStyle('display'), 'block', 'showd be shown');
+                assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
                 done();
             }, 250); //wait for fadeOut
         });
