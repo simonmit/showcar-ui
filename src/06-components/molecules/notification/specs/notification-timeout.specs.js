@@ -20,7 +20,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
                     height: 0
                 });
                 done();
-            }, 3000);
+            }, 3200);
         });
     });
 };
