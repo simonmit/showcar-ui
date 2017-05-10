@@ -1,5 +1,5 @@
-module.exports = function (frame, assert, browserWidth) {
-    describe('Card group', function () {
+module.exports = function (frame, assert, browserWidth, helper) {
+    describe('Card group {LAYOUT}', function () {
         if (browserWidth < 640) {
             it('car element text is centered', function () {
                 var cards = frame.getAll('#card-group .sc-card__image');
@@ -181,6 +181,38 @@ module.exports = function (frame, assert, browserWidth) {
                 eighthCard.assert({
                     top: firstCard.bottom
                 });
+            });
+        }
+    });
+
+    describe('Card group {INTERACTION}', function () {
+        if (browserWidth < 640) {
+
+            beforeEach(function () {
+                link = frame.get('#card-group .sc-cards__show').toDomElement();
+            })
+
+            afterEach(function (done) {
+                helper.reload(frame, done)
+            })
+
+            it('shows hidden cards on click', function () {
+                helper.click(link);
+                var cardList = frame.get('#card-group .sc-cards__list');
+                var forthCard = frame.get('#card-group .sc-card:nth-child(4)');
+                var fifthCard = frame.get('#card-group .sc-card:nth-child(5)');
+                var sixthCard = frame.get('#card-group .sc-card:nth-child(6)');
+
+                fifthCard.assert({
+                    rendered: true,
+                    top: forthCard.bottom,
+                    left: cardList.left
+                });
+                sixthCard.assert({
+                    rendered: true,
+                    top: forthCard.bottom,
+                    right: cardList.right
+                })
             });
         }
     });
