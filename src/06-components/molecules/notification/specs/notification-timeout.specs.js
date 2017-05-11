@@ -6,11 +6,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
         beforeEach(function () {
             container = frame.get('#notification-timeout #example-notification-target-s');
             trigger = frame.get('#notification-timeout [data-id=succ1]').toDomElement();
-        })
+        });
 
         afterEach(function (done) {
             helper.reload(frame, done)
-        })
+        });
 
         it('hides after timeout', function (done) {
             var notification = frame.get('as24-notification#succ1');
