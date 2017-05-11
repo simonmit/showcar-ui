@@ -19,3 +19,14 @@ Atributes of `<as24-notification>` element:
 | close         | true/false                       | defines close button for the notification    |
 | timeout       | value in ms                      | closes notification after [timeout] ms       |
 
+<script>
+document.querySelector('body').addEventListener('click', function (event) {
+ try {
+ if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
+ const id = event.target.getAttribute('data-id');
+ const el = document.querySelector('#' + id);
+ el.classList.toggle('show');
+ }
+ }catch (e){};
+ });
+</script>
