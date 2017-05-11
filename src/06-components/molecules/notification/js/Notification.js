@@ -63,7 +63,6 @@ class Notification {
         var self = this;
         triggerElem.addEventListener('click', function() {
             self.element.classList.toggle('show');
-            self.element.classList.toggle('prefade');
         });
 
         if (this.close) {
