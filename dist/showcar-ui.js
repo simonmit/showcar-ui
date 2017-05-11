@@ -4625,12 +4625,13 @@ var Notification = function () {
             this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
             this.createElement('div', this.container, this.body);
 
-            var triggerElem = document.querySelector('[data-id=' + this.element.id + ']');
-
-            var self = this;
-            triggerElem.addEventListener('click', function () {
-                self.element.classList.toggle('show');
-            });
+            // REMINDER: Include this way of using notifications - currently breaking pages
+            // var triggerElem = document.querySelector('[data-id=' + this.element.id + ']');
+            //
+            // var self = this;
+            // triggerElem.addEventListener('click', function() {
+            //     self.element.classList.toggle('show');
+            // });
 
             if (this.close) {
                 this.closeBtn = this.createCloseButton();

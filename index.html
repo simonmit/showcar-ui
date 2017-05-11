@@ -2514,6 +2514,17 @@ margin-bottom:15px;
 </tr>
 </tbody>
 </table>
+<script>
+document.querySelector('body').addEventListener('click', function (event) {
+ try {
+ if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
+ const id = event.target.getAttribute('data-id');
+ const el = document.querySelector('#' + id);
+ el.classList.toggle('show');
+ }
+ }catch (e){};
+ });
+</script>
 </div>
                      
                 </div>
