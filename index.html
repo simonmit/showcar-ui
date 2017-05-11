@@ -2417,7 +2417,7 @@ margin-bottom:15px;
 </tbody>
 </table>
 <script>
-document.querySelector('body').addEventListener('click', event => {
+document.querySelector('body').addEventListener('click', function (event) {
  try {
  if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
  const id = event.target.getAttribute('data-id');
@@ -2693,44 +2693,86 @@ background-color: #f4f4f4;
                 <div class="element" id="card-group">
                     <div class="markdown"><h2>Card group<span class="status approved">Approved</span></h2>
 </div>
-                   <div class="sample"><span class="sc-cards__list">
-    <div class="sc-card">
-        <a class="sc-card__link">
-            <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
-            <div class="sc-card__label">
-                <div>Cabrio</div>
-                <div class="sc-font-silent">25.556 Angebote</div>
-            </div>
-        </a>
-    </div>
-    <div class="sc-card">
-        <a class="sc-card__link">
-            <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
-            <div class="sc-card__label">
-                <div>Cabrio</div>
-                <div class="sc-font-silent">25.556 Angebote</div>
-            </div>
-        </a>
-    </div>
-    <div class="sc-card">
-        <a class="sc-card__link">
-            <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
-            <div class="sc-card__label">
-                <div>Cabrio</div>
-                <div class="sc-font-silent">25.556 Angebote</div>
-            </div>
-        </a>
-    </div>
-    <div class="sc-card">
-        <a class="sc-card__link">
-            <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
-            <div class="sc-card__label">
-                <div>Cabrio</div>
-                <div class="sc-font-silent">25.556 Angebote</div>
-            </div>
-        </a>
-    </div>
-</span>
+                   <div class="sample"><div class="sc-cards">
+    <input type="checkbox" id="cards-expand-1" class="sc-cards__state">
+    <span class="sc-cards__list">
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+        <div class="sc-card">
+            <a class="sc-card__link">
+                <img class="sc-card__image" src="https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png">
+                <div class="sc-card__label">
+                    <div>Cabrio</div>
+                    <div class="sc-font-silent">25.556 Angebote</div>
+                </div>
+            </a>
+        </div>
+    </span>
+    <label class="sc-cards__show" for="cards-expand-1">
+        <span> Mehr anzeigen </span>
+    </label>
+</div>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -2738,44 +2780,86 @@ background-color: #f4f4f4;
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-card-group" class="hjs html">&lt;span class=&quot;sc-cards__list&quot;&gt;
-    &lt;div class=&quot;sc-card&quot;&gt;
-        &lt;a class=&quot;sc-card__link&quot;&gt;
-            &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
-            &lt;div class=&quot;sc-card__label&quot;&gt;
-                &lt;div&gt;Cabrio&lt;/div&gt;
-                &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-card&quot;&gt;
-        &lt;a class=&quot;sc-card__link&quot;&gt;
-            &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
-            &lt;div class=&quot;sc-card__label&quot;&gt;
-                &lt;div&gt;Cabrio&lt;/div&gt;
-                &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-card&quot;&gt;
-        &lt;a class=&quot;sc-card__link&quot;&gt;
-            &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
-            &lt;div class=&quot;sc-card__label&quot;&gt;
-                &lt;div&gt;Cabrio&lt;/div&gt;
-                &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-card&quot;&gt;
-        &lt;a class=&quot;sc-card__link&quot;&gt;
-            &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
-            &lt;div class=&quot;sc-card__label&quot;&gt;
-                &lt;div&gt;Cabrio&lt;/div&gt;
-                &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-&lt;/span&gt;
+                                <code id="copy_code-code-card-group" class="hjs html">&lt;div class=&quot;sc-cards&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;cards-expand-1&quot; class=&quot;sc-cards__state&quot;&gt;
+    &lt;span class=&quot;sc-cards__list&quot;&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-card&quot;&gt;
+            &lt;a class=&quot;sc-card__link&quot;&gt;
+                &lt;img class=&quot;sc-card__image&quot; src=&quot;https://www.autoscout24.de/assets/external/home/1781/images/slices/alternative-searches/vw-golf.png.pagespeed.ce.XaNx1E3TND.png&quot;&gt;
+                &lt;div class=&quot;sc-card__label&quot;&gt;
+                    &lt;div&gt;Cabrio&lt;/div&gt;
+                    &lt;div class=&quot;sc-font-silent&quot;&gt;25.556 Angebote&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/span&gt;
+    &lt;label class=&quot;sc-cards__show&quot; for=&quot;cards-expand-1&quot;&gt;
+        &lt;span&gt; Mehr anzeigen &lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
 </code>
                             </pre>
                         </div>
