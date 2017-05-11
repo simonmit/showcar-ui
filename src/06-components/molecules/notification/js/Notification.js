@@ -58,6 +58,14 @@ class Notification {
         this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
         this.createElement('div', this.container, this.body);
 
+        var triggerElem = document.querySelector('[data-id=' + this.element.id + ']');
+
+        var self = this;
+        triggerElem.addEventListener('click', function() {
+            self.element.classList.toggle('show');
+            self.element.classList.toggle('prefade');
+        });
+
         if (this.close) {
             this.closeBtn = this.createCloseButton();
         }

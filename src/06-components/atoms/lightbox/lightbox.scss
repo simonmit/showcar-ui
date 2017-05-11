@@ -2,14 +2,27 @@
 @import '../../../02-sass-tools/sass-mq';
 @import '../../../05-layout/grid';
 
-.sc-lightbox {
-  position: fixed;
+as24-lightbox.sc-visible {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.sc-lightbox-content {
+  overflow: scroll;
+  padding: 0 $L;
+}
+
+as24-lightbox {
+  display: none;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: $form-border-radius;
-  padding: $L;
   background-color: $white;
+  padding: $L 0;
+  z-index: 140; // overlay header
+  max-height: calc(100vh - 80px);
 
   @include mqmin($viewportXL) {
     width: 550px;
@@ -21,13 +34,8 @@
 
   @include mqmax($viewportM - 1) {
     width: 288px;
+    max-height: calc(100vh - 120px);
   }
-
-  z-index: 140; // overlay header
-  // box-shadow: 0 0 10000px 10000px rgba(0,0,0,.6);
-
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
 
   h5 {
     font-weight: 700;
@@ -42,15 +50,50 @@
 }
 
 .sc-lightbox-close {
+  $size: 21px;
+  height: $size;
+  width: $size;
+  line-height: $size;
+  display: inline-block;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: -20px;
+  right: -26px;
   width: 16px;
-  fill: #007cca;
+  background: transparent;
+  border: none;
   cursor: pointer;
+
+  &:before, &:after {
+    $width: 21px;
+    $height: 3px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: #fff;
+    transition: all 0.25s ease-out;
+  }
+
+  &:after {
+    transform: rotate(-135deg);
+  }
+  @include mqmin($viewportXL) {
+    &:hover {
+      &:before, &:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 
-.sc-lightbox-overlay {
+.sc-overlay {
+  display: none;
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
@@ -65,20 +108,3 @@
 .sc-fade-in {
   opacity: 1;
 }
-
-// TODO: fix the input centring problem
-// body.sc-lightbox-open {
-//     &::before {
-//         // transform: translateX(0) scaleX(100) scaleY(100);
-//         backface-visibility: hidden;
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         top: 0;
-//         bottom: 0;
-//         z-index: 139;
-//         background-color: rgba(0, 0, 0, 0.6);
-//     }
-// }
