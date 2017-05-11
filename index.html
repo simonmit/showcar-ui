@@ -2514,17 +2514,6 @@ margin-bottom:15px;
 </tr>
 </tbody>
 </table>
-<script>
-document.querySelector('body').addEventListener('click', function (event) {
- try {
- if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
- const id = event.target.getAttribute('data-id');
- const el = document.querySelector('#' + id);
- el.classList.toggle('show');
- }
- }catch (e){};
- });
-</script>
 </div>
                      
                 </div>
@@ -2561,10 +2550,10 @@ document.querySelector('body').addEventListener('click', function (event) {
 </as24-notification>
 
 <div class="sc-text-center">
-    <button class="notification-demo sc-btn-bob" data-id="succ2">Show success note with cross</button>&nbsp;
-    <button class="notification-demo sc-btn-ross" data-id="info2">Toggle info note with cross</button>&nbsp;
-    <button class="notification-demo sc-btn-bob" data-id="error2">Toggle error note with cross</button>&nbsp;
-    <button class="notification-demo sc-btn-ross" data-id="tip2">Toggle tip note with cross</button>
+    <button class="notification-demo sc-btn-bob" data-id="succ2" data-trigger="succ2">Show success note with cross</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="info2" data-trigger="info2">Toggle info note with cross</button>&nbsp;
+    <button class="notification-demo sc-btn-bob" data-id="error2" data-trigger="error2">Toggle error note with cross</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="tip2" data-trigger="tip2">Toggle tip note with cross</button>
 </div>
 </div> 
                     <div class="code-sample">
@@ -2587,10 +2576,10 @@ document.querySelector('body').addEventListener('click', function (event) {
 &lt;/as24-notification&gt;
 
 &lt;div class=&quot;sc-text-center&quot;&gt;
-    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ2&quot;&gt;Show success note with cross&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info2&quot;&gt;Toggle info note with cross&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error2&quot;&gt;Toggle error note with cross&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip2&quot;&gt;Toggle tip note with cross&lt;/button&gt;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ2&quot; data-trigger=&quot;succ2&quot;&gt;Show success note with cross&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info2&quot; data-trigger=&quot;info2&quot;&gt;Toggle info note with cross&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error2&quot; data-trigger=&quot;error2&quot;&gt;Toggle error note with cross&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip2&quot; data-trigger=&quot;tip2&quot;&gt;Toggle tip note with cross&lt;/button&gt;
 &lt;/div&gt;
 </code>
                             </pre>
@@ -2631,10 +2620,10 @@ document.querySelector('body').addEventListener('click', function (event) {
 </as24-notification>
 
 <div class="sc-text-center">
-    <button class="notification-demo sc-btn-bob" data-id="succ1">Show success note (timeout)</button>&nbsp;
-    <button class="notification-demo sc-btn-ross" data-id="info1">Show info note (timeout)</button>&nbsp;
-    <button class="notification-demo sc-btn-bob" data-id="error1">Show error note (timeout)</button>&nbsp;
-    <button class="notification-demo sc-btn-ross" data-id="tip1">Show tip note (timeout)</button>
+    <button class="notification-demo sc-btn-bob" data-id="succ1" data-trigger="succ1">Show success note (timeout)</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="info1" data-trigger="info1">Show info note (timeout)</button>&nbsp;
+    <button class="notification-demo sc-btn-bob" data-id="error1" data-trigger="error1">Show error note (timeout)</button>&nbsp;
+    <button class="notification-demo sc-btn-ross" data-id="tip1" data-trigger="tip1">Show tip note (timeout)</button>
 </div>
 </div> 
                     <div class="code-sample">
@@ -2657,10 +2646,10 @@ document.querySelector('body').addEventListener('click', function (event) {
 &lt;/as24-notification&gt;
 
 &lt;div class=&quot;sc-text-center&quot;&gt;
-    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ1&quot;&gt;Show success note (timeout)&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info1&quot;&gt;Show info note (timeout)&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error1&quot;&gt;Show error note (timeout)&lt;/button&gt;&amp;nbsp;
-    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot;&gt;Show tip note (timeout)&lt;/button&gt;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ1&quot; data-trigger=&quot;succ1&quot;&gt;Show success note (timeout)&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info1&quot; data-trigger=&quot;info1&quot;&gt;Show info note (timeout)&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error1&quot; data-trigger=&quot;error1&quot;&gt;Show error note (timeout)&lt;/button&gt;&amp;nbsp;
+    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot; data-trigger=&quot;tip1&quot;&gt;Show tip note (timeout)&lt;/button&gt;
 &lt;/div&gt;
 </code>
                             </pre>
