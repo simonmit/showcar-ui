@@ -4,8 +4,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
         var lightbox;
 
         beforeEach(function () {
-            trigger = frame.get('#lightbox [data-lightbox-trigger]').toDomElement();
-            lightbox = frame.get('as24-lightbox');
+            lightbox = frame.get('.sc-lightbox-container');
+            trigger = frame.get('.sc-lightbox-open').toDomElement();
         })
 
         afterEach(function (done) {
@@ -19,7 +19,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-            var lightboxCloseIcon = frame.get('as24-lightbox .sc-lightbox-close').toDomElement();
+            var lightboxCloseIcon = frame.get('.sc-lightbox-container .sc-lightbox-close').toDomElement();
             helper.click(lightboxCloseIcon);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -29,7 +29,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-            var lightboxCloseButton = frame.get('as24-lightbox .sc-lightbox-close').toDomElement();
+            var lightboxCloseButton = frame.get('.sc-lightbox-container .sc-lightbox-close').toDomElement();
             helper.click(lightboxCloseButton);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -49,7 +49,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Lightbox stays open if click is inside of it', function (done) {
             helper.click(trigger);
-            var lightboxInput = frame.get('as24-lightbox input').toDomElement();
+            var lightboxInput = frame.get('.sc-lightbox-container input').toDomElement();
             helper.click(lightboxInput);
             setTimeout(function () {
                 assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
