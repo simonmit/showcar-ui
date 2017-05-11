@@ -2,7 +2,7 @@
 @import '../../../02-sass-tools/sass-mq';
 @import '../../../05-layout/grid';
 
-as24-lightbox.sc-visible {
+.sc-lightbox-container.sc-visible {
   display: flex !important;
   flex-direction: column;
 }
@@ -12,7 +12,7 @@ as24-lightbox.sc-visible {
   padding: 0 $L;
 }
 
-as24-lightbox {
+.sc-lightbox-container {
   display: none;
   position: absolute;
   top: 50%;
