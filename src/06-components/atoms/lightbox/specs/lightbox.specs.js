@@ -19,7 +19,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-            var lightboxCloseIcon = frame.get('as24-lightbox as24-icon[data-lightbox-close]').toDomElement();
+            var lightboxCloseIcon = frame.get('as24-lightbox .sc-lightbox-close').toDomElement();
             helper.click(lightboxCloseIcon);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -29,7 +29,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-            var lightboxCloseButton = frame.get('as24-lightbox button[data-lightbox-close]').toDomElement();
+            var lightboxCloseButton = frame.get('as24-lightbox .sc-lightbox-close').toDomElement();
             helper.click(lightboxCloseButton);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -39,7 +39,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox clicking on overlay', function (done) {
             helper.click(trigger);
-            var lightboxOverlay = frame.get('.sc-lightbox-overlay').toDomElement();
+            var lightboxOverlay = frame.get('.sc-overlay').toDomElement();
             helper.click(lightboxOverlay);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
