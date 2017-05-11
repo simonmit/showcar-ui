@@ -1935,15 +1935,64 @@ margin-bottom:15px;
 <li>3) div may contain closing elements. To close modal window by clicking on the element add <code>data-lightbox-close</code> attribute to it.</li>
 </ol>
 </div>
-                   <div class="sample"><a data-id="lightbox-1" data-lightbox-trigger>Try me</a>
+                   <div class="sample"><a data-lightbox-trigger  class="sc-lightbox-open">Try me</a>
 <as24-lightbox id="lightbox-1">
-    <div>
-        <h5 class="sc-lightbox-title">The modal window title</h5><br>
-        <as24-icon type="close" class="sc-lightbox-close" data-lightbox-close></as24-icon>
-        <label>The input label</label><br>
-        <input type="text" class="sc-input" placeholder="share your thoughts with us">
-        <button class="sc-btn-bob sc-btn-block" data-lightbox-close style="margin-top: 16px;">Button bob</button>
-    </div> 
+	<button class="sc-lightbox-close"></button>
+	<div class="sc-lightbox-content">
+		<h5 class="sc-lightbox-title">The modal window title</h5><br>
+		<label>The input label</label><br>
+		<input type="text" class="sc-input" placeholder="share your thoughts with us">
+		<button class="sc-btn-bob sc-btn-block" data-lightbox-close style="margin-top: 16px;">Button bob</button>
+		<div class="cl-price-evaluation-filter__lightbox--content">
+			<link rel="stylesheet"
+				  href="/assets/priceestimation/stylesheets/price-label-explanation-fragment/72c9fb6edde41aff20997fdb93c387da-main.min.css">
+			<div class="pe-evaluation-message">
+				<h2 class="pe-evaluation-message__headline sc-font-bold sc-font-l">
+					Informazioni sulla valutazione
+				</h2>
+				<h3 class="pe-evaluation-message__title">
+					Che cosa offre la valutazione?
+				</h3>
+				<p class="pe-evaluation-message__text">
+					La valutazione del veicolo evidenzia in modo trasparente il rapporto qualità-prezzo di una determinata offerta rispetto
+					a modelli simili. Le offerte particolarmente interessanti sono contrassegnate con le diciture "Super prezzo" o "Ottimo
+					prezzo".
+				</p>
+				<h3 class="pe-evaluation-message__title">
+					Che cosa significa "Super prezzo"?
+				</h3>
+				<p class="pe-evaluation-message__text">
+					Rispetto a offerte di modelli simili il prezzo per questo veicolo presenta un ottimo rapporto qualità-prezzo.
+				</p>
+				<h3 class="pe-evaluation-message__title">
+					Che cosa significa "Ottimo prezzo"?
+				</h3>
+				<p class="pe-evaluation-message__text">
+					Rispetto a offerte di modelli simili il prezzo per questo veicolo presenta un buon rapporto qualità-prezzo.
+				</p>
+				<h3 class="pe-evaluation-message__title">
+					In che modo avviene il confronto?
+				</h3>
+				<p class="pe-evaluation-message__text">
+					La valutazione AutoScout24 confronta ciascun veicolo con offerte simili di privati e aziende attualmente presenti su
+					AutoScout24 o inserite in passato. Tra i criteri di confronto rientrano per esempio la marca, il modello, l'anno di
+					costruzione, i cavalli, il cambio, il chilometraggio e le dotazioni.
+				</p>
+				<h3 class="pe-evaluation-message__title">
+					Quali tecnologie si impiegano?
+				</h3>
+				<p class="pe-evaluation-message__text">
+					Il calcolo si avvale dei più recenti algoritmi dinamici di apprendimento automatico e di oltre 10 milioni di set dati
+					nonché delle conoscenze specifiche dei nostri esperti. Il margine di prezzo così risultante consente di esprimere un
+					giudizio affidabile sul rapporto qualità-prezzo.
+				</p>
+				<p class="pe-evaluation-message__note sc-font-s">
+					*Ai fini della valutazione non vengono presi in considerazione certificati di prova, veicoli incidentati, eventuali
+					potenziamenti e modifiche costruttive né offerte di prezzo evidentemente non realistiche.
+				</p>
+			</div>
+		</div>
+	</div>
 </as24-lightbox>
 </div> 
                     <div class="code-sample">
@@ -1952,15 +2001,64 @@ margin-bottom:15px;
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-lightbox" class="hjs html">&lt;a data-id=&quot;lightbox-1&quot; data-lightbox-trigger&gt;Try me&lt;/a&gt;
+                                <code id="copy_code-code-lightbox" class="hjs html">&lt;a data-lightbox-trigger  class=&quot;sc-lightbox-open&quot;&gt;Try me&lt;/a&gt;
 &lt;as24-lightbox id=&quot;lightbox-1&quot;&gt;
-    &lt;div&gt;
-        &lt;h5 class=&quot;sc-lightbox-title&quot;&gt;The modal window title&lt;/h5&gt;&lt;br&gt;
-        &lt;as24-icon type=&quot;close&quot; class=&quot;sc-lightbox-close&quot; data-lightbox-close&gt;&lt;/as24-icon&gt;
-        &lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;
-        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
-        &lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close style=&quot;margin-top: 16px;&quot;&gt;Button bob&lt;/button&gt;
-    &lt;/div&gt; 
+&Tab;&lt;button class=&quot;sc-lightbox-close&quot;&gt;&lt;/button&gt;
+&Tab;&lt;div class=&quot;sc-lightbox-content&quot;&gt;
+&Tab;&Tab;&lt;h5 class=&quot;sc-lightbox-title&quot;&gt;The modal window title&lt;/h5&gt;&lt;br&gt;
+&Tab;&Tab;&lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;
+&Tab;&Tab;&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
+&Tab;&Tab;&lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close style=&quot;margin-top: 16px;&quot;&gt;Button bob&lt;/button&gt;
+&Tab;&Tab;&lt;div class=&quot;cl-price-evaluation-filter__lightbox--content&quot;&gt;
+&Tab;&Tab;&Tab;&lt;link rel=&quot;stylesheet&quot;
+&Tab;&Tab;&Tab;&Tab;  href=&quot;/assets/priceestimation/stylesheets/price-label-explanation-fragment/72c9fb6edde41aff20997fdb93c387da-main.min.css&quot;&gt;
+&Tab;&Tab;&Tab;&lt;div class=&quot;pe-evaluation-message&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h2 class=&quot;pe-evaluation-message__headline sc-font-bold sc-font-l&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Informazioni sulla valutazione
+&Tab;&Tab;&Tab;&Tab;&lt;/h2&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;pe-evaluation-message__title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Che cosa offre la valutazione?
+&Tab;&Tab;&Tab;&Tab;&lt;/h3&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__text&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;La valutazione del veicolo evidenzia in modo trasparente il rapporto qualit&agrave;-prezzo di una determinata offerta rispetto
+&Tab;&Tab;&Tab;&Tab;&Tab;a modelli simili. Le offerte particolarmente interessanti sono contrassegnate con le diciture &quot;Super prezzo&quot; o &quot;Ottimo
+&Tab;&Tab;&Tab;&Tab;&Tab;prezzo&quot;.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;pe-evaluation-message__title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Che cosa significa &quot;Super prezzo&quot;?
+&Tab;&Tab;&Tab;&Tab;&lt;/h3&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__text&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Rispetto a offerte di modelli simili il prezzo per questo veicolo presenta un ottimo rapporto qualit&agrave;-prezzo.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;pe-evaluation-message__title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Che cosa significa &quot;Ottimo prezzo&quot;?
+&Tab;&Tab;&Tab;&Tab;&lt;/h3&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__text&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Rispetto a offerte di modelli simili il prezzo per questo veicolo presenta un buon rapporto qualit&agrave;-prezzo.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;pe-evaluation-message__title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;In che modo avviene il confronto?
+&Tab;&Tab;&Tab;&Tab;&lt;/h3&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__text&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;La valutazione AutoScout24 confronta ciascun veicolo con offerte simili di privati e aziende attualmente presenti su
+&Tab;&Tab;&Tab;&Tab;&Tab;AutoScout24 o inserite in passato. Tra i criteri di confronto rientrano per esempio la marca, il modello, l&apos;anno di
+&Tab;&Tab;&Tab;&Tab;&Tab;costruzione, i cavalli, il cambio, il chilometraggio e le dotazioni.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;pe-evaluation-message__title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Quali tecnologie si impiegano?
+&Tab;&Tab;&Tab;&Tab;&lt;/h3&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__text&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;Il calcolo si avvale dei pi&ugrave; recenti algoritmi dinamici di apprendimento automatico e di oltre 10 milioni di set dati
+&Tab;&Tab;&Tab;&Tab;&Tab;nonch&eacute; delle conoscenze specifiche dei nostri esperti. Il margine di prezzo cos&igrave; risultante consente di esprimere un
+&Tab;&Tab;&Tab;&Tab;&Tab;giudizio affidabile sul rapporto qualit&agrave;-prezzo.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;p class=&quot;pe-evaluation-message__note sc-font-s&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;*Ai fini della valutazione non vengono presi in considerazione certificati di prova, veicoli incidentati, eventuali
+&Tab;&Tab;&Tab;&Tab;&Tab;potenziamenti e modifiche costruttive n&eacute; offerte di prezzo evidentemente non realistiche.
+&Tab;&Tab;&Tab;&Tab;&lt;/p&gt;
+&Tab;&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
 &lt;/as24-lightbox&gt;
 </code>
                             </pre>
@@ -2416,17 +2514,6 @@ margin-bottom:15px;
 </tr>
 </tbody>
 </table>
-<script>
-document.querySelector('body').addEventListener('click', function (event) {
- try {
- if (event.target.className && event.target.className.toLowerCase().includes('notification-demo')) {
- const id = event.target.getAttribute('data-id');
- const el = document.querySelector('#' + id);
- el.classList.toggle('show');
- }
- }catch (e){};
- });
-</script>
 </div>
                      
                 </div>
