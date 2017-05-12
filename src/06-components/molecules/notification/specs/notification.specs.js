@@ -58,20 +58,20 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 1000); //waiting for animation
         });
 
-        // it('notification is sticky', function (done) {
-        //     helper.click(trigger);
-        //
-        //     var smallFooter = frame.get('#small-footer');
-        //     smallFooter.toDomElement().scrollIntoView();
-        //
-        //     setTimeout(function () {
-        //         var notification = frame.get('.sc-notification-container');
-        //         var viewport = frame.viewport();
-        //         notification.assert({
-        //             top: viewport.top
-        //         });
-        //         done();
-        //     }, 1000); //waiting for scrolling
-        // });
+        it('notification is sticky', function (done) {
+            helper.click(trigger);
+
+            var smallFooter = frame.get('#small-footer');
+            smallFooter.toDomElement().scrollIntoView();
+
+            setTimeout(function () {
+                var notification = frame.get('.sc-notification-container');
+                var viewport = frame.viewport();
+                notification.assert({
+                    top: viewport.top
+                });
+                done();
+            }, 1000); //waiting for scrolling
+        });
     });
 };
