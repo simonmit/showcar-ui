@@ -38,6 +38,7 @@ export default function (tagName) {
 
     const hide = (lb, e) => {
         e.stopPropagation();
+        e.preventDefault();
         if (e.target === lb.overlay || e.target === lb.close) {
             lb.container.classList.remove('sc-visible');
             lb.parent.appendChild(lb.container);
