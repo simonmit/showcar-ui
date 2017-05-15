@@ -15,7 +15,6 @@
   @if $direction == 'left' {
     transform: rotate(90deg);
     height: 8px;
-    margin-left: 3px; //adjust to match minimal text offset of following h1
   }
 
   @if $direction == 'right' {

@@ -116,7 +116,8 @@ select {
   font-weight: 600; }
 
 .sc-font-uppercase {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.5px; }
 
 .sc-font-error {
   color: #d51500;
@@ -2517,8 +2518,7 @@ input[type='checkbox'].sc-input {
       -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
               transform: rotate(90deg);
-      height: 8px;
-      margin-left: 3px; }
+      height: 8px; }
     @media all and (min-width: 500px) {
       .sc-breadcrumbs li {
         display: inline-block; }
@@ -2559,8 +2559,7 @@ input[type='checkbox'].sc-input {
           -webkit-transform: rotate(90deg);
               -ms-transform: rotate(90deg);
                   transform: rotate(90deg);
-          height: 8px;
-          margin-left: 3px; }
+          height: 8px; }
         .sc-breadcrumbs--viewport-s li:after {
           display: none; }
         .sc-breadcrumbs--viewport-s li:last-child {

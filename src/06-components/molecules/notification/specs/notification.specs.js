@@ -11,7 +11,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         afterEach(function (done) {
             helper.reload(frame, done)
-        })
+        });
 
         it('shows on click', function (done) {
             helper.click(trigger);
@@ -58,20 +58,21 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 1000); //waiting for animation
         });
 
+        // not working on Mobile Safari
         // it('notification is sticky', function (done) {
-        //     // var scrollPoint = frame.get('#notification-closable').toDomElement();
-        //     // scrollPoint.scrollIntoView(true);
         //     helper.click(trigger);
-        //     var header = frame.get('#small-footer').toDomElement();
-        //     header.scrollIntoView(true);
-        //     // header.scrollIntoViewIfNeeded(true);
+
+        //     var smallFooter = frame.get('#small-footer');
+        //     smallFooter.toDomElement().scrollIntoView();
+
         //     setTimeout(function () {
         //         var notification = frame.get('.sc-notification-container');
+        //         var viewport = frame.viewport();
         //         notification.assert({
-        //             top: frame.viewport().top.plus(10)
+        //             top: viewport.top
         //         });
         //         done();
-        //     }, 2000); //waiting for scrolling
+        //     }, 1000); //waiting for scrolling
         // });
     });
 };

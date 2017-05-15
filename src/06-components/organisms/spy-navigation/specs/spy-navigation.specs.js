@@ -2,12 +2,12 @@ module.exports = function (frame, assert, browserWidth, helper) {
     describe('Spy-navigation', function () {
         var spyNavigation;
         var links;
-
+        
         beforeEach(function () {
             spyNavigation = frame.get('.sc-spy-navigation');
             links = frame.getAll('.sc-spy-navigation__link');
         })
-
+        
         afterEach(function (done) {
             helper.reload(frame, done)
         })
@@ -19,6 +19,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
                 assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
             }
         });
+
+// Flaky.
 /*
         it('Sticky behaviour, scroll to anchor and set active tab', function (done) {
             //as timeout is too long, we must check all behaviours in one test

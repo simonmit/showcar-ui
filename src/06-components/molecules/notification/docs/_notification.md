@@ -5,7 +5,9 @@ To add notifications you need 3 elements on your page:
 
 * `<as24-notification>` element that contains notification message. Should have `type`, `id` and `target` attributes. `target` should match the id of target container element  
 
-* clickable element, that triggers notification to show. Should have `data-id` that reference id of `<as24-notification>`
+* clickable element, that triggers notification to show. Should have `data-trigger` that reference id of `<as24-notification>`
+
+* `data-id` attribute in clickable element is deprecated, use `data-trigger` instead
 
 Atributes of `<as24-notification>` element:  
 <br>
