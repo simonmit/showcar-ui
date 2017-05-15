@@ -1,24 +1,26 @@
 module.exports = function (frame, assert, browserWidth, helper) {
     describe('Spy-navigation', function () {
-        // var spyNavigation;
-        // var links;
-        //
-        // beforeEach(function () {
-        //     spyNavigation = frame.get('.sc-spy-navigation');
-        //     links = frame.getAll('.sc-spy-navigation__link');
-        // })
-        //
-        // afterEach(function (done) {
-        //     helper.reload(frame, done)
-        // })
+        var spyNavigation;
+        var links;
+        
+        beforeEach(function () {
+            spyNavigation = frame.get('.sc-spy-navigation');
+            links = frame.getAll('.sc-spy-navigation__link');
+        })
+        
+        afterEach(function (done) {
+            helper.reload(frame, done)
+        })
 
-        // it('Initial state is non-sticky and inactive', function () {
-        //     assert.equal(spyNavigation.getRawStyle('position'), 'relative', 'position should be relative');
-        //     assert(links.length() > 0, 'we have no links on page');
-        //     for (var i = 0; i < links.length() - 1; i ++) {
-        //         assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
-        //     }
-        // });
+        it('Initial state is non-sticky and inactive', function () {
+            assert.equal(spyNavigation.getRawStyle('position'), 'relative', 'position should be relative');
+            assert(links.length() > 0, 'we have no links on page');
+            for (var i = 0; i < links.length() - 1; i ++) {
+                assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
+            }
+        });
+
+// Flaky.
 /*
         it('Sticky behaviour, scroll to anchor and set active tab', function (done) {
             //as timeout is too long, we must check all behaviours in one test
