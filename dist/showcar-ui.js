@@ -3104,9 +3104,9 @@ module.exports.Zepto = Zepto;
     }
 
     function show(tt) {
-        document.body.appendChild(tt.content);
         clearTimeout(tt.timeoutID);
         if (tt.shown === true) return;
+        document.body.appendChild(tt.content);
         tt.content.classList.add('sc-tooltip-shown');
         setTimeout(function () {
             return tt.content.classList.add('sc-fade-in');
