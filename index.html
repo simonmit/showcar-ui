@@ -2479,7 +2479,9 @@ margin-bottom:15px;
 </li>
 <li><p><code>&lt;as24-notification&gt;</code> element that contains notification message. Should have <code>type</code>, <code>id</code> and <code>target</code> attributes. <code>target</code> should match the id of target container element  </p>
 </li>
-<li><p>clickable element, that triggers notification to show. Should have <code>data-id</code> that reference id of <code>&lt;as24-notification&gt;</code></p>
+<li><p>clickable element, that triggers notification to show. Should have <code>data-trigger</code> that reference id of <code>&lt;as24-notification&gt;</code></p>
+</li>
+<li><p><code>data-id</code> attribute in clickable element is deprecated, use <code>data-trigger</code> instead</p>
 </li>
 </ul>
 <p>Atributes of <code>&lt;as24-notification&gt;</code> element:<br><br></p>
