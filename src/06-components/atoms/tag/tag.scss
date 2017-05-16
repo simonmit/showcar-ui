@@ -17,8 +17,8 @@
   border: 1px solid $black-30;
   background-color: $black-20;
   border-radius: 3px;
-  margin: 2px 4px 2px 0;
-  padding-left: 8px;
+  margin: 2px $XS 2px 0;
+  padding-left: $S;
 
   &__label {
     display: inline-block;
@@ -26,15 +26,15 @@
 
   &__close {
     display: inline-block;
-    padding: 4px 8px 4px 4px;
+    padding: $XS $S $XS $XS;
     cursor: pointer;
 
     & svg {
-      width: 8px;
-      height: 8px;
+      width: $S;
+      height: $S;
       position: relative;
-      fill: #007cca;
-      stroke: #007cca;
+      fill: $color-link;
+      stroke: $color-link;
     }
   }
 
