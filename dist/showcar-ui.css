@@ -2391,6 +2391,51 @@ input[type='checkbox'].sc-input {
   /* stylelint-disable-line property-no-vendor-prefix */
   margin: 0; }
 
+@-webkit-keyframes closing {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  10% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2); }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+@keyframes closing {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  10% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2); }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+.sc-tag {
+  display: inline-block;
+  border: 1px solid #dcdcdc;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0;
+  padding-left: 8px; }
+  .sc-tag__label {
+    display: inline-block; }
+  .sc-tag__close {
+    display: inline-block;
+    padding: 4px 8px 4px 4px;
+    cursor: pointer; }
+    .sc-tag__close svg {
+      width: 8px;
+      height: 8px;
+      position: relative;
+      fill: #007cca;
+      stroke: #007cca; }
+  .sc-tag.closing {
+    -webkit-animation: closing 0.5s 1 normal ease-in-out;
+            animation: closing 0.5s 1 normal ease-in-out; }
+
 /**
  * Adapted from:
  * Responsive Tooltip for Zepto - CodePen - by David Kerns
