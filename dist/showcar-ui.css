@@ -3540,8 +3540,8 @@ as24-notification {
     overflow: hidden;
     border: 1px solid #dcdcdc;
     border-radius: 4px;
-    -webkit-transition: border .3s ease;
-    transition: border .3s ease;
+    -webkit-transition: border .3s ease, color 0.2s ease-in;
+    transition: border .3s ease, color 0.2s ease-in;
     margin-top: 16px;
     margin-left: 16px; }
     .sc-card__link:hover {
