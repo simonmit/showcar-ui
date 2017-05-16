@@ -382,6 +382,13 @@
         "html": "\"<div class=\\\"sc-stepper\\\">\\n    <button class=\\\"sc-stepper-button sc-stepper-button-decrement\\\">-</button>\\n    <input type=\\\"number\\\" value=\\\"0\\\" class=\\\"sc-stepper-input\\\" min=\\\"0\\\" max=\\\"10\\\" step=\\\"1\\\"/>\\n    <button class=\\\"sc-stepper-button sc-stepper-button-increment\\\">+</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-stepper&quot;&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;\\n    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
+    "table": {
+        "name": "table",
+        "type": "atoms",
+        "group": "table",
+        "srcDir": "src/06-components/atoms/table/docs",
+        "markDown": "\"<p><h2>Table<span class=\\\"status deprecated\\\">Not yet implemented</span></h2>\\nThis element is not yet implemented. It will look like this:</p>\\n<p><h3>S viewport:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/elements/atom_table_S.png\\\" alt=\\\"showcar-table\\\" width=\\\"\\\"></p>\\n<p><h3>L viewport:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/elements/atom_table_L.png\\\" alt=\\\"showcar-table\\\"></p>\\n\""
+    },
     "tag": {
         "name": "tag",
         "type": "atoms",
