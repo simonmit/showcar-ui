@@ -1,0 +1,44 @@
+@import '../../../01-settings/variables';
+
+@keyframes closing {
+  0% {
+    transform: scale(1,1);
+  }
+  10% {
+    transform: scale(1.2,1.2);
+  }
+  100% {
+    transform: scale(0,0);
+  }
+}
+
+.sc-tag {
+  display: inline-block;
+  border: 1px solid $black-30;
+  background-color: $black-20;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0;
+  padding-left: 8px;
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__close {
+    display: inline-block;
+    padding: 4px 8px 4px 4px;
+    cursor: pointer;
+
+    & svg {
+      width: 8px;
+      height: 8px;
+      position: relative;
+      fill: #007cca;
+      stroke: #007cca;
+    }
+  }
+
+  &.closing {
+    animation: closing 0.5s 1 normal ease-in-out;
+  }
+}

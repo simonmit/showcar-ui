@@ -50,6 +50,10 @@ tooltip2('as24-tooltip');
 import lightbox from './06-components/atoms/lightbox/lightbox';
 lightbox('as24-lightbox');
 
+// tag
+import tag from './06-components/atoms/tag/tag';
+tag();
+
 // navigation
 import navigation from './06-components/organisms/navigation/navigation';
 // Loading on document ready. Otherwise the navigation does not work in IE11.
