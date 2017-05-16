@@ -1156,6 +1156,17 @@ custom-dropdown as24-icon {
     width: 22px;
     height: 22px; }
 
+.sc-highlight {
+  display: inline-block;
+  background-color: #e6f5cf;
+  vertical-align: middle;
+  padding: 4px 8px;
+  margin: 2px 1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%; }
+
 .sc-inlined-info {
   position: relative; }
 
