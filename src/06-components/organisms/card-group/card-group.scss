@@ -30,7 +30,7 @@ $breakpoint-XL: 1099;
     overflow: hidden;
     border: 1px solid $black-30;
     border-radius: $XS;
-    transition: border .3s ease;
+    transition: border .3s ease, color 0.2s ease-in;
     margin-top: $L;
     margin-left: $L;
 
