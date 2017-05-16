@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 25);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -836,7 +836,7 @@ function registerSmoothScrolling() {
 		rAF: rAF
 	};
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)(module)))
 
 /***/ }),
 /* 3 */
@@ -850,9 +850,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var stores = {
-    local: __webpack_require__(18),
-    session: __webpack_require__(19),
-    cookie: __webpack_require__(17)
+    local: __webpack_require__(19),
+    session: __webpack_require__(20),
+    cookie: __webpack_require__(18)
 };
 
 var Storage = function () {
@@ -2959,6 +2959,32 @@ module.exports.Zepto = Zepto;
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = (function () {
     window.addEventListener('DOMContentLoaded', function () {
+        Array.prototype.forEach.call(document.querySelectorAll('.sc-tag'), function (tag) {
+            var tagClose = tag.querySelector('.sc-tag__close');
+            var parentNode = tag.parentNode;
+
+            tag.addEventListener('animationend', function () {
+                if (parentNode) {
+                    parentNode.removeChild(tag);
+                } else {
+                    console.warn('No parentNode found for tag element - ', tag);
+                }
+            });
+
+            tagClose.addEventListener('click', function () {
+                tag.classList.toggle('closing');
+            });
+        });
+    });
+});
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+    window.addEventListener('DOMContentLoaded', function () {
         var $target = $('as24-icon[title]');
         if (!$target.length) return;
         var $tooltip = $('<div class="sc-font-s tooltip tooltip-top tooltip-hidden"></div>');
@@ -3040,7 +3066,7 @@ module.exports.Zepto = Zepto;
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3159,12 +3185,12 @@ module.exports.Zepto = Zepto;
 });
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__07_utilities_helpers_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_ContainerHandler__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_ContainerHandler__ = __webpack_require__(23);
 
 
 
@@ -3192,7 +3218,7 @@ module.exports.Zepto = Zepto;
 });
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3522,7 +3548,7 @@ var Navigation = function () {
 });
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3852,7 +3878,7 @@ var Pager = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Pager);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4078,7 +4104,7 @@ var Pager = function () {
 });
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4152,7 +4178,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4193,7 +4219,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4234,7 +4260,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = function (module) {
@@ -4261,7 +4287,7 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4423,12 +4449,12 @@ var Container = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Container);
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Notification__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Container__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Notification__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Container__ = __webpack_require__(22);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4578,7 +4604,7 @@ var ContainerHandler = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ContainerHandler);
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4745,26 +4771,27 @@ var Notification = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Notification);
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__06_components_atoms_custom_dropdown_custom_dropdown__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__06_components_organisms_pagination_pagination__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__06_components_organisms_spy_navigation_spy_navigation__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__06_components_organisms_pagination_pagination__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__06_components_organisms_spy_navigation_spy_navigation__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__05_layout_sticky_sticky__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__06_components_atoms_rotating_arrow_rotating_arrow__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__06_components_atoms_collapse_collapse__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__06_components_atoms_stepper_stepper__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__06_components_atoms_tooltip_old_tooltip_old__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__06_components_atoms_tooltip_tooltip__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__06_components_atoms_tooltip_old_tooltip_old__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__06_components_atoms_tooltip_tooltip__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__06_components_atoms_lightbox_lightbox__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__06_components_organisms_navigation_navigation__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__06_components_molecules_notification_notification__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__07_utilities_scroll__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_lazysizes__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_lazysizes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_lazysizes__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__06_components_atoms_tag_tag__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__06_components_organisms_navigation_navigation__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__06_components_molecules_notification_notification__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__07_utilities_scroll__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_lazysizes__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_lazysizes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_lazysizes__);
 // Todo: remove Zepto
 if (!window.jQuery) window.$ = window.Zepto = __webpack_require__(4).$;
 
@@ -4819,25 +4846,29 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__06_components_atoms_tooltip_t
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__06_components_atoms_lightbox_lightbox__["a" /* default */])('as24-lightbox');
 
+// tag
+
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__06_components_atoms_tag_tag__["a" /* default */])();
+
 // navigation
 
 // Loading on document ready. Otherwise the navigation does not work in IE11.
 document.addEventListener('DOMContentLoaded', function () {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__06_components_organisms_navigation_navigation__["a" /* default */])();
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__06_components_organisms_navigation_navigation__["a" /* default */])();
 });
 
 // notification
  // TODO: question for the guild
 // TODO do we still need it?
 if (!window.notification) {
-    window.notification = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__06_components_molecules_notification_notification__["a" /* default */])('as24-notification');
+    window.notification = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__06_components_molecules_notification_notification__["a" /* default */])('as24-notification');
 } else {
     warn('window.notification is already registered.');
 }
 
 //Scroll
 
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__07_utilities_scroll__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_13__07_utilities_scroll__["a" /* default */])();
 
 // storage
 window.Storage = __webpack_require__(3);
