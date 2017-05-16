@@ -1,0 +1,13 @@
+@import '../../../01-settings/variables';
+
+.sc-highlight {
+  display: inline-block;
+  background-color: $color-success-message;
+  vertical-align: middle;
+  padding: $XS $S;
+  margin: 2px 1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
