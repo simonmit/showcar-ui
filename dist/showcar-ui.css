@@ -1914,7 +1914,7 @@ input[type='checkbox'].sc-input {
           flex-direction: column; }
 
 .sc-lightbox-content {
-  overflow: scroll;
+  overflow: auto;
   padding: 0 16px; }
 
 .sc-lightbox-container {
