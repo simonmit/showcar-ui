@@ -1957,42 +1957,36 @@ input[type='checkbox'].sc-input {
       overflow-y: hidden; } }
 
 .sc-lightbox-close {
-  height: 21px;
-  width: 21px;
-  line-height: 21px;
+  height: 32px;
+  width: 32px;
+  line-height: 20px;
+  padding: 8px;
   display: inline-block;
   position: absolute;
-  top: -20px;
-  right: -26px;
-  background: transparent;
-  border: none;
+  top: 16px;
+  right: 16px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
   cursor: pointer;
-  /* stylelint-disable-next-line length-zero-no-unit */ }
-  .sc-lightbox-close:before, .sc-lightbox-close:after {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -1.5px;
-    margin-left: -10.5px;
-    display: block;
-    height: 3px;
-    width: 21px;
-    background-color: #fff;
-    -webkit-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out; }
-  .sc-lightbox-close:after {
-    -webkit-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
-            transform: rotate(-135deg); }
-  @media all and (min-width: 1100px) {
-    .sc-lightbox-close:hover:before, .sc-lightbox-close:hover:after {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+  border-radius: 4px;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+
+.sc-lightbox-close as24-icon {
+  pointer-events: none; }
+
+.sc-lightbox-close svg {
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+  fill: #949494;
+  width: 12px;
+  height: 12px; }
+
+.sc-lightbox-close:hover {
+  border-color: #4c4c4c; }
+
+.sc-lightbox-close:hover svg {
+  fill: #4c4c4c; }
 
 .sc-overlay {
   display: none;
