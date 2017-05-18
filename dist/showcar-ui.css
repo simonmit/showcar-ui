@@ -1971,22 +1971,33 @@ input[type='checkbox'].sc-input {
   border-radius: 4px;
   -webkit-transition: border-color .2s;
   transition: border-color .2s; }
-
-.sc-lightbox-close as24-icon {
-  pointer-events: none; }
-
-.sc-lightbox-close svg {
-  -webkit-transition: fill .2s;
-  transition: fill .2s;
-  fill: #949494;
-  width: 12px;
-  height: 12px; }
+  .sc-lightbox-close:before, .sc-lightbox-close:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -10.5px;
+    display: block;
+    height: 2px;
+    width: 21px;
+    background-color: #dcdcdc;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out; }
+  .sc-lightbox-close:after {
+    -webkit-transform: rotate(-133deg);
+        -ms-transform: rotate(-133deg);
+            transform: rotate(-133deg); }
 
 .sc-lightbox-close:hover {
   border-color: #4c4c4c; }
 
-.sc-lightbox-close:hover svg {
-  fill: #4c4c4c; }
+.sc-lightbox-close:hover:before,
+.sc-lightbox-close:hover:after {
+  background-color: #4c4c4c; }
 
 .sc-overlay {
   display: none;
