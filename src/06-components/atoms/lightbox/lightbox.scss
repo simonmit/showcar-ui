@@ -63,26 +63,36 @@
   cursor: pointer;
   border-radius: $XS;
   transition: border-color .2s;
-}
 
-.sc-lightbox-close as24-icon {
-  pointer-events: none;
-}
+  &:before, &:after {
+    $width: 21px;
+    $height: 2px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: $black-30;
+    transition: all 0.25s ease-out;
+  }
 
-.sc-lightbox-close svg {
-
-  transition: fill .2s;
-  fill: $black-60;
-  width: $M;
-  height: $M;
+  &:after {
+    transform: rotate(-133deg);
+  }
 }
 
 .sc-lightbox-close:hover {
   border-color: $black-90;
 }
 
-.sc-lightbox-close:hover svg {
-  fill: $black-90;
+.sc-lightbox-close:hover:before,
+.sc-lightbox-close:hover:after {
+  background-color: $black-90;
 }
 
 .sc-overlay {
