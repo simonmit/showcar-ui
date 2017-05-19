@@ -78,5 +78,23 @@
 #3ad<br>$color-highlight-info
 </div>
 </div>
+</div><div class="ndpl-component__color-container">
+<div class="ndpl-component__color" style="background-color: rgb(0, 124, 202);">
+<div>
+#007cca<br>$color-link
+</div>
+</div>
+</div><div class="ndpl-component__color-container">
+<div class="ndpl-component__color" style="background-color: rgb(30, 76, 122);">
+<div>
+#1e4c7a<br>$color-link-hover
+</div>
+</div>
+</div><div class="ndpl-component__color-container">
+<div class="ndpl-component__color" style="background-color: rgb(0, 52, 104);">
+<div>
+#003468<br>$color-link-active
+</div>
+</div>
 </div>
 </div>
