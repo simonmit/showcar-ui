@@ -2883,13 +2883,10 @@ module.exports.Zepto = Zepto;
         }, false);
 
         // TODO: remove later
-        var closeIcon = this.querySelector('.sc-lightbox__close as24-icon');
+        var closeIcon = this.querySelector('.sc-lightbox-close as24-icon');
 
         if (!closeIcon) {
-            var closeButton = this.querySelector('.sc-lightbox__close');
-
-            if (!closeButton) return;
-
+            var closeButton = this.querySelector('.sc-lightbox-close');
             var close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
             closeButton.appendChild(close);
