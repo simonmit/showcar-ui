@@ -4,13 +4,13 @@ module.exports = function (frame, assert, browserWidth, helper) {
         var lightbox;
 
         beforeEach(function () {
-            lightbox = frame.get('.sc-lightbox-container');
-            trigger = frame.get('.sc-lightbox-open').toDomElement();
-        })
+            lightbox = frame.get('.sc-lightbox__container');
+            trigger = frame.get('[data-lightbox-open="lb1"]').toDomElement();
+        });
 
         afterEach(function (done) {
             helper.reload(frame, done)
-        })
+        });
 
         it('Open lightbox', function () {
             helper.click(trigger);
@@ -19,7 +19,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using icon', function (done) {
             helper.click(trigger);
-            var lightboxCloseIcon = frame.get('.sc-lightbox-container .sc-lightbox-close').toDomElement();
+            var lightboxCloseIcon = frame.getAll('.sc-lightbox__container [data-lightbox-close]').at(0).toDomElement();
             helper.click(lightboxCloseIcon);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -29,7 +29,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Close lightbox using button', function (done) {
             helper.click(trigger);
-            var lightboxCloseButton = frame.get('.sc-lightbox-container .sc-lightbox-close').toDomElement();
+            var lightboxCloseButton = frame.getAll('.sc-lightbox__container [data-lightbox-close]').at(0).toDomElement();
             helper.click(lightboxCloseButton);
             setTimeout(function () {
                 assert.equal(lightbox.getRawStyle('display'), 'none', 'should not be shown');
@@ -49,7 +49,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Lightbox stays open if click is inside of it', function (done) {
             helper.click(trigger);
-            var lightboxInput = frame.get('.sc-lightbox-container input').toDomElement();
+            var lightboxInput = frame.get('.sc-lightbox__container input').toDomElement();
             helper.click(lightboxInput);
             setTimeout(function () {
                 assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
