@@ -46,9 +46,6 @@ export default function (tagName) {
 
         if (!closeIcon) {
             const closeButton = this.querySelector('.sc-lightbox-close');
-
-            if (!closeButton) return;
-
             const close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
             closeButton.appendChild(close);
