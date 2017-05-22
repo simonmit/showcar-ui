@@ -42,10 +42,10 @@ export default function (tagName) {
         lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
 
         // TODO: remove later
-        const closeIcon = this.querySelector('.sc-lightbox__close as24-icon');
+        const closeIcon = this.querySelector('.sc-lightbox-close as24-icon');
 
         if (!closeIcon) {
-            const closeButton = this.querySelector('.sc-lightbox__close');
+            const closeButton = this.querySelector('.sc-lightbox-close');
 
             if (!closeButton) return;
 
