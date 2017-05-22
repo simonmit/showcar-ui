@@ -1904,6 +1904,7 @@ input[type='checkbox'].sc-input {
       margin-left: 0.71685%;
       margin-right: 0.71685%; } }
 
+/** LEAGACY CODE - REMOVE **/
 .sc-lightbox-container.sc-visible {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -1927,24 +1928,17 @@ input[type='checkbox'].sc-input {
           transform: translate(-50%, -50%);
   border-radius: 4px;
   background-color: #fff;
-  padding: 16px 0;
+  padding: 20px 0;
   z-index: 140;
   max-height: calc(100vh - 80px);
   /* stylelint-disable-next-line length-zero-no-unit */
-  /* stylelint-disable-next-line length-zero-no-unit */
   /* stylelint-disable-next-line length-zero-no-unit */ }
-  @media all and (min-width: 1100px) {
+  @media all and (min-width: 582px) {
     .sc-lightbox-container {
       width: 550px; } }
-  @media all and (min-width: 768px) and (max-width: 1099px) {
+  @media all and (max-width: 581px) {
     .sc-lightbox-container {
-      width: 48.56631%;
-      float: left;
-      margin-left: 0.71685%;
-      margin-right: 0.71685%; } }
-  @media all and (max-width: 767px) {
-    .sc-lightbox-container {
-      width: 288px;
+      width: calc(100% - 32px);
       max-height: calc(100vh - 120px); } }
   .sc-lightbox-container h5 {
     font-weight: 700;
@@ -1971,35 +1965,22 @@ input[type='checkbox'].sc-input {
   border-radius: 4px;
   -webkit-transition: border-color .2s;
   transition: border-color .2s; }
-  .sc-lightbox-close:focus {
-    outline: none; }
-  .sc-lightbox-close:before, .sc-lightbox-close:after {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -1px;
-    margin-left: -10.5px;
-    display: block;
-    height: 2px;
-    width: 21px;
-    background-color: #dcdcdc;
-    -webkit-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out; }
-  .sc-lightbox-close:after {
-    -webkit-transform: rotate(-133deg);
-        -ms-transform: rotate(-133deg);
-            transform: rotate(-133deg); }
+
+.sc-lightbox-close as24-icon {
+  pointer-events: none; }
+
+.sc-lightbox-close svg {
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+  fill: #949494;
+  width: 12px;
+  height: 12px; }
 
 .sc-lightbox-close:hover {
   border-color: #4c4c4c; }
 
-.sc-lightbox-close:hover:before,
-.sc-lightbox-close:hover:after {
-  background-color: #4c4c4c; }
+.sc-lightbox-close:hover svg {
+  fill: #4c4c4c; }
 
 .sc-overlay {
   display: none;
@@ -2018,6 +1999,84 @@ input[type='checkbox'].sc-input {
 .sc-fade-in {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+/** LEAGACY CODE - REMOVE **/
+.sc-lightbox__container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 20px 0;
+  z-index: 140;
+  max-height: calc(100vh - 80px);
+  /* stylelint-disable-next-line length-zero-no-unit */
+  /* stylelint-disable-next-line length-zero-no-unit */ }
+  @media all and (min-width: 582px) {
+    .sc-lightbox__container {
+      width: 550px; } }
+  @media all and (max-width: 581px) {
+    .sc-lightbox__container {
+      width: calc(100% - 32px);
+      max-height: calc(100vh - 120px); } }
+  .sc-lightbox__container h5 {
+    font-weight: 700;
+    padding-right: 25px; }
+
+.sc-lightbox__container.sc-visible {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.sc-lightbox__content {
+  overflow: auto;
+  padding: 0 16px; }
+
+.sc-lightbox--scroll {
+  /* stylelint-disable-next-line length-zero-no-unit */ }
+  @media all and (min-width: 768px) {
+    .sc-lightbox--scroll {
+      overflow-y: hidden; } }
+
+.sc-lightbox__close {
+  height: 32px;
+  width: 32px;
+  line-height: 20px;
+  padding: 8px;
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+
+.sc-lightbox__close as24-icon {
+  pointer-events: none; }
+
+.sc-lightbox__close svg {
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+  fill: #949494;
+  width: 12px;
+  height: 12px; }
+
+.sc-lightbox__close:hover {
+  border-color: #4c4c4c; }
+
+.sc-lightbox__close:hover svg {
+  fill: #4c4c4c; }
 
 a,
 .sc-link {

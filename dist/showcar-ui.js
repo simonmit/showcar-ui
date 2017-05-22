@@ -2830,8 +2830,8 @@ module.exports.Zepto = Zepto;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__07_utilities_helpers_js__ = __webpack_require__(0);
 
-/* harmony default export */ __webpack_exports__["a"] = (function (tagName) {
 
+/* harmony default export */ __webpack_exports__["a"] = (function (tagName) {
     function createdCallback() {
         var overlay = document.querySelector('sc-overlay');
 
@@ -2843,19 +2843,41 @@ module.exports.Zepto = Zepto;
 
         var lb = {
             parent: this.parentElement,
-            open: this.querySelector('.sc-lightbox-open'),
-            container: this.querySelector('.sc-lightbox-container'),
-            close: this.querySelector('.sc-lightbox-close'),
-            content: this.querySelector('.sc-lightbox-content'),
+            container: this.querySelector('.sc-lightbox-container') || this.querySelector('.sc-lightbox__container'),
+            content: this.querySelector('.sc-lightbox-content') || this.querySelector('.sc-lightbox__content'),
+            close: Array.from(this.querySelectorAll('[data-lightbox-close]')),
+            closeOld: this.querySelector('.sc-lightbox-close'),
             overlay: overlay
         };
 
-        lb.open.addEventListener('click', function () {
-            return show(lb);
-        }, false);
-        lb.close.addEventListener('click', function (e) {
-            return hide(lb, e);
-        }, false);
+        var oldOpener = this.querySelector('.sc-lightbox-open');
+        if (oldOpener) {
+            oldOpener.addEventListener('click', function () {
+                return show(lb);
+            }, false);
+        }
+
+        var id = this.id || '';
+        var openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
+
+        openElements.forEach(function (el) {
+            el.addEventListener('click', function () {
+                return show(lb);
+            }, false);
+        });
+
+        lb.close.forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                return hide(lb, e);
+            }, false);
+        });
+
+        if (lb.closeOld) {
+            lb.closeOld.addEventListener('click', function (e) {
+                return hide(lb, e);
+            }, false);
+        }
+
         lb.overlay.addEventListener('click', function (e) {
             return hide(lb, e);
         }, false);
@@ -2867,8 +2889,9 @@ module.exports.Zepto = Zepto;
         lb.container.classList.add('sc-visible');
 
         document.addEventListener('keydown', function (e) {
-            if (e.keyCode == 27) hide(lb);
+            if (e.keyCode === 27) hide(lb, e);
         });
+
         setTimeout(function () {
             return lb.overlay.classList.add('sc-fade-in');
         }, 20);
@@ -2876,7 +2899,8 @@ module.exports.Zepto = Zepto;
 
     var hide = function hide(lb, e) {
         e.stopPropagation();
-        if (e.target === lb.overlay || e.target === lb.close) {
+
+        if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
             lb.container.classList.remove('sc-visible');
             lb.parent.appendChild(lb.container);
