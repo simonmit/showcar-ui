@@ -64,6 +64,10 @@
   border-radius: $XS;
   transition: border-color .2s;
 
+  &:focus {
+    outline: none;
+  }
+
   &:before, &:after {
     $width: 21px;
     $height: 2px;
