@@ -108,6 +108,7 @@ gulp.task('test', ['docs:serve'], scgulp.karma({
     },
 }));
 
+
 gulp.task('test:bs', ['docs:serve'], scgulp.karma({
     browserStack: {
         build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }), //remove on travis
