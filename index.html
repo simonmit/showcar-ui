@@ -1960,16 +1960,25 @@ margin-bottom:15px;
             
 <hr></div><div id="lightbox-target" class="positon-anchor">
                 <div class="element" id="lightbox">
-                    <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2></div>
-                   <div class="sample"><as24-lightbox>
-	<a class="sc-lightbox-open">Try me</a>
-	<div class="sc-lightbox-container">
-		<button class="sc-lightbox-close"></button>
-		<div class="sc-lightbox-content">
+                    <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
+
+<p>In order to link a trigger element like a button that opens the lightbox you need to provide an <code>id</code> for the lightbox 
+and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger element.</p>
+<p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox.</p>
+</div>
+                   <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
+
+<as24-lightbox class="sc-lightbox" id="lb1">
+	<div class="sc-lightbox__container">
+		<button class="sc-lightbox__close" data-lightbox-close>
+			<as24-icon type="close"></as24-icon>
+		</button>
+		<div class="sc-lightbox__content">
 			<h5 class="sc-font-m sc-font-bold">The modal window title</h5><br>
 			<label>The input label</label><br>
 			<input type="text" class="sc-input" placeholder="share your thoughts with us">
-			<button class="sc-btn-bob sc-btn-block" data-lightbox-close style="margin-top: 16px;">Button bob</button>
+			<br><br>
+			<button class="sc-btn-bob sc-btn-block" data-lightbox-close>Button bob</button>
 		</div>
 	</div>
 </as24-lightbox></div> 
@@ -1979,15 +1988,19 @@ margin-bottom:15px;
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-lightbox" class="hjs html">&lt;as24-lightbox&gt;
-&Tab;&lt;a class=&quot;sc-lightbox-open&quot;&gt;Try me&lt;/a&gt;
-&Tab;&lt;div class=&quot;sc-lightbox-container&quot;&gt;
-&Tab;&Tab;&lt;button class=&quot;sc-lightbox-close&quot;&gt;&lt;/button&gt;
-&Tab;&Tab;&lt;div class=&quot;sc-lightbox-content&quot;&gt;
+                                <code id="copy_code-code-lightbox" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot; data-lightbox-open=&quot;lb1&quot;&gt;Try me&lt;/button&gt;
+
+&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot;&gt;
+&Tab;&lt;div class=&quot;sc-lightbox__container&quot;&gt;
+&Tab;&Tab;&lt;button class=&quot;sc-lightbox__close&quot; data-lightbox-close&gt;
+&Tab;&Tab;&Tab;&lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
+&Tab;&Tab;&lt;/button&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-lightbox__content&quot;&gt;
 &Tab;&Tab;&Tab;&lt;h5 class=&quot;sc-font-m sc-font-bold&quot;&gt;The modal window title&lt;/h5&gt;&lt;br&gt;
 &Tab;&Tab;&Tab;&lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;
 &Tab;&Tab;&Tab;&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
-&Tab;&Tab;&Tab;&lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close style=&quot;margin-top: 16px;&quot;&gt;Button bob&lt;/button&gt;
+&Tab;&Tab;&Tab;&lt;br&gt;&lt;br&gt;
+&Tab;&Tab;&Tab;&lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close&gt;Button bob&lt;/button&gt;
 &Tab;&Tab;&lt;/div&gt;
 &Tab;&lt;/div&gt;
 &lt;/as24-lightbox&gt;</code>
