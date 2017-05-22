@@ -2881,6 +2881,19 @@ module.exports.Zepto = Zepto;
         lb.overlay.addEventListener('click', function (e) {
             return hide(lb, e);
         }, false);
+
+        // TODO: remove later
+        var closeIcon = this.querySelector('.sc-lightbox__close as24-icon');
+
+        if (!closeIcon) {
+            var closeButton = this.querySelector('.sc-lightbox__close');
+
+            if (!closeButton) return;
+
+            var close = document.createElement('as24-icon');
+            close.setAttribute('type', 'close');
+            closeButton.appendChild(close);
+        }
     }
 
     var show = function show(lb) {
