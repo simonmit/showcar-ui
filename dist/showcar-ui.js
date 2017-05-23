@@ -2832,7 +2832,7 @@ module.exports.Zepto = Zepto;
 
 
 /* harmony default export */ __webpack_exports__["a"] = (function (tagName) {
-    function createdCallback() {
+    function attachedCallback() {
         var overlay = document.querySelector('sc-overlay');
 
         if (!overlay) {
@@ -2887,6 +2887,9 @@ module.exports.Zepto = Zepto;
 
         if (!closeIcon) {
             var closeButton = document.querySelector('.sc-lightbox-close');
+
+            if (!closeButton) return;
+
             var close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
             closeButton.appendChild(close);
@@ -2922,7 +2925,7 @@ module.exports.Zepto = Zepto;
     };
 
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__07_utilities_helpers_js__["a" /* default */])({
-        createdCallback: createdCallback,
+        attachedCallback: attachedCallback,
         tagName: tagName
     });
 });
