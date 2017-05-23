@@ -1,7 +1,7 @@
 import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
-    function createdCallback() {
+    function attachedCallback() {
         let overlay = document.querySelector('sc-overlay');
 
         if (!overlay) {
@@ -46,6 +46,9 @@ export default function (tagName) {
 
         if (!closeIcon) {
             const closeButton = document.querySelector('.sc-lightbox-close');
+
+            if (!closeButton) return;
+
             const close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
             closeButton.appendChild(close);
@@ -79,7 +82,7 @@ export default function (tagName) {
     };
 
     registerElement({
-        createdCallback,
+        attachedCallback,
         tagName
     });
 }
