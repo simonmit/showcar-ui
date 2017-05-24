@@ -4689,13 +4689,15 @@ var Notification = function () {
             this.titleTag = this.createElement('span', this.container, this.title, ['sc-font-m', 'sc-font-bold']);
             this.createElement('div', this.container, this.body);
 
-            var triggerElem = document.querySelector('[data-trigger=' + this.element.id + ']');
+            if (this.element && this.element.id) {
+                var triggerElem = document.querySelector('[data-trigger=' + this.element.id + ']');
 
-            if (triggerElem) {
-                var self = this;
-                triggerElem.addEventListener('click', function () {
-                    self.element.classList.toggle('show');
-                });
+                if (triggerElem) {
+                    var self = this;
+                    triggerElem.addEventListener('click', function () {
+                        self.element.classList.toggle('show');
+                    });
+                }
             }
 
             if (this.close) {
