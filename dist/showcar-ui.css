@@ -1916,7 +1916,7 @@ input[type='checkbox'].sc-input {
 
 .sc-lightbox-content {
   overflow: auto;
-  padding: 0 16px; }
+  padding: 0 28px; }
 
 .sc-lightbox-container {
   display: none;
@@ -2038,7 +2038,7 @@ input[type='checkbox'].sc-input {
 
 .sc-lightbox__content {
   overflow: auto;
-  padding: 0 16px; }
+  padding: 0 28px; }
 
 .sc-lightbox--scroll {
   /* stylelint-disable-next-line length-zero-no-unit */ }
