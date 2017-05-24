@@ -1964,7 +1964,8 @@ input[type='checkbox'].sc-input {
   cursor: pointer;
   border-radius: 4px;
   -webkit-transition: border-color .2s;
-  transition: border-color .2s; }
+  transition: border-color .2s;
+  z-index: 1; }
 
 .sc-lightbox-close as24-icon {
   pointer-events: none; }
@@ -2060,7 +2061,8 @@ input[type='checkbox'].sc-input {
   cursor: pointer;
   border-radius: 4px;
   -webkit-transition: border-color .2s;
-  transition: border-color .2s; }
+  transition: border-color .2s;
+  z-index: 1; }
 
 .sc-lightbox__close as24-icon {
   pointer-events: none; }

@@ -60,6 +60,7 @@
   cursor: pointer;
   border-radius: $XS;
   transition: border-color .2s;
+  z-index: 1;
 }
 
 .sc-lightbox-close as24-icon {
@@ -156,6 +157,7 @@
   cursor: pointer;
   border-radius: $XS;
   transition: border-color .2s;
+  z-index: 1;
 }
 
 .sc-lightbox__close as24-icon {
