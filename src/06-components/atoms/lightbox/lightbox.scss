@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.sc-lightbox-content, .sc-lightbox__content  {
+.sc-lightbox-content, .sc-lightbox__content {
   overflow: auto;
   padding: 0 $XXL;
   flex-basis: calc(100vh - 100px); //ugly hack for IE11
@@ -99,6 +99,7 @@
 .sc-fade-in {
   opacity: 1;
 }
+
 /** LEAGACY CODE - REMOVE **/
 
 .sc-lightbox__container {
@@ -132,8 +133,6 @@
   display: flex !important;
   flex-direction: column;
 }
-
-
 
 .sc-lightbox--scroll {
   @include mqmin($viewportM) {
@@ -193,6 +192,6 @@
 //.sc-fade-in {
 //  opacity: 1;
 //}
-.sc-temporary-visible{
+.sc-temporary-visible {
   display: block !important;
 }
