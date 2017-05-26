@@ -8,9 +8,10 @@
   flex-direction: column;
 }
 
-.sc-lightbox-content {
+.sc-lightbox-content, .sc-lightbox__content {
   overflow: auto;
   padding: 0 $XXL;
+  flex-basis: calc(100vh - 100px); //ugly hack for IE11
 }
 
 .sc-lightbox-container {
@@ -98,6 +99,7 @@
 .sc-fade-in {
   opacity: 1;
 }
+
 /** LEAGACY CODE - REMOVE **/
 
 .sc-lightbox__container {
@@ -130,12 +132,6 @@
 .sc-lightbox__container.sc-temporary-visible, .sc-lightbox-container.sc-temporary-visible { //remove
   display: flex !important;
   flex-direction: column;
-}
-
-.sc-lightbox__content {
-  overflow: auto;
-  padding: 0 $XXL;
-  flex-basis: calc(100vh - 100px); //ugly hack for IE11
 }
 
 .sc-lightbox--scroll {
@@ -196,6 +192,6 @@
 //.sc-fade-in {
 //  opacity: 1;
 //}
-.sc-temporary-visible{
+.sc-temporary-visible {
   display: block !important;
 }
