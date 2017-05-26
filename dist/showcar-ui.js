@@ -2861,6 +2861,7 @@ module.exports.Zepto = Zepto;
         var openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
 
         openElements.forEach(function (el) {
+            console.log(el);
             el.addEventListener('click', function () {
                 return show(lb);
             }, false);
@@ -2897,9 +2898,9 @@ module.exports.Zepto = Zepto;
     }
 
     var show = function show(lb) {
-        lb.overlay.classList.add('sc-visible');
+        lb.overlay.classList.add('sc-temporary-visible');
         lb.overlay.appendChild(lb.container);
-        lb.container.classList.add('sc-visible');
+        lb.container.classList.add('sc-temporary-visible');
 
         document.addEventListener('keydown', function (e) {
             if (e.keyCode === 27) hide(lb, e);
@@ -2915,11 +2916,11 @@ module.exports.Zepto = Zepto;
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
-            lb.container.classList.remove('sc-visible');
+            lb.container.classList.remove('sc-temporary-visible');
             lb.parent.appendChild(lb.container);
             lb.overlay.classList.remove('sc-fade-in');
             setTimeout(function () {
-                lb.overlay.classList.remove('sc-visible');
+                lb.overlay.classList.remove('sc-temporary-visible');
             }, 250);
         }
     };

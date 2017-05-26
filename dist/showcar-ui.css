@@ -2080,6 +2080,9 @@ input[type='checkbox'].sc-input {
 .sc-lightbox__close:hover svg {
   fill: #4c4c4c; }
 
+.sc-temporary-visible {
+  display: block !important; }
+
 a,
 .sc-link {
   cursor: pointer;
