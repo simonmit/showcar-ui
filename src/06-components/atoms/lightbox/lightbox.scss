@@ -8,9 +8,10 @@
   flex-direction: column;
 }
 
-.sc-lightbox-content {
+.sc-lightbox-content, .sc-lightbox__content  {
   overflow: auto;
   padding: 0 $XXL;
+  flex-basis: calc(100vh - 100px); //ugly hack for IE11
 }
 
 .sc-lightbox-container {
@@ -132,11 +133,7 @@
   flex-direction: column;
 }
 
-.sc-lightbox__content {
-  overflow: auto;
-  padding: 0 $XXL;
-  flex-basis: calc(100vh - 100px); //ugly hack for IE11
-}
+
 
 .sc-lightbox--scroll {
   @include mqmin($viewportM) {
