@@ -2028,7 +2028,7 @@ input[type='checkbox'].sc-input {
     font-weight: 700;
     padding-right: 25px; }
 
-.sc-lightbox__container.sc-visible {
+.sc-lightbox__container.sc-temporary-visible {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
