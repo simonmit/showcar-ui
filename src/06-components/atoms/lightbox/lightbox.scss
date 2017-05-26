@@ -135,6 +135,7 @@
 .sc-lightbox__content {
   overflow: auto;
   padding: 0 $XXL;
+  flex-basis: calc(100vh - 100px); //ugly hack for IE11
 }
 
 .sc-lightbox--scroll {
