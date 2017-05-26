@@ -28,6 +28,7 @@ export default function (tagName) {
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
 
         openElements.forEach(el => {
+            console.log(el);
             el.addEventListener('click', () => show(lb), false);
         });
 
@@ -56,9 +57,9 @@ export default function (tagName) {
     }
 
     const show = lb => {
-        lb.overlay.classList.add('sc-visible');
+        lb.overlay.classList.add('sc-temporary-visible');
         lb.overlay.appendChild(lb.container);
-        lb.container.classList.add('sc-visible');
+        lb.container.classList.add('sc-temporary-visible');
 
         document.addEventListener('keydown', e => {
             if (e.keyCode === 27) hide(lb, e);
@@ -72,11 +73,11 @@ export default function (tagName) {
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
-            lb.container.classList.remove('sc-visible');
+            lb.container.classList.remove('sc-temporary-visible');
             lb.parent.appendChild(lb.container);
             lb.overlay.classList.remove('sc-fade-in');
             setTimeout(() => {
-                lb.overlay.classList.remove('sc-visible');
+                lb.overlay.classList.remove('sc-temporary-visible');
             }, 250);
         }
     };
