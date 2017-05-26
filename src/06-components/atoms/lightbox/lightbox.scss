@@ -127,7 +127,7 @@
   }
 }
 
-.sc-lightbox__container.sc-temporary-visible {
+.sc-lightbox__container.sc-temporary-visible, .sc-lightbox-container.sc-temporary-visible { //remove
   display: flex !important;
   flex-direction: column;
 }
