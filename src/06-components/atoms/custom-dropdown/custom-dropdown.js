@@ -36,7 +36,7 @@ export default function(tagName) {
 
     function attachedCallback() {
         if (this.hasAttribute('checkboxgroup')) {
-            this.querySelector('p').addEventListener('mousedown', () => {
+            this.querySelector('p').addEventListener('click', () => {
                 closeAllDropdowns(this);
                 this.classList.toggle('sc-open');
             });
@@ -49,18 +49,15 @@ export default function(tagName) {
      * @param {HTMLElement} exceptThisOne
      */
     function closeAllDropdowns(exceptThisOne) {
-        let allCds = document.querySelectorAll(tagName);
-        for (let i = 0, l = allCds.length; i < l; i ++) {
-            if (allCds[i] !== exceptThisOne) {
-                allCds[i].classList.remove('sc-open');
-            }
-        }
+        return () => Array.from(document.querySelectorAll(tagName))
+            .filter((cdd) => cdd !== exceptThisOne)
+            .forEach((cdd) => cdd.classList.remove('sc-open'));
     }
 
     function attachEventListeners() {
         // this should only be done at most once
         // when the first of this element gets attached
-        document.addEventListener('mousedown', closeAllDropdowns);
+        document.addEventListener('mousedown', closeAllDropdowns(this));
         attachEventListeners = () => {}; // eslint-disable-line no-func-assign
     }
 
