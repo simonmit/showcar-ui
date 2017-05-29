@@ -8,10 +8,11 @@
   flex-direction: column;
 }
 
-.sc-lightbox-content, .sc-lightbox__content {
+.sc-lightbox-content {
   overflow: auto;
   padding: 0 $XXL;
   flex-basis: calc(100vh - 100px); //ugly hack for IE11
+  -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
 .sc-lightbox-container {
@@ -41,10 +42,9 @@
   }
 }
 
-.sc-lightbox-scroll {
-  @include mqmin($viewportM) {
-    overflow-y: hidden;
-  }
+.sc-lightbox-container.sc-temporary-visible { //remove
+  display: flex !important;
+  flex-direction: column;
 }
 
 .sc-lightbox-close {
@@ -99,8 +99,7 @@
 .sc-fade-in {
   opacity: 1;
 }
-
-/** LEAGACY CODE - REMOVE **/
+/**** LEAGACY CODE - REMOVE ****/
 
 .sc-lightbox__container {
   display: none;
@@ -129,15 +128,16 @@
   }
 }
 
-.sc-lightbox__container.sc-temporary-visible, .sc-lightbox-container.sc-temporary-visible { //remove
-  display: flex !important;
+.sc-lightbox__container--visible {
+  display: flex;
   flex-direction: column;
 }
 
-.sc-lightbox--scroll {
-  @include mqmin($viewportM) {
-    overflow-y: hidden;
-  }
+.sc-lightbox__content {
+  overflow: auto;
+  padding: 0 $XXL;
+  flex-basis: calc(100vh - 100px); //ugly hack for IE11
+  -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
 .sc-lightbox__close {
@@ -176,22 +176,23 @@
   fill: $black-90;
 }
 
-//.sc-overlay {
-//  display: none;
-//  background-color: rgba(0, 0, 0, 0.6);
-//  top: 0;
-//  left: 0;
-//  position: fixed;
-//  right: 0;
-//  bottom: 0;
-//  z-index: 139; // less than modal window by one
-//  opacity: 0;
-//  transition: opacity .1s ease;
-//}
-//
-//.sc-fade-in {
-//  opacity: 1;
-//}
-.sc-temporary-visible {
-  display: block !important;
+.sc-lightbox__overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 139; // less than modal window by one
+  opacity: 0;
+  transition: opacity .1s ease;
+}
+
+.sc-lightbox__overlay--visible {
+  display: block;
+}
+
+.sc-lightbox--fadein {
+  opacity: 1;
 }

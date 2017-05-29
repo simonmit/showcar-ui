@@ -2,10 +2,11 @@ import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
     function attachedCallback() {
-        let overlay = document.querySelector('sc-overlay');
+        let overlay = document.querySelector('sc-overlay') || document.querySelector('sc-lightbox__overlay');
 
         if (!overlay) {
             overlay = document.createElement('div');
+            overlay.classList.add('sc-lightbox__overlay');
             overlay.classList.add('sc-overlay');
             document.body.appendChild(overlay);
         }
@@ -57,15 +58,20 @@ export default function (tagName) {
     }
 
     const show = lb => {
-        lb.overlay.classList.add('sc-temporary-visible');
+        lb.overlay.classList.add('sc-temporary-visible'); //remove
+        lb.overlay.classList.add('sc-lightbox__overlay--visible');
         lb.overlay.appendChild(lb.container);
-        lb.container.classList.add('sc-temporary-visible');
+        lb.container.classList.add('sc-temporary-visible'); //remove
+        lb.container.classList.add('sc-lightbox__container--visible');
 
         document.addEventListener('keydown', e => {
             if (e.keyCode === 27) hide(lb, e);
         });
 
-        setTimeout(() => lb.overlay.classList.add('sc-fade-in'), 20);
+        setTimeout(() => {
+            lb.overlay.classList.add('sc-fade-in'); //remove
+            lb.overlay.classList.add('sc-lightbox--fadein');
+        }, 20);
     };
 
     const hide = (lb, e) => {
@@ -73,11 +79,14 @@ export default function (tagName) {
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
-            lb.container.classList.remove('sc-temporary-visible');
+            lb.container.classList.remove('sc-lightbox__container--visible');
+            lb.container.classList.remove('sc-temporary-visible'); //remove
             lb.parent.appendChild(lb.container);
-            lb.overlay.classList.remove('sc-fade-in');
+            lb.overlay.classList.remove('sc-fade-in'); //remove
+            lb.overlay.classList.remove('sc-temporary-visible'); //remove
+            lb.overlay.classList.remove('sc-lightbox--fadein');
             setTimeout(() => {
-                lb.overlay.classList.remove('sc-temporary-visible');
+                lb.overlay.classList.remove('sc-lightbox__overlay--visible');
             }, 250);
         }
     };
