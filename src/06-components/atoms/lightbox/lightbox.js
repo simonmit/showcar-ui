@@ -7,7 +7,7 @@ export default function (tagName) {
         if (!overlay) {
             overlay = document.createElement('div');
             overlay.classList.add('sc-lightbox__overlay');
-            overlay.classList.add('sc-overlay');
+            overlay.classList.add('sc-overlay'); //remove
             document.body.appendChild(overlay);
         }
 
