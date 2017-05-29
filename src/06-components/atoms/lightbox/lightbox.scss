@@ -11,7 +11,7 @@
 .sc-lightbox-content {
   overflow: auto;
   padding: 0 $XXL;
-  flex-basis: calc(100vh - 100px); //ugly hack for IE11
+  //ugly hack for IE11
   -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
@@ -136,7 +136,7 @@
 .sc-lightbox__content {
   overflow: auto;
   padding: 0 $XXL;
-  flex-basis: calc(100vh - 100px); //ugly hack for IE11
+  //ugly hack for IE11
   -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
