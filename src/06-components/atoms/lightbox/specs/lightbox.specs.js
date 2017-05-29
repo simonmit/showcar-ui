@@ -2,9 +2,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
     describe('Lightbox', function () {
         var trigger;
         var lightbox;
+        var overlay;
 
         beforeEach(function () {
             lightbox = frame.get('.sc-lightbox__container');
+            overlay = frame.get('.sc-lightbox__overlay');
             trigger = frame.get('[data-lightbox-open="lb1"]').toDomElement();
         });
 
@@ -12,9 +14,14 @@ module.exports = function (frame, assert, browserWidth, helper) {
             helper.reload(frame, done)
         });
 
-        it('Open lightbox', function () {
+        it('Open lightbox and show container', function () {
             helper.click(trigger);
-            assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
+            assert.equal(lightbox.getRawStyle('display'), 'flex', 'should be shown');
+        });
+
+        it('Open lightbox and show overlay', function () {
+            helper.click(trigger);
+            assert.equal(overlay.getRawStyle('display'), 'block', 'should be shown');
         });
 
         it('Close lightbox using icon', function (done) {
