@@ -132,6 +132,8 @@ class Pager {
 
         if (this.activePage === pageNumber) {
             a.addClass('active');
+            a.removeAttr('href');
+            a.attr('rel','nofollow');
         }
 
         a.text(pageNumber);
