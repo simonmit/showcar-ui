@@ -87,6 +87,94 @@
   overflow: hidden !important;
 }
 
+//s viewport
+.sc-hidden--s {
+  @include mqmin($viewportS) {
+    display: none;
+  }
+}
+
+.sc-visible--s {
+  @include mqmax($viewportS - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportS) {
+    display: inherit;
+  }
+}
+
+//m viewport
+.sc-hidden--m {
+  @include mqmin($viewportM) {
+    display: none;
+  }
+}
+
+.sc-visible--m {
+  @include mqmax($viewportM - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportM) {
+    display: inherit;
+  }
+}
+
+//l viewport
+.sc-hidden--l {
+  @include mqmin($viewportL) {
+    display: none;
+  }
+}
+
+.sc-visible--l {
+  @include mqmax($viewportL - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportL) {
+    display: inherit;
+  }
+}
+
+//xl viewport
+.sc-hidden--xl {
+  @include mqmin($viewportXL) {
+    display: none;
+  }
+}
+
+.sc-visible--xl {
+  @include mqmax($viewportXL - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportXL) {
+    display: inherit;
+  }
+}
+
+.sc-box-spacing {
+  margin-bottom: 30px;
+
+  @include mqmin($viewportM) {
+    margin-bottom: 40px;
+  }
+}
+
+//TODO: move to layout
+.sc-section {
+  border-bottom: 1px solid $black-30;
+  background-color: $white;
+  padding: 0 $XL;
+
+  &.sc-section-transparent {
+    background-color: transparent;
+  }
+}
+
+// LEAGACY CODE - SHOULD NOT BE USED
 //xl viewport
 @include mqmin($viewportXL) {
   .sc-hidden-xl {
@@ -127,15 +215,6 @@
   }
 }
 
-.sc-box-spacing {
-  margin-bottom: 30px;
-
-  @include mqmin($viewportM) {
-    margin-bottom: 40px;
-  }
-}
-
-//TODO: Remove?
 .sc-telekom-bar {
   padding-right: $XL;
   text-align: right;
@@ -143,14 +222,4 @@
     height: $XL - 1;
   }
 }
-
-//TODO: move to layout
-.sc-section {
-  border-bottom: 1px solid $black-30;
-  background-color: $white;
-  padding: 0 $XL;
-
-  &.sc-section-transparent {
-    background-color: transparent;
-  }
-}
+//LEAGACY CODE - SHOULD NOT BE USED
