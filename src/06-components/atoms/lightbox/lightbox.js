@@ -29,7 +29,6 @@ export default function (tagName) {
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
 
         openElements.forEach(el => {
-            console.log(el);
             el.addEventListener('click', () => show(lb), false);
         });
 
@@ -83,9 +82,9 @@ export default function (tagName) {
             lb.container.classList.remove('sc-temporary-visible'); //remove
             lb.parent.appendChild(lb.container);
             lb.overlay.classList.remove('sc-fade-in'); //remove
-            lb.overlay.classList.remove('sc-temporary-visible'); //remove
             lb.overlay.classList.remove('sc-lightbox--fadein');
             setTimeout(() => {
+                lb.overlay.classList.remove('sc-temporary-visible'); //remove
                 lb.overlay.classList.remove('sc-lightbox__overlay--visible');
             }, 250);
         }
