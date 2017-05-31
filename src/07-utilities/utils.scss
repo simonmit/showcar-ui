@@ -100,7 +100,7 @@
   }
 
   @include mqmin($viewportS) {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -117,7 +117,7 @@
   }
 
   @include mqmin($viewportM) {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -134,7 +134,7 @@
   }
 
   @include mqmin($viewportL) {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -151,7 +151,7 @@
   }
 
   @include mqmin($viewportXL) {
-    display: inherit;
+    display: block;
   }
 }
 
