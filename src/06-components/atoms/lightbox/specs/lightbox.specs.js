@@ -2,11 +2,10 @@ module.exports = function (frame, assert, browserWidth, helper) {
     describe('Lightbox', function () {
         var trigger;
         var lightbox;
-        var overlay;
 
         beforeEach(function () {
             lightbox = frame.get('.sc-lightbox__container');
-            overlay = frame.get('.sc-lightbox__overlay');
+
             trigger = frame.get('[data-lightbox-open="lb1"]').toDomElement();
         });
 
@@ -21,6 +20,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('Open lightbox and show overlay', function () {
             helper.click(trigger);
+            var overlay = frame.get('.sc-lightbox__overlay');
             assert.equal(overlay.getRawStyle('display'), 'block', 'should be shown');
         });
 
