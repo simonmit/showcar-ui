@@ -2,25 +2,16 @@ import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
     function attachedCallback() {
-        let overlay = document.querySelector('sc-overlay') || document.querySelector('sc-lightbox__overlay');
-
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.classList.add('sc-lightbox__overlay');
-            overlay.classList.add('sc-overlay'); //remove
-            document.body.appendChild(overlay);
-        }
 
         let lb = {
             parent: this.parentElement,
-            container: this.querySelector('.sc-lightbox-container') || this.querySelector('.sc-lightbox__container'),
-            content: this.querySelector('.sc-lightbox-content') || this.querySelector('.sc-lightbox__content'),
+            container: this.querySelector('.sc-lightbox-container') /*remove*/ || this.querySelector('.sc-lightbox__container'),
+            content: this.querySelector('.sc-lightbox-content') /*remove*/ || this.querySelector('.sc-lightbox__content'),
             close: Array.from(this.querySelectorAll('[data-lightbox-close]')),
-            closeOld: this.querySelector('.sc-lightbox-close'),
-            overlay
+            closeOld: this.querySelector('.sc-lightbox-close'), /*remove*/
         };
 
-        const oldOpener= this.querySelector('.sc-lightbox-open');
+        const oldOpener = this.querySelector('.sc-lightbox-open');
         if (oldOpener) {
             oldOpener.addEventListener('click', () => show(lb), false);
         }
@@ -40,15 +31,15 @@ export default function (tagName) {
             lb.closeOld.addEventListener('click', (e) => hide(lb, e), false);
         }
 
-        lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
+
 
         // TODO: remove later
         const closeIcon = document.querySelector('.sc-lightbox-close as24-icon');
 
-        if (!closeIcon) {
+        if (! closeIcon) {
             const closeButton = document.querySelector('.sc-lightbox-close');
 
-            if (!closeButton) return;
+            if (! closeButton) return;
 
             const close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
@@ -57,6 +48,13 @@ export default function (tagName) {
     }
 
     const show = lb => {
+        lb.overlay = document.createElement('div');
+        lb.overlay.classList.add('sc-lightbox__overlay');
+        lb.overlay.classList.add('sc-overlay'); //remove
+        document.body.appendChild(lb.overlay);
+        lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
+
+
         lb.overlay.classList.add('sc-temporary-visible'); //remove
         lb.overlay.classList.add('sc-lightbox__overlay--visible');
         lb.overlay.appendChild(lb.container);
@@ -84,8 +82,7 @@ export default function (tagName) {
             lb.overlay.classList.remove('sc-fade-in'); //remove
             lb.overlay.classList.remove('sc-lightbox--fadein');
             setTimeout(() => {
-                lb.overlay.classList.remove('sc-temporary-visible'); //remove
-                lb.overlay.classList.remove('sc-lightbox__overlay--visible');
+                lb.overlay.remove();
             }, 250);
         }
     };
