@@ -6,11 +6,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
         beforeEach(function () {
             trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
             content = frame.get('#collapse-more-less div.sc-collapse-target');
-        })
+        });
 
         afterEach(function (done) {
             helper.reload(frame, done)
-        })
+        });
 
         it('content is shown after first click', function () {
             helper.click(trigger);
@@ -35,11 +35,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         beforeEach(function () {
             trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
-        })
+        });
 
         afterEach(function (done) {
             helper.reload(frame, done)
-        })
+        });
 
         it('less link is shown under content', function () {
             helper.click(trigger);

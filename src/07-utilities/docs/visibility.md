@@ -24,28 +24,28 @@ IMPORTANT: Try to use these on a limited basis and avoid creating entirely diffe
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible-xl</code></td>
+        <td><code>.sc-visible--xl</code></td>
         <td></td>
         <td></td>
         <td></td>
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible-l</code></td>
+        <td><code>.sc-visible--l</code></td>
         <td></td>
         <td></td>
         <td class="cell-visible">Visible</td>
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible-m</code></td>
+        <td><code>.sc-visible--m</code></td>
         <td></td>
         <td class="cell-visible">Visible</td>
         <td class="cell-visible">Visible</td>
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible-s</code></td>
+        <td><code>.sc-visible--s</code></td>
         <td class="cell-visible">Visible</td>
         <td class="cell-visible">Visible</td>
         <td class="cell-visible">Visible</td>
@@ -59,28 +59,28 @@ IMPORTANT: Try to use these on a limited basis and avoid creating entirely diffe
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden-xl</code></td>
+        <td><code>.sc-hidden--xl</code></td>
         <td></td>
         <td></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden-l</code></td>
+        <td><code>.sc-hidden--l</code></td>
         <td></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden-m</code></td>
+        <td><code>.sc-hidden--m</code></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
         <td class="cell-hidden">Hidden</td>
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden-s</code></td>
+        <td><code>.sc-hidden--s</code></td>
         <td class="cell-hidden">Hidden</td>
         <td class="cell-hidden">Hidden</td>
         <td class="cell-hidden">Hidden</td>
