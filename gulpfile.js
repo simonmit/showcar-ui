@@ -99,9 +99,9 @@ gulp.task('default', ['docs:watch']);
 
 gulp.task('test', ['docs:serve'], scgulp.karma({
     browsers: ['Firefox', 'Electron', 'Safari'],
-    files: ['quixote.config.js'],
+    files: ['.quixoteconf.js'],
     preprocessors: {
-        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
+        '.quixoteconf.js': ['webpack','sourcemap']
     },
     proxies: {
         '/': 'http://localhost:3000/',
@@ -115,11 +115,8 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma({
         project: 'Showcar-ui',
     },
     browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
-    files: ['quixote.config.js'],
+    files: ['.quixoteconf.js'],
     preprocessors: {
-        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
-    },
-    proxies: {
-        '/': 'http://localhost:3000/',
+        '.quixoteconf.js': ['webpack','sourcemap']
     },
 }));
