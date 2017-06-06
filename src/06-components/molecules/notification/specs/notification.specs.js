@@ -1,22 +1,25 @@
-module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Notification', function () {
-        var container;
-        var cross;
-        var trigger;
+module.exports = (frame, assert, browserWidth, helper) => {
+    describe('Notification', () => {
+        let container;
+        let cross;
+        let trigger;
+        let notification;
 
-        beforeEach(function () {
+        beforeEach(() => {
             container = frame.get('#notification-closable #example-notification-target');
             trigger = frame.get('#notification-closable [data-id=succ2]').toDomElement();
+            cross = frame.get('as24-notification#succ2 a').toDomElement();
+            notification = frame.get('as24-notification#succ2');
         });
 
-        afterEach(function (done) {
+        afterEach(done => {
             helper.reload(frame, done)
         });
 
-        it('shows on click', function (done) {
+        it('shows on click', (done) => {
             helper.click(trigger);
-            var notification = frame.get('as24-notification#succ2');
-            setTimeout(function () {
+
+            setTimeout(() => {
                 notification.assert({
                     rendered: true,
                     width: container.width,
@@ -26,12 +29,11 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 1000); //waiting for animation
         });
 
-        it('hides if cross is clicked', function (done) {
-            var notification = frame.get('as24-notification#succ2');
-            var cross = frame.get('as24-notification#succ2 a').toDomElement();
+        it('hides if cross is clicked', done => {
             helper.click(trigger);
             helper.click(cross);
-            setTimeout(function () {
+
+            setTimeout( ()=> {
                 notification.assert({
                     height: 0
                 });
@@ -39,18 +41,19 @@ module.exports = function (frame, assert, browserWidth, helper) {
             }, 1000); //waiting for animation
         });
 
-        it('two notifications sticks on each other', function (done) {
-            var triggerInfo = frame.get('#notification-closable [data-id=info2]').toDomElement();
-            var cross = frame.get('as24-notification#succ2 a').toDomElement();
+        it('two notifications sticks on each other', done => {
+            const triggerInfo = frame.get('#notification-closable [data-id=info2]').toDomElement();
             helper.click(trigger);
             helper.click(triggerInfo);
-            var notification = frame.get('as24-notification#succ2');
-            var notificationInfo = frame.get('as24-notification#info2');
+            const notificationInfo = frame.get('as24-notification#info2');
+
             notificationInfo.assert({
                 top: notification.bottom
             });
+
             helper.click(cross);
-            setTimeout(function () {
+
+            setTimeout(() => {
                 notificationInfo.assert({
                     top: container.bottom
                 });
