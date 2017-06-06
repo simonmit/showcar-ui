@@ -1,9 +1,19 @@
-module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Input groups {LAYOUT}', function () {
-        it('are full width', function () {
-            var container = frame.get('#separate-content');
-            var inputGroup = frame.get('#input-group .sc-input-group');
-            var inputGroupRadio = frame.get('#input-group-radio .sc-input-group-radio');
+module.exports = (frame, assert, browserWidth, helper) => {
+    describe('Input groups {LAYOUT}', () => {
+        let inputGroup;
+        let inputGroupRadio;
+        let firstEl;
+        let secondEl;
+
+        beforeEach(() => {
+            inputGroup = frame.get('#input-group .sc-input-group');
+            inputGroupRadio = frame.get('#input-group-radio .sc-input-group-radio');
+            firstEl = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type');
+            secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
+        });
+
+        it('are full width', () => {
+            const container = frame.get('#separate-content');
 
             inputGroup.assert({
                 width: container.width
@@ -13,10 +23,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
 
-        it('have proper height', function () {
-            var inputGroup = frame.get('#input-group .sc-input-group');
-            var inputGroupRadio = frame.get('#input-group-radio .sc-input-group-radio');
-
+        it('have proper height', () => {
             inputGroup.assert({
                 height: 40
             });
@@ -25,10 +32,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
 
-        it('default elements are positioned next to each other', function () {
-            var firstEl = frame.get('#input-group .sc-input-group input:first-of-type');
-            var secondEl = frame.get('#input-group .sc-input-group input:nth-of-type(2)');
-            var thirdEl = frame.get('#input-group .sc-input-group .sc-btn-bob');
+        it('default elements are positioned next to each other', () => {
+            const thirdEl = frame.get('#input-group .sc-input-group .sc-btn-bob');
 
             firstEl.assert({
                 right: secondEl.left.plus(1)
@@ -38,10 +43,8 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
 
-        it('radio elements are positioned next to each other', function () {
-            var firstEl = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type');
-            var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
-            var thirdEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(3)');
+        it('radio elements are positioned next to each other', () => {
+            const thirdEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(3)');
 
             firstEl.assert({
                 right: secondEl.left
@@ -51,22 +54,22 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
 
-        it('option 2 is checked by default', function () {
-            var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
+        it('option 2 is checked by default', () => {
             assert.equal(secondEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
         });
     });
-    describe('Input group toggle {INTERACTION}', function () {
-        afterEach(function (done) {
+
+    describe('Input group toggle {INTERACTION}', () => {
+        afterEach(done => {
             helper.reload(frame, done)
         })
 
-        it('option 1 changes color after click', function (done) {
-            var firstEltrigger = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type').toDomElement();
-            var firstEl = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type');
-            var secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
+        it('option 1 changes color after click', done => {
+            const firstEltrigger = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type').toDomElement();
+            const firstEl = frame.get('#input-group-radio .sc-input-group-radio label:first-of-type');
+            const secondEl = frame.get('#input-group-radio .sc-input-group-radio label:nth-of-type(2)');
             helper.click(firstEltrigger);
-            setTimeout(function () {
+            setTimeout(() => {
                 assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
                 assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
                 done();

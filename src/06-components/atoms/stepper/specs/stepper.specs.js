@@ -1,52 +1,52 @@
-module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Stepper {LAYOUT}', function () {
-        it('is rendered', function () {
-            var stepper = frame.get('#stepper .sc-stepper');
+module.exports = (frame, assert, browserWidth, helper) => {
+    describe('Stepper {LAYOUT}', () => {
+        let stepper;
 
+        beforeEach(() => {
+            stepper = frame.get('#stepper .sc-stepper');
+        });
+
+        it('is rendered', () => {
             stepper.assert({
                 rendered: true
             });
         });
 
-        it('has a proper height', function () {
-            var stepper = frame.get('#stepper .sc-stepper');
-
+        it('has a proper height', () => {
             stepper.assert({
                 height: 40
             });
         });
 
-        it('is fullwidth', function () {
-            var container = frame.get('#separate-content');
-            var stepper = frame.get('#stepper .sc-stepper');
+        it('is fullwidth', () => {
+            const container = frame.get('#separate-content');
 
             stepper.assert({
                 width: container.width
             });
         });
 
-        it('decrease button is on left side of input', function () {
-            var input = frame.get('#stepper .sc-stepper-input');
-            var decreaseButton = frame.get('#stepper .sc-stepper-button-decrement');
+        it('decrease button is on left side of input', () => {
+            const input = frame.get('#stepper .sc-stepper-input');
+            const decreaseButton = frame.get('#stepper .sc-stepper-button-decrement');
 
             decreaseButton.assert({
-                right : input.left.plus(0)
+                right: input.left.plus(0)
             });
         });
 
-        it('increase button is on left side of input', function () {
-            var input = frame.get('#stepper .sc-stepper-input');
-            var increaseButton = frame.get('#stepper .sc-stepper-button-increment');
+        it('increase button is on left side of input', () => {
+            const input = frame.get('#stepper .sc-stepper-input');
+            const increaseButton = frame.get('#stepper .sc-stepper-button-increment');
 
             increaseButton.assert({
-                left : input.right.plus(0)
+                left: input.right.plus(0)
             });
         });
 
-        it('decrease/increase buttons are inside', function () {
-            var stepper = frame.get('#stepper .sc-stepper');
-            var decreaseButton = frame.get('#stepper .sc-stepper-button-decrement');
-            var increaseButton = frame.get('#stepper .sc-stepper-button-increment');
+        it('decrease/increase buttons are inside', () => {
+            const decreaseButton = frame.get('#stepper .sc-stepper-button-decrement');
+            const increaseButton = frame.get('#stepper .sc-stepper-button-increment');
 
             decreaseButton.assert({
                 top: stepper.bottom.minus(40)
@@ -56,35 +56,37 @@ module.exports = function (frame, assert, browserWidth, helper) {
             });
         });
     });
-    describe('Stepper {INTERACTION}', function () {
-        var stepper;
-        var input;
-        var increaseButton;
-        var decreaseButton;
 
-        beforeEach(function () {
+
+    describe('Stepper {INTERACTION}', () => {
+        let stepper;
+        let input;
+        let increaseButton;
+        let decreaseButton;
+
+        beforeEach(() => {
             stepper = frame.get('#stepper .sc-stepper').toDomElement();
             input = frame.get('#stepper .sc-stepper-input').toDomElement();
             decreaseButton = frame.get('#stepper .sc-stepper-button-decrement').toDomElement();
             increaseButton = frame.get('#stepper .sc-stepper-button-increment').toDomElement();
         })
 
-        afterEach(function (done) {
+        afterEach(done => {
             helper.reload(frame, done)
-        })
+        });
 
-        it('has default value 0', function () {
+        it('has default value 0', () => {
             assert.include(input.value, '0', 'contains');
         });
 
-        it('should increment the value by one after clicking the increment button', function () {
+        it('should increment the value by one after clicking the increment button', () => {
             helper.click(increaseButton);
             assert.include(input.value, '1', 'contains');
             helper.click(increaseButton);
             assert.include(input.value, '2', 'contains');
         });
 
-        it('should decrement the value by one after clicking the decrement button', function () {
+        it('should decrement the value by one after clicking the decrement button', () => {
             input.value = '5';
             helper.click(decreaseButton);
             assert.include(input.value, '4', 'contains');
@@ -92,7 +94,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             assert.include(input.value, '3', 'contains');
         });
 
-        it('should not increment the value more than the max value (10)', function () {
+        it('should not increment the value more than the max value (10)', () => {
             input.value = '9';
             helper.click(increaseButton);
             assert.include(input.value, '10', 'contains');
@@ -100,7 +102,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
             assert.include(input.value, '10', 'contains');
         });
 
-        it('should not decrement the value less than 0', function () {
+        it('should not decrement the value less than 0', () => {
             input.value = '1';
             helper.click(decreaseButton);
             assert.include(input.value, '0', 'contains');

@@ -1,50 +1,53 @@
-module.exports = function (frame, assert, browserWidth, helper) {
-    describe('Collapse more-less {INTERACTION}', function () {
-        var trigger;
-        var content;
+module.exports = (frame, assert, browserWidth, helper) => {
+    let trigger;
+    let content;
 
-        beforeEach(function () {
+    describe('Collapse more-less {INTERACTION}', () => {
+        beforeEach(() => {
             trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
             content = frame.get('#collapse-more-less div.sc-collapse-target');
         });
 
-        afterEach(function (done) {
+        afterEach(done => {
             helper.reload(frame, done)
         });
 
-        it('content is shown after first click', function () {
+        it('content is shown after first click', () => {
             helper.click(trigger);
             assert.equal(content.getRawStyle('display'), 'block', 'should be block');
         });
 
-        it('content is hidden after second click', function () {
+        it('content is hidden after second click', () => {
             helper.click(trigger);
             helper.click(trigger);
             assert.equal(content.getRawStyle('display'), 'none', 'should be none');
         });
 
-        it('initial state is changing from (more) to (less)', function () {
+        it('initial state is changing from (more) to (less)', done => {
             assert.include(trigger.innerText, 'More Content', 'contains');
             helper.click(trigger);
-            trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
-            assert.include(trigger.innerText, 'Less Content', 'contains');
+            setTimeout(() => {
+                trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
+                assert.include(trigger.innerText, 'Less Content', 'contains');
+                done();
+            }, 100)
         });
     });
-    describe('Collapse more-less {LAYOUT}', function () {
-        var trigger;
 
-        beforeEach(function () {
+    describe('Collapse more-less {LAYOUT}', () => {
+        beforeEach(() => {
             trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
+            content = frame.get('#collapse-more-less div.sc-collapse-target');
         });
 
-        afterEach(function (done) {
+        afterEach((done) => {
             helper.reload(frame, done)
         });
 
-        it('less link is shown under content', function () {
+        it('less link is shown under content', () => {
             helper.click(trigger);
-            var content = frame.get('#collapse-more-less div.sc-collapse-target.in');
-            var link = frame.get('#collapse-more-less a.sc-collapse-target.in');
+            const content = frame.get('#collapse-more-less div.sc-collapse-target.in');
+            const link = frame.get('#collapse-more-less a.sc-collapse-target.in');
             content.assert({
                 bottom: link.top
             });
