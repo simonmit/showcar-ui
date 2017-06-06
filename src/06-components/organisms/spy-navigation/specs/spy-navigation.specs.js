@@ -22,6 +22,7 @@ module.exports =  (frame, assert, browserWidth, helper) => {
                 assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
             }
         });
+/*
 
         it('Sticky behaviour, scroll to anchor and set active tab',  done => {
             //as timeout is too long, we must check all behaviours in one test
@@ -38,6 +39,7 @@ module.exports =  (frame, assert, browserWidth, helper) => {
                 done();
             }, 1000); //timeout for scrolling
         });
+*/
 
         // it('Change class by scrolling to the section', function (done) {
         //     //as timeout is too long, we must check all behaviours in one test
