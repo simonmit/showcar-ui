@@ -98,8 +98,8 @@ gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replac
 gulp.task('default', ['docs:watch']);
 
 gulp.task('test', ['docs:serve'], scgulp.karma({
-    browsers: ['Firefox', 'Electron', 'Safari'],
-    // browsers: ['Electron'],
+    // browsers: ['Firefox', 'Electron', 'Safari'],
+    browsers: ['Electron'],
     files: ['.quixoteconf.js'],
     preprocessors: {
         '.quixoteconf.js': ['webpack','sourcemap']
@@ -116,7 +116,7 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma({
         build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }), //remove on travis
         project: 'Showcar-ui',
     },
-    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7', 'bs_samsungS5_android', 'bs_samsungS5_chrome'],
+    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
     files: ['.quixoteconf.js'],
     preprocessors: {
         '.quixoteconf.js': ['webpack','sourcemap']
