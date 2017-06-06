@@ -4,16 +4,18 @@ export default () => {
             const tagClose = tag.querySelector('.sc-tag__close');
             const parentNode = tag.parentNode;
 
-            tag.addEventListener('animationend', () => {
-                if (parentNode) {
-                    parentNode.removeChild(tag);
-                } else {
-                    console.warn('No parentNode found for tag element - ', tag);
-                }
-            });
+            const removeTag = () => {
+                parentNode.removeChild(tag);
+            };
+
+            // Code for Chrome, Safari and Opera
+            // https://www.w3schools.com/jsref/event_animationend.asp
+            tag.addEventListener('webkitAnimationEnd', removeTag);
+
+            tag.addEventListener('animationend', removeTag);
 
             tagClose.addEventListener('click', () => {
-                tag.classList.toggle('closing');
+                tag.classList.add('closing');
             });
         });
     });
