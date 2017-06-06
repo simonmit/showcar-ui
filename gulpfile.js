@@ -116,7 +116,7 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma({
         build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }), //remove on travis
         project: 'Showcar-ui',
     },
-    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
+    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7', 'bs_samsungS5_android', 'bs_samsungS5_chrome'],
     files: ['.quixoteconf.js'],
     preprocessors: {
         '.quixoteconf.js': ['webpack','sourcemap']
