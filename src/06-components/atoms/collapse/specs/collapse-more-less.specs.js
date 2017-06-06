@@ -23,11 +23,14 @@ module.exports = (frame, assert, browserWidth, helper) => {
             assert.equal(content.getRawStyle('display'), 'none', 'should be none');
         });
 
-        it('initial state is changing from (more) to (less)', () => {
+        it('initial state is changing from (more) to (less)', done => {
             assert.include(trigger.innerText, 'More Content', 'contains');
             helper.click(trigger);
-            trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
-            assert.include(trigger.innerText, 'Less Content', 'contains');
+            setTimeout(() => {
+                trigger = frame.get('#collapse-more-less a.sc-collapse-target.in').toDomElement();
+                assert.include(trigger.innerText, 'Less Content', 'contains');
+                done();
+            }, 100)
         });
     });
 
