@@ -98,8 +98,8 @@ gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replac
 gulp.task('default', ['docs:watch']);
 
 gulp.task('test', ['docs:serve'], scgulp.karma({
-    // browsers: ['Firefox', 'Electron', 'Safari'],
-    browsers: ['Electron'],
+    browsers: ['Firefox', 'Chrome', 'Safari','Electron'],
+    // browsers: ['Chrome'],
     files: ['.quixoteconf.js'],
     preprocessors: {
         '.quixoteconf.js': ['webpack','sourcemap']

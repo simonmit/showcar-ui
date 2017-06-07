@@ -1,5 +1,5 @@
 module.exports = (frame, assert, browserWidth, helper) => {
-    describe('Notification', () => {
+   /* describe('Notification', () => {
         let container;
         let cross;
         let trigger;
@@ -59,7 +59,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 });
                 done();
             }, 1000); //waiting for animation
-        });
+        });*/
 
         // not working on Mobile Safari
         // it('notification is sticky', function (done) {
@@ -77,5 +77,5 @@ module.exports = (frame, assert, browserWidth, helper) => {
         //         done();
         //     }, 1000); //waiting for scrolling
         // });
-    });
+    // });
 };

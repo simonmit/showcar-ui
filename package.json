@@ -33,7 +33,7 @@
     "html-entities": "^1.2.1",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.9.0",
+    "showcar-gulp": "^2.9.1",
     "update-notifier": "^2.1.0",
     "yargs": "^4.6.0"
   },
@@ -46,7 +46,7 @@
     "promiz": "^1.0.5",
     "showcar-carousel": "^4.3.4",
     "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#release",
-    "showcar-pictures": "^3.0.2",
+    "showcar-pictures": "^3.0.3",
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",

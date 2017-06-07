@@ -18,6 +18,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             inputGroup.assert({
                 width: container.width
             });
+
             inputGroupRadio.assert({
                 width: container.width
             });
@@ -27,6 +28,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             inputGroup.assert({
                 height: 40
             });
+
             inputGroupRadio.assert({
                 height: 40
             });
@@ -36,8 +38,9 @@ module.exports = (frame, assert, browserWidth, helper) => {
             const thirdEl = frame.get('#input-group .sc-input-group .sc-btn-bob');
 
             firstEl.assert({
-                right: secondEl.left.plus(1)
+                right: secondEl.left
             });
+
             secondEl.assert({
                 right: thirdEl.left.plus(1)
             });
@@ -49,6 +52,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             firstEl.assert({
                 right: secondEl.left
             });
+
             secondEl.assert({
                 right: thirdEl.left
             });
