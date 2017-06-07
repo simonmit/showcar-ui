@@ -35,27 +35,29 @@ module.exports = (frame, assert, browserWidth, helper) => {
     });
 
     describe('Tag {INTERACTION}', () => {
-        let tag;
-        let tagEl;
-        let tagClose;
-
-        beforeEach(() => {
-            tag = frame.getAll('#tag .sc-tag').at(0);
-            tagEl = tag.toDomElement();
-            tagClose = frame.getAll('#tag .sc-tag as24-icon').at(0).toDomElement();
-        });
-
         afterEach(done => {
             helper.reload(frame, done)
         });
 
-        it('is removed after clicking close button', (done) => {
-            tagEl.addEventListener('animationend', () => {
+        it('is removed after clicking close button', done => {
+            const tag = frame.getAll('#tag .sc-tag').at(0);
+            const tagEl = tag.toDomElement();
+
+            // const tagClose = frame.getAll('#tag .sc-tag as24-icon').at(0).toDomElement();
+            const tagClose = tag.toDomElement().querySelector('.sc-tag__close');
+
+            const checkOnAnimationEnd = () => {
                 tag.assert({
                     rendered: false
                 });
+                clearTimeout(fallbackTimeout);
+                fallbackTimeout = ()=>{};
                 done();
-            });
+            }
+            tagEl.addEventListener('animationend', checkOnAnimationEnd);
+
+            // fallbackTimeout for stupid browsers
+            let fallbackTimeout = setTimeout(checkOnAnimationEnd, 5000);
 
             helper.click(tagClose);
         });
