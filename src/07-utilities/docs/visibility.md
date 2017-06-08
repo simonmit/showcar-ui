@@ -26,32 +26,32 @@ DON'T USE THE NEW CLASSES SHOWN HERE. THE OLD CLASSES (e.g. sc-visible-s) STILL 
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible--xl</code></td>
+        <td><code>.sc-visible-at-xl</code></td>
         <td></td>
         <td></td>
         <td></td>
         <td class="cell-visible">Visible</td>
     </tr>
     <tr>
-        <td><code>.sc-visible--l</code></td>
+        <td><code>.sc-visible-at-l</code></td>
         <td></td>
         <td></td>
         <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>.sc-visible--m</code></td>
+        <td><code>.sc-visible-at-m</code></td>
         <td></td>
         <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>.sc-visible--s</code></td>
+        <td><code>.sc-visible-at-s</code></td>
         <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td><code>.sc-hidden</code></td>
@@ -61,32 +61,32 @@ DON'T USE THE NEW CLASSES SHOWN HERE. THE OLD CLASSES (e.g. sc-visible-s) STILL 
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden--xl</code></td>
+        <td><code>.sc-hidden-at-xl</code></td>
         <td></td>
         <td></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
     </tr>
     <tr>
-        <td><code>.sc-hidden--l</code></td>
+        <td><code>.sc-hidden-at-l</code></td>
         <td></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>.sc-hidden--m</code></td>
+        <td><code>.sc-hidden-at-m</code></td>
         <td></td>
         <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>.sc-hidden--s</code></td>
+        <td><code>.sc-hidden-at-s</code></td>
         <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
-        <td class="cell-hidden">Hidden</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     </tbody>
 </table>
