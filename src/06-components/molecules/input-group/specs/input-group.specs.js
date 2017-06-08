@@ -77,7 +77,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
                 assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
                 done();
-            }, 500); //wait for transition
+            }, 550); //wait for transition
         });
     });
 };

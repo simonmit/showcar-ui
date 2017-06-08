@@ -47,12 +47,14 @@ module.exports = (frame, assert, browserWidth, helper) => {
             const tagClose = tag.toDomElement().querySelector('.sc-tag__close');
 
             const checkOnAnimationEnd = () => {
-                tag.assert({
-                    rendered: false
-                });
-                clearTimeout(fallbackTimeout);
-                fallbackTimeout = ()=>{};
-                done();
+                setTimeout(() => {
+                    tag.assert({
+                        rendered: false
+                    });
+                    clearTimeout(fallbackTimeout);
+                    fallbackTimeout = () => {};
+                    done();
+                }, 50)
             }
             tagEl.addEventListener('animationend', checkOnAnimationEnd);
 
