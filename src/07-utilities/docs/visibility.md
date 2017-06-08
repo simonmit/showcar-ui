@@ -19,13 +19,6 @@ DON'T USE THE NEW CLASSES SHOWN HERE. THE OLD CLASSES (e.g. sc-visible-s) STILL 
     </thead>
     <tbody>
     <tr>
-        <td><code>.sc-visible</code></td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-        <td class="cell-visible">Visible</td>
-    </tr>
-    <tr>
         <td><code>.sc-visible-at-xl</code></td>
         <td></td>
         <td></td>
