@@ -1,0 +1,60 @@
+@import '../../../01-settings/variables';
+
+.sc-search-mask .sc-input {
+  margin-bottom: $S;
+}
+
+.sc-search-mask input.sc-input::placeholder {
+  color: $black-100;
+}
+
+.sc-search-link {
+  display: inline-block;
+  padding: $L 0;
+}
+
+.sc-search-mask {
+  text-align: center;
+  border-bottom: 1px solid $black-30;
+}
+
+.sc-search-filters {
+  background-color: $white;
+  padding: $XL $L;
+}
+
+.sc-search-tabs {
+  display: flex;
+  align-items: flex-end;
+}
+
+.sc-search-tab {
+  background-color: $white;
+  height: 36px;
+  padding-top: 12px;
+  width: 25%;
+  opacity: .9;
+  margin-bottom: 1px;
+  margin-right: 1px;
+
+  as24-icon {
+    width: 36px;
+    height: 16px;
+    display: inline-block;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sc-search-tab--active {
+  opacity: 1;
+  height: 45px;
+  padding-top: 21px;
+  margin-bottom: 0;
+}
+
+.sc-search-tab--active as24-icon svg g {
+  fill: $orange-100;
+}
