@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="sc-search-filters">
-        <div class="sc-search-options">
+        <div class="sc-search-options sc-hidden-at-s">
             <input class="sc-input" id="seach-new" type="checkbox" checked/>
             <label for="seach-new">Neu</label>
             <input class="sc-input" id="seach-used" type="checkbox" checked/>
@@ -26,28 +26,32 @@
             <input class="sc-input" id="seach-daily-admission" type="checkbox"/>
             <label for="seach-daily-admission">Tageszulassung</label>
         </div>
-        <select class="sc-input" placeholder="sc-input">
-            <option>Marke</option>
-            <option>...</option>
-        </select>
-        <select class="sc-input" placeholder="sc-input" disabled>
-            <option>Modell</option>
-            <option>...</option>
-        </select>
-        <select class="sc-input" placeholder="sc-input">
-            <option>Erstzulassung ab</option>
-            <option>...</option>
-        </select>
-        <select class="sc-input" placeholder="sc-input">
-            <option>Preis bis (€)</option>
-            <option>...</option>
-        </select>
-        <select class="sc-input" placeholder="sc-input">
-            <option>Alle Länder</option>
-            <option>...</option>
-        </select>
-        <input type="text" class="sc-input" placeholder="Stadt/PLZ">
-        <button class="sc-btn-bob sc-btn-block sc-search-btn">Absenden</button>
-        <a class="sc-search-link">Weitere Suchoptionen</a>
+        <div class="sc-grid-row">
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Marke</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input" disabled>
+                <option>Modell</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Erstzulassung ab</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Preis bis (€)</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Alle Länder</option>
+                <option>...</option>
+            </select>
+            <input type="text" class="sc-input" placeholder="Stadt/PLZ">
+            <div class="sc-search-filters__footer">
+                <button class="sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12">Absenden</button>
+                <a class="sc-search-link sc-grid-col-6 sc-grid-col-s-12">Weitere Suchoptionen</a>
+            </div>
+        </div>
     </div>
 </div>

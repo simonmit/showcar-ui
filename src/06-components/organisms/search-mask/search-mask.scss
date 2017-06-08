@@ -57,15 +57,34 @@
 }
 
 .sc-search-link {
-  display: inline-block;
+  display: block;
   padding: $L 0;
+
+  @include mqmin($viewportM) {
+    text-align: left;
+  }
 }
 
 .sc-search-mask .sc-input {
   margin-bottom: $S;
 }
 
+.sc-search-mask input.sc-input {
+  width: 98.56631%;
+
+  @include mqmin($viewportM) {
+    width: 48.56631%;
+  }
+}
+
 .sc-search-mask input.sc-input::placeholder {
   color: $black-100;
 }
 
+.sc-search-filters__footer {
+  @include mqmin($viewportM) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: $L;
+  }
+}
