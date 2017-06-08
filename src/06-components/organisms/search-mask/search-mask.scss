@@ -1,21 +1,23 @@
 @import '../../../01-settings/variables';
-
-.sc-search-mask .sc-input {
-  margin-bottom: $S;
-}
-
-.sc-search-mask input.sc-input::placeholder {
-  color: $black-100;
-}
-
-.sc-search-link {
-  display: inline-block;
-  padding: $L 0;
-}
+@import '../../../02-sass-tools/sass-mq';
 
 .sc-search-mask {
   text-align: center;
   border-bottom: 1px solid $black-30;
+}
+
+.sc-search-options {
+  text-align: left;
+  padding-bottom: $L;
+}
+
+.sc-search-tabs {
+  display: flex;
+  align-items: flex-end;
+
+  @include mqmin($viewportM) {
+    max-width: 440px;
+  }
 }
 
 .sc-search-filters {
@@ -23,15 +25,10 @@
   padding: $XL $L;
 }
 
-.sc-search-tabs {
-  display: flex;
-  align-items: flex-end;
-}
-
 .sc-search-tab {
   background-color: $white;
   height: 36px;
-  padding-top: 12px;
+  padding-top: $M;
   width: 25%;
   opacity: .9;
   margin-bottom: 1px;
@@ -39,7 +36,7 @@
 
   as24-icon {
     width: 36px;
-    height: 16px;
+    height: $L;
     display: inline-block;
   }
 
@@ -53,8 +50,22 @@
   height: 45px;
   padding-top: 21px;
   margin-bottom: 0;
+
+  as24-icon svg g {
+    fill: $orange-100;
+  }
 }
 
-.sc-search-tab--active as24-icon svg g {
-  fill: $orange-100;
+.sc-search-link {
+  display: inline-block;
+  padding: $L 0;
 }
+
+.sc-search-mask .sc-input {
+  margin-bottom: $S;
+}
+
+.sc-search-mask input.sc-input::placeholder {
+  color: $black-100;
+}
+
