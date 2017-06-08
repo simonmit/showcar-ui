@@ -21,8 +21,13 @@
 }
 
 .sc-search-filters {
+  visibility: hidden;
   background-color: $white;
   padding: $XL $L;
+
+  &.sc-search-filters--visible {
+    visibility: visible;
+  }
 }
 
 .sc-search-tab {
@@ -61,6 +66,7 @@
   padding: $L 0;
 
   @include mqmin($viewportM) {
+    padding: 9px 0;
     text-align: left;
   }
 }
