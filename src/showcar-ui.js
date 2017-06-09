@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation();
 });
 
+// search-mask
+import searchMask from './06-components/organisms/search-mask/search-mask';
+searchMask();
+
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
 // TODO do we still need it?
