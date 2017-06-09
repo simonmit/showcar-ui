@@ -1,0 +1,39 @@
+@import '../../../01-settings/variables';
+
+$border: 1px solid $black-30;
+
+.sc-table {
+  display: block;
+
+  table {
+    width: 100%;
+    border: $border;
+    overflow-x: auto;
+
+    @include mqmax($viewportM) {
+      display: block;
+    }
+  }
+
+  tbody {
+    tr:last-child td {
+      border-bottom: 0 none;
+    }
+  }
+
+  td, th {
+    padding: $XL $L;
+    text-align: left;
+    border-bottom: $border;
+  }
+
+}
+
+.sc-table__empty {
+  border-right: $border;
+}
+
+.sc-table__title {
+  color: $black-40;
+  border-right: $border;
+}
