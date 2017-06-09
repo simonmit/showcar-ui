@@ -1,11 +1,11 @@
-<h2>Visible/hidden classes<span class="status deprecated">Don't use - Needs discussion & refactoring</span></h2>
+<h2>Visible/hidden classes<span class="status approved">Approved</span></h2>
 
 #### Usage:
 
 Utility classes to show/hide elements based on the current viewport (media queries).  
 IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
 
-DON'T USE THE NEW CLASSES SHOWN HERE. THE OLD CLASSES (e.g. sc-visible-s) STILL WORK AS THEY USED TO.
+THE OLD CLASSES (e.g. sc-visible-s) STILL WORK AS THEY USED TO.
 
 <table class="docs-table docs-table-visibility">
     <thead>
