@@ -1,6 +1,5 @@
 module.exports = (frame, assert, browserWidth) => {
     describe('Visibility classes', () => {
-        console.log('sdfs');
         let visibleS, visibleM, visibleL, visibleXL;
         let hiddenS, hiddenM, hiddenL, hiddenXL, hiddenAll;
 
@@ -19,43 +18,43 @@ module.exports = (frame, assert, browserWidth) => {
         if (browserWidth < 767) {
 
             it('shown correctly on S view', () => {
-                visibleS.assert({ rendered: false });
-                visibleM.assert({ rendered: true });
-                visibleL.assert({ rendered: true });
-                visibleXL.assert({ rendered: true });
+                visibleS.assert({ rendered: true });
+                visibleM.assert({ rendered: false });
+                visibleL.assert({ rendered: false });
+                visibleXL.assert({ rendered: false });
                 hiddenS.assert({ rendered: false });
                 hiddenM.assert({ rendered: true });
                 hiddenL.assert({ rendered: true });
                 hiddenXL.assert({ rendered: true });
-                hiddenAll.assert({ rendered: true });
+                hiddenAll.assert({ rendered: false });
             });
 
         } else if (browserWidth >= 768 && browserWidth < 1023) {
 
             it('shown correctly on M view', () => {
-                visibleS.assert({ rendered: true });
-                visibleM.assert({ rendered: false });
-                visibleL.assert({ rendered: true });
-                visibleXL.assert({ rendered: true });
+                visibleS.assert({ rendered: false });
+                visibleM.assert({ rendered: true });
+                visibleL.assert({ rendered: false });
+                visibleXL.assert({ rendered: false });
                 hiddenS.assert({ rendered: true });
                 hiddenM.assert({ rendered: false });
                 hiddenL.assert({ rendered: true });
                 hiddenXL.assert({ rendered: true });
-                hiddenAll.assert({ rendered: true });
+                hiddenAll.assert({ rendered: false });
             });
 
         } else {
 
-            it('shown correctly on L and XL view', () => {
-                visibleS.assert({ rendered: true });
+            it('shown correctly on L view', () => {
+                visibleS.assert({ rendered: false });
                 visibleM.assert({ rendered: false });
                 visibleL.assert({ rendered: true });
-                visibleXL.assert({ rendered: true });
+                visibleXL.assert({ rendered: false });
                 hiddenS.assert({ rendered: true });
-                hiddenM.assert({ rendered: false });
-                hiddenL.assert({ rendered: true });
+                hiddenM.assert({ rendered: true });
+                hiddenL.assert({ rendered: false });
                 hiddenXL.assert({ rendered: true });
-                hiddenAll.assert({ rendered: true });
+                hiddenAll.assert({ rendered: false });
             });
 
         }
