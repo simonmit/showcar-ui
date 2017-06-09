@@ -25,7 +25,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                     height: 0
                 });
                 done();
-            }, 3500);
+            }, 4000);
         });
     });
 };
