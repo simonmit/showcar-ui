@@ -36,7 +36,6 @@ module.exports = (frame, assert, browserWidth, helper) => {
             setTimeout(() => {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
 
-
                 //ie calculates differently than other browsers
                 assert.oneOf(Math.round(lastSection.getRawPosition().top), [- 1, 0, 1], 'position should be on top');
 
@@ -52,7 +51,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 return;
             }
 
-            const scrollTo = lastSection.toDomElement().scrollIntoView();
+            lastSection.toDomElement().scrollIntoView();
 
             setTimeout(() => {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');
