@@ -30,7 +30,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         });
 
         it('value2 is shown in input after click, value3 is not selected', () => {
-            helper.mouseTouchDown(trigger);
+            helper.click(trigger);
 
             helper.click(label2.toDomElement());
             helper.click(label3.toDomElement());
@@ -39,15 +39,15 @@ module.exports = (frame, assert, browserWidth, helper) => {
         });
 
         it('value2 and value3 is shown in input after click', () => {
-            helper.mouseTouchDown(trigger);
+            helper.click(trigger);
             helper.click(label2.toDomElement());
             helper.click(label3.toDomElement());
             assert.include(trigger.innerText, 'Value2, Value3', 'contains');
         });
 
         it('content is hidden after two clicks', () => {
-            helper.mouseTouchDown(trigger);
-            helper.mouseTouchDown(trigger);
+            helper.click(trigger);
+            helper.click(trigger);
             content.assert({
                 rendered: false
             });

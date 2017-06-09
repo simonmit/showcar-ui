@@ -1,5 +1,5 @@
 module.exports = (frame, assert, browserWidth, helper) => {
-   /* describe('Notification', () => {
+    describe('Notification', () => {
         let container;
         let cross;
         let trigger;
@@ -26,19 +26,19 @@ module.exports = (frame, assert, browserWidth, helper) => {
                     top: container.bottom
                 });
                 done();
-            }, 1000); //waiting for animation
+            }, 100); //waiting for animation
         });
 
         it('hides if cross is clicked', done => {
             helper.click(trigger);
             helper.click(cross);
 
-            setTimeout( ()=> {
+            setTimeout(() => {
                 notification.assert({
                     height: 0
                 });
                 done();
-            }, 1000); //waiting for animation
+            }, 550); //waiting for animation
         });
 
         it('two notifications sticks on each other', done => {
@@ -58,24 +58,28 @@ module.exports = (frame, assert, browserWidth, helper) => {
                     top: container.bottom
                 });
                 done();
-            }, 1000); //waiting for animation
-        });*/
+            }, 550); //waiting for animation
+        });
 
         // not working on Mobile Safari
-        // it('notification is sticky', function (done) {
-        //     helper.click(trigger);
+        it('notification is sticky', function (done) {
+            if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+                done();
+                return;
+            }
+            helper.click(trigger);
 
-        //     var smallFooter = frame.get('#small-footer');
-        //     smallFooter.toDomElement().scrollIntoView();
+            const smallFooter = frame.get('#small-footer').toDomElement();
+            smallFooter.scrollIntoView();
 
-        //     setTimeout(function () {
-        //         var notification = frame.get('.sc-notification-container');
-        //         var viewport = frame.viewport();
-        //         notification.assert({
-        //             top: viewport.top
-        //         });
-        //         done();
-        //     }, 1000); //waiting for scrolling
-        // });
-    // });
+            setTimeout(function () {
+                var notification = frame.get('.sc-notification-container');
+                var viewport = frame.viewport();
+                notification.assert({
+                    top: viewport.top
+                });
+                done();
+            }, 1000); //waiting for scrolling
+        });
+    });
 };

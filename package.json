@@ -31,6 +31,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-string-replace": "^0.4.0",
     "html-entities": "^1.2.1",
+    "karma-ios-simulator-launcher": "0.0.4",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
     "showcar-gulp": "^2.9.1",
