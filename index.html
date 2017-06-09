@@ -93,6 +93,10 @@
                 <span>atoms</span>
                 <a href="/docs/atoms" class="open-separate"></a>
                 <ul><li>
+            <a data-scroll href="#bulletlist-target">bulletlist</a>
+            <a href="/docs/atoms/bulletlist" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#button-target">button</a>
             <a href="/docs/atoms/button" class="open-separate"></a>
         </li>
@@ -966,13 +970,41 @@ margin-bottom:15px;
                  
                 </div>
             
-<hr></div><div id="button-target" class="positon-anchor"><h2 class="type_name">atoms</h2>
+<hr></div><div id="bulletlist-target" class="positon-anchor"><h2 class="type_name">atoms</h2>
+                <div class="element" id="bulletlist">
+                    <div class="markdown"><h2>Bullet list<span class="status deprecated">Needs approval</span></h2>
+</div>
+                   <div class="sample"><ul class="sc-bulletlist">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-bulletlist" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-bulletlist" class="hjs html">&lt;ul class=&quot;sc-bulletlist&quot;&gt;
+    &lt;li&gt;One&lt;/li&gt;
+    &lt;li&gt;Two&lt;/li&gt;
+    &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="button-target" class="positon-anchor">
                 <div class="element" id="button-default">
                     <div class="markdown"><h2>Button<span class="status approved">Approved</span></h2>
 </div>
                    <div class="sample"><button class="sc-btn-bob">I am Bob!</button>
 <button class="sc-btn-ross">I am Ross!</button>
 <button class="sc-btn-ghost">I am Ghost!</button>
+<button class="sc-btn-marketing">I am Marketing!</button>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -983,6 +1015,7 @@ margin-bottom:15px;
                                 <code id="copy_code-code-button-default" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ghost&quot;&gt;I am Ghost!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-marketing&quot;&gt;I am Marketing!&lt;/button&gt;
 </code>
                             </pre>
                         </div>
@@ -998,6 +1031,7 @@ margin-bottom:15px;
                    <div class="sample"><button class="sc-btn-bob" disabled="">I am Bob!</button>
 <button class="sc-btn-ross" disabled="">I am Ross!</button>
 <button class="sc-btn-ghost" disabled="">I am Ghost!</button>
+<button class="sc-btn-marketing" disabled="">I am Marketing!</button>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -1008,6 +1042,7 @@ margin-bottom:15px;
                                 <code id="copy_code-code-button-disabled" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot; disabled=&quot;&quot;&gt;I am Bob!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ross&quot; disabled=&quot;&quot;&gt;I am Ross!&lt;/button&gt;
 &lt;button class=&quot;sc-btn-ghost&quot; disabled=&quot;&quot;&gt;I am Ghost!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-marketing&quot; disabled=&quot;&quot;&gt;I am Marketing!&lt;/button&gt;
 </code>
                             </pre>
                         </div>
@@ -1042,6 +1077,7 @@ margin-bottom:15px;
                    <div class="sample"><a class="sc-btn-bob">I am Bob!</a>
 <a class="sc-btn-ross">I am Ross!</a>
 <a class="sc-btn-ghost">I am Ghost!</a>
+<a class="sc-btn-marketing">I am Marketing!</a>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -1052,6 +1088,7 @@ margin-bottom:15px;
                                 <code id="copy_code-code-button-link" class="hjs html">&lt;a class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/a&gt;
 &lt;a class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/a&gt;
 &lt;a class=&quot;sc-btn-ghost&quot;&gt;I am Ghost!&lt;/a&gt;
+&lt;a class=&quot;sc-btn-marketing&quot;&gt;I am Marketing!&lt;/a&gt;
 </code>
                             </pre>
                         </div>
@@ -3361,8 +3398,137 @@ This element is not yet implemented. It will look like this:</p>
 <img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_S.png" alt="showcar-searchmask" width=""></p>
 <p><h3>M - L viewport:</h3>
 <img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_M-L.png" alt="showcar-searchmask" width=""></p>
+<style>
+#search-mask .sample{
+     background-color: lightblue;
+}
+</style>
 </div>
-                     
+                   <div class="sample"><div class="sc-search-mask">
+    <!--nav?-->
+    <div class="sc-search-tabs">
+        <div class="sc-search-tab sc-search-tab--active">
+            <as24-icon type="navigation/car"></as24-icon>
+        </div>
+        <div class="sc-search-tab">
+            <as24-icon type="navigation/motocycle"></as24-icon>
+        </div>
+        <div class="sc-search-tab">
+            <as24-icon type="navigation/caravan"></as24-icon>
+        </div>
+        <div class="sc-search-tab">
+            <as24-icon type="navigation/truck"></as24-icon>
+        </div>
+    </div>
+    <div class="sc-search-content sc-search-content--visible" data-section="search-auto">
+        <div class="sc-search-options sc-hidden-at-s">
+            <input class="sc-input" id="seach-new" type="checkbox" checked/>
+            <label for="seach-new">Neu</label>
+            <input class="sc-input" id="seach-used" type="checkbox" checked/>
+            <label for="seach-used">Gebraucht</label>
+            <input class="sc-input" id="seach-daily-admission" type="checkbox"/>
+            <label for="seach-daily-admission">Tageszulassung</label>
+        </div>
+        <div class="sc-grid-row">
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Marke</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input" disabled>
+                <option>Modell</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Erstzulassung ab</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Preis bis (€)</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+                <option>Alle Länder</option>
+                <option>...</option>
+            </select>
+            <input type="text" class="sc-input" placeholder="Stadt/PLZ">
+            <div class="sc-search-content__actions">
+                <button class="sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12">Absenden</button>
+                <a class="sc-search-link sc-grid-col-6 sc-grid-col-s-12">Weitere Suchoptionen</a>
+            </div>
+        </div>
+    </div>
+    <div class="sc-search-filters" data-section="search-moto">
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-search-mask" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-search-mask" class="hjs html">&lt;div class=&quot;sc-search-mask&quot;&gt;
+    &lt;!--nav?--&gt;
+    &lt;div class=&quot;sc-search-tabs&quot;&gt;
+        &lt;div class=&quot;sc-search-tab sc-search-tab--active&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/car&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-search-tab&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/motocycle&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-search-tab&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/caravan&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-search-tab&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/truck&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-search-content sc-search-content--visible&quot; data-section=&quot;search-auto&quot;&gt;
+        &lt;div class=&quot;sc-search-options sc-hidden-at-s&quot;&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-new&quot; type=&quot;checkbox&quot; checked/&gt;
+            &lt;label for=&quot;seach-new&quot;&gt;Neu&lt;/label&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-used&quot; type=&quot;checkbox&quot; checked/&gt;
+            &lt;label for=&quot;seach-used&quot;&gt;Gebraucht&lt;/label&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-daily-admission&quot; type=&quot;checkbox&quot;/&gt;
+            &lt;label for=&quot;seach-daily-admission&quot;&gt;Tageszulassung&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-grid-row&quot;&gt;
+            &lt;select class=&quot;sc-input sc-grid-col-6 sc-grid-col-s-12&quot; placeholder=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Marke&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input sc-grid-col-6 sc-grid-col-s-12&quot; placeholder=&quot;sc-input&quot; disabled&gt;
+                &lt;option&gt;Modell&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input sc-grid-col-6 sc-grid-col-s-12&quot; placeholder=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Erstzulassung ab&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input sc-grid-col-6 sc-grid-col-s-12&quot; placeholder=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Preis bis (&euro;)&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input sc-grid-col-6 sc-grid-col-s-12&quot; placeholder=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Alle L&auml;nder&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Stadt/PLZ&quot;&gt;
+            &lt;div class=&quot;sc-search-content__actions&quot;&gt;
+                &lt;button class=&quot;sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12&quot;&gt;Absenden&lt;/button&gt;
+                &lt;a class=&quot;sc-search-link sc-grid-col-6 sc-grid-col-s-12&quot;&gt;Weitere Suchoptionen&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-search-filters&quot; data-section=&quot;search-moto&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
                 </div>
             
 <hr></div><div id="spy-navigation-target" class="positon-anchor">
@@ -4387,10 +4553,10 @@ smoothScroll(target, duration, () => {
             
 
                 <div class="element" id="visibility">
-                    <div class="markdown"><h2>Visible/hidden classes<span class="status deprecated">Don&#39;t use - Needs discussion &amp; refactoring</span></h2>
+                    <div class="markdown"><h2>Visible/hidden classes<span class="status approved">Approved</span></h2>
 
 <h4>Usage:</h4><p>Utility classes to show/hide elements based on the current viewport (media queries).<br>IMPORTANT: Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device&#39;s presentation.</p>
-<p>DON&#39;T USE THE NEW CLASSES SHOWN HERE. THE OLD CLASSES (e.g. sc-visible-s) STILL WORK AS THEY USED TO.</p>
+<p>THE OLD CLASSES (e.g. sc-visible-s) STILL WORK AS THEY USED TO.</p>
 <table class="docs-table docs-table-visibility">
     <thead>
     <tr>
@@ -4471,11 +4637,12 @@ smoothScroll(target, duration, () => {
 <p class="sc-hidden-at-s">I am hidden on S (321 - 767)</p>
 <p class="sc-hidden-at-m">I am hidden on M (768 - 1023)</p>
 <p class="sc-hidden-at-l">I am hidden on L (1024 - 1099)</p>
-<p class="sc-hidden-at-xl">I am hidden on XL (1100 - 1269)</p>
+<p class="sc-hidden-at-xl">I am hidden on XL (1100 - ∞ )</p>
 <p class="sc-visible-at-s">I am visible on S (321 - 767)</p>
 <p class="sc-visible-at-m">I am visible on M (768 - 1023)</p>
 <p class="sc-visible-at-l">I am visible on L (1024 - 1099)</p>
-<p class="sc-visible-at-xl">I am visible on XL (1100 - 1269)</p></div> 
+<p class="sc-visible-at-xl">I am visible on XL (1100 - ∞ )</p>
+</div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-visibility" title="Copy to clipboard">
@@ -4486,11 +4653,12 @@ smoothScroll(target, duration, () => {
 &lt;p class=&quot;sc-hidden-at-s&quot;&gt;I am hidden on S (321 - 767)&lt;/p&gt;
 &lt;p class=&quot;sc-hidden-at-m&quot;&gt;I am hidden on M (768 - 1023)&lt;/p&gt;
 &lt;p class=&quot;sc-hidden-at-l&quot;&gt;I am hidden on L (1024 - 1099)&lt;/p&gt;
-&lt;p class=&quot;sc-hidden-at-xl&quot;&gt;I am hidden on XL (1100 - 1269)&lt;/p&gt;
+&lt;p class=&quot;sc-hidden-at-xl&quot;&gt;I am hidden on XL (1100 - &infin; )&lt;/p&gt;
 &lt;p class=&quot;sc-visible-at-s&quot;&gt;I am visible on S (321 - 767)&lt;/p&gt;
 &lt;p class=&quot;sc-visible-at-m&quot;&gt;I am visible on M (768 - 1023)&lt;/p&gt;
 &lt;p class=&quot;sc-visible-at-l&quot;&gt;I am visible on L (1024 - 1099)&lt;/p&gt;
-&lt;p class=&quot;sc-visible-at-xl&quot;&gt;I am visible on XL (1100 - 1269)&lt;/p&gt;</code>
+&lt;p class=&quot;sc-visible-at-xl&quot;&gt;I am visible on XL (1100 - &infin; )&lt;/p&gt;
+</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
