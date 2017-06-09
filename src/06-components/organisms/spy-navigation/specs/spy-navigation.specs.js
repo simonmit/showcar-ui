@@ -51,9 +51,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 return;
             }
 
-            const scrollTo = lastSection.toDomElement().getBoundingClientRect().top;
-
-            frame.scroll(scrollTo, 0);
+            const scrollTo = lastSection.toDomElement().scrollIntoView();
 
             setTimeout(() => {
                 assert.equal(spyNavigation.getRawStyle('position'), 'fixed', 'position should be fixed');

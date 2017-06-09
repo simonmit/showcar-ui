@@ -6,7 +6,6 @@ module.exports = (frame, assert, browserWidth, helper) => {
         let notification;
 
         beforeEach(() => {
-            frame.scroll(0, 0);
             container = frame.get('#notification-closable #example-notification-target');
             trigger = frame.get('#notification-closable [data-id=succ2]').toDomElement();
             cross = frame.get('as24-notification#succ2 a').toDomElement();
@@ -70,14 +69,8 @@ module.exports = (frame, assert, browserWidth, helper) => {
             }
             helper.click(trigger);
 
-            // const smallFooter = frame.get('#small-footer');
-            // const scrollTo = smallFooter.toDomElement().getBoundingClientRect().top;
-
-            // frame.scroll(scrollTo, 0);
-
-            // smallFooter.toDomElement().scrollIntoView();
-
-            document.querySelector('#small-footer').scrollIntoView();
+            const smallFooter = frame.get('#small-footer').toDomElement();
+            smallFooter.scrollIntoView();
 
             setTimeout(function () {
                 var notification = frame.get('.sc-notification-container');

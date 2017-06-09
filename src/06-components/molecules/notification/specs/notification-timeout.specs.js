@@ -13,6 +13,11 @@ module.exports = (frame, assert, browserWidth, helper) => {
         });
 
         it('hides after timeout', (done) => {
+            if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+                done();
+                return;
+            }
+
             const notification = frame.get('as24-notification#succ1');
             helper.click(trigger);
             setTimeout(() => {
