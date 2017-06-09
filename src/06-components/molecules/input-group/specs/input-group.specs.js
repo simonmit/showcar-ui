@@ -18,6 +18,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             inputGroup.assert({
                 width: container.width
             });
+
             inputGroupRadio.assert({
                 width: container.width
             });
@@ -27,6 +28,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             inputGroup.assert({
                 height: 40
             });
+
             inputGroupRadio.assert({
                 height: 40
             });
@@ -36,8 +38,9 @@ module.exports = (frame, assert, browserWidth, helper) => {
             const thirdEl = frame.get('#input-group .sc-input-group .sc-btn-bob');
 
             firstEl.assert({
-                right: secondEl.left.plus(1)
+                right: secondEl.left
             });
+
             secondEl.assert({
                 right: thirdEl.left.plus(1)
             });
@@ -49,6 +52,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             firstEl.assert({
                 right: secondEl.left
             });
+
             secondEl.assert({
                 right: thirdEl.left
             });
@@ -73,7 +77,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
                 assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
                 done();
-            }, 500); //wait for transition
+            }, 550); //wait for transition
         });
     });
 };

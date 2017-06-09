@@ -88,70 +88,62 @@
 }
 
 //s viewport
-.sc-hidden--s {
-  @include mqmin($viewportS) {
+.sc-hidden-at-s {
+  @include mqminmax($viewportS - 1, $viewportM - 1) {
     display: none;
   }
 }
 
-.sc-visible--s {
-  @include mqmax($viewportS - 1) {
+.sc-visible-at-s {
+  @include mqmin($viewportM) {
     display: none;
-  }
-
-  @include mqmin($viewportS) {
-    display: block;
   }
 }
 
 //m viewport
-.sc-hidden--m {
-  @include mqmin($viewportM) {
+.sc-hidden-at-m {
+  @include mqminmax($viewportM, $viewportL - 1) {
     display: none;
   }
 }
 
-.sc-visible--m {
-  @include mqmax($viewportM - 1) {
+.sc-visible-at-m {
+  @include mqminmax($viewportS - 1, $viewportM - 1) {
     display: none;
   }
 
-  @include mqmin($viewportM) {
-    display: block;
+  @include mqmin($viewportL) {
+    display: none;
   }
 }
 
 //l viewport
-.sc-hidden--l {
-  @include mqmin($viewportL) {
+.sc-hidden-at-l {
+  @include mqminmax($viewportL, $viewportXL - 1) {
     display: none;
   }
 }
 
-.sc-visible--l {
-  @include mqmax($viewportL - 1) {
+.sc-visible-at-l {
+  @include mqminmax($viewportS - 1, $viewportL - 1) {
     display: none;
   }
 
-  @include mqmin($viewportL) {
-    display: block;
+  @include mqmin($viewportXL) {
+    display: none;
   }
 }
 
 //xl viewport
-.sc-hidden--xl {
+.sc-hidden-at-xl {
   @include mqmin($viewportXL) {
     display: none;
   }
 }
 
-.sc-visible--xl {
+.sc-visible-at-xl {
   @include mqmax($viewportXL - 1) {
     display: none;
-  }
-
-  @include mqmin($viewportXL) {
-    display: block;
   }
 }
 
