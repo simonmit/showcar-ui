@@ -1,64 +1,6 @@
-// Not yet working
-module.exports = function (frame, assert, browserWidth) {
-    // describe('Visibility classes', function () {
-    //     var visibleS;
-    //
-    //     beforeEach(function () {
-    //         visibleS = frame.get('#visibility .sc-visible--s');
-    //     });
-    //
-    //     afterEach(function (done) {
-    //         helper.reload(frame, done)
-    //     });
-    //
-    //     it('Visible S class', function () {
-    //         it('is visible from S view', function () {
-    //             visibleS.assert({
-    //                 rendered: true
-    //             });
-    //         });
-    //     });
-    //
-    //     it('Visible S class', function () {
-    //         if (browserWidth > 320) {
-    //             it('is visible from S view', function () {
-    //                 visibleS.assert({
-    //                     rendered: true
-    //                 });
-    //             });
-    //         }
-    //     });
-    //
-    //     it('Hidden S class', function () {
-    //         if (browserWidth > 320) {
-    //             it('is hidden from S view', function () {
-    //                 hiddenS.assert({
-    //                     rendered: false
-    //                 });
-    //             });
-    //         }
-    //     });
-    //
-    //     it('Hidden M class', function () {
-    //         var hiddenEl = frame.get('#hiddenM');
-    //
-    //         if (browserWidth > 768) {
-    //             it('is hidden from M view', function () {
-    //                 hiddenEl.assert({
-    //                     rendered: false
-    //                 });
-    //             });
-    //         } else {
-    //             it('is visible on S view', function () {
-    //                 hiddenEl.assert({
-    //                     rendered: true
-    //                 });
-    //             });
-    //         }
-    //     });
-    // });
-
+module.exports = (frame, assert, browserWidth) => {
     describe('Visibility classes', () => {
+        console.log('sdfs');
         let visibleS, visibleM, visibleL, visibleXL;
         let hiddenS, hiddenM, hiddenL, hiddenXL, hiddenAll;
 
@@ -75,7 +17,8 @@ module.exports = function (frame, assert, browserWidth) {
         });
 
         if (browserWidth < 767) {
-            it('shown correctly on S view', (done) => {
+
+            it('shown correctly on S view', () => {
                 visibleS.assert({ rendered: false });
                 visibleM.assert({ rendered: true });
                 visibleL.assert({ rendered: true });
@@ -86,8 +29,10 @@ module.exports = function (frame, assert, browserWidth) {
                 hiddenXL.assert({ rendered: true });
                 hiddenAll.assert({ rendered: true });
             });
+
         } else if (browserWidth >= 768 && browserWidth < 1023) {
-            it('shown correctly on M view', (done) => {
+
+            it('shown correctly on M view', () => {
                 visibleS.assert({ rendered: true });
                 visibleM.assert({ rendered: false });
                 visibleL.assert({ rendered: true });
@@ -98,8 +43,10 @@ module.exports = function (frame, assert, browserWidth) {
                 hiddenXL.assert({ rendered: true });
                 hiddenAll.assert({ rendered: true });
             });
+
         } else {
-            it('shown correctly on L and XL view', (done) => {
+
+            it('shown correctly on L and XL view', () => {
                 visibleS.assert({ rendered: true });
                 visibleM.assert({ rendered: false });
                 visibleL.assert({ rendered: true });
@@ -110,6 +57,7 @@ module.exports = function (frame, assert, browserWidth) {
                 hiddenXL.assert({ rendered: true });
                 hiddenAll.assert({ rendered: true });
             });
+
         }
     });
 };
