@@ -123,6 +123,10 @@ body {
     background-color: #fff;
     position: relative;
 }
+#button-target .sample {
+    background: #f4f4f4;
+}
+
 .element .code {
     display: none;
     border: 1px solid #dcdcdc;

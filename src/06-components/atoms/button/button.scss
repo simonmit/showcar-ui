@@ -93,6 +93,29 @@
   }
 }
 
+.sc-btn-marketing {
+  @include button;
+
+  background-color: $white;
+  border: solid $white 1px;
+  color: $blue-80;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  &:hover {
+    color: $blue-90;
+  }
+
+  &:active {
+    color: $blue-100;
+  }
+
+  &[disabled] {
+    color: $blue-40;
+  }
+}
+
 .sc-btn-block {
   display: block;
   width: 100%;
