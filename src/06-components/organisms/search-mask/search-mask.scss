@@ -20,12 +20,12 @@
   }
 }
 
-.sc-search-filters {
+.sc-search-content {
   visibility: hidden;
   background-color: $white;
   padding: $XL $L;
 
-  &.sc-search-filters--visible {
+  &.sc-search-content--visible {
     visibility: visible;
   }
 }
@@ -53,7 +53,7 @@
 .sc-search-tab--active {
   opacity: 1;
   height: 45px;
-  padding-top: 21px;
+  padding-top: 20px;
   margin-bottom: 0;
 
   as24-icon svg g {
@@ -75,6 +75,7 @@
   margin-bottom: $S;
 }
 
+// TODO: input styles are overwriting width
 .sc-search-mask input.sc-input {
   width: 98.56631%;
 
@@ -87,7 +88,7 @@
   color: $black-100;
 }
 
-.sc-search-filters__footer {
+.sc-search-content__actions {
   @include mqmin($viewportM) {
     display: flex;
     flex-direction: row-reverse;
