@@ -28,6 +28,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         it('Sticky behaviour, scroll to anchor and set active tab', done => {
             if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
                 done();
+                return;
             }
             //as timeout is too long, we must check all behaviours in one test
             helper.click(lastLink);
