@@ -23,9 +23,14 @@ notifications:
   email: false
 
 script:
-  - npm run build
-  - npm run docs
-#  - npm run test
+- 'if [[ $TRAVIS_COMMIT_MESSAGE == *"--skip-tests"* ]]; then
+    npm run build &&
+    npm run docs
+else
+    npm run build &&
+    npm run docs &&
+    npm run test
+fi'
 
 after_success:
   # only run for master branch, we don't want to release PRs and other branches
