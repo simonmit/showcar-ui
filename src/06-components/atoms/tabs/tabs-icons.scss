@@ -15,12 +15,12 @@
   }
 }
 
-.sc-tab-content {
+.sc-tabs__content {
   display: none;
   background-color: $white;
   padding: $XL $L;
 
-  &.sc-tab-content--visible {
+  &.sc-tabs__content--visible {
     display: block;
   }
 }
@@ -30,6 +30,7 @@
   height: 36px;
   padding-top: $M;
   width: 25%;
+  max-width: 100px;
   opacity: .9;
   margin-bottom: 1px;
   margin-right: 1px;
