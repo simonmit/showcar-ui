@@ -2309,6 +2309,75 @@ This element is not yet implemented. It will look like this:</p>
                 </div>
             
 <hr></div><div id="tabs-target" class="positon-anchor">
+                <div class="element" id="tabs-icons">
+                    <div class="markdown"><p><h2>Tabs with icons<span class="status deprecated">Not yet implemented</span></h2>
+This element is not yet implemented</p>
+<style>
+#tabs-icons .sample{
+     background-color: lightblue;
+}
+</style>
+</div>
+                   <div class="sample"><div class="sc-tabs__container">
+    <nav class="sc-tabs--with-icon">
+        <div class="sc-tab--with-icon sc-tab--with-icon--active" data-section="search-auto">
+            <as24-icon type="navigation/car"></as24-icon>
+        </div>
+        <div class="sc-tab--with-icon" data-section="search-moto">
+            <as24-icon type="navigation/motocycle"></as24-icon>
+        </div>
+        <div class="sc-tab--with-icon">
+            <as24-icon type="navigation/caravan"></as24-icon>
+        </div>
+        <div class="sc-tab--with-icon">
+            <as24-icon type="navigation/truck"></as24-icon>
+        </div>
+    </nav>
+    <div class="sc-tab-content sc-tab-content--visible" data-section="search-auto">
+        Auto
+    </div>
+    <div class="sc-tab-content" data-section="search-moto">
+        Moto
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-tabs-icons" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-tabs-icons" class="hjs html">&lt;div class=&quot;sc-tabs__container&quot;&gt;
+    &lt;nav class=&quot;sc-tabs--with-icon&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon sc-tab--with-icon--active&quot; data-section=&quot;search-auto&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/car&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;search-moto&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/motocycle&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/caravan&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot;&gt;
+            &lt;as24-icon type=&quot;navigation/truck&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;sc-tab-content sc-tab-content--visible&quot; data-section=&quot;search-auto&quot;&gt;
+        Auto
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-tab-content&quot; data-section=&quot;search-moto&quot;&gt;
+        Moto
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
                 <div class="element" id="tabs">
                     <div class="markdown"><p><h2>Tabs<span class="status deprecated">Not yet implemented</span></h2>
 This element is not yet implemented. It will look like this:</p>
@@ -3405,8 +3474,7 @@ This element is not yet implemented. It will look like this:</p>
 </style>
 </div>
                    <div class="sample"><div class="sc-search-mask">
-    <!--nav?-->
-    <div class="sc-search-tabs">
+    <nav class="sc-search-tabs">
         <div class="sc-search-tab sc-search-tab--active">
             <as24-icon type="navigation/car"></as24-icon>
         </div>
@@ -3419,7 +3487,7 @@ This element is not yet implemented. It will look like this:</p>
         <div class="sc-search-tab">
             <as24-icon type="navigation/truck"></as24-icon>
         </div>
-    </div>
+    </nav>
     <div class="sc-search-content sc-search-content--visible" data-section="search-auto">
         <div class="sc-search-options sc-hidden-at-s">
             <input class="sc-input" id="seach-new" type="checkbox" checked/>
@@ -3468,8 +3536,7 @@ This element is not yet implemented. It will look like this:</p>
                              </button>
                             <pre>
                                 <code id="copy_code-code-search-mask" class="hjs html">&lt;div class=&quot;sc-search-mask&quot;&gt;
-    &lt;!--nav?--&gt;
-    &lt;div class=&quot;sc-search-tabs&quot;&gt;
+    &lt;nav class=&quot;sc-search-tabs&quot;&gt;
         &lt;div class=&quot;sc-search-tab sc-search-tab--active&quot;&gt;
             &lt;as24-icon type=&quot;navigation/car&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
@@ -3482,7 +3549,7 @@ This element is not yet implemented. It will look like this:</p>
         &lt;div class=&quot;sc-search-tab&quot;&gt;
             &lt;as24-icon type=&quot;navigation/truck&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;/nav&gt;
     &lt;div class=&quot;sc-search-content sc-search-content--visible&quot; data-section=&quot;search-auto&quot;&gt;
         &lt;div class=&quot;sc-search-options sc-hidden-at-s&quot;&gt;
             &lt;input class=&quot;sc-input&quot; id=&quot;seach-new&quot; type=&quot;checkbox&quot; checked/&gt;
