@@ -43,7 +43,8 @@ export default function (tagName) {
                 closeAllDropdowns(this);
                 this.classList.toggle('sc-open');
             });
-            document.addEventListener('click', closeAllDropdowns(this));
+
+            attachEventListeners();
         }
     }
 
@@ -51,6 +52,13 @@ export default function (tagName) {
         return () => Array.from(document.querySelectorAll(tagName))
             .filter((cdd) => cdd !== exceptThisOne)
             .forEach((cdd) => cdd.classList.remove('sc-open'));
+    }
+
+    function attachEventListeners() {
+        // this should only be done at most once
+        // when the first of this element gets attached
+        document.addEventListener('click', closeAllDropdowns(this));
+        attachEventListeners = () => {}; // eslint-disable-line no-func-assign
     }
 
     registerElement({
