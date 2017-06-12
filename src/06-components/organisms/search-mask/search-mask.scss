@@ -1,22 +1,22 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/sass-mq';
 
-.sc-search-mask {
+.sc-search__wrapper {
   text-align: center;
   border-bottom: 1px solid $black-30;
 }
 
-.sc-search-options {
+.sc-search__options {
   text-align: left;
   padding-bottom: $L;
 }
 
-.sc-search-content {
+.sc-search__content {
   background-color: $white;
   padding: $XL $L;
 }
 
-.sc-search-link {
+.sc-search__link {
   display: block;
   padding: $L 0;
 
@@ -26,12 +26,12 @@
   }
 }
 
-.sc-search-mask .sc-input {
+.sc-search__wrapper .sc-input {
   margin-bottom: $S;
 }
 
 // TODO: input styles are overwriting width
-.sc-search-mask input.sc-input {
+.sc-search__wrapper input.sc-input {
   width: 98.56631%;
 
   @include mqmin($viewportM) {
@@ -39,11 +39,11 @@
   }
 }
 
-.sc-search-mask input.sc-input::placeholder {
+.sc-search__wrapper input.sc-input::placeholder {
   color: $black-100;
 }
 
-.sc-search-content__actions {
+.sc-search__content__actions {
   @include mqmin($viewportM) {
     display: flex;
     flex-direction: row-reverse;
