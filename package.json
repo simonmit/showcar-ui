@@ -16,7 +16,7 @@
     "test": "gulp test:bs"
   },
   "author": "AutoScout24 GmbH",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/AutoScout24/showcar-ui#readme",
   "browserslist": [
     "last 2 versions",
