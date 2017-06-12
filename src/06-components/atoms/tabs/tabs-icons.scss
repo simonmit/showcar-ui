@@ -1,0 +1,57 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-tabs__container {
+  text-align: center;
+  border-bottom: 1px solid $black-30;
+}
+
+.sc-tabs--with-icon {
+  display: flex;
+  align-items: flex-end;
+
+  @include mqmin($viewportM) {
+    max-width: 440px;
+  }
+}
+
+.sc-tab-content {
+  display: none;
+  background-color: $white;
+  padding: $XL $L;
+
+  &.sc-tab-content--visible {
+    display: block;
+  }
+}
+
+.sc-tab--with-icon {
+  background-color: $white;
+  height: 36px;
+  padding-top: $M;
+  width: 25%;
+  opacity: .9;
+  margin-bottom: 1px;
+  margin-right: 1px;
+
+  as24-icon {
+    width: 36px;
+    height: $L;
+    display: inline-block;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sc-tab--with-icon--active {
+  opacity: 1;
+  height: 45px;
+  padding-top: 20px;
+  margin-bottom: 0;
+
+  as24-icon svg g {
+    fill: $orange-100;
+  }
+}
