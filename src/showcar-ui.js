@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 import stepper from './06-components/atoms/stepper/stepper';
 stepper();
 
+// tabs-icon
+import tabsIcon from './06-components/atoms/tabs/tabs-icons';
+tabsIcon('tabs-icon');
+
 // tooltip
 import tooltip from './06-components/atoms/tooltip-old/tooltip-old';
 tooltip();
