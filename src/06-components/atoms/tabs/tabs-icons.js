@@ -7,14 +7,14 @@ export default () => {
                     const currentActiveTab = document.querySelector('[data-tabs=' + nav + '] .sc-tab--with-icon--active');
                     console.log(currentActiveTab);
                     const sectionAttr = currentActiveTab.getAttribute('data-section');
-                    const currentSection = document.querySelector('[data-tabs=' + nav + '] .sc-tab-content[data-section=' + sectionAttr + ']');
+                    const currentSection = document.querySelector('[data-tabs=' + nav + '] .sc-tabs__content[data-section=' + sectionAttr + ']');
 
                     if (currentActiveTab) currentActiveTab.classList.remove('sc-tab--with-icon--active');
-                    if (currentSection) currentSection.classList.remove('sc-tab-content--visible');
+                    if (currentSection) currentSection.classList.remove('sc-tabs__content--visible');
 
                     const sectionAttrNew = tab.getAttribute('data-section');
-                    const sectionNew = document.querySelector('[data-tabs=' + nav + '] .sc-tab-content[data-section=' + sectionAttrNew + ']');
-                    if (sectionNew) sectionNew.classList.add('sc-tab-content--visible');
+                    const sectionNew = document.querySelector('[data-tabs=' + nav + '] .sc-tabs__content[data-section=' + sectionAttrNew + ']');
+                    if (sectionNew) sectionNew.classList.add('sc-tabs__content--visible');
                     tab.classList.add('sc-tab--with-icon--active');
                 });
             });
