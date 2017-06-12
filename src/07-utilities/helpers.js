@@ -1,5 +1,6 @@
 const registerElement = element => {
     try {
+        let attached = [];
         document.registerElement(element.tagName, {
             prototype: Object.create(HTMLElement.prototype, {
                 createdCallback: {
@@ -9,7 +10,14 @@ const registerElement = element => {
                     value: element.attributeChangedCallback
                 },
                 attachedCallback: {
-                    value: element.attachedCallback
+                    value: function () {
+                        if (attached.indexOf(this) === - 1) {
+                            element.attachedCallback.bind(this)();
+                            attached.push(this);
+                        } else {
+                            window.console.warn('Test attachedCallback fail "' + element.tagName + '"');
+                        }
+                    }
                 }
             })
         });

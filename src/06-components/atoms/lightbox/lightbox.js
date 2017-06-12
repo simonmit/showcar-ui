@@ -48,9 +48,6 @@ export default function (tagName) {
     }
 
     const show = lb => {
-        if(document.querySelector('.sc-lightbox__overlay')){
-            return; //temporary
-        }
         lb.overlay = document.createElement('div');
         lb.overlay.classList.add('sc-lightbox__overlay');
         lb.overlay.classList.add('sc-overlay'); //remove
