@@ -18,7 +18,6 @@ module.exports = (frame, assert, browserWidth, helper) => {
                   rendered: false
               });
 
-              //helper.click(label);
               label.click();
 
               content.assert({
