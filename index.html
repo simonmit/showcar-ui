@@ -2310,35 +2310,35 @@ This element is not yet implemented. It will look like this:</p>
             
 <hr></div><div id="tabs-target" class="positon-anchor">
                 <div class="element" id="tabs-icons">
-                    <div class="markdown"><p><h2>Tabs with icons<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented</p>
+                    <div class="markdown"><h2>Tabs with icons<span class="status deprecated">Needs review</span></h2>
+
+<p>Wrapper element for tabs and content should contain <code>data-tabs</code> atribute with uniq value. So it is possible to have to diffrent tabs&amp;content elements on page.<br>Tabs can be used with any content of your choice.<br><code>data-section</code> attribute on tab and content div should match.<br>You can also use diffrent icons for tabs. The styles are tailored for 4 or less tabs.</p>
+<p>There is no styling for content inside. For a search mask example with responsive behavior for content see <a href="https://autoscout24.github.io/showcar-ui/#search-mask-target">here</a></p>
 <style>
 #tabs-icons .sample{
      background-color: lightblue;
 }
 </style>
 </div>
-                   <div class="sample"><div class="sc-tabs__container">
+                   <div class="sample"><div class="sc-tabs__container" data-tabs="example">
     <nav class="sc-tabs--with-icon">
-        <div class="sc-tab--with-icon sc-tab--with-icon--active" data-section="search-auto">
+        <div class="sc-tab--with-icon sc-tab--with-icon--active" data-section="tab-auto">
             <as24-icon type="navigation/car"></as24-icon>
         </div>
-        <div class="sc-tab--with-icon" data-section="search-moto">
+        <div class="sc-tab--with-icon" data-section="tab-moto">
             <as24-icon type="navigation/motocycle"></as24-icon>
         </div>
-        <div class="sc-tab--with-icon">
+        <div class="sc-tab--with-icon" data-section="tab-caravan">
             <as24-icon type="navigation/caravan"></as24-icon>
         </div>
-        <div class="sc-tab--with-icon">
+        <div class="sc-tab--with-icon" data-section="tab-truck">
             <as24-icon type="navigation/truck"></as24-icon>
         </div>
     </nav>
-    <div class="sc-tab-content sc-tab-content--visible" data-section="search-auto">
-        Auto
-    </div>
-    <div class="sc-tab-content" data-section="search-moto">
-        Moto
-    </div>
+    <div class="sc-tabs__content sc-tabs__content--visible" data-section="tab-auto">Auto</div>
+    <div class="sc-tabs__content" data-section="tab-moto">Moto</div>
+    <div class="sc-tabs__content" data-section="tab-caravan">Caravan</div>
+    <div class="sc-tabs__content" data-section="tab-truck">Truck</div>
 </div>
 </div> 
                     <div class="code-sample">
@@ -2347,27 +2347,25 @@ This element is not yet implemented</p>
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-tabs-icons" class="hjs html">&lt;div class=&quot;sc-tabs__container&quot;&gt;
+                                <code id="copy_code-code-tabs-icons" class="hjs html">&lt;div class=&quot;sc-tabs__container&quot; data-tabs=&quot;example&quot;&gt;
     &lt;nav class=&quot;sc-tabs--with-icon&quot;&gt;
-        &lt;div class=&quot;sc-tab--with-icon sc-tab--with-icon--active&quot; data-section=&quot;search-auto&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon sc-tab--with-icon--active&quot; data-section=&quot;tab-auto&quot;&gt;
             &lt;as24-icon type=&quot;navigation/car&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;search-moto&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;tab-moto&quot;&gt;
             &lt;as24-icon type=&quot;navigation/motocycle&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-tab--with-icon&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;tab-caravan&quot;&gt;
             &lt;as24-icon type=&quot;navigation/caravan&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-tab--with-icon&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;tab-truck&quot;&gt;
             &lt;as24-icon type=&quot;navigation/truck&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
     &lt;/nav&gt;
-    &lt;div class=&quot;sc-tab-content sc-tab-content--visible&quot; data-section=&quot;search-auto&quot;&gt;
-        Auto
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-tab-content&quot; data-section=&quot;search-moto&quot;&gt;
-        Moto
-    &lt;/div&gt;
+    &lt;div class=&quot;sc-tabs__content sc-tabs__content--visible&quot; data-section=&quot;tab-auto&quot;&gt;Auto&lt;/div&gt;
+    &lt;div class=&quot;sc-tabs__content&quot; data-section=&quot;tab-moto&quot;&gt;Moto&lt;/div&gt;
+    &lt;div class=&quot;sc-tabs__content&quot; data-section=&quot;tab-caravan&quot;&gt;Caravan&lt;/div&gt;
+    &lt;div class=&quot;sc-tabs__content&quot; data-section=&quot;tab-truck&quot;&gt;Truck&lt;/div&gt;
 &lt;/div&gt;
 </code>
                             </pre>
@@ -3461,35 +3459,33 @@ document.addEventListener('DOMContentLoaded', function() {
             
 <hr></div><div id="search-mask-target" class="positon-anchor">
                 <div class="element" id="search-mask">
-                    <div class="markdown"><p><h2>Search mask<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented. It will look like this:</p>
-<p><h3>S viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_S.png" alt="showcar-searchmask" width=""></p>
-<p><h3>M - L viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_M-L.png" alt="showcar-searchmask" width=""></p>
+                    <div class="markdown"><p><h2>Search mask<span class="status deprecated">Needs review</span></h2>
+This element is under construction now</p>
+<p>The search mask uses tabs element for show/hide logic. See <a href="https://autoscout24.github.io/showcar-ui/#tabs-icons-target">here</a></p>
+<p>All the <code>sc-search-*</code> classes are used only for styling (include responsive behavior).</p>
 <style>
 #search-mask .sample{
      background-color: lightblue;
 }
 </style>
 </div>
-                   <div class="sample"><div class="sc-search-mask">
-    <nav class="sc-search-tabs">
-        <div class="sc-search-tab sc-search-tab--active">
+                   <div class="sample"><div class="sc-search__wrapper" data-tabs="search">
+    <nav class="sc-tabs--with-icon">
+        <div class="sc-tab--with-icon sc-tab--with-icon--active" data-section="search-auto">
             <as24-icon type="navigation/car"></as24-icon>
         </div>
-        <div class="sc-search-tab">
+        <div class="sc-tab--with-icon" data-section="search-moto">
             <as24-icon type="navigation/motocycle"></as24-icon>
         </div>
-        <div class="sc-search-tab">
+        <div class="sc-tab--with-icon" data-section="search-caravan">
             <as24-icon type="navigation/caravan"></as24-icon>
         </div>
-        <div class="sc-search-tab">
+        <div class="sc-tab--with-icon" data-section="search-truck">
             <as24-icon type="navigation/truck"></as24-icon>
         </div>
     </nav>
-    <div class="sc-search-content sc-search-content--visible" data-section="search-auto">
-        <div class="sc-search-options sc-hidden-at-s">
+    <div class="sc-search__content sc-tabs__content sc-tabs__content--visible" data-section="search-auto">
+        <div class="sc-search__options sc-hidden-at-s">
             <input class="sc-input" id="seach-new" type="checkbox" checked/>
             <label for="seach-new">Neu</label>
             <input class="sc-input" id="seach-used" type="checkbox" checked/>
@@ -3519,14 +3515,15 @@ This element is not yet implemented. It will look like this:</p>
                 <option>...</option>
             </select>
             <input type="text" class="sc-input" placeholder="Stadt/PLZ">
-            <div class="sc-search-content__actions">
+            <div class="sc-search__content__actions">
                 <button class="sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12">Absenden</button>
-                <a class="sc-search-link sc-grid-col-6 sc-grid-col-s-12">Weitere Suchoptionen</a>
+                <a class="sc-search__link sc-grid-col-6 sc-grid-col-s-12">Weitere Suchoptionen</a>
             </div>
         </div>
     </div>
-    <div class="sc-search-filters" data-section="search-moto">
-    </div>
+    <div class="sc-search__content sc-tabs__content" data-section="search-moto">Moto</div>
+    <div class="sc-search__content sc-tabs__content" data-section="search-caravan">Caravan</div>
+    <div class="sc-search__content sc-tabs__content" data-section="search-truck">Truck</div>
 </div>
 </div> 
                     <div class="code-sample">
@@ -3535,23 +3532,23 @@ This element is not yet implemented. It will look like this:</p>
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-search-mask" class="hjs html">&lt;div class=&quot;sc-search-mask&quot;&gt;
-    &lt;nav class=&quot;sc-search-tabs&quot;&gt;
-        &lt;div class=&quot;sc-search-tab sc-search-tab--active&quot;&gt;
+                                <code id="copy_code-code-search-mask" class="hjs html">&lt;div class=&quot;sc-search__wrapper&quot; data-tabs=&quot;search&quot;&gt;
+    &lt;nav class=&quot;sc-tabs--with-icon&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon sc-tab--with-icon--active&quot; data-section=&quot;search-auto&quot;&gt;
             &lt;as24-icon type=&quot;navigation/car&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-search-tab&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;search-moto&quot;&gt;
             &lt;as24-icon type=&quot;navigation/motocycle&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-search-tab&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;search-caravan&quot;&gt;
             &lt;as24-icon type=&quot;navigation/caravan&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;sc-search-tab&quot;&gt;
+        &lt;div class=&quot;sc-tab--with-icon&quot; data-section=&quot;search-truck&quot;&gt;
             &lt;as24-icon type=&quot;navigation/truck&quot;&gt;&lt;/as24-icon&gt;
         &lt;/div&gt;
     &lt;/nav&gt;
-    &lt;div class=&quot;sc-search-content sc-search-content--visible&quot; data-section=&quot;search-auto&quot;&gt;
-        &lt;div class=&quot;sc-search-options sc-hidden-at-s&quot;&gt;
+    &lt;div class=&quot;sc-search__content sc-tabs__content sc-tabs__content--visible&quot; data-section=&quot;search-auto&quot;&gt;
+        &lt;div class=&quot;sc-search__options sc-hidden-at-s&quot;&gt;
             &lt;input class=&quot;sc-input&quot; id=&quot;seach-new&quot; type=&quot;checkbox&quot; checked/&gt;
             &lt;label for=&quot;seach-new&quot;&gt;Neu&lt;/label&gt;
             &lt;input class=&quot;sc-input&quot; id=&quot;seach-used&quot; type=&quot;checkbox&quot; checked/&gt;
@@ -3581,14 +3578,15 @@ This element is not yet implemented. It will look like this:</p>
                 &lt;option&gt;...&lt;/option&gt;
             &lt;/select&gt;
             &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Stadt/PLZ&quot;&gt;
-            &lt;div class=&quot;sc-search-content__actions&quot;&gt;
+            &lt;div class=&quot;sc-search__content__actions&quot;&gt;
                 &lt;button class=&quot;sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12&quot;&gt;Absenden&lt;/button&gt;
-                &lt;a class=&quot;sc-search-link sc-grid-col-6 sc-grid-col-s-12&quot;&gt;Weitere Suchoptionen&lt;/a&gt;
+                &lt;a class=&quot;sc-search__link sc-grid-col-6 sc-grid-col-s-12&quot;&gt;Weitere Suchoptionen&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;sc-search-filters&quot; data-section=&quot;search-moto&quot;&gt;
-    &lt;/div&gt;
+    &lt;div class=&quot;sc-search__content sc-tabs__content&quot; data-section=&quot;search-moto&quot;&gt;Moto&lt;/div&gt;
+    &lt;div class=&quot;sc-search__content sc-tabs__content&quot; data-section=&quot;search-caravan&quot;&gt;Caravan&lt;/div&gt;
+    &lt;div class=&quot;sc-search__content sc-tabs__content&quot; data-section=&quot;search-truck&quot;&gt;Truck&lt;/div&gt;
 &lt;/div&gt;
 </code>
                             </pre>
