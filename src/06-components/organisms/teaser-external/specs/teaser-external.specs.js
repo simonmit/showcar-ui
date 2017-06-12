@@ -1,28 +1,30 @@
-/*module.exports = (frame, assert, browserWidth, helper) => {
-    describe('Expandable box', () => {
-        let box;
+module.exports = (frame, assert, browserWidth, helper) => {
+    describe('Teaser external', () => {
+        let label;
         let content;
 
         beforeEach(() => {
-            box = frame.get('#expandable-box .sc-expandable-box__label').toDomElement();
-            content = frame.get('#expandable-box .sc-expandable-box__content');
+            label = frame.getAll('#teaser-external .sc-teaser__label').at(0).toDomElement();
+            content = frame.getAll('#teaser-external .sc-teaser__content').at(0);
         });
 
         afterEach(done => {
             helper.reload(frame, done)
         });
 
-        it('opens on click', () => {
-            content.assert({
-                rendered: false
-            });
+        if(browserWidth < 768) {
+          it('opens on click', () => {
+              content.assert({
+                  rendered: false
+              });
 
-            helper.click(box);
+              //helper.click(label);
+              label.click();
 
-            content.assert({
-                rendered: true
-            })
-        });
+              content.assert({
+                  rendered: true
+              })
+          });
+        }
     });
 };
-*/

@@ -15,20 +15,7 @@ $border: 1px solid $black-30;
   }
 }
 
-.sc-teaser__item {
-  border-bottom: $border;
-  background-color: $black-20;
-
-  @include clearfix();
-
-  @include mqmin($viewportM) {
-    border-top: none;
-    flex: 0 0 calc(50% - #{$M / 2});
-    margin-bottom: $M;
-  }
-}
-
-.sc-teaser__item--adaptive {
+.sc-teaser--adaptive {
   @include mqmin($viewportM) {
     .sc-teaser__content {
       display: block;
@@ -40,6 +27,19 @@ $border: 1px solid $black-30;
       }
     }
 
+  }
+}
+
+.sc-teaser__item {
+  border-bottom: $border;
+  background-color: $black-20;
+
+  @include clearfix();
+
+  @include mqmin($viewportM) {
+    border-top: none;
+    flex: 0 0 calc(50% - #{$M / 2});
+    margin-bottom: $M;
   }
 }
 
