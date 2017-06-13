@@ -42,11 +42,11 @@ export default function (tagName) {
         attachEventListeners();
     }
 
-    function closeAllDropdowns(exceptThisOne) {
+    const closeAllDropdowns = (exceptThisOne) => {
         return () => Array.from(document.querySelectorAll(tagName))
             .filter((cdd) => cdd !== exceptThisOne)
             .forEach((cdd) => cdd.classList.remove('sc-open'));
-    }
+    };
 
     function attachEventListeners() {
         // this should only be done at most once
