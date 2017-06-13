@@ -1,5 +1,9 @@
 .sc-list {
-  list-style-position: inside;
+  list-style-position: outside;
+}
+
+.sc-list li {
+  margin-left: 20px;
 }
 
 .sc-list--disc {
