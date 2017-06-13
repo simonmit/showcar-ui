@@ -1,40 +1,37 @@
 import registerElement from '../../../07-utilities/helpers.js';
 
-export default function (tagName) {
+export default function(tagName) {
     function createdCallback() {
-        const el = this;
-        if (! el.hasAttribute('checkboxgroup')) return;
+        let el = $(this);
+        let titleElement = el.find('p');
+        let defaultTitle = titleElement.text();
 
-        el.addEventListener('click', (e) => {
+        el.removeClass('sc-open');
+        // TODO: rewrite to click
+        el.on('touchstart, mousedown', (e) => {
             e.stopPropagation();
         });
 
-        const titleElement = el.querySelector('p');
-        const defaultTitle = titleElement.innerHTML;
+        if (null === el.attr('checkboxgroup')) {
+            return;
+        }
 
-        el.classList.remove('sc-open'); // TODO check do we need this?
-
-        const checkboxes = el.querySelectorAll('[type=checkbox]'); // TODO check do we need this?
-        Array.from(checkboxes).forEach((checkbox) => { // TODO check do we need this?
-            checkbox.classList.add('sc-input'); // TODO check do we need this?
-        }); // TODO check do we need this?
-
-        const updateCaption = () => {
-            const checkboxesChecked = el.querySelectorAll(':checked');
-
-            const texts = Array.from(checkboxesChecked)
-                .map((checkboxChecked) => {
-                    return checkboxChecked.nextElementSibling.innerHTML;
+        if (this.hasAttribute('checkboxgroup')) {
+            el.find('[type=checkbox]').addClass('sc-input');
+            let updateCaption = () => {
+                let checkboxes = el.find(':checked');
+                let texts = [];
+                checkboxes.filter(':checked').forEach((element) => {
+                    texts.push(element.nextElementSibling.innerHTML);
                 });
 
-            const title = texts.join(', ') || defaultTitle;
-            titleElement.innerHTML = title;
-        };
+                let title = texts.join(', ') || defaultTitle;
+                titleElement.html(title);
+            };
 
-        el.addEventListener('change', updateCaption);
-
-
-        updateCaption();
+            el.on('change', updateCaption);
+            updateCaption();
+        }
     }
 
     function attachedCallback() {
@@ -43,14 +40,25 @@ export default function (tagName) {
                 closeAllDropdowns(this);
                 this.classList.toggle('sc-open');
             });
-            document.addEventListener('click', closeAllDropdowns(this));
+
+            attachEventListeners();
         }
     }
 
+    /**
+     * @param {HTMLElement} exceptThisOne
+     */
     function closeAllDropdowns(exceptThisOne) {
         return () => Array.from(document.querySelectorAll(tagName))
             .filter((cdd) => cdd !== exceptThisOne)
             .forEach((cdd) => cdd.classList.remove('sc-open'));
+    }
+
+    function attachEventListeners() {
+        // this should only be done at most once
+        // when the first of this element gets attached
+        document.addEventListener('mousedown', closeAllDropdowns(this));
+        attachEventListeners = () => {}; // eslint-disable-line no-func-assign
     }
 
     registerElement({

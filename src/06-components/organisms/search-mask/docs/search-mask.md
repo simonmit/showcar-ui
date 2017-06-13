@@ -1,11 +1,9 @@
-<h2>Search mask<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented. It will look like this:
+<h2>Search mask<span class="status deprecated">Needs review</span></h2>
+This element is under construction now
 
-<h3>S viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_S.png" alt="showcar-searchmask" width="">
+The search mask uses tabs element for show/hide logic. See <a href="https://autoscout24.github.io/showcar-ui/#tabs-target">here</a>
 
-<h3>M - L viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_input-mask_M-L.png" alt="showcar-searchmask" width="">
+All the `sc-search-*` classes are used only for styling (include responsive behavior).
 
 <style>
 #search-mask .sample{

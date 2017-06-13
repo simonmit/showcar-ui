@@ -10,13 +10,11 @@ const registerElement = element => {
                     value: element.attributeChangedCallback
                 },
                 attachedCallback: {
-                    value: function () {
-                        if (attached.indexOf(this) === - 1) {
-                            element.attachedCallback.bind(this)();
-                            attached.push(this);
-                        } else {
-                            window.console.warn('Test attachedCallback fail "' + element.tagName + '"');
-                        }
+                    value () {
+                        if (attached.indexOf(this) != - 1) return; // run as singleton
+
+                        element.attachedCallback.bind(this)();
+                        attached.push(this);
                     }
                 }
             })

@@ -1,67 +1,22 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/sass-mq';
 
-.sc-search-mask {
+.sc-search__wrapper {
   text-align: center;
   border-bottom: 1px solid $black-30;
 }
 
-.sc-search-options {
+.sc-search__options {
   text-align: left;
   padding-bottom: $L;
 }
 
-.sc-search-tabs {
-  display: flex;
-  align-items: flex-end;
-
-  @include mqmin($viewportM) {
-    max-width: 440px;
-  }
-}
-
-.sc-search-content {
-  visibility: hidden;
+.sc-search__content {
   background-color: $white;
   padding: $XL $L;
-
-  &.sc-search-content--visible {
-    visibility: visible;
-  }
 }
 
-.sc-search-tab {
-  background-color: $white;
-  height: 36px;
-  padding-top: $M;
-  width: 25%;
-  opacity: .9;
-  margin-bottom: 1px;
-  margin-right: 1px;
-
-  as24-icon {
-    width: 36px;
-    height: $L;
-    display: inline-block;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.sc-search-tab--active {
-  opacity: 1;
-  height: 45px;
-  padding-top: 20px;
-  margin-bottom: 0;
-
-  as24-icon svg g {
-    fill: $orange-100;
-  }
-}
-
-.sc-search-link {
+.sc-search__link {
   display: block;
   padding: $L 0;
 
@@ -71,12 +26,12 @@
   }
 }
 
-.sc-search-mask .sc-input {
+.sc-search__wrapper .sc-input {
   margin-bottom: $S;
 }
 
 // TODO: input styles are overwriting width
-.sc-search-mask input.sc-input {
+.sc-search__wrapper input.sc-input {
   width: 98.56631%;
 
   @include mqmin($viewportM) {
@@ -84,11 +39,11 @@
   }
 }
 
-.sc-search-mask input.sc-input::placeholder {
+.sc-search__wrapper input.sc-input::placeholder {
   color: $black-100;
 }
 
-.sc-search-content__actions {
+.sc-search__content__actions {
   @include mqmin($viewportM) {
     display: flex;
     flex-direction: row-reverse;
