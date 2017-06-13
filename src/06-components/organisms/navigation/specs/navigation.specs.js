@@ -18,7 +18,7 @@ module.exports = (frame, assert, browserWidth) => {
 
                 menuButton.assert({
                     left: panel.left.plus(16),
-                    top: panel.top.plus(7),
+                    top: panel.top.plus(10),
                     height: 36
                 });
 
