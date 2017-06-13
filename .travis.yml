@@ -23,12 +23,9 @@ notifications:
   email: false
 
 script:
-- 'if [[ ${TRAVIS_COMMIT_MESSAGE} == *"--skip-tests"* ]]; then
-    npm run build;
-    npm run docs;
-  else
-    npm run build;
-    npm run docs;
+- npm run build
+- npm run docs
+- 'if  ! [[ ${TRAVIS_COMMIT_MESSAGE} == *"--skip-tests"* ]]; then
     npm run test;
   fi'
 

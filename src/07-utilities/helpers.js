@@ -11,7 +11,7 @@ const registerElement = element => {
                 },
                 attachedCallback: {
                     value () {
-                        if (attached.indexOf(this) != - 1) return; // run as singleton
+                        if (attached.indexOf(this) != - 1) return; // run as singleton. We need it for (p)react
 
                         element.attachedCallback.bind(this)();
                         attached.push(this);
