@@ -32,17 +32,15 @@ export default function (tagName) {
         };
 
         el.addEventListener('change', updateCaption);
-        
+
         updateCaption();
 
-        if (this.hasAttribute('checkboxgroup')) {
-            this.querySelector('p').addEventListener('click', () => {
-                closeAllDropdowns(this);
-                this.classList.toggle('sc-open');
-            });
+        el.querySelector('p').addEventListener('click', () => {
+            closeAllDropdowns(el);
+            el.classList.toggle('sc-open');
+        });
 
-            attachEventListeners();
-        }
+        attachEventListeners();
     }
 
     function closeAllDropdowns(exceptThisOne) {
