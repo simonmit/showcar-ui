@@ -1,1 +1,1 @@
-<h2>List<span class="status deprecated">Needs approval</span></h2>
+<h2>List<span class="status approved">Approved</span></h2>
