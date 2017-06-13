@@ -20,7 +20,7 @@
   display: block;
   padding: $L 0;
 
-  @include mqmin($viewportM) {
+  @include mqmin(510px) {
     padding: 9px 0;
     text-align: left;
   }
@@ -28,6 +28,10 @@
 
 .sc-search__wrapper .sc-input {
   margin-bottom: $S;
+
+  @include mqmin(510px) {
+    margin-bottom: 24px;
+  }
 }
 
 // TODO: input styles are overwriting width
@@ -44,9 +48,8 @@
 }
 
 .sc-search__content__actions {
-  @include mqmin($viewportM) {
+  @include mqmin(510px) {
     display: flex;
     flex-direction: row-reverse;
-    padding-top: $L;
   }
 }

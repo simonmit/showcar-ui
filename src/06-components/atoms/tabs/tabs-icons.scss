@@ -1,18 +1,18 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/sass-mq';
 
-.sc-tabs__container {
+.sc-tabs {
   text-align: center;
   border-bottom: 1px solid $black-30;
+
+  @include mqmin(480px) {
+    max-width: 480px;
+  }
 }
 
 .sc-tabs--with-icon {
   display: flex;
   align-items: flex-end;
-
-  @include mqmin($viewportM) {
-    max-width: 440px;
-  }
 }
 
 .sc-tabs__content {
@@ -30,10 +30,16 @@
   height: 36px;
   padding-top: $M;
   width: 25%;
-  max-width: 100px;
+  max-width: 120px;
   opacity: .9;
   margin-bottom: 1px;
   margin-right: 1px;
+  border: none;
+
+  @include mqmin(510px) {
+    padding-top: 16px;
+    height: 48px;
+  }
 
   as24-icon {
     width: 36px;
@@ -51,6 +57,10 @@
   height: 45px;
   padding-top: 20px;
   margin-bottom: 0;
+
+  @include mqmin(510px) {
+    height: 53px;
+  }
 
   as24-icon svg g {
     fill: $orange-100;

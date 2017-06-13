@@ -5,7 +5,6 @@ export default () => {
             Array.prototype.forEach.call(document.querySelectorAll('[data-tabs=' + nav + '] .sc-tab--with-icon'), (tab) => {
                 tab.addEventListener('click', () => {
                     const currentActiveTab = document.querySelector('[data-tabs=' + nav + '] .sc-tab--with-icon--active');
-                    console.log(currentActiveTab);
                     const sectionAttr = currentActiveTab.getAttribute('data-section');
                     const currentSection = document.querySelector('[data-tabs=' + nav + '] .sc-tabs__content[data-section=' + sectionAttr + ']');
 
@@ -16,6 +15,8 @@ export default () => {
                     const sectionNew = document.querySelector('[data-tabs=' + nav + '] .sc-tabs__content[data-section=' + sectionAttrNew + ']');
                     if (sectionNew) sectionNew.classList.add('sc-tabs__content--visible');
                     tab.classList.add('sc-tab--with-icon--active');
+
+                    // ARIA tabs
                 });
             });
         });
