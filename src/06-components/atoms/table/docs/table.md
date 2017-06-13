@@ -1,1 +1,1 @@
-<h2>Table<span class="status deprecated">Needs review</span></h2>
+<h2>Table<span class="status approved">APPROVED</span></h2>
