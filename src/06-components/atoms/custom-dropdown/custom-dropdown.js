@@ -32,8 +32,7 @@ export default function (tagName) {
         };
 
         el.addEventListener('change', updateCaption);
-
-
+        
         updateCaption();
 
         if (this.hasAttribute('checkboxgroup')) {
