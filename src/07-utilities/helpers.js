@@ -1,6 +1,16 @@
+export const once = (fn, context) =>{
+    let result;
+    return function() {
+        if(fn) {
+            result = fn.apply(context || this, arguments);
+            fn = null;
+        }
+        return result;
+    };
+};
+
 const registerElement = element => {
     try {
-        let attached = [];
         document.registerElement(element.tagName, {
             prototype: Object.create(HTMLElement.prototype, {
                 createdCallback: {
@@ -11,10 +21,7 @@ const registerElement = element => {
                 },
                 attachedCallback: {
                     value () {
-                        if (attached.indexOf(this) != - 1) return; // run as singleton
-
-                        element.attachedCallback.bind(this)();
-                        attached.push(this);
+                        once(element.attachedCallback.bind(this)());
                     }
                 }
             })
