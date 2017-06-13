@@ -33,13 +33,12 @@ export default function (tagName) {
 
         el.addEventListener('change', updateCaption);
 
-        updateCaption();
-
-        el.querySelector('p').addEventListener('click', () => {
+        titleElement.addEventListener('click', () => {
             closeAllDropdowns(el);
             el.classList.toggle('sc-open');
         });
 
+        updateCaption();
         attachEventListeners();
     }
 
