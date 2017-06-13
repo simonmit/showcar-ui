@@ -358,7 +358,7 @@
         "type": "atoms",
         "group": "list",
         "srcDir": "src/06-components/atoms/list/docs",
-        "markDown": "\"<h2>List<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
+        "markDown": "\"<h2>List<span class=\\\"status deprecated\\\">Needs approval</span></h2>\\n\"",
         "html": "\"<ul class=\\\"sc-list sc-list--disc\\\">\\n    <li>One</li>\\n    <li>Two</li>\\n    <li>Three</li>\\n</ul>\"",
         "codeExample": "\"&lt;ul class=&quot;sc-list sc-list--disc&quot;&gt;\\n    &lt;li&gt;One&lt;/li&gt;\\n    &lt;li&gt;Two&lt;/li&gt;\\n    &lt;li&gt;Three&lt;/li&gt;\\n&lt;/ul&gt;\""
     },
