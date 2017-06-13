@@ -2126,7 +2126,7 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
             
 <hr></div><div id="list-target" class="positon-anchor">
                 <div class="element" id="list">
-                    <div class="markdown"><h2>List<span class="status deprecated">Needs approval</span></h2>
+                    <div class="markdown"><h2>List<span class="status approved">Approved</span></h2>
 </div>
                    <div class="sample"><ul class="sc-list sc-list--disc">
     <li>One</li>
@@ -2297,15 +2297,247 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
                 </div>
             
 <hr></div><div id="table-target" class="positon-anchor">
-                <div class="element" id="table">
-                    <div class="markdown"><p><h2>Table<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented. It will look like this:</p>
-<p><h3>S viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/atom_table_S.png" alt="showcar-table" width=""></p>
-<p><h3>L viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/atom_table_L.png" alt="showcar-table"></p>
+                <div class="element" id="table-with-left-title">
+                    <div class="markdown"><h2>Table with left title<span class="status deprecated">Needs review</span></h2>
 </div>
-                     
+                   <div class="sample"><div class="sc-table sc-font-m">
+	<table>
+		<thead>
+			<th class="sc-table__empty"></th>
+			<th>Audi 100 Coupe S</th>
+			<th>Audi 50</th>
+			<th>Audi Quattro</th>
+			<th>Audi Duemila 2000</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="sc-table__title">Markeinfuhrung</td>
+				<td>1972</td>
+				<td>1974</td>
+				<td>1980</td>
+				<td>1983</td>
+			</tr>
+			<tr>
+				<td class="sc-table__title">Motor-Bauart</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td class="sc-table__title">Hubraum</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td class="sc-table__title">Leistung</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td class="sc-table__title">Antrieb</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td class="sc-table__title">Da 0 a 100 km/h</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-table-with-left-title" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-table-with-left-title" class="hjs html">&lt;div class=&quot;sc-table sc-font-m&quot;&gt;
+&Tab;&lt;table&gt;
+&Tab;&Tab;&lt;thead&gt;
+&Tab;&Tab;&Tab;&lt;th class=&quot;sc-table__empty&quot;&gt;&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th&gt;Audi 100 Coupe S&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th&gt;Audi 50&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th&gt;Audi Quattro&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th&gt;Audi Duemila 2000&lt;/th&gt;
+&Tab;&Tab;&lt;/thead&gt;
+&Tab;&Tab;&lt;tbody&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Markeinfuhrung&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1972&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1974&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1980&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1983&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Motor-Bauart&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Hubraum&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Leistung&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Antrieb&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td class=&quot;sc-table__title&quot;&gt;Da 0 a 100 km/h&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&lt;/tbody&gt;
+&Tab;&lt;/table&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="table">
+                    <div class="markdown"><h2>Table<span class="status deprecated">Needs review</span></h2>
+</div>
+                   <div class="sample"><div class="sc-table sc-font-m">
+	<table>
+		<thead>
+			<th class="sc-font-bold">Audi 100 Coupe S</th>
+			<th class="sc-font-bold">Audi 50</th>
+			<th class="sc-font-bold">Audi Quattro</th>
+			<th class="sc-font-bold">Audi Duemila 2000</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1972</td>
+				<td>1974</td>
+				<td>1980</td>
+				<td>1983</td>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+				<td>Text</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-table" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-table" class="hjs html">&lt;div class=&quot;sc-table sc-font-m&quot;&gt;
+&Tab;&lt;table&gt;
+&Tab;&Tab;&lt;thead&gt;
+&Tab;&Tab;&Tab;&lt;th class=&quot;sc-font-bold&quot;&gt;Audi 100 Coupe S&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th class=&quot;sc-font-bold&quot;&gt;Audi 50&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th class=&quot;sc-font-bold&quot;&gt;Audi Quattro&lt;/th&gt;
+&Tab;&Tab;&Tab;&lt;th class=&quot;sc-font-bold&quot;&gt;Audi Duemila 2000&lt;/th&gt;
+&Tab;&Tab;&lt;/thead&gt;
+&Tab;&Tab;&lt;tbody&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1972&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1974&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1980&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;1983&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&Tab;&lt;tr&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;td&gt;Text&lt;/td&gt;
+&Tab;&Tab;&Tab;&lt;/tr&gt;
+&Tab;&Tab;&lt;/tbody&gt;
+&Tab;&lt;/table&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
                 </div>
             
 <hr></div><div id="tabs-target" class="positon-anchor">
@@ -2670,46 +2902,46 @@ This element is not yet implemented. It will look like this:</p>
 </li>
 </ul>
 <p>Atributes of <code>&lt;as24-notification&gt;</code> element:<br><br></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Attribute</th>
-<th style="text-align:left">Possible values</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">type</td>
-<td style="text-align:left">success/information/error/tip</td>
-<td style="text-align:left">defines notification color</td>
-</tr>
-<tr>
-<td style="text-align:left">id</td>
-<td style="text-align:left">any uniq value</td>
-<td style="text-align:left">uniq id of notification</td>
-</tr>
-<tr>
-<td style="text-align:left">target</td>
-<td style="text-align:left">id of target element</td>
-<td style="text-align:left">notification anchors below the target element</td>
-</tr>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">any text</td>
-<td style="text-align:left">notification title</td>
-</tr>
-<tr>
-<td style="text-align:left">close</td>
-<td style="text-align:left">true/false</td>
-<td style="text-align:left">defines close button for the notification</td>
-</tr>
-<tr>
-<td style="text-align:left">timeout</td>
-<td style="text-align:left">value in ms</td>
-<td style="text-align:left">closes notification after [timeout] ms</td>
-</tr>
-</tbody>
+<table class="docs-table">
+   <thead>
+      <tr>
+         <th style="text-align:left">Attribute</th>
+         <th style="text-align:left">Possible values</th>
+         <th style="text-align:left">Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td style="text-align:left">type</td>
+         <td style="text-align:left">success/information/error/tip</td>
+         <td style="text-align:left">defines notification color</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">id</td>
+         <td style="text-align:left">any uniq value</td>
+         <td style="text-align:left">uniq id of notification</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">target</td>
+         <td style="text-align:left">id of target element</td>
+         <td style="text-align:left">notification anchors below the target element</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">title</td>
+         <td style="text-align:left">any text</td>
+         <td style="text-align:left">notification title</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">close</td>
+         <td style="text-align:left">true/false</td>
+         <td style="text-align:left">defines close button for the notification</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">timeout</td>
+         <td style="text-align:left">value in ms</td>
+         <td style="text-align:left">closes notification after [timeout] ms</td>
+      </tr>
+   </tbody>
 </table>
 </div>
                      
@@ -3805,14 +4037,113 @@ showcar.spyNavigation({
             
 <hr></div><div id="teaser-external-target" class="positon-anchor">
                 <div class="element" id="teaser-external">
-                    <div class="markdown"><p><h2>Teaser external<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented. It will look like this:</p>
-<p><h3>S viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_external-teaser_S.png" alt="showcar-teaser-external" width=""></p>
-<p><h3>M - L viewport:</h3>
-<img src="/showcar-ui/docs/assets/images/elements/organism_external-teaser_M-L.png" alt="showcar-teaser-external" width=""></p>
+                    <div class="markdown"><h2>Teaser external<span class="status deprecated">NEEDS REVIEW</span></h2>
 </div>
-                     
+                   <div class="sample">
+<div class="sc-teaser">
+
+  <div class="sc-teaser__item">
+      <input id="sc-teaser" type="checkbox" class="sc-teaser__toggle">
+      <h3 class="sc-teaser__clickable">
+        <label for="sc-teaser" class="sc-teaser__label">
+          <span class="sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase">service</span>
+          <span class="sc-teaser__title sc-font-m sc-font-bold">Agos</span>
+          <img class="sc-teaser__service-logo" src="/showcar-ui/docs/assets/images/showcar-agos.png">
+        </label>
+      </h3>
+      <div class="sc-teaser__content">
+          <img src="/showcar-ui/docs/assets/images/showcar-agos-tmp.png">
+      </div>
+  </div>
+  <!-- -->
+  <div class="sc-teaser__item">
+      <input id="sc-teaser-2" type="checkbox" class="sc-teaser__toggle">
+      <h3 class="sc-teaser__clickable">
+        <label for="sc-teaser-2" class="sc-teaser__label">
+          <span class="sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase">il prestito</span>
+          <span class="sc-teaser__title sc-font-m sc-font-bold">Findomestic</span>
+        </label>
+      </h3>
+      <div class="sc-teaser__content">
+          Findomestic è flessibile come le tue esigenze e con firma digitale.
+          <br />
+          <a href="#link-link">Go to link</a>
+      </div>
+  </div>
+  <!-- -->
+  <div class="sc-teaser__item">
+      <input id="sc-teaser-3" type="checkbox" class="sc-teaser__toggle">
+      <h3 class="sc-teaser__clickable">
+        <label for="sc-teaser-3" class="sc-teaser__label">
+          <span class="sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase">Category title</span>
+          <span class="sc-teaser__title sc-font-m sc-font-bold">Estimate your auto</span>
+        </label>
+      </h3>
+      <div class="sc-teaser__content">
+          Hello, I am an external service too!
+      </div>
+  </div>
+
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-teaser-external" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-teaser-external" class="hjs html">
+&lt;div class=&quot;sc-teaser&quot;&gt;
+
+  &lt;div class=&quot;sc-teaser__item&quot;&gt;
+      &lt;input id=&quot;sc-teaser&quot; type=&quot;checkbox&quot; class=&quot;sc-teaser__toggle&quot;&gt;
+      &lt;h3 class=&quot;sc-teaser__clickable&quot;&gt;
+        &lt;label for=&quot;sc-teaser&quot; class=&quot;sc-teaser__label&quot;&gt;
+          &lt;span class=&quot;sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase&quot;&gt;service&lt;/span&gt;
+          &lt;span class=&quot;sc-teaser__title sc-font-m sc-font-bold&quot;&gt;Agos&lt;/span&gt;
+          &lt;img class=&quot;sc-teaser__service-logo&quot; src=&quot;/showcar-ui/docs/assets/images/showcar-agos.png&quot;&gt;
+        &lt;/label&gt;
+      &lt;/h3&gt;
+      &lt;div class=&quot;sc-teaser__content&quot;&gt;
+          &lt;img src=&quot;/showcar-ui/docs/assets/images/showcar-agos-tmp.png&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- --&gt;
+  &lt;div class=&quot;sc-teaser__item&quot;&gt;
+      &lt;input id=&quot;sc-teaser-2&quot; type=&quot;checkbox&quot; class=&quot;sc-teaser__toggle&quot;&gt;
+      &lt;h3 class=&quot;sc-teaser__clickable&quot;&gt;
+        &lt;label for=&quot;sc-teaser-2&quot; class=&quot;sc-teaser__label&quot;&gt;
+          &lt;span class=&quot;sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase&quot;&gt;il prestito&lt;/span&gt;
+          &lt;span class=&quot;sc-teaser__title sc-font-m sc-font-bold&quot;&gt;Findomestic&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/h3&gt;
+      &lt;div class=&quot;sc-teaser__content&quot;&gt;
+          Findomestic &egrave; flessibile come le tue esigenze e con firma digitale.
+          &lt;br /&gt;
+          &lt;a href=&quot;#link-link&quot;&gt;Go to link&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- --&gt;
+  &lt;div class=&quot;sc-teaser__item&quot;&gt;
+      &lt;input id=&quot;sc-teaser-3&quot; type=&quot;checkbox&quot; class=&quot;sc-teaser__toggle&quot;&gt;
+      &lt;h3 class=&quot;sc-teaser__clickable&quot;&gt;
+        &lt;label for=&quot;sc-teaser-3&quot; class=&quot;sc-teaser__label&quot;&gt;
+          &lt;span class=&quot;sc-teaser__category sc-font-s sc-font-bold sc-font-uppercase&quot;&gt;Category title&lt;/span&gt;
+          &lt;span class=&quot;sc-teaser__title sc-font-m sc-font-bold&quot;&gt;Estimate your auto&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/h3&gt;
+      &lt;div class=&quot;sc-teaser__content&quot;&gt;
+          Hello, I am an external service too!
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
                 </div>
             
 <hr></div><div id="layout-target" class="positon-anchor"><h2 class="type_name">utilities</h2>

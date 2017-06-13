@@ -317,7 +317,7 @@ code {
     background-color: #c4c4c4;
     font-weight: bold;
 }
-.docs-table th, td {
+.docs-table th, body :not(.sc-table) > table td {
     width: 200px;
     padding: 8px;
     border-left: 1px solid #dcdcdc;
@@ -325,13 +325,13 @@ code {
     text-align: center;
     word-break: break-all;
 }
-.docs-table th, td:first-child {
+.docs-table th, body :not(.sc-table) > table td:first-child {
     border-left: 0;
 }
-.docs-table th, tr:nth-child(even) td {
+.docs-table th, body :not(.sc-table) > table tr:nth-child(even) td {
     background-color: #f4f4f4;
 }
-.docs-table th, tr:last-child td {
+.docs-table th, body :not(.sc-table) > table tr:last-child td {
     border-bottom: none;
 }
 .docs-table-visibility tr td.cell-visible {
