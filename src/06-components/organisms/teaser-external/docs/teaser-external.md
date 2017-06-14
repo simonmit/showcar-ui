@@ -1,1 +1,1 @@
-<h2>Teaser external<span class="status deprecated">NEEDS REVIEW</span></h2>
+<h2>Teaser external<span class="status approved">APPROVED</span></h2>

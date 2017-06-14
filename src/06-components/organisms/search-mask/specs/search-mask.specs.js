@@ -11,11 +11,11 @@ module.exports = (frame, assert, browserWidth) => {
 
         beforeEach(() => {
             options = frame.get('#search-mask .sc-search__options');
-            filterContainer = frame.get('#search-mask .sc-grid-row');
-            makeFilter = frame.get('#search-mask .sc-grid-row select.sc-input:first-child');
-            modelFilter = frame.get('#search-mask .sc-grid-row select.sc-input:nth-child(2)');
-            marketFilter = frame.get('#search-mask .sc-grid-row select.sc-input:nth-child(5)');
-            cityFilter = frame.get('#search-mask .sc-grid-row input.sc-input');
+            filterContainer = frame.get('#search-mask .sc-search__filter-wrapper');
+            makeFilter = frame.get('#search-mask .sc-search__filter-wrapper select.sc-input:first-child');
+            modelFilter = frame.get('#search-mask .sc-search__filter-wrapper select.sc-input:nth-child(2)');
+            marketFilter = frame.get('#search-mask .sc-search__filter-wrapper select.sc-input:nth-child(5)');
+            cityFilter = frame.get('#search-mask .sc-search__filter-wrapper input.sc-input');
             link = frame.get('#search-mask .sc-search__link');
             button = frame.get('#search-mask .sc-search__content__actions button');
         });

@@ -22,9 +22,16 @@ module.exports = (frame, assert, browserWidth, helper) => {
             contentAuto.assert({
                 rendered: true
             })
-            tabAuto.assert({
-                height: 45
-            })
+
+            if (browserWidth < 510) {
+                tabAuto.assert({
+                    height: 45
+                })
+            } else {
+                tabAuto.assert({
+                    height: 53
+                })
+            }
         });
 
         it('Click on moto tabs shows moto', () => {
@@ -35,17 +42,29 @@ module.exports = (frame, assert, browserWidth, helper) => {
             contentMoto.assert({
                 rendered: true
             })
-            tabMoto.assert({
-                height: 45
-            })
+            if (browserWidth < 510) {
+                tabMoto.assert({
+                    height: 45
+                })
+            } else {
+                tabMoto.assert({
+                    height: 53
+                })
+            }
 
             // auto is inactive
             contentAuto.assert({
                 rendered: false
             })
-            tabAuto.assert({
-                height: 36
-            })
+            if (browserWidth < 510) {
+                tabAuto.assert({
+                    height: 36
+                })
+            } else {
+                tabAuto.assert({
+                    height: 48
+                })
+            }
         });
     });
 };

@@ -1,17 +1,17 @@
-<div class="sc-search__wrapper" data-tabs="search">
+<div class="sc-search__wrapper sc-tabs" data-tabs="search">
     <nav class="sc-tabs--with-icon">
-        <div class="sc-tab--with-icon sc-tab--with-icon--active" data-section="search-auto">
+        <button class="sc-tab--with-icon sc-tab--with-icon--active" data-section="search-auto">
             <as24-icon type="navigation/car"></as24-icon>
-        </div>
-        <div class="sc-tab--with-icon" data-section="search-moto">
+        </button>
+        <button class="sc-tab--with-icon" data-section="search-moto">
             <as24-icon type="navigation/motocycle"></as24-icon>
-        </div>
-        <div class="sc-tab--with-icon" data-section="search-caravan">
+        </button>
+        <button class="sc-tab--with-icon" data-section="search-caravan">
             <as24-icon type="navigation/caravan"></as24-icon>
-        </div>
-        <div class="sc-tab--with-icon" data-section="search-truck">
+        </button>
+        <button class="sc-tab--with-icon" data-section="search-truck">
             <as24-icon type="navigation/truck"></as24-icon>
-        </div>
+        </button>
     </nav>
     <div class="sc-search__content sc-tabs__content sc-tabs__content--visible" data-section="search-auto">
         <div class="sc-search__options sc-hidden-at-s">
@@ -22,31 +22,31 @@
             <input class="sc-input" id="seach-daily-admission" type="checkbox"/>
             <label for="seach-daily-admission">Tageszulassung</label>
         </div>
-        <div class="sc-grid-row">
-            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+        <div class="sc-search__filter-wrapper">
+            <select class="sc-input">
                 <option>Marke</option>
                 <option>...</option>
             </select>
-            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input" disabled>
+            <select class="sc-input" disabled>
                 <option>Modell</option>
                 <option>...</option>
             </select>
-            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+            <select class="sc-input">
                 <option>Erstzulassung ab</option>
                 <option>...</option>
             </select>
-            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+            <select class="sc-input">
                 <option>Preis bis (€)</option>
                 <option>...</option>
             </select>
-            <select class="sc-input sc-grid-col-6 sc-grid-col-s-12" placeholder="sc-input">
+            <select class="sc-input">
                 <option>Alle Länder</option>
                 <option>...</option>
             </select>
             <input type="text" class="sc-input" placeholder="Stadt/PLZ">
             <div class="sc-search__content__actions">
-                <button class="sc-btn-bob sc-btn-block sc-grid-col-6 sc-grid-col-s-12">Absenden</button>
-                <a class="sc-search__link sc-grid-col-6 sc-grid-col-s-12">Weitere Suchoptionen</a>
+                <button class="sc-btn-bob sc-btn-block">Absenden</button>
+                <a class="sc-search__link">Weitere Suchoptionen</a>
             </div>
         </div>
     </div>
