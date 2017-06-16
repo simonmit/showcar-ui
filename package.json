@@ -40,7 +40,7 @@
     "lazysizes": "^2.0.7",
     "promiz": "^1.0.5",
     "showcar-carousel": "^4.3.4",
-    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#release",
+    "showcar-icons": " ^0.6.0",
     "showcar-pictures": "^3.0.3",
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
