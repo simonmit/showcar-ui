@@ -34,9 +34,7 @@
   }
 
   &:disabled {
-    background-color: $white;
-    border-color: $black-40;
-    color: $black-40;
+    opacity: 0.55;
     cursor: not-allowed;
   }
 
