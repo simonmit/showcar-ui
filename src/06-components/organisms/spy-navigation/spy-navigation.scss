@@ -215,12 +215,6 @@ $spy-height: 55px;
       padding: 12px $L $L;
     }
 
-    &:last-of-type {
-      @include mqmax($viewportM) {
-        border-bottom: 1px solid $black-30;
-      }
-    }
-
     @include mqmin($viewportM) {
       @include visibleOnML;
       display: inline-block;
