@@ -1,11 +1,15 @@
 module.exports = (frame, assert, browserWidth, helper) => {
     describe('Lightbox', () => {
         let trigger;
+        let trigger2;
         let lightbox;
+        let lightbox2;
 
         beforeEach(() => {
-            lightbox = frame.get('.sc-lightbox__container');
+            lightbox = frame.get('#lb1 .sc-lightbox__container');
+            lightbox2 = frame.get('#lb2 .sc-lightbox__container');
             trigger = frame.get('[data-lightbox-open="lb1"]').toDomElement();
+            trigger2 = frame.get('[data-lightbox-open="lb2"]').toDomElement();
         });
 
         afterEach(done => {
@@ -27,7 +31,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
         it('Close lightbox using icon', (done) => {
             helper.click(trigger);
-            const lightboxCloseIcon = frame.getAll('.sc-lightbox__container [data-lightbox-close]').at(0).toDomElement();
+            const lightboxCloseIcon = frame.getAll('[data-test="icon"]').at(0).toDomElement();
             helper.click(lightboxCloseIcon);
 
             setTimeout(() => {
@@ -38,7 +42,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
         it('Close lightbox using button', (done) => {
             helper.click(trigger);
-            const lightboxCloseButton = frame.getAll('.sc-lightbox__container [data-lightbox-close]').at(0).toDomElement();
+            const lightboxCloseButton = frame.getAll('[data-test="button"]').at(0).toDomElement();
             helper.click(lightboxCloseButton);
 
             setTimeout(() => {
@@ -65,6 +69,17 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
             setTimeout(() => {
                 assert.notEqual(lightbox.getRawStyle('display'), 'none', 'should be shown');
+                done();
+            }, 250); //wait for fadeOut
+        });
+
+        it('Do not close lightbox clicking on overlay when prevent close attribute is provided', (done) => {
+            helper.click(trigger2);
+            const lightboxOverlay = frame.get('.sc-overlay').toDomElement();
+            helper.click(lightboxOverlay);
+
+            setTimeout(() => {
+                assert.equal(lightbox2.getRawStyle('display'), 'flex', 'should be shown');
                 done();
             }, 250); //wait for fadeOut
         });
