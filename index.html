@@ -2021,13 +2021,14 @@ This element is not yet implemented. It will look like this:</p>
 
 <p>In order to link a trigger element like a button that opens the lightbox you need to provide an <code>id</code> for the lightbox 
 and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger element.</p>
-<p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox.</p>
+<p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox. </p>
+<p>In case you need to disable closing when clicking outside the lightbox you can provide the <code>prevent-outsideclose</code> attribute
+to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot; prevent-outsideclose&gt;</code>.</p>
 </div>
                    <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
-
 <as24-lightbox class="sc-lightbox" id="lb1">
 	<div class="sc-lightbox__container">
-		<button class="sc-lightbox__close" data-lightbox-close>
+		<button class="sc-lightbox__close" data-lightbox-close data-test="icon">
 			<as24-icon type="close"></as24-icon>
 		</button>
 		<div class="sc-lightbox__content">
@@ -2035,7 +2036,7 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 			<label>The input label</label><br>
 			<input type="text" class="sc-input" placeholder="share your thoughts with us">
 			<br><br>
-			<button class="sc-btn-bob sc-btn-block" data-lightbox-close>Button bob</button>
+			<button class="sc-btn-bob sc-btn-block" data-lightbox-close data-test="button">Button bob</button>
 			<br><br>
 			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -2045,7 +2046,18 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 		</div>
 	</div>
 </as24-lightbox>
-</div> 
+
+<button class="sc-btn-bob" data-lightbox-open="lb2">Try me (no outside click close)</button>
+<as24-lightbox class="sc-lightbox" id="lb2" prevent-outsideclose>
+	<div class="sc-lightbox__container">
+		<button class="sc-lightbox__close" data-lightbox-close>
+			<as24-icon type="close"></as24-icon>
+		</button>
+		<div class="sc-lightbox__content">
+			<p>Try to close me!</p>
+		</div>
+	</div>
+</as24-lightbox></div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-lightbox" title="Copy to clipboard">
@@ -2053,10 +2065,9 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
                              </button>
                             <pre>
                                 <code id="copy_code-code-lightbox" class="hjs html">&lt;button class=&quot;sc-btn-bob&quot; data-lightbox-open=&quot;lb1&quot;&gt;Try me&lt;/button&gt;
-
 &lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot;&gt;
 &Tab;&lt;div class=&quot;sc-lightbox__container&quot;&gt;
-&Tab;&Tab;&lt;button class=&quot;sc-lightbox__close&quot; data-lightbox-close&gt;
+&Tab;&Tab;&lt;button class=&quot;sc-lightbox__close&quot; data-lightbox-close data-test=&quot;icon&quot;&gt;
 &Tab;&Tab;&Tab;&lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
 &Tab;&Tab;&lt;/button&gt;
 &Tab;&Tab;&lt;div class=&quot;sc-lightbox__content&quot;&gt;
@@ -2064,7 +2075,7 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 &Tab;&Tab;&Tab;&lt;label&gt;The input label&lt;/label&gt;&lt;br&gt;
 &Tab;&Tab;&Tab;&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
 &Tab;&Tab;&Tab;&lt;br&gt;&lt;br&gt;
-&Tab;&Tab;&Tab;&lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close&gt;Button bob&lt;/button&gt;
+&Tab;&Tab;&Tab;&lt;button class=&quot;sc-btn-bob sc-btn-block&quot; data-lightbox-close data-test=&quot;button&quot;&gt;Button bob&lt;/button&gt;
 &Tab;&Tab;&Tab;&lt;br&gt;&lt;br&gt;
 &Tab;&Tab;&Tab;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -2074,7 +2085,18 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 &Tab;&Tab;&lt;/div&gt;
 &Tab;&lt;/div&gt;
 &lt;/as24-lightbox&gt;
-</code>
+
+&lt;button class=&quot;sc-btn-bob&quot; data-lightbox-open=&quot;lb2&quot;&gt;Try me (no outside click close)&lt;/button&gt;
+&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb2&quot; prevent-outsideclose&gt;
+&Tab;&lt;div class=&quot;sc-lightbox__container&quot;&gt;
+&Tab;&Tab;&lt;button class=&quot;sc-lightbox__close&quot; data-lightbox-close&gt;
+&Tab;&Tab;&Tab;&lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
+&Tab;&Tab;&lt;/button&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-lightbox__content&quot;&gt;
+&Tab;&Tab;&Tab;&lt;p&gt;Try to close me!&lt;/p&gt;
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/div&gt;
+&lt;/as24-lightbox&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
