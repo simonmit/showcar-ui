@@ -2,14 +2,16 @@ module.exports = (frame, assert, browserWidth, helper) => {
     describe('Lightbox', () => {
         let trigger;
         let trigger2;
+        let trigger3;
         let lightbox;
         let lightbox2;
 
         beforeEach(() => {
             lightbox = frame.get('#lb1 .sc-lightbox__container');
             lightbox2 = frame.get('#lb2 .sc-lightbox__container');
-            trigger = frame.get('[data-lightbox-open="lb1"]').toDomElement();
+            trigger = frame.getAll('[data-lightbox-open="lb1"]').at(0).toDomElement();
             trigger2 = frame.get('[data-lightbox-open="lb2"]').toDomElement();
+            trigger3 = frame.getAll('[data-lightbox-open="lb1"]').at(1).toDomElement();
         });
 
         afterEach(done => {
@@ -80,6 +82,15 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
             setTimeout(() => {
                 assert.equal(lightbox2.getRawStyle('display'), 'flex', 'should be shown');
+                done();
+            }, 250); //wait for fadeOut
+        });
+
+        it('Do not open lightbox clicking on trigger button when prevent open attribute is provided', (done) => {
+            helper.click(trigger3);
+
+            setTimeout(() => {
+                assert.equal(lightbox.getRawStyle('display'), 'none', 'should be not shown');
                 done();
             }, 250); //wait for fadeOut
         });
