@@ -1,4 +1,4 @@
-<h2>Sizing icons</h2>
+<h2>Sizing icons<span class="status deprecated">COMMING SOON</span></h2>
 
 We added sizing classes for icons to be more consistent
 
