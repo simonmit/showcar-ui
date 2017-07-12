@@ -2024,6 +2024,7 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 <p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox. </p>
 <p>In case you need to disable closing when clicking outside the lightbox you can provide the <code>prevent-outsideclose</code> attribute
 to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot; prevent-outsideclose&gt;</code>.</p>
+<p>In case you need to disable opening lightbox when clicking button that opens the lightbox, you can provide the <code>data-lightbox-prevent-open=&quot;true&quot;</code> attribute. And you can switch this to  <code>data-lightbox-prevent-open=&quot;false&quot;</code> if you want to open it.</p>
 </div>
                    <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
 <as24-lightbox class="sc-lightbox" id="lb1">
@@ -2057,7 +2058,11 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 			<p>Try to close me!</p>
 		</div>
 	</div>
-</as24-lightbox></div> 
+</as24-lightbox>
+
+<button class="sc-btn-bob" data-lightbox-open="lb1" data-lightbox-prevent-open="true">Try me (data-lightbox-prevent-open="true")</button>
+<button class="sc-btn-bob" data-lightbox-open="lb1" data-lightbox-prevent-open="false">Try me (data-lightbox-prevent-open="false")</button>
+</div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-lightbox" title="Copy to clipboard">
@@ -2096,7 +2101,11 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 &Tab;&Tab;&Tab;&lt;p&gt;Try to close me!&lt;/p&gt;
 &Tab;&Tab;&lt;/div&gt;
 &Tab;&lt;/div&gt;
-&lt;/as24-lightbox&gt;</code>
+&lt;/as24-lightbox&gt;
+
+&lt;button class=&quot;sc-btn-bob&quot; data-lightbox-open=&quot;lb1&quot; data-lightbox-prevent-open=&quot;true&quot;&gt;Try me (data-lightbox-prevent-open=&quot;true&quot;)&lt;/button&gt;
+&lt;button class=&quot;sc-btn-bob&quot; data-lightbox-open=&quot;lb1&quot; data-lightbox-prevent-open=&quot;false&quot;&gt;Try me (data-lightbox-prevent-open=&quot;false&quot;)&lt;/button&gt;
+</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
