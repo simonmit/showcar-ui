@@ -166,6 +166,31 @@
   }
 }
 
+.sc-icon-s {
+  width: $M;
+  height: $M;
+}
+
+.sc-icon-m {
+  width: $L;
+  height: $L;
+}
+
+.sc-icon-l {
+  width: $XL;
+  height: $XL;
+}
+
+.sc-icon-xl {
+  width: 24px;
+  height: 24px;
+}
+
+.sc-icon-xxl {
+  width: $XXXL;
+  height: $XXXL;
+}
+
 // LEAGACY CODE - SHOULD NOT BE USED
 //xl viewport
 @include mqmin($viewportXL) {
