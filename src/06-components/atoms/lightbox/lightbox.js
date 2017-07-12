@@ -14,14 +14,14 @@ export default function (tagName) {
 
         const oldOpener = this.querySelector('.sc-lightbox-open');
         if (oldOpener) {
-            oldOpener.addEventListener('click', () => show(lb), false);
+            oldOpener.addEventListener('click', () => show(lb,oldOpener), false);
         }
 
         const id = this.id || '';
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
 
         openElements.forEach(el => {
-            el.addEventListener('click', () => show(lb), false);
+            el.addEventListener('click', () => show(lb,el), false);
         });
 
         lb.close.forEach(el => {
@@ -48,7 +48,10 @@ export default function (tagName) {
         }
     }
 
-    const show = lb => {
+    const show = (lb, opener) => {
+        if (opener.hasAttribute('data-lightbox-prevent-open') && opener.getAttribute('data-lightbox-prevent-open') == 'true') {
+            return;
+        }
         lb.overlay = document.createElement('div');
         lb.overlay.classList.add('sc-lightbox__overlay');
         lb.overlay.classList.add('sc-overlay'); //remove
