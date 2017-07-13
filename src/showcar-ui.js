@@ -1,5 +1,5 @@
 // Todo: remove Zepto
-if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
+// if(!window.jQuery) window.$ = window.Zepto = require('zepto-browserify').$;
 
 // Make sure these variables are initialized in case somebody uses them unintialized before they are loaded
 window.ut = window.ut || [];
