@@ -36,3 +36,5 @@ after_success:
   - 'if [ "$TRAVIS_PULL_REQUEST" != "true" ] && [ "$TRAVIS_BRANCH" == "master" ]; then bash ./travis_release.sh; fi'
   # deploy to docs branch (gh-pages)
   - 'if [ "$TRAVIS_PULL_REQUEST" != "true" ] && [ "$TRAVIS_BRANCH" == "master" ]; then bash ./travis_docs.sh; fi'
+  #temporary
+  - travis_terminate 0
