@@ -126,6 +126,10 @@
   }
 }
 
+.sc-unscroll {
+  overflow-y: hidden !important;
+}
+
 .sc-lightbox__container--visible {
   display: flex;
   flex-direction: column;

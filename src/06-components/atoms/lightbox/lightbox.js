@@ -67,6 +67,8 @@ export default function (tagName) {
         lb.container.classList.add('sc-temporary-visible'); //remove
         lb.container.classList.add('sc-lightbox__container--visible');
 
+        document.querySelector('html').classList.add('sc-unscroll');
+
         document.addEventListener('keydown', e => {
             if (e.keyCode === 27) hide(lb, e);
         });
@@ -79,6 +81,8 @@ export default function (tagName) {
 
     const hide = (lb, e) => {
         e.stopPropagation();
+
+        document.querySelector('html').classList.remove('sc-unscroll');
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
