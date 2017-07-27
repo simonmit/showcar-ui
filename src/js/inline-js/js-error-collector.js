@@ -32,6 +32,10 @@
     }
 
     window.onerror = function(errorMsg, sourceUrl, lineNumber, column, errorObj) {
+        if (errorMsg.indexOf('Script error') > -1) {
+            return;
+        }
+        
         var data = {
             httpUri: location.href,
             httpReferrer: document.referrer,
