@@ -1297,6 +1297,119 @@ margin-bottom:15px;
                 </div>
             
 <hr></div><div id="custom-dropdown-target" class="positon-anchor">
+                <div class="element" id="custom-dropdown-closeonselect">
+                    <div class="markdown"><h2>Custom dropdown that close when item is selected<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
+</div>
+                   <div class="sample"><custom-dropdown class="sc-input icon" checkboxgroup closeonselect>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <input type="radio" id="cy-be" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="B">
+        <label class="sc-block" for="cy-be">
+            <as24-icon type="flag/be"></as24-icon>
+            <span>Belgien</span>
+        </label>
+        <input type="radio" id="cy-de" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="D" checked=checked>
+        <label class="sc-block" for="cy-de">
+            <as24-icon type="flag/de"></as24-icon>
+            <span>Deutschland</span>
+        </label>
+        <input type="radio" id="cy-fr" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="F">
+        <label class="sc-block" for="cy-fr">
+            <as24-icon type="flag/fr"></as24-icon>
+            <span>Frankreich</span>
+        </label>
+        <input type="radio" id="cy-it" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="I">
+        <label class="sc-block" for="cy-it">
+            <as24-icon type="flag/it"></as24-icon>
+            <span>Italien</span>
+        </label>
+        <input type="radio" id="cy-lu" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="L">
+        <label class="sc-block" for="cy-lu">
+            <as24-icon type="flag/lu"></as24-icon>
+            <span>Luxemburg</span>
+        </label>
+        <input type="radio" id="cy-nl" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="NL">
+        <label class="sc-block" for="cy-nl">
+            <as24-icon type="flag/nl"></as24-icon>
+            <span>Niederlande</span>
+        </label>
+        <input type="radio" id="cy-es" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="E">
+        <label class="sc-block" for="cy-es">
+            <as24-icon type="flag/es"></as24-icon>
+            <span>Spanien</span>
+        </label>
+        <input type="radio" id="cy-at" name="cy" class="sc-hidden" placeholder="Stadt/PLZ" value="A">
+        <label class="sc-block" for="cy-at">
+            <as24-icon type="flag/at"></as24-icon>
+            <span>Österreich</span>
+        </label>
+    </div>
+</custom-dropdown>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-custom-dropdown-closeonselect" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-custom-dropdown-closeonselect" class="hjs html">&lt;custom-dropdown class=&quot;sc-input icon&quot; checkboxgroup closeonselect&gt;
+    &lt;div&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-be&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;B&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-be&quot;&gt;
+            &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Belgien&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-de&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;D&quot; checked=checked&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-de&quot;&gt;
+            &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Deutschland&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-fr&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;F&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-fr&quot;&gt;
+            &lt;as24-icon type=&quot;flag/fr&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Frankreich&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-it&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;I&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-it&quot;&gt;
+            &lt;as24-icon type=&quot;flag/it&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Italien&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-lu&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;L&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-lu&quot;&gt;
+            &lt;as24-icon type=&quot;flag/lu&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Luxemburg&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-nl&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;NL&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-nl&quot;&gt;
+            &lt;as24-icon type=&quot;flag/nl&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Niederlande&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-es&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;E&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-es&quot;&gt;
+            &lt;as24-icon type=&quot;flag/es&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;Spanien&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;cy-at&quot; name=&quot;cy&quot; class=&quot;sc-hidden&quot; placeholder=&quot;Stadt/PLZ&quot; value=&quot;A&quot;&gt;
+        &lt;label class=&quot;sc-block&quot; for=&quot;cy-at&quot;&gt;
+            &lt;as24-icon type=&quot;flag/at&quot;&gt;&lt;/as24-icon&gt;
+            &lt;span&gt;&Ouml;sterreich&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/custom-dropdown&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
                 <div class="element" id="custom-dropdown-default">
                     <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 </div>
