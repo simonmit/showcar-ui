@@ -2027,7 +2027,8 @@ This element is not yet implemented. It will look like this:</p>
 
 <p>In order to link a trigger element like a button that opens the lightbox you need to provide an <code>id</code> for the lightbox 
 and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger element.</p>
-<p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox. </p>
+<p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox.</p>
+<p>If you need a custom identifier for your lightbox add <code>data-custom=&#39;String&#39;</code> attribute to you <code>as24-lightbox</code> element. It will be automatically applied to div which contains overlay and content of the lightbox.</p>
 <p>In case you need to disable closing when clicking outside the lightbox you can provide the <code>prevent-outsideclose</code> attribute
 to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot; prevent-outsideclose&gt;</code>.</p>
 <p>In case you need to disable opening lightbox when clicking button that opens the lightbox, you can provide the <code>data-lightbox-prevent-open=&quot;true&quot;</code> attribute. And you can switch this to  <code>data-lightbox-prevent-open=&quot;false&quot;</code> if you want to open it.</p>
