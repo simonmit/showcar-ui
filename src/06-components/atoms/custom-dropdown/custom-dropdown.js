@@ -19,7 +19,7 @@ export default function (tagName) {
             checkbox.classList.add('sc-input'); // TODO check do we need this?
         }); // TODO check do we need this?
 
-        const updateCaption = () => {
+        const updateCaption = (onchange) => {
             const checkboxesChecked = el.querySelectorAll(':checked');
 
             const texts = Array.from(checkboxesChecked)
@@ -29,9 +29,13 @@ export default function (tagName) {
 
             const title = texts.join(', ') || defaultTitle;
             titleElement.innerHTML = title;
+            if (onchange && el.hasAttribute('closeonselect')) {
+                el.classList.remove('sc-open');
+            }
+            closeAllDropdowns(el);
         };
 
-        el.addEventListener('change', updateCaption);
+        el.addEventListener('change', () => updateCaption(true));
 
         titleElement.addEventListener('click', () => {
             closeAllDropdowns(el);
