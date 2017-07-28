@@ -52,6 +52,17 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 rendered: false
             });
         });
+
+        it('close on click on item with closeonselect attr', () => {
+            const closeonselectTrigger = frame.get('#custom-dropdown-closeonselect p').toDomElement();
+            const closeonselectLabel = frame.get('#custom-dropdown-closeonselect [for=cy-be]').toDomElement();
+            const closeonselectContent = frame.get('#custom-dropdown-closeonselect custom-dropdown > div:nth-child(2)');
+            helper.click(closeonselectTrigger);
+            helper.click(closeonselectLabel);
+            closeonselectContent.assert({
+                rendered: false
+            });
+        });
     });
 
     describe('Custom dropdown {LAYOUT}', () => {
