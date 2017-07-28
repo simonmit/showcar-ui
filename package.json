@@ -9,7 +9,7 @@
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",
-    "test": "gulp test:bs"
+    "test": "gulp test:travis"
   },
   "author": "AutoScout24 GmbH",
   "license": "MIT",
