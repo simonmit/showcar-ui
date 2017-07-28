@@ -127,7 +127,7 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma(
                 day: '2-digit',
                 hour: '2-digit',
                 minute: '2-digit'
-            }), //remove on travis
+            }),
             project: 'Showcar-ui',
         },
         browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
