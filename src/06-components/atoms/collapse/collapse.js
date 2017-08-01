@@ -10,7 +10,6 @@ export default () => {
         let event = new CustomEvent('collapse', {
             bubbles: true
         });
-
         document.dispatchEvent(event);
     };
 
