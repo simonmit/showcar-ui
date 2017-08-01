@@ -29,8 +29,8 @@ git add . -A
 
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
-	npm version patch
 	git commit -am "Release"
+	npm version patch
 	git push origin $RELEASE_BRANCH --follow-tags
 	npm publish
 fi
