@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/AutoScout24/showcar-ui.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",

@@ -31,7 +31,7 @@ git add . -A
 if [ -n "$(git status --porcelain)" ]; then
 	git commit -am "Release"
 	npm version patch
-	
+
 	git push origin $RELEASE_BRANCH --follow-tags
 	npm publish
 fi
