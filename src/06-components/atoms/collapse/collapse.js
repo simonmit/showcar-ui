@@ -14,8 +14,13 @@ export default () => {
     };
 
     document.addEventListener('click', (e => {
-        if (e.target.getAttribute('data-toggle') == 'sc-collapse') {
-            handleClick(e.target);
+        let target = e.target;
+
+        while(target && target !== document) {
+            if (target.getAttribute('data-toggle') === 'sc-collapse') {
+                handleClick(target);
+            }
+            target = target.parentNode;
         }
     }));
 
