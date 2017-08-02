@@ -2,13 +2,10 @@
     'use strict';
 
     function postError(url, data) {
-        var http = new XMLHttpRequest();
-
-        if (url !== "") {
-            http.open("POST", url, true);
-            http.setRequestHeader("Content-Type", "application/json");
-            http.send(data);
-        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(data);
     }
 
     window.onerror = function(errorMsg, sourceUrl, lineNumber, column, errorObj) {
