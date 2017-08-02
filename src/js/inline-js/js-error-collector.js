@@ -36,9 +36,8 @@
         var url = (location.host.indexOf("dev-www.") > -1) ? devUrl : prodUrl;
         postError(url, JSON.stringify(data));
 
-        var devShadowUrl = 'https://dev-js-error-logger.infinity.eu-west-1.s24cloud.net/log';
-        var prodShadowUrl = 'https://js-error-logger.infinity.eu-west-1.s24cloud.net/log';
-        var shadowUrl = (url.indexOf("dev-www.") > -1) ? devShadowUrl : prodShadowUrl;
+        var prefix = (url.indexOf("dev-www.") > -1) ? 'dev-' : '';
+        var shadowUrl = 'https://' + prefix + 'js-error-logger.infinity.eu-west-1.s24cloud.net/log';
         postError(shadowUrl, JSON.stringify(data));
     };
 })(navigator, location);
