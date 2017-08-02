@@ -3,7 +3,7 @@
 
     function getPostUrl() {
         var url = location.host;
-        var devUrl = 'https://2w6tdi5ifg.execute-api.eu-west-1.amazonaws.com/default/event';
+        var devUrl = 'https://dev-js-error-logger.infinity.eu-west-1.s24cloud.net/log';
         var prodUrl = 'https://5q1eumnb90.execute-api.eu-west-1.amazonaws.com/default/event';
 
         if (url.indexOf('dev-www.') > -1) {
