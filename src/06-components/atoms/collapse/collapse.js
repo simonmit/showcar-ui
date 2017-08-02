@@ -21,7 +21,7 @@ export default () => {
 
     function reInit() {
         Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), (collapsable) => {
-            collapsable.addEventListener('click', function () {handleClick(collapsable);});
+            collapsable.addEventListener('click', () => {handleClick(collapsable);});
         });
     }
 
