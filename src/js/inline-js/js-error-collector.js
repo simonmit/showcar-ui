@@ -17,7 +17,7 @@
         var data = {
             httpUri: location.href,
             httpReferrer: document.referrer,
-            pagePath: location.pathname.split('/'),
+            pagePath: location.pathname.split('/')[1],
             jsSrc: sourceUrl || '',
             jsLine: lineNumber || '',
             jsColumn: column || '',
