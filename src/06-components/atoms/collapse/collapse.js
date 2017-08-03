@@ -16,9 +16,9 @@ export default () => {
     document.addEventListener('click', (e => {
         let target = e.target;
 
-        while(target && target !== document) {
+        while(target) {
             if (target.getAttribute('data-toggle') === 'sc-collapse') {
-                handleClick(target);
+                return handleClick(target);
             }
             target = target.parentNode;
         }
