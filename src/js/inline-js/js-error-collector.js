@@ -10,10 +10,6 @@
 
     window.onerror = function(errorMsg, sourceUrl, lineNumber, column, errorObj) {
         
-        if (errorMsg.indexOf('Script error') > -1) {
-            return;
-        }
-        
         if (location.host.indexOf('www.autoscout24') < 0) {
             return;
         }
