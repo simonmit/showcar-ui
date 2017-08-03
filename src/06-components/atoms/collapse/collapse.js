@@ -18,7 +18,7 @@ export default () => {
 
         while(target) {
             if (target.getAttribute && target.getAttribute('data-toggle') === 'sc-collapse') {
-                handleClick(target);
+                return handleClick(target);
             }
             target = target.parentNode;
         }
