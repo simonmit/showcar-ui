@@ -13,7 +13,7 @@ export default () => {
         document.dispatchEvent(event);
     };
 
-    document.addEventListener('click', (e => {
+    window.addEventListener('click', (e => {
         let target = e.target;
 
         while(target) {
@@ -23,12 +23,4 @@ export default () => {
             target = target.parentNode;
         }
     }));
-
-    function reInit() {
-        Array.prototype.forEach.call(document.querySelectorAll('[data-toggle="sc-collapse"]'), (collapsable) => {
-            collapsable.addEventListener('click', () => {handleClick(collapsable);});
-        });
-    }
-
-    document.addEventListener('as24-collapse:update', reInit);
 };
