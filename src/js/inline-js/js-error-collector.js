@@ -37,7 +37,6 @@
         var url = (location.host.indexOf('dev-www.') > -1) ? devUrl : prodUrl;
         postError(url, JSON.stringify(data));
 
-        
         // var prefix = (location.host.indexOf('dev-www.') > -1) ? 'dev-' : '';
         // var shadowUrl = 'https://' + prefix + 'js-error-logger.infinity.eu-west-1.s24cloud.net/log';
         // postError(shadowUrl, JSON.stringify(data));
