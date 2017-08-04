@@ -6,11 +6,6 @@ export default () => {
         Array.prototype.forEach.call(targets, (target) => {
             target.classList.toggle('in');
         });
-
-        let event = new CustomEvent('collapse', {
-            bubbles: true
-        });
-        document.dispatchEvent(event);
     };
 
     window.addEventListener('click', (e => {
