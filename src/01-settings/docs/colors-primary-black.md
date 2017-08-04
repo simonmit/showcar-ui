@@ -61,5 +61,11 @@
           #f4f4f4<br>$black-20
         </div>
       </div>
+    </div><div class="ndpl-component__color-container">
+      <div class="ndpl-component__color ndpl-apply-border ndpl-c-border" style="background-color: rgb(255, 255, 255);border: 1px solid #ccc;">
+        <div class="ndpl-dark-text">
+          #fff<br>$white
+        </div>
+      </div>
     </div>
   </div>

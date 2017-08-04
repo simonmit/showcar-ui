@@ -12,12 +12,44 @@ To add notifications you need 3 elements on your page:
 Atributes of `<as24-notification>` element:  
 <br>
 
-| Attribute     | Possible values                  | Description                                  |
-| :------------ | :------------------------------- | :------------------------------------------- |
-| type          | success/information/error/tip    | defines notification color                   |
-| id            | any uniq value                   | uniq id of notification                      |
-| target        | id of target element             | notification anchors below the target element|
-| title         | any text                         | notification title                           |
-| close         | true/false                       | defines close button for the notification    |
-| timeout       | value in ms                      | closes notification after [timeout] ms       |
-
+<table class="docs-table">
+   <thead>
+      <tr>
+         <th style="text-align:left">Attribute</th>
+         <th style="text-align:left">Possible values</th>
+         <th style="text-align:left">Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td style="text-align:left">type</td>
+         <td style="text-align:left">success/information/error/tip</td>
+         <td style="text-align:left">defines notification color</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">id</td>
+         <td style="text-align:left">any uniq value</td>
+         <td style="text-align:left">uniq id of notification</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">target</td>
+         <td style="text-align:left">id of target element</td>
+         <td style="text-align:left">notification anchors below the target element</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">title</td>
+         <td style="text-align:left">any text</td>
+         <td style="text-align:left">notification title</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">close</td>
+         <td style="text-align:left">true/false</td>
+         <td style="text-align:left">defines close button for the notification</td>
+      </tr>
+      <tr>
+         <td style="text-align:left">timeout</td>
+         <td style="text-align:left">value in ms</td>
+         <td style="text-align:left">closes notification after [timeout] ms</td>
+      </tr>
+   </tbody>
+</table>

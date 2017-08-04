@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+const fs = require('fs');
 
 const globalJSON = require('../helpers/renderContentJson.js')();
 const generateHtml = require('../helpers/renderHtml.js');
+const extrasForTesting = JSON.parse(fs.readFileSync('./docs/extrasForTesting.json', 'utf8'));
 
 const renderContent = (el) => {
     let html = globalJSON[el].html ? JSON.parse(globalJSON[el].html) : '';
@@ -16,10 +18,20 @@ app.get('/', (req, res) => {
 
 app.get('/test/', (req, res) => {
     const elementsArray = Object.keys(globalJSON).filter((el) => {
+        const addExtrasForTesting = () => {
+            return extrasForTesting.names.filter((name) => {
+                if (globalJSON[el].name === name) {
+                    return true;
+                }
+            }).length > 0;
+        };
+
         const type = globalJSON[el].type;
+
         return type === 'atoms' ||
             type === 'molecules' ||
-            type === 'organisms';
+            type === 'organisms' ||
+            addExtrasForTesting();
     });
     let content = elementsArray
             .map(el => {
@@ -38,7 +50,7 @@ app.get('/docs/:type/', (req, res) => {
                 return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
-    res.send(generateHtml(globalJSON, content,true));
+    res.send(generateHtml(globalJSON, content, true));
 });
 
 app.get('/docs/:type/:group', (req, res) => {
@@ -51,7 +63,7 @@ app.get('/docs/:type/:group', (req, res) => {
                 return renderContent(el);
             }).join('') || 'empty';
     content += '</div>';
-    res.send(generateHtml(globalJSON, content,true));
+    res.send(generateHtml(globalJSON, content, true));
 });
 
 app.use('/showcar-ui', express.static('./'));

@@ -1,0 +1,113 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+@import '../../../02-sass-tools/rotating-arrow';
+
+$border: 1px solid $black-30;
+
+.sc-teaser {
+  border-top: $border;
+
+  @include mqmin($viewportM) {
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .sc-teaser__content {
+      display: block;
+    }
+
+    .sc-teaser__label {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.sc-teaser__item {
+  border-bottom: $border;
+  background-color: $black-20;
+
+  @include clearfix();
+
+  @include mqmin($viewportM) {
+    border-top: none;
+    flex: 0 0 calc(50% - #{$M / 2});
+    margin-bottom: $M;
+  }
+}
+
+.sc-teaser__toggle {
+  display: none;
+
+  &:checked {
+    & ~ .sc-teaser__content {
+      display: block;
+    }
+
+    & ~ .sc-teaser__clickable > .sc-teaser__label {
+      &:after {
+        @include rotating-arrow('up');
+      }
+    }
+  }
+}
+
+.sc-teaser__label {
+  position: relative;
+  display: block;
+
+  @include mqmax($viewportM) {
+    cursor: pointer;
+  }
+
+  &:after {
+    @include rotating-arrow('down');
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: $M;
+    height: $M;
+    margin-top: $M / 2 * -1;
+  }
+}
+
+.sc-teaser__clickable {
+  padding: $L;
+  @include mqmax($viewportM) {
+    cursor: pointer;
+  }
+}
+
+.sc-teaser__title {
+  display: block;
+  line-height: 1;
+}
+
+.sc-teaser__category {
+  line-height: 1;
+  color: $color-link;
+  margin-bottom: $S;
+  display: block;
+}
+
+.sc-teaser__service-logo {
+  display: none;
+
+  @include mqmin($viewportM) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    max-width: 120px;
+  }
+}
+
+.sc-teaser__content {
+  display: none;
+  padding-left: $L;
+  padding-right: $L;
+  padding-bottom: $M;
+}

@@ -2,34 +2,27 @@ import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
     function attachedCallback() {
-        let overlay = document.querySelector('sc-overlay');
-
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.classList.add('sc-overlay');
-            document.body.appendChild(overlay);
-        }
 
         let lb = {
             parent: this.parentElement,
-            container: this.querySelector('.sc-lightbox-container') || this.querySelector('.sc-lightbox__container'),
-            content: this.querySelector('.sc-lightbox-content') || this.querySelector('.sc-lightbox__content'),
+            container: this.querySelector('.sc-lightbox-container') /*remove*/ || this.querySelector('.sc-lightbox__container'),
+            content: this.querySelector('.sc-lightbox-content') /*remove*/ || this.querySelector('.sc-lightbox__content'),
             close: Array.from(this.querySelectorAll('[data-lightbox-close]')),
-            closeOld: this.querySelector('.sc-lightbox-close'),
-            overlay
+            closeOld: this.querySelector('.sc-lightbox-close'), /*remove*/
+            preventOutsideClose: this.getAttribute('prevent-outsideclose'),
+            customIdentifier: this.getAttribute('data-custom') || ''
         };
 
-        const oldOpener= this.querySelector('.sc-lightbox-open');
+        const oldOpener = this.querySelector('.sc-lightbox-open');
         if (oldOpener) {
-            oldOpener.addEventListener('click', () => show(lb), false);
+            oldOpener.addEventListener('click', () => show(lb,oldOpener), false);
         }
 
         const id = this.id || '';
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
 
         openElements.forEach(el => {
-            console.log(el);
-            el.addEventListener('click', () => show(lb), false);
+            el.addEventListener('click', () => show(lb,el), false);
         });
 
         lb.close.forEach(el => {
@@ -40,15 +33,15 @@ export default function (tagName) {
             lb.closeOld.addEventListener('click', (e) => hide(lb, e), false);
         }
 
-        lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
+
 
         // TODO: remove later
         const closeIcon = document.querySelector('.sc-lightbox-close as24-icon');
 
-        if (!closeIcon) {
+        if (! closeIcon) {
             const closeButton = document.querySelector('.sc-lightbox-close');
 
-            if (!closeButton) return;
+            if (! closeButton) return;
 
             const close = document.createElement('as24-icon');
             close.setAttribute('type', 'close');
@@ -56,28 +49,54 @@ export default function (tagName) {
         }
     }
 
-    const show = lb => {
-        lb.overlay.classList.add('sc-temporary-visible');
+    const show = (lb, opener) => {
+        if (opener.hasAttribute('data-lightbox-prevent-open') && opener.getAttribute('data-lightbox-prevent-open') == 'true') {
+            return;
+        }
+        lb.overlay = document.createElement('div');
+        lb.overlay.classList.add('sc-lightbox__overlay');
+        lb.overlay.classList.add('sc-overlay'); //remove
+        if (lb.customIdentifier) {
+            lb.overlay.setAttribute('data-custom', lb.customIdentifier);
+        }
+        document.body.appendChild(lb.overlay);
+
+        if (lb.preventOutsideClose === null) {
+            lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
+        }
+
+        lb.overlay.classList.add('sc-temporary-visible'); //remove
+        lb.overlay.classList.add('sc-lightbox__overlay--visible');
         lb.overlay.appendChild(lb.container);
-        lb.container.classList.add('sc-temporary-visible');
+        lb.container.classList.add('sc-temporary-visible'); //remove
+        lb.container.classList.add('sc-lightbox__container--visible');
+
+        document.querySelector('html').classList.add('sc-unscroll');
 
         document.addEventListener('keydown', e => {
             if (e.keyCode === 27) hide(lb, e);
         });
 
-        setTimeout(() => lb.overlay.classList.add('sc-fade-in'), 20);
+        setTimeout(() => {
+            lb.overlay.classList.add('sc-fade-in'); //remove
+            lb.overlay.classList.add('sc-lightbox--fadein');
+        }, 20);
     };
 
     const hide = (lb, e) => {
         e.stopPropagation();
 
+        document.querySelector('html').classList.remove('sc-unscroll');
+
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
             e.preventDefault();
-            lb.container.classList.remove('sc-temporary-visible');
+            lb.container.classList.remove('sc-lightbox__container--visible');
+            lb.container.classList.remove('sc-temporary-visible'); //remove
             lb.parent.appendChild(lb.container);
-            lb.overlay.classList.remove('sc-fade-in');
+            lb.overlay.classList.remove('sc-fade-in'); //remove
+            lb.overlay.classList.remove('sc-lightbox--fadein');
             setTimeout(() => {
-                lb.overlay.classList.remove('sc-temporary-visible');
+                lb.overlay.remove();
             }, 250);
         }
     };

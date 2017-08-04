@@ -22,13 +22,16 @@ rm -rf !(.git*)
 cp -r ../dist .
 cp -r ../src .
 cp ../package.json .
+cp ../README.md .
+cp ../LICENSE.md .
 
 git add . -A
 
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
 	git commit -am "Release"
-	git push origin $RELEASE_BRANCH
+	# npm version patch
+	git push origin $RELEASE_BRANCH --follow-tags
 fi
 
 cd ..

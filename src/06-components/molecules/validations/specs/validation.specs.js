@@ -1,8 +1,8 @@
-module.exports = function (frame) {
-    describe('Validation', function () {
-        it('error label positioned right', function () {
-            var input = frame.get('#validation .sc-input.error');
-            var label = frame.get('#validation .sc-font-error');
+module.exports = (frame) => {
+    describe('Validation', () => {
+        it('error label positioned right', () => {
+            const input = frame.get('#validation .sc-input.error');
+            const label = frame.get('#validation .sc-font-error');
 
             label.assert({
                 top: input.bottom.plus(4),

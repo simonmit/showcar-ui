@@ -1,8 +1,7 @@
 <button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
-
-<as24-lightbox class="sc-lightbox" id="lb1">
+<as24-lightbox class="sc-lightbox" id="lb1" data-custom="custom-lightbox">
 	<div class="sc-lightbox__container">
-		<button class="sc-lightbox__close" data-lightbox-close>
+		<button class="sc-lightbox__close" data-lightbox-close data-test="icon">
 			<as24-icon type="close"></as24-icon>
 		</button>
 		<div class="sc-lightbox__content">
@@ -10,7 +9,27 @@
 			<label>The input label</label><br>
 			<input type="text" class="sc-input" placeholder="share your thoughts with us">
 			<br><br>
-			<button class="sc-btn-bob sc-btn-block" data-lightbox-close>Button bob</button>
+			<button class="sc-btn-bob sc-btn-block" data-lightbox-close data-test="button">Button bob</button>
+			<br><br>
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+			Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+			Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 		</div>
 	</div>
 </as24-lightbox>
+
+<button class="sc-btn-bob" data-lightbox-open="lb2">Try me (no outside click close)</button>
+<as24-lightbox class="sc-lightbox" id="lb2" prevent-outsideclose>
+	<div class="sc-lightbox__container">
+		<button class="sc-lightbox__close" data-lightbox-close>
+			<as24-icon type="close"></as24-icon>
+		</button>
+		<div class="sc-lightbox__content">
+			<p>Try to close me!</p>
+		</div>
+	</div>
+</as24-lightbox>
+
+<button class="sc-btn-bob" data-lightbox-open="lb1" data-lightbox-prevent-open="true">Try me (data-lightbox-prevent-open="true")</button>

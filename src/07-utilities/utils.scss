@@ -87,6 +87,111 @@
   overflow: hidden !important;
 }
 
+//s viewport
+.sc-hidden-at-s {
+  @include mqminmax($viewportS - 1, $viewportM - 1) {
+    display: none;
+  }
+}
+
+.sc-visible-at-s {
+  @include mqmin($viewportM) {
+    display: none;
+  }
+}
+
+//m viewport
+.sc-hidden-at-m {
+  @include mqminmax($viewportM, $viewportL - 1) {
+    display: none;
+  }
+}
+
+.sc-visible-at-m {
+  @include mqminmax($viewportS - 1, $viewportM - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportL) {
+    display: none;
+  }
+}
+
+//l viewport
+.sc-hidden-at-l {
+  @include mqminmax($viewportL, $viewportXL - 1) {
+    display: none;
+  }
+}
+
+.sc-visible-at-l {
+  @include mqminmax($viewportS - 1, $viewportL - 1) {
+    display: none;
+  }
+
+  @include mqmin($viewportXL) {
+    display: none;
+  }
+}
+
+//xl viewport
+.sc-hidden-at-xl {
+  @include mqmin($viewportXL) {
+    display: none;
+  }
+}
+
+.sc-visible-at-xl {
+  @include mqmax($viewportXL - 1) {
+    display: none;
+  }
+}
+
+.sc-box-spacing {
+  margin-bottom: 30px;
+
+  @include mqmin($viewportM) {
+    margin-bottom: 40px;
+  }
+}
+
+//TODO: move to layout
+.sc-section {
+  border-bottom: 1px solid $black-30;
+  background-color: $white;
+  padding: 0 $XL;
+
+  &.sc-section-transparent {
+    background-color: transparent;
+  }
+}
+
+.sc-icon-s {
+  width: $M;
+  height: $M;
+}
+
+.sc-icon-m {
+  width: $L;
+  height: $L;
+}
+
+.sc-icon-l {
+  width: $XL;
+  height: $XL;
+}
+
+.sc-icon-xl {
+  width: 24px;
+  height: 24px;
+}
+
+.sc-icon-xxl {
+  width: $XXXL;
+  height: $XXXL;
+}
+
+// LEAGACY CODE - SHOULD NOT BE USED
 //xl viewport
 @include mqmin($viewportXL) {
   .sc-hidden-xl {
@@ -127,15 +232,6 @@
   }
 }
 
-.sc-box-spacing {
-  margin-bottom: 30px;
-
-  @include mqmin($viewportM) {
-    margin-bottom: 40px;
-  }
-}
-
-//TODO: Remove?
 .sc-telekom-bar {
   padding-right: $XL;
   text-align: right;
@@ -143,14 +239,4 @@
     height: $XL - 1;
   }
 }
-
-//TODO: move to layout
-.sc-section {
-  border-bottom: 1px solid $black-30;
-  background-color: $white;
-  padding: 0 $XL;
-
-  &.sc-section-transparent {
-    background-color: transparent;
-  }
-}
+//LEAGACY CODE - SHOULD NOT BE USED

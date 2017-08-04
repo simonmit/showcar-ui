@@ -83,10 +83,8 @@ gulp.task('set-dev', () => {
 });
 
 gulp.task('docs:generate', () => {
-    const generateJsonDocs = require('./docs/tasks/generateJson');
-    const generateHtmlDocs = require('./docs/tasks/generateHtml');
-    generateJsonDocs();
-    generateHtmlDocs();
+    require('./docs/tasks/generateJson')();
+    require('./docs/tasks/generateHtml')();
 });
 
 const serveDocs = require('./docs/tasks/docs');
@@ -98,29 +96,52 @@ gulp.task('docs:watch', ['build'], () => {serveDocs(gulp);});
 gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
 gulp.task('default', ['docs:watch']);
 
-gulp.task('test', ['docs:serve'], scgulp.karma({
-    browsers: ['Firefox', 'Electron', 'Safari'],
-    files: ['quixote.config.js'],
+const testingParams = {
+    files: ['.quixoteconf.js'],
     preprocessors: {
-        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
+        '.quixoteconf.js': ['webpack', 'sourcemap']
     },
     proxies: {
         '/': 'http://localhost:3000/',
-    },
-}));
+    }
+};
+
+gulp.task('test', ['docs:serve'], scgulp.karma(
+    Object.assign({}, testingParams, {
+        browsers: ['Firefox', 'Chrome', 'Safari']
+    }))
+);
+
+gulp.task('test:fast', ['docs:serve'], scgulp.karma(
+    Object.assign({}, testingParams, {
+        browsers: ['Chrome']
+    }))
+);
 
 
-gulp.task('test:bs', ['docs:serve'], scgulp.karma({
-    browserStack: {
-        build: new Date().toLocaleString('de-DE', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }), //remove on travis
-        project: 'Showcar-ui',
-    },
-    browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
-    files: ['quixote.config.js'],
-    preprocessors: {
-        'quixote.config.js': ['browserify'] //providing browserify to use require in test files
-    },
-    proxies: {
-        '/': 'http://localhost:3000/',
-    },
-}));
+gulp.task('test:bs', ['docs:serve'], scgulp.karma(
+    Object.assign({}, testingParams, {
+        browserStack: {
+            build: new Date().toLocaleString('de-DE', {
+                hour12: false,
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            }),
+            project: 'Showcar-ui',
+        },
+        browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
+    }))
+);
+
+gulp.task('test:travis', ['docs:serve'], scgulp.karma(
+    Object.assign({}, testingParams, {
+        browserStack: {
+            project: 'Showcar-ui',
+        },
+        // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
+        // temporary removed iphones
+        browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],
+    }))
+);

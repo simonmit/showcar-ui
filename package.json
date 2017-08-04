@@ -1,48 +1,38 @@
 {
   "name": "showcar-ui",
-  "version": "3.0.8",
-  "description": "showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.",
-  "directories": {
-    "doc": "docs",
-    "example": "examples"
-  },
+  "version": "3.3.0",
+  "description": "Showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AutoScout24/showcar-ui.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",
-    "test": "gulp test:bs"
+    "test": "gulp test:travis"
   },
   "author": "AutoScout24 GmbH",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/AutoScout24/showcar-ui#readme",
   "browserslist": [
     "last 2 versions",
     "ie 11"
   ],
   "devDependencies": {
-    "assemble": "^0.8.0",
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.1.0",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.2.0",
-    "chalk": "^1.1.3",
-    "eslint-plugin-compat": "^1.0.2",
-    "express": "^4.15.2",
-    "glob": "^7.0.3",
+    "browser-sync": "^2.18.12",
+    "eslint-plugin-compat": "^1.0.4",
+    "express": "^4.15.3",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-string-replace": "^0.4.0",
-    "gulp-testcafe": "^0.9.1",
-    "handlebars-helper-include": "^0.2.0",
-    "handlebars-helpers": "^0.5.8",
-    "html-entities": "^1.2.0",
+    "html-entities": "^1.2.1",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.7.0",
-    "update-notifier": "^2.1.0",
+    "showcar-gulp": "^2.9.4",
+    "update-notifier": "^2.2.0",
     "yargs": "^4.6.0"
   },
   "main": "src/js/showcar-ui.js",
@@ -50,15 +40,15 @@
     "document-register-element": "^0.5.4",
     "dom4": "^1.8.3",
     "es6-collections": "^0.5.6",
-    "lazysizes": "^2.0.2",
+    "lazysizes": "^2.0.7",
     "promiz": "^1.0.5",
-    "showcar-carousel": "^4.3.2",
-    "showcar-icons": "git+https://github.com/AutoScout24/showcar-icons.git#release",
-    "showcar-pictures": "^3.0.2",
+    "showcar-carousel": "^4.3.4",
+    "showcar-icons": " ^0.6.0",
+    "showcar-pictures": "^3.0.3",
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
-    "whatwg-fetch": "^1.0.0",
+    "whatwg-fetch": "^1.1.1",
     "zepto-browserify": "^1.0.0"
   }
 }

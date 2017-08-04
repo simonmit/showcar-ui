@@ -1,5 +1,6 @@
 const registerElement = element => {
     try {
+        let attached = [];
         document.registerElement(element.tagName, {
             prototype: Object.create(HTMLElement.prototype, {
                 createdCallback: {
@@ -9,7 +10,12 @@ const registerElement = element => {
                     value: element.attributeChangedCallback
                 },
                 attachedCallback: {
-                    value: element.attachedCallback
+                    value () {
+                        if (attached.indexOf(this) != - 1) return; // run as singleton. We need it for (p)react
+
+                        element.attachedCallback.bind(this)();
+                        attached.push(this);
+                    }
                 }
             })
         });

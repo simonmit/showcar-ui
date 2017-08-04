@@ -1,0 +1,70 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-search__wrapper {
+  text-align: center;
+  border-bottom: 1px solid $black-30;
+}
+
+.sc-search__options {
+  text-align: left;
+  padding-bottom: $L;
+}
+
+.sc-search__content {
+  background-color: $white;
+  padding: $XL $L;
+}
+
+.sc-search__link {
+  display: block;
+  padding: $L 0;
+
+  @include mqmin(510px) {
+    padding: 9px 0;
+    text-align: left;
+  }
+}
+
+.sc-search__wrapper .sc-input {
+  margin-bottom: $S;
+  width: 100%;
+
+  @include mqmin(510px) {
+    margin-bottom: 24px;
+    width: 49%;
+  }
+}
+
+.sc-search__filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// TODO: input styles are overwriting width
+.sc-search__wrapper input.sc-input {
+  @include mqmin(510px) {
+    width: 49% !important;
+  }
+}
+
+.sc-search__wrapper input.sc-input::placeholder {
+  color: $black-100;
+}
+
+.sc-search__content__actions {
+  width: 100%;
+
+  @include mqmin(510px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  & * {
+    @include mqmin(510px) {
+      width: 49%;
+    }
+  }
+}
