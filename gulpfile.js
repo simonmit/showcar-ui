@@ -130,8 +130,7 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma(
             }),
             project: 'Showcar-ui',
         },
-        browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'], //temporary remove safari
-        // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
+        browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
     }))
 );
 
@@ -143,5 +142,6 @@ gulp.task('test:travis', ['docs:serve'], scgulp.karma(
         // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
         // temporary removed iphones
         browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],
+        browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],  //temporary remove safari
     }))
 );
