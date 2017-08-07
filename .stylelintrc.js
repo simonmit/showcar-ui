@@ -8,7 +8,7 @@ module.exports = {
         "value-no-vendor-prefix": true,
         "property-no-vendor-prefix": true,
         "block-no-empty": true,
-        "selector-no-id": true,
+        "selector-max-id": 0,
         "rule-empty-line-before": ["always-multi-line", {
             "ignore": ["after-comment", "inside-block"]
         }],

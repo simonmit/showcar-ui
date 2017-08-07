@@ -85,3 +85,10 @@ textarea,
 select {
   position: relative;
 }
+
+// Remove extra whitespace produced by picture element
+picture {
+  img {
+    vertical-align: top;
+  }
+}
