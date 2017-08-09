@@ -8,7 +8,6 @@ bower_components
 atlassian-ide-plugin.xml
 .gitignore.swp
 tests/errorShots
-dist
 *.log
 public
 backstop_data
