@@ -362,14 +362,23 @@
         "html": "\"<a href=\\\"#link-link\\\" class=\\\"sc-inline-link\\\">Inline link</a>\\n\"",
         "codeExample": "\"&lt;a href=&quot;#link-link&quot; class=&quot;sc-inline-link&quot;&gt;Inline link&lt;/a&gt;\\n\""
     },
+    "list-decimal": {
+        "name": "list-decimal",
+        "type": "atoms",
+        "group": "list",
+        "srcDir": "src/06-components/atoms/list/docs",
+        "markDown": "\"<h2>List decimal<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
+        "html": "\"<ol class=\\\"sc-list sc-list--decimal\\\">\\n    <li>One</li>\\n    <li>Two</li>\\n    <li>Three</li>\\n</ol>\\n\"",
+        "codeExample": "\"&lt;ol class=&quot;sc-list sc-list--decimal&quot;&gt;\\n    &lt;li&gt;One&lt;/li&gt;\\n    &lt;li&gt;Two&lt;/li&gt;\\n    &lt;li&gt;Three&lt;/li&gt;\\n&lt;/ol&gt;\\n\""
+    },
     "list": {
         "name": "list",
         "type": "atoms",
         "group": "list",
         "srcDir": "src/06-components/atoms/list/docs",
         "markDown": "\"<h2>List<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
-        "html": "\"<ul class=\\\"sc-list sc-list--disc\\\">\\n    <li>One</li>\\n    <li>Two</li>\\n    <li>Three</li>\\n</ul>\"",
-        "codeExample": "\"&lt;ul class=&quot;sc-list sc-list--disc&quot;&gt;\\n    &lt;li&gt;One&lt;/li&gt;\\n    &lt;li&gt;Two&lt;/li&gt;\\n    &lt;li&gt;Three&lt;/li&gt;\\n&lt;/ul&gt;\""
+        "html": "\"<ul class=\\\"sc-list sc-list--disc\\\">\\n    <li>One</li>\\n    <li>Two</li>\\n    <li>Three</li>\\n</ul>\\n\"",
+        "codeExample": "\"&lt;ul class=&quot;sc-list sc-list--disc&quot;&gt;\\n    &lt;li&gt;One&lt;/li&gt;\\n    &lt;li&gt;Two&lt;/li&gt;\\n    &lt;li&gt;Three&lt;/li&gt;\\n&lt;/ul&gt;\\n\""
     },
     "rotating-arrow": {
         "name": "rotating-arrow",
