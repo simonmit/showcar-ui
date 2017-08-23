@@ -9,8 +9,6 @@ updateNotifier({
     updateCheckInterval: 1 //check each time
 }).notify({ defer: false, isGlobal: false });
 
-
-// gulp.task('js', ['set-dev'], scgulp.js({
 gulp.task('js', ['eslint'], scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
@@ -116,7 +114,6 @@ gulp.task('test:fast', ['docs:serve'], scgulp.karma(
         browsers: ['Chrome']
     }))
 );
-
 
 gulp.task('test:bs', ['docs:serve'], scgulp.karma(
     Object.assign({}, testingParams, {
