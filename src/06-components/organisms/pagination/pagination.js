@@ -8,7 +8,7 @@ class Pager {
      * @param {String} urlTemplate
      * @param {Boolean} unlimited
      */
-    constructor (root, itemsPerPage, activePage, totalItems, urlTemplate, unlimited) {
+    constructor (root, itemsPerPage, activePage, totalItems, urlTemplate, unlimited, cb) {
 
         this.ETC          = '...';
         this.rootElement  = $(root);
@@ -19,6 +19,7 @@ class Pager {
         this.unlimited = unlimited;
         this.maxPage      = this.calculatePageCount();
         this.tileWidth    = 48;
+        this.cb = cb;
 
         this.prototypeLi   = $('<li>');
         this.prototypeA    = $('<a>');
@@ -267,6 +268,7 @@ class Pager {
         }
 
         this.rootElement.append(this.nextButton);
+        this.cb(); // run callback, when everything is ready
     }
 
     /**
