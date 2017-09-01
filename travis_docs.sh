@@ -17,7 +17,7 @@ git config push.default simple
 
 #remove all files except all inside .git "shopt -s extglob" extends bash
 shopt -s extglob
-rm -rf ./!(.git*)
+rm -rf ./!(.git*|.|..)
 
 cp -r ../docs/* .
 mkdir -p docs/assets/
