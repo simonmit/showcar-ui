@@ -286,4 +286,5 @@ class Pager {
         return numberOfPages;
     }
 }
+
 export default Pager;
