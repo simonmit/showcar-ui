@@ -93,11 +93,13 @@ export default function (tagName) {
             lb.container.classList.remove('sc-lightbox__container--visible');
             lb.container.classList.remove('sc-temporary-visible'); //remove
             lb.parent.appendChild(lb.container);
-            lb.overlay.classList.remove('sc-fade-in'); //remove
-            lb.overlay.classList.remove('sc-lightbox--fadein');
-            setTimeout(() => {
-                lb.overlay.remove();
-            }, 250);
+            if(lb.overlay) {
+                lb.overlay.classList.remove('sc-fade-in'); //remove
+                lb.overlay.classList.remove('sc-lightbox--fadein');
+                setTimeout(() => {
+                    lb.overlay.remove();
+                }, 250);
+            }
         }
     };
 
