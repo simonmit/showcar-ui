@@ -11,15 +11,15 @@ custom-dropdown {
     }
 
     span {
-      padding-left: $XS;
+      padding-left: $S;
     }
   }
 
   div:last-child {
     span {
-      padding-left: $M;
+      padding-left: $S;
       vertical-align: middle;
-      margin-top: -12px;
+      margin-top: -$M;
       display: inline-block;
     }
   }
