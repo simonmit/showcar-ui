@@ -48,6 +48,5 @@ export default function registerSmoothScrolling() {
     $(document).on('click', '.sc-smooth-scroll, [data-smooth-scroll]', (e) => {
         e.preventDefault();
         smoothScroll(e.currentTarget);
-        return false;
     });
 }
