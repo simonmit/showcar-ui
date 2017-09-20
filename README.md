@@ -42,7 +42,6 @@ The showcar-ui library includes some libraries and polyfills:
 * Zepto (zepto-browserify v1.0.0) (http://zeptojs.com/)
 * lazysizes (https://github.com/aFarkas/lazysizes)
 
-
 ### Polyfills
 
 * document-register-element
@@ -50,8 +49,6 @@ The showcar-ui library includes some libraries and polyfills:
 * es6-collections
 * whatwg-fetch (fetch)
 * promiz (promises)
-
-
 
 ### showcar-storage
 
