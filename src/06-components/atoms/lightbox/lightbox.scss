@@ -9,10 +9,9 @@
 }
 
 .sc-lightbox-content {
+  max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 0 $XXL;
-  //ugly hack for IE11
-  -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
 .sc-lightbox-container {
@@ -132,14 +131,12 @@
 
 .sc-lightbox__container--visible {
   display: flex;
-  flex-direction: column;
 }
 
 .sc-lightbox__content {
+  max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 0 $XXL;
-  //ugly hack for IE11
-  -ms-flex-preferred-size: calc(100vh - 100px); /* stylelint-disable-line property-no-vendor-prefix */
 }
 
 .sc-lightbox__close {

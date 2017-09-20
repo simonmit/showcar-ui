@@ -33,8 +33,6 @@ export default function (tagName) {
             lb.closeOld.addEventListener('click', (e) => hide(lb, e), false);
         }
 
-
-
         // TODO: remove later
         const closeIcon = document.querySelector('.sc-lightbox-close as24-icon');
 
@@ -59,23 +57,27 @@ export default function (tagName) {
         if (lb.customIdentifier) {
             lb.overlay.setAttribute('data-custom', lb.customIdentifier);
         }
-        document.body.appendChild(lb.overlay);
 
-        if (lb.preventOutsideClose === null) {
-            lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
-        }
+        document.body.appendChild(lb.overlay);
 
         lb.overlay.classList.add('sc-temporary-visible'); //remove
         lb.overlay.classList.add('sc-lightbox__overlay--visible');
+
         lb.overlay.appendChild(lb.container);
+
+        lb.overlay.appendChild(lb.container);
+
         lb.container.classList.add('sc-temporary-visible'); //remove
         lb.container.classList.add('sc-lightbox__container--visible');
 
-        document.querySelector('html').classList.add('sc-unscroll');
+        if (lb.preventOutsideClose === null) {
+            lb.overlay.addEventListener('click', (e) => hide(lb, e), false);
+            document.addEventListener('keydown', e => {
+                if (e.keyCode === 27) hide(lb, e);
+            });
+        }
 
-        document.addEventListener('keydown', e => {
-            if (e.keyCode === 27) hide(lb, e);
-        });
+        document.querySelector('html').classList.add('sc-unscroll');
 
         setTimeout(() => {
             lb.overlay.classList.add('sc-fade-in'); //remove
