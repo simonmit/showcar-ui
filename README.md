@@ -30,6 +30,10 @@ The library provides some HTML content that needs to be inlined on your page. Us
 
 Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
+## How to test:
+
+You can check development state of the library on home, list and detail page with a parameter `?toguru=sc_develop%3dtrue`.
+
 ## Additional information
 
 The showcar-ui library includes some libraries and polyfills:
