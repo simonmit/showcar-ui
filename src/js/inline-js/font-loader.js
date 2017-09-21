@@ -31,7 +31,11 @@
                             obj.data = 'about:blank';
                             obj.onload = function() {
                                 this.contentDocument.defaultView.addEventListener('resize', onObjectSizeChange);
-                                onObjectSizeChange();
+                                try {
+                                    onObjectSizeChange();
+                                } catch(ex) {
+                                    loadStylesheetSync();
+                                }
                             };
 
                             div.style.fontFamily = family + ',' + testFamily;
