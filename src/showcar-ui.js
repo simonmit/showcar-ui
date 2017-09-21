@@ -1,5 +1,20 @@
 // Todo: remove Zepto
-if(!window.jQuery) window.$ = window.Zepto = require('zepto-modules');
+if(!window.jQuery){
+    window.$ = window.Zepto = require('zepto-modules/zepto');
+    require('zepto-modules/event');
+    require('zepto-modules/ajax');
+    require('zepto-modules/form');
+    require('zepto-modules/ie');
+    require('zepto-modules/detect');
+    require('zepto-modules/assets');
+    require('zepto-modules/data');
+    require('zepto-modules/callbacks');
+    require('zepto-modules/selector');
+    require('zepto-modules/touch');
+    require('zepto-modules/gesture');
+    require('zepto-modules/fx');
+    require('zepto-modules/fx_methods');
+}
 
 // Make sure these variables are initialized in case somebody uses them unintialized before they are loaded
 window.ut = window.ut || [];
