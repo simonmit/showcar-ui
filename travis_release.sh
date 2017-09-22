@@ -29,7 +29,7 @@ git add . -A
 
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
-	git commit -am "$(git log -1 --pretty=%B --oneline)"
+	git commit -am "$(git log -1 --pretty=%B)"
 	# npm version patch
 	git push origin $RELEASE_BRANCH --follow-tags
 fi
