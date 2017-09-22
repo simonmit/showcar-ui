@@ -15,8 +15,8 @@ USER_EMAIL="$(git log -1 --pretty=format:'%ae')"
 COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
 
 git clone -b $RELEASE_BRANCH --single-branch "git@github.com:AutoScout24/showcar-ui.git" .
-git config user.name $USER_NAME
-git config user.email $USER_EMAIL
+git config user.name "$USER_NAME"
+git config user.email "$USER_EMAIL"
 git config push.default simple
 
 #remove all files except .gitignore and all inside.git "shopt -s extglob" extends bash
@@ -33,7 +33,7 @@ git add . -A
 
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
-	git commit -am $COMMIT_MESSAGE
+	git commit -am "$COMMIT_MESSAGE"
 	# npm version patch
 	git push origin $RELEASE_BRANCH --follow-tags
 fi
