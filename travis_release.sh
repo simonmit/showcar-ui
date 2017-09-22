@@ -12,7 +12,7 @@ cd temp-release
 
 USER_NAME="$(git log -1 --pretty=format:'%an')"
 USER_EMAIL="$(git log -1 --pretty=format:'%ae')"
-COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
+COMMIT_MESSAGE="$(git log -1 --pretty=%B --oneline)"
 
 git clone -b $RELEASE_BRANCH --single-branch "git@github.com:AutoScout24/showcar-ui.git" .
 git config user.name "$USER_NAME"
