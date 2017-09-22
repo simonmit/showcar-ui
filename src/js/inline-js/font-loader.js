@@ -54,7 +54,7 @@
             try {
                 localStorage['font-loaded-' + family] = Date.now();
             } catch(ex) {
-                console.warn('');
+                console.warn('Cannot load font from localStorage.');
             }
         }
 
