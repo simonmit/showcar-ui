@@ -43,7 +43,7 @@ The showcar-ui library includes some libraries and polyfills:
 * showcar-storage (https://github.com/AutoScout24/showcar-storage)
 * showcar-icons (also available as standalone fragment) (https://github.com/AutoScout24/showcar-icons)
 * showcar-tracking (also available as standalone fragment) (https://github.com/AutoScout24/showcar-tracking)
-* Zepto (zepto-browserify v1.2.0) (http://zeptojs.com/)
+* Zepto (zepto-modules v1.0.1 uses Zepto v1.2.0) (https://www.npmjs.com/package/zepto-modules) (http://zeptojs.com/)
 * lazysizes (https://github.com/aFarkas/lazysizes)
 
 ### Polyfills
