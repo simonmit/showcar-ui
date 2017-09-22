@@ -17,6 +17,7 @@ before_install:
 branches:
   except:
     - release
+    - gh-pages
     - meta
 
 notifications:

@@ -2,6 +2,7 @@ import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
     function attachedCallback() {
+
         let lb = {
             parent: this.parentElement,
             container: this.querySelector('.sc-lightbox-container') /*remove*/ || this.querySelector('.sc-lightbox__container'),
