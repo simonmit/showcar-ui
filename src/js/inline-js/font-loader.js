@@ -31,11 +31,7 @@
                             obj.data = 'about:blank';
                             obj.onload = function() {
                                 this.contentDocument.defaultView.addEventListener('resize', onObjectSizeChange);
-                                try {
-                                    onObjectSizeChange();
-                                } catch(ex) {
-                                    loadStylesheetSync();
-                                }
+                                onObjectSizeChange();
                             };
 
                             div.style.fontFamily = family + ',' + testFamily;
@@ -55,7 +51,11 @@
         }
 
         function updateLocalStorage() {
-            localStorage['font-loaded-' + family] = Date.now();
+            try {
+                localStorage['font-loaded-' + family] = Date.now();
+            } catch(ex) {
+                console.warn('');
+            }
         }
 
         function loadStylesheetAsync(fn) {
