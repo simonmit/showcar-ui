@@ -12,6 +12,7 @@
   max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 0 $XXL;
+  flex: 1;
 }
 
 .sc-lightbox-container {
@@ -137,6 +138,7 @@
   max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 0 $XXL;
+  flex: 1;
 }
 
 .sc-lightbox__close {
