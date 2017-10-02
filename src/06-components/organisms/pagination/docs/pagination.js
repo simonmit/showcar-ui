@@ -4,7 +4,7 @@
     var paginationElement = document.querySelector('.sc-pagination'),
         itemsPerPage = 20,
         activePage = 1,
-        totalCount = 800,
+        totalCount = 700,
         urlTemplate = 'http://www.autoscout24.com/listWithPagination?page={page}&size={size}',
         unlimited = true;
 
