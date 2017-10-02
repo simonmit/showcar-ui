@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
    var paginationElement = document.querySelector('.sc-pagination'),
    itemsPerPage = 20,
    activePage = 1,
-   totalCount = 800,
+   totalCount = 700,
    urlTemplate = 'https://autoscout24.github.io/showcar-ui/?page={page}&size={size}',
    unlimited = true;
 
