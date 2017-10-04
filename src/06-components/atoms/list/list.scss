@@ -3,7 +3,12 @@
 }
 
 .sc-list li {
-  margin-left: 20px;
+  margin-left: $XL;
+  margin-bottom: $XS;
+  
+  &.last-child {
+    margin-bottom: 0;
+  }
 }
 
 .sc-list--disc {
