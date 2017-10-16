@@ -1,6 +1,6 @@
 <h2>Button<span class="status approved">Approved</span></h2>
 
-Usage:
+Usage information:
 
 * Bob: Primary button, should be used for all top level interactions.
 * Ross: Secondary button, should be used for less important interactions.
