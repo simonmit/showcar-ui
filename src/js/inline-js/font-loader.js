@@ -103,7 +103,9 @@
                     updateLocalStorage();
 
                     testDivs.forEach(function(div) {
-                        div.parentNode.removeChild(div);
+                        if(div && div.parentNode) {
+                            div.parentNode.removeChild(div);
+                        }
                     });
 
                     onObjectSizeChange = function() {}; // eslint-disable-line no-func-assign
