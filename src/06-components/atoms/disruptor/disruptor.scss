@@ -1,0 +1,15 @@
+@import '../../../01-settings/variables';
+
+.sc-disruptor {
+  display: inline-block;
+  vertical-align: middle;
+  padding: $XS $S;
+  margin: 2px 1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  color: $white;
+  font-size: $L;
+  background-color: $sc-disruptor-background-color;
+}
