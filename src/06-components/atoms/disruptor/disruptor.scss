@@ -1,0 +1,19 @@
+@import '../../../01-settings/variables';
+
+// move this to variable scss
+$sc-disruptor-background-color: $body-dark-sky-blue;
+//
+
+.sc-disruptor {
+  display: inline-block;
+  vertical-align: middle;
+  padding: $XS $S;
+  margin: 2px 1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  color: $white;
+  font-size: $L;
+  background-color: $sc-disruptor-background-color;
+}
