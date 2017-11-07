@@ -216,7 +216,9 @@
         "type": "atoms",
         "group": "disruptor",
         "srcDir": "src/06-components/atoms/disruptor/docs",
-        "markDown": "\"<p><h2>Disruptor<span class=\\\"status deprecated\\\">Not yet implemented</span></h2>\\nThis element is not yet implemented. It will look like this:</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/elements/molecule_disruptor.png\\\" alt=\\\"showcar-disruptor\\\" width=\\\"\\\"></p>\\n\""
+        "markDown": "\"<h2>Disruptor<span class=\\\"status review\\\">Needs review</span></h2>\"",
+        "html": "\"<span class=\\\"sc-disruptor\\\">NUE</span>\\n<span class=\\\"sc-disruptor\\\">Bereits über 20 Mio. Download!</span>\"",
+        "codeExample": "\"&lt;span class=&quot;sc-disruptor&quot;&gt;NUE&lt;/span&gt;\\n&lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Download!&lt;/span&gt;\""
     },
     "highlight": {
         "name": "highlight",
