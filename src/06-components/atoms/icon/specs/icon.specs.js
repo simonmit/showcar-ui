@@ -3,7 +3,7 @@ module.exports = (frame, assert) => {
         let icon;
 
         beforeEach(() => {
-            icon = frame.getAll('as24-icon')[0];
+            icon = frame.get('#icon-default as24-icon');
         });
 
         it('Icon is rendered', () => {
