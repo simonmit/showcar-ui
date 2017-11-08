@@ -25,10 +25,8 @@
   }
 
   &__content {
-    padding-right: $L;
-    padding-left: $L;
-    padding-bottom: $XXL;
-
+    padding-top: $M $L;
+    
     li {
       padding-bottom: $S;
     }
