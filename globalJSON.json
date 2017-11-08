@@ -328,6 +328,15 @@
         "html": "\"<textarea class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">...</textarea>\\n\"",
         "codeExample": "\"&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt;\\n\""
     },
+    "label": {
+        "name": "label",
+        "type": "atoms",
+        "group": "label",
+        "srcDir": "src/06-components/atoms/label/docs",
+        "markDown": "\"<h2>Labels with different inputs <span class=\\\"status refactor\\\">Needs review</span></h2>\\n\\n<p>Add <code>sc-input__label</code> class to label for consistent styling.</p>\\n\"",
+        "html": "\"<label class=\\\"sc-input__label\\\">Label for custom dropdown</label>\\n<custom-dropdown class=\\\"sc-input\\\" checkboxgroup>\\n    <div>\\n        <p>All</p>\\n    </div>\\n    <div>\\n        <input type=\\\"checkbox\\\" id=\\\"cd1-d\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd1-d\\\">Value1</label>\\n        <input type=\\\"checkbox\\\" id=\\\"cd2-d\\\" class=\\\"sc-input\\\">\\n        <label for=\\\"cd2-d\\\">Value2</label>\\n    </div>\\n</custom-dropdown>\\n\\n<label class=\\\"sc-input__label\\\">Label for default input</label>\\n<input type=\\\"text\\\" class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">\\n\\n<label class=\\\"sc-input__label\\\">Label for default dropdown</label>\\n<select class=\\\"sc-input\\\" placeholder=\\\"sc-input\\\">\\n    <option>...</option>\\n    <option>Value 1</option>\\n    <option>Value 2</option>\\n</select>\\n\\n<label class=\\\"sc-input__label\\\">Label for textarea</label>\\n<textarea class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">...</textarea> \\n\"",
+        "codeExample": "\"&lt;label class=&quot;sc-input__label&quot;&gt;Label for custom dropdown&lt;/label&gt;\\n&lt;custom-dropdown class=&quot;sc-input&quot; checkboxgroup&gt;\\n    &lt;div&gt;\\n        &lt;p&gt;All&lt;/p&gt;\\n    &lt;/div&gt;\\n    &lt;div&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd1-d&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd1-d&quot;&gt;Value1&lt;/label&gt;\\n        &lt;input type=&quot;checkbox&quot; id=&quot;cd2-d&quot; class=&quot;sc-input&quot;&gt;\\n        &lt;label for=&quot;cd2-d&quot;&gt;Value2&lt;/label&gt;\\n    &lt;/div&gt;\\n&lt;/custom-dropdown&gt;\\n\\n&lt;label class=&quot;sc-input__label&quot;&gt;Label for default input&lt;/label&gt;\\n&lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;\\n\\n&lt;label class=&quot;sc-input__label&quot;&gt;Label for default dropdown&lt;/label&gt;\\n&lt;select class=&quot;sc-input&quot; placeholder=&quot;sc-input&quot;&gt;\\n    &lt;option&gt;...&lt;/option&gt;\\n    &lt;option&gt;Value 1&lt;/option&gt;\\n    &lt;option&gt;Value 2&lt;/option&gt;\\n&lt;/select&gt;\\n\\n&lt;label class=&quot;sc-input__label&quot;&gt;Label for textarea&lt;/label&gt;\\n&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt; \\n\""
+    },
     "lazy-image": {
         "name": "lazy-image",
         "type": "atoms",
