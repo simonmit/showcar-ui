@@ -1,1 +1,1 @@
-<h2>Disruptor<span class="status review">Needs review</span></h2>
+<h2>Disruptor<span class="status approved">APPROVED</span></h2>
