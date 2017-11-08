@@ -1,0 +1,33 @@
+@import '../../../01-settings/variables';
+
+.sc-link-list {
+  a {
+    display: block;
+    position: relative;
+
+    span {
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-left: $XL;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      transform: rotate(270deg);
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiMwMDdjY2EiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PC9wYXRoPjwvc3ZnPg==") no-repeat left center;  /* stylelint-disable-line string-quotes */
+      width: $M;
+      height: $M;
+      left: 0;
+      top: 3px;
+    }
+  }
+
+  li {
+    margin-bottom: 24px;
+    line-height: 1.25rem;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-linked-catalog {
+  &__title {
+    padding: 0;
+    margin-bottom: $L;
+    font-size: 1.25rem;
+  }
+
+  &__label {
+    padding: 0 $L;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mqmin($viewportM) {
+      padding-right: 0;
+    }
+  }
+
+  &__content {
+    padding-right: $L;
+    padding-left: $L;
+    padding-bottom: $XXL;
+
+    li {
+      padding-bottom: $S;
+    }
+
+    @include mqmin($viewportM) {
+      padding: $M $L;
+    }
+  }
+}

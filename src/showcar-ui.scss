@@ -32,6 +32,8 @@
 @import '06-components/molecules/breadcrumb/breadcrumb';
 @import '06-components/molecules/expandable-box/expandable-box';
 @import '06-components/molecules/input-group/input-group';
+@import '06-components/molecules/link-with-icon/link-with-icon';
+@import '06-components/molecules/list-with-links/list-with-links';
 @import '06-components/molecules/notification/notification';
 @import '06-components/molecules/small-footer/small-footer';
 @import '06-components/molecules/small-header/small-header';
@@ -42,5 +44,6 @@
 @import '06-components/organisms/spy-navigation/spy-navigation';
 @import '06-components/organisms/card-group/card-group';
 @import '06-components/organisms/teaser-external/teaser-external';
+@import '06-components/organisms/linked-catalog/linked-catalog';
 
 @import '07-utilities/utils';
