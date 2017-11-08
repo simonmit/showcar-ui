@@ -6,8 +6,27 @@
   align-items: center;
 
   as24-icon {
+    fill: currentColor;
     width: 16px;
     margin-right: $S;
+  }
+
+  &[hover] {
+    as24-icon {
+      fill: currentColor;
+    }
+  }
+
+  &[active] {
+    as24-icon {
+      fill: currentColor;
+    }
+  }
+
+  &[disabled] {
+    as24-icon {
+      fill: currentColor;
+    }
   }
 }
 
@@ -17,68 +36,16 @@
 
 .sc-btn-with-icon--bob {
   @extend .sc-btn-bob;
-
-  as24-icon {
-    fill: $sc-btn-bob-text-color
-  }
 }
 
 .sc-btn-with-icon--ross {
   @extend .sc-btn-ross;
-  
-  as24-icon {
-    fill: $sc-btn-ross-text-color
-  }
 }
 
 .sc-btn-with-icon--ghost {
   @extend .sc-btn-ghost;
-
-  as24-icon {
-    fill: $sc-btn-ghost-text-color
-  }
-
-  &[hover] {
-    as24-icon {
-      fill: $sc-btn-ghost-hover-text-color
-    }
-  }
-
-  &[active] {
-    as24-icon {
-      fill: $sc-btn-ghost-active-text-color
-    }
-  }
-
-  &[disabled] {
-    as24-icon {
-      fill: $sc-btn-ghost-disabled-text-color
-    }
-  }
 }
 
 .sc-btn-with-icon--marketing {
   @extend .sc-btn-marketing;
-
-  as24-icon {
-    fill: $sc-btn-marketing-text-color
-  }
-
-  &[hover] {
-    as24-icon {
-      fill: $sc-btn-marketing-hover-text-color
-    }
-  }
-
-  &[active] {
-    as24-icon {
-      fill: $sc-btn-marketing-active-text-color
-    }
-  }
-
-  &[disabled] {
-    as24-icon {
-      fill: $sc-btn-marketing-disabled-text-color
-    }
-  }
 }
