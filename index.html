@@ -3796,6 +3796,23 @@ background-color: #f4f4f4;
 <hr></div><div id="linked-catalog-target" class="positon-anchor">
                 <div class="element" id="linked-catalog">
                     <div class="markdown"><h2>Linked catalog <span class="status refactor">Needs review</span></h2>
+
+<p>Column separation is up to teams, here is example how to do it:</p>
+<pre>
+    <code class="css">
+.sc-linked-catalog--example {
+  columns: 1;
+
+  @include mqmin($viewportM) {
+    columns: 3;
+  }
+
+  @include mqmin($viewportL) {
+    columns: 4;
+  }
+}
+    </code>
+</pre>
 </div>
                    <div class="sample"><div class="sc-linked-catalog">
     <div class="sc-expandable-box sc-expandable-box--adaptive">
