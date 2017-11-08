@@ -192,6 +192,14 @@
             <a href="/docs/molecules/input-group" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#link-with-icon-target">link-with-icon</a>
+            <a href="/docs/molecules/link-with-icon" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#list-with-links-target">list-with-links</a>
+            <a href="/docs/molecules/list-with-links" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#notification-target">notification</a>
             <a href="/docs/molecules/notification" class="open-separate"></a>
         </li>
@@ -217,6 +225,10 @@
                 <ul><li>
             <a data-scroll href="#card-group-target">card-group</a>
             <a href="/docs/organisms/card-group" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#linked-catalog-target">linked-catalog</a>
+            <a href="/docs/organisms/linked-catalog" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#navigation-target">navigation</a>
@@ -3087,6 +3099,127 @@ This element is not yet implemented. It will look like this:</p>
                  
                 </div>
             
+<hr></div><div id="link-with-icon-target" class="positon-anchor">
+                <div class="element" id="link-with-icon">
+                    <div class="markdown"><h2>Link with icon<span class="status refactor">Needs review</span></h2>
+
+<p>You can always place an icon inside of link element and style it accordingly.<br>Use <code>sc-link-with-icon</code> class for color styling. Position and size of icon is up to you, but you may take this as example:</p>
+<pre>
+    <code class="css">
+    .sc-link-with-icon--example {
+        margin-top: 0;
+        padding: $L;
+        text-align: right;
+
+        as24-icon {
+            width: $M;
+            height: $M;
+            margin-right: #S;
+        }
+    }
+    </code>
+</pre>
+
+<style>
+.sc-link-with-icon--example {
+    margin-top: 0;
+    padding: 16px;
+    text-align: right;
+}
+
+.sc-link-with-icon--example as24-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+</style>
+</div>
+                   <div class="sample"><a href="#" class="sc-link-with-icon sc-link-with-icon--example">
+    <as24-icon type="arrowTop"></as24-icon>
+    Nach Oben
+</a>
+<a href="#" class="sc-link-with-icon sc-link-with-icon--example">
+    <as24-icon type="delete"></as24-icon>
+    Delete
+</a>
+<a href="#" class="sc-link-with-icon sc-link-with-icon--example">
+    <as24-icon type="edit"></as24-icon>
+    Edit
+</a>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-link-with-icon" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-link-with-icon" class="hjs html">&lt;a href=&quot;#&quot; class=&quot;sc-link-with-icon sc-link-with-icon--example&quot;&gt;
+    &lt;as24-icon type=&quot;arrowTop&quot;&gt;&lt;/as24-icon&gt;
+    Nach Oben
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;sc-link-with-icon sc-link-with-icon--example&quot;&gt;
+    &lt;as24-icon type=&quot;delete&quot;&gt;&lt;/as24-icon&gt;
+    Delete
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;sc-link-with-icon sc-link-with-icon--example&quot;&gt;
+    &lt;as24-icon type=&quot;edit&quot;&gt;&lt;/as24-icon&gt;
+    Edit
+&lt;/a&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="list-with-links-target" class="positon-anchor">
+                <div class="element" id="list-with-links">
+                    <div class="markdown"><h2>List with links<span class="status refactor">Needs review</span></h2>
+
+<p>Showcar-ui library delivers styles for links display and arrow on the left. All column positioning is up to the team who is implementing it.  </p>
+<p>Responsive columns width could be achieved with flexbox or with <code>sc-grid-col-*</code> styling.</p>
+<pre><code class="lang-html">&lt;div class=&quot;sc-grid-row&quot;&gt;
+    &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/porsche/&quot;&gt;&lt;span&gt;Porsche&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6 sc-hidden-s&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/renault/&quot;&gt;&lt;span&gt;Renault&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/skoda/&quot;&gt;&lt;span&gt;Skoda&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/tesla/&quot;&gt;&lt;span&gt;Tesla&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+                   <div class="sample"><ul class="sc-link-list">
+    <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
+    <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
+    <li><a href="https://www.autoscout24.de/auto/ford/"><span>Ford</span></a></li>
+</ul>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-list-with-links" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-list-with-links" class="hjs html">&lt;ul class=&quot;sc-link-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/ford/&quot;&gt;&lt;span&gt;Ford&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="notification-target" class="positon-anchor">
                 <div class="element" id="_notification">
                     <div class="markdown"><h2>Notifications<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
@@ -3576,6 +3709,217 @@ background-color: #f4f4f4;
     &lt;label class=&quot;sc-cards__show&quot; for=&quot;cards-expand-1&quot;&gt;
         &lt;span&gt; Mehr anzeigen &lt;/span&gt;
     &lt;/label&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="linked-catalog-target" class="positon-anchor">
+                <div class="element" id="linked-catalog">
+                    <div class="markdown"><h2>Linked catalog <span class="status refactor">Needs review</span></h2>
+</div>
+                   <div class="sample"><div class="sc-linked-catalog">
+    <div class="sc-expandable-box sc-expandable-box--adaptive">
+        <input id="box1" type="checkbox" class="sc-expandable-box__toggle">
+        <p class="sc-linked-catalog__title sc-expandable-box__title">
+            <label for="box1" class="sc-expandable-box__label sc-linked-catalog__label">Modelle</label>
+        </p>
+        <div class="sc-expandable-box__content sc-linked-catalog__content">
+            <ul>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-100/" title="Audi 100">Audi 100</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-200/" title="Audi 200">Audi 200</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-50/" title="Audi 50">Audi 50</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-80/" title="Audi 80">Audi 80</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-90/" title="Audi 90">Audi 90</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sc-expandable-box sc-expandable-box--adaptive">
+        <input id="box2" type="checkbox" class="sc-expandable-box__toggle">
+        <p class="sc-linked-catalog__title sc-expandable-box__title">
+            <label for="box2" class="sc-expandable-box__label sc-linked-catalog__label">Fahrzeugtyp</label>
+        </p>
+        <div class="sc-expandable-box__content sc-linked-catalog__content">
+            <ul>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-cabriolet/" title="Audi Cabriolet">Audi Cabriolet</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/gelaendewagen/" title="Audi Geländewagen">Audi Geländewagen</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/kleinwagen/" title="Audi Kleinwagen">Audi Kleinwagen</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/kombi/" title="Audi Kombi">Audi Kombi</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/limousine/" title="Audi Limousine">Audi Limousine</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/minivan/" title="Audi Minivan">Audi Minivan</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/roadster/" title="Audi Roadster">Audi Roadster</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/suv/" title="Audi SUV">Audi SUV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sc-expandable-box sc-expandable-box--adaptive">
+        <input id="box3" type="checkbox" class="sc-expandable-box__toggle">
+        <p class="sc-linked-catalog__title sc-expandable-box__title">
+            <label for="box3" class="sc-expandable-box__label sc-linked-catalog__label">Fahrzeugkategorie</label>
+        </p>
+        <div class="sc-expandable-box__content sc-linked-catalog__content">
+            <ul>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/jahreswagen/" title="Audi Jahreswagen">Audi Jahreswagen</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/oldtimer/" title="Audi Oldtimer">Audi Oldtimer</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/unfallwagen/" title="Audi Unfallwagen">Audi Unfallwagen</a>
+                </li>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/vorfuehrwagen/" title="Audi Vorführwagen">Audi Vorführwagen</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sc-expandable-box sc-expandable-box--adaptive">
+        <input id="box4" type="checkbox" class="sc-expandable-box__toggle">
+        <p class="sc-linked-catalog__title sc-expandable-box__title">
+            <label for="box4" class="sc-expandable-box__label sc-linked-catalog__label">Kraftstoff</label>
+        </p>
+        <div class="sc-expandable-box__content sc-linked-catalog__content">
+            <ul>
+                <li>
+                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/hybrid/" title="Audi Hybrid">Audi Hybrid</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-linked-catalog" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-linked-catalog" class="hjs html">&lt;div class=&quot;sc-linked-catalog&quot;&gt;
+    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
+        &lt;input id=&quot;box1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
+            &lt;label for=&quot;box1&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Modelle&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-100/&quot; title=&quot;Audi 100&quot;&gt;Audi 100&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-200/&quot; title=&quot;Audi 200&quot;&gt;Audi 200&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-50/&quot; title=&quot;Audi 50&quot;&gt;Audi 50&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-80/&quot; title=&quot;Audi 80&quot;&gt;Audi 80&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-90/&quot; title=&quot;Audi 90&quot;&gt;Audi 90&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
+        &lt;input id=&quot;box2&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
+            &lt;label for=&quot;box2&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Fahrzeugtyp&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-cabriolet/&quot; title=&quot;Audi Cabriolet&quot;&gt;Audi Cabriolet&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/gelaendewagen/&quot; title=&quot;Audi Gel&auml;ndewagen&quot;&gt;Audi Gel&auml;ndewagen&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/kleinwagen/&quot; title=&quot;Audi Kleinwagen&quot;&gt;Audi Kleinwagen&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/kombi/&quot; title=&quot;Audi Kombi&quot;&gt;Audi Kombi&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/limousine/&quot; title=&quot;Audi Limousine&quot;&gt;Audi Limousine&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/minivan/&quot; title=&quot;Audi Minivan&quot;&gt;Audi Minivan&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/roadster/&quot; title=&quot;Audi Roadster&quot;&gt;Audi Roadster&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/suv/&quot; title=&quot;Audi SUV&quot;&gt;Audi SUV&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
+        &lt;input id=&quot;box3&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
+            &lt;label for=&quot;box3&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Fahrzeugkategorie&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/jahreswagen/&quot; title=&quot;Audi Jahreswagen&quot;&gt;Audi Jahreswagen&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/oldtimer/&quot; title=&quot;Audi Oldtimer&quot;&gt;Audi Oldtimer&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/unfallwagen/&quot; title=&quot;Audi Unfallwagen&quot;&gt;Audi Unfallwagen&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/vorfuehrwagen/&quot; title=&quot;Audi Vorf&uuml;hrwagen&quot;&gt;Audi Vorf&uuml;hrwagen&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
+        &lt;input id=&quot;box4&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
+        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
+            &lt;label for=&quot;box4&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Kraftstoff&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/hybrid/&quot; title=&quot;Audi Hybrid&quot;&gt;Audi Hybrid&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 </code>
                             </pre>
