@@ -1,6 +1,6 @@
-<h2>Linked catalog <span class="status refactor">Needs review</span></h2>
+<h2>Linked catalog <span class="status approved">Approved</span></h2>
 
-Column separation is up to teams, here is example how to do it:
+Column separation is up to teams, here is an example how to do it:
 
 <pre>
     <code class="css">
