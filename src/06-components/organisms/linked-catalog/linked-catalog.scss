@@ -25,14 +25,15 @@
   }
 
   &__content {
-    padding-top: $M $L;
+    padding: $M $L;
     
     li {
       padding-bottom: $S;
     }
 
     @include mqmin($viewportM) {
-      padding: $M $L;
+      padding-top: 0;
+      padding-bottom: $XXL;
     }
   }
 }
