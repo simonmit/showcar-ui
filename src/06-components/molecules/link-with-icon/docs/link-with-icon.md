@@ -11,9 +11,9 @@ Use `sc-link-with-icon` class for color styling. Position and size of icon is up
         text-align: right;
 
         as24-icon {
-            width: $M;
-            height: $M;
-            margin-right: #S;
+            width: $L;
+            height: $L;
+            margin-right: #XS;
         }
     }
     </code>
@@ -27,8 +27,8 @@ Use `sc-link-with-icon` class for color styling. Position and size of icon is up
 }
 
 .sc-link-with-icon--example as24-icon {
-    width: 12px;
-    height: 12px;
-    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
 }
 </style>
