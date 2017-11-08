@@ -216,7 +216,7 @@
         "type": "atoms",
         "group": "disruptor",
         "srcDir": "src/06-components/atoms/disruptor/docs",
-        "markDown": "\"<h2>Disruptor<span class=\\\"status review\\\">Needs review</span></h2>\"",
+        "markDown": "\"<h2>Disruptor<span class=\\\"status approved\\\">APPROVED</span></h2>\"",
         "html": "\"<span class=\\\"sc-disruptor sc-font-uppercase\\\">Neu</span>\\n<span class=\\\"sc-disruptor\\\">Bereits über 20 Mio. Download!</span>\\n\"",
         "codeExample": "\"&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;\\n&lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Download!&lt;/span&gt;\\n\""
     },
