@@ -1,4 +1,4 @@
-<h2>List with links<span class="status refactor">Needs review</span></h2>
+<h2>List with links<span class="status approved">Approved</span></h2>
 
 Showcar-ui library delivers styles for links display and arrow on the left. All column positioning is up to the team who is implementing it.  
 
