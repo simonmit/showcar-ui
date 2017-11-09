@@ -225,9 +225,9 @@
         "type": "atoms",
         "group": "google-map",
         "srcDir": "src/06-components/atoms/google-map/docs",
-        "markDown": "\"<h2>Google Map<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>data-public</code> - your google public API key<br><code>data-address</code> - address of location  </p>\\n\"",
-        "html": "\"<as24-google-map\\n    class=\\\"sc-google-maps\\\"\\n    data-public=\\\"AIzaSyDd4AVj3YNiUTS0Eh8m_MXBYCgGimmGF5A\\\"\\n    data-address=\\\"Dingolfinger Str. 1-15 81673 München\\\"\\n></as24-google-map>\\n\"",
-        "codeExample": "\"&lt;as24-google-map\\n    class=&quot;sc-google-maps&quot;\\n    data-public=&quot;AIzaSyDd4AVj3YNiUTS0Eh8m_MXBYCgGimmGF5A&quot;\\n    data-address=&quot;Dingolfinger Str. 1-15 81673 M&uuml;nchen&quot;\\n&gt;&lt;/as24-google-map&gt;\\n\""
+        "markDown": "\"<h2>Google Map<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>data-public</code> - your google public API key<br><code>data-address</code> - address of location<br>You also have to provide height to make map interactive</p>\\n<pre><code class=\\\"lang-css\\\">.sc-google-maps--example {\\n    height: 300px;\\n}\\n</code></pre>\\n<style>\\n#google-map .sc-google-maps {\\n    height: 300px;\\n}\\n</style>\\n\"",
+        "html": "\"<as24-google-map\\n    class=\\\"sc-google-maps\\\"\\n    apikey=\\\"AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8\\\"\\n    query=\\\"Dingolfinger Str. 1-15 81673 München\\\"\\n></as24-google-map>\\n\"",
+        "codeExample": "\"&lt;as24-google-map\\n    class=&quot;sc-google-maps&quot;\\n    apikey=&quot;AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8&quot;\\n    query=&quot;Dingolfinger Str. 1-15 81673 M&uuml;nchen&quot;\\n&gt;&lt;/as24-google-map&gt;\\n\""
     },
     "headline": {
         "name": "headline",

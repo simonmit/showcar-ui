@@ -1874,12 +1874,21 @@ margin-bottom:15px;
                 <div class="element" id="google-map">
                     <div class="markdown"><h2>Google Map<span class="status review">Needs review</span></h2>
 
-<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>data-public</code> - your google public API key<br><code>data-address</code> - address of location  </p>
+<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>data-public</code> - your google public API key<br><code>data-address</code> - address of location<br>You also have to provide height to make map interactive</p>
+<pre><code class="lang-css">.sc-google-maps--example {
+    height: 300px;
+}
+</code></pre>
+<style>
+#google-map .sc-google-maps {
+    height: 300px;
+}
+</style>
 </div>
                    <div class="sample"><as24-google-map
     class="sc-google-maps"
-    data-public="AIzaSyDd4AVj3YNiUTS0Eh8m_MXBYCgGimmGF5A"
-    data-address="Dingolfinger Str. 1-15 81673 München"
+    apikey="AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8"
+    query="Dingolfinger Str. 1-15 81673 München"
 ></as24-google-map>
 </div> 
                     <div class="code-sample">
@@ -1890,8 +1899,8 @@ margin-bottom:15px;
                             <pre>
                                 <code id="copy_code-code-google-map" class="hjs html">&lt;as24-google-map
     class=&quot;sc-google-maps&quot;
-    data-public=&quot;AIzaSyDd4AVj3YNiUTS0Eh8m_MXBYCgGimmGF5A&quot;
-    data-address=&quot;Dingolfinger Str. 1-15 81673 M&uuml;nchen&quot;
+    apikey=&quot;AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8&quot;
+    query=&quot;Dingolfinger Str. 1-15 81673 M&uuml;nchen&quot;
 &gt;&lt;/as24-google-map&gt;
 </code>
                             </pre>
