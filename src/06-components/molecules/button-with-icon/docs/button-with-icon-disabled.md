@@ -1,1 +1,1 @@
-<h2>Button disabled<span class="status review">Needs review</span></h2>
+<h2>Button with icon disabled<span class="status review">Needs review</span></h2>
