@@ -1,0 +1,51 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/fonts';
+
+.sc-btn-with-icon {
+  display: flex;
+  align-items: center;
+
+  as24-icon {
+    fill: currentColor;
+    width: 16px;
+    margin-right: $S;
+  }
+
+  &[hover] {
+    as24-icon {
+      fill: currentColor;
+    }
+  }
+
+  &[active] {
+    as24-icon {
+      fill: currentColor;
+    }
+  }
+
+  &[disabled] {
+    as24-icon {
+      fill: currentColor;
+    }
+  }
+}
+
+.sc-btn-with-icon--block {
+  @extend .sc-btn-block;
+}
+
+.sc-btn-with-icon--bob {
+  @extend .sc-btn-bob;
+}
+
+.sc-btn-with-icon--ross {
+  @extend .sc-btn-ross;
+}
+
+.sc-btn-with-icon--ghost {
+  @extend .sc-btn-ghost;
+}
+
+.sc-btn-with-icon--marketing {
+  @extend .sc-btn-marketing;
+}

@@ -1,6 +1,33 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/fonts';
 
+// variables
+// ----------------------------
+$sc-btn-bob-text-color: $white;
+$sc-btn-ross-text-color: $white;
+$sc-btn-ghost-text-color: $orange-100;
+$sc-btn-marketing-text-color: $blue-80;
+
+$sc-btn-bob-background-color: $orange-100;
+$sc-btn-ross-background-color: $blue-80;
+$sc-btn-ghost-background-color: transparent;
+$sc-btn-marketing-background-color: $white;
+
+$sc-btn-bob-hover-background-color: $orange-120;
+$sc-btn-ross-hover-background-color: $blue-90;
+$sc-btn-ghost-hover-text-color: $orange-120;
+$sc-btn-marketing-hover-text-color: $blue-90;
+
+$sc-btn-bob-active-background-color: $orange-130;
+$sc-btn-ross-active-background-color: $blue-100;
+$sc-btn-ghost-active-text-color: $orange-130;
+$sc-btn-marketing-active-text-color: $blue-100;
+
+$sc-btn-bob-disabled-background-color: $orange-50;
+$sc-btn-ross-disabled-background-color: $blue-40;
+$sc-btn-ghost-disabled-text-color: $orange-50;
+$sc-btn-marketing-disabled-text-color: $blue-40;
+
 @mixin button {
   // max-width: 288px;
   user-select: none;
@@ -18,10 +45,6 @@
   text-decoration: none;
   text-align: center;
 
-  &:hover {
-    color: #fff;
-  }
-
   [class^='icon-'] {
     width: $L;
     height: $L;
@@ -34,85 +57,85 @@
 .sc-btn-bob {
   @include button;
 
-  background-color: $orange-100;
+  background-color: $sc-btn-bob-background-color;
 
   &:hover {
-    background-color: $orange-120;
+    background-color: $sc-btn-bob-hover-background-color;
   }
 
   &:active {
-    background-color: $orange-130;
+    background-color: $sc-btn-bob-active-background-color;
   }
 
   &[disabled] {
-    background-color: $orange-50;
+    background-color: $sc-btn-bob-disabled-background-color;
   }
 }
 
 .sc-btn-ross {
   @include button;
 
-  background-color: $blue-80;
+  background-color: $sc-btn-ross-background-color;
 
   &:hover {
-    background-color: $blue-90;
+    background-color: $sc-btn-ross-hover-background-color;
   }
 
   &:active {
-    background-color: $blue-100;
+    background-color: $sc-btn-ross-active-background-color;
   }
 
   &[disabled] {
-    background-color: $blue-40;
+    background-color: $sc-btn-ross-disabled-background-color;
   }
 }
 
 .sc-btn-ghost {
   @include button;
 
-  background-color: transparent;
-  border: solid $orange-100 1px;
-  color: $orange-100;
+  background-color: $sc-btn-ghost-background-color;
+  border: solid $sc-btn-ghost-text-color 1px;
+  color: $sc-btn-ghost-text-color;
 
   padding-top: 9px;
   padding-bottom: 9px;
 
   &:hover {
-    border: solid $orange-120 1px;
-    color: $orange-120;
+    border: solid $sc-btn-ghost-hover-text-color 1px;
+    color: $sc-btn-ghost-hover-text-color;
   }
 
   &:active {
-    border: solid $orange-130 1px;
-    color: $orange-130;
+    border: solid $sc-btn-ghost-active-text-color 1px;
+    color: $sc-btn-ghost-active-text-color;
   }
 
   &[disabled] {
-    border: solid $orange-50 1px;
-    color: $orange-50;
+    border: solid $sc-btn-ghost-disabled-text-color 1px;
+    color: $sc-btn-ghost-disabled-text-color;
   }
 }
 
 .sc-btn-marketing {
   @include button;
 
-  background-color: $white;
+  background-color: $sc-btn-marketing-background-color;
   border: solid $white 1px;
-  color: $blue-80;
+  color: $sc-btn-marketing-text-color;
 
   padding-top: 9px;
   padding-bottom: 9px;
 
   &:hover {
-    color: $blue-90;
+    color: $sc-btn-marketing-hover-text-color;
   }
 
   &:active {
-    color: $blue-100;
+    color: $sc-btn-marketing-active-text-color;
   }
 
   &[disabled] {
-    color: $blue-40;
+    color: $sc-btn-marketing-disabled-text-color;
   }
 }
 
