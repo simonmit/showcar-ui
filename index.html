@@ -117,6 +117,10 @@
             <a href="/docs/atoms/highlight" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#icon-target">icon</a>
+            <a href="/docs/atoms/icon" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#inlined-info-target">inlined-info</a>
             <a href="/docs/atoms/inlined-info" class="open-separate"></a>
         </li>
@@ -1877,6 +1881,28 @@ margin-bottom:15px;
                  
                 </div>
             
+<hr></div><div id="icon-target" class="positon-anchor">
+                <div class="element" id="icon-default">
+                    <div class="markdown"><h2>Icon<span class="status review">Needs Review</span></h2>
+
+<p>Usage information:</p>
+<p>You can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[icon-name]&quot;&gt;&lt;/as24-icon&gt;</code>. To see all available [icon-name]&#39;s, please visit icons section under extra-packages.</p>
+</div>
+                   <div class="sample"><as24-icon type="android"></as24-icon></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-icon-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-icon-default" class="hjs html">&lt;as24-icon type=&quot;android&quot;&gt;&lt;/as24-icon&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="inlined-info-target" class="positon-anchor">
                 <div class="element" id="inlined-info">
                     <div class="markdown"><h2>Inlined info<span class="status approved">Approved</span></h2>
@@ -3027,12 +3053,77 @@ This element is not yet implemented. It will look like this:</p>
                 </div>
             
 <hr></div><div id="button-with-icon-target" class="positon-anchor">
-                <div class="element" id="button-with-icon">
-                    <div class="markdown"><p><h2>Button with icon<span class="status deprecated">Not yet implemented</span></h2>
-This element is not yet implemented. It will look like this:</p>
-<p><img src="/showcar-ui/docs/assets/images/elements/molecule_button-icon.png" alt="showcar-table" width=""></p>
+                <div class="element" id="button-with-icon-default">
+                    <div class="markdown"><h2>Button with Icon<span class="status review">Needs Review</span></h2>
+
+<p>Usage information:</p>
+<p>This component can be used where an icon is needed insite a button. Currently, the placement of icon is on the left side w.r.t button text. This component supports all modifiers that exists in atom button.</p>
 </div>
-                     
+                   <div class="sample"><button class="sc-btn-with-icon sc-btn-with-icon--bob"><as24-icon type="attention"></as24-icon>I am Bob!</button>
+<button class="sc-btn-with-icon sc-btn-with-icon--ross"><as24-icon type="attention"></as24-icon>I am Ross!</button>
+<button class="sc-btn-with-icon sc-btn-with-icon--ghost"><as24-icon type="attention"></as24-icon>I am Ghost!</button>
+<button class="sc-btn-with-icon sc-btn-with-icon--marketing"><as24-icon type="attention"></as24-icon>I am Marketing!</button></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-button-with-icon-default" class="hjs html">&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;
+&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="button-with-icon-disabled">
+                    <div class="markdown"><h2>Button with icon disabled<span class="status review">Needs review</span></h2>
+</div>
+                   <div class="sample"><button disabled class="sc-btn-with-icon sc-btn-with-icon--bob"><as24-icon type="attention"></as24-icon>I am Bob!</button>
+<button disabled class="sc-btn-with-icon sc-btn-with-icon--ross"><as24-icon type="attention"></as24-icon>I am Ross!</button>
+<button disabled class="sc-btn-with-icon sc-btn-with-icon--ghost"><as24-icon type="attention"></as24-icon>I am Ghost!</button>
+<button disabled class="sc-btn-with-icon sc-btn-with-icon--marketing"><as24-icon type="attention"></as24-icon>I am Marketing!</button>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-disabled" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-button-with-icon-disabled" class="hjs html">&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;
+&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;
+&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;
+&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="button-with-icon-full-width">
+                    <div class="markdown"><h2>Button with icon fullwidth<span class="status review">Needs Review</span></h2>
+</div>
+                   <div class="sample"><button class="sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block"><as24-icon type="attention"></as24-icon>I am Bob!</button></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-full-width" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-button-with-icon-full-width" class="hjs html">&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
                 </div>
             
 <hr></div><div id="expandable-box-target" class="positon-anchor">
