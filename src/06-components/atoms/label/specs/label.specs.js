@@ -3,11 +3,10 @@ module.exports = (frame, assert) => {
         let buttons;
 
         beforeEach(() => {
-            labels = frame.getAll('#label .sc-input__label');
-            inputs = frame.getAll('#label .sc-input__label + .sc-input');
+            labels = frame.getAll('#label .sc-label');
+            inputs = frame.getAll('#label .sc-label + .sc-input');
             assert(labels.length() > 0, 'we have no labels on the page');
             assert(inputs.length() > 0, 'we have no inputs on the page');
-            console.log('length', inputs.length());
         });
 
         it('Labels position is correct', () => {

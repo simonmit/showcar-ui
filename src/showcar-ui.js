@@ -69,6 +69,10 @@ tooltip2('as24-tooltip');
 import lightbox from './06-components/atoms/lightbox/lightbox';
 lightbox('as24-lightbox');
 
+// google-map
+import googleMap from './06-components/atoms/google-map/google-map';
+googleMap('as24-googleMap');
+
 // tag
 import tag from './06-components/atoms/tag/tag';
 tag();
