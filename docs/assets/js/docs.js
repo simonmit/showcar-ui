@@ -65,6 +65,8 @@ window.addEventListener('load', function () {
             } else {
                 smoothScroll.animateScroll(target, el, { speed: 500, easing: 'easeInSine', offset: - 1 });
             }
+
+            window.location.hash = el.getAttribute('href');
         });
     });
 
