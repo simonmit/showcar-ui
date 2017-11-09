@@ -603,3 +603,11 @@ code {
 #separate-content{
     margin-bottom: 100px;
 }
+#button-with-icon-target .sample {
+    display: flex;
+    background: #eee;
+}
+
+#button-with-icon-target .sample button {
+    margin-right: 5px;
+}
