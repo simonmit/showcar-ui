@@ -220,6 +220,15 @@
         "html": "\"<span class=\\\"sc-disruptor sc-font-uppercase\\\">Neu</span>\\n<span class=\\\"sc-disruptor\\\">Bereits über 20 Mio. Downloads!</span>\\n\"",
         "codeExample": "\"&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;\\n&lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Downloads!&lt;/span&gt;\\n\""
     },
+    "headline": {
+        "name": "headline",
+        "type": "atoms",
+        "group": "headline",
+        "srcDir": "src/06-components/atoms/headline/docs",
+        "markDown": "\"<h2>Headline<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
+        "html": "\"<h1 class=\\\"sc-font-xl\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\"",
+        "codeExample": "\"&lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\""
+    },
     "highlight": {
         "name": "highlight",
         "type": "atoms",
@@ -228,15 +237,6 @@
         "markDown": "\"<h2>Highlight<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
         "html": "\"<span class=\\\"sc-highlight sc-font-s\\\">Nebelscheinwerfer</span>\\n<span class=\\\"sc-highlight sc-font-s\\\">Panoramadach</span>\\n<span class=\\\"sc-highlight sc-font-s\\\">Xenonscheinwerfer</span>\"",
         "codeExample": "\"&lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Nebelscheinwerfer&lt;/span&gt;\\n&lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Panoramadach&lt;/span&gt;\\n&lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Xenonscheinwerfer&lt;/span&gt;\""
-    },
-    "icon-default": {
-        "name": "icon-default",
-        "type": "atoms",
-        "group": "icon",
-        "srcDir": "src/06-components/atoms/icon/docs",
-        "markDown": "\"<h2>Icon<span class=\\\"status review\\\">Needs Review</span></h2>\\n\\n<p>Usage information:</p>\\n<p>You can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[icon-name]&quot;&gt;&lt;/as24-icon&gt;</code>. To see all available [icon-name]&#39;s, please visit icons section under extra-packages.</p>\\n\"",
-        "html": "\"<as24-icon type=\\\"android\\\"></as24-icon>\"",
-        "codeExample": "\"&lt;as24-icon type=&quot;android&quot;&gt;&lt;/as24-icon&gt;\""
     },
     "inlined-info": {
         "name": "inlined-info",
@@ -497,32 +497,12 @@
         "html": "\"<ul class=\\\"sc-breadcrumbs\\\">\\n    <li><a href=\\\"#/url/to/home\\\" data-breadcrumb=\\\"home\\\">Home page</a></li>\\n    <li><a href=\\\"#/url/to/list\\\" data-breadcrumb=\\\"list\\\">List results</a></li>\\n    <li><a href=\\\"#/url/to/detail\\\" data-breadcrumb=\\\"detail\\\">Detail</a></li>\\n</ul>\\n\"",
         "codeExample": "\"&lt;ul class=&quot;sc-breadcrumbs&quot;&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;\\n    &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;\\n&lt;/ul&gt;\\n\""
     },
-    "button-with-icon-default": {
-        "name": "button-with-icon-default",
+    "button-with-icon": {
+        "name": "button-with-icon",
         "type": "molecules",
         "group": "button-with-icon",
         "srcDir": "src/06-components/molecules/button-with-icon/docs",
-        "markDown": "\"<h2>Button with Icon<span class=\\\"status review\\\">Needs Review</span></h2>\\n\\n<p>Usage information:</p>\\n<p>This component can be used where an icon is needed insite a button. Currently, the placement of icon is on the left side w.r.t button text. This component supports all modifiers that exists in atom button.</p>\\n\"",
-        "html": "\"<button class=\\\"sc-btn-with-icon sc-btn-with-icon--bob\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Bob!</button>\\n<button class=\\\"sc-btn-with-icon sc-btn-with-icon--ross\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Ross!</button>\\n<button class=\\\"sc-btn-with-icon sc-btn-with-icon--ghost\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Ghost!</button>\\n<button class=\\\"sc-btn-with-icon sc-btn-with-icon--marketing\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Marketing!</button>\"",
-        "codeExample": "\"&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;\\n&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;\""
-    },
-    "button-with-icon-disabled": {
-        "name": "button-with-icon-disabled",
-        "type": "molecules",
-        "group": "button-with-icon",
-        "srcDir": "src/06-components/molecules/button-with-icon/docs",
-        "markDown": "\"<h2>Button with icon disabled<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
-        "html": "\"<button disabled class=\\\"sc-btn-with-icon sc-btn-with-icon--bob\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Bob!</button>\\n<button disabled class=\\\"sc-btn-with-icon sc-btn-with-icon--ross\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Ross!</button>\\n<button disabled class=\\\"sc-btn-with-icon sc-btn-with-icon--ghost\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Ghost!</button>\\n<button disabled class=\\\"sc-btn-with-icon sc-btn-with-icon--marketing\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Marketing!</button>\\n\"",
-        "codeExample": "\"&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;\\n&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;\\n&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;\\n&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;\\n\""
-    },
-    "button-with-icon-full-width": {
-        "name": "button-with-icon-full-width",
-        "type": "molecules",
-        "group": "button-with-icon",
-        "srcDir": "src/06-components/molecules/button-with-icon/docs",
-        "markDown": "\"<h2>Button with icon fullwidth<span class=\\\"status review\\\">Needs Review</span></h2>\\n\"",
-        "html": "\"<button class=\\\"sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block\\\"><as24-icon type=\\\"attention\\\"></as24-icon>I am Bob!</button>\"",
-        "codeExample": "\"&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;\""
+        "markDown": "\"<p><h2>Button with icon<span class=\\\"status deprecated\\\">Not yet implemented</span></h2>\\nThis element is not yet implemented. It will look like this:</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/elements/molecule_button-icon.png\\\" alt=\\\"showcar-table\\\" width=\\\"\\\"></p>\\n\""
     },
     "expandable-box-adaptive": {
         "name": "expandable-box-adaptive",
@@ -541,6 +521,15 @@
         "markDown": "\"<h2>Expandable box<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<p>Normal version of expandable box is opened by click on all devices.</p>\\n\"",
         "html": "\"<div class=\\\"sc-expandable-box\\\">\\n    <input id=\\\"exb1\\\" type=\\\"checkbox\\\" class=\\\"sc-expandable-box__toggle\\\">\\n    <h3 class=\\\"sc-font sc-expandable-box__title\\\"><label for=\\\"exb1\\\" class=\\\"sc-expandable-box__label\\\">Look ma, I am expandable!</label></h3>\\n    <div class=\\\"sc-expandable-box__content\\\">\\n        Hello Kitty!\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-expandable-box&quot;&gt;\\n    &lt;input id=&quot;exb1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;\\n    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb1&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandable!&lt;/label&gt;&lt;/h3&gt;\\n    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;\\n        Hello Kitty!\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
+    },
+    "headline-with-breadcrumb": {
+        "name": "headline-with-breadcrumb",
+        "type": "molecules",
+        "group": "headline-with-breadcrumb",
+        "srcDir": "src/06-components/molecules/headline-with-breadcrumb/docs",
+        "markDown": "\"<h2>Headline with breadcrumb<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
+        "html": "\"<div class=\\\"sc-headline-with-breadcrumbs\\\">\\n    <ul class=\\\"sc-breadcrumbs\\\">\\n        <li><a href=\\\"#/url/to/home\\\" data-breadcrumb=\\\"home\\\">Home page</a></li>\\n        <li><a href=\\\"#/url/to/list\\\" data-breadcrumb=\\\"list\\\">List results</a></li>\\n        <li><a href=\\\"#/url/to/detail\\\" data-breadcrumb=\\\"detail\\\">Detail</a></li>\\n    </ul>\\n    <h1 class=\\\"sc-font-xl\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\\n</div>\"",
+        "codeExample": "\"&lt;div class=&quot;sc-headline-with-breadcrumbs&quot;&gt;\\n    &lt;ul class=&quot;sc-breadcrumbs&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;\\n    &lt;/ul&gt;\\n    &lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\\n&lt;/div&gt;\""
     },
     "input-group-radio": {
         "name": "input-group-radio",

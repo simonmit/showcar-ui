@@ -113,12 +113,12 @@
             <a href="/docs/atoms/disruptor" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#highlight-target">highlight</a>
-            <a href="/docs/atoms/highlight" class="open-separate"></a>
+            <a data-scroll href="#headline-target">headline</a>
+            <a href="/docs/atoms/headline" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#icon-target">icon</a>
-            <a href="/docs/atoms/icon" class="open-separate"></a>
+            <a data-scroll href="#highlight-target">highlight</a>
+            <a href="/docs/atoms/highlight" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#inlined-info-target">inlined-info</a>
@@ -194,6 +194,10 @@
 <li>
             <a data-scroll href="#expandable-box-target">expandable-box</a>
             <a href="/docs/molecules/expandable-box" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#headline-with-breadcrumb-target">headline-with-breadcrumb</a>
+            <a href="/docs/molecules/headline-with-breadcrumb" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#input-group-target">input-group</a>
@@ -1858,6 +1862,25 @@ margin-bottom:15px;
                  
                 </div>
             
+<hr></div><div id="headline-target" class="positon-anchor">
+                <div class="element" id="headline">
+                    <div class="markdown"><h2>Headline<span class="status review">Needs review</span></h2>
+</div>
+                   <div class="sample"><h1 class="sc-font-xl">Gebrauchte BMW bei AutoScout24 finden</h1></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-headline" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-headline" class="hjs html">&lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="highlight-target" class="positon-anchor">
                 <div class="element" id="highlight">
                     <div class="markdown"><h2>Highlight<span class="status approved">Approved</span></h2>
@@ -1874,28 +1897,6 @@ margin-bottom:15px;
                                 <code id="copy_code-code-highlight" class="hjs html">&lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Nebelscheinwerfer&lt;/span&gt;
 &lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Panoramadach&lt;/span&gt;
 &lt;span class=&quot;sc-highlight sc-font-s&quot;&gt;Xenonscheinwerfer&lt;/span&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="icon-target" class="positon-anchor">
-                <div class="element" id="icon-default">
-                    <div class="markdown"><h2>Icon<span class="status review">Needs Review</span></h2>
-
-<p>Usage information:</p>
-<p>You can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[icon-name]&quot;&gt;&lt;/as24-icon&gt;</code>. To see all available [icon-name]&#39;s, please visit icons section under extra-packages.</p>
-</div>
-                   <div class="sample"><as24-icon type="android"></as24-icon></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-icon-default" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-icon-default" class="hjs html">&lt;as24-icon type=&quot;android&quot;&gt;&lt;/as24-icon&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
@@ -3053,77 +3054,12 @@ This element is not yet implemented. It will look like this:</p>
                 </div>
             
 <hr></div><div id="button-with-icon-target" class="positon-anchor">
-                <div class="element" id="button-with-icon-default">
-                    <div class="markdown"><h2>Button with Icon<span class="status review">Needs Review</span></h2>
-
-<p>Usage information:</p>
-<p>This component can be used where an icon is needed insite a button. Currently, the placement of icon is on the left side w.r.t button text. This component supports all modifiers that exists in atom button.</p>
+                <div class="element" id="button-with-icon">
+                    <div class="markdown"><p><h2>Button with icon<span class="status deprecated">Not yet implemented</span></h2>
+This element is not yet implemented. It will look like this:</p>
+<p><img src="/showcar-ui/docs/assets/images/elements/molecule_button-icon.png" alt="showcar-table" width=""></p>
 </div>
-                   <div class="sample"><button class="sc-btn-with-icon sc-btn-with-icon--bob"><as24-icon type="attention"></as24-icon>I am Bob!</button>
-<button class="sc-btn-with-icon sc-btn-with-icon--ross"><as24-icon type="attention"></as24-icon>I am Ross!</button>
-<button class="sc-btn-with-icon sc-btn-with-icon--ghost"><as24-icon type="attention"></as24-icon>I am Ghost!</button>
-<button class="sc-btn-with-icon sc-btn-with-icon--marketing"><as24-icon type="attention"></as24-icon>I am Marketing!</button></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-default" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-button-with-icon-default" class="hjs html">&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;
-&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;
-&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;
-&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-
-                <div class="element" id="button-with-icon-disabled">
-                    <div class="markdown"><h2>Button with icon disabled<span class="status review">Needs review</span></h2>
-</div>
-                   <div class="sample"><button disabled class="sc-btn-with-icon sc-btn-with-icon--bob"><as24-icon type="attention"></as24-icon>I am Bob!</button>
-<button disabled class="sc-btn-with-icon sc-btn-with-icon--ross"><as24-icon type="attention"></as24-icon>I am Ross!</button>
-<button disabled class="sc-btn-with-icon sc-btn-with-icon--ghost"><as24-icon type="attention"></as24-icon>I am Ghost!</button>
-<button disabled class="sc-btn-with-icon sc-btn-with-icon--marketing"><as24-icon type="attention"></as24-icon>I am Marketing!</button>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-disabled" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-button-with-icon-disabled" class="hjs html">&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--bob&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;
-&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ross&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ross!&lt;/button&gt;
-&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--ghost&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Ghost!&lt;/button&gt;
-&lt;button disabled class=&quot;sc-btn-with-icon sc-btn-with-icon--marketing&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Marketing!&lt;/button&gt;
-</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-
-                <div class="element" id="button-with-icon-full-width">
-                    <div class="markdown"><h2>Button with icon fullwidth<span class="status review">Needs Review</span></h2>
-</div>
-                   <div class="sample"><button class="sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block"><as24-icon type="attention"></as24-icon>I am Bob!</button></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-button-with-icon-full-width" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-button-with-icon-full-width" class="hjs html">&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block&quot;&gt;&lt;as24-icon type=&quot;attention&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
+                     
                 </div>
             
 <hr></div><div id="expandable-box-target" class="positon-anchor">
@@ -3190,6 +3126,39 @@ This element is not yet implemented. It will look like this:</p>
     &lt;/div&gt;
 &lt;/div&gt;
 </code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="headline-with-breadcrumb-target" class="positon-anchor">
+                <div class="element" id="headline-with-breadcrumb">
+                    <div class="markdown"><h2>Headline with breadcrumb<span class="status review">Needs review</span></h2>
+</div>
+                   <div class="sample"><div class="sc-headline-with-breadcrumbs">
+    <ul class="sc-breadcrumbs">
+        <li><a href="#/url/to/home" data-breadcrumb="home">Home page</a></li>
+        <li><a href="#/url/to/list" data-breadcrumb="list">List results</a></li>
+        <li><a href="#/url/to/detail" data-breadcrumb="detail">Detail</a></li>
+    </ul>
+    <h1 class="sc-font-xl">Gebrauchte BMW bei AutoScout24 finden</h1>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-headline-with-breadcrumb" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-headline-with-breadcrumb" class="hjs html">&lt;div class=&quot;sc-headline-with-breadcrumbs&quot;&gt;
+    &lt;ul class=&quot;sc-breadcrumbs&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;
+&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>

@@ -603,15 +603,3 @@ code {
 #separate-content{
     margin-bottom: 100px;
 }
-#icon-target as24-icon {
-    width: 30px;
-    height: 30px;
-}
-#button-with-icon-target .sample {
-    display: flex;
-    background: #eee;
-}
-
-#button-with-icon-target .sample button {
-    margin-right: 5px;
-}
