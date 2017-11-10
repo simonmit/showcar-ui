@@ -1,4 +1,4 @@
-<h2>Button with Icon<span class="status review">Needs Review</span></h2>
+<h2>Button with Icon<span class="status approved">Approved</span></h2>
 
 Usage information:
 
