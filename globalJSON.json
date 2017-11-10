@@ -229,15 +229,6 @@
         "html": "\"<as24-google-map\\n    class=\\\"sc-google-maps\\\"\\n    apikey=\\\"AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8\\\"\\n    query=\\\"Dingolfinger Str. 1-15 81673 München\\\"\\n></as24-google-map>\\n\"",
         "codeExample": "\"&lt;as24-google-map\\n    class=&quot;sc-google-maps&quot;\\n    apikey=&quot;AIzaSyAVmQISUOpu8qUqkcml9Yz7GbkMZVov2t8&quot;\\n    query=&quot;Dingolfinger Str. 1-15 81673 M&uuml;nchen&quot;\\n&gt;&lt;/as24-google-map&gt;\\n\""
     },
-    "headline": {
-        "name": "headline",
-        "type": "atoms",
-        "group": "headline",
-        "srcDir": "src/06-components/atoms/headline/docs",
-        "markDown": "\"<h2>Headline<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
-        "html": "\"<h1 class=\\\"sc-font-xl\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\"",
-        "codeExample": "\"&lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\""
-    },
     "highlight": {
         "name": "highlight",
         "type": "atoms",
@@ -560,15 +551,6 @@
         "html": "\"<div class=\\\"sc-expandable-box\\\">\\n    <input id=\\\"exb1\\\" type=\\\"checkbox\\\" class=\\\"sc-expandable-box__toggle\\\">\\n    <h3 class=\\\"sc-font sc-expandable-box__title\\\"><label for=\\\"exb1\\\" class=\\\"sc-expandable-box__label\\\">Look ma, I am expandable!</label></h3>\\n    <div class=\\\"sc-expandable-box__content\\\">\\n        Hello Kitty!\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-expandable-box&quot;&gt;\\n    &lt;input id=&quot;exb1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;\\n    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb1&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandable!&lt;/label&gt;&lt;/h3&gt;\\n    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;\\n        Hello Kitty!\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
     },
-    "headline-with-breadcrumb": {
-        "name": "headline-with-breadcrumb",
-        "type": "molecules",
-        "group": "headline-with-breadcrumb",
-        "srcDir": "src/06-components/molecules/headline-with-breadcrumb/docs",
-        "markDown": "\"<h2>Headline with breadcrumb<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
-        "html": "\"<div class=\\\"sc-headline-with-breadcrumbs\\\">\\n    <ul class=\\\"sc-breadcrumbs\\\">\\n        <li><a href=\\\"#/url/to/home\\\" data-breadcrumb=\\\"home\\\">Home page</a></li>\\n        <li><a href=\\\"#/url/to/list\\\" data-breadcrumb=\\\"list\\\">List results</a></li>\\n        <li><a href=\\\"#/url/to/detail\\\" data-breadcrumb=\\\"detail\\\">Detail</a></li>\\n    </ul>\\n    <h1 class=\\\"sc-font-xl\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\\n</div>\"",
-        "codeExample": "\"&lt;div class=&quot;sc-headline-with-breadcrumbs&quot;&gt;\\n    &lt;ul class=&quot;sc-breadcrumbs&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;\\n    &lt;/ul&gt;\\n    &lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\\n&lt;/div&gt;\""
-    },
     "input-group-radio": {
         "name": "input-group-radio",
         "type": "molecules",
@@ -629,6 +611,24 @@
         "markDown": "\"<h2>Notifications with timeout<span class=\\\"status refactor\\\">Needs refactoring</span><span class=\\\"status js\\\">JS</span></h2>\\n\\n<div class=\\\"sc-content-container example-notification-target\\\" id=\\\"example-notification-target-s\\\">\\n    Small Notification Target container\\n</div>\\n\\n<p>In this example <code>timeout</code> attribute is always set to 2500.</p>\\n<style>\\n#notification-timeout .markdown #example-notification-target-s{\\n    max-width: 640px;\\n    height: 70px;\\n    width: 100%;\\n}\\n</style>\\n\"",
         "html": "\"<as24-notification type=\\\"success\\\" id=\\\"succ1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Vehicle is added to watchlist.\\\" timeout=\\\"2500\\\">\\n    Success!\\n</as24-notification>\\n<as24-notification type=\\\"information\\\" id=\\\"info1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Information for you\\\" timeout=\\\"2500\\\">\\n    Usefull info.\\n</as24-notification>\\n<as24-notification type=\\\"error\\\" id=\\\"error1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Error occurred\\\" timeout=\\\"2500\\\">\\n    Error here...\\n</as24-notification>\\n<as24-notification type=\\\"tip\\\" id=\\\"tip1\\\" target=\\\"#example-notification-target-s\\\" title=\\\"Small Tip for you\\\" timeout=\\\"2500\\\">\\n    Tip tip hurra...\\n</as24-notification>\\n\\n<div class=\\\"sc-text-center\\\">\\n    <button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"succ1\\\" data-trigger=\\\"succ1\\\">Show success note (timeout)</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"info1\\\" data-trigger=\\\"info1\\\">Show info note (timeout)</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-bob\\\" data-id=\\\"error1\\\" data-trigger=\\\"error1\\\">Show error note (timeout)</button>&nbsp;\\n    <button class=\\\"notification-demo sc-btn-ross\\\" data-id=\\\"tip1\\\" data-trigger=\\\"tip1\\\">Show tip note (timeout)</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;as24-notification type=&quot;success&quot; id=&quot;succ1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Vehicle is added to watchlist.&quot; timeout=&quot;2500&quot;&gt;\\n    Success!\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;information&quot; id=&quot;info1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Information for you&quot; timeout=&quot;2500&quot;&gt;\\n    Usefull info.\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;error&quot; id=&quot;error1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Error occurred&quot; timeout=&quot;2500&quot;&gt;\\n    Error here...\\n&lt;/as24-notification&gt;\\n&lt;as24-notification type=&quot;tip&quot; id=&quot;tip1&quot; target=&quot;#example-notification-target-s&quot; title=&quot;Small Tip for you&quot; timeout=&quot;2500&quot;&gt;\\n    Tip tip hurra...\\n&lt;/as24-notification&gt;\\n\\n&lt;div class=&quot;sc-text-center&quot;&gt;\\n    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;succ1&quot; data-trigger=&quot;succ1&quot;&gt;Show success note (timeout)&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;info1&quot; data-trigger=&quot;info1&quot;&gt;Show info note (timeout)&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-bob&quot; data-id=&quot;error1&quot; data-trigger=&quot;error1&quot;&gt;Show error note (timeout)&lt;/button&gt;&amp;nbsp;\\n    &lt;button class=&quot;notification-demo sc-btn-ross&quot; data-id=&quot;tip1&quot; data-trigger=&quot;tip1&quot;&gt;Show tip note (timeout)&lt;/button&gt;\\n&lt;/div&gt;\\n\""
+    },
+    "page-header-with-breadcrumbs": {
+        "name": "page-header-with-breadcrumbs",
+        "type": "molecules",
+        "group": "page-header",
+        "srcDir": "src/06-components/molecules/page-header/docs",
+        "markDown": "\"<h2>Page header with breadcrumbs<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
+        "html": "\"<div class=\\\"sc-headline-with-breadcrumbs\\\">\\n    <ul class=\\\"sc-breadcrumbs\\\">\\n        <li><a href=\\\"#/url/to/home\\\" data-breadcrumb=\\\"home\\\">Home page</a></li>\\n        <li><a href=\\\"#/url/to/list\\\" data-breadcrumb=\\\"list\\\">List results</a></li>\\n        <li><a href=\\\"#/url/to/detail\\\" data-breadcrumb=\\\"detail\\\">Detail</a></li>\\n    </ul>\\n    <h1 class=\\\"sc-font-xl\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\\n</div>\\n\"",
+        "codeExample": "\"&lt;div class=&quot;sc-headline-with-breadcrumbs&quot;&gt;\\n    &lt;ul class=&quot;sc-breadcrumbs&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/home&quot; data-breadcrumb=&quot;home&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/list&quot; data-breadcrumb=&quot;list&quot;&gt;List results&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;#/url/to/detail&quot; data-breadcrumb=&quot;detail&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;\\n    &lt;/ul&gt;\\n    &lt;h1 class=&quot;sc-font-xl&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\\n&lt;/div&gt;\\n\""
+    },
+    "page-header": {
+        "name": "page-header",
+        "type": "molecules",
+        "group": "page-header",
+        "srcDir": "src/06-components/molecules/page-header/docs",
+        "markDown": "\"<h2>Page header<span class=\\\"status review\\\">Needs review</span></h2>\\n\"",
+        "html": "\"<h1 class=\\\"sc-font-xl sc-page-header\\\">Gebrauchte BMW bei AutoScout24 finden</h1>\\n\"",
+        "codeExample": "\"&lt;h1 class=&quot;sc-font-xl sc-page-header&quot;&gt;Gebrauchte BMW bei AutoScout24 finden&lt;/h1&gt;\\n\""
     },
     "small-footer": {
         "name": "small-footer",
