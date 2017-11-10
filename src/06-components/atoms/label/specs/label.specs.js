@@ -12,7 +12,7 @@ module.exports = (frame, assert) => {
         it('Labels position is correct', () => {
             for (var i = 0; i < labels.length() - 1; i ++) {
                 labels.at(i).assert({
-                    bottom: inputs.at(i).top.minus(0.82), // magic numbers
+                    bottom: inputs.at(i).top.minus(4), // magic numbers
                     left: inputs.at(i).left
                 });
             }
