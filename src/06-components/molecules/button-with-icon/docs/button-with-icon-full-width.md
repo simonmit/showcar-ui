@@ -1,1 +1,1 @@
-<h2>Button with icon fullwidth<span class="status review">Needs Review</span></h2>
+<h2>Button with icon fullwidth<span class="status approved">Approved</span></h2>
