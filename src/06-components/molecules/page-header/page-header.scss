@@ -1,5 +1,10 @@
 @import '../../../01-settings/variables';
 
+.sc-page-header {
+  margin-top: 25px;
+  padding: $L $L $M;
+}
+
 .sc-headline-with-breadcrumbs {
   h1 {
     padding-left: $L;
