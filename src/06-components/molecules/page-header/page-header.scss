@@ -1,0 +1,18 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+.sc-page-header {
+  margin-top: 25px;
+  padding: $L $L $M;
+
+  @include mqmax($viewportM - 1) {
+    margin-top: 0;
+    padding: $L;
+  }
+}
+
+.sc-headline-with-breadcrumbs {
+  h1 {
+    padding-left: $L;
+  }
+}

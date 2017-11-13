@@ -1,0 +1,21 @@
+@import '../../../01-settings/variables';
+
+.sc-link-with-icon {
+  &:hover {
+    as24-icon svg {
+      fill: $blue-90;
+    }
+    a {
+      color: $blue-90;
+    }
+  }
+
+  as24-icon {
+    svg {
+      fill: $color-link;
+      max-width: 100%;
+      max-height: 100%;
+      transition: fill $transition-time;
+    }
+  }
+}
