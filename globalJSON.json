@@ -529,7 +529,7 @@
         "type": "molecules",
         "group": "button-with-icon",
         "srcDir": "src/06-components/molecules/button-with-icon/docs",
-        "markDown": "\"<h2>Button with icon fullwidth<span class=\\\"status review\\\">Needs Review</span></h2>\\n\"",
+        "markDown": "\"<h2>Button with icon fullwidth<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
         "html": "\"<button class=\\\"sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block\\\"><as24-icon type=\\\"search\\\"></as24-icon>I am Bob!</button>\\n\"",
         "codeExample": "\"&lt;button class=&quot;sc-btn-with-icon sc-btn-with-icon--bob sc-btn-with-icon--block&quot;&gt;&lt;as24-icon type=&quot;search&quot;&gt;&lt;/as24-icon&gt;I am Bob!&lt;/button&gt;\\n\""
     },
