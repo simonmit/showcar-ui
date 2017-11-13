@@ -1870,7 +1870,7 @@ margin-bottom:15px;
                 <div class="element" id="google-map">
                     <div class="markdown"><h2>Google Map<span class="status review">Needs review</span></h2>
 
-<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>apikey</code> - your google public API key<br><code>query</code> - address of location<br>You also have to provide height to make map interactive</p>
+<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>apikey</code> - your google public API key (visit <a href="https://console.developers.google.com/projectselector/apis/credentials" target="_blank">https://console.developers.google.com/projectselector/apis/credentials</a> if you need to generate it)<br><code>query</code> - location (e.g. <code>Dingolfinger Str. 1-15 81673 München</code> or <code>48.138570, 11.573496</code>)<br>You also have to provide height to make map interactive</p>
 <pre><code class="lang-css">.sc-google-maps--example {
     height: 300px;
 }
@@ -1968,11 +1968,11 @@ margin-bottom:15px;
 </table></div>
                    <div class="sample">
 <ul>
-    <l1><as24-icon class="sc-icon-s" type="android"></as24-icon></l1>
-    <l1><as24-icon class="sc-icon-m" type="android"></as24-icon></l1>
-    <l1><as24-icon class="sc-icon-l" type="android"></as24-icon></l1>
-    <l1><as24-icon class="sc-icon-xl" type="android"></as24-icon></l1>
-    <l1><as24-icon class="sc-icon-xxl" type="android"></as24-icon></l1>
+    <l1><as24-icon class="sc-icon-s" type="android" title="android"></as24-icon></l1>
+    <l1><as24-icon class="sc-icon-m" type="android" title="android"></as24-icon></l1>
+    <l1><as24-icon class="sc-icon-l" type="android" title="android"></as24-icon></l1>
+    <l1><as24-icon class="sc-icon-xl" type="android" title="android"></as24-icon></l1>
+    <l1><as24-icon class="sc-icon-xxl" type="android" title="android"></as24-icon></l1>
 </ul>
 </div> 
                     <div class="code-sample">
@@ -1983,11 +1983,11 @@ margin-bottom:15px;
                             <pre>
                                 <code id="copy_code-code-icon-default" class="hjs html">
 &lt;ul&gt;
-    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-s&quot; type=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
-    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-m&quot; type=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
-    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-l&quot; type=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
-    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-xl&quot; type=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
-    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-xxl&quot; type=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
+    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-s&quot; type=&quot;android&quot; title=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
+    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-m&quot; type=&quot;android&quot; title=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
+    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-l&quot; type=&quot;android&quot; title=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
+    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-xl&quot; type=&quot;android&quot; title=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
+    &lt;l1&gt;&lt;as24-icon class=&quot;sc-icon-xxl&quot; type=&quot;android&quot; title=&quot;android&quot;&gt;&lt;/as24-icon&gt;&lt;/l1&gt;
 &lt;/ul&gt;
 </code>
                             </pre>
@@ -2270,7 +2270,7 @@ margin-bottom:15px;
             
 <hr></div><div id="label-target" class="positon-anchor">
                 <div class="element" id="label">
-                    <div class="markdown"><h2>Labels with different inputs <span class="status refactor">Needs review</span></h2>
+                    <div class="markdown"><h2>Labels with different inputs <span class="status approved">Approved</span></h2>
 
 <p>Add <code>sc-label</code> class to label for consistent styling.</p>
 </div>
@@ -2299,6 +2299,10 @@ margin-bottom:15px;
 
 <label class="sc-label">Label for textarea</label>
 <textarea class="sc-input" placeholder=".sc-input">...</textarea> 
+
+<label class="sc-label">Small label under input</label>
+<input type="text" class="sc-input">
+<span class="sc-font-s sc-block sc-font-silent">* small label</span>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -2331,6 +2335,10 @@ margin-bottom:15px;
 
 &lt;label class=&quot;sc-label&quot;&gt;Label for textarea&lt;/label&gt;
 &lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt; 
+
+&lt;label class=&quot;sc-label&quot;&gt;Small label under input&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;sc-input&quot;&gt;
+&lt;span class=&quot;sc-font-s sc-block sc-font-silent&quot;&gt;* small label&lt;/span&gt;
 </code>
                             </pre>
                         </div>
@@ -3688,7 +3696,7 @@ This element is not yet implemented. It will look like this:</p>
             
 <hr></div><div id="page-header-target" class="positon-anchor">
                 <div class="element" id="page-header-with-breadcrumbs">
-                    <div class="markdown"><h2>Page header with breadcrumbs<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><h2>Page header with breadcrumbs<span class="status approved">Approved</span></h2>
 </div>
                    <div class="sample"><div class="sc-headline-with-breadcrumbs">
     <ul class="sc-breadcrumbs">
@@ -3723,7 +3731,7 @@ This element is not yet implemented. It will look like this:</p>
             
 
                 <div class="element" id="page-header">
-                    <div class="markdown"><h2>Page header<span class="status review">Needs review</span></h2>
+                    <div class="markdown"><h2>Page header<span class="status approved">Approved</span></h2>
 </div>
                    <div class="sample"><h1 class="sc-font-xl sc-page-header">Gebrauchte BMW bei AutoScout24 finden</h1>
 </div> 
@@ -4510,6 +4518,111 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             
 <hr></div><div id="search-mask-target" class="positon-anchor">
+                <div class="element" id="search-mask-content">
+                    <div class="markdown"><h2>Search mask content<span class="status review">Needs review UX</span></h2>
+
+<style>
+#search-mask-content .sample{
+     background-color: lightblue;
+}
+</style>
+</div>
+                   <div class="sample">
+<div class="sc-search__wrapper sc-tabs" data-tabs="search">
+    <div class="sc-search__content sc-tabs__content sc-tabs__content--visible">
+        <div class="sc-search__options sc-hidden-at-s">
+            <input class="sc-input" id="seach-new" type="checkbox" checked/>
+            <label for="seach-new">Neu</label>
+            <input class="sc-input" id="seach-used" type="checkbox" checked/>
+            <label for="seach-used">Gebraucht</label>
+            <input class="sc-input" id="seach-daily-admission" type="checkbox"/>
+            <label for="seach-daily-admission">Tageszulassung</label>
+        </div>
+        <div class="sc-search__filter-wrapper">
+            <select class="sc-input">
+                <option>Marke</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input" disabled>
+                <option>Modell</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input">
+                <option>Erstzulassung ab</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input">
+                <option>Preis bis (€)</option>
+                <option>...</option>
+            </select>
+            <select class="sc-input">
+                <option>Alle Länder</option>
+                <option>...</option>
+            </select>
+            <input type="text" class="sc-input" placeholder="Stadt/PLZ">
+            <div class="sc-search__content__actions">
+                <button class="sc-btn-bob sc-btn-block">Absenden</button>
+                <a class="sc-search__link">Weitere Suchoptionen</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-search-mask-content" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-search-mask-content" class="hjs html">
+&lt;div class=&quot;sc-search__wrapper sc-tabs&quot; data-tabs=&quot;search&quot;&gt;
+    &lt;div class=&quot;sc-search__content sc-tabs__content sc-tabs__content--visible&quot;&gt;
+        &lt;div class=&quot;sc-search__options sc-hidden-at-s&quot;&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-new&quot; type=&quot;checkbox&quot; checked/&gt;
+            &lt;label for=&quot;seach-new&quot;&gt;Neu&lt;/label&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-used&quot; type=&quot;checkbox&quot; checked/&gt;
+            &lt;label for=&quot;seach-used&quot;&gt;Gebraucht&lt;/label&gt;
+            &lt;input class=&quot;sc-input&quot; id=&quot;seach-daily-admission&quot; type=&quot;checkbox&quot;/&gt;
+            &lt;label for=&quot;seach-daily-admission&quot;&gt;Tageszulassung&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-search__filter-wrapper&quot;&gt;
+            &lt;select class=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Marke&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input&quot; disabled&gt;
+                &lt;option&gt;Modell&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Erstzulassung ab&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Preis bis (&euro;)&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;sc-input&quot;&gt;
+                &lt;option&gt;Alle L&auml;nder&lt;/option&gt;
+                &lt;option&gt;...&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Stadt/PLZ&quot;&gt;
+            &lt;div class=&quot;sc-search__content__actions&quot;&gt;
+                &lt;button class=&quot;sc-btn-bob sc-btn-block&quot;&gt;Absenden&lt;/button&gt;
+                &lt;a class=&quot;sc-search__link&quot;&gt;Weitere Suchoptionen&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
                 <div class="element" id="search-mask">
                     <div class="markdown"><p><h2>Search mask<span class="status deprecated">Needs review UX</span></h2>
 The search mask uses tabs element for show/hide logic. See <a href="https://autoscout24.github.io/showcar-ui/#tabs-target">here</a></p>
@@ -5671,67 +5784,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                 </div>
             
 
-                <div class="element" id="icon-sizes">
-                    <div class="markdown"><h2>Sizing icons<span class="status deprecated">COMMING SOON</span></h2>
-
-<p>We added sizing classes for icons to be more consistent</p>
-<table class="docs-table docs-table-visibility">
-    <thead>
-    <tr>
-        <th>Class</th>
-        <th>Sizes</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><code>.sc-icon-s</code></td>
-        <td>12x12 px</td>
-    </tr>
-    <tr>
-        <td><code>.sc-icon-m</code></td>
-        <td>16x16 px</td>
-    </tr>
-    <tr>
-        <td><code>.sc-icon-l</code></td>
-        <td>20x20 px</td>
-    </tr>
-    <tr>
-        <td><code>.sc-icon-xl</code></td>
-        <td>24x24 px</td>
-    </tr>
-    <tr>
-        <td><code>.sc-icon-xxl</code></td>
-        <td>40x40 px</td>
-    </tr>
-    </tbody>
-</table>
-</div>
-                   <div class="sample"><as24-icon type="heart" class="sc-icon-s"></as24-icon>
-<as24-icon type="heart" class="sc-icon-m"></as24-icon>
-<as24-icon type="heart" class="sc-icon-l"></as24-icon>
-<as24-icon type="heart" class="sc-icon-xl"></as24-icon>
-<as24-icon type="heart" class="sc-icon-xxl"></as24-icon>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-icon-sizes" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-icon-sizes" class="hjs html">&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-s&quot;&gt;&lt;/as24-icon&gt;
-&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-m&quot;&gt;&lt;/as24-icon&gt;
-&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-l&quot;&gt;&lt;/as24-icon&gt;
-&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xl&quot;&gt;&lt;/as24-icon&gt;
-&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;
-</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-
                 <div class="element" id="scrolling">
                     <div class="markdown"><h2>Smooth scrolling<span class="status approved">Approved</span><span class="status js">JS</span></h2>
 
@@ -5991,7 +6043,7 @@ font-size: 13px;
 var iconsList = document.querySelector('#as24-icons-list');
 window.showcarIconNames.forEach(function(name) {
 var item = document.createElement('li');
-item.innerHTML = '<as24-icon type="' + name + '"></as24-icon><p>' + name + '</p>';
+item.innerHTML = '<as24-icon type="' + name + '" title="' + name + '"></as24-icon><p>' + name + '</p>';
 iconsList.appendChild(item);
 });
 </script>
