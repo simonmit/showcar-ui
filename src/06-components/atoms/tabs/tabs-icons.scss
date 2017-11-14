@@ -55,7 +55,7 @@
 .sc-tab--with-icon--active {
   opacity: 1;
   height: 45px;
-  padding-top: $M;
+  padding-top: 11px;
   margin-bottom: 0;
 
   @include mqmin(510px) {
