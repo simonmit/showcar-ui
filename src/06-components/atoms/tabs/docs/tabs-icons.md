@@ -1,4 +1,4 @@
-<h2>Tabs with icons<span class="status deprecated">Needs UX review</span></h2>
+<h2>Tabs with icons<span class="status approved">Approved</span></h2>
 
 Wrapper element for tabs and content should contain `data-tabs` atribute with uniq value. So it is possible to have to diffrent tabs&content elements on page.  
 Tabs can be used with any content of your choice.  
