@@ -6,14 +6,11 @@
 
 .sc-tab {
   order: 1;
-  width: 33%;
+  flex-grow: 1;
   height: 51px;
   background-color: white;
-  margin: 3px 0 3px 3px;
-
-  button {
-    border: none;
-  }
+  margin: 7px 0 3px 3px;
+  border: none;
 
   &:first-child {
     margin-left: 0;
@@ -22,7 +19,10 @@
 
 .sc-tab--with-text--active {
   margin-bottom: 0;
-  height: 54px;
+  margin-top: 4px;
+  height: 57px;
+  color: $orange-100;
+  outline: none; // to prevent bottom line
 }
 
 .sc-tabs__content {
