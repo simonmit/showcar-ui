@@ -17,6 +17,9 @@ const loadMap = (el) => {
 export default function (tagName) {
     let intersectionObserver;
     if (window.IntersectionObserver) {
+        const options = {
+            rootMargin: '300px',
+        };
         intersectionObserver = new IntersectionObserver(entries => { // eslint-disable-line
             // If intersectionRatio is 0, the sentinel is out of view
             // and we do not need to do anything.
@@ -25,7 +28,7 @@ export default function (tagName) {
                     loadMap(entry.target);
                     intersectionObserver.unobserve(entry.target);
                 });
-        });
+        }, options);
     }
 
     function attachedCallback() {
