@@ -2,6 +2,6 @@
 
 <style>
 #tabs-text .sample{
-     background-color: lightblue;
+    background-color: lightblue;
 }
 </style>
