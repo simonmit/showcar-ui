@@ -57,6 +57,10 @@ stepper();
 import tabsIcon from './06-components/atoms/tabs/tabs-icons';
 tabsIcon('tabs-icon');
 
+// tabs-text
+import tabsText from './06-components/atoms/tabs/tabs-text';
+tabsText('tabs-text');
+
 // tooltip
 import tooltip from './06-components/atoms/tooltip-old/tooltip-old';
 tooltip();
