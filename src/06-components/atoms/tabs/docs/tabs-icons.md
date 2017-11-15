@@ -1,6 +1,6 @@
 <h2>Tabs with icons<span class="status approved">Approved</span></h2>
 
-Wrapper element for tabs and content should contain `data-tabs` atribute with uniq value. So it is possible to have to diffrent tabs&content elements on page.  
+Wrapper element for tabs and content should contain `data-tabs` atribute with uniq value. So it is possible to have more than one tabs&content elements on page.  
 Tabs can be used with any content of your choice.  
 `data-section` attribute on tab and content div should match.  
 You can also use diffrent icons for tabs. The styles are tailored for 4 or less tabs.
