@@ -23,7 +23,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
                 firstContent.assert({
                     rendered: true,
-                    top: firstTab.bottom.plus(3),
+                    top: firstTab.bottom,
                     bottom: secondTab.top.minus(3)
                 })
                 secondContent.assert({
@@ -49,7 +49,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
                 firstContent.assert({
                     rendered: true,
-                    top: firstTab.bottom.plus(3)
+                    top: firstTab.bottom
                 })
                 secondContent.assert({
                     rendered: false
