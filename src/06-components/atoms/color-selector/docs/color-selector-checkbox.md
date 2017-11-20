@@ -1,4 +1,4 @@
-<h2>Color selector checkbox<span class="status refactor">Needs refactoring</span></h2>
+<h2>Color selector checkbox<span class="status approved">Approved</span></h2>
 
 We created a special type of radio buttons and checkboxes for you to easily implement a color selection. In this case you have to write a little custom scss to define the background color of the elements. You can also choose the color of the checkmark. Therefor you have to use the `color-selector-color` mixin which takes the background color as first argument and the checkmark color as a second one. Please make sure you provided the second argument only as hex code.
 
