@@ -157,31 +157,33 @@ class Navigation {
      * @returns {boolean}
      */
     onKeyUp(event) {
-        let keyCode = event.which;
+        if(this.menuIsOpen) {
+            let keyCode = event.which;
 
-        switch (keyCode) {
-            case this.KEY_ESCAPE:
-                this.escapeMenu();
-                break;
-            case this.KEY_DOWN:
-                this.handleJumpDown();
-                break;
-            case this.KEY_UP:
-                this.handleJumpUp();
-                break;
-            case this.KEY_TAB:
-                event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
-                break;
-            case this.KEY_RIGHT:
-                this.handleJumpRight();
-                break;
-            case this.KEY_LEFT:
-                this.handleJumpLeft();
-                break;
+            switch (keyCode) {
+                case this.KEY_ESCAPE:
+                    this.escapeMenu();
+                    break;
+                case this.KEY_DOWN:
+                    this.handleJumpDown();
+                    break;
+                case this.KEY_UP:
+                    this.handleJumpUp();
+                    break;
+                case this.KEY_TAB:
+                    event.shiftKey ? this.handleJumpLeft() : this.handleJumpRight();
+                    break;
+                case this.KEY_RIGHT:
+                    this.handleJumpRight();
+                    break;
+                case this.KEY_LEFT:
+                    this.handleJumpLeft();
+                    break;
+            }
+
+            event.preventDefault();
+            return false;
         }
-
-        event.preventDefault();
-        return false;
     }
 
     handleJumpDown() {
