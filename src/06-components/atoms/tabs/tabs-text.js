@@ -1,6 +1,6 @@
 export default () => {
     document.addEventListener('click', (e) => {
-        if(e.target && e.target.classList.contains('sc-tab') && e.target.hasAttribute('data-section')) {
+        if (e.target && e.target.matches && e.target.matches('.sc-tab[data-section], .sc-tab[data-section] *') ) {
             const tabContainer = e.target.parentElement;
             const currentActiveTab = tabContainer.querySelector('.sc-tab--with-text--active');
             const sectionAttr = currentActiveTab.getAttribute('data-section');
