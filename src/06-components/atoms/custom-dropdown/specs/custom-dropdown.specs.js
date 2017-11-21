@@ -7,7 +7,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         let label3;
 
         beforeEach(() => {
-            trigger = frame.get('#custom-dropdown-default p').toDomElement();
+            trigger = frame.get('#custom-dropdown-default custom-dropdown p').toDomElement();
             content = frame.get('#custom-dropdown-default custom-dropdown > div:nth-child(2)');
             label1 = frame.get('#custom-dropdown-default [for=cd1]');
             label2 = frame.get('#custom-dropdown-default [for=cd2]');
