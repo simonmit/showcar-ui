@@ -1448,6 +1448,12 @@ margin-bottom:15px;
 
                 <div class="element" id="custom-dropdown-default">
                     <div class="markdown"><h2>Custom dropdown default<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
+
+<p>If you want to use it in a react (or preact) project you might need to use <code>shouldComponentUpdate</code> method to avoid unexpected state changes.<br />Just add it as a method of you class:</p>
+<p><code>shouldComponentUpdate() {
+    return false;
+}</code></p>
+<p>More info &amp; examples here: <a href="https://preactjs.com/guide/external-dom-mutations">https://preactjs.com/guide/external-dom-mutations</a></p>
 </div>
                    <div class="sample"><custom-dropdown class="sc-input" checkboxgroup>
     <div>
