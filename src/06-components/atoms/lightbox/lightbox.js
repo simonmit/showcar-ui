@@ -5,18 +5,12 @@ export default function (tagName) {
 
         let lb = {
             parent: this.parentElement,
-            container: this.querySelector('.sc-lightbox-container') /*remove*/ || this.querySelector('.sc-lightbox__container'),
-            content: this.querySelector('.sc-lightbox-content') /*remove*/ || this.querySelector('.sc-lightbox__content'),
+            container: this.querySelector('.sc-lightbox__container'),
+            content: this.querySelector('.sc-lightbox__content'),
             close: Array.from(this.querySelectorAll('[data-lightbox-close]')),
-            closeOld: this.querySelector('.sc-lightbox-close'), /*remove*/
             preventOutsideClose: this.getAttribute('prevent-outsideclose'),
             customIdentifier: this.getAttribute('data-custom') || ''
         };
-
-        const oldOpener = this.querySelector('.sc-lightbox-open');
-        if (oldOpener) {
-            oldOpener.addEventListener('click', () => show(lb,oldOpener), false);
-        }
 
         const id = this.id || '';
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
@@ -28,23 +22,6 @@ export default function (tagName) {
         lb.close.forEach(el => {
             el.addEventListener('click', (e) => hide(lb, e), false);
         });
-
-        if (lb.closeOld) {
-            lb.closeOld.addEventListener('click', (e) => hide(lb, e), false);
-        }
-
-        // TODO: remove later
-        const closeIcon = document.querySelector('.sc-lightbox-close as24-icon');
-
-        if (! closeIcon) {
-            const closeButton = document.querySelector('.sc-lightbox-close');
-
-            if (! closeButton) return;
-
-            const close = document.createElement('as24-icon');
-            close.setAttribute('type', 'close');
-            closeButton.appendChild(close);
-        }
     }
 
     const show = (lb, opener) => {
@@ -53,21 +30,19 @@ export default function (tagName) {
         }
         lb.overlay = document.createElement('div');
         lb.overlay.classList.add('sc-lightbox__overlay');
-        lb.overlay.classList.add('sc-overlay'); //remove
+
         if (lb.customIdentifier) {
             lb.overlay.setAttribute('data-custom', lb.customIdentifier);
         }
 
         document.body.appendChild(lb.overlay);
 
-        lb.overlay.classList.add('sc-temporary-visible'); //remove
         lb.overlay.classList.add('sc-lightbox__overlay--visible');
 
         lb.overlay.appendChild(lb.container);
 
         lb.overlay.appendChild(lb.container);
 
-        lb.container.classList.add('sc-temporary-visible'); //remove
         lb.container.classList.add('sc-lightbox__container--visible');
 
         if (lb.preventOutsideClose === null) {
@@ -80,7 +55,6 @@ export default function (tagName) {
         document.querySelector('html').classList.add('sc-unscroll');
 
         setTimeout(() => {
-            lb.overlay.classList.add('sc-fade-in'); //remove
             lb.overlay.classList.add('sc-lightbox--fadein');
         }, 20);
     };
@@ -90,13 +64,11 @@ export default function (tagName) {
 
         document.querySelector('html').classList.remove('sc-unscroll');
 
-        if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27 || e.target === lb.closeOld) {
+        if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27) {
             e.preventDefault();
             lb.container.classList.remove('sc-lightbox__container--visible');
-            lb.container.classList.remove('sc-temporary-visible'); //remove
             lb.parent.appendChild(lb.container);
             if(lb.overlay) {
-                lb.overlay.classList.remove('sc-fade-in'); //remove
                 lb.overlay.classList.remove('sc-lightbox--fadein');
                 setTimeout(() => {
                     lb.overlay.remove();

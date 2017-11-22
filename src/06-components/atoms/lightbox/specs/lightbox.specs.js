@@ -55,7 +55,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
         it('Close lightbox clicking on overlay', (done) => {
             helper.click(trigger);
-            const lightboxOverlay = frame.get('.sc-overlay').toDomElement();
+            const lightboxOverlay = frame.get('.sc-lightbox__overlay').toDomElement();
             helper.click(lightboxOverlay);
 
             setTimeout(() => {
@@ -77,7 +77,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
 
         it('Do not close lightbox clicking on overlay when prevent close attribute is provided', (done) => {
             helper.click(trigger2);
-            const lightboxOverlay = frame.get('.sc-overlay').toDomElement();
+            const lightboxOverlay = frame.get('.sc-lightbox__overlay').toDomElement();
             helper.click(lightboxOverlay);
 
             setTimeout(() => {
