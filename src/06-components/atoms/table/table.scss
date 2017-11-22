@@ -19,7 +19,7 @@ $border: 1px solid $black-30;
     tr:last-child td {
       border-bottom: 0 none;
     }
-    tr:nth-child(even) {
+    tr:nth-child(odd) {
       background-color: $black-20;
     }
   }
