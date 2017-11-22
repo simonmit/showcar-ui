@@ -93,6 +93,10 @@
       .subheadline {
         color: $black-60;
         font-size: 0.75rem;
+
+        &:hover {
+          cursor: default;
+        }
       }
     }
 
