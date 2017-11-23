@@ -63,6 +63,16 @@ custom-dropdown.sc-input {
       left: -1px;
       background-color: $white;
     }
+
+    div:first-child::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid $black-40;
+    }
   }
 
   & > div:last-child {
@@ -78,7 +88,6 @@ custom-dropdown.sc-input {
     z-index: 1;
     padding: $S $M $M $M;
     margin-top: -1px;
-    border-top: 1px solid $black-40;
 
     label {
       padding-top: 1px;
