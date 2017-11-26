@@ -31,7 +31,7 @@
     "html-entities": "^1.2.1",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.9.8",
+    "showcar-gulp": "^2.9.10",
     "update-notifier": "^2.2.0",
     "yargs": "^4.6.0"
   },
