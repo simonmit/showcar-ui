@@ -38,7 +38,7 @@ export default function (tagName) {
         el.addEventListener('change', () => updateCaption(true));
 
         titleElement.addEventListener('click', () => {
-            closeAllDropdowns(el);
+            closeAllDropdowns(el)();
             el.classList.toggle('sc-open');
         });
 

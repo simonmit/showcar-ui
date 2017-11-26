@@ -53,8 +53,8 @@ custom-dropdown.sc-input {
 
   &.sc-open {
     div:first-child {
-      border: 2px solid $blue-80;
-      border-bottom: 1px solid $blue-80;
+      border: 1px solid $blue-80;
+      box-shadow: inset 0 0 0 1px $blue-80;
       border-top-left-radius: $XS;
       border-top-right-radius: $XS;
       width: calc(100% + 2px);
