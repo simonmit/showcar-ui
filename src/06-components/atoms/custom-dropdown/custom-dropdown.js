@@ -32,7 +32,7 @@ export default function (tagName) {
             if (onchange && el.hasAttribute('closeonselect')) {
                 el.classList.remove('sc-open');
             }
-            closeAllDropdowns(el);
+            closeAllDropdowns(el)();
         };
 
         el.addEventListener('change', () => updateCaption(true));
