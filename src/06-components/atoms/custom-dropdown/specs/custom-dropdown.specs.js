@@ -63,6 +63,21 @@ module.exports = (frame, assert, browserWidth, helper) => {
                 rendered: false
             });
         });
+
+        it('close dropdown if click is performed outside', () => {
+            const triggerFirstDropdown = frame.get('#custom-dropdown-closeonselect p').toDomElement();
+            const triggerSecondDropdown = frame.get('#custom-dropdown-icons-checkbox custom-dropdown p').toDomElement();
+            const firstDropdownContent = frame.get('#custom-dropdown-closeonselect custom-dropdown > div:nth-child(2)');
+            const secondDropdownContent = frame.get('#custom-dropdown-icons-checkbox custom-dropdown > div:nth-child(2)');
+            helper.click(triggerFirstDropdown);
+            helper.click(triggerSecondDropdown);
+            firstDropdownContent.assert({
+                rendered: false
+            });
+            secondDropdownContent.assert({
+                rendered: true
+            });
+        });
     });
 
     describe('Custom dropdown {LAYOUT}', () => {
