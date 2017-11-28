@@ -9,6 +9,10 @@ export default function (tagName) {
             e.stopPropagation();
         });
 
+        el.addEventListener('touchstart', (e) => {
+            e.stopPropagation();
+        });
+
         const titleElement = el.querySelector('p');
         const defaultTitle = titleElement.innerHTML;
 
@@ -56,6 +60,7 @@ export default function (tagName) {
         // this should only be done at most once
         // when the first of this element gets attached
         document.addEventListener('click', closeAllDropdowns(this));
+        document.addEventListener('touchstart', closeAllDropdowns(this));
         attachEventListeners = () => {}; // eslint-disable-line no-func-assign
     }
 
