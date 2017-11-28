@@ -14,6 +14,7 @@ export default function (tagName) {
         });
 
         const titleElement = el.querySelector('p');
+        const titleTrigger = el.querySelector('div');
         const defaultTitle = titleElement.innerHTML;
 
         el.classList.remove('sc-open'); // TODO check do we need this?
@@ -41,7 +42,7 @@ export default function (tagName) {
 
         el.addEventListener('change', () => updateCaption(true));
 
-        titleElement.addEventListener('click', () => {
+        titleTrigger.addEventListener('click', () => {
             closeAllDropdowns(el)();
             el.classList.toggle('sc-open');
         });
