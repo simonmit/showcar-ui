@@ -49,6 +49,14 @@ export default function (tagName) {
 
         updateCaption();
         attachEventListeners();
+
+        el.addEventListener('focusout', (e) => {
+            const elReceivingFocus = e.relatedTarget;
+            if (!Array.from(checkboxes).some(cBox => cBox === elReceivingFocus) && 
+                el !== elReceivingFocus){
+                closeAllDropdowns(null)();
+            }
+        });
     }
 
     const closeAllDropdowns = (exceptThisOne) => {
