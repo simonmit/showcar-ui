@@ -441,7 +441,7 @@
         "type": "atoms",
         "group": "stepper",
         "srcDir": "src/06-components/atoms/stepper/docs",
-        "markDown": "\"<h2>Stepper<span class=\\\"status review\\\">Needs review</span><span class=\\\"status js\\\">JS</span></h2>\\n\"",
+        "markDown": "\"<h2>Stepper<span class=\\\"status approved\\\">Approved</span><span class=\\\"status js\\\">JS</span></h2>\\n\"",
         "html": "\"<div class=\\\"sc-stepper\\\">\\n    <button class=\\\"sc-stepper-button sc-stepper-button-decrement\\\">-</button>\\n    <input type=\\\"number\\\" value=\\\"0\\\" class=\\\"sc-stepper-input\\\" min=\\\"0\\\" max=\\\"10\\\" step=\\\"1\\\"/>\\n    <button class=\\\"sc-stepper-button sc-stepper-button-increment\\\">+</button>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-stepper&quot;&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-decrement&quot;&gt;-&lt;/button&gt;\\n    &lt;input type=&quot;number&quot; value=&quot;0&quot; class=&quot;sc-stepper-input&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;/&gt;\\n    &lt;button class=&quot;sc-stepper-button sc-stepper-button-increment&quot;&gt;+&lt;/button&gt;\\n&lt;/div&gt;\\n\""
     },
