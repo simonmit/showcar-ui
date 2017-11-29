@@ -4,9 +4,9 @@
   0% {
     transform: scale(1,1);
   }
-  10% {
-    transform: scale(1.2,1.2);
-  }
+  // 10% {
+  //   transform: scale(1.2,1.2);
+  // }
   100% {
     transform: scale(0,0);
   }
@@ -39,6 +39,7 @@
   }
 
   &.closing {
-    animation: closing 0.5s 1 normal ease-in-out;
+    animation: closing 0.2s 1 normal ease-in-out;
+    // transition: opacity 0.5s ease-in-out;
   }
 }
