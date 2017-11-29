@@ -549,7 +549,7 @@
         "type": "molecules",
         "group": "expandable-box",
         "srcDir": "src/06-components/molecules/expandable-box/docs",
-        "markDown": "\"<h2>Expandable box<span class=\\\"status review\\\">Needs review</span></h2>\\n\\n<p>Normal version of expandable box is opened by click on all devices.</p>\\n\"",
+        "markDown": "\"<h2>Expandable box<span class=\\\"status approved\\\">Approved</span></h2>\\n\\n<p>Normal version of expandable box is opened by click on all devices.</p>\\n\"",
         "html": "\"<div class=\\\"sc-expandable-box\\\">\\n    <input id=\\\"exb1\\\" type=\\\"checkbox\\\" class=\\\"sc-expandable-box__toggle\\\">\\n    <h3 class=\\\"sc-font sc-expandable-box__title\\\"><label for=\\\"exb1\\\" class=\\\"sc-expandable-box__label\\\">Look ma, I am expandable!</label></h3>\\n    <div class=\\\"sc-expandable-box__content\\\">\\n        Hello Kitty!\\n    </div>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-expandable-box&quot;&gt;\\n    &lt;input id=&quot;exb1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;\\n    &lt;h3 class=&quot;sc-font sc-expandable-box__title&quot;&gt;&lt;label for=&quot;exb1&quot; class=&quot;sc-expandable-box__label&quot;&gt;Look ma, I am expandable!&lt;/label&gt;&lt;/h3&gt;\\n    &lt;div class=&quot;sc-expandable-box__content&quot;&gt;\\n        Hello Kitty!\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n\""
     },
