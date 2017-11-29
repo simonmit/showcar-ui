@@ -1,4 +1,4 @@
-<h2>Google Map<span class="status review">Needs review</span></h2>
+<h2>Google Map<span class="status approved">Approved</span></h2>
 
 To use google map on your page add `as24-google-map` custom element on it. Please provide following data-attributes:  
 `apikey` - your google public API key (visit <a href="https://console.developers.google.com/projectselector/apis/credentials" target="_blank">https://console.developers.google.com/projectselector/apis/credentials</a> if you need to generate it)  
