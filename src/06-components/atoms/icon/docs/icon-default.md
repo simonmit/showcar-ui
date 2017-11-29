@@ -1,4 +1,4 @@
-<h2>Icon<span class="status approved">Needs Approved</span></h2>
+<h2>Icon<span class="status approved">Approved</span></h2>
 
 Usage information:
 
