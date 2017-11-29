@@ -1,1 +1,1 @@
-<h2>Stepper<span class="status review">Needs review</span><span class="status js">JS</span></h2>
+<h2>Stepper<span class="status approved">Approved</span><span class="status js">JS</span></h2>
