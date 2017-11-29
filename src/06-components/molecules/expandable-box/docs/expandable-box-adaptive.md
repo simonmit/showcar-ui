@@ -1,4 +1,4 @@
-<h2>Expandable box adaptive<span class="status Approved">Approved</span></h2>
+<h2>Expandable box adaptive<span class="status approved">Approved</span></h2>
 
 The adaptive version of the expandable box is opened on devices with 768px screen width and higher. On smaller devices it has a clickable arrow to expand the box.
 
