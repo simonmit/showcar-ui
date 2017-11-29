@@ -1,1 +1,1 @@
-<h2>Text alignments<span class="status review">Needs review</span></h2>
+<h2>Text alignments<span class="status approved">Approved</span></h2>
