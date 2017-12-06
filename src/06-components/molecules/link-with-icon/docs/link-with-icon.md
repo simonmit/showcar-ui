@@ -13,7 +13,7 @@ Use `sc-link-with-icon` class for color styling. Position and size of icon is up
         as24-icon {
             width: $L;
             height: $L;
-            margin-right: #XS;
+            margin-right: $XS;
         }
     }
     </code>

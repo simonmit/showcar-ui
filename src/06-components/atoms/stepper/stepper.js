@@ -1,9 +1,8 @@
 export default () => {
-    window.addEventListener('DOMContentLoaded', function() {
-        Array.prototype.forEach.call(document.querySelectorAll('.sc-stepper'), (stepperContainer) => {
+    document.addEventListener('click', (e) => {
+        if (e.target && e.target.matches && e.target.matches('.sc-stepper-button-decrement, .sc-stepper-button-increment')) {
+            const stepperContainer = e.target.parentElement;
             const stepperEl = stepperContainer.querySelector('.sc-stepper-input');
-            const decrementEl = stepperContainer.querySelector('.sc-stepper-button-decrement');
-            const incrementEl = stepperContainer.querySelector('.sc-stepper-button-increment');
             const minValue = parseInt(stepperEl.getAttribute('min')) || 0;
             const maxValue = parseInt(stepperEl.getAttribute('max')) || 100;
 
@@ -30,8 +29,8 @@ export default () => {
                 }
             };
 
-            decrementEl.addEventListener('click', decrement);
-            incrementEl.addEventListener('click', increment);
-        });
+            if (e.target.classList.contains('sc-stepper-button-decrement')) decrement();
+            if (e.target.classList.contains('sc-stepper-button-increment')) increment();
+        }
     });
 };
