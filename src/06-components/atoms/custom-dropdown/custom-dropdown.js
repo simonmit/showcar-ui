@@ -52,7 +52,7 @@ export default function (tagName) {
 
         el.addEventListener('focusout', (e) => {
             const elReceivingFocus = e.relatedTarget;
-            if (!Array.from(checkboxes).some(cBox => cBox === elReceivingFocus) && 
+            if (!Array.from(checkboxes).some(cBox => cBox === e.target) && 
                 el !== elReceivingFocus){
                 closeAllDropdowns(null)();
             }
