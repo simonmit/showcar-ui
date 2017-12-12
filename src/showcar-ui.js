@@ -61,10 +61,6 @@ tabsIcon('tabs-icon');
 import tabsText from './06-components/atoms/tabs/tabs-text';
 tabsText('tabs-text');
 
-// tooltip
-// import tooltip from './06-components/atoms/tooltip-old/tooltip-old';
-// tooltip();
-
 // tooltip2
 import tooltip2 from './06-components/atoms/tooltip/tooltip';
 tooltip2('as24-tooltip');
