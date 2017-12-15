@@ -25,7 +25,7 @@
 </div>
 </div>
 </div><div class="ndpl-component__color-container">
-<div class="ndpl-component__color" style="background-color: rgb(255, 117, 0);">
+<div class="ndpl-component__color" style="background-color: rgb(203, 95, 0);">
 <div>
 #ff7500<br>$orange-100
 </div>
