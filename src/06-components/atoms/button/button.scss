@@ -13,14 +13,14 @@ $sc-btn-ross-background-color: $blue-80;
 $sc-btn-ghost-background-color: transparent;
 $sc-btn-marketing-background-color: $white;
 
-$sc-btn-bob-hover-background-color: $orange-120;
+$sc-btn-bob-hover-background-color: $orange-110;
 $sc-btn-ross-hover-background-color: $blue-90;
-$sc-btn-ghost-hover-text-color: $orange-120;
+$sc-btn-ghost-hover-text-color: $orange-110;
 $sc-btn-marketing-hover-text-color: $blue-90;
 
-$sc-btn-bob-active-background-color: $orange-130;
+$sc-btn-bob-active-background-color: $orange-120;
 $sc-btn-ross-active-background-color: $blue-100;
-$sc-btn-ghost-active-text-color: $orange-130;
+$sc-btn-ghost-active-text-color: $orange-120;
 $sc-btn-marketing-active-text-color: $blue-100;
 
 $sc-btn-bob-disabled-background-color: $orange-50;
@@ -159,11 +159,11 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
   background-color: $orange-100;
 
   &:hover {
-    background-color: $orange-120;
+    background-color: $orange-110;
   }
 
   &:active {
-    background-color: $orange-130;
+    background-color: $orange-120;
   }
 
   &[disabled] {
