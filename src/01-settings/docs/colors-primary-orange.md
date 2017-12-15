@@ -21,6 +21,12 @@
 </div><div class="ndpl-component__color-container">
 <div class="ndpl-component__color" style="background-color: rgb(255, 117, 0);">
 <div>
+#cb5f00<br>$orange-110
+</div>
+</div>
+</div><div class="ndpl-component__color-container">
+<div class="ndpl-component__color" style="background-color: rgb(255, 117, 0);">
+<div>
 #ff7500<br>$orange-100
 </div>
 </div>
