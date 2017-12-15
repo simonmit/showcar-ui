@@ -69,6 +69,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   &:active {
     background-color: $sc-btn-bob-active-background-color;
+    color: $sc-btn-bob-text-color;
   }
 
   &[disabled] {
@@ -87,6 +88,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   &:active {
     background-color: $sc-btn-ross-active-background-color;
+    color: $sc-btn-ross-text-color;
   }
 
   &[disabled] {
