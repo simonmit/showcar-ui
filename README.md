@@ -96,7 +96,7 @@ Published 13.03.2017
 | input group     | focus         |  2    |useful|         |
 | ad              |               |  110  |useful|         |
 | custom dropdown |               |  1    |useful|         |
-| sticky          |               |  2    |useful| Could have bigger z-index but lover than overlay        |
+| sticky          |               |  2    |useful| Could have bigger z-index but lower than overlay        |
 | navigation      | ::before li   |  100  |useful| Can be 10        |
 | notification    |               |  120  |useful|         |
 | **Contentservice**     |        |       |      |         |
