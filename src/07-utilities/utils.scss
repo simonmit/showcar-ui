@@ -1,28 +1,10 @@
 @import '../01-settings/variables';
 @import '../02-sass-tools/sass-mq';
+@import '../02-sass-tools/utils';
 
-// TODO: remove mixin and use class instead
-@mixin clearfix() {
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
 
 .sc-clearfix {
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
+  @include clearfix;
 }
 
 .sc-pull-right {
