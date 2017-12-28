@@ -1,0 +1,7 @@
+@import 'fonts';
+
+@mixin input() {
+  @include font(M);
+  padding: $XS 12px;
+  height: 40px;
+}

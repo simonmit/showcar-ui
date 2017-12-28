@@ -1,11 +1,6 @@
 @import '../../../02-sass-tools/sass-mq';
 @import '../../../02-sass-tools/fonts';
-
-@mixin input() {
-  @include font(M);
-  padding: $XS 12px;
-  height: 40px;
-}
+@import '../../../02-sass-tools/input';
 
 %customInputStyles {
   font-family: inherit;
