@@ -1,5 +1,13 @@
 @import '../../../01-settings/variables';
 
+.sc-benefit {
+  padding-bottom: $XXXL;
+
+  @include mqmin($viewportM) {
+    padding-bottom: $XXXXL;
+  }
+}
+
 .sc-benefit__image {
   margin-bottom: $L;
 }
@@ -14,11 +22,4 @@
 
 .sc-benefit__text {
   padding-bottom: $XXL;
-}
-
-.sc-benefit__call-to-action {
-  margin-bottom: $XXXL;
-  @include mqmin($viewportM) {
-    margin-bottom: $XXXXL;
-  }
 }
