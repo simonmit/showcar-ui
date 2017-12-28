@@ -17,16 +17,15 @@
   }
 
   .sc-benefit {
-    margin-top: $XXXL;
-
     @include mqmin($viewportM) {
       width: 50%;
-      padding: 0 $L;
-      margin-top: $XXXXL;
+      padding-right: $L;
+      padding-left: $L;
     }
 
     @include mqmin($viewportL) {
-      padding: 0 $S;
+      padding-right: $S;
+      padding-left: $S;
     }
 
     .sc-disruptor {

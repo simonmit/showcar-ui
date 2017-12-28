@@ -174,11 +174,11 @@
 }
 
 // spacing classes
-.sc-padding-bottom-xs {
+.sc-padding-bottom-XS {
   padding-bottom: $XS;
 }
 
-.sc-padding-bottom-s {
+.sc-padding-bottom-S {
   padding-bottom: $S;
 }
 
@@ -194,11 +194,16 @@
   padding-bottom: $XL;
 }
 
-.sc-margin-top-xs {
+.sc-padding-bottom-XXL {
+  padding-bottom: $XXL;
+}
+
+
+.sc-margin-top-XS {
   margin-top: $XS;
 }
 
-.sc-margin-top-s {
+.sc-margin-top-S {
   margin-top: $S;
 }
 
@@ -230,7 +235,7 @@
   margin-right: $L;
 }
 
-.sc-padding-horizonal-L {
+.sc-padding-horizontal-L {
   padding-left: $L;
   padding-right: $L;
 }
@@ -238,11 +243,21 @@
 .sc-padding-vertical-M {
   padding-top: $M;
   padding-bottom: $M;
+
+  @include mqmin($viewportM) {
+    padding-top: $L;
+    padding-bottom: $L;
+  }
 }
 
 .sc-padding-vertical-L {
   padding-top: $L;
   padding-bottom: $L;
+
+  @include mqmin($viewportM) {
+    padding-top: $XL;
+    padding-bottom: $XL;
+  }
 }
 
 .sc-padding-vertical-XXL {
@@ -250,9 +265,14 @@
   padding-bottom: $XXL;
 }
 
-.sc-padding-vertical-XXXXL {
-  padding-top: $XXXXL;
-  padding-bottom: $XXXXL;
+.sc-padding-vertical-XXXL {
+  padding-top: $XXXL;
+  padding-bottom: $XXXL;
+
+  @include mqmin($viewportM) {
+    padding-top: $XXXXL;
+    padding-bottom: $XXXXL;
+  }
 }
 
 // LEAGACY CODE - SHOULD NOT BE USED
