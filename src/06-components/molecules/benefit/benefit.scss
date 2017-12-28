@@ -1,0 +1,24 @@
+@import '../../../01-settings/variables';
+
+.sc-benefit__image {
+  margin-bottom: $L;
+}
+
+.sc-benefit__title {
+  padding-bottom: $S;
+}
+
+.sc-benefit__subtitle {
+  padding-bottom: $S;
+}
+
+.sc-benefit__text {
+  padding-bottom: $XXL;
+}
+
+.sc-benefit__call-to-action {
+  margin-bottom: $XXXL;
+  @include mqmin($viewportM) {
+    margin-bottom: $XXXXL;
+  }
+}
