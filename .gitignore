@@ -15,6 +15,7 @@ backstop.json
 .sass-cache
 .vscode
 .tmp
+dist/temp
 
 docs/index.html
 docs/globalJSON.json
