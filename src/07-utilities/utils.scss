@@ -191,6 +191,88 @@
   height: $XXXL;
 }
 
+// spacing classes
+.sc-padding-bottom-xs {
+  padding-bottom: $XS;
+}
+
+.sc-padding-bottom-s {
+  padding-bottom: $S;
+}
+
+.sc-padding-bottom-M {
+  padding-bottom: $M;
+}
+
+.sc-padding-bottom-L {
+  padding-bottom: $L;
+}
+
+.sc-padding-bottom-XL {
+  padding-bottom: $XL;
+}
+
+.sc-margin-top-xs {
+  margin-top: $XS;
+}
+
+.sc-margin-top-s {
+  margin-top: $S;
+}
+
+.sc-margin-top-M {
+  margin-top: $M;
+}
+
+.sc-margin-top-L {
+  margin-top: $L;
+}
+
+.sc-margin-top-XL {
+  margin-top: $XL;
+}
+
+.sc-margin-right-XS {
+  margin-right: $XS;
+}
+
+.sc-margin-right-S {
+  margin-right: $S;
+}
+
+.sc-margin-right-M {
+  margin-right: $M;
+}
+
+.sc-margin-right-L {
+  margin-right: $L;
+}
+
+.sc-padding-horizonal-L {
+  padding-left: $L;
+  padding-right: $L;
+}
+
+.sc-padding-vertical-M {
+  padding-top: $M;
+  padding-bottom: $M;
+}
+
+.sc-padding-vertical-L {
+  padding-top: $L;
+  padding-bottom: $L;
+}
+
+.sc-padding-vertical-XXL {
+  padding-top: $XXL;
+  padding-bottom: $XXL;
+}
+
+.sc-padding-vertical-XXXXL {
+  padding-top: $XXXXL;
+  padding-bottom: $XXXXL;
+}
+
 // LEAGACY CODE - SHOULD NOT BE USED
 //xl viewport
 @include mqmin($viewportXL) {
