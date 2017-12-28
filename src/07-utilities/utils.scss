@@ -268,11 +268,6 @@
 .sc-padding-vertical-XXXL {
   padding-top: $XXXL;
   padding-bottom: $XXXL;
-
-  @include mqmin($viewportM) {
-    padding-top: $XXXXL;
-    padding-bottom: $XXXXL;
-  }
 }
 
 // LEAGACY CODE - SHOULD NOT BE USED
