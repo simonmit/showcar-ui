@@ -255,7 +255,8 @@ body {
     color: #994200;
     background-color: #fff1c0;
 }
-.status.deprecated {
+.status.deprecated,
+.status.in-progress {
     color: #994200;
     background-color: #ffdddc;
 }
