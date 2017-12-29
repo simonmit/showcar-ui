@@ -42,11 +42,10 @@ export default () => {
         const cookieName = getCookieName(currentCookies[i]);
 
         if(!finalWhitelist.includes(cookieName)) {
+            console.log('Cookie removed from memory:', cookieName);
             deleteCookieByName(cookieName);
         }
     }
-    
-    console.log('Clean up cookies');
 };
 
 const deleteCookieByName = function(name) {
