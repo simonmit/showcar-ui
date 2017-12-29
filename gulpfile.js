@@ -51,15 +51,6 @@ gulp.task('copy:fragments', () => {
     gulp.src('src/html/showcar-ui-toggled-fragment.html').pipe(gulp.dest('dist/'));
 });
 
-const checkFilesize = require('gulp-check-filesize');
-gulp.task('filesize', () => {
-    gulp.src('dist/*.*')
-        .pipe(checkFilesize({
-            enableGzip: true
-        }))
-        .pipe(gulp.dest('./dist/temp'));
-});
-
 const fs = require('fs');
 const UglifyJS = require('uglify-js');
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
