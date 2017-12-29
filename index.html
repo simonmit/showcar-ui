@@ -259,6 +259,10 @@
             <a href="/docs/organisms/linked-catalog" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#media-items-target">media-items</a>
+            <a href="/docs/organisms/media-items" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#navigation-target">navigation</a>
             <a href="/docs/organisms/navigation" class="open-separate"></a>
         </li>
@@ -3212,7 +3216,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             
 <hr></div><div id="benefit-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
                 <div class="element" id="benefit">
-                    <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span></h2>
+                    <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span><span class="status in-progress">WIP</span></h2>
 
 <p>Enables the author to display a variety and combination of different elements (e.g. image, text, button).</p>
 </div>
@@ -3634,11 +3638,11 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             
 <hr></div><div id="media-item-target" class="positon-anchor">
                 <div class="element" id="media-item">
-                    <div class="markdown"> <h2>Media Item<span class="status review">Needs review UX</span></h2>
+                    <div class="markdown"> <h2>Media Item<span class="status review">Needs review UX</span><span class="status in-progress">WIP</span></h2>
 
 <p>Enables the author to display a media element plus text (e.g. links, list, button, etc).</p>
 </div>
-                   <div class="sample"><div class="sc-media-item sc-padding-bottom-XXXL">
+                   <div class="sample"><div class="sc-media-item">
     <picture class="sc-media-item__pic">
         <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
         <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
@@ -3646,7 +3650,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
     </picture>
 
     <div class="sc-media-item__content sc-margin-top-L">
-        <h3 class="sc-font-l sc-padding-bottom-M">Title</h3>
+        <h3 class="sc-font-l sc-padding-bottom-M sc-font-bold">Title</h3>
         <p class="sc-padding-bottom-XL">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Fusce volutpat quis ex a varius.
@@ -3661,34 +3665,14 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             </ul>
         </div>
     </div>
-</div>
-
-<hr class="sc-padding-bottom-XXL">
-
-<div class="sc-media-item sc-media-item--reverse">
-        <picture class="sc-media-item__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
-            <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-media-item__content sc-margin-top-L">
-            <h3 class="sc-font-l sc-padding-bottom-M">Title</h3>
-            <p class="sc-padding-bottom-XL">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Fusce volutpat quis ex a varius. Phasellus mollis augue eget ligula consequat gravida. 
-                Phasellus vulputate, ipsum nec eleifend malesuada, nibh ante maximus metus, vitae dignissim enim erat suscipit magna. 
-                Praesent eu hendrerit ligula.Nulla pretium ligula sed ullamcorper consequat. Integer id urna eget ligula scelerisque semper vitae et tortor. Phasellus pharetra nulla at urna pellentesque varius. Maecenas quis bibendum est. Donec rhoncus mi eget massa ornare, maximus sodales tortor rutrum. Donec vel sagittis ex. Nunc tempus, nisl et mollis porttitor, turpis lorem fermentum orci, consectetur porttitor ante mauris non sem. Nullam fringilla aliquam libero, quis tincidunt orci sollicitudin at. Praesent varius augue eget tortor cursus finibus. Suspendisse ut neque fringilla, posuere erat sit amet, vulputate justo.
-            </p>
-        </div>
-    </div></div> 
+</div></div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-item" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-media-item" class="hjs html">&lt;div class=&quot;sc-media-item sc-padding-bottom-XXXL&quot;&gt;
+                                <code id="copy_code-code-media-item" class="hjs html">&lt;div class=&quot;sc-media-item&quot;&gt;
     &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
         &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
         &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
@@ -3696,7 +3680,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
     &lt;/picture&gt;
 
     &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
-        &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M&quot;&gt;Title&lt;/h3&gt;
+        &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
         &lt;p class=&quot;sc-padding-bottom-XL&quot;&gt;
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Fusce volutpat quis ex a varius.
@@ -3711,27 +3695,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr class=&quot;sc-padding-bottom-XXL&quot;&gt;
-
-&lt;div class=&quot;sc-media-item sc-media-item--reverse&quot;&gt;
-        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
-            &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M&quot;&gt;Title&lt;/h3&gt;
-            &lt;p class=&quot;sc-padding-bottom-XL&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Fusce volutpat quis ex a varius. Phasellus mollis augue eget ligula consequat gravida. 
-                Phasellus vulputate, ipsum nec eleifend malesuada, nibh ante maximus metus, vitae dignissim enim erat suscipit magna. 
-                Praesent eu hendrerit ligula.Nulla pretium ligula sed ullamcorper consequat. Integer id urna eget ligula scelerisque semper vitae et tortor. Phasellus pharetra nulla at urna pellentesque varius. Maecenas quis bibendum est. Donec rhoncus mi eget massa ornare, maximus sodales tortor rutrum. Donec vel sagittis ex. Nunc tempus, nisl et mollis porttitor, turpis lorem fermentum orci, consectetur porttitor ante mauris non sem. Nullam fringilla aliquam libero, quis tincidunt orci sollicitudin at. Praesent varius augue eget tortor cursus finibus. Suspendisse ut neque fringilla, posuere erat sit amet, vulputate justo.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
+&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
@@ -4116,7 +4080,7 @@ background-color: #f4f4f4;
             
 <hr></div><div id="benefits-list-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
                 <div class="element" id="benefits-list">
-                    <div class="markdown"> <h2>Benefits<span class="status review">Needs review UX</span><span class="status deprecated">Implementation in progress</span></h2>
+                    <div class="markdown"> <h2>Benefits<span class="status review">Needs review UX</span><span class="status in-progress">Implementation in progress</span></h2>
 
 <p>Set of benefit items in a column layout (up to 3col). It&#39;s fully responsive and covers all screensizes.</p>
 </div>
@@ -4637,6 +4601,195 @@ background-color: #f4f4f4;
     &lt;/div&gt;
 &lt;/div&gt;
 </code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="media-items-target" class="positon-anchor">
+                <div class="element" id="media-items">
+                    <div class="markdown"> <h2>Media Items<span class="status review">Needs review UX</span><span class="status in-progress">WIP</span></h2>
+
+<p>Collection of media items.</p>
+</div>
+                   <div class="sample"><div>
+    <div class="sc-media-item sc-padding-bottom-XXXL">
+        <picture class="sc-media-item__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
+            <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-media-item__content sc-margin-top-L">
+            <h3 class="sc-font-l sc-padding-bottom-M sc-font-bold">Title</h3>
+            <p class="sc-padding-bottom-XL">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            </p>
+            <div class="sc-grid-row">
+                <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
+                    <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
+                    <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
+                </ul>
+                <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
+                    <li><a href="https://www.autoscout24.de/auto/porsche/"><span>Porsche</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sc-media-item sc-padding-bottom-XXXL sc-media-item--reverse">
+        <picture class="sc-media-item__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
+            <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-media-item__content sc-margin-top-L">
+            <h3 class="sc-font-l sc-padding-bottom-M sc-font-bold">Title</h3>
+            <ul class="sc-list sc-list--disc">
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </li>
+                <li>
+                    Fusce volutpat quis ex a varius.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Fusce volutpat quis ex a varius.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sc-media-item sc-padding-bottom-XXXL">
+        <picture class="sc-media-item__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
+            <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-media-item__content sc-margin-top-L">
+            <p class="sc-padding-bottom-XL">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            </p>
+            <button class="sc-btn-bob">I am Bob!</button>
+            <button class="sc-btn-ross">I am Ross!</button>
+        </div>
+    </div>
+
+    <div class="sc-media-item sc-padding-bottom-XXXL sc-media-item--reverse">
+        <picture class="sc-media-item__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
+            <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-media-item__content sc-margin-top-L">
+            <h3 class="sc-font-l sc-padding-bottom-M sc-font-bold">Title</h3>
+            <span class="sc-disruptor sc-font-uppercase">Neu</span>
+            <span class="sc-disruptor">Bereits über 20 Mio. Downloads!</span>
+            <p class="sc-padding-bottom-XL sc-margin-top-M">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            </p>
+        </div>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-items" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-media-items" class="hjs html">&lt;div&gt;
+    &lt;div class=&quot;sc-media-item sc-padding-bottom-XXXL&quot;&gt;
+        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
+            &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p class=&quot;sc-padding-bottom-XL&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            &lt;/p&gt;
+            &lt;div class=&quot;sc-grid-row&quot;&gt;
+                &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/porsche/&quot;&gt;&lt;span&gt;Porsche&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-media-item sc-padding-bottom-XXXL sc-media-item--reverse&quot;&gt;
+        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
+            &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;ul class=&quot;sc-list sc-list--disc&quot;&gt;
+                &lt;li&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                &lt;/li&gt;
+                &lt;li&gt;
+                    Fusce volutpat quis ex a varius.
+                &lt;/li&gt;
+                &lt;li&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Fusce volutpat quis ex a varius.
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-media-item sc-padding-bottom-XXXL&quot;&gt;
+        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
+            &lt;p class=&quot;sc-padding-bottom-XL&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            &lt;/p&gt;
+            &lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
+            &lt;button class=&quot;sc-btn-ross&quot;&gt;I am Ross!&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-media-item sc-padding-bottom-XXXL sc-media-item--reverse&quot;&gt;
+        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-media-item__content sc-margin-top-L&quot;&gt;
+            &lt;h3 class=&quot;sc-font-l sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
+            &lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Downloads!&lt;/span&gt;
+            &lt;p class=&quot;sc-padding-bottom-XL sc-margin-top-M&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce volutpat quis ex a varius.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
