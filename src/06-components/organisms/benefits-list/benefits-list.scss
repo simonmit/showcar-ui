@@ -1,7 +1,7 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/sass-mq';
 
-.sc-benefits__container {
+.sc-benefits {
   background-color: $white;
   padding-left: $L;
   padding-right: $L;
@@ -48,4 +48,8 @@
       padding-top: $XXXL;
     }
   }
+}
+
+.sc-benefit {
+  text-align: center;
 }
