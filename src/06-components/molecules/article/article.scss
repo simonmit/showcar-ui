@@ -1,0 +1,47 @@
+@import '../../../01-settings/variables';
+$custoViewport: 500px;
+
+.sc-article {
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  
+  @include mqmin($custoViewport) {
+    flex-direction: row;
+  }
+}
+
+.sc-article__pic {
+  margin-bottom: $S;
+  flex-basis: 50%;
+
+  img {
+    width: 100%;
+  }
+
+  @include mqmin($custoViewport) {
+    max-width: 263px;
+    margin-right: $M;
+    margin-bottom: 0;
+  }
+
+  @include mqmin($viewportM) {
+    flex-basis: auto;
+    min-width: 263px;
+  }
+}
+
+.sc-article__content {
+  flex-basis: 50%;
+
+  @include mqmin($viewportM) {
+    flex-basis: auto;
+  }
+}
+
+.sc-article__category {
+  color: $color-highlight-info;
+  font-weight: bold;
+  font-size: $M;
+  text-transform: uppercase;
+}

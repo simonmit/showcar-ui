@@ -1,0 +1,12 @@
+@import '../../../01-settings/variables';
+
+.sc-articles {
+  .sc-article {
+    border-bottom: 1px solid $black-30;
+    padding: $XXL 0;
+  
+    &:first-child {
+      padding-top: 0;
+    }  
+  }
+}
