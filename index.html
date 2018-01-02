@@ -188,6 +188,10 @@
                 <span>molecules</span>
                 <a href="/docs/molecules" class="open-separate"></a>
                 <ul><li>
+            <a data-scroll href="#article-target">article</a>
+            <a href="/docs/molecules/article" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#benefit-target">benefit</a>
             <a href="/docs/molecules/benefit" class="open-separate"></a>
         </li>
@@ -247,6 +251,10 @@
                 <span>organisms</span>
                 <a href="/docs/organisms" class="open-separate"></a>
                 <ul><li>
+            <a data-scroll href="#articles-target">articles</a>
+            <a href="/docs/organisms/articles" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#benefits-list-target">benefits-list</a>
             <a href="/docs/organisms/benefits-list" class="open-separate"></a>
         </li>
@@ -3214,7 +3222,52 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
-<hr></div><div id="benefit-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
+<hr></div><div id="article-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
+                <div class="element" id="article">
+                    <div class="markdown"> <h2>Article<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+
+<p>Enables the author to display an article with picture, title and text.</p>
+</div>
+                   <div class="sample"><div class="sc-article">
+    <picture class="sc-article__pic">
+        <img srcset="https://placehold.it/263x148" alt="My default image">
+    </picture>
+
+    <div class="sc-article__content">
+        <span class="sc-article__category">extra title</span>
+        <h3 class="sc-font-m sc-padding-bottom-M sc-font-bold">Title</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+        </p>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-article" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-article" class="hjs html">&lt;div class=&quot;sc-article&quot;&gt;
+    &lt;picture class=&quot;sc-article__pic&quot;&gt;
+        &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;div class=&quot;sc-article__content&quot;&gt;
+        &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
+        &lt;h3 class=&quot;sc-font-m sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="benefit-target" class="positon-anchor">
                 <div class="element" id="benefit">
                     <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
 
@@ -4078,7 +4131,136 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="benefits-list-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
+<hr></div><div id="articles-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
+                <div class="element" id="articles">
+                    <div class="markdown"> <h2>Articles<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+
+<p>Enables the author to display a list of article items.</p>
+</div>
+                   <div class="sample"><div class="sc-articles">
+    <div class="sc-article">
+        <picture class="sc-article__pic">
+            <img srcset="https://placehold.it/263x148" alt="My default image">
+        </picture>
+    
+        <div class="sc-article__content">
+            <span class="sc-article__category">extra title</span>
+            <h3 class="sc-font-m sc-padding-bottom-M sc-font-bold">Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+
+    <div class="sc-article">
+        <picture class="sc-article__pic">
+            <img srcset="https://placehold.it/263x148" alt="My default image">
+        </picture>
+    
+        <div class="sc-article__content">
+            <span class="sc-article__category">extra title</span>
+            <h3 class="sc-font-m sc-padding-bottom-M sc-font-bold">Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+    <div class="sc-article">
+        <picture class="sc-article__pic">
+            <img srcset="https://placehold.it/263x148" alt="My default image">
+        </picture>
+    
+        <div class="sc-article__content">
+            <span class="sc-article__category">extra title</span>
+            <h3 class="sc-font-m sc-padding-bottom-M sc-font-bold">Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+    <div class="sc-article">
+        <picture class="sc-article__pic">
+            <img srcset="https://placehold.it/263x148" alt="My default image">
+        </picture>
+    
+        <div class="sc-article__content">
+            <span class="sc-article__category">extra title</span>
+            <h3 class="sc-font-m sc-padding-bottom-M sc-font-bold">Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-articles" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-articles" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
+    &lt;div class=&quot;sc-article&quot;&gt;
+        &lt;picture class=&quot;sc-article__pic&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-article__content&quot;&gt;
+            &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
+            &lt;h3 class=&quot;sc-font-m sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-article&quot;&gt;
+        &lt;picture class=&quot;sc-article__pic&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-article__content&quot;&gt;
+            &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
+            &lt;h3 class=&quot;sc-font-m sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-article&quot;&gt;
+        &lt;picture class=&quot;sc-article__pic&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-article__content&quot;&gt;
+            &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
+            &lt;h3 class=&quot;sc-font-m sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-article&quot;&gt;
+        &lt;picture class=&quot;sc-article__pic&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-article__content&quot;&gt;
+            &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
+            &lt;h3 class=&quot;sc-font-m sc-padding-bottom-M sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="benefits-list-target" class="positon-anchor">
                 <div class="element" id="benefits-list">
                     <div class="markdown"> <h2>Benefits<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
 
