@@ -1,12 +1,13 @@
 @import '../../../01-settings/variables';
-$custoViewport: 500px;
+
+$customViewport: 500px;
 
 .sc-article {
   min-height: 148px;
   display: flex;
   flex-direction: column;
   
-  @include mqmin($custoViewport) {
+  @include mqmin($customViewport) {
     flex-direction: row;
   }
 }
@@ -19,7 +20,7 @@ $custoViewport: 500px;
     width: 100%;
   }
 
-  @include mqmin($custoViewport) {
+  @include mqmin($customViewport) {
     max-width: 263px;
     margin-right: $M;
     margin-bottom: 0;
