@@ -601,7 +601,7 @@ code {
     top: 11px;
     transform: rotate(45deg);
 }
-#separate-content{
+#separate-content {
     margin-bottom: 100px;
 }
 #button-with-icon-target .sample {
@@ -620,4 +620,9 @@ code {
     padding: 10px;
     display: block;
     margin-right: 10px;
+}
+
+#articles-with-highlight {
+    max-width: 1100px;
+    margin: 0 auto;
 }

@@ -87,9 +87,13 @@ $customViewport: 500px;
   display: flex;
   flex-direction: column;
 
+  .sc-article--highlighted,
+  .sc-article:not(:last-child) {
+    margin-bottom: $XXL;
+  }
+
   .sc-article {
     border-bottom: 1px solid $black-30;
     padding-bottom: $XXL;
-    margin-bottom: $XXL;
   }
 }
