@@ -621,8 +621,3 @@ code {
     display: block;
     margin-right: 10px;
 }
-
-#articles-with-highlight {
-    max-width: 1100px;
-    margin: 0 auto;
-}
