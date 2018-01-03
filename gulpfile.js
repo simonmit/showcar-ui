@@ -140,6 +140,6 @@ gulp.task('test:travis', ['docs:serve'], scgulp.karma(
         // temporary removed iphones
         // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],
         // browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],  //temporary remove safari
-        browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win'], //temporary remove safari & ie11
+        browsers: ['bs_chrome_win'], //temporary remove safari & ie11
     }))
 );
