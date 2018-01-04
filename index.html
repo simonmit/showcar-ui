@@ -3277,7 +3277,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 
 <p>Enables the author to display a variety and combination of different elements (e.g. image, text, button).</p>
 </div>
-                   <div class="sample"><div class="sc-benefit sc-padding-vertical-XXXL">
+                   <div class="sample"><div class="sc-benefit">
     <div class="sc-padding-bottom-L"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
     <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
     <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -3287,7 +3287,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 
 <hr>
 
-<div class="sc-benefit sc-padding-vertical-XXXL">
+<div class="sc-benefit">
     <img class="sc-padding-bottom-L" src="http://lorempixel.com/40/40/">
     <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
     <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -3301,7 +3301,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-benefit" class="hjs html">&lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+                                <code id="copy_code-code-benefit" class="hjs html">&lt;div class=&quot;sc-benefit&quot;&gt;
     &lt;div class=&quot;sc-padding-bottom-L&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
     &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
     &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -3311,7 +3311,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 
 &lt;hr&gt;
 
-&lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+&lt;div class=&quot;sc-benefit&quot;&gt;
     &lt;img class=&quot;sc-padding-bottom-L&quot; src=&quot;http://lorempixel.com/40/40/&quot;&gt;
     &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
     &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -4275,6 +4275,20 @@ background-color: #f4f4f4;
 <p>Enables the author to display a list of article items with the highlighted article on top.</p>
 </div>
                    <div class="sample"><div class="sc-articles">
+    <div class="sc-article">
+        <picture class="sc-article__pic">
+            <img srcset="https://placehold.it/263x148" alt="My default image">
+        </picture>
+    
+        <div class="sc-article__content">
+            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-article__title">Article 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+
     <div class="sc-article sc-article--highlighted">
         <picture class="sc-article__pic">
             <source srcset="https://placehold.it/1052x592" media="(min-width: 500px)">
@@ -4283,21 +4297,7 @@ background-color: #f4f4f4;
     
         <div class="sc-article__content">
             <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <h3 class="sc-article__title">Article 2</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4311,7 +4311,7 @@ background-color: #f4f4f4;
     
         <div class="sc-article__content">
             <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">whatever</h3>
+            <h3 class="sc-article__title">Article 3</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4325,7 +4325,7 @@ background-color: #f4f4f4;
     
         <div class="sc-article__content">
             <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <h3 class="sc-article__title">Article 4</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4339,6 +4339,20 @@ background-color: #f4f4f4;
                              </button>
                             <pre>
                                 <code id="copy_code-code-articles-with-highlight" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
+    &lt;div class=&quot;sc-article&quot;&gt;
+        &lt;picture class=&quot;sc-article__pic&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-article__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 1&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
     &lt;div class=&quot;sc-article sc-article--highlighted&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/1052x592&quot; media=&quot;(min-width: 500px)&quot;&gt;
@@ -4347,21 +4361,7 @@ background-color: #f4f4f4;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 2&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4375,7 +4375,7 @@ background-color: #f4f4f4;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;whatever&lt;/h3&gt;
+            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 3&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4389,7 +4389,7 @@ background-color: #f4f4f4;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 4&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4416,7 +4416,7 @@ background-color: #f4f4f4;
 </div>
 
 <div class="sc-benefits">
-    <div class="sc-benefit sc-padding-vertical-XXXL">
+    <div class="sc-benefit">
         <div class="sc-padding-bottom-L"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
         <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
         <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -4424,7 +4424,7 @@ background-color: #f4f4f4;
         <a class="sc-link" href="#">See more</a>
     </div>
 
-    <div class="sc-benefit sc-padding-vertical-XXXL">
+    <div class="sc-benefit">
         <img class="sc-padding-bottom-L" src="http://lorempixel.com/40/40/">
         <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
         <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -4432,7 +4432,7 @@ background-color: #f4f4f4;
         <button class="sc-btn-ross">See more</button>
     </div>
 
-    <div class="sc-benefit sc-padding-vertical-XXXL">
+    <div class="sc-benefit">
         <div class="sc-padding-bottom-L"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
         <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
         <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -4444,7 +4444,7 @@ background-color: #f4f4f4;
 <hr>
 
 <div class="sc-benefits">
-    <div class="sc-benefit sc-padding-vertical-XXXL">
+    <div class="sc-benefit">
         <div class="sc-padding-bottom-L"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
         <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
         <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -4452,7 +4452,7 @@ background-color: #f4f4f4;
         <a class="sc-link" href="#">See more</a>
     </div>
 
-    <div class="sc-benefit sc-padding-vertical-XXXL">
+    <div class="sc-benefit">
         <img class="sc-padding-bottom-L" src="http://lorempixel.com/40/40/">
         <h3 class="sc-font-l sc-padding-bottom-S sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
         <h4 class="sc-padding-bottom-S">Item subtitle</h4>
@@ -4474,7 +4474,7 @@ background-color: #f4f4f4;
 &lt;/div&gt;
 
 &lt;div class=&quot;sc-benefits&quot;&gt;
-    &lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+    &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;div class=&quot;sc-padding-bottom-L&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
         &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -4482,7 +4482,7 @@ background-color: #f4f4f4;
         &lt;a class=&quot;sc-link&quot; href=&quot;#&quot;&gt;See more&lt;/a&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+    &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;img class=&quot;sc-padding-bottom-L&quot; src=&quot;http://lorempixel.com/40/40/&quot;&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
         &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -4490,7 +4490,7 @@ background-color: #f4f4f4;
         &lt;button class=&quot;sc-btn-ross&quot;&gt;See more&lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+    &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;div class=&quot;sc-padding-bottom-L&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
         &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -4502,7 +4502,7 @@ background-color: #f4f4f4;
 &lt;hr&gt;
 
 &lt;div class=&quot;sc-benefits&quot;&gt;
-    &lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+    &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;div class=&quot;sc-padding-bottom-L&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
         &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
@@ -4510,7 +4510,7 @@ background-color: #f4f4f4;
         &lt;a class=&quot;sc-link&quot; href=&quot;#&quot;&gt;See more&lt;/a&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-benefit sc-padding-vertical-XXXL&quot;&gt;
+    &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;img class=&quot;sc-padding-bottom-L&quot; src=&quot;http://lorempixel.com/40/40/&quot;&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-S sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
         &lt;h4 class=&quot;sc-padding-bottom-S&quot;&gt;Item subtitle&lt;/h4&gt;
