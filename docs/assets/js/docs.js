@@ -51,8 +51,28 @@ window.addEventListener('load', function () {
         }
     }
 
+    function collapseMenu() {
+        var collapseMenu = document.getElementById('collapse-to-hamburger');
+        if (collapseMenu) {
+            collapseMenu.addEventListener('click', function () {
+                document.body.classList.add('hamburger-view');
+            });
+        }
+    }
+
+    function showLeftMenu() {
+        var showLeftMenu = document.getElementById('left-menu-toggle');
+        if (showLeftMenu) {
+            showLeftMenu.addEventListener('click', function () {
+                document.body.classList.remove('hamburger-view');
+            });
+        }
+    }
+
     codeSampleToggle();
     allCodeSample();
+    collapseMenu();
+    showLeftMenu();
 
     var sidebar = document.getElementById('sidebar');
     [].forEach.call(document.querySelectorAll('[data-scroll]'), function (el) {
