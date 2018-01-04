@@ -5,7 +5,7 @@
 
 # showcar-ui
 
-showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.
+showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.  
 
 ## Installation:
 
