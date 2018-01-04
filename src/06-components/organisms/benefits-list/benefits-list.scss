@@ -38,16 +38,6 @@
       margin-bottom: 0;
     }
   }
-
-  .sc-benefit:last-child {
-    @include mqmin($viewportM) {
-      padding-top: 0;
-    }
-
-    @include mqmin($viewportL) {
-      padding-top: $XXXL;
-    }
-  }
 }
 
 .sc-benefit {
