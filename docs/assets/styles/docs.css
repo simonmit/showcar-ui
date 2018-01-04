@@ -264,7 +264,7 @@ body {
     color: #1e4c7a;
     background-color: #e4eeff;
 }
-#all-code-toggler {
+#all-code-toggler, #collapse-to-hamburger, #left-menu-toggle {
     margin: 5px 24px 50px;
     border: 1px solid #dcdcdc;
     color: #333;
@@ -274,12 +274,13 @@ body {
     cursor: pointer;
     transition: all .4s;
 }
-#all-code-toggler:hover, #all-code-toggler.active {
+#all-code-toggler:hover, #all-code-toggler.active, 
+#collapse-to-hamburger:hover, #collapse-to-hamburger.active {
     background-color: #ff7500;
     border-color: #ff7500;
     color: #fff;
 }
-#all-code-toggler.active:hover {
+#all-code-toggler.active:hover, #collapse-to-hamburger.active:hover {
     background-color: #994200;
     border-color: #994200;
 }
@@ -502,7 +503,7 @@ code {
         top: 0;
         padding: 0;
     }
-    #all-code-toggler {
+    #all-code-toggler, #collapse-to-hamburger {
         display: none;
         padding-top: 0;
     }
@@ -620,4 +621,81 @@ code {
     padding: 10px;
     display: block;
     margin-right: 10px;
+}
+
+#left-menu-toggle {
+    display: none;
+}
+.hamburger-view #sidebar.open{
+    max-height: 100%;
+    transition: max-height .2s;
+}
+.hamburger-view #sidebar {
+    position: fixed;
+    width: 100%;
+    transition: max-height .05s;
+    float: none;
+    background: #fff;
+    max-height: 50px;
+    border-bottom: 1px solid #dcdcdc;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    z-index: 20;  /* to see sticky spy-navigation*/
+    box-sizing: border-box;
+    border-right: none;
+    top: 0;
+    padding: 0;
+}
+.hamburger-view #all-code-toggler, .hamburger-view #collapse-to-hamburger {
+    display: none;
+    padding-top: 0;
+}
+.hamburger-view #sidebar-logo {
+    margin: 12px 16px 12px 12px;
+    float: left;
+    height: 28px;
+    width: 59px;
+    background-size: cover;
+}
+.hamburger-view #sidebar h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    float: left;
+    line-height: 50px;
+}
+.hamburger-view #left-menu {
+    clear: both;
+    visibility: hidden;
+    border-top: 0;
+    top: 55px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.hamburger-view #sidebar.open #left-menu {
+    visibility: visible;
+}
+.hamburger-view #left-menu a.open-separate {
+    display: none;
+}
+.hamburger-view #left-menu > ul > li span {
+    padding: 0px 24px;
+    font-weight: bold;
+}
+.hamburger-view #content {
+    margin: 40px 15px 0;
+    padding: 0;
+}
+.hamburger-view #open-menu {
+    display: block;
+}
+@media all and (min-width: 1001px) {
+    .hamburger-view #left-menu-toggle{
+        display: block;
+        margin: 7px auto;
+        width: 200px;
+    }
 }
