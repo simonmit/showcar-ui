@@ -2,6 +2,7 @@
 @import '../../../02-sass-tools/sass-mq';
 
 .sc-jumbotron {
+  background-color: $white;
   @include mqmin($viewportM) {
     background-position: center center;
     background-repeat: no-repeat;

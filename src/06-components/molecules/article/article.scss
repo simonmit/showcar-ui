@@ -7,6 +7,7 @@ $customViewport: 500px;
   display: flex;
   flex-direction: column;
   order: 2;
+  background-color: $white;
   
   @include mqmin($customViewport) {
     flex-direction: row;
@@ -86,6 +87,7 @@ $customViewport: 500px;
 .sc-articles {
   display: flex;
   flex-direction: column;
+  background-color: $white;
 
   .sc-article--highlighted,
   .sc-article:not(:last-child) {

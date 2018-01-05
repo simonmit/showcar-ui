@@ -71,6 +71,7 @@ $breakpoint-XL: 1099;
     justify-content: center;
     position: relative;
     margin: #{-$L} 0 0 #{-$L};
+    background-color: $white;
   }
 
   &__show {
