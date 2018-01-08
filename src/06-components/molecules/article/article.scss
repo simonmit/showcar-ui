@@ -1,58 +1,47 @@
 @import '../../../01-settings/variables';
 
-$customViewport: 500px;
+$imgMaxWidth: 263px;
 
 .sc-article {
-  min-height: 148px;
   display: flex;
   flex-direction: column;
   order: 2;
   
-  @include mqmin($customViewport) {
+  @include mqmin($viewportM) {
     flex-direction: row;
   }
 }
 
-.sc-article__title {
-  font-size: $L;
-  font-weight: bold;
-  padding-bottom: $XS;
-}
-
 .sc-article__pic {
-  margin-bottom: $S;
-  flex-basis: 50%;
+  margin-bottom: $L;
 
   img {
     width: 100%;
   }
 
-  @include mqmin($customViewport) {
-    max-width: 263px;
+  @include mqmin($viewportM) {
+    flex-basis: $imgMaxWidth;
     margin-right: $L;
     margin-bottom: 0;
   }
 
-  @include mqmin($viewportM) {
-    flex-basis: auto;
-    min-width: 263px;
+  @include mqmin($viewportL) {
+    flex: 0 0 $imgMaxWidth;
   }
 }
 
 .sc-article__content {
-  flex-basis: 50%;
-
   @include mqmin($viewportM) {
-    flex-basis: auto;
+    flex: 1 1 449px;
   }
 }
 
 .sc-article__category {
   color: $color-highlight-info;
   font-weight: bold;
-  font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
+  margin-bottom: $S;
 }
 
 /* hightlight */
@@ -60,17 +49,14 @@ $customViewport: 500px;
   flex-direction: column;
   order: 1;
 
-  @include mqmin($customViewport) {
-    .sc-article__title {
-      font-size: $XL;
-    }
-  }
-
   .sc-article__pic {
-    max-width: none;
     flex-basis: auto;
     margin-bottom: $XL;
     margin-right: 0;
+  }
+
+  .sc-article__content {
+    flex-basis: auto;
   }
 
   .sc-article__category {
@@ -78,7 +64,6 @@ $customViewport: 500px;
     font-weight: normal;
     background: $body-dark-sky-blue;
     padding: 2px $S;
-    margin-bottom: $XS;
   }
 }
 
@@ -87,13 +72,22 @@ $customViewport: 500px;
   display: flex;
   flex-direction: column;
 
-  .sc-article--highlighted,
+  .sc-article {
+    border-bottom: 1px solid $black-30;
+    padding-bottom: $XXL;
+  }
+
   .sc-article:not(:last-child) {
     margin-bottom: $XXL;
   }
 
-  .sc-article {
-    border-bottom: 1px solid $black-30;
-    padding-bottom: $XXL;
+  @include mqmin($viewportM) {
+    .sc-article {
+      padding-bottom: $XXXL;
+    }
+    
+    .sc-article:not(:last-child) {
+      margin-bottom: $XXXL;
+    }
   }
 }
