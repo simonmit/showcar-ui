@@ -10,7 +10,7 @@
 .sc-link-text-box__text {
   @include mqmin($viewportL) {
     flex-basis: 40%;
-    padding-right: $L;
+    padding-right: $XXL;
   } 
 }
 

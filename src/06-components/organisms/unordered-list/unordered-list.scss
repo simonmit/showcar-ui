@@ -1,6 +1,6 @@
 @import '../../../01-settings/variables';
 
-.sc-unordered-lists{
+.sc-unordered-lists {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -63,12 +63,19 @@
 }
 
 .sc-unordered-list__ul {
-
   li {
     padding-bottom: $M;
 
     @include mqmin($viewportL) {
       padding-bottom: $S;
+    }
+
+    a {
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }
