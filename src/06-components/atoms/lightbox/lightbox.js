@@ -60,7 +60,7 @@ export default function (tagName) {
     };
 
     const hide = (lb, e) => {
-        e.stopPropagation();
+        // e.stopPropagation();
 
         document.querySelector('html').classList.remove('sc-unscroll');
 
