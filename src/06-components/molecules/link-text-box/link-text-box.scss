@@ -1,0 +1,33 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/utils';
+
+.sc-link-text-box {
+  @include mqmin($viewportL) {
+    display: flex;
+  } 
+}
+
+.sc-link-text-box__text {
+  @include mqmin($viewportL) {
+    flex-basis: 40%;
+    padding-right: $L;
+  } 
+}
+
+.sc-link-text-box__links {
+  @include mqmin($viewportL) {
+    flex-basis: 60%;
+  } 
+}
+
+.sc-link-text-box__text__headline {
+  padding-bottom: $L;
+}
+
+.sc-link-text-box__text__paragraph {
+  padding-bottom: $XL;
+
+  @include mqmin($viewportL) {
+    padding-bottom: 0;
+  }
+}
