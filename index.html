@@ -214,6 +214,10 @@
             <a href="/docs/molecules/input-group" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#link-text-box-target">link-text-box</a>
+            <a href="/docs/molecules/link-text-box" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#link-with-icon-target">link-with-icon</a>
             <a href="/docs/molecules/link-with-icon" class="open-separate"></a>
         </li>
@@ -3608,6 +3612,111 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
+<hr></div><div id="link-text-box-target" class="positon-anchor">
+                <div class="element" id="link-text-box">
+                    <div class="markdown"> <h2>Link Text Box<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+
+<p>Enables the author to display a text plus link lists.</p>
+</div>
+                   <div class="sample"><div class="sc-link-text-box">
+    <div class="sc-link-text-box__text">
+        <h3 class="sc-link-text-box__text__headline sc-font-l sc-font-bold">Hybridautos</h3>
+        <p class="sc-link-text-box__text__paragraph sc-font-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.</p>
+    </div>
+    <div class="sc-link-text-box__links">
+        <div class="sc-unordered-lists">
+            <div class="sc-unordered-list sc-unordered-list--with-icon">
+              <h4 class="sc-unordered-list__title">Weitere Themen</h4>
+              <ul class="sc-unordered-list__ul">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">BMW 5</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
+                <li><a href="#">Porsche</a></li>
+              </ul>
+            </div>
+            <div class="sc-unordered-list sc-unordered-list--with-icon">
+              <h4 class="sc-unordered-list__title">Mercedes</h4>
+              <ul class="sc-unordered-list__ul">
+                <li><a href="#">Mercedes A-Klasse</a></li>
+                <li><a href="#">Mercedes B-Klasse</a></li>
+                <li><a href="#">Mercedes C-Klasse</a></li>
+                <li><a href="#">Mercedes E-Klasse</a></li>
+                <li><a href="#">Mercedes S-Klasse</a></li>
+                <li><a href="#">Weitere Mercedes-Modelle</a></li>
+              </ul>
+            </div>
+            <div class="sc-unordered-list sc-unordered-list--with-icon">
+              <h4 class="sc-unordered-list__title">Regional</h4>
+              <ul class="sc-unordered-list__ul">
+                <li><a href="#">Berlin</a></li>
+                <li><a href="#">Hamburg</a></li>
+                <li><a href="#">München</a></li>
+                <li><a href="#">Hannover</a></li>
+                <li><a href="#">Leipzig</a></li>
+                <li><a href="#">Weitere Regionen</a></li>
+              </ul>
+            </div>
+          </div>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-link-text-box" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-link-text-box" class="hjs html">&lt;div class=&quot;sc-link-text-box&quot;&gt;
+    &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
+        &lt;h3 class=&quot;sc-link-text-box__text__headline sc-font-l sc-font-bold&quot;&gt;Hybridautos&lt;/h3&gt;
+        &lt;p class=&quot;sc-link-text-box__text__paragraph sc-font-m&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
+        &lt;div class=&quot;sc-unordered-lists&quot;&gt;
+            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Weitere Themen&lt;/h4&gt;
+              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Porsche&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Mercedes&lt;/h4&gt;
+              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A-Klasse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes B-Klasse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes C-Klasse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes E-Klasse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes S-Klasse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Weitere Mercedes-Modelle&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Regional&lt;/h4&gt;
+              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Berlin&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hamburg&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;M&uuml;nchen&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hannover&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Leipzig&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Weitere Regionen&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="link-with-icon-target" class="positon-anchor">
                 <div class="element" id="link-with-icon">
                     <div class="markdown"><h2>Link with icon<span class="status approved">Approved</span></h2>
@@ -6431,6 +6540,50 @@ showcar.spyNavigation({
             <li><a href="#">Ferrari</a></li>
         </ul>
     </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
@@ -6439,6 +6592,50 @@ showcar.spyNavigation({
                              </button>
                             <pre>
                                 <code id="copy_code-code-unordered-list" class="hjs html">&lt;div class=&quot;sc-unordered-lists&quot;&gt;
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
     &lt;div class=&quot;sc-unordered-list&quot;&gt;
         &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
         &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
@@ -6471,6 +6668,26 @@ showcar.spyNavigation({
       <li><a href="#">Ferrari</a></li>
     </ul>
   </div>
+  <div class="sc-unordered-list sc-unordered-list--with-icon">
+    <h4 class="sc-unordered-list__title">Title comes here</h4>
+    <ul class="sc-unordered-list__ul">
+      <li><a href="#">BMW 1</a></li>
+      <li><a href="#">BMW 3</a></li>
+      <li><a href="#">BMW 5</a></li>
+      <li><a href="#">Mercedes A</a></li>
+      <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
+  <div class="sc-unordered-list sc-unordered-list--with-icon">
+    <h4 class="sc-unordered-list__title">Title comes here</h4>
+    <ul class="sc-unordered-list__ul">
+      <li><a href="#">BMW 1</a></li>
+      <li><a href="#">BMW 3</a></li>
+      <li><a href="#">BMW 5</a></li>
+      <li><a href="#">Mercedes A</a></li>
+      <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
@@ -6479,6 +6696,26 @@ showcar.spyNavigation({
                              </button>
                             <pre>
                                 <code id="copy_code-code-unordered-list-with-icon" class="hjs html">&lt;div class=&quot;sc-unordered-lists&quot;&gt;
+  &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+    &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+    &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+    &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+    &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
   &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
     &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
     &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
