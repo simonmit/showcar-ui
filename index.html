@@ -299,6 +299,10 @@
 <li>
             <a data-scroll href="#teaser-external-target">teaser-external</a>
             <a href="/docs/organisms/teaser-external" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#unordered-list-target">unordered-list</a>
+            <a href="/docs/organisms/unordered-list" class="open-separate"></a>
         </li></ul>
             </li>
         </ul>
@@ -1193,10 +1197,19 @@ margin-bottom:15px;
                 <div class="element" id="collapse-toggle">
                     <div class="markdown"><h2>Collapse toggle<span class="status approved">Approved</span><span class="status js">JS</span></h2>
 </div>
-                   <div class="sample"><a data-toggle="sc-collapse" data-target="#collapse">
-    Toggle Content
+                   <div class="sample"><a data-toggle="sc-collapse" data-target="#collapse-closed">
+    Toggle Content (closed by default)
 </a>
-<div id="collapse" class="sc-collapse">
+<div id="collapse-closed" class="sc-collapse">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</div>
+
+<hr>
+
+<a data-toggle="sc-collapse" data-target="#collapse-opened">
+    Toggle Content (opened by default)
+</a>
+<div id="collapse-opened" class="sc-collapse in">
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </div>
 </div> 
@@ -1206,10 +1219,19 @@ margin-bottom:15px;
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-collapse-toggle" class="hjs html">&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse&quot;&gt;
-    Toggle Content
+                                <code id="copy_code-code-collapse-toggle" class="hjs html">&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse-closed&quot;&gt;
+    Toggle Content (closed by default)
 &lt;/a&gt;
-&lt;div id=&quot;collapse&quot; class=&quot;sc-collapse&quot;&gt;
+&lt;div id=&quot;collapse-closed&quot; class=&quot;sc-collapse&quot;&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;a data-toggle=&quot;sc-collapse&quot; data-target=&quot;#collapse-opened&quot;&gt;
+    Toggle Content (opened by default)
+&lt;/a&gt;
+&lt;div id=&quot;collapse-opened&quot; class=&quot;sc-collapse in&quot;&gt;
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 &lt;/div&gt;
 </code>
@@ -3240,12 +3262,14 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 </div>
                    <div class="sample"><div class="sc-article">
     <picture class="sc-article__pic">
-        <img srcset="https://placehold.it/263x148" alt="My default image">
+        <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+        <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+        <img srcset="https://placehold.it/480x270" alt="My default image">
     </picture>
 
     <div class="sc-article__content">
-        <span class="sc-article__category">extra title</span>
-        <h3 class="sc-article__title">Title</h3>
+        <a class="sc-article__category sc-font-s">extra title</a>
+        <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Title</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
         </p>
@@ -3259,12 +3283,14 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                             <pre>
                                 <code id="copy_code-code-article" class="hjs html">&lt;div class=&quot;sc-article&quot;&gt;
     &lt;picture class=&quot;sc-article__pic&quot;&gt;
-        &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+        &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+        &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+        &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
     &lt;/picture&gt;
 
     &lt;div class=&quot;sc-article__content&quot;&gt;
-        &lt;span class=&quot;sc-article__category&quot;&gt;extra title&lt;/span&gt;
-        &lt;h3 class=&quot;sc-article__title&quot;&gt;Title&lt;/h3&gt;
+        &lt;a class=&quot;sc-article__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+        &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Title&lt;/h3&gt;
         &lt;p&gt;
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
         &lt;/p&gt;
@@ -4150,12 +4176,14 @@ background-color: #f4f4f4;
                    <div class="sample"><div class="sc-articles">
     <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Lorem ipsumn dolor sit amet</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4164,12 +4192,14 @@ background-color: #f4f4f4;
 
     <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Lorem ipsumn dolor sit amet</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4178,12 +4208,14 @@ background-color: #f4f4f4;
 
      <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Lorem ipsumn dolor sit amet</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4192,12 +4224,14 @@ background-color: #f4f4f4;
 
     <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Lorem ipsumn dolor sit amet</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Lorem ipsumn dolor sit amet</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4213,12 +4247,14 @@ background-color: #f4f4f4;
                                 <code id="copy_code-code-articles" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
     &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4227,12 +4263,14 @@ background-color: #f4f4f4;
 
     &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4241,12 +4279,14 @@ background-color: #f4f4f4;
 
      &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4255,12 +4295,14 @@ background-color: #f4f4f4;
 
     &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4283,12 +4325,14 @@ background-color: #f4f4f4;
                    <div class="sample"><div class="sc-articles">
     <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
-    
+
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Article 1</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Article 1</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4297,13 +4341,13 @@ background-color: #f4f4f4;
 
     <div class="sc-article sc-article--highlighted">
         <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/1052x592" media="(min-width: 500px)">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Article 2</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-l sc-font-bold sc-padding-bottom-XS">Article 2</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4312,12 +4356,14 @@ background-color: #f4f4f4;
 
      <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Article 3</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Article 3</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4326,12 +4372,14 @@ background-color: #f4f4f4;
 
     <div class="sc-article">
         <picture class="sc-article__pic">
-            <img srcset="https://placehold.it/263x148" alt="My default image">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
         <div class="sc-article__content">
-            <a href="#" class="sc-article__category">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-article__title">Article 4</h3>
+            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-XS">Article 4</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             </p>
@@ -4347,12 +4395,14 @@ background-color: #f4f4f4;
                                 <code id="copy_code-code-articles-with-highlight" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
     &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
-    
+
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 1&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Article 1&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4361,13 +4411,13 @@ background-color: #f4f4f4;
 
     &lt;div class=&quot;sc-article sc-article--highlighted&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/1052x592&quot; media=&quot;(min-width: 500px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 2&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-l sc-font-bold sc-padding-bottom-XS&quot;&gt;Article 2&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4376,12 +4426,14 @@ background-color: #f4f4f4;
 
      &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 3&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Article 3&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -4390,12 +4442,14 @@ background-color: #f4f4f4;
 
     &lt;div class=&quot;sc-article&quot;&gt;
         &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/263x148&quot; alt=&quot;My default image&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
         &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-article__title&quot;&gt;Article 4&lt;/h3&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-XS&quot;&gt;Article 4&lt;/h3&gt;
             &lt;p&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
             &lt;/p&gt;
@@ -6352,6 +6406,134 @@ showcar.spyNavigation({
 
 &lt;/div&gt;
 </code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="unordered-list-target" class="positon-anchor">
+                <div class="element" id="unordered-list">
+                    <div class="markdown"><h2>Unordered List with links<span class="status in-progress">work in progress</span></h2></div>
+                   <div class="sample"><div class="sc-unordered-lists">
+    <div class="sc-unordered-list sc-unordered-list--with-icon">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-unordered-list">
+        <h4 class="sc-unordered-list__title">Title comes here</h4>
+        <ul class="sc-unordered-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-unordered-list" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-unordered-list" class="hjs html">&lt;div class=&quot;sc-unordered-lists&quot;&gt;
+    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-unordered-list&quot;&gt;
+        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
