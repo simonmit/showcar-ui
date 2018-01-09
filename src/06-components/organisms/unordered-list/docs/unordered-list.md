@@ -1,1 +1,1 @@
-<h2>Unordered List with links<span class="status in-progress">work in progress</span></h2>
+<h2>Unordered List<span class="status in-progress">work in progress</span></h2>

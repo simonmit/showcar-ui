@@ -3,25 +3,21 @@
 .sc-unordered-lists{
   display: flex;
   flex-wrap: wrap;
-  @include mqmin($viewportL) {
-    justify-content: space-between;
-  }
+  justify-content: left;
 }
 
 .sc-unordered-list {
   padding-right: $L;
-
   padding-bottom: $XL;
-  flex-basis: 50%;
+  flex: 1 1 50%;
   
-  &:nth-child(2n){
+  &:nth-child(2n) {
     padding-right: 0; 
   }
 
   @include mqmin($viewportM) {
     padding-bottom: $XXL;
-    flex-basis: 33.33333%;
-    max-width: none;
+    flex: 1 1 33.33333%;
 
     &:nth-child(2n){
       padding-right: $L; 
@@ -33,8 +29,8 @@
   }
 
   @include mqmin($viewportL) {
-    flex-basis: auto;
-    max-width: 20%;
+    flex: 1 1 20%;
+    max-width: 50%;
 
     &:nth-child(2n){
       padding-right: $L; 
@@ -47,6 +43,10 @@
     &:nth-child(5n){
       padding-right: 0; 
     }
+  }
+
+  &:last-child {
+    padding-right: 0; 
   }
 }
 
@@ -69,35 +69,6 @@
 
     @include mqmin($viewportL) {
       padding-bottom: $S;
-    }
-  }
-}
-
-/**/
-.sc-unordered-list--with-icon {
-  li {
-    border-bottom: 1px solid $black-30;
-    padding-bottom: $S;
-    margin-bottom: $S;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    a {
-      display: block;
-      position: relative;
-      padding-left: calc(#{$S} + 12px);
-
-      &:after {
-        position: absolute;
-        content: '';
-        transform: rotate(270deg);
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAuNSIgaGVpZ2h0PSI2LjI3NjYxMzIiIHZpZXdCb3g9IjAgMCAxMC41IDYuMjc2NjEzMiIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNIDAuMDA0MzY0NTksMC4wMjg0NjM5NyA0LjU3ODg4MzQsNC4yMTkyMDc2IDkuMTUzMjU4OSwwLjAyODgxOTc1IiBzdHJva2Utd2lkdGg9IjEuOTk5NjcwMzkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC42NyAuNzE0KSIgc3Ryb2tlPSIjOTQ5NDk0IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
-        background-repeat: no-repeat;
-        width: $M;
-        height: $M;
-        left: 0;
-        top: $XS;
-      }
     }
   }
 }
