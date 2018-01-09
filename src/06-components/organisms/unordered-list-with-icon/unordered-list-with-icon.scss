@@ -1,6 +1,8 @@
 @import '../../../01-settings/variables';
 
 .sc-unordered-list--with-icon {
+  max-width: 50%;
+
   li {
     border-bottom: 1px solid $black-30;
     padding-bottom: $S;
