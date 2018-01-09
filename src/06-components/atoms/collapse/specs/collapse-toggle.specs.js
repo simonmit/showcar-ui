@@ -51,7 +51,7 @@ module.exports = function (frame, assert, browserWidth, helper) {
 
         it('content is hidden after second click', function () {
             helper.click(trigger);
-            helper.click(trigger); //add one more click
+            helper.click(trigger);
             content.assert({
                 rendered: false
             });
