@@ -190,8 +190,8 @@
                 <span>molecules</span>
                 <a href="/docs/molecules" class="open-separate"></a>
                 <ul><li>
-            <a data-scroll href="#article-target">article</a>
-            <a href="/docs/molecules/article" class="open-separate"></a>
+            <a data-scroll href="#anchor-list-target">anchor-list</a>
+            <a href="/docs/molecules/anchor-list" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#benefit-target">benefit</a>
@@ -204,6 +204,10 @@
 <li>
             <a data-scroll href="#button-with-icon-target">button-with-icon</a>
             <a href="/docs/molecules/button-with-icon" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#content-teaser-target">content-teaser</a>
+            <a href="/docs/molecules/content-teaser" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#expandable-box-target">expandable-box</a>
@@ -226,8 +230,8 @@
             <a href="/docs/molecules/list-with-links" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#media-item-target">media-item</a>
-            <a href="/docs/molecules/media-item" class="open-separate"></a>
+            <a data-scroll href="#media-section-target">media-section</a>
+            <a href="/docs/molecules/media-section" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#notification-target">notification</a>
@@ -257,32 +261,24 @@
                 <span>organisms</span>
                 <a href="/docs/organisms" class="open-separate"></a>
                 <ul><li>
-            <a data-scroll href="#articles-target">articles</a>
-            <a href="/docs/organisms/articles" class="open-separate"></a>
+            <a data-scroll href="#anchor-list-group-target">anchor-list-group</a>
+            <a href="/docs/organisms/anchor-list-group" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#articles-with-highlight-target">articles-with-highlight</a>
-            <a href="/docs/organisms/articles-with-highlight" class="open-separate"></a>
-        </li>
-<li>
-            <a data-scroll href="#benefits-list-target">benefits-list</a>
-            <a href="/docs/organisms/benefits-list" class="open-separate"></a>
+            <a data-scroll href="#benefit-group-target">benefit-group</a>
+            <a href="/docs/organisms/benefit-group" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#card-group-target">card-group</a>
             <a href="/docs/organisms/card-group" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#jumbotron-item-target">jumbotron-item</a>
-            <a href="/docs/organisms/jumbotron-item" class="open-separate"></a>
+            <a data-scroll href="#content-teaser-list-target">content-teaser-list</a>
+            <a href="/docs/organisms/content-teaser-list" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#linked-catalog-target">linked-catalog</a>
-            <a href="/docs/organisms/linked-catalog" class="open-separate"></a>
-        </li>
-<li>
-            <a data-scroll href="#media-items-target">media-items</a>
-            <a href="/docs/organisms/media-items" class="open-separate"></a>
+            <a data-scroll href="#media-section-list-target">media-section-list</a>
+            <a href="/docs/organisms/media-section-list" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#navigation-target">navigation</a>
@@ -301,12 +297,12 @@
             <a href="/docs/organisms/spy-navigation" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#teaser-external-target">teaser-external</a>
-            <a href="/docs/organisms/teaser-external" class="open-separate"></a>
+            <a data-scroll href="#superhero-target">superhero</a>
+            <a href="/docs/organisms/superhero" class="open-separate"></a>
         </li>
 <li>
-            <a data-scroll href="#unordered-list-target">unordered-list</a>
-            <a href="/docs/organisms/unordered-list" class="open-separate"></a>
+            <a data-scroll href="#teaser-external-target">teaser-external</a>
+            <a href="/docs/organisms/teaser-external" class="open-separate"></a>
         </li></ul>
             </li>
         </ul>
@@ -3258,47 +3254,63 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
-<hr></div><div id="article-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
-                <div class="element" id="article">
-                    <div class="markdown"> <h2>Article<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+<hr></div><div id="anchor-list-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
+                <div class="element" id="anchor-list">
+                    <div class="markdown"><h2>Anchor List<span class="status review">needs UX review</span></h2>
 
-<p>Enables the author to display an article with picture, title and text.</p>
+<p>This is an Anchor List for showing a collection of links. They can be prefixed with an icon.</p>
 </div>
-                   <div class="sample"><div class="sc-article">
-    <picture class="sc-article__pic">
-        <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-        <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-        <img srcset="https://placehold.it/480x270" alt="My default image">
-    </picture>
+                   <div class="sample"><div class="sc-anchor-list">
+    <h4 class="sc-anchor-list__title">Anchor List Simple</h4>
+    <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+</div>
 
-    <div class="sc-article__content">
-        <a class="sc-article__category sc-font-s">extra title</a>
-        <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Title</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-        </p>
-    </div>
+<br><hr><br>
+
+<div class="sc-anchor-list sc-anchor-list--with-icon">
+    <h4 class="sc-anchor-list__title">Anchor List with Icons</h4>
+    <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-article" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-anchor-list" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-article" class="hjs html">&lt;div class=&quot;sc-article&quot;&gt;
-    &lt;picture class=&quot;sc-article__pic&quot;&gt;
-        &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-        &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-        &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-    &lt;/picture&gt;
+                                <code id="copy_code-code-anchor-list" class="hjs html">&lt;div class=&quot;sc-anchor-list&quot;&gt;
+    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Anchor List Simple&lt;/h4&gt;
+    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 
-    &lt;div class=&quot;sc-article__content&quot;&gt;
-        &lt;a class=&quot;sc-article__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
-        &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Title&lt;/h3&gt;
-        &lt;p&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-        &lt;/p&gt;
-    &lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
+&lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Anchor List with Icons&lt;/h4&gt;
+    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
 &lt;/div&gt;</code>
                             </pre>
                         </div>
@@ -3309,7 +3321,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             
 <hr></div><div id="benefit-target" class="positon-anchor">
                 <div class="element" id="benefit">
-                    <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+                    <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span></h2>
 
 <p>Enables the author to display a variety and combination of different elements (e.g. image, text, button).</p>
 </div>
@@ -3469,6 +3481,55 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
+<hr></div><div id="content-teaser-target" class="positon-anchor">
+                <div class="element" id="content-teaser">
+                    <div class="markdown"> <h2>Content Teaser<span class="status review">Needs UX review</span></h2>
+
+<p>Enables the author to display a content teaser with picture, title and text.</p>
+</div>
+                   <div class="sample"><div class="sc-content-teaser">
+    <picture class="sc-content-teaser__pic">
+        <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+        <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+        <img srcset="https://placehold.it/480x270" alt="My default image">
+    </picture>
+
+    <div class="sc-content-teaser__content">
+        <a class="sc-content-teaser__category sc-font-s">extra title</a>
+        <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Title</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+        </p>
+    </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-content-teaser" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-content-teaser" class="hjs html">&lt;div class=&quot;sc-content-teaser&quot;&gt;
+    &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+        &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+        &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+        &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+        &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+        &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Title&lt;/h3&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="expandable-box-target" class="positon-anchor">
                 <div class="element" id="expandable-box-adaptive">
                     <div class="markdown"><h2>Expandable box adaptive<span class="status approved">Approved</span></h2>
@@ -3610,7 +3671,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
             
 <hr></div><div id="link-text-box-target" class="positon-anchor">
                 <div class="element" id="link-text-box">
-                    <div class="markdown"> <h2>Link Text Box<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+                    <div class="markdown"> <h2>Link Text Box<span class="status review">Needs UX review</span></h2>
 
 <p>Enables the author to display a text plus link lists.</p>
 </div>
@@ -3620,40 +3681,41 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
         <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.</p>
     </div>
     <div class="sc-link-text-box__links">
-        <div class="sc-unordered-lists">
-            <div class="sc-unordered-list sc-unordered-list--with-icon">
-              <h4 class="sc-unordered-list__title">Weitere Themen</h4>
-              <ul class="sc-unordered-list__ul">
+        <div class="sc-anchor-list-group">
+
+            <div class="sc-anchor-list sc-anchor-list--with-icon">
+              <h4 class="sc-anchor-list__title">Title comes here</h4>
+              <ul class="sc-anchor-list__ul">
                 <li><a href="#">BMW 1</a></li>
                 <li><a href="#">BMW 3</a></li>
                 <li><a href="#">BMW 5</a></li>
                 <li><a href="#">Mercedes A</a></li>
                 <li><a href="#">Ferrari</a></li>
-                <li><a href="#">Porsche</a></li>
               </ul>
             </div>
-            <div class="sc-unordered-list sc-unordered-list--with-icon">
-              <h4 class="sc-unordered-list__title">Mercedes</h4>
-              <ul class="sc-unordered-list__ul">
-                <li><a href="#">Mercedes A-Klasse</a></li>
-                <li><a href="#">Mercedes B-Klasse</a></li>
-                <li><a href="#">Mercedes C-Klasse</a></li>
-                <li><a href="#">Mercedes E-Klasse</a></li>
-                <li><a href="#">Mercedes S-Klasse</a></li>
-                <li><a href="#">Weitere Mercedes-Modelle</a></li>
+        
+            <div class="sc-anchor-list sc-anchor-list--with-icon">
+              <h4 class="sc-anchor-list__title">Title comes here</h4>
+              <ul class="sc-anchor-list__ul">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">BMW 5</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
               </ul>
             </div>
-            <div class="sc-unordered-list sc-unordered-list--with-icon">
-              <h4 class="sc-unordered-list__title">Regional</h4>
-              <ul class="sc-unordered-list__ul">
-                <li><a href="#">Berlin</a></li>
-                <li><a href="#">Hamburg</a></li>
-                <li><a href="#">München</a></li>
-                <li><a href="#">Hannover</a></li>
-                <li><a href="#">Leipzig</a></li>
-                <li><a href="#">Weitere Regionen</a></li>
+        
+            <div class="sc-anchor-list sc-anchor-list--with-icon">
+              <h4 class="sc-anchor-list__title">Title comes here</h4>
+              <ul class="sc-anchor-list__ul">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">BMW 5</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
               </ul>
             </div>
+        
           </div>
     </div>
 </div></div> 
@@ -3669,40 +3731,41 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
         &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
-        &lt;div class=&quot;sc-unordered-lists&quot;&gt;
-            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Weitere Themen&lt;/h4&gt;
-              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
+        &lt;div class=&quot;sc-anchor-list-group&quot;&gt;
+
+            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Porsche&lt;/a&gt;&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Mercedes&lt;/h4&gt;
-              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A-Klasse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes B-Klasse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes C-Klasse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes E-Klasse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes S-Klasse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Weitere Mercedes-Modelle&lt;/a&gt;&lt;/li&gt;
+        
+            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Regional&lt;/h4&gt;
-              &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Berlin&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hamburg&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;M&uuml;nchen&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hannover&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Leipzig&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Weitere Regionen&lt;/a&gt;&lt;/li&gt;
+        
+            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
+        
           &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
@@ -3834,20 +3897,20 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
-<hr></div><div id="media-item-target" class="positon-anchor">
-                <div class="element" id="media-item">
-                    <div class="markdown"> <h2>Media Item<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+<hr></div><div id="media-section-target" class="positon-anchor">
+                <div class="element" id="media-section">
+                    <div class="markdown"> <h2>Media Section<span class="status review">Needs UX review</span></h2>
 
 <p>Enables the author to display a media element plus text (e.g. links, list, button, etc).</p>
 </div>
-                   <div class="sample"><div class="sc-media-item">
-    <picture class="sc-media-item__pic">
+                   <div class="sample"><div class="sc-media-section">
+    <picture class="sc-media-section__pic">
         <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
         <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
         <img srcset="https://placehold.it/480x270" alt="My default image">
     </picture>
 
-    <div class="sc-media-item__content sc-margin-top-l">
+    <div class="sc-media-section__content sc-margin-top-l">
         <h3 class="sc-font-l sc-padding-bottom-m sc-font-bold">Title</h3>
         <p class="sc-padding-bottom-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -3866,18 +3929,18 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-item" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-section" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-media-item" class="hjs html">&lt;div class=&quot;sc-media-item&quot;&gt;
-    &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+                                <code id="copy_code-code-media-section" class="hjs html">&lt;div class=&quot;sc-media-section&quot;&gt;
+    &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
         &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
         &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
         &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
     &lt;/picture&gt;
 
-    &lt;div class=&quot;sc-media-item__content sc-margin-top-l&quot;&gt;
+    &lt;div class=&quot;sc-media-section__content sc-margin-top-l&quot;&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
         &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -4276,148 +4339,262 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="articles-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
-                <div class="element" id="articles">
-                    <div class="markdown"> <h2>Articles<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+<hr></div><div id="anchor-list-group-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
+                <div class="element" id="anchor-list-group">
+                    <div class="markdown"><h2>Anchor List Group<span class="status review">needs UX review</span></h2>
 
-<p>Enables the author to display a list of article items.</p>
+<p>This is an Anchor List Group for showing a collection of anchor lists. They can also be prefixed with an icon.</p>
 </div>
-                   <div class="sample"><div class="sc-articles">
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
+                   <div class="sample"><div class="sc-anchor-list-group">
+
+    <div class="sc-anchor-list">
+        <h4 class="sc-anchor-list__title">Title comes here</h4>
+        <ul class="sc-anchor-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
     </div>
 
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
+    <div class="sc-anchor-list">
+        <h4 class="sc-anchor-list__title">Title comes here</h4>
+        <ul class="sc-anchor-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
     </div>
 
-     <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
+    <div class="sc-anchor-list">
+        <h4 class="sc-anchor-list__title">Title comes here</h4>
+        <ul class="sc-anchor-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
     </div>
 
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
+    <div class="sc-anchor-list">
+        <h4 class="sc-anchor-list__title">Title comes here</h4>
+        <ul class="sc-anchor-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
     </div>
-</div></div> 
+
+    <div class="sc-anchor-list">
+        <h4 class="sc-anchor-list__title">Title comes here</h4>
+        <ul class="sc-anchor-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<br />
+<hr>
+<br />
+<br />
+
+<div class="sc-anchor-list-group">
+
+    <div class="sc-anchor-list sc-anchor-list--with-icon">
+      <h4 class="sc-anchor-list__title">Title comes here</h4>
+      <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+      </ul>
+    </div>
+
+    <div class="sc-anchor-list sc-anchor-list--with-icon">
+      <h4 class="sc-anchor-list__title">Title comes here</h4>
+      <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+      </ul>
+    </div>
+
+    <div class="sc-anchor-list sc-anchor-list--with-icon">
+      <h4 class="sc-anchor-list__title">Title comes here</h4>
+      <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+      </ul>
+    </div>
+
+    <div class="sc-anchor-list sc-anchor-list--with-icon">
+      <h4 class="sc-anchor-list__title">Title comes here</h4>
+      <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+      </ul>
+    </div>
+
+    <div class="sc-anchor-list sc-anchor-list--with-icon">
+      <h4 class="sc-anchor-list__title">Title comes here</h4>
+      <ul class="sc-anchor-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+      </ul>
+    </div>
+
+  </div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-articles" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-anchor-list-group" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-articles" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
+                                <code id="copy_code-code-anchor-list-group" class="hjs html">&lt;div class=&quot;sc-anchor-list-group&quot;&gt;
+
+    &lt;div class=&quot;sc-anchor-list&quot;&gt;
+        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
+    &lt;div class=&quot;sc-anchor-list&quot;&gt;
+        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 
-     &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
+    &lt;div class=&quot;sc-anchor-list&quot;&gt;
+        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
+    &lt;div class=&quot;sc-anchor-list&quot;&gt;
+        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code>
+
+    &lt;div class=&quot;sc-anchor-list&quot;&gt;
+        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;br /&gt;
+&lt;hr&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+
+&lt;div class=&quot;sc-anchor-list-group&quot;&gt;
+
+    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
+      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
@@ -4425,166 +4602,14 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="articles-with-highlight-target" class="positon-anchor">
-                <div class="element" id="articles-with-highlight">
-                    <div class="markdown"> <h2>Articles with one highlighted article<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
-
-<p>Enables the author to display a list of article items with the highlighted article on top.</p>
-</div>
-                   <div class="sample"><div class="sc-articles">
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Article 1</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-
-    <div class="sc-article sc-article--highlighted">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-l sc-font-bold sc-padding-bottom-xs">Article 2</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-
-     <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Article 3</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-
-    <div class="sc-article">
-        <picture class="sc-article__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-article__content">
-            <a href="#" class="sc-article__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Article 4</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-</div></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-articles-with-highlight" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-articles-with-highlight" class="hjs html">&lt;div class=&quot;sc-articles&quot;&gt;
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Article 1&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-article sc-article--highlighted&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-l sc-font-bold sc-padding-bottom-xs&quot;&gt;Article 2&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-     &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Article 3&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-article&quot;&gt;
-        &lt;picture class=&quot;sc-article__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-article__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-article__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Article 4&lt;/h3&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="benefits-list-target" class="positon-anchor">
-                <div class="element" id="benefits-list">
-                    <div class="markdown"> <h2>Benefits<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
+<hr></div><div id="benefit-group-target" class="positon-anchor">
+                <div class="element" id="benefit-group">
+                    <div class="markdown"> <h2>Benefit Group<span class="status review">Needs UX review</span></h2>
 
 <p>Set of benefit items in a column layout (up to 3col). It&#39;s fully responsive and covers all screensizes.</p>
 </div>
                    <div class="sample">
-<div class="sc-text-center">
-    <h2 class="sc-font-xl">Headline</h2>
-    <h3 class="sc-font-l">Subtitle</h3>
-</div>
-
-<div class="sc-benefits">
+<div class="sc-benefit-group">
     <div class="sc-benefit">
         <div class="sc-padding-bottom-l"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
         <h3 class="sc-font-l sc-padding-bottom-s sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
@@ -4612,7 +4637,7 @@ background-color: #f4f4f4;
 
 <hr>
 
-<div class="sc-benefits">
+<div class="sc-benefit-group">
     <div class="sc-benefit">
         <div class="sc-padding-bottom-l"><as24-icon type="heart" class="sc-icon-xxl"></as24-icon></div>
         <h3 class="sc-font-l sc-padding-bottom-s sc-font-bold"><span class="sc-disruptor sc-font-uppercase">Neu</span> Title</h3>
@@ -4632,17 +4657,12 @@ background-color: #f4f4f4;
 </div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-benefits-list" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-benefit-group" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-benefits-list" class="hjs html">
-&lt;div class=&quot;sc-text-center&quot;&gt;
-    &lt;h2 class=&quot;sc-font-xl&quot;&gt;Headline&lt;/h2&gt;
-    &lt;h3 class=&quot;sc-font-l&quot;&gt;Subtitle&lt;/h3&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;sc-benefits&quot;&gt;
+                                <code id="copy_code-code-benefit-group" class="hjs html">
+&lt;div class=&quot;sc-benefit-group&quot;&gt;
     &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;div class=&quot;sc-padding-bottom-l&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-s sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
@@ -4670,7 +4690,7 @@ background-color: #f4f4f4;
 
 &lt;hr&gt;
 
-&lt;div class=&quot;sc-benefits&quot;&gt;
+&lt;div class=&quot;sc-benefit-group&quot;&gt;
     &lt;div class=&quot;sc-benefit&quot;&gt;
         &lt;div class=&quot;sc-padding-bottom-l&quot;&gt;&lt;as24-icon type=&quot;heart&quot; class=&quot;sc-icon-xxl&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;
         &lt;h3 class=&quot;sc-font-l sc-padding-bottom-s sc-font-bold&quot;&gt;&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt; Title&lt;/h3&gt;
@@ -4874,426 +4894,226 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="jumbotron-item-target" class="positon-anchor">
-                <div class="element" id="jumbotron-item">
-                    <div class="markdown"> <h2>Jumbotron<span class="status in-progress">work in progress</span></h2>
+<hr></div><div id="content-teaser-list-target" class="positon-anchor">
+                <div class="element" id="content-teaser-list">
+                    <div class="markdown"> <h2>Content Teaser List (with Highlight)<span class="status review">Needs UX review</span></h2>
 
-<p> The Jumbotron enables the author to display a variety and combination of different elements (e.g. image, text, button) on the very top of the page. It&#39;s fully responsive and therefore covers all screensizes. The text is black as default (on S version it will always be black) but in case of dark pictures, you may want to use a white color instead for M/L sizes (when texts and background-pics overlap): put the class name <code>sc-jumbotron__content--light</code> on <code>sc-jumbotron__content</code> container (see the third example).</p>
+<p>Enables the author to display a list of teasers with the highlighted item on top.</p>
 </div>
-                   <div class="sample"><!-- 
-  ************
-    EXAMPLE 1 
-  ************
--->
+                   <div class="sample"><div class="sc-content-teaser-list">
+    <div class="sc-content-teaser">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
 
-<style>
-    .sc-jumbotron__imgs {
-      background-image: url('http://via.placeholder.com/480x270');
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/768x432');
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/1100x430');
-      }
-    }
-</style>
-
-<div class="sc-jumbotron">
-    <div class="sc-jumbotron__imgs">
-      <a href="#">
-        <img src="https://placeimg.com/170/148/any">
-      </a>
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Content Teaser 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
     </div>
 
-    <div class="sc-jumbotron__content sc-jumbotron__content--light">
-      <span class="sc-disruptor sc-font-uppercase">Neu</span>
-      <h2 class="sc-jumbotron__title sc-margin-top-m">Title for Jumbotron</h2>
-      <p class="sc-padding-bottom-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, 
-          non sodales arcu erat non tortor.
-      </p>
-      <ul class="sc-list sc-list--disc sc-padding-bottom-xl">
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-      </ul>
-      <button class="sc-btn-bob">I am Bob!</button>
-      <span class="sc-block sc-margin-top-xxl sc-font-s">* some footnotes</span>
-    </div>
-</div>
-
-<!-- -->
-
-<br><br>
-<hr>
-<br><br>
-
-<!-- 
-  ************
-    EXAMPLE 2
-  ************
--->
-
-<style>
-    .sc-jumbotron__imgs {
-      background-image: url('http://via.placeholder.com/480x270');
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/768x432');
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/1100x430');
-      }
-    }
-</style>
-
-<div class="sc-jumbotron">
-    <div class="sc-jumbotron__imgs">
-      <a href="#">
-        <img src="https://placeimg.com/170/148/any">
-      </a>
+    <div class="sc-content-teaser sc-content-teaser--highlighted">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-l sc-font-bold sc-padding-bottom-xs">Content Teaser 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
     </div>
 
-    <div class="sc-jumbotron__content sc-jumbotron__content--light">
-      <span class="sc-disruptor sc-font-uppercase">Neu</span>
-      <h3 class="sc-jumbotron__title sc-margin-top-m">Title for Jumbotron that is quite long</h3>
+     <div class="sc-content-teaser">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Content Teaser 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
+    </div>
+
+    <div class="sc-content-teaser">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Content Teaser 4</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+        </div>
     </div>
 </div>
 
-<!-- -->
 
-<br><br>
-<hr>
-<br><br>
+<br><br><br>
 
-<!-- 
-  ************
-    EXAMPLE 3
-  ************
--->
+<h3 class="sc-font-l sc-padding-bottom-xxl">Content Teaser List without highlight</h3>
+<div class="sc-content-teaser-list">
+    <div class="sc-content-teaser">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
 
-<style>
-    .sc-jumbotron__imgs {
-      background-image: url('http://via.placeholder.com/480x270');
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/768x432');
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/1100x430');
-      }
-    }
-</style>
-
-<div class="sc-jumbotron">
-    <div class="sc-jumbotron__imgs">
-      <a href="#">
-        <img src="https://placeimg.com/170/148/any">
-      </a>
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
+                nulla, et ornare dolor.
+            </p>
+        </div>
     </div>
 
-    <div class="sc-jumbotron__content">
-      <h3 class="sc-jumbotron__title sc-margin-top-m">Title for Jumbotron</h3>
-      <p class="sc-padding-bottom-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </p>
+    <div class="sc-content-teaser">
+        <picture class="sc-content-teaser__pic">
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+
+        <div class="sc-content-teaser__content">
+            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
+            <h3 class="sc-font-m sc-font-bold sc-padding-bottom-xs">Lorem ipsumn dolor sit amet</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
+                nulla, et ornare dolor.
+            </p>
+        </div>
     </div>
-      
-</div>
-
-<!-- -->
-
-<br><br>
-<hr>
-<br><br>
-
-<!-- 
-  ************
-    EXAMPLE 4 
-  ************
--->
-
-<style>
-    .sc-jumbotron__imgs {
-      background-image: url('http://via.placeholder.com/480x270');
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/768x432');
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url('http://via.placeholder.com/1100x430');
-      }
-    }
-</style>
-
-<div class="sc-jumbotron">
-    <div class="sc-jumbotron__imgs">
-      
-    </div>
-
-    <div class="sc-jumbotron__content sc-jumbotron__content--light">
-      <span class="sc-disruptor sc-font-uppercase">Neu</span>
-      <h2 class="sc-jumbotron__title sc-margin-top-m">Title for Jumbotron</h2>
-      <p>
-        That text needs to be explaned
-        <as24-tooltip class="sc-tooltip">
-          <as24-icon type="info" style="width: 16px;"></as24-icon>
-          <span class="sc-tooltip-content">Information in tooltip <a href="/">link</a></span>
-        </as24-tooltip>
-      </p>
-      <span class="sc-block sc-margin-top-xxl sc-font-s">* some footnotes</span>
-    </div>
-</div>
-
-<!-- --></div> 
+</div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-jumbotron-item" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-content-teaser-list" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-jumbotron-item" class="hjs html">&lt;!-- 
-  ************
-    EXAMPLE 1 
-  ************
---&gt;
+                                <code id="copy_code-code-content-teaser-list" class="hjs html">&lt;div class=&quot;sc-content-teaser-list&quot;&gt;
+    &lt;div class=&quot;sc-content-teaser&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
 
-&lt;style&gt;
-    .sc-jumbotron__imgs {
-      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
-      }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-jumbotron&quot;&gt;
-    &lt;div class=&quot;sc-jumbotron__imgs&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
-      &lt;/a&gt;
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Content Teaser 1&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-jumbotron__content sc-jumbotron__content--light&quot;&gt;
-      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
-      &lt;h2 class=&quot;sc-jumbotron__title sc-margin-top-m&quot;&gt;Title for Jumbotron&lt;/h2&gt;
-      &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, 
-          non sodales arcu erat non tortor.
-      &lt;/p&gt;
-      &lt;ul class=&quot;sc-list sc-list--disc sc-padding-bottom-xl&quot;&gt;
-          &lt;li&gt;One&lt;/li&gt;
-          &lt;li&gt;Two&lt;/li&gt;
-          &lt;li&gt;Three&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
-      &lt;span class=&quot;sc-block sc-margin-top-xxl sc-font-s&quot;&gt;* some footnotes&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- --&gt;
-
-&lt;br&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;!-- 
-  ************
-    EXAMPLE 2
-  ************
---&gt;
-
-&lt;style&gt;
-    .sc-jumbotron__imgs {
-      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
-      }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-jumbotron&quot;&gt;
-    &lt;div class=&quot;sc-jumbotron__imgs&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
-      &lt;/a&gt;
+    &lt;div class=&quot;sc-content-teaser sc-content-teaser--highlighted&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-l sc-font-bold sc-padding-bottom-xs&quot;&gt;Content Teaser 2&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-jumbotron__content sc-jumbotron__content--light&quot;&gt;
-      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
-      &lt;h3 class=&quot;sc-jumbotron__title sc-margin-top-m&quot;&gt;Title for Jumbotron that is quite long&lt;/h3&gt;
+     &lt;div class=&quot;sc-content-teaser&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Content Teaser 3&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-content-teaser&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Content Teaser 4&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;!-- --&gt;
 
-&lt;br&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-&lt;!-- 
-  ************
-    EXAMPLE 3
-  ************
---&gt;
+&lt;h3 class=&quot;sc-font-l sc-padding-bottom-xxl&quot;&gt;Content Teaser List without highlight&lt;/h3&gt;
+&lt;div class=&quot;sc-content-teaser-list&quot;&gt;
+    &lt;div class=&quot;sc-content-teaser&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
 
-&lt;style&gt;
-    .sc-jumbotron__imgs {
-      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
-      }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-jumbotron&quot;&gt;
-    &lt;div class=&quot;sc-jumbotron__imgs&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
-      &lt;/a&gt;
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
+                nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-jumbotron__content&quot;&gt;
-      &lt;h3 class=&quot;sc-jumbotron__title sc-margin-top-m&quot;&gt;Title for Jumbotron&lt;/h3&gt;
-      &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
-      &lt;/p&gt;
+    &lt;div class=&quot;sc-content-teaser&quot;&gt;
+        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+
+        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-padding-bottom-xs&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
+                nulla, et ornare dolor.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-      
-&lt;/div&gt;
-
-&lt;!-- --&gt;
-
-&lt;br&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;!-- 
-  ************
-    EXAMPLE 4 
-  ************
---&gt;
-
-&lt;style&gt;
-    .sc-jumbotron__imgs {
-      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
-    }
-
-    @media screen and (min-width: 768px) {
-      .sc-jumbotron__imgs {
-        background-image: none;
-      }
-
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .sc-jumbotron {
-        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
-      }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-jumbotron&quot;&gt;
-    &lt;div class=&quot;sc-jumbotron__imgs&quot;&gt;
-      
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-jumbotron__content sc-jumbotron__content--light&quot;&gt;
-      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
-      &lt;h2 class=&quot;sc-jumbotron__title sc-margin-top-m&quot;&gt;Title for Jumbotron&lt;/h2&gt;
-      &lt;p&gt;
-        That text needs to be explaned
-        &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;
-          &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
-          &lt;span class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/span&gt;
-        &lt;/as24-tooltip&gt;
-      &lt;/p&gt;
-      &lt;span class=&quot;sc-block sc-margin-top-xxl sc-font-s&quot;&gt;* some footnotes&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- --&gt;</code>
+&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
@@ -5301,249 +5121,21 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="linked-catalog-target" class="positon-anchor">
-                <div class="element" id="linked-catalog">
-                    <div class="markdown"><h2>Linked catalog <span class="status approved">Approved</span></h2>
+<hr></div><div id="media-section-list-target" class="positon-anchor">
+                <div class="element" id="media-section-list">
+                    <div class="markdown"> <h2>Media Section List<span class="status review">Needs UX review</span></h2>
 
-<p>Column separation is up to teams, here is an example how to do it:</p>
-<pre>
-    <code class="css">
-.sc-linked-catalog--example {
-  columns: 1;
-
-  @include mqmin($viewportM) {
-    columns: 3;
-  }
-
-  @include mqmin($viewportL) {
-    columns: 4;
-  }
-}
-    </code>
-</pre>
-</div>
-                   <div class="sample"><div class="sc-linked-catalog">
-    <div class="sc-expandable-box sc-expandable-box--adaptive">
-        <input id="box1" type="checkbox" class="sc-expandable-box__toggle">
-        <p class="sc-linked-catalog__title sc-expandable-box__title">
-            <label for="box1" class="sc-expandable-box__label sc-linked-catalog__label">Modelle</label>
-        </p>
-        <div class="sc-expandable-box__content sc-linked-catalog__content">
-            <ul>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-100/" title="Audi 100">Audi 100</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-200/" title="Audi 200">Audi 200</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-50/" title="Audi 50">Audi 50</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-80/" title="Audi 80">Audi 80</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-90/" title="Audi 90">Audi 90</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="sc-expandable-box sc-expandable-box--adaptive">
-        <input id="box2" type="checkbox" class="sc-expandable-box__toggle">
-        <p class="sc-linked-catalog__title sc-expandable-box__title">
-            <label for="box2" class="sc-expandable-box__label sc-linked-catalog__label">Fahrzeugtyp</label>
-        </p>
-        <div class="sc-expandable-box__content sc-linked-catalog__content">
-            <ul>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/audi-cabriolet/" title="Audi Cabriolet">Audi Cabriolet</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/gelaendewagen/" title="Audi Geländewagen">Audi Geländewagen</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/kleinwagen/" title="Audi Kleinwagen">Audi Kleinwagen</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/kombi/" title="Audi Kombi">Audi Kombi</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/limousine/" title="Audi Limousine">Audi Limousine</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/minivan/" title="Audi Minivan">Audi Minivan</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/roadster/" title="Audi Roadster">Audi Roadster</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/suv/" title="Audi SUV">Audi SUV</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="sc-expandable-box sc-expandable-box--adaptive">
-        <input id="box3" type="checkbox" class="sc-expandable-box__toggle">
-        <p class="sc-linked-catalog__title sc-expandable-box__title">
-            <label for="box3" class="sc-expandable-box__label sc-linked-catalog__label">Fahrzeugkategorie</label>
-        </p>
-        <div class="sc-expandable-box__content sc-linked-catalog__content">
-            <ul>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/jahreswagen/" title="Audi Jahreswagen">Audi Jahreswagen</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/oldtimer/" title="Audi Oldtimer">Audi Oldtimer</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/unfallwagen/" title="Audi Unfallwagen">Audi Unfallwagen</a>
-                </li>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/vorfuehrwagen/" title="Audi Vorführwagen">Audi Vorführwagen</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="sc-expandable-box sc-expandable-box--adaptive">
-        <input id="box4" type="checkbox" class="sc-expandable-box__toggle">
-        <p class="sc-linked-catalog__title sc-expandable-box__title">
-            <label for="box4" class="sc-expandable-box__label sc-linked-catalog__label">Kraftstoff</label>
-        </p>
-        <div class="sc-expandable-box__content sc-linked-catalog__content">
-            <ul>
-                <li>
-                    <a class="sc-inline-link" href="https://www.autoscout24.de/auto/audi/hybrid/" title="Audi Hybrid">Audi Hybrid</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-linked-catalog" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-linked-catalog" class="hjs html">&lt;div class=&quot;sc-linked-catalog&quot;&gt;
-    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
-        &lt;input id=&quot;box1&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
-        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
-            &lt;label for=&quot;box1&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Modelle&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
-            &lt;ul&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-100/&quot; title=&quot;Audi 100&quot;&gt;Audi 100&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-200/&quot; title=&quot;Audi 200&quot;&gt;Audi 200&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-50/&quot; title=&quot;Audi 50&quot;&gt;Audi 50&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-80/&quot; title=&quot;Audi 80&quot;&gt;Audi 80&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-90/&quot; title=&quot;Audi 90&quot;&gt;Audi 90&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
-        &lt;input id=&quot;box2&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
-        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
-            &lt;label for=&quot;box2&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Fahrzeugtyp&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
-            &lt;ul&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/audi-cabriolet/&quot; title=&quot;Audi Cabriolet&quot;&gt;Audi Cabriolet&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/gelaendewagen/&quot; title=&quot;Audi Gel&auml;ndewagen&quot;&gt;Audi Gel&auml;ndewagen&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/kleinwagen/&quot; title=&quot;Audi Kleinwagen&quot;&gt;Audi Kleinwagen&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/kombi/&quot; title=&quot;Audi Kombi&quot;&gt;Audi Kombi&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/limousine/&quot; title=&quot;Audi Limousine&quot;&gt;Audi Limousine&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/minivan/&quot; title=&quot;Audi Minivan&quot;&gt;Audi Minivan&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/roadster/&quot; title=&quot;Audi Roadster&quot;&gt;Audi Roadster&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/suv/&quot; title=&quot;Audi SUV&quot;&gt;Audi SUV&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
-        &lt;input id=&quot;box3&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
-        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
-            &lt;label for=&quot;box3&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Fahrzeugkategorie&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
-            &lt;ul&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/jahreswagen/&quot; title=&quot;Audi Jahreswagen&quot;&gt;Audi Jahreswagen&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/oldtimer/&quot; title=&quot;Audi Oldtimer&quot;&gt;Audi Oldtimer&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/unfallwagen/&quot; title=&quot;Audi Unfallwagen&quot;&gt;Audi Unfallwagen&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/vorfuehrwagen/&quot; title=&quot;Audi Vorf&uuml;hrwagen&quot;&gt;Audi Vorf&uuml;hrwagen&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-expandable-box sc-expandable-box--adaptive&quot;&gt;
-        &lt;input id=&quot;box4&quot; type=&quot;checkbox&quot; class=&quot;sc-expandable-box__toggle&quot;&gt;
-        &lt;p class=&quot;sc-linked-catalog__title sc-expandable-box__title&quot;&gt;
-            &lt;label for=&quot;box4&quot; class=&quot;sc-expandable-box__label sc-linked-catalog__label&quot;&gt;Kraftstoff&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;div class=&quot;sc-expandable-box__content sc-linked-catalog__content&quot;&gt;
-            &lt;ul&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;sc-inline-link&quot; href=&quot;https://www.autoscout24.de/auto/audi/hybrid/&quot; title=&quot;Audi Hybrid&quot;&gt;Audi Hybrid&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="media-items-target" class="positon-anchor">
-                <div class="element" id="media-items">
-                    <div class="markdown"> <h2>Media Items<span class="status review">Needs review UX</span><span class="status in-progress">work in progress</span></h2>
-
-<p>Collection of media items.</p>
+<p>Collection of media sections.</p>
 </div>
                    <div class="sample"><div>
-    <div class="sc-media-item sc-padding-bottom-xxxl">
-        <picture class="sc-media-item__pic">
+    <div class="sc-media-section sc-padding-bottom-xxxl">
+        <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
             <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
-        <div class="sc-media-item__content sc-margin-top-l">
+        <div class="sc-media-section__content sc-margin-top-l">
             <h3 class="sc-font-l sc-padding-bottom-m sc-font-bold">Title</h3>
             <p class="sc-padding-bottom-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -5561,14 +5153,14 @@ background-color: #f4f4f4;
         </div>
     </div>
 
-    <div class="sc-media-item sc-padding-bottom-xxxl sc-media-item--reverse">
-        <picture class="sc-media-item__pic">
+    <div class="sc-media-section sc-padding-bottom-xxxl sc-media-section--reverse">
+        <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
             <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
-        <div class="sc-media-item__content sc-margin-top-l">
+        <div class="sc-media-section__content sc-margin-top-l">
             <h3 class="sc-font-l sc-padding-bottom-m sc-font-bold">Title</h3>
             <ul class="sc-list sc-list--disc">
                 <li>
@@ -5585,14 +5177,14 @@ background-color: #f4f4f4;
         </div>
     </div>
 
-    <div class="sc-media-item sc-padding-bottom-xxxl">
-        <picture class="sc-media-item__pic">
+    <div class="sc-media-section sc-padding-bottom-xxxl">
+        <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
             <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
-        <div class="sc-media-item__content sc-margin-top-l">
+        <div class="sc-media-section__content sc-margin-top-l">
             <p class="sc-padding-bottom-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Fusce volutpat quis ex a varius.
@@ -5602,14 +5194,14 @@ background-color: #f4f4f4;
         </div>
     </div>
 
-    <div class="sc-media-item sc-padding-bottom-xxxl sc-media-item--reverse">
-        <picture class="sc-media-item__pic">
+    <div class="sc-media-section sc-padding-bottom-xxxl sc-media-section--reverse">
+        <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
             <img srcset="https://placehold.it/480x270" alt="My default image">
         </picture>
     
-        <div class="sc-media-item__content sc-margin-top-l">
+        <div class="sc-media-section__content sc-margin-top-l">
             <h3 class="sc-font-l sc-padding-bottom-m sc-font-bold">Title</h3>
             <span class="sc-disruptor sc-font-uppercase">Neu</span>
             <span class="sc-disruptor">Bereits über 20 Mio. Downloads!</span>
@@ -5622,19 +5214,19 @@ background-color: #f4f4f4;
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-items" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-media-section-list" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-media-items" class="hjs html">&lt;div&gt;
-    &lt;div class=&quot;sc-media-item sc-padding-bottom-xxxl&quot;&gt;
-        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+                                <code id="copy_code-code-media-section-list" class="hjs html">&lt;div&gt;
+    &lt;div class=&quot;sc-media-section sc-padding-bottom-xxxl&quot;&gt;
+        &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
             &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
-        &lt;div class=&quot;sc-media-item__content sc-margin-top-l&quot;&gt;
+        &lt;div class=&quot;sc-media-section__content sc-margin-top-l&quot;&gt;
             &lt;h3 class=&quot;sc-font-l sc-padding-bottom-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
             &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -5652,14 +5244,14 @@ background-color: #f4f4f4;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-item sc-padding-bottom-xxxl sc-media-item--reverse&quot;&gt;
-        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+    &lt;div class=&quot;sc-media-section sc-padding-bottom-xxxl sc-media-section--reverse&quot;&gt;
+        &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
             &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
-        &lt;div class=&quot;sc-media-item__content sc-margin-top-l&quot;&gt;
+        &lt;div class=&quot;sc-media-section__content sc-margin-top-l&quot;&gt;
             &lt;h3 class=&quot;sc-font-l sc-padding-bottom-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
             &lt;ul class=&quot;sc-list sc-list--disc&quot;&gt;
                 &lt;li&gt;
@@ -5676,14 +5268,14 @@ background-color: #f4f4f4;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-item sc-padding-bottom-xxxl&quot;&gt;
-        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+    &lt;div class=&quot;sc-media-section sc-padding-bottom-xxxl&quot;&gt;
+        &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
             &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
-        &lt;div class=&quot;sc-media-item__content sc-margin-top-l&quot;&gt;
+        &lt;div class=&quot;sc-media-section__content sc-margin-top-l&quot;&gt;
             &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Fusce volutpat quis ex a varius.
@@ -5693,14 +5285,14 @@ background-color: #f4f4f4;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-item sc-padding-bottom-xxxl sc-media-item--reverse&quot;&gt;
-        &lt;picture class=&quot;sc-media-item__pic&quot;&gt;
+    &lt;div class=&quot;sc-media-section sc-padding-bottom-xxxl sc-media-section--reverse&quot;&gt;
+        &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
             &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
         &lt;/picture&gt;
     
-        &lt;div class=&quot;sc-media-item__content sc-margin-top-l&quot;&gt;
+        &lt;div class=&quot;sc-media-section__content sc-margin-top-l&quot;&gt;
             &lt;h3 class=&quot;sc-font-l sc-padding-bottom-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
             &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
             &lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Downloads!&lt;/span&gt;
@@ -6411,6 +6003,433 @@ showcar.spyNavigation({
                 
                 </div>
             
+<hr></div><div id="superhero-target" class="positon-anchor">
+                <div class="element" id="superhero">
+                    <div class="markdown"> <h2>Superhero<span class="status review">needs UX review</span></h2>
+
+<p> The Superhero enables the author to display a variety and combination of different elements (e.g. image, text, button) on the very top of the page. It&#39;s fully responsive and therefore covers all screensizes. The text is black as default (on S version it will always be black) but in case of dark pictures, you may want to use a white color instead for M/L sizes (when texts and background-pics overlap): put the class name <code>sc-superhero__content--light</code> on <code>sc-superhero__content</code> container (see the third example).</p>
+</div>
+                   <div class="sample"><!-- 
+  ************
+    EXAMPLE 1 
+  ************
+-->
+
+<style>
+    .sc-superhero__imgs {
+      background-image: url('http://via.placeholder.com/480x270');
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/768x432');
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/1100x430');
+      }
+    }
+</style>
+
+<div class="sc-superhero">
+    <div class="sc-superhero__imgs">
+      <a href="#">
+        <img src="https://placeimg.com/170/148/any">
+      </a>
+    </div>
+
+    <div class="sc-superhero__content sc-superhero__content--light">
+      <span class="sc-disruptor sc-font-uppercase">Neu</span>
+      <h2 class="sc-superhero__title sc-margin-top-m">Title for Superhero</h2>
+      <p class="sc-padding-bottom-xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, 
+          non sodales arcu erat non tortor.
+      </p>
+      <ul class="sc-list sc-list--disc sc-padding-bottom-xl">
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+      </ul>
+      <button class="sc-btn-bob">I am Bob!</button>
+      <span class="sc-block sc-margin-top-xxl sc-font-s">* some footnotes</span>
+    </div>
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 2
+  ************
+-->
+
+<style>
+    .sc-superhero__imgs {
+      background-image: url('http://via.placeholder.com/480x270');
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/768x432');
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/1100x430');
+      }
+    }
+</style>
+
+<div class="sc-superhero">
+    <div class="sc-superhero__imgs">
+      <a href="#">
+        <img src="https://placeimg.com/170/148/any">
+      </a>
+    </div>
+
+    <div class="sc-superhero__content sc-superhero__content--light">
+      <span class="sc-disruptor sc-font-uppercase">Neu</span>
+      <h3 class="sc-superhero__title sc-margin-top-m">Title for Superhero that is quite long</h3>
+    </div>
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 3
+  ************
+-->
+
+<style>
+    .sc-superhero__imgs {
+      background-image: url('http://via.placeholder.com/480x270');
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/768x432');
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/1100x430');
+      }
+    }
+</style>
+
+<div class="sc-superhero">
+    <div class="sc-superhero__imgs">
+      <a href="#">
+        <img src="https://placeimg.com/170/148/any">
+      </a>
+    </div>
+
+    <div class="sc-superhero__content">
+      <h3 class="sc-superhero__title sc-margin-top-m">Title for Superhero</h3>
+      <p class="sc-padding-bottom-xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </p>
+    </div>
+      
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 4 
+  ************
+-->
+
+<style>
+    .sc-superhero__imgs {
+      background-image: url('http://via.placeholder.com/480x270');
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/768x432');
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url('http://via.placeholder.com/1100x430');
+      }
+    }
+</style>
+
+<div class="sc-superhero">
+    <div class="sc-superhero__imgs">
+      
+    </div>
+
+    <div class="sc-superhero__content sc-superhero__content--light">
+      <span class="sc-disruptor sc-font-uppercase">Neu</span>
+      <h2 class="sc-superhero__title sc-margin-top-m">Title for Superhero</h2>
+      <p>
+        That text needs to be explaned
+        <as24-tooltip class="sc-tooltip">
+          <as24-icon type="info" style="width: 16px;"></as24-icon>
+          <span class="sc-tooltip-content">Information in tooltip <a href="/">link</a></span>
+        </as24-tooltip>
+      </p>
+      <span class="sc-block sc-margin-top-xxl sc-font-s">* some footnotes</span>
+    </div>
+</div>
+
+<!-- --></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-superhero" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-superhero" class="hjs html">&lt;!-- 
+  ************
+    EXAMPLE 1 
+  ************
+--&gt;
+
+&lt;style&gt;
+    .sc-superhero__imgs {
+      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
+      }
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
+      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
+      &lt;h2 class=&quot;sc-superhero__title sc-margin-top-m&quot;&gt;Title for Superhero&lt;/h2&gt;
+      &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, 
+          non sodales arcu erat non tortor.
+      &lt;/p&gt;
+      &lt;ul class=&quot;sc-list sc-list--disc sc-padding-bottom-xl&quot;&gt;
+          &lt;li&gt;One&lt;/li&gt;
+          &lt;li&gt;Two&lt;/li&gt;
+          &lt;li&gt;Three&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;button class=&quot;sc-btn-bob&quot;&gt;I am Bob!&lt;/button&gt;
+      &lt;span class=&quot;sc-block sc-margin-top-xxl sc-font-s&quot;&gt;* some footnotes&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 2
+  ************
+--&gt;
+
+&lt;style&gt;
+    .sc-superhero__imgs {
+      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
+      }
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
+      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
+      &lt;h3 class=&quot;sc-superhero__title sc-margin-top-m&quot;&gt;Title for Superhero that is quite long&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 3
+  ************
+--&gt;
+
+&lt;style&gt;
+    .sc-superhero__imgs {
+      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
+      }
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-superhero__content&quot;&gt;
+      &lt;h3 class=&quot;sc-superhero__title sc-margin-top-m&quot;&gt;Title for Superhero&lt;/h3&gt;
+      &lt;p class=&quot;sc-padding-bottom-xl&quot;&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing.
+      &lt;/p&gt;
+    &lt;/div&gt;
+      
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 4 
+  ************
+--&gt;
+
+&lt;style&gt;
+    .sc-superhero__imgs {
+      background-image: url(&apos;http://via.placeholder.com/480x270&apos;);
+    }
+
+    @media screen and (min-width: 768px) {
+      .sc-superhero__imgs {
+        background-image: none;
+      }
+
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/768x432&apos;);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sc-superhero {
+        background-image: url(&apos;http://via.placeholder.com/1100x430&apos;);
+      }
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
+      
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
+      &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
+      &lt;h2 class=&quot;sc-superhero__title sc-margin-top-m&quot;&gt;Title for Superhero&lt;/h2&gt;
+      &lt;p&gt;
+        That text needs to be explaned
+        &lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;
+          &lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
+          &lt;span class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/span&gt;
+        &lt;/as24-tooltip&gt;
+      &lt;/p&gt;
+      &lt;span class=&quot;sc-block sc-margin-top-xxl sc-font-s&quot;&gt;* some footnotes&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="teaser-external-target" class="positon-anchor">
                 <div class="element" id="teaser-external">
                     <div class="markdown"><h2>Teaser external<span class="status approved">APPROVED</span></h2>
@@ -6515,266 +6534,6 @@ showcar.spyNavigation({
 
 &lt;/div&gt;
 </code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="unordered-list-target" class="positon-anchor">
-                <div class="element" id="unordered-list">
-                    <div class="markdown"><h2>Unordered List<span class="status in-progress">work in progress</span></h2></div>
-                   <div class="sample"><div class="sc-unordered-lists">
-
-    <div class="sc-unordered-list">
-        <h4 class="sc-unordered-list__title">Title comes here</h4>
-        <ul class="sc-unordered-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-unordered-list">
-        <h4 class="sc-unordered-list__title">Title comes here</h4>
-        <ul class="sc-unordered-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-unordered-list">
-        <h4 class="sc-unordered-list__title">Title comes here</h4>
-        <ul class="sc-unordered-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-unordered-list">
-        <h4 class="sc-unordered-list__title">Title comes here</h4>
-        <ul class="sc-unordered-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-unordered-list">
-        <h4 class="sc-unordered-list__title">Title comes here</h4>
-        <ul class="sc-unordered-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<br />
-<hr>
-<br />
-<br />
-
-<div class="sc-unordered-lists">
-
-    <div class="sc-unordered-list sc-unordered-list--with-icon">
-      <h4 class="sc-unordered-list__title">Title comes here</h4>
-      <ul class="sc-unordered-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-unordered-list sc-unordered-list--with-icon">
-      <h4 class="sc-unordered-list__title">Title comes here</h4>
-      <ul class="sc-unordered-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-unordered-list sc-unordered-list--with-icon">
-      <h4 class="sc-unordered-list__title">Title comes here</h4>
-      <ul class="sc-unordered-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-unordered-list sc-unordered-list--with-icon">
-      <h4 class="sc-unordered-list__title">Title comes here</h4>
-      <ul class="sc-unordered-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-unordered-list sc-unordered-list--with-icon">
-      <h4 class="sc-unordered-list__title">Title comes here</h4>
-      <ul class="sc-unordered-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-  </div></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-unordered-list" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-unordered-list" class="hjs html">&lt;div class=&quot;sc-unordered-lists&quot;&gt;
-
-    &lt;div class=&quot;sc-unordered-list&quot;&gt;
-        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list&quot;&gt;
-        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list&quot;&gt;
-        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list&quot;&gt;
-        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list&quot;&gt;
-        &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;br /&gt;
-&lt;hr&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-
-&lt;div class=&quot;sc-unordered-lists&quot;&gt;
-
-    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-unordered-list sc-unordered-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-unordered-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-unordered-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-  &lt;/div&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
