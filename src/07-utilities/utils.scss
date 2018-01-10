@@ -173,85 +173,102 @@
   height: $XXXL;
 }
 
-// spacing classes
-.sc-padding-bottom-XS {
+/***** 
+******
+  
+  Spacing classes
+
+******
+*****/
+
+.sc-padding-bottom-xs {
   padding-bottom: $XS;
 }
 
-.sc-padding-bottom-S {
+.sc-padding-bottom-s {
   padding-bottom: $S;
 }
 
-.sc-padding-bottom-M {
+.sc-padding-bottom-m {
   padding-bottom: $M;
 }
 
-.sc-padding-bottom-L {
+.sc-padding-bottom-l {
   padding-bottom: $L;
 }
 
-.sc-padding-bottom-XL {
+.sc-padding-bottom-xl {
   padding-bottom: $XL;
 }
 
-.sc-padding-bottom-XXL {
+.sc-padding-bottom-xxl {
   padding-bottom: $XXL;
 }
 
-.sc-padding-bottom-XXXL {
+.sc-padding-bottom-xxxl {
   padding-bottom: $XXXL;
 }
 
-.sc-margin-top-XS {
+.sc-margin-top-xs {
   margin-top: $XS;
 }
 
-.sc-margin-top-S {
+.sc-margin-top-s {
   margin-top: $S;
 }
 
-.sc-margin-top-M {
+.sc-margin-top-m {
   margin-top: $M;
 }
 
-.sc-margin-top-L {
+.sc-margin-top-l {
   margin-top: $L;
 }
 
-.sc-margin-top-XL {
+.sc-margin-top-xl {
   margin-top: $XL;
 }
 
-.sc-margin-top-XXL {
+.sc-margin-top-xxl {
   margin-top: $XXL;
 }
 
-.sc-margin-top-XXXL {
+.sc-margin-top-xxxl {
   margin-top: $XXXL;
 }
 
-.sc-margin-right-XS {
+.sc-margin-right-xs {
   margin-right: $XS;
 }
 
-.sc-margin-right-S {
+.sc-margin-right-s {
   margin-right: $S;
 }
 
-.sc-margin-right-M {
+.sc-margin-right-m {
   margin-right: $M;
 }
 
-.sc-margin-right-L {
+.sc-margin-right-l {
   margin-right: $L;
 }
 
-.sc-padding-horizontal-L {
+.sc-padding-horizontal-l {
   padding-left: $L;
   padding-right: $L;
 }
 
-.sc-padding-vertical-M {
+.sc-padding-vertical-xxl {
+  padding-top: $XXL;
+  padding-bottom: $XXL;
+}
+
+.sc-padding-vertical-xxxl {
+  padding-top: $XXXL;
+  padding-bottom: $XXXL;
+}
+
+.sc-padding-vertical-m-l {
   padding-top: $M;
   padding-bottom: $M;
 
@@ -261,7 +278,7 @@
   }
 }
 
-.sc-padding-vertical-L {
+.sc-padding-vertical-l-xl {
   padding-top: $L;
   padding-bottom: $L;
 
@@ -270,16 +287,8 @@
     padding-bottom: $XL;
   }
 }
-
-.sc-padding-vertical-XXL {
-  padding-top: $XXL;
-  padding-bottom: $XXL;
-}
-
-.sc-padding-vertical-XXXL {
-  padding-top: $XXXL;
-  padding-bottom: $XXXL;
-}
+/***** 
+*****/
 
 // LEAGACY CODE - SHOULD NOT BE USED
 //xl viewport
