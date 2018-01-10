@@ -1,7 +1,7 @@
 @import '../../../01-settings/variables';
 
 
-.sc-media-item {
+.sc-media-section {
   display: flex;
   flex-direction: column;
 
@@ -10,13 +10,13 @@
   }
 }
 
-.sc-media-item--reverse {
-  .sc-media-item__content {
+.sc-media-section--reverse {
+  .sc-media-section__content {
     @include mqmin($viewportL) {
       order: 1;
     }
   }
-  .sc-media-item__pic {
+  .sc-media-section__pic {
     @include mqmin($viewportL) {
       order: 2;
       margin-left: $XXXL;
@@ -25,7 +25,7 @@
   }
 }
 
-.sc-media-item__pic {
+.sc-media-section__pic {
   display: block;
 
   @include mqmin($viewportL) {
@@ -38,7 +38,7 @@
   }
 }
 
-.sc-media-item__content {
+.sc-media-section__content {
   width: 100%;
   @include mqmin($viewportL) {
     max-width: 45%;

@@ -1,7 +1,7 @@
 @import '../../../01-settings/variables';
 @import '../../../02-sass-tools/sass-mq';
 
-.sc-jumbotron {
+.sc-superhero {
   background-color: $white;
   @include mqmin($viewportM) {
     background-position: center center;
@@ -19,7 +19,7 @@
   }
 }
 
-.sc-jumbotron__imgs {
+.sc-superhero__imgs {
   display: flex;
   align-items: flex-end;
   padding: $L;
@@ -46,7 +46,7 @@
   }
 }
 
-.sc-jumbotron__content {
+.sc-superhero__content {
   padding: $XXL $L $XXXL;
 
   @include mqmin($viewportM) {
@@ -59,11 +59,11 @@
   }
 }
 
-.sc-jumbotron__title {
+.sc-superhero__title {
   font-size: 24px;
 }
 
-.sc-jumbotron__content--light {
+.sc-superhero__content--light {
   @include mqmin($viewportM) {
     color: $white;
   }
