@@ -6,7 +6,7 @@
     display: flex;
   }
   
-  .sc-unordered-list {
+  .sc-anchor-list {
     @include mqmin($viewportL) {
       flex-grow: 1;
     }
