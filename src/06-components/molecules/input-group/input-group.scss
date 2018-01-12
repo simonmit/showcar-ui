@@ -51,7 +51,7 @@
   font-weight: 400;
 
   input[type=radio] {
-    display: none;
+    // display: none;
 
     &:disabled {
       & + label {
