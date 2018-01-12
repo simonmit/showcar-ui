@@ -2,6 +2,7 @@
 @import '../../../02-sass-tools/utils';
 
 .sc-link-text-box {
+
   @include mqmin($viewportL) {
     display: flex;
   }
@@ -37,5 +38,11 @@
 
   @include mqmin($viewportL) {
     padding-bottom: 0;
+  }
+}
+
+.sc-link-text-box-group {
+  .sc-link-text-box {
+    border-bottom: 1px solid $black-30;
   }
 }

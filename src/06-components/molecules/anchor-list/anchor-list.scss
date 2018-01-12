@@ -58,6 +58,11 @@
   padding-bottom: $L;
   font-weight: bold;
   color: $black-50; 
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
 
   @include mqmin($viewportL) {
     padding-bottom: $M;
