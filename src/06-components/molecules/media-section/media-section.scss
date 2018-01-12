@@ -4,6 +4,7 @@
 .sc-media-section {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid $black-30;
 
   @include mqmin($viewportL) {
     flex-direction: row;
