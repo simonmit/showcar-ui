@@ -98,6 +98,14 @@ custom-dropdown.sc-input {
     display: block;
   }
 
+  &.sc-scrollable {
+    div:last-child {
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 150px;
+    }
+  }
+
   div label {
     margin-top: $S;
     width: 100%;
@@ -106,4 +114,5 @@ custom-dropdown.sc-input {
       cursor: pointer;
     }
   }
+
 }

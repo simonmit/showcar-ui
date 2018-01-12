@@ -7,8 +7,8 @@ module.exports = (frame, assert, browserWidth, helper) => {
         let label3;
 
         beforeEach(() => {
-            trigger = frame.get('#custom-dropdown-default custom-dropdown p').toDomElement();
-            content = frame.get('#custom-dropdown-default custom-dropdown > div:nth-child(2)');
+            trigger = frame.get('#custom-dropdown-default [scrollable] p').toDomElement();
+            content = frame.get('#custom-dropdown-default [scrollable] > div:nth-child(2)');
             label1 = frame.get('#custom-dropdown-default [for=cd1]');
             label2 = frame.get('#custom-dropdown-default [for=cd2]');
             label3 = frame.get('#custom-dropdown-default [for=cd3]');
@@ -84,7 +84,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         let dropdown;
 
         beforeEach(() => {
-            dropdown = frame.get('#custom-dropdown-default custom-dropdown');
+            dropdown = frame.get('#custom-dropdown-default [scrollable]');
         })
 
         it('is rendered', () => {
