@@ -7,11 +7,11 @@
     display: flex;
   }
   
-  .sc-anchor-list {
-    @include mqmin($viewportL) {
-      flex-grow: 1;
-    }
-  }
+  // .sc-anchor-list {
+  //   @include mqmin($viewportL) {
+  //     flex-grow: 1;
+  //   }
+  // }
 }
 
 .sc-link-text-box__text {

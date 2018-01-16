@@ -5,10 +5,6 @@ export default function (tagName) {
         const el = this;
         if (! el.hasAttribute('checkboxgroup')) return;
 
-        if(el.hasAttribute('scrollable')) {
-            el.classList.add('sc-scrollable');
-        }
-
         el.addEventListener('click', (e) => {
             e.stopPropagation();
         });

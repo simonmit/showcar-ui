@@ -6,7 +6,8 @@ custom-dropdown.sc-input {
   background-color: $white;
   display: block;
 
-  &[disabled=''] {
+  &[disabled=''],
+  &[disabled=true] {
     opacity: 0.55;
     cursor: not-allowed;
 
@@ -98,7 +99,8 @@ custom-dropdown.sc-input {
     display: block;
   }
 
-  &.sc-scrollable {
+  &[scrollable=''],
+  &[scrollable=true] {
     div:last-child {
       overflow-y: auto;
       overflow-x: hidden;

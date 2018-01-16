@@ -4,7 +4,6 @@
 .sc-media-section {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid $black-30;
 
   @include mqmin($viewportL) {
     flex-direction: row;
@@ -43,5 +42,11 @@
   width: 100%;
   @include mqmin($viewportL) {
     max-width: 45%;
+  }
+}
+
+.sc-media-section-list {
+  .sc-media-section {
+    border-bottom: 1px solid $black-30;
   }
 }
