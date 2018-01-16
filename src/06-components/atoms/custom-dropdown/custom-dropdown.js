@@ -55,6 +55,7 @@ export default function (tagName) {
         attachEventListeners();
 
         el.addEventListener('focusout', (e) => {
+            const checkboxes = el.querySelectorAll('[type=checkbox]');
             const elReceivingFocus = e.relatedTarget;
             if (!Array.from(checkboxes).some(cBox => cBox === elReceivingFocus) && 
                 el !== elReceivingFocus){
