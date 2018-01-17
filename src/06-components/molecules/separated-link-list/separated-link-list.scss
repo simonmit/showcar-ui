@@ -8,8 +8,22 @@
   .sc-separated-link-list {
     padding-bottom: $XL;
 
+    &:nth-last-child(-n+2) {
+      padding-bottom: 0;
+    }
+
     @include mqmin($viewportM) {
       padding-bottom: $XXL;
+
+      &:nth-last-child(-n+3) {
+        padding-bottom: 0;
+      }
+    }
+
+    @include mqmin($viewportL) {
+      &:nth-last-child(-n+5) {
+        padding-bottom: 0;
+      }
     }
   }
 }
