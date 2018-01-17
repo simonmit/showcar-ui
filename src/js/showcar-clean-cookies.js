@@ -31,7 +31,8 @@ const whiteList = [
     'optimizelyRedirectData',
     'optimizelyReferrer',
     'showTsmOnListPage',
-    'isAdBlockerUsed'
+    'isAdBlockerUsed',
+    'urugot-bucket'
 ];
 
 export default () => {
