@@ -1,0 +1,56 @@
+@import '../../../01-settings/variables';
+
+.sc-unique-link-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+  li {
+    $colNumber: 2;
+    $colMargin: $L;
+    width: calc((100% / #{$colNumber}) - #{$colMargin} + (#{$colMargin} / #{$colNumber}));
+    margin-right: $colMargin;
+
+    border-bottom: 1px solid $black-30;
+    padding-bottom: $S;
+    margin-bottom: $S;
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    @include mqmin($viewportM) {
+      $colNumber: 3;
+      width: calc((100% / #{$colNumber}) - #{$colMargin} + (#{$colMargin} / #{$colNumber}));
+
+      &:nth-child(2n+2) {
+        margin-right: $L;
+      }
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      position: relative;
+      padding-left: calc(#{$S} + 12px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:after {
+        position: absolute;
+        content: '';
+        transform: rotate(270deg);
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAuNSIgaGVpZ2h0PSI2LjI3NjYxMzIiIHZpZXdCb3g9IjAgMCAxMC41IDYuMjc2NjEzMiIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNIDAuMDA0MzY0NTksMC4wMjg0NjM5NyA0LjU3ODg4MzQsNC4yMTkyMDc2IDkuMTUzMjU4OSwwLjAyODgxOTc1IiBzdHJva2Utd2lkdGg9IjEuOTk5NjcwMzkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC42NyAuNzE0KSIgc3Ryb2tlPSIjOTQ5NDk0IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
+        background-repeat: no-repeat;
+        width: $M;
+        height: $M;
+        left: 0;
+        top: $XS;
+      }
+    }
+  }
+}

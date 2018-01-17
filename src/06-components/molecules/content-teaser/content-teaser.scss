@@ -7,13 +7,9 @@ $imgMaxWidth: 263px;
   flex-direction: column;
   order: 2;
   background-color: $white;
-  margin-left: $L;
-  margin-right: $L;
   
   @include mqmin($viewportM) {
     flex-direction: row;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 
@@ -94,6 +90,13 @@ $imgMaxWidth: 263px;
   .sc-content-teaser {
     border-bottom: 1px solid $black-30;
     padding-bottom: $XXL;
+    margin-left: $L;
+    margin-right: $L;
+  
+    @include mqmin($viewportM) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .sc-content-teaser:not(:last-child) {

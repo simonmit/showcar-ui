@@ -1,0 +1,112 @@
+@import '../../../01-settings/variables';
+
+.sc-separated-link-list-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  .sc-separated-link-list {
+    padding-bottom: $XL;
+
+    &:nth-last-child(-n+2) {
+      padding-bottom: 0;
+    }
+
+    @include mqmin($viewportM) {
+      padding-bottom: $XXL;
+
+      &:nth-last-child(-n+3) {
+        padding-bottom: 0;
+      }
+    }
+
+    @include mqmin($viewportL) {
+      &:nth-last-child(-n+5) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.sc-separated-link-list {
+  padding-right: $L;
+  max-width: 50%;
+  flex: 0 1 50%;
+  
+  &:nth-child(2n) {
+    padding-right: 0; 
+  }
+
+  @include mqmin($viewportM) {
+    max-width: 33.33333%;
+    flex: 0 1 33.33333%;
+
+    &:nth-child(2n){
+      padding-right: $L; 
+    }
+
+    &:nth-child(3n){
+      padding-right: 0; 
+    }
+  }
+
+  @include mqmin($viewportL) {
+    max-width: none;
+    flex: 0 1 20%;
+
+    &:nth-child(2n){
+      padding-right: $L; 
+    }
+
+    &:nth-child(3n){
+      padding-right: $L;  
+    }
+
+    &:nth-child(5n){
+      padding-right: 0; 
+    }
+  }
+
+  &:last-child {
+    padding-right: 0; 
+  }
+}
+
+.sc-separated-link-list__title {
+  text-transform: uppercase;
+  padding-bottom: $L;
+  font-weight: bold;
+  color: $black-50; 
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+
+  @include mqmin($viewportL) {
+    padding-bottom: $M;
+  }
+
+}
+
+.sc-separated-link-list__ul {
+  li {
+    padding-bottom: $M;
+
+    @include mqmin($viewportL) {
+      padding-bottom: $S;
+    }
+
+    a {
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

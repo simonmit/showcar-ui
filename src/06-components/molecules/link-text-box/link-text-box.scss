@@ -2,15 +2,8 @@
 @import '../../../02-sass-tools/utils';
 
 .sc-link-text-box {
-
   @include mqmin($viewportL) {
     display: flex;
-  }
-  
-  .sc-anchor-list {
-    @include mqmin($viewportL) {
-      flex-grow: 1;
-    }
   }
 }
 
@@ -44,5 +37,16 @@
 .sc-link-text-box-group {
   .sc-link-text-box {
     border-bottom: 1px solid $black-30;
+    margin-top: $XXXL;
+    padding-bottom: $XXXL;
+
+    @include mqmin($viewportM) {
+      margin-top: $XXXXL;
+      padding-bottom: $XXXXL;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

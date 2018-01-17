@@ -213,6 +213,20 @@
   padding-bottom: $XXXXL;
 }
 
+.sc-padding-bottom-xxxl-for-s {
+  @include mqmin($viewportS) {
+    padding-bottom: $XXXL;
+  }
+}
+
+.sc-padding-bottom-xxxxl-for-m {
+  @include mqmin($viewportM) {
+    padding-bottom: $XXXXL;
+  }
+}
+
+/**/
+
 .sc-margin-top-xs {
   margin-top: $XS;
 }
@@ -243,6 +257,18 @@
 
 .sc-margin-top-xxxxl {
   margin-top: $XXXXL;
+}
+
+.sc-margin-top-xxxl-for-s {
+  @include mqmin($viewportS) {
+    margin-top: $XXXL;
+  }
+}
+
+.sc-margin-top-xxxxl-for-m {
+  @include mqmin($viewportM) {
+    margin-top: $XXXXL;
+  }
 }
 
 .sc-margin-right-xs {
