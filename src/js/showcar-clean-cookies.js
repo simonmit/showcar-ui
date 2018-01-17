@@ -1,16 +1,11 @@
 const whiteList = [
-    // What are these?
     '_asga',
     '__gads',
-
-    // Google Analytics
     '_ga',
     '_gid',
     '_gat',
     'AMP_TOKEN',
     'as24-gtmSearchCrit',
-
-    // Standard AS24
     'as24Visitor',
     'culture',
     'testmode',
@@ -20,12 +15,23 @@ const whiteList = [
     'User',
     'cmpatt',
     'cms_fbOFF',
-
-    // S24 Universal Analytics
     'S24UT',
-
-    // Team specific
-    'webxtest'
+    'webxtest',
+    'testrun',
+    '__utma',
+    '__utmz',
+    'optimizelySegments',
+    'optimizelyBuckets',
+    'optimizelyPendingLogEvents',
+    'optimizelyEndUserId',
+    '_asse',
+    '_asga',
+    '_asga_gid',
+    '_gat_ALL',
+    'optimizelyRedirectData',
+    'optimizelyReferrer',
+    'showTsmOnListPage',
+    'isAdBlockerUsed'
 ];
 
 export default () => {
