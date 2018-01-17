@@ -7,22 +7,47 @@
 
   .sc-separated-link-list {
     padding-bottom: $XL;
+    margin-top: $XL;
+    border-bottom: 1px solid $black-30;
 
-    &:nth-last-child(-n+2) {
-      padding-bottom: 0;
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+
+    @include mqmax($viewportM - 1) {
+      &:nth-child(2n+1):nth-last-child(-n+2),
+      &:nth-child(2n+1):nth-last-child(-n+2) ~ .sc-separated-link-list {
+        border-bottom: 0;
+        padding-bottom: 0; 
+      }
     }
 
     @include mqmin($viewportM) {
+      margin-top: $XXL;
       padding-bottom: $XXL;
 
-      &:nth-last-child(-n+3) {
-        padding-bottom: 0;
+      &:nth-child(-n+3) {
+        margin-top: 0;
+      }
+
+      @include mqmax($viewportL - 1) {
+        &:nth-child(3n+1):nth-last-child(-n+3),
+        &:nth-child(3n+1):nth-last-child(-n+3) ~ .sc-separated-link-list {
+          border-bottom: 0;
+          padding-bottom: 0; 
+        }
       }
     }
 
     @include mqmin($viewportL) {
-      &:nth-last-child(-n+5) {
-        padding-bottom: 0;
+      &:nth-child(-n+5) {
+        margin-top: 0;
+      }
+
+      &:nth-child(5n+1):nth-last-child(-n+5),
+      &:nth-child(5n+1):nth-last-child(-n+5) ~ .sc-separated-link-list {
+        border-bottom: 0;
+        padding-bottom: 0; 
       }
     }
   }
