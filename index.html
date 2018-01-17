@@ -190,10 +190,6 @@
                 <span>molecules</span>
                 <a href="/docs/molecules" class="open-separate"></a>
                 <ul><li>
-            <a data-scroll href="#anchor-list-target">anchor-list</a>
-            <a href="/docs/molecules/anchor-list" class="open-separate"></a>
-        </li>
-<li>
             <a data-scroll href="#benefit-target">benefit</a>
             <a href="/docs/molecules/benefit" class="open-separate"></a>
         </li>
@@ -242,12 +238,20 @@
             <a href="/docs/molecules/page-header" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#separated-link-list-target">separated-link-list</a>
+            <a href="/docs/molecules/separated-link-list" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#small-footer-target">small-footer</a>
             <a href="/docs/molecules/small-footer" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#small-header-target">small-header</a>
             <a href="/docs/molecules/small-header" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#unique-link-list-target">unique-link-list</a>
+            <a href="/docs/molecules/unique-link-list" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#validations-target">validations</a>
@@ -261,10 +265,6 @@
                 <span>organisms</span>
                 <a href="/docs/organisms" class="open-separate"></a>
                 <ul><li>
-            <a data-scroll href="#anchor-list-group-target">anchor-list-group</a>
-            <a href="/docs/organisms/anchor-list-group" class="open-separate"></a>
-        </li>
-<li>
             <a data-scroll href="#benefit-group-target">benefit-group</a>
             <a href="/docs/organisms/benefit-group" class="open-separate"></a>
         </li>
@@ -295,6 +295,10 @@
 <li>
             <a data-scroll href="#search-mask-target">search-mask</a>
             <a href="/docs/organisms/search-mask" class="open-separate"></a>
+        </li>
+<li>
+            <a data-scroll href="#separated-link-list-group-target">separated-link-list-group</a>
+            <a href="/docs/organisms/separated-link-list-group" class="open-separate"></a>
         </li>
 <li>
             <a data-scroll href="#spy-navigation-target">spy-navigation</a>
@@ -3405,72 +3409,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
-<hr></div><div id="anchor-list-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
-                <div class="element" id="anchor-list">
-                    <div class="markdown"><h2>Anchor List<span class="status review">needs UX review</span></h2>
-
-<p>This is an Anchor List for showing a collection of links. They can be prefixed with an icon.</p>
-</div>
-                   <div class="sample"><div class="sc-anchor-list">
-    <h4 class="sc-anchor-list__title">Anchor List Simple</h4>
-    <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-    </ul>
-</div>
-
-<br><hr><br>
-
-<div class="sc-anchor-list sc-anchor-list--with-icon">
-    <h4 class="sc-anchor-list__title">Anchor List with Icons</h4>
-    <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-    </ul>
-</div></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-anchor-list" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-anchor-list" class="hjs html">&lt;div class=&quot;sc-anchor-list&quot;&gt;
-    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Anchor List Simple&lt;/h4&gt;
-    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
-
-&lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Anchor List with Icons&lt;/h4&gt;
-    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="benefit-target" class="positon-anchor">
+<hr></div><div id="benefit-target" class="positon-anchor"><h2 class="type_name">molecules</h2>
                 <div class="element" id="benefit">
                     <div class="markdown"> <h2>Benefit<span class="status review">Needs review UX</span></h2>
 
@@ -3829,45 +3768,23 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                    <div class="sample"><div class="sc-link-text-box">
     <div class="sc-link-text-box__text">
         <h3 class="sc-link-text-box__headline">Hybridautos</h3>
-        <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.</p>
+        <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus.</p>
     </div>
     <div class="sc-link-text-box__links">
-        <div class="sc-anchor-list-group">
-
-            <div class="sc-anchor-list sc-anchor-list--with-icon">
-              <h4 class="sc-anchor-list__title">Title comes here</h4>
-              <ul class="sc-anchor-list__ul">
-                <li><a href="#">BMW 1</a></li>
-                <li><a href="#">BMW 3</a></li>
-                <li><a href="#">BMW 5</a></li>
-                <li><a href="#">Mercedes A</a></li>
-                <li><a href="#">Ferrari</a></li>
-              </ul>
-            </div>
-        
-            <div class="sc-anchor-list sc-anchor-list--with-icon">
-              <h4 class="sc-anchor-list__title">Title comes here</h4>
-              <ul class="sc-anchor-list__ul">
-                <li><a href="#">BMW 1</a></li>
-                <li><a href="#">BMW 3</a></li>
-                <li><a href="#">BMW 5</a></li>
-                <li><a href="#">Mercedes A</a></li>
-                <li><a href="#">Ferrari</a></li>
-              </ul>
-            </div>
-        
-            <div class="sc-anchor-list sc-anchor-list--with-icon">
-              <h4 class="sc-anchor-list__title">Title comes here</h4>
-              <ul class="sc-anchor-list__ul">
-                <li><a href="#">BMW 1</a></li>
-                <li><a href="#">BMW 3</a></li>
-                <li><a href="#">BMW 5</a></li>
-                <li><a href="#">Mercedes A</a></li>
-                <li><a href="#">Ferrari</a></li>
-              </ul>
-            </div>
-        
-          </div>
+        <ul class="sc-unique-link-list">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">Honda</a></li>
+            <li><a href="#">Mercedes</a></li>
+            <li><a href="#">Ferrari</a></li>
+            <li><a href="#">FCA</a></li>
+            <li><a href="#">Land Rover</a></li>
+            <li><a href="#">Aprilia</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">Maserati</a></li>
+            <li><a href="#">Lamborghini</a></li>
+            <li><a href="#">Skoda</a></li>
+            <li><a href="#">Citroen</a></li>
+        </ul>
     </div>
 </div></div> 
                     <div class="code-sample">
@@ -3879,45 +3796,23 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                                 <code id="copy_code-code-link-text-box" class="hjs html">&lt;div class=&quot;sc-link-text-box&quot;&gt;
     &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
         &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos&lt;/h3&gt;
-        &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.&lt;/p&gt;
+        &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
-        &lt;div class=&quot;sc-anchor-list-group&quot;&gt;
-
-            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-        
-            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-        
-            &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-              &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-              &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-        
-          &lt;/div&gt;
+        &lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Honda&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FCA&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Land Rover&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Aprilia&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Maserati&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lamborghini&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Skoda&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Citroen&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
                             </pre>
@@ -4373,6 +4268,45 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                  
                 </div>
             
+<hr></div><div id="separated-link-list-target" class="positon-anchor">
+                <div class="element" id="separated-link-list">
+                    <div class="markdown"><h2>Separated list of links<span class="status review">needs UX review</span></h2>
+
+<p>This is an list for showing a collection of links.</p>
+</div>
+                   <div class="sample"><div class="sc-separated-link-list">
+    <h4 class="sc-separated-link-list__title">List example</h4>
+    <ul class="sc-separated-link-list__ul">
+        <li><a href="#">BMW 1</a></li>
+        <li><a href="#">BMW 3</a></li>
+        <li><a href="#">BMW 5</a></li>
+        <li><a href="#">Mercedes A</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-separated-link-list" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-separated-link-list" class="hjs html">&lt;div class=&quot;sc-separated-link-list&quot;&gt;
+    &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;List example&lt;/h4&gt;
+    &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="small-footer-target" class="positon-anchor">
                 <div class="element" id="small-footer">
                     <div class="markdown"><h2>Small Footer<span class="status approved">Approved</span></h2>
@@ -4467,6 +4401,70 @@ background-color: #f4f4f4;
                  
                 </div>
             
+<hr></div><div id="unique-link-list-target" class="positon-anchor">
+                <div class="element" id="unique-link-list">
+                    <div class="markdown"><h2>Unique List of Links<span class="status review">needs UX review</span></h2>
+
+<p>This is an list for showing a collection of links. They can be prefixed with an icon.<br>
+The list has no siblings (unique) and its items flow throught the available space, adapting the columns according to the user viewport. </p>
+</div>
+                   <div class="sample"><ul class="sc-unique-link-list">
+    <li><a href="#">BMW 1</a></li>
+    <li><a href="#">BMW 3</a></li>
+    <li><a href="#">BMW 5</a></li>
+    <li><a href="#">Mercedes A</a></li>
+    <li><a href="#">Ferrari</a></li>
+    <li><a href="#">BMW 1</a></li>
+    <li><a href="#">BMW 3</a></li>
+    <li><a href="#">BMW 5</a></li>
+    <li><a href="#">Mercedes A</a></li>
+    <li><a href="#">Ferrari</a></li>
+    <li><a href="#">BMW 1</a></li>
+    <li><a href="#">BMW 3</a></li>
+    <li><a href="#">BMW 5</a></li>
+    <li><a href="#">Mercedes A</a></li>
+    <li><a href="#">Ferrari</a></li>
+    <li><a href="#">BMW 1</a></li>
+    <li><a href="#">BMW 3</a></li>
+    <li><a href="#">BMW 5</a></li>
+    <li><a href="#">Mercedes A</a></li>
+    <li><a href="#">Ferrari</a></li>
+</ul></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-unique-link-list" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-unique-link-list" class="hjs html">&lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="validations-target" class="positon-anchor">
                 <div class="element" id="validation">
                     <div class="markdown"><h2>Validation<span class="status approved">Approved</span></h2>
@@ -4490,270 +4488,7 @@ background-color: #f4f4f4;
                  
                 </div>
             
-<hr></div><div id="anchor-list-group-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
-                <div class="element" id="anchor-list-group">
-                    <div class="markdown"><h2>Anchor List Group<span class="status review">needs UX review</span></h2>
-
-<p>This is an Anchor List Group for showing a collection of anchor lists. They can also be prefixed with an icon.</p>
-</div>
-                   <div class="sample"><div class="sc-anchor-list-group">
-
-    <div class="sc-anchor-list">
-        <h4 class="sc-anchor-list__title">Title comes here</h4>
-        <ul class="sc-anchor-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-anchor-list">
-        <h4 class="sc-anchor-list__title">Title comes here</h4>
-        <ul class="sc-anchor-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-anchor-list">
-        <h4 class="sc-anchor-list__title">Title comes here</h4>
-        <ul class="sc-anchor-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-anchor-list">
-        <h4 class="sc-anchor-list__title">Title comes here</h4>
-        <ul class="sc-anchor-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-    <div class="sc-anchor-list">
-        <h4 class="sc-anchor-list__title">Title comes here</h4>
-        <ul class="sc-anchor-list__ul">
-            <li><a href="#">BMW 1</a></li>
-            <li><a href="#">BMW 3</a></li>
-            <li><a href="#">BMW 5</a></li>
-            <li><a href="#">Mercedes A</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<br />
-<hr>
-<br />
-<br />
-
-<div class="sc-anchor-list-group">
-
-    <div class="sc-anchor-list sc-anchor-list--with-icon">
-      <h4 class="sc-anchor-list__title">Title comes here</h4>
-      <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-anchor-list sc-anchor-list--with-icon">
-      <h4 class="sc-anchor-list__title">Title comes here</h4>
-      <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-anchor-list sc-anchor-list--with-icon">
-      <h4 class="sc-anchor-list__title">Title comes here</h4>
-      <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-anchor-list sc-anchor-list--with-icon">
-      <h4 class="sc-anchor-list__title">Title comes here</h4>
-      <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-    <div class="sc-anchor-list sc-anchor-list--with-icon">
-      <h4 class="sc-anchor-list__title">Title comes here</h4>
-      <ul class="sc-anchor-list__ul">
-        <li><a href="#">BMW 1</a></li>
-        <li><a href="#">BMW 3</a></li>
-        <li><a href="#">BMW 5</a></li>
-        <li><a href="#">Mercedes A</a></li>
-        <li><a href="#">Ferrari</a></li>
-      </ul>
-    </div>
-
-  </div></div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-anchor-list-group" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-anchor-list-group" class="hjs html">&lt;div class=&quot;sc-anchor-list-group&quot;&gt;
-
-    &lt;div class=&quot;sc-anchor-list&quot;&gt;
-        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list&quot;&gt;
-        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list&quot;&gt;
-        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list&quot;&gt;
-        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list&quot;&gt;
-        &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-        &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;br /&gt;
-&lt;hr&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-
-&lt;div class=&quot;sc-anchor-list-group&quot;&gt;
-
-    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-      &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-      &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-  &lt;/div&gt;</code>
-                            </pre>
-                        </div>
-                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
-                    </div>
-                 
-                </div>
-            
-<hr></div><div id="benefit-group-target" class="positon-anchor">
+<hr></div><div id="benefit-group-target" class="positon-anchor"><h2 class="type_name">organisms</h2>
                 <div class="element" id="benefit-group">
                     <div class="markdown"> <h2>Benefit Group<span class="status review">Needs UX review</span></h2>
 
@@ -5277,7 +5012,7 @@ background-color: #f4f4f4;
 <p>Collection of link text boxes. </p>
 </div>
                    <div class="sample"><div class="sc-link-text-box-group">
-    <div class="sc-link-text-box sc-padding-bottom-xxxxl">
+    <div class="sc-link-text-box">
         <div class="sc-link-text-box__text">
             <h3 class="sc-link-text-box__headline">Hybridautos</h3>
             <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
@@ -5285,149 +5020,70 @@ background-color: #f4f4f4;
                 sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.</p>
         </div>
         <div class="sc-link-text-box__links">
-            <div class="sc-anchor-list-group">
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-            </div>
+            <ul class="sc-unique-link-list">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">Honda</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
+                <li><a href="#">FCA</a></li>
+                <li><a href="#">Land Rover</a></li>
+                <li><a href="#">Aprilia</a></li>
+                <li><a href="#">Maserati</a></li>
+                <li><a href="#">Lamborghini</a></li>
+                <li><a href="#">Skora</a></li>
+                <li><a href="#">Fiat</a></li>
+            </ul>
         </div>
     </div>
-
-    <div class="sc-link-text-box sc-margin-top-xxxxl sc-padding-bottom-xxxxl">
+    <div class="sc-link-text-box">
         <div class="sc-link-text-box__text">
-            <h3 class="sc-link-text-box__headline">Hybridautos</h3>
+            <h3 class="sc-link-text-box__headline">Hybridautos 2</h3>
+            <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="sc-link-text-box__links">
+            <ul class="sc-unique-link-list">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">Honda</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sc-link-text-box">
+        <div class="sc-link-text-box__text">
+            <h3 class="sc-link-text-box__headline">Hybridautos 3</h3>
             <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
                 tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec
                 sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.</p>
         </div>
         <div class="sc-link-text-box__links">
-            <div class="sc-anchor-list-group">
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="sc-anchor-list sc-anchor-list--with-icon">
-                    <h4 class="sc-anchor-list__title">Title comes here</h4>
-                    <ul class="sc-anchor-list__ul">
-                        <li>
-                            <a href="#">BMW 1</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 3</a>
-                        </li>
-                        <li>
-                            <a href="#">BMW 5</a>
-                        </li>
-                        <li>
-                            <a href="#">Mercedes A</a>
-                        </li>
-                        <li>
-                            <a href="#">Ferrari</a>
-                        </li>
-                    </ul>
-                </div>
-    
-            </div>
+            <ul class="sc-unique-link-list">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">Honda</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
+                <li><a href="#">FCA</a></li>
+                <li><a href="#">Land Rover</a></li>
+                <li><a href="#">Aprilia</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sc-link-text-box">
+        <div class="sc-link-text-box__text">
+            <h3 class="sc-link-text-box__headline">Hybridautos 4</h3>
+            <p class="sc-link-text-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
+                tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus.</p>
+        </div>
+        <div class="sc-link-text-box__links">
+            <ul class="sc-unique-link-list">
+                <li><a href="#">BMW 1</a></li>
+                <li><a href="#">BMW 3</a></li>
+                <li><a href="#">Honda</a></li>
+                <li><a href="#">Mercedes A</a></li>
+                <li><a href="#">Ferrari</a></li>
+                <li><a href="#">FCA</a></li>
+            </ul>
         </div>
     </div>
 </div></div> 
@@ -5438,7 +5094,7 @@ background-color: #f4f4f4;
                              </button>
                             <pre>
                                 <code id="copy_code-code-link-text-box-group" class="hjs html">&lt;div class=&quot;sc-link-text-box-group&quot;&gt;
-    &lt;div class=&quot;sc-link-text-box sc-padding-bottom-xxxxl&quot;&gt;
+    &lt;div class=&quot;sc-link-text-box&quot;&gt;
         &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
             &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos&lt;/h3&gt;
             &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
@@ -5446,149 +5102,70 @@ background-color: #f4f4f4;
                 sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
-            &lt;div class=&quot;sc-anchor-list-group&quot;&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-            &lt;/div&gt;
+            &lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Honda&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FCA&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Land Rover&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Aprilia&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Maserati&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lamborghini&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Skora&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Fiat&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
-    &lt;div class=&quot;sc-link-text-box sc-margin-top-xxxxl sc-padding-bottom-xxxxl&quot;&gt;
+    &lt;div class=&quot;sc-link-text-box&quot;&gt;
         &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
-            &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos&lt;/h3&gt;
+            &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos 2&lt;/h3&gt;
+            &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
+            &lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Honda&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-link-text-box&quot;&gt;
+        &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
+            &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos 3&lt;/h3&gt;
             &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
                 tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus. Curabitur nec dapibus tortor, nec
                 sagittis neque. Vivamus bibendum vehicula sapien, pretium tincidunt nulla egestas in.&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
-            &lt;div class=&quot;sc-anchor-list-group&quot;&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-                &lt;div class=&quot;sc-anchor-list sc-anchor-list--with-icon&quot;&gt;
-                    &lt;h4 class=&quot;sc-anchor-list__title&quot;&gt;Title comes here&lt;/h4&gt;
-                    &lt;ul class=&quot;sc-anchor-list__ul&quot;&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-    
-            &lt;/div&gt;
+            &lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Honda&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FCA&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Land Rover&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Aprilia&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-link-text-box&quot;&gt;
+        &lt;div class=&quot;sc-link-text-box__text&quot;&gt;
+            &lt;h3 class=&quot;sc-link-text-box__headline&quot;&gt;Hybridautos 4&lt;/h3&gt;
+            &lt;p class=&quot;sc-link-text-box__paragraph&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt blandit elementum. Nam et orci at lacus
+                tincidunt suscipit et vitae tellus. Nam vel ornare dolor, id porta lectus.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sc-link-text-box__links&quot;&gt;
+            &lt;ul class=&quot;sc-unique-link-list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Honda&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FCA&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
@@ -5605,8 +5182,8 @@ background-color: #f4f4f4;
 
 <p>Collection of media sections.</p>
 </div>
-                   <div class="sample"><div>
-    <div class="sc-media-section sc-padding-bottom-xxxxl">
+                   <div class="sample"><div class="sc-media-section-list">
+    <div class="sc-media-section">
         <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
@@ -5619,19 +5196,11 @@ background-color: #f4f4f4;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Fusce volutpat quis ex a varius.
             </p>
-            <div class="sc-grid-row">
-                <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
-                    <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
-                    <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
-                </ul>
-                <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
-                    <li><a href="https://www.autoscout24.de/auto/porsche/"><span>Porsche</span></a></li>
-                </ul>
-            </div>
+            <a href="#">Link to section</a>
         </div>
     </div>
 
-    <div class="sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl sc-media-section--reverse">
+    <div class="sc-media-section sc-media-section--reverse">
         <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
@@ -5655,7 +5224,7 @@ background-color: #f4f4f4;
         </div>
     </div>
 
-    <div class="sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl">
+    <div class="sc-media-section">
         <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
@@ -5672,7 +5241,7 @@ background-color: #f4f4f4;
         </div>
     </div>
 
-    <div class="sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl sc-media-section--reverse">
+    <div class="sc-media-section sc-media-section--reverse">
         <picture class="sc-media-section__pic">
             <source srcset="https://placehold.it/480x270" media="(min-width: 1024px)">
             <source srcset="https://placehold.it/768x432" media="(min-width: 600px)">
@@ -5696,8 +5265,8 @@ background-color: #f4f4f4;
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-media-section-list" class="hjs html">&lt;div&gt;
-    &lt;div class=&quot;sc-media-section sc-padding-bottom-xxxxl&quot;&gt;
+                                <code id="copy_code-code-media-section-list" class="hjs html">&lt;div class=&quot;sc-media-section-list&quot;&gt;
+    &lt;div class=&quot;sc-media-section&quot;&gt;
         &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
@@ -5710,19 +5279,11 @@ background-color: #f4f4f4;
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Fusce volutpat quis ex a varius.
             &lt;/p&gt;
-            &lt;div class=&quot;sc-grid-row&quot;&gt;
-                &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/porsche/&quot;&gt;&lt;span&gt;Porsche&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
+            &lt;a href=&quot;#&quot;&gt;Link to section&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl sc-media-section--reverse&quot;&gt;
+    &lt;div class=&quot;sc-media-section sc-media-section--reverse&quot;&gt;
         &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
@@ -5746,7 +5307,7 @@ background-color: #f4f4f4;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl&quot;&gt;
+    &lt;div class=&quot;sc-media-section&quot;&gt;
         &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
@@ -5763,7 +5324,7 @@ background-color: #f4f4f4;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sc-media-section sc-margin-top-xxxxl sc-padding-bottom-xxxxl sc-media-section--reverse&quot;&gt;
+    &lt;div class=&quot;sc-media-section sc-media-section--reverse&quot;&gt;
         &lt;picture class=&quot;sc-media-section__pic&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 1024px)&quot;&gt;
             &lt;source srcset=&quot;https://placehold.it/768x432&quot; media=&quot;(min-width: 600px)&quot;&gt;
@@ -6274,6 +5835,141 @@ The search mask uses tabs element for show/hide logic. See <a href="https://auto
                  
                 </div>
             
+<hr></div><div id="separated-link-list-group-target" class="positon-anchor">
+                <div class="element" id="separated-link-list-group">
+                    <div class="markdown"><h2>Anchor List Group<span class="status review">needs UX review</span></h2>
+
+<p>This is an Anchor List Group for showing a collection of anchor lists. They can also be prefixed with an icon.</p>
+</div>
+                   <div class="sample"><div class="sc-separated-link-list-group">
+
+    <div class="sc-separated-link-list">
+        <h4 class="sc-separated-link-list__title">Title comes here</h4>
+        <ul class="sc-separated-link-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-separated-link-list">
+        <h4 class="sc-separated-link-list__title">Title comes here</h4>
+        <ul class="sc-separated-link-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-separated-link-list">
+        <h4 class="sc-separated-link-list__title">Title comes here</h4>
+        <ul class="sc-separated-link-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-separated-link-list">
+        <h4 class="sc-separated-link-list__title">Title comes here</h4>
+        <ul class="sc-separated-link-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+    <div class="sc-separated-link-list">
+        <h4 class="sc-separated-link-list__title">Title comes here</h4>
+        <ul class="sc-separated-link-list__ul">
+            <li><a href="#">BMW 1</a></li>
+            <li><a href="#">BMW 3</a></li>
+            <li><a href="#">BMW 5</a></li>
+            <li><a href="#">Mercedes A</a></li>
+            <li><a href="#">Ferrari</a></li>
+        </ul>
+    </div>
+
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-separated-link-list-group" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-separated-link-list-group" class="hjs html">&lt;div class=&quot;sc-separated-link-list-group&quot;&gt;
+
+    &lt;div class=&quot;sc-separated-link-list&quot;&gt;
+        &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-separated-link-list&quot;&gt;
+        &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-separated-link-list&quot;&gt;
+        &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-separated-link-list&quot;&gt;
+        &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sc-separated-link-list&quot;&gt;
+        &lt;h4 class=&quot;sc-separated-link-list__title&quot;&gt;Title comes here&lt;/h4&gt;
+        &lt;ul class=&quot;sc-separated-link-list__ul&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;BMW 5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mercedes A&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ferrari&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
 <hr></div><div id="spy-navigation-target" class="positon-anchor">
                 <div class="element" id="spy-navigation">
                     <div class="markdown"><p><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
@@ -6518,7 +6214,7 @@ showcar.spyNavigation({
 <div class="sc-superhero">
     <div class="sc-superhero__imgs">
       <a href="#">
-        <img src="https://placeimg.com/170/148/any">
+        <img src="/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg">
       </a>
     </div>
 
@@ -6577,7 +6273,7 @@ showcar.spyNavigation({
 <div class="sc-superhero">
     <div class="sc-superhero__imgs">
       <a href="#">
-        <img src="https://placeimg.com/170/148/any">
+        <img src="/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg">
       </a>
     </div>
 
@@ -6624,7 +6320,7 @@ showcar.spyNavigation({
 <div class="sc-superhero">
     <div class="sc-superhero__imgs">
       <a href="#">
-        <img src="https://placeimg.com/170/148/any">
+        <img src="/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg">
       </a>
     </div>
 
@@ -6672,9 +6368,7 @@ showcar.spyNavigation({
 </style>
 
 <div class="sc-superhero">
-    <div class="sc-superhero__imgs">
-      
-    </div>
+    <div class="sc-superhero__imgs"></div>
 
     <div class="sc-superhero__content sc-superhero__content--light">
       <span class="sc-disruptor sc-font-uppercase">Neu</span>
@@ -6728,7 +6422,7 @@ showcar.spyNavigation({
 &lt;div class=&quot;sc-superhero&quot;&gt;
     &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
       &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+        &lt;img src=&quot;/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg&quot;&gt;
       &lt;/a&gt;
     &lt;/div&gt;
 
@@ -6787,7 +6481,7 @@ showcar.spyNavigation({
 &lt;div class=&quot;sc-superhero&quot;&gt;
     &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
       &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+        &lt;img src=&quot;/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg&quot;&gt;
       &lt;/a&gt;
     &lt;/div&gt;
 
@@ -6834,7 +6528,7 @@ showcar.spyNavigation({
 &lt;div class=&quot;sc-superhero&quot;&gt;
     &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
       &lt;a href=&quot;#&quot;&gt;
-        &lt;img src=&quot;https://placeimg.com/170/148/any&quot;&gt;
+        &lt;img src=&quot;/showcar-ui/docs/assets/images/showcar-logo-superhero.jpg&quot;&gt;
       &lt;/a&gt;
     &lt;/div&gt;
 
@@ -6882,9 +6576,7 @@ showcar.spyNavigation({
 &lt;/style&gt;
 
 &lt;div class=&quot;sc-superhero&quot;&gt;
-    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;
-      
-    &lt;/div&gt;
+    &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
 
     &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
       &lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;
