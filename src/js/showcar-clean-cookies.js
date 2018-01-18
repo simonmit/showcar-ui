@@ -32,31 +32,45 @@ const whiteList = [
     'optimizelyReferrer',
     'showTsmOnListPage',
     'isAdBlockerUsed',
-    'urugot-bucket'
+    'urugot-bucket',
+    'PLAY_SESSION',
+    'gaid',
+    'asvid',
+    'doi',
+    'cid',
+    'GUID',
+    'oidcsaus',
+    '.ASPXAUTH',
+    '__RequestVerificationToken',
+    'test-cookie',
+    '__ut',
+    'as24identity',
+    'noauth'
 ];
 
 export default () => {
-    const regex = new RegExp('^(__ut)', 'i'); // regex to group all cookies that start with '__ut'
-    const currentCookies = document.cookie.split(';');
+    document.cookie.split(';').forEach(findUnneededCookies);
+};
 
-    const _uts = currentCookies
-        .filter(cookie => regex.test(getCookieName(cookie)))
-        .map(cookie => getCookieName(cookie));
+const findUnneededCookies = (cookie) => {
+    const cookieName = getCookieName(cookie);
+    let isNotWhitelisted = true;
+    let i = 0;
 
-    const finalWhitelist = whiteList.concat(_uts);
-
-    for(let i = 0; i < currentCookies.length; i ++) {   
-        const cookieName = getCookieName(currentCookies[i]);
-
-        if(!finalWhitelist.includes(cookieName)) {
-            console.log('Cookie removed from memory:', cookieName);
-            deleteCookieByName(cookieName);
-        }
+    while(isNotWhitelisted && i < whiteList.length) {
+        const regex = new RegExp(`^(${whiteList[i]})`, 'i');
+        isNotWhitelisted = !regex.test(cookieName);
+        i++;
+    }
+    
+    if(isNotWhitelisted) {
+        deleteCookieByName(cookieName);
     }
 };
 
-const deleteCookieByName = function(name) {
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+const deleteCookieByName = function(cookie) {
+    document.cookie = cookie + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    console.log('Cookie removed from memory:', cookie);
 };
 
 const getCookieName = function(cookie) {
