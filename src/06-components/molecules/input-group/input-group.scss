@@ -46,8 +46,6 @@
 .sc-input-group-radio {
   @include input-group;
   overflow: hidden;
-  border: 1px solid $black-60;
-  border-radius: $form-border-radius;
   font-weight: 400;
 
   input[type=radio] {
@@ -78,13 +76,18 @@
       }
     }
 
+    &:focus + label, &:focus + label:last-of-type {
+      box-shadow: inset 0 0 0 1px  $blue-80;
+      border-color: $blue-80;
+      border-right: 1px solid $blue-80;
+    }
+
+    &:focus + label + input + label { // next label on the right have
+      border-left: none; // to prevent doubled border
+    }
+
     &:checked + label {
       background: $black-40;
-
-      &::before {
-        border: none;
-        background-image: none;
-      }
     }
 
     &:not(:checked) + label:hover {
@@ -94,21 +97,24 @@
     & + label {
       padding: 5px 0;
       margin: 0;
-      border-right: 1px solid $black-60;
       text-align: center;
       cursor: pointer;
       color: $black-100;
       line-height: 1.8rem;
-      height: 38px;
+      height: 40px;
       transition: background-color $transition-time ease-in;
+      border: 1px solid $black-60;
+      border-right: none;
 
       &:last-of-type {
-        border: none;
+        border-top-right-radius: $form-border-radius;
+        border-bottom-right-radius: $form-border-radius;
+        border-right: 1px solid $black-60;
       }
 
-      &::before {
-        border: none;
-        background-image: none;
+      &:first-of-type {
+        border-top-left-radius: $form-border-radius;
+        border-bottom-left-radius: $form-border-radius;
       }
     }
   }
