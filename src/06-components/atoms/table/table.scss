@@ -3,16 +3,11 @@
 $border: 1px solid $black-30;
 
 .sc-table {
-  display: block;
-
   table {
+    table-layout: fixed;
     width: 100%;
     border: $border;
     overflow-x: auto;
-
-    @include mqmax($viewportM) {
-      display: block;
-    }
   }
 
   tbody {
@@ -37,6 +32,7 @@ $border: 1px solid $black-30;
 }
 
 .sc-table__title {
+  word-break: break-word;
   color: $black-60;
   border-right: $border;
 }
