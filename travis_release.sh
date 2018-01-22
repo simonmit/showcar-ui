@@ -29,9 +29,6 @@ cp ../package.json .
 cp ../README.md .
 cp ../LICENSE.md .
 
-npm --no-git-tag-version version patch
-npm publish
-git status --porcelain
 git add . -A
 
 #checking for files to commit, if exists then commit. If not go further

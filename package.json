@@ -9,6 +9,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",
