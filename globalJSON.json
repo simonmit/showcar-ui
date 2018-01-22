@@ -1038,13 +1038,6 @@
         "srcDir": "src/08-docs-info/extra-packages",
         "markDown": "\"<h2>Social Button</h2>\\n\\n<p>&quot;showcar-social&quot; is a component for adding social media share buttons to your site</p>\\n<p><h3>on Mobile:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-mobile.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p><h3>on Desktop:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-desktop.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p>Visit the <a href=\\\"https://jigsaw-a.a.autoscout24.com/content-management-service/fragments/testsocialbuttons.html?url=www.google.de&title=as24\\\" target=\\\"_blank\\\">showcar-social</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-social\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
     },
-    "benefits": {
-        "name": "benefits",
-        "type": "extra packages",
-        "group": "benefits",
-        "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Benefits</h2>\\n\\n<p>The &quot;Benefits&quot; component presents the author a way to display one or more information in a visually different way.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-benefits.jpg\\\" alt=\\\"showcar-benefits\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C19Benefits.html\\\" target=\\\"_blank\\\">showcar-benefits</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-benefits\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
-    },
     "teaser": {
         "name": "teaser",
         "type": "extra packages",

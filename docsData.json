@@ -27,7 +27,6 @@
         "jumbotron": "src/08-docs-info/extra-packages/jumbotron.md",
         "introtext": "src/08-docs-info/extra-packages/introtext.md",
         "socialbuttons": "src/08-docs-info/extra-packages/socialbuttons.md",
-        "benefits": "src/08-docs-info/extra-packages/benefits.md",
         "teaser": "src/08-docs-info/extra-packages/teaser.md"
     }
 }
