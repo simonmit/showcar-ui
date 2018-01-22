@@ -29,12 +29,13 @@ cp ../package.json .
 cp ../README.md .
 cp ../LICENSE.md .
 
+npm version patch
+
 git add . -A
 
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
 	git commit -am "$COMMIT_MESSAGE"
-	npm version patch
 	git push origin $RELEASE_BRANCH --follow-tags
 fi
 
