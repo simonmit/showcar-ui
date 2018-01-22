@@ -30,9 +30,9 @@ cp ../README.md .
 cp ../LICENSE.md .
 
 npm version patch
-
+git status --porcelain
 git add . -A
-
+git status --porcelain
 #checking for files to commit, if exists then commit. If not go further
 if [ -n "$(git status --porcelain)" ]; then
 	git commit -am "$COMMIT_MESSAGE"
