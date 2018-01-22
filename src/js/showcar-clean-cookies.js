@@ -48,32 +48,33 @@ const whiteList = [
     'noauth'
 ];
 
-export default () => {
-    document.cookie.split(';').forEach(findUnneededCookies);
-};
-
-const findUnneededCookies = (cookie) => {
-    const cookieName = getCookieName(cookie);
-    let isNotWhitelisted = true;
-    let i = 0;
-
-    while(isNotWhitelisted && i < whiteList.length) {
-        const regex = new RegExp(`^(${whiteList[i]})`, 'i');
-        isNotWhitelisted = !regex.test(cookieName);
-        i++;
-    }
-    
-    if(isNotWhitelisted) {
-        deleteCookieByName(cookieName);
-    }
-};
-
 const deleteCookieByName = function(cookie) {
-    document.cookie = cookie + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    // document.cookie = cookie + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     console.log('Cookie removed from memory:', cookie);
 };
 
 const getCookieName = function(cookie) {
     var cookieArray = cookie.split('=');
     return cookieArray[0].trim();
+};
+
+export const findUnneededCookies = (cookie) => {
+    let isNotWhitelisted = true;
+    let i = 0;
+
+    while(isNotWhitelisted && i < whiteList.length) {
+        const regex = new RegExp(`^(${whiteList[i]})`, 'i');
+        isNotWhitelisted = !regex.test(cookie);
+        i++;
+    }
+    
+    return isNotWhitelisted;
+};
+
+export default () => {
+    const unneededCookies = document.cookie.split(';')
+        .map(cookie => getCookieName(cookie))
+        .filter(findUnneededCookies);
+    
+    unneededCookies.forEach(deleteCookieByName);
 };
