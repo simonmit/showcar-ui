@@ -30,7 +30,7 @@ cp ../README.md .
 cp ../LICENSE.md .
 
 npm --no-git-tag-version version patch
-npm pack
+npm publish
 git status --porcelain
 git add . -A
 
