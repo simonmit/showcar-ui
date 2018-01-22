@@ -29,7 +29,7 @@ cp ../package.json .
 cp ../README.md .
 cp ../LICENSE.md .
 
-npm --no-git-tag-version version patch
+# npm --no-git-tag-version version patch
 git status --porcelain
 git add . -A
 
