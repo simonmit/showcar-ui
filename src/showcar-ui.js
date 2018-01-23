@@ -100,11 +100,7 @@ registerSmoothScrolling();
 //Clean up cookies
 import cleanCookies from './js/showcar-clean-cookies';
 window.addEventListener('load', function() {
-    const hash = location.hash.split('#')[1];
-
-    if(hash && hash === 'cleanupCookies') {
-        cleanCookies();
-    }
+    cleanCookies();
 });
 
 // storage
