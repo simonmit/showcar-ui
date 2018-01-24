@@ -1,5 +1,4 @@
 @import '../../../01-settings/variables';
-@import '../../../02-sass-tools/fonts';
 @import '../../../02-sass-tools/link';
 
 //TODO remove Multiple Breadcrumbs, mobile is better
@@ -32,9 +31,6 @@
   li {
     display: none;
     margin-top: 10px;
-
-    //TODO: remove
-    @include font(M);
 
     a {
       //TODO: remove (element styling)
