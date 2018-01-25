@@ -3588,18 +3588,23 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 <p>Enables the author to display a content teaser with picture, title and text.</p>
 </div>
                    <div class="sample"><div class="sc-content-teaser">
-    <picture class="sc-content-teaser__pic">
-        <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-        <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-        <img srcset="https://placehold.it/480x270" alt="My default image">
-    </picture>
+    <a href="#" class="sc-content-teaser__pic">
+        <picture>
+            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+            <img srcset="https://placehold.it/480x270" alt="My default image">
+        </picture>
+    </a>
 
     <div class="sc-content-teaser__content">
         <a class="sc-content-teaser__category sc-font-s">extra title</a>
-        <h3 class="sc-font-m sc-font-bold">Title</h3>
-        <p class="sc-font-m">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-        </p>
+        <div class="sc-content-teaser__introtext">
+            <h3 class="sc-font-m sc-font-bold">Title</h3>
+            <p class="sc-font-m">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            </p>
+            <a href="#" class="sc-content-teaser__linkcover"></a>
+        </div>
     </div>
 </div>
 </div> 
@@ -3610,18 +3615,23 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
                              </button>
                             <pre>
                                 <code id="copy_code-code-content-teaser" class="hjs html">&lt;div class=&quot;sc-content-teaser&quot;&gt;
-    &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-        &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-        &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-        &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-    &lt;/picture&gt;
+    &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__pic&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/a&gt;
 
     &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
         &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
-        &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
-        &lt;p class=&quot;sc-font-m&quot;&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-        &lt;/p&gt;
+        &lt;div class=&quot;sc-content-teaser__introtext&quot;&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title&lt;/h3&gt;
+            &lt;p class=&quot;sc-font-m&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+            &lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__linkcover&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code>
@@ -4802,105 +4812,86 @@ The list has no siblings (unique) and its items flow throught the available spac
 </div>
                    <div class="sample"><div class="sc-content-teaser-list">
     <div class="sc-content-teaser">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-
+        <a href="#" class="sc-content-teaser__pic">
+            <picture>
+                <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+                <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+                <img srcset="https://placehold.it/480x270" alt="My default image">
+            </picture>
+        </a>
+    
         <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold">Content Teaser 1</h3>
-            <p class="sc-font-m">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
+            <a class="sc-content-teaser__category sc-font-s">extra title</a>
+            <div class="sc-content-teaser__introtext">
+                <h3 class="sc-font-m sc-font-bold">Title 1</h3>
+                <p class="sc-font-m">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                </p>
+                <a href="#" class="sc-content-teaser__linkcover"></a>
+            </div>
         </div>
     </div>
 
     <div class="sc-content-teaser sc-content-teaser--highlighted">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
+        <a href="#" class="sc-content-teaser__pic">
+            <picture>
+                <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+                <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+                <img srcset="https://placehold.it/480x270" alt="My default image">
+            </picture>
+        </a>
     
         <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-l sc-font-bold">Content Teaser 2</h3>
-            <p class="sc-font-m"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-
-     <div class="sc-content-teaser">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-    
-        <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold">Content Teaser 3</h3>
-            <p class="sc-font-m">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
+            <a class="sc-content-teaser__category sc-font-s">extra title</a>
+            <div class="sc-content-teaser__introtext">
+                <h3 class="sc-font-m sc-font-bold">Title 2</h3>
+                <p class="sc-font-m">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                </p>
+                <a href="#" class="sc-content-teaser__linkcover"></a>
+            </div>
         </div>
     </div>
 
     <div class="sc-content-teaser">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
+        <a href="#" class="sc-content-teaser__pic">
+            <picture>
+                <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+                <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+                <img srcset="https://placehold.it/480x270" alt="My default image">
+            </picture>
+        </a>
     
         <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold">Content Teaser 4</h3>
-            <p class="sc-font-m">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<br><br><br>
-
-<h3 class="sc-font-l sc-padding-bottom-xxl">Content Teaser List without highlight</h3>
-<div class="sc-content-teaser-list">
-    <div class="sc-content-teaser">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-
-        <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold">Lorem ipsumn dolor sit amet</h3>
-            <p class="sc-font-m">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
-                nulla, et ornare dolor.
-            </p>
+            <a class="sc-content-teaser__category sc-font-s">extra title</a>
+            <div class="sc-content-teaser__introtext">
+                <h3 class="sc-font-m sc-font-bold">Title 3</h3>
+                <p class="sc-font-m">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                </p>
+                <a href="#" class="sc-content-teaser__linkcover"></a>
+            </div>
         </div>
     </div>
 
     <div class="sc-content-teaser">
-        <picture class="sc-content-teaser__pic">
-            <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
-            <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
-            <img srcset="https://placehold.it/480x270" alt="My default image">
-        </picture>
-
+        <a href="#" class="sc-content-teaser__pic">
+            <picture>
+                <source srcset="https://placehold.it/480x270" media="(min-width: 768px)">
+                <source srcset="https://placehold.it/786x432" media="(min-width: 321px)">
+                <img srcset="https://placehold.it/480x270" alt="My default image">
+            </picture>
+        </a>
+    
         <div class="sc-content-teaser__content">
-            <a href="#" class="sc-content-teaser__category sc-font-s">Lorem ipsum dolor sit amet</a>
-            <h3 class="sc-font-m sc-font-bold">Lorem ipsumn dolor sit amet</h3>
-            <p class="sc-font-m">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
-                nulla, et ornare dolor.
-            </p>
+            <a class="sc-content-teaser__category sc-font-s">extra title</a>
+            <div class="sc-content-teaser__introtext">
+                <h3 class="sc-font-m sc-font-bold">Title 4</h3>
+                <p class="sc-font-m">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                </p>
+                <a href="#" class="sc-content-teaser__linkcover"></a>
+            </div>
         </div>
     </div>
 </div>
@@ -4913,105 +4904,86 @@ The list has no siblings (unique) and its items flow throught the available spac
                             <pre>
                                 <code id="copy_code-code-content-teaser-list" class="hjs html">&lt;div class=&quot;sc-content-teaser-list&quot;&gt;
     &lt;div class=&quot;sc-content-teaser&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-
+        &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+                &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+    
         &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Content Teaser 1&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
+            &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+            &lt;div class=&quot;sc-content-teaser__introtext&quot;&gt;
+                &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title 1&lt;/h3&gt;
+                &lt;p class=&quot;sc-font-m&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                &lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__linkcover&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;sc-content-teaser sc-content-teaser--highlighted&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
+        &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+                &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
     
         &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-l sc-font-bold&quot;&gt;Content Teaser 2&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt; 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-     &lt;div class=&quot;sc-content-teaser&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-    
-        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Content Teaser 3&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
+            &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+            &lt;div class=&quot;sc-content-teaser__introtext&quot;&gt;
+                &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title 2&lt;/h3&gt;
+                &lt;p class=&quot;sc-font-m&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                &lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__linkcover&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;sc-content-teaser&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
+        &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+                &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
     
         &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Content Teaser 4&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-&lt;h3 class=&quot;sc-font-l sc-padding-bottom-xxl&quot;&gt;Content Teaser List without highlight&lt;/h3&gt;
-&lt;div class=&quot;sc-content-teaser-list&quot;&gt;
-    &lt;div class=&quot;sc-content-teaser&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-
-        &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
-                nulla, et ornare dolor.
-            &lt;/p&gt;
+            &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+            &lt;div class=&quot;sc-content-teaser__introtext&quot;&gt;
+                &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title 3&lt;/h3&gt;
+                &lt;p class=&quot;sc-font-m&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                &lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__linkcover&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;sc-content-teaser&quot;&gt;
-        &lt;picture class=&quot;sc-content-teaser__pic&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
-            &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
-        &lt;/picture&gt;
-
+        &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__pic&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;https://placehold.it/480x270&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;source srcset=&quot;https://placehold.it/786x432&quot; media=&quot;(min-width: 321px)&quot;&gt;
+                &lt;img srcset=&quot;https://placehold.it/480x270&quot; alt=&quot;My default image&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+    
         &lt;div class=&quot;sc-content-teaser__content&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Lorem ipsumn dolor sit amet&lt;/h3&gt;
-            &lt;p class=&quot;sc-font-m&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt
-                nulla, et ornare dolor.
-            &lt;/p&gt;
+            &lt;a class=&quot;sc-content-teaser__category sc-font-s&quot;&gt;extra title&lt;/a&gt;
+            &lt;div class=&quot;sc-content-teaser__introtext&quot;&gt;
+                &lt;h3 class=&quot;sc-font-m sc-font-bold&quot;&gt;Title 4&lt;/h3&gt;
+                &lt;p class=&quot;sc-font-m&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus eu sem facilisis cursus. Pellentesque quis tincidunt nulla, et ornare dolor.
+                &lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;sc-content-teaser__linkcover&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
