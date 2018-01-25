@@ -13,6 +13,20 @@ $imgMaxWidth: 263px;
   }
 }
 
+.sc-content-teaser__introtext {
+  position: relative;
+}
+
+.sc-content-teaser__linkcover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 2;
+}
+
 .sc-content-teaser__pic {
   margin-bottom: $L;
 
