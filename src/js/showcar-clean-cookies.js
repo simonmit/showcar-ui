@@ -44,7 +44,7 @@ const whiteList = [
     '__RequestVerificationToken',
     'test-cookie',
     '__ut',
-    'as24identity',
+    'as24_identity',
     'noauth'
 ];
 
