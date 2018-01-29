@@ -49,8 +49,7 @@ const whiteList = [
 ];
 
 const deleteCookieByName = function(cookie) {
-    // document.cookie = cookie + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    console.log('Cookie removed from memory:', cookie);
+    document.cookie = cookie + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 };
 
 const getCookieName = function(cookie) {
