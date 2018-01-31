@@ -36,13 +36,13 @@ module.exports = (frame, assert, browserWidth) => {
                     rendered: true,
                     top: wrapper.top.plus(10),
                     left: wrapper.left.plus(16),
-                    right: middleBreadcrumb.left
+                    // right: middleBreadcrumb.left
                 });
 
                 middleBreadcrumb.assert({
                     rendered: true,
-                    top: wrapper.top.plus(10),
-                    right: lastBreadcrumb.left
+                    top: wrapper.top.plus(10)
+                    // right: lastBreadcrumb.left
                 });
 
                 lastBreadcrumb.assert({
