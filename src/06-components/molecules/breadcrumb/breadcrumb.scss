@@ -1,5 +1,4 @@
 @import '../../../01-settings/variables';
-@import '../../../02-sass-tools/link';
 
 //TODO remove Multiple Breadcrumbs, mobile is better
 @mixin arrow($direction) {
@@ -24,7 +23,6 @@
 }
 
 .sc-breadcrumbs {
-  font-size: 0; //avoid spacing between inline-block li elements
   padding-left: $L;
   margin-top: 10px; //give all breadcrumbs a common top margin within all pages
 
@@ -32,13 +30,8 @@
     display: none;
     margin-top: 10px;
 
-    a {
-      //TODO: remove (element styling)
-      @include link(M);
+    * {
       display: inline-block;
-
-      padding: 10px $S;
-      margin: -10px (-$S);
     }
 
     &:last-child {

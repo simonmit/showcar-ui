@@ -44,7 +44,7 @@
     "html-entities": "^1.2.1",
     "marked": "^0.3.6",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^2.9.10",
+    "showcar-gulp": "^2.10.0",
     "update-notifier": "^2.2.0",
     "yargs": "^4.6.0"
   },
@@ -61,6 +61,8 @@
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
+    "to": "^0.2.9",
+    "update": "^0.7.4",
     "whatwg-fetch": "^1.1.1",
     "zepto-modules": "^1.0.1"
   }
