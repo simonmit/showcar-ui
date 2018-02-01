@@ -3948,7 +3948,50 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 
 <p>Showcar-ui library delivers styles for links display and arrow on the left. All column positioning is up to the team who is implementing it.  </p>
 <p>Responsive columns width could be achieved with flexbox or with <code>sc-grid-col-*</code> styling.</p>
-<pre><code class="lang-html">&lt;div class=&quot;sc-grid-row&quot;&gt;
+</div>
+                   <div class="sample"><ul class="sc-link-list">
+    <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
+    <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
+    <li><a href="https://www.autoscout24.de/auto/ford/"><span>Ford</span></a></li>
+</ul>
+
+<br><hr><br>
+<h1>Example with<code>sc-grid-col-*</code></h1>
+<br><br>
+
+<div class="sc-grid-row">
+    <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
+        <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
+        <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
+    </ul>
+    <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6">
+        <li><a href="https://www.autoscout24.de/auto/porsche/"><span>Porsche</span></a></li>
+    </ul>
+    <ul class="sc-link-list sc-grid-col-4 sc-grid-col-s-6 sc-hidden-s">
+        <li><a href="https://www.autoscout24.de/auto/renault/"><span>Renault</span></a></li>
+        <li><a href="https://www.autoscout24.de/auto/skoda/"><span>Skoda</span></a></li>
+        <li><a href="https://www.autoscout24.de/auto/tesla/"><span>Tesla</span></a></li>
+    </ul>
+</div>
+
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-list-with-links" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-list-with-links" class="hjs html">&lt;ul class=&quot;sc-link-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/ford/&quot;&gt;&lt;span&gt;Ford&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;h1&gt;Example with&lt;code&gt;sc-grid-col-*&lt;/code&gt;&lt;/h1&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;sc-grid-row&quot;&gt;
     &lt;ul class=&quot;sc-link-list sc-grid-col-4 sc-grid-col-s-6&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -3962,25 +4005,7 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
         &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/tesla/&quot;&gt;&lt;span&gt;Tesla&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-</code></pre>
-</div>
-                   <div class="sample"><ul class="sc-link-list">
-    <li><a href="https://www.autoscout24.de/auto/audi/"><span>Audi</span></a></li>
-    <li><a href="https://www.autoscout24.de/auto/bmw/"><span>BMW</span></a></li>
-    <li><a href="https://www.autoscout24.de/auto/ford/"><span>Ford</span></a></li>
-</ul>
-</div> 
-                    <div class="code-sample">
-                        <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-list-with-links" title="Copy to clipboard">
-                                <span></span>
-                             </button>
-                            <pre>
-                                <code id="copy_code-code-list-with-links" class="hjs html">&lt;ul class=&quot;sc-link-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/audi/&quot;&gt;&lt;span&gt;Audi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/bmw/&quot;&gt;&lt;span&gt;BMW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.autoscout24.de/auto/ford/&quot;&gt;&lt;span&gt;Ford&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+
 </code>
                             </pre>
                         </div>
