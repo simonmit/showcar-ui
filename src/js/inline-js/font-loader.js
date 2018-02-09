@@ -121,4 +121,9 @@
     firstScript.parentNode.insertBefore(styleElement, firstScript);
 
     loadFont('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext', 'Source Sans Pro', [400, 600], 'font-loaded');
+
+    if (location.href.indexOf('web-font=opensans') >= 0) {
+        loadFont('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext', 'Open Sans', [400, 600], 'font-loaded');
+    }
+
 }());
