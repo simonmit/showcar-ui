@@ -69,7 +69,7 @@ For a detailed usage guide, have a look at http://zeptojs.com/
 
 ## How to use:
 
-for the use of the library have a look at the [documentation](https://autoscout24.github.io/showcar-ui/).
+for the use of the library have a look at the [documentation](https://scout24.github.io/showcar-ui/).
 
 ## How to contribute:
 
