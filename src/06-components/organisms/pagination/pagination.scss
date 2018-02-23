@@ -7,11 +7,6 @@
   justify-content: center;
   font-size: 0;
 
-  /* CSS Hack, target IE10 and IE11 */
-  @media all and (-ms-high-contrast: none) {
-    justify-content: flex-start;
-  }
-
   li {
     text-align: center;
     line-height: 48px;
