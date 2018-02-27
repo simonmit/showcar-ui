@@ -18,6 +18,7 @@ const whiteList = [
     'S24UT',
     'webxtest',
     'testrun',
+    'as24-survey-opt-out',
     '__utma',
     '__utmz',
     'optimizelySegments',
