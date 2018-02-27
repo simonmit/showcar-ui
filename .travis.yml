@@ -34,9 +34,9 @@ deploy:
 script:
 - npm run build
 - npm run docs
-- 'if  ! [[ ${TRAVIS_COMMIT_MESSAGE} == *"--skip-tests"* ]]; then
-    npm run test;
-  fi'
+# - 'if  ! [[ ${TRAVIS_COMMIT_MESSAGE} == *"--skip-tests"* ]]; then
+#     npm run test;
+#   fi'
 
 after_success:
   # only run for master branch, we don't want to release PRs and other branches
