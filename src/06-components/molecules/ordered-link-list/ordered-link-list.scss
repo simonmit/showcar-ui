@@ -1,0 +1,35 @@
+@import '../../../01-settings/variables';
+
+.sc-ordered-link-list {
+  counter-reset: list-index;
+  width: 100%;
+  column-count: 2;
+  column-gap: $L;
+
+  &__long {
+    @include mqmin($viewportL) {
+      column-count: 4;
+    }
+  }
+}
+
+.sc-ordered-link-list__li {
+  padding: $S 0;
+  border-bottom: 1px solid $black-30;
+
+  a {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::before {
+      content: counter(list-index, decimal-leading-zero);
+      counter-increment: list-index;
+      color: $black-50;
+      padding-right: $M;
+      font-size: 18px;
+    }
+  }
+}
