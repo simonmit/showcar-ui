@@ -76,7 +76,7 @@
   }
 
   @include mqmin($viewportL) {
-    max-width: none;
+    max-width: 20%;
     flex: 0 1 20%;
 
     &:nth-child(2n){
