@@ -73,7 +73,7 @@
 </div>
 </div>
 </div><div class="ndpl-component__color-container">
-<div class="ndpl-component__color" style="background-color: rgb(51, 170, 221);">
+<div class="ndpl-component__color" style="background-color: rgb(0, 124, 202);">
 <div>
 #007cca<br>rgb(0, 124, 202)<br>$color-highlight-info
 </div>
