@@ -214,6 +214,7 @@ export default function (config) {
     handleStickiness();
     spyScroll();
     initMobileToggle();
+    handleResize();
     document.addEventListener('DOMContentLoaded', function () {
         handleResize();
     });
