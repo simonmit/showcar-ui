@@ -3,14 +3,25 @@
 <link rel="preload" href="https://cdn.optimizely.com/js/8387223727.js" as="script">
 <script data-pagespeed-no-defer pagespeed_no_defer>
 (function () {
+    window.optimizely = window.optimizely || [];
     window.optimizelyReady = new Promise(function(resolve, reject) {
+        window.optimizely.push({
+            type: "addListener",
+            filter: {
+                type: "lifecycle",
+                name: "initialized"
+            },
+            handler: function() {
+                resolve(window.optimizely);
+            }
+        });
+
         var script = document.createElement('script');
         var ref = document.getElementsByTagName('script')[0];
-        script.onload = resolve;
         script.onerror = reject;
         script.src = 'https://cdn.optimizely.com/js/8387223727.js';
         ref.parentNode.insertBefore(script, ref);
-        setTimeout(reject, 10000); 
+        // setTimeout(reject, 10000); 
     });
 }());
 </script>
