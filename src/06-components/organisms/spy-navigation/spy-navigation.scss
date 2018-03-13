@@ -22,6 +22,7 @@ $spy-height: 55px;
   border-bottom: 1px solid $black-30;
   position: relative;
   background-color: white;
+  z-index: 2;
 
   &:before {
     top: 0;

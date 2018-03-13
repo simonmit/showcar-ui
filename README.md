@@ -97,7 +97,7 @@ Published 13.03.2017
 | --------------- |---------------|-------|------|---------|
 | lightbox        | overlay       |  140  |useful|         |
 |                 | modal window  |  139  |useful|         |
-| spy-navigation  | wrapper       |  21   |useful|         |
+| spy-navigation  | wrapper       |  2/21(if sticky)   |useful|         |
 | tooltip         |               |  2    |useful|         |
 | input group     | focus         |  2    |useful|         |
 | ad              |               |  110  |useful|         |
