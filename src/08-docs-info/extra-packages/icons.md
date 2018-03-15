@@ -1,9 +1,9 @@
 <h2>Icons</h2>
 You can use all the icons defined by showcar-icons with the custom tag `<as24-icon type="[[icon-name]]"></as24-icon>`.
 
-For further information see the documentation under <a href="https://github.com/AutoScout24/showcar-icons" target="_blank">https://github.com/AutoScout24/showcar-icons</a>
+For further information see the documentation under <a href="https://github.com/Scout24/showcar-icons" target="_blank">https://github.com/Scout24/showcar-icons</a>
 
-We also have standart size classes for styling icons <a href="https://autoscout24.github.io/showcar-ui/#utilities-target" target="_blank">here</a>
+We also have standart size classes for styling icons <a href="https://scout24.github.io/showcar-ui/#utilities-target" target="_blank">here</a>
 
 The following icon names are currently available:
 <ul id="as24-icons-list" class="icons-list"></ul>
