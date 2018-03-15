@@ -982,62 +982,62 @@
         "type": "extra packages",
         "group": "icons",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Icons</h2>\\nYou can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[[icon-name]]&quot;&gt;&lt;/as24-icon&gt;</code>.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-icons\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-icons</a></p>\\n<p>We also have standart size classes for styling icons <a href=\\\"https://autoscout24.github.io/showcar-ui/#utilities-target\\\" target=\\\"_blank\\\">here</a></p>\\n<p>The following icon names are currently available:</p>\\n<p><ul id=\\\"as24-icons-list\\\" class=\\\"icons-list\\\"></ul></p>\\n<style type=\\\"text/css\\\">\\n#icons as24-icon {\\ndisplay: inline-block;\\nwidth: 50px;\\nheight: 50px;\\n}\\n#icons as24-icon svg {\\nmax-width: 100%;\\nmax-height: 100%;\\n}\\n#icons .icons-list:after {\\ncontent: \\\"\\\";\\ndisplay: table;\\nclear: both;\\n}\\n#icons .icons-list li {\\npadding: 20px 10px 10px;\\nfloat: left;\\nbackground: #f4f4f4;\\nborder: 1px solid #fff;\\nwidth: 108px;\\nheight: 130px;\\nlist-style: none;\\ntext-align: center;\\nmargin-bottom: 20px;\\n}\\n#icons .icons-list li:hover {\\nbackground: #acacac;\\n}\\n#icons .icons-list li p {\\npadding-top: 0;\\nword-break: break-all;\\nheight: 40px;\\nfont-size: 13px;\\n}\\n</style>\\n\\n<script type=\\\"text/javascript\\\">\\nvar iconsList = document.querySelector('#as24-icons-list');\\nwindow.showcarIconNames.forEach(function(name) {\\nvar item = document.createElement('li');\\nitem.innerHTML = '<as24-icon type=\\\"' + name + '\\\" title=\\\"' + name + '\\\"></as24-icon><p>' + name + '</p>';\\niconsList.appendChild(item);\\n});\\n</script>\\n\""
+        "markDown": "\"<p><h2>Icons</h2>\\nYou can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[[icon-name]]&quot;&gt;&lt;/as24-icon&gt;</code>.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/Scout24/showcar-icons\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-icons</a></p>\\n<p>We also have standart size classes for styling icons <a href=\\\"https://scout24.github.io/showcar-ui/#utilities-target\\\" target=\\\"_blank\\\">here</a></p>\\n<p>The following icon names are currently available:</p>\\n<p><ul id=\\\"as24-icons-list\\\" class=\\\"icons-list\\\"></ul></p>\\n<style type=\\\"text/css\\\">\\n#icons as24-icon {\\ndisplay: inline-block;\\nwidth: 50px;\\nheight: 50px;\\n}\\n#icons as24-icon svg {\\nmax-width: 100%;\\nmax-height: 100%;\\n}\\n#icons .icons-list:after {\\ncontent: \\\"\\\";\\ndisplay: table;\\nclear: both;\\n}\\n#icons .icons-list li {\\npadding: 20px 10px 10px;\\nfloat: left;\\nbackground: #f4f4f4;\\nborder: 1px solid #fff;\\nwidth: 108px;\\nheight: 130px;\\nlist-style: none;\\ntext-align: center;\\nmargin-bottom: 20px;\\n}\\n#icons .icons-list li:hover {\\nbackground: #acacac;\\n}\\n#icons .icons-list li p {\\npadding-top: 0;\\nword-break: break-all;\\nheight: 40px;\\nfont-size: 13px;\\n}\\n</style>\\n\\n<script type=\\\"text/javascript\\\">\\nvar iconsList = document.querySelector('#as24-icons-list');\\nwindow.showcarIconNames.forEach(function(name) {\\nvar item = document.createElement('li');\\nitem.innerHTML = '<as24-icon type=\\\"' + name + '\\\" title=\\\"' + name + '\\\"></as24-icon><p>' + name + '</p>';\\niconsList.appendChild(item);\\n});\\n</script>\\n\""
     },
     "carousel": {
         "name": "carousel",
         "type": "extra packages",
         "group": "carousel",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Carousel</h2>\\n\\n<p>Showcar-carousel is a component for cycling through elements (images, videos).<br>This is how carousel looks in general<br><img src=\\\"/showcar-ui/docs/assets/images/showcar-carousel.jpg\\\" alt=\\\"Showcar-carousel\\\"></p>\\n<p>Example: <a href=\\\"https://autoscout24.github.io/showcar-carousel/\\\" target=\\\"_blank\\\">https://autoscout24.github.io/showcar-carousel</a></p>\\n<p>For how-to-use see read.me <a href=\\\"https://github.com/AutoScout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-carousel</a></p>\\n\""
+        "markDown": "\"<h2>Carousel</h2>\\n\\n<p>Showcar-carousel is a component for cycling through elements (images, videos).<br>This is how carousel looks in general<br><img src=\\\"/showcar-ui/docs/assets/images/showcar-carousel.jpg\\\" alt=\\\"Showcar-carousel\\\"></p>\\n<p>Example: <a href=\\\"https://scout24.github.io/showcar-carousel/\\\" target=\\\"_blank\\\">https://scout24.github.io/showcar-carousel</a></p>\\n<p>For how-to-use see read.me <a href=\\\"https://github.com/Scout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-carousel</a></p>\\n\""
     },
     "pictures": {
         "name": "pictures",
         "type": "extra packages",
         "group": "pictures",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Pictures</h2>\\nThis module provides an easy to use vanilla js gallery library with previews and full screen view.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-pictures.jpg\\\"></p>\\n<p>Actually it is just a wrapper that handles the communication between two <a href=\\\"https://github.com/AutoScout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-carousel</a> components.</p>\\n<p> Examples: <a href=\\\"https://autoscout24.github.io/showcar-pictures/\\\" target=\\\"_blank\\\">https://autoscout24.github.io/showcar-pictures</a></p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-pictures\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-pictures</a></p>\\n\""
+        "markDown": "\"<p><h2>Pictures</h2>\\nThis module provides an easy to use vanilla js gallery library with previews and full screen view.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-pictures.jpg\\\"></p>\\n<p>Actually it is just a wrapper that handles the communication between two <a href=\\\"https://github.com/Scout24/showcar-carousel\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-carousel</a> components.</p>\\n<p> Examples: <a href=\\\"https://scout24.github.io/showcar-pictures/\\\" target=\\\"_blank\\\">https://scout24.github.io/showcar-pictures</a></p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/Scout24/showcar-pictures\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-pictures</a></p>\\n\""
     },
     "tracking": {
         "name": "tracking",
         "type": "extra packages",
         "group": "tracking",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Tracking</h2>\\nTracking library for ShowCar-based pages.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-tracking\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-tracking</a></p>\\n\""
+        "markDown": "\"<p><h2>Tracking</h2>\\nTracking library for ShowCar-based pages.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/Scout24/showcar-tracking\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-tracking</a></p>\\n\""
     },
     "ads": {
         "name": "ads",
         "type": "extra packages",
         "group": "ads",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Ads</h2>\\nThis library provides a unified solution for integrating advertisements (ads) on all AS24 Tatsu web pages.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-ads\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-ads</a></p>\\n\""
+        "markDown": "\"<p><h2>Ads</h2>\\nThis library provides a unified solution for integrating advertisements (ads) on all AS24 Tatsu web pages.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/Scout24/showcar-ads\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-ads</a></p>\\n\""
     },
     "storage": {
         "name": "storage",
         "type": "extra packages",
         "group": "storage",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<p><h2>Storage</h2>\\nThis module provides an abstraction layer for storing information on the client-side.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/AutoScout24/showcar-storage\\\" target=\\\"_blank\\\">https://github.com/AutoScout24/showcar-storage</a></p>\\n\""
+        "markDown": "\"<p><h2>Storage</h2>\\nThis module provides an abstraction layer for storing information on the client-side.</p>\\n<p>For further information see the documentation under <a href=\\\"https://github.com/Scout24/showcar-storage\\\" target=\\\"_blank\\\">https://github.com/Scout24/showcar-storage</a></p>\\n\""
     },
     "videotron": {
         "name": "videotron",
         "type": "extra packages",
         "group": "videotron",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Videotron</h2>\\n\\n<p>&quot;showcar-videotron&quot; is a component for including youtube and glomex videos in a simple way to your site.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-videotron.jpg\\\" alt=\\\"showcar-videotron\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C06Videotron.html&path=/content/skoda-kodiak-suv-test-page&site=content.autoscout24.de\\\" target=\\\"_blank\\\">showcar-videotron</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-videotron\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+        "markDown": "\"<h2>Videotron</h2>\\n\\n<p>&quot;showcar-videotron&quot; is a component for including youtube and glomex videos in a simple way to your site.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-videotron.jpg\\\" alt=\\\"showcar-videotron\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C06Videotron.html&path=/content/skoda-kodiak-suv-test-page&site=content.autoscout24.de\\\" target=\\\"_blank\\\">showcar-videotron</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/Scout24/showcar-videotron\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
     },
     "socialbuttons": {
         "name": "socialbuttons",
         "type": "extra packages",
         "group": "socialbuttons",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Social Button</h2>\\n\\n<p>&quot;showcar-social&quot; is a component for adding social media share buttons to your site</p>\\n<p><h3>on Mobile:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-mobile.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p><h3>on Desktop:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-desktop.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p>Visit the <a href=\\\"https://jigsaw-a.a.autoscout24.com/content-management-service/fragments/testsocialbuttons.html?url=www.google.de&title=as24\\\" target=\\\"_blank\\\">showcar-social</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-social\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+        "markDown": "\"<h2>Social Button</h2>\\n\\n<p>&quot;showcar-social&quot; is a component for adding social media share buttons to your site</p>\\n<p><h3>on Mobile:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-mobile.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p><h3>on Desktop:</h3>\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-social-desktop.jpg\\\" alt=\\\"showcar-social\\\"></p>\\n<p>Visit the <a href=\\\"https://jigsaw-a.a.autoscout24.com/content-management-service/fragments/testsocialbuttons.html?url=www.google.de&title=as24\\\" target=\\\"_blank\\\">showcar-social</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/Scout24/showcar-social\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
     },
     "teaser": {
         "name": "teaser",
         "type": "extra packages",
         "group": "teaser",
         "srcDir": "src/08-docs-info/extra-packages",
-        "markDown": "\"<h2>Teaser</h2>\\n\\n<p>This &quot;Teaser&quot; component presents the author a way to display information and enhance those by adding a background image.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-teaser_app.jpg\\\" alt=\\\"showcar-teaser_app\\\">\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-teaser_bg.jpg\\\" alt=\\\"showcar-teaser_bg\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C07Teaser.html\\\" target=\\\"_blank\\\">showcar-teaser</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/AutoScout24/showcar-benefits\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
+        "markDown": "\"<h2>Teaser</h2>\\n\\n<p>This &quot;Teaser&quot; component presents the author a way to display information and enhance those by adding a background image.</p>\\n<p><img src=\\\"/showcar-ui/docs/assets/images/showcar-teaser_app.jpg\\\" alt=\\\"showcar-teaser_app\\\">\\n<img src=\\\"/showcar-ui/docs/assets/images/showcar-teaser_bg.jpg\\\" alt=\\\"showcar-teaser_bg\\\"></p>\\n<p>Visit the <a href=\\\"https://www.autoscout24.de/content-management-service/fragments/test.html?fragment=C07Teaser.html\\\" target=\\\"_blank\\\">showcar-teaser</a> example page.</p>\\n<p>For how-to-use read the <a href=\\\"https://github.com/Scout24/showcar-benefits\\\" target=\\\"_blank\\\">documentation</a>.</p>\\n\""
     }
 }
