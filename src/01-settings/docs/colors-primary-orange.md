@@ -1,12 +1,6 @@
 <h2>Colors Primary Orange<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 <div class="ndpl-component__color-container">
-<div class="ndpl-component__color" style="background-color: rgb(102, 44, 0);">
-<div>
-#662c00<br>rgb(102, 44, 0)<br>$orange-140
-</div>
-</div>
-</div><div class="ndpl-component__color-container">
 <div class="ndpl-component__color" style="background-color: rgb(128, 55, 0);">
 <div>
 #803700<br>rgb(128, 55, 0)<br>$orange-130
