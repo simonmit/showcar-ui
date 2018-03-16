@@ -1,12 +1,6 @@
 <h2>Colors Primary Blue<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 			<div class="ndpl-component__color-container">
-				<div class="ndpl-component__color" style="background-color: rgb(0, 38, 77);">
-					<div>
-						#00264d<br>rgb(0, 38, 77)<br>$blue-110
-					</div>
-				</div>
-			</div><div class="ndpl-component__color-container">
 				<div class="ndpl-component__color" style="background-color: rgb(0, 52, 104);">
 					<div>
 						#003468<br>rgb(0, 52, 104)<br>$blue-100
