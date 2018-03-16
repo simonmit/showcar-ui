@@ -38,23 +38,23 @@ module.exports = (globalJSON, content, withOutMenu) => {
         let type = [];
         let group = [];
         content = Object.keys(globalJSON)
-                .map((el, index) => {
-                    let content = '';
-                    if (group.indexOf(globalJSON[el].group) === - 1) {
-                        if (index != 0) {
-                            content += `<hr>`;
-                            content += '</div>';
-                        }
-                        content += `<div id="${globalJSON[el].group}-target" class="positon-anchor">`;
+            .map((el, index) => {
+                let content = '';
+                if (group.indexOf(globalJSON[el].group) === - 1) {
+                    if (index != 0) {
+                        content += `<hr>`;
+                        content += '</div>';
                     }
-                    if (type.indexOf(globalJSON[el].type) === - 1) {
-                        type.push(globalJSON[el].type);
-                        content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
-                    }
-                    content += wrap(globalJSON[el]);
-                    group.push(globalJSON[el].group);
-                    return content;
-                }).join('\n') || 'empty';
+                    content += `<div id="${globalJSON[el].group}-target" class="positon-anchor">`;
+                }
+                if (type.indexOf(globalJSON[el].type) === - 1) {
+                    type.push(globalJSON[el].type);
+                    content += `<h2 class="type_name">${globalJSON[el].type}</h2>`;
+                }
+                content += wrap(globalJSON[el]);
+                group.push(globalJSON[el].group);
+                return content;
+            }).join('\n') || 'empty';
     } else {
         content = `<div id="separate-content">${content}</div>`;
     }
@@ -144,7 +144,7 @@ module.exports = (globalJSON, content, withOutMenu) => {
             }
 
               hljs.initHighlightingOnLoad();
-              if (location.hostname === 'autoscout24.github.io') {
+              if (location.hostname === 'scout24.github.io') {
                    [].forEach.call(document.querySelectorAll('#left-menu a.open-separate'), function (openSeparate) {
                         openSeparate.style.display = "none";
                     });
