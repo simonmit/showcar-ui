@@ -4,6 +4,7 @@
 <script data-pagespeed-no-defer pagespeed_no_defer>
 (function () {
     window.optimizely = window.optimizely || [];
+    window.optimizely.push('activateUniversalAnalytics');
     window.optimizelyReady = new Promise(function(resolve, reject) {
         window.optimizely.push({
             type: "addListener",
