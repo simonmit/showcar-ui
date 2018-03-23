@@ -4,6 +4,7 @@
 @import '../../../02-sass-tools/sass-mq';
 
 .sc-page-header {
+  background-color: $white;
   margin-top: 25px;
   padding: $L $L $M;
 
@@ -14,6 +15,8 @@
 }
 
 .sc-headline-with-breadcrumbs {
+  background-color: $white;
+
   h1 {
     padding-left: $L;
   }
