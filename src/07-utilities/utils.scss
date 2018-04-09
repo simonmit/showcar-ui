@@ -72,7 +72,7 @@
 //s viewport
 .sc-hidden-at-s {
   @include mqminmax($viewportS - 1, $viewportM - 1) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -85,7 +85,7 @@
 //m viewport
 .sc-hidden-at-m {
   @include mqminmax($viewportM, $viewportL - 1) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -102,7 +102,7 @@
 //l viewport
 .sc-hidden-at-l {
   @include mqminmax($viewportL, $viewportXL - 1) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -119,7 +119,7 @@
 //xl viewport
 .sc-hidden-at-xl {
   @include mqmin($viewportXL) {
-    display: none;
+    display: none !important;
   }
 }
 
