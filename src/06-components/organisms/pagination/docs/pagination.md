@@ -1,6 +1,7 @@
 <h2>Pagination <span class="status approved">Approved</span><span class="status js">JS</span></h2>
 
-If you want to use the pagination component, you need to add the ul element with the `sc-pagination` class as shown below and the corresponding javascript snippet.
+If you want to use the pagination component, you need to add the ul element with the `sc-pagination` class as shown below and the corresponding javascript snippet.  
+In order to change default english previous/next text on buttons please provide attributes `data-previous-text` and `data-next-text` on `<ul>` element.
 
 You need the following properties to instantiate the "Pager":
 
