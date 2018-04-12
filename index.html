@@ -5763,7 +5763,7 @@ background-color: #f4f4f4;
                 <div class="element" id="pagination">
                     <div class="markdown"><h2>Pagination <span class="status approved">Approved</span><span class="status js">JS</span></h2>
 
-<p>If you want to use the pagination component, you need to add the ul element with the <code>sc-pagination</code> class as shown below and the corresponding javascript snippet.</p>
+<p>If you want to use the pagination component, you need to add the ul element with the <code>sc-pagination</code> class as shown below and the corresponding javascript snippet.<br>In order to change default english previous/next text on buttons please provide attributes <code>data-previous-text</code> and <code>data-next-text</code> on <code>&lt;ul&gt;</code> element.</p>
 <p>You need the following properties to instantiate the &quot;Pager&quot;:</p>
 <ul>
 <li>The name of the &quot;root&quot; element (in fact you can use document.querySelector(&#39;.sc-pagination&#39;) to obtain the right element)</li>
@@ -5791,7 +5791,7 @@ document.addEventListener('DOMContentLoaded', function() {
  });
 </script>
 </div>
-                   <div class="sample"><ul class="sc-pagination"></ul>
+                   <div class="sample"><ul class="sc-pagination" data-previous-text="Zurück" data-next-text="Weiter"></ul>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -5799,7 +5799,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-pagination" class="hjs html">&lt;ul class=&quot;sc-pagination&quot;&gt;&lt;/ul&gt;
+                                <code id="copy_code-code-pagination" class="hjs html">&lt;ul class=&quot;sc-pagination&quot; data-previous-text=&quot;Zur&uuml;ck&quot; data-next-text=&quot;Weiter&quot;&gt;&lt;/ul&gt;
 </code>
                             </pre>
                         </div>
