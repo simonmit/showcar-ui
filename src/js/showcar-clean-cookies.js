@@ -12,6 +12,7 @@ const whiteList = [
     'featurebee',
     'toguru',
     'cookieConsent',
+    'cookie-layer-dismissed',
     'User',
     'cmpatt',
     'cms_fbOFF',
