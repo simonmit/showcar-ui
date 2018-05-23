@@ -59,7 +59,7 @@ class Notification {
         this.createElement('div', this.container, this.body);
 
         if (this.element && this.element.id) {
-            var triggerElem = document.querySelector('[data-trigger=' + this.element.id + ']');
+            var triggerElem = document.querySelector('[data-trigger="' + this.element.id + '"]');
 
             if (triggerElem) {
                 var self = this;
