@@ -47,7 +47,8 @@ const whiteList = [
     'test-cookie',
     '__ut',
     'as24_identity',
-    'noauth'
+    'noauth',
+    'random'
 ];
 
 const deleteCookieByName = function(cookie) {
