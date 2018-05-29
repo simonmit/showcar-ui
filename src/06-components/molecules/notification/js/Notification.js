@@ -9,6 +9,7 @@ class Notification {
 
         this.closeBtn = null;
         this.titleTag = null;
+        this.activeTimeout = null;
     }
 
     get title() {
@@ -82,7 +83,10 @@ class Notification {
         if ('class' === attribute && this.isShow()) {
             this.element.classList.remove('prefade');
             if (this.timeout) {
-                window.setTimeout(this.hide.bind(this), this.timeout);
+                if(this.activeTimeout) {
+                    window.clearTimeout(this.activeTimeout);
+                }
+                this.activeTimeout = window.setTimeout(this.hide.bind(this), this.timeout);
             }
         } else if ('class' === attribute && !this.isShow()) {
             this.hide();
