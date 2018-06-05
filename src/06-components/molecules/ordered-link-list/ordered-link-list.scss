@@ -25,6 +25,7 @@
 .sc-ordered-link-list__li {
   padding: $S 0 $XS;
   border-bottom: 1px solid $black-30;
+  break-inside: avoid;
 
   a {
     width: 100%;
