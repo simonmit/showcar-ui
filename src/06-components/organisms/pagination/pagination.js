@@ -11,7 +11,11 @@ class Pager {
     constructor (root, itemsPerPage, activePage, totalItems, urlTemplate, unlimited) {
 
         this.ETC          = '...';
-        this.rootElement  = $(root);
+        try {
+            this.rootElement  = $(root);
+        } catch (error) {
+            window.onerror('showcar-ui-test. $ is not defined', 'showcar-ui');
+        }
         this.itemsPerPage = parseInt(itemsPerPage);
         this.activePage   = parseInt(activePage);
         this.totalCount   = parseInt(totalItems);
