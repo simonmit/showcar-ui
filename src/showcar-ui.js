@@ -1,5 +1,5 @@
 // Todo: remove Zepto
-if(!window.jQuery){
+if(!window.$){
     window.$ = window.Zepto = require('zepto-modules/zepto');
     require('zepto-modules/event');
     require('zepto-modules/ajax');
