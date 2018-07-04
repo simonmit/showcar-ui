@@ -1,0 +1,73 @@
+@import '../../../01-settings/variables';
+
+.dp-tab {
+  position: relative;
+  display: flex;
+  padding-left: $L;
+  padding-top: $S;
+  padding-bottom: $S;
+  background-color: $white;
+  border-bottom: solid 1px $black-30;
+  // max-width: 400px; //temp, pls remove
+}
+
+.dp-tab--active {
+  border-left: solid $XS $orange-100;
+  padding-left: $M;
+
+  a {
+    color: $orange-100;
+  }
+}
+
+.dp-tab--active::after{
+  content: '';
+  position: absolute;
+  right: -$L;
+  top: $L;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: $M solid #fff;
+  clear: both;
+}
+
+.dp-tab__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: $L;
+  width: 90%;
+}
+
+.dp-tab__icon {
+  width: $XL;
+  height: $XL;
+  background-color: $black-30;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.dp-tab__icon--success {
+  background-color: #009F00;
+}
+
+.dp-tab__icon--info {
+  background-color: #FFBE00;
+}
+
+.dp-tab__icon--error {
+  background-color: #E70315;
+}
+
+.dp-tab__icon__hook {
+  width: $M;
+  height: $M;
+  float: left;
+  margin-left: $XS;
+  margin-top: -1px;
+
+  svg {
+    fill: $white;
+    stroke: $white;
+    stroke-width: 1;
+  }
+}
