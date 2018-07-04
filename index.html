@@ -231,6 +231,10 @@
             <a href="/docs/molecules/media-section" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#menu-tabs-target">menu-tabs</a>
+            <a href="/docs/molecules/menu-tabs" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#notification-target">notification</a>
             <a href="/docs/molecules/notification" class="open-separate"></a>
         </li>
@@ -4174,6 +4178,125 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="menu-tabs-target" class="positon-anchor">
+                <div class="element" id="menu-tabs">
+                    <div class="markdown"><h2>Left menu tabs<span class="status review ux">Needs UX review</span></h2>
+
+<style>
+#menu-tabs .sample{
+background-color: #f4f4f4;
+}
+</style>
+</div>
+                   <div class="sample"><nav>
+    <a href="#" class="dp-tab sc-inline-link dp-tab--active">
+        <span class="dp-tab__icon">
+            <as24-icon type="hook" class="dp-tab__icon__hook"></as24-icon>
+        </span>
+        <span class="dp-tab__text">
+            <p class="sc-font-m sc-font-bold">Selected</p>
+            <p class="sc-font-silent sc-ellipsis sc-font-s">Description</p>
+        </span>
+    </a>
+    <a href="#" class="dp-tab sc-inline-link">
+        <span class="dp-tab__icon">
+            <as24-icon type="hook" class="dp-tab__icon__hook"></as24-icon>
+        </span>
+        <span class="dp-tab__text">
+            <p class="sc-font-m sc-font-bold">Default</p>
+            <p class="sc-font-silent sc-ellipsis sc-font-s">Description</p>
+        </span>
+    </a>
+    <a href="#" class="dp-tab sc-inline-link">
+        <span class="dp-tab__icon dp-tab__icon--success">
+            <as24-icon type="hook" class="dp-tab__icon__hook"></as24-icon>
+        </span>
+        <span class="dp-tab__text">
+            <p class="sc-font-m sc-font-bold">Success</p>
+            <p class="sc-font-silent sc-ellipsis sc-font-s">Description</p>
+        </span>
+    </a>
+    <a href="#" class="dp-tab sc-inline-link">
+        <span class="dp-tab__icon dp-tab__icon--info">
+            <as24-icon type="hook" class="dp-tab__icon__hook"></as24-icon>
+        </span>
+        <span class="dp-tab__text">
+            <p class="sc-font-m sc-font-bold">Info</p>
+            <p class="sc-font-silent sc-ellipsis sc-font-s">Description</p>
+        </span>
+    </a>
+    <a href="#" class="dp-tab sc-inline-link">
+        <span class="dp-tab__icon dp-tab__icon--error">
+            <as24-icon type="hook" class="dp-tab__icon__hook"></as24-icon>
+        </span>
+        <span class="dp-tab__text">
+            <p class="sc-font-m sc-font-bold">Error</p>
+            <p class="sc-font-silent sc-ellipsis sc-font-s">Description</p>
+        </span>
+    </a>
+</nav>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-menu-tabs" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-menu-tabs" class="hjs html">&lt;nav&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dp-tab sc-inline-link dp-tab--active&quot;&gt;
+        &lt;span class=&quot;dp-tab__icon&quot;&gt;
+            &lt;as24-icon type=&quot;hook&quot; class=&quot;dp-tab__icon__hook&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;dp-tab__text&quot;&gt;
+            &lt;p class=&quot;sc-font-m sc-font-bold&quot;&gt;Selected&lt;/p&gt;
+            &lt;p class=&quot;sc-font-silent sc-ellipsis sc-font-s&quot;&gt;Description&lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dp-tab sc-inline-link&quot;&gt;
+        &lt;span class=&quot;dp-tab__icon&quot;&gt;
+            &lt;as24-icon type=&quot;hook&quot; class=&quot;dp-tab__icon__hook&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;dp-tab__text&quot;&gt;
+            &lt;p class=&quot;sc-font-m sc-font-bold&quot;&gt;Default&lt;/p&gt;
+            &lt;p class=&quot;sc-font-silent sc-ellipsis sc-font-s&quot;&gt;Description&lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dp-tab sc-inline-link&quot;&gt;
+        &lt;span class=&quot;dp-tab__icon dp-tab__icon--success&quot;&gt;
+            &lt;as24-icon type=&quot;hook&quot; class=&quot;dp-tab__icon__hook&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;dp-tab__text&quot;&gt;
+            &lt;p class=&quot;sc-font-m sc-font-bold&quot;&gt;Success&lt;/p&gt;
+            &lt;p class=&quot;sc-font-silent sc-ellipsis sc-font-s&quot;&gt;Description&lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dp-tab sc-inline-link&quot;&gt;
+        &lt;span class=&quot;dp-tab__icon dp-tab__icon--info&quot;&gt;
+            &lt;as24-icon type=&quot;hook&quot; class=&quot;dp-tab__icon__hook&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;dp-tab__text&quot;&gt;
+            &lt;p class=&quot;sc-font-m sc-font-bold&quot;&gt;Info&lt;/p&gt;
+            &lt;p class=&quot;sc-font-silent sc-ellipsis sc-font-s&quot;&gt;Description&lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dp-tab sc-inline-link&quot;&gt;
+        &lt;span class=&quot;dp-tab__icon dp-tab__icon--error&quot;&gt;
+            &lt;as24-icon type=&quot;hook&quot; class=&quot;dp-tab__icon__hook&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;dp-tab__text&quot;&gt;
+            &lt;p class=&quot;sc-font-m sc-font-bold&quot;&gt;Error&lt;/p&gt;
+            &lt;p class=&quot;sc-font-silent sc-ellipsis sc-font-s&quot;&gt;Description&lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
