@@ -1,16 +1,18 @@
 @import '../../../01-settings/variables';
 
-.dp-tab {
+.sc-menu-tab {
   position: relative;
   display: flex;
+  align-items: center;
   padding-left: $L;
   padding-top: $S;
   padding-bottom: $S;
   background-color: $white;
   border-bottom: solid 1px $black-30;
+  min-height: 60px;
 }
 
-.dp-tab--active {
+.sc-menu-tab--active {
   border-left: solid $XS $orange-100;
   padding-left: $M;
 
@@ -19,7 +21,7 @@
   }
 }
 
-.dp-tab--active::after{
+.sc-menu-tab--active::after{
   content: '';
   position: absolute;
   right: -$L;
@@ -30,14 +32,18 @@
   clear: both;
 }
 
-.dp-tab__text {
+.sc-menu-tab__text {
   display: flex;
   flex-direction: column;
-  padding-left: $L;
   width: 90%;
 }
 
-.dp-tab__icon {
+// add padding only if icon is present
+.sc-menu-tab__icon + .sc-menu-tab__text {
+  padding-left: $L;
+}
+
+.sc-menu-tab__icon {
   width: $XL;
   height: $XL;
   background-color: $black-30;
@@ -45,19 +51,19 @@
   align-self: center;
 }
 
-.dp-tab__icon--success {
+.sc-menu-tab__icon--success {
   background-color: #009F00;
 }
 
-.dp-tab__icon--info {
+.sc-menu-tab__icon--info {
   background-color: #FFBE00;
 }
 
-.dp-tab__icon--error {
+.sc-menu-tab__icon--error {
   background-color: #E70315;
 }
 
-.dp-tab__icon__hook {
+.sc-menu-tab__icon__hook {
   width: $M;
   height: $M;
   float: left;
