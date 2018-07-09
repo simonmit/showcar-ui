@@ -1,4 +1,4 @@
-<h2>Left menu tabs<span class="status review ux">Needs UX review</span></h2>
+<h2>Left menu tabs<span class="status approved">Approved</span></h2>
 
 <style>
 #menu-tabs .sample{
