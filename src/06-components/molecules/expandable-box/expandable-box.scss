@@ -45,6 +45,7 @@
       & ~ .sc-expandable-box__title > .sc-expandable-box__label {
         &:after {
           @include rotating-arrow('up');
+          margin-left: $L;
         }
       }
     }
