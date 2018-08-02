@@ -23,6 +23,7 @@ $border: 1px solid $black-30;
     padding: $XL $L;
     text-align: left;
     border-bottom: $border;
+    border-right: $border;
   }
 
 }
@@ -32,14 +33,50 @@ $border: 1px solid $black-30;
 }
 
 .sc-table__scrollable {
-  @include mqmax($viewportM - 1) {
+  table {
+    table-layout: fixed;
+    overflow-x: auto;
     width: 100%;
-    overflow-x: scroll;
-    border: $border;
-  
-    table {
-      width: auto;
-      min-width: 100%;
+    display: block;
+
+    thead,
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: flex;
+      position: relative;
+      
+      th,
+      td {
+        flex-basis: 50%;
+        max-width: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        display: block;
+        background-color: $white;
+        &:nth-last-child(1) {
+          border-right: 0;
+        }
+        @include mqmin($viewportM) {
+          flex-basis: 33.3333%;
+          max-width: 33.3333%;
+        }
+        @include mqmin($viewportL) {
+          flex-basis: 25%;
+          max-width: 25%;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: $black-20;
+        
+        td {
+          background-color: $black-20;
+        }
+      }
     }
   }
 }
