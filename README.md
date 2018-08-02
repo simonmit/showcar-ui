@@ -85,10 +85,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 See [LICENSE.md](LICENSE.md)
 
-## Changelog / History
-
-See [History.md](History.md)
-
 ## Z-indexes table
 
 Published 13.03.2017
