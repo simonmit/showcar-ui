@@ -17,7 +17,7 @@ To install showcar-ui within your project use npm.
 
 For building on your local machine install all npm packages first. Then you can use the gulp command to run the build:
 
-    npm install
+    npm install or use `yarn`
     gulp build
     
 ## How to run locally:
