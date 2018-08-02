@@ -60,6 +60,7 @@
 
     &:after {
       @include rotating-arrow('down');
+      margin-left: $L;
     }
 
     @include mqmin($viewportM) {
