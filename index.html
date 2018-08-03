@@ -2583,13 +2583,17 @@ margin-bottom:15px;
                 <div class="element" id="lightbox">
                     <div class="markdown"><h2>Lightbox<span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2>
 
-<p>In order to link a trigger element like a button that opens the lightbox you need to provide an <code>id</code> for the lightbox 
+<p>In order to link a trigger element like a button that opens the lightbox you need to provide an <code>id</code> for the lightbox
 and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger element.</p>
 <p>For closing you can add the <code>data-lightbox-close</code> attribute to any element that should trigger closing of the lightbox.</p>
 <p>If you need a custom identifier for your lightbox add <code>data-custom=&#39;String&#39;</code> attribute to you <code>as24-lightbox</code> element. It will be automatically applied to div which contains overlay and content of the lightbox.</p>
 <p>In case you need to disable closing when clicking outside the lightbox you can provide the <code>prevent-outsideclose</code> attribute
 to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot; prevent-outsideclose&gt;</code>.</p>
-<p>In case you need to disable opening lightbox when clicking button that opens the lightbox, you can provide the <code>data-lightbox-prevent-open=&quot;true&quot;</code> attribute. And you can switch this to  <code>data-lightbox-prevent-open=&quot;false&quot;</code> if you want to open it.</p>
+<p>In case you need to disable opening lightbox when clicking button that opens the lightbox, you can provide the <code>data-lightbox-prevent-open=&quot;true&quot;</code> attribute. And you can switch this to <code>data-lightbox-prevent-open=&quot;false&quot;</code> if you want to open it.</p>
+<p>You can register (multiple) callbacks for when the lightbox opens/closes by calling the <code>registerOnOpenCallback, registerOnCloseCallback</code> methods on the <code>&lt;as24-lightbox&gt;</code> DOM element, i.e. <br/><br/></p>
+<pre><code class="lang-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
+myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
+</code></pre>
 </div>
                    <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
 <as24-lightbox class="sc-lightbox" id="lb1" data-custom="custom-lightbox">
