@@ -22,7 +22,7 @@ export default function(tagName) {
         });
 
         lb.close.forEach(el => {
-            el.addEventListener('click', e => hide(lb, e), false);
+            el.addEventListener('click', e => hide(lb, e, lb.preventOutsideClose !== null), false);
         });
     }
 
@@ -66,9 +66,11 @@ export default function(tagName) {
         onOpenCallbacks.forEach(cb => cb());
     };
 
-    const hide = (lb, e) => {
+    /**
+     * @param {boolean} executeOnCloseCallback executeOnCloseCallback Hide method gets called twice when clicking on close button, but we want to run close callback only-once
+     */
+    const hide = (lb, e, executeOnCloseCallback = true) => {
         // e.stopPropagation();
-        console.log('calling hide');
         document.querySelector('html').classList.remove('sc-unscroll');
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27) {
@@ -82,7 +84,7 @@ export default function(tagName) {
                 }, 250);
             }
 
-            onCloseCallbacks.forEach(cb => cb());
+            executeOnCloseCallback && onCloseCallbacks.forEach(cb => cb());
         }
     };
 
