@@ -5,7 +5,7 @@
 
 # showcar-ui
 
-showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.  
+showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.
 
 ## Installation:
 
@@ -19,12 +19,16 @@ For building on your local machine install all npm packages first. Then you can 
 
     npm install or use `yarn`
     gulp build
-    
+
 ## How to run locally:
 
 You can use the gulp default command to run the build locally:
 
     gulp
+
+### Interacting w/ local changes
+
+You can preview/interact with the local changes by running `yarn run docs:serve`. This will generate the docs & launch a server where you can look at them, running the local version of showcar-ui
 
 ## How to include:
 
@@ -46,19 +50,19 @@ The showcar-ui library includes some libraries and polyfills:
 
 ### Libraries
 
-* showcar-storage (https://github.com/Scout24/showcar-storage)
-* showcar-icons (also available as standalone fragment) (https://github.com/Scout24/showcar-icons)
-* showcar-tracking (also available as standalone fragment) (https://github.com/Scout24/showcar-tracking)
-* Zepto (zepto-modules v1.0.1 uses Zepto v1.2.0) (https://www.npmjs.com/package/zepto-modules) (http://zeptojs.com/)
-* lazysizes (https://github.com/aFarkas/lazysizes)
+- showcar-storage (https://github.com/Scout24/showcar-storage)
+- showcar-icons (also available as standalone fragment) (https://github.com/Scout24/showcar-icons)
+- showcar-tracking (also available as standalone fragment) (https://github.com/Scout24/showcar-tracking)
+- Zepto (zepto-modules v1.0.1 uses Zepto v1.2.0) (https://www.npmjs.com/package/zepto-modules) (http://zeptojs.com/)
+- lazysizes (https://github.com/aFarkas/lazysizes)
 
 ### Polyfills
 
-* document-register-element
-* dom4
-* es6-collections
-* whatwg-fetch (fetch)
-* promiz (promises)
+- document-register-element
+- dom4
+- es6-collections
+- whatwg-fetch (fetch)
+- promiz (promises)
 
 ### showcar-storage
 
@@ -89,18 +93,18 @@ See [LICENSE.md](LICENSE.md)
 
 Published 13.03.2017
 
-| ShowcarUI       |               |       |      |notes    |
-| --------------- |---------------|-------|------|---------|
-| lightbox        | overlay       |  140  |useful|         |
-|                 | modal window  |  139  |useful|         |
-| spy-navigation  | wrapper       |  2/21(if sticky)   |useful|         |
-| tooltip         |               |  2    |useful|         |
-| input group     | focus         |  2    |useful|         |
-| ad              |               |  110  |useful|         |
-| custom dropdown |               |  1    |useful|         |
-| sticky          |               |  2    |useful| Could have bigger z-index but lower than overlay        |
-| navigation      | ::before li   |  100  |useful| Can be 10        |
-| notification    |               |  120  |useful|         |
-| **Contentservice**     |        |       |      |         |
-| header          |               |  130  |useful|         |
-| notification    |               |  9999 |remove!|         |
+| ShowcarUI          |              |                 |         | notes                                            |
+| ------------------ | ------------ | --------------- | ------- | ------------------------------------------------ |
+| lightbox           | overlay      | 140             | useful  |                                                  |
+|                    | modal window | 139             | useful  |                                                  |
+| spy-navigation     | wrapper      | 2/21(if sticky) | useful  |                                                  |
+| tooltip            |              | 2               | useful  |                                                  |
+| input group        | focus        | 2               | useful  |                                                  |
+| ad                 |              | 110             | useful  |                                                  |
+| custom dropdown    |              | 1               | useful  |                                                  |
+| sticky             |              | 2               | useful  | Could have bigger z-index but lower than overlay |
+| navigation         | ::before li  | 100             | useful  | Can be 10                                        |
+| notification       |              | 120             | useful  |                                                  |
+| **Contentservice** |              |                 |         |                                                  |
+| header             |              | 130             | useful  |                                                  |
+| notification       |              | 9999            | remove! |                                                  |

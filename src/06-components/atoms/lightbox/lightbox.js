@@ -68,7 +68,7 @@ export default function(tagName) {
 
     const hide = (lb, e) => {
         // e.stopPropagation();
-
+        console.log('calling hide');
         document.querySelector('html').classList.remove('sc-unscroll');
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27) {
@@ -90,10 +90,18 @@ export default function(tagName) {
 
     const registerOnCloseCallback = cb => onCloseCallbacks.push(cb);
 
-    registerElement({
-        attachedCallback,
-        tagName,
-        registerOnOpenCallback,
-        registerOnCloseCallback
-    });
+    registerElement(
+        {
+            attachedCallback,
+            tagName
+        },
+        {
+            registerOnOpenCallback: {
+                value: registerOnOpenCallback
+            },
+            registerOnCloseCallback: {
+                value: registerOnCloseCallback
+            }
+        }
+    );
 }

@@ -23,6 +23,9 @@
   "scripts": {
     "build": "gulp build",
     "docs": "gulp docs:generate",
+    "docs:serve": "gulp docs:serve",
+    "docs:edit": "gulp docs:edit",
+    "docs:watch": "gulp docs:watch",
     "test": "gulp test:travis"
   },
   "author": "AutoScout24 GmbH",
