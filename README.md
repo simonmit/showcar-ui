@@ -108,3 +108,22 @@ Published 13.03.2017
 | **Contentservice** |              |                 |         |                                                  |
 | header             |              | 130             | useful  |                                                  |
 | notification       |              | 9999            | remove! |                                                  |
+
+
+## Optimizely (to be continued)
+```js
+window.optimizelyReady.then(() => {
+    const state = window.optimizely.get("state");
+    const variationMap = state.getVariationMap();
+
+    const experiment = variationMap["11184022659"];
+    console.log(experiment.name);
+    console.log(experiment.index);
+});
+
+
+window.optimizely.push({
+    type: "event",
+    eventName: "favoritesAdd"
+});
+```
