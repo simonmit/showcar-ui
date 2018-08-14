@@ -1,8 +1,9 @@
 import registerElement from '../../../07-utilities/helpers.js';
 
-export default function(tagName) {
+export default function (tagName) {
     const onOpenCallbacks = [];
     const onCloseCallbacks = [];
+    let scrollbarWidth;
 
     function attachedCallback() {
         let lb = {
@@ -16,6 +17,7 @@ export default function(tagName) {
 
         const id = this.id || '';
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
+        scrollbarWidth = measureScrollbarWidth();
 
         openElements.forEach(el => {
             el.addEventListener('click', () => show(lb, el), false);
@@ -57,7 +59,9 @@ export default function(tagName) {
             });
         }
 
-        document.querySelector('html').classList.add('sc-unscroll');
+        const html = document.querySelector('html');
+        html.classList.add('sc-unscroll');
+        html.style.marginRight = scrollbarWidth ? `${scrollbarWidth}px` : 0;
 
         setTimeout(() => {
             lb.overlay.classList.add('sc-lightbox--fadein');
@@ -70,8 +74,9 @@ export default function(tagName) {
      * @param {boolean} executeOnCloseCallback executeOnCloseCallback Hide method gets called twice when clicking on close button, but we want to run close callback only-once
      */
     const hide = (lb, e, executeOnCloseCallback = true) => {
-        // e.stopPropagation();
-        document.querySelector('html').classList.remove('sc-unscroll');
+        const html = document.querySelector('html');
+        html.classList.remove('sc-unscroll');
+        html.style.marginRight = 0; // reset margin
 
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27) {
             e.preventDefault();
@@ -89,8 +94,9 @@ export default function(tagName) {
     };
 
     const registerOnOpenCallback = cb => onOpenCallbacks.push(cb);
-
     const registerOnCloseCallback = cb => onCloseCallbacks.push(cb);
+
+    const measureScrollbarWidth = () => window && document && (window.innerWidth - document.documentElement.clientWidth) || 0;
 
     registerElement(
         {

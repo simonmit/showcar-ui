@@ -43,7 +43,7 @@ $types: (
   background-position: $L map-get($type, background-position-y);
 }
 
-as24-notification {
+as24-notification, .sc-as24-notification {
   display: block;
   overflow: hidden;
   width: 100%;
