@@ -74,7 +74,6 @@ export default function (tagName) {
      * @param {boolean} executeOnCloseCallback executeOnCloseCallback Hide method gets called twice when clicking on close button, but we want to run close callback only-once
      */
     const hide = (lb, e, executeOnCloseCallback = true) => {
-        // e.stopPropagation();
         const html = document.querySelector('html');
         html.classList.remove('sc-unscroll');
         html.style.marginRight = 0; // reset margin
@@ -95,12 +94,9 @@ export default function (tagName) {
     };
 
     const registerOnOpenCallback = cb => onOpenCallbacks.push(cb);
-
     const registerOnCloseCallback = cb => onCloseCallbacks.push(cb);
 
-    function measureScrollbarWidth() {
-        return window && document && (window.innerWidth - document.documentElement.clientWidth) || 0;
-    }
+    const measureScrollbarWidth = () => window && document && (window.innerWidth - document.documentElement.clientWidth) || 0;
 
     registerElement(
         {
