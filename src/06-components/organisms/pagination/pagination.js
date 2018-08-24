@@ -9,7 +9,6 @@ class Pager {
      * @param {Boolean} unlimited
      */
     constructor (root, itemsPerPage, activePage, totalItems, urlTemplate, unlimited) {
-
         this.ETC          = '...';
         try {
             this.rootElement  = $(root);
@@ -56,19 +55,17 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         const previousText = $(this.rootElement).data('previous-text') || 'Previous';
-        const isFirstPage = 1 === this.activePage;
+        const isPreviousPageAvailable = this.totalCount > 0 && (this.activePage > 1 || this.activePage > this.maxPage);
 
         li.addClass('previous-page');
-        if (!isFirstPage) {
-            a.attr('href', this.getPageUrl(this.activePage - 1));
-        }
-
-        a.text(' ' + previousText);
-        icon.attr('type', 'arrow');
-
-        if (isFirstPage) {
+        if (isPreviousPageAvailable) {
+            const pageNumber = this.activePage > this.maxPage ? this.maxPage : this.activePage-1;
+            a.attr('href', this.getPageUrl(pageNumber));
+        } else {
             a.addClass('disabled');
         }
+        a.text(' ' + previousText);
+        icon.attr('type', 'arrow');
 
         return li.append(a.prepend(icon));
     }
@@ -82,19 +79,16 @@ class Pager {
             icon = this.prototypeIcon.clone();
 
         const nextText = $(this.rootElement).data('next-text') || 'Next';
-        const isLastPage = this.maxPage === this.activePage;
+        const isNextPageAvailable = this.activePage < this.maxPage;
 
         li.addClass('next-page');
-        if (!isLastPage) {
+        if (isNextPageAvailable) {
             a.attr('href', this.getPageUrl(this.activePage + 1));
-        }
-
-        a.text(nextText + ' ');
-        icon.attr('type', 'arrow');
-
-        if (isLastPage) {
+        } else {
             a.addClass('disabled');
         }
+        a.text(nextText + ' ');
+        icon.attr('type', 'arrow');
 
         return li.append(a.append(icon));
     }
@@ -171,8 +165,9 @@ class Pager {
      * @returns {Array}
      */
     getPageTiles(activePage) {
-        let leftNumber = activePage - 1,
-            rightNumber = activePage + 1,
+        let startTile = activePage > this.maxPage ? this.maxPage : activePage,
+            leftNumber = startTile - 1,
+            rightNumber = startTile + 1,
             maxPossibleTiles = this.getMaximumPossibleTiles(),
             usefulTiles = 0,
             countEtc = 0;
@@ -182,7 +177,7 @@ class Pager {
             maxPossibleTiles--;
         }
 
-        let tiles = [activePage];
+        let tiles = [startTile];
 
         // because we have our activePage, we have one possible tile less
         maxPossibleTiles--;
@@ -257,7 +252,7 @@ class Pager {
         this.rootElement.children().remove();
 
         let pagination = this.getPageTiles(this.activePage),
-            collection      = $();
+            collection = $();
 
         this.rootElement.append(this.previousButton);
 
