@@ -1045,8 +1045,22 @@ margin-bottom:15px;
                 <div class="element" id="button-default">
                     <div class="markdown"><h2>Button<span class="status approved">Approved</span></h2>
 
-<p>Usage information:</p>
+<h4>When to use a link or button</h4><p>A link navigates the user to a new resource, taking them away from the current context. Also internal linking (jumping to another section of the current page) is allowed. The user can trigger to open the link in a new window/tab. Examples:</p>
 <ul>
+<li>Navigate the user to a new page or view</li>
+<li>Change the URL</li>
+<li>Page jumps with internal href attributes</li>
+<li>Deep-link client-rendered applications</li>
+</ul>
+<p>A button toggles something in the interface, like a video player; or triggers new content in that same context, like a popup menu. Examples:</p>
+<ul>
+<li>Submit form data</li>
+<li>Opening a modal window</li>
+<li>Triggering a popup menu</li>
+<li>Toggling an interface</li>
+<li>Playing media content</li>
+</ul>
+<h4>Usage information</h4><ul>
 <li>Bob: Primary button, should be used for all top level interactions.</li>
 <li>Ross: Secondary button, should be used for less important interactions.</li>
 <li>Ghost: Use it for data-driven actions e.g. show phone number on desktop.</li>
