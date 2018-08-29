@@ -3570,17 +3570,40 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
 <hr></div><div id="tooltip-target" class="positon-anchor">
                 <div class="element" id="tooltip">
                     <div class="markdown"><p><h2>Tooltip<span class="status approved">Approved</span><span class="status js">JS</span></h2></p>
-<style>
-#tooltip-2 .sample{
+<p><style></p>
+<p>#tooltip-2 .sample{
     padding-top:60px;
+}</p>
+<p>#tooltip-show, #tooltip-hide {
+    cursor: pointer;
+    font-weight: 900;
 }
-</style>
+</style></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var shower = document.querySelector('#tooltip-show');
+    var hider = document.querySelector('#tooltip-hide');
+    shower.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('show-tooltip-event')); }, false);
+    hider.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('hide-tooltip-event')); }, false);
+  })
+</script>
 </div>
-                   <div class="sample"><p>That text needs to be explaned
-	<as24-tooltip class="sc-tooltip">
+                   <div class="sample"><p>That text needs to be explained
+	<as24-tooltip class="sc-tooltip" id="test-hover-tooltip">
 		<as24-icon type="info" style="width: 16px;"></as24-icon>
 		<span class="sc-tooltip-content">Information in tooltip <a href="/">link</a></span>
 	</as24-tooltip>
+</p>
+<br>
+<p>This text has a custom triggered tooltip
+	<as24-tooltip class="sc-tooltip" id="test-event-tooltip" show-event="show-tooltip-event" hide-event="hide-tooltip-event">
+		<as24-icon type="heart" style="width: 16px;"></as24-icon>
+		<span class="sc-tooltip-content">Show up!</span>
+	</as24-tooltip>
+	<br><br>
+	<button id="tooltip-show" class="sc-btn-bob">click me to show it</button>
+	<button id="tooltip-hide" class="sc-btn-ross">click me to hide it</button>
 </p>
 </div> 
                     <div class="code-sample">
@@ -3589,11 +3612,21 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-tooltip" class="hjs html">&lt;p&gt;That text needs to be explaned
-&Tab;&lt;as24-tooltip class=&quot;sc-tooltip&quot;&gt;
+                                <code id="copy_code-code-tooltip" class="hjs html">&lt;p&gt;That text needs to be explained
+&Tab;&lt;as24-tooltip class=&quot;sc-tooltip&quot; id=&quot;test-hover-tooltip&quot;&gt;
 &Tab;&Tab;&lt;as24-icon type=&quot;info&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
 &Tab;&Tab;&lt;span class=&quot;sc-tooltip-content&quot;&gt;Information in tooltip &lt;a href=&quot;/&quot;&gt;link&lt;/a&gt;&lt;/span&gt;
 &Tab;&lt;/as24-tooltip&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;This text has a custom triggered tooltip
+&Tab;&lt;as24-tooltip class=&quot;sc-tooltip&quot; id=&quot;test-event-tooltip&quot; show-event=&quot;show-tooltip-event&quot; hide-event=&quot;hide-tooltip-event&quot;&gt;
+&Tab;&Tab;&lt;as24-icon type=&quot;heart&quot; style=&quot;width: 16px;&quot;&gt;&lt;/as24-icon&gt;
+&Tab;&Tab;&lt;span class=&quot;sc-tooltip-content&quot;&gt;Show up!&lt;/span&gt;
+&Tab;&lt;/as24-tooltip&gt;
+&Tab;&lt;br&gt;&lt;br&gt;
+&Tab;&lt;button id=&quot;tooltip-show&quot; class=&quot;sc-btn-bob&quot;&gt;click me to show it&lt;/button&gt;
+&Tab;&lt;button id=&quot;tooltip-hide&quot; class=&quot;sc-btn-ross&quot;&gt;click me to hide it&lt;/button&gt;
 &lt;/p&gt;
 </code>
                             </pre>
