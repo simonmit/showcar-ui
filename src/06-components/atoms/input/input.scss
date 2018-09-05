@@ -36,6 +36,18 @@
   &:hover:enabled {
     border-color: $black-100;
   }
+  
+  &.error:hover:enabled {
+    border-color: $color-error-hover;
+  }
+
+  &.success:hover:enabled {
+    border-color: $color-success-hover;
+  }
+
+  &.info:hover:enabled {
+    border-color: $color-info-hover;
+  }
 
   &:focus, &:focus:enabled {
     box-shadow: inset 0 0 0 1px $blue-80;
