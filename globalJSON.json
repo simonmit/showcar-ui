@@ -220,6 +220,15 @@
         "html": "\"<span class=\\\"sc-disruptor sc-font-uppercase\\\">Neu</span>\\n<span class=\\\"sc-disruptor\\\">Bereits über 20 Mio. Downloads!</span>\\n\"",
         "codeExample": "\"&lt;span class=&quot;sc-disruptor sc-font-uppercase&quot;&gt;Neu&lt;/span&gt;\\n&lt;span class=&quot;sc-disruptor&quot;&gt;Bereits &uuml;ber 20 Mio. Downloads!&lt;/span&gt;\\n\""
     },
+    "disruptor-small": {
+        "name": "disruptor-small",
+        "type": "atoms",
+        "group": "disruptor-small",
+        "srcDir": "src/06-components/atoms/disruptor-small/docs",
+        "markDown": "\"<p><h2>Disruptor Small<span class=\\\"status review\\\">REVIEW</span></h2></p>\\n<p>This Disruptor Small is currently used in the main navigation only.</p>\\n\"",
+        "html": "\"<p>Modelfinder <em class=\\\"sc-disruptor-small sc-font-uppercase\\\">New</em></p>\\n<p>Car listing <em class=\\\"sc-disruptor-small sc-font-uppercase\\\">Kostenlos</em></p>\\n\"",
+        "codeExample": "\"&lt;p&gt;Modelfinder &lt;em class=&quot;sc-disruptor-small sc-font-uppercase&quot;&gt;New&lt;/em&gt;&lt;/p&gt;\\n&lt;p&gt;Car listing &lt;em class=&quot;sc-disruptor-small sc-font-uppercase&quot;&gt;Kostenlos&lt;/em&gt;&lt;/p&gt;\\n\""
+    },
     "google-map": {
         "name": "google-map",
         "type": "atoms",
