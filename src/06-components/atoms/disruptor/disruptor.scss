@@ -15,3 +15,12 @@ $sc-disruptor-background-color: $color-highlight-info;
   font-size: $L;
   background-color: $sc-disruptor-background-color;
 }
+
+.sc-disruptor-small {
+  padding-left: $XS;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  vertical-align: top;
+  color: $color-highlight-info;
+}
