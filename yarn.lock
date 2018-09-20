@@ -6304,9 +6304,9 @@ lazy-req@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/lazy-req/-/lazy-req-1.1.0.tgz#bdaebead30f8d824039ce0ce149d4daa07ba1fac"
 
-lazysizes@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-3.0.0.tgz#b1bacb5a0f28113ffa7b389ce2f35f1cff19d9b9"
+"lazysizes@git://github.com/aFarkas/lazysizes.git#bugfix-test/520-try-2":
+  version "4.1.2"
+  resolved "git://github.com/aFarkas/lazysizes.git#0d1accd738b0bc31aa2d934791a727115e2d6a88"
 
 lazystream@^1.0.0:
   version "1.0.0"
