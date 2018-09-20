@@ -3,7 +3,7 @@ module.exports = (frame) => {
         it('Disruptor Small is rendered', () => {
             const disruptorSmall = frame.getAll('.sc-disruptor-small');
 
-            disruptor.at(0).assert({
+            disruptorSmall.at(0).assert({
                 rendered: true
             });
         });
