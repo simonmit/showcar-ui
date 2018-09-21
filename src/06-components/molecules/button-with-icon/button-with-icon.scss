@@ -43,10 +43,23 @@
   @extend .sc-btn-ross;
 }
 
-.sc-btn-with-icon--ghost {
-  @extend .sc-btn-ghost;
+.sc-btn-with-icon--bob-ghost {
+  @extend .sc-btn-bob-ghost;
+}
+
+.sc-btn-with-icon--ross-ghost {
+  @extend .sc-btn-ross-ghost;
 }
 
 .sc-btn-with-icon--marketing {
   @extend .sc-btn-marketing;
+}
+
+/**
+ * DEPRECATED: only for compatibility
+ * TODO: remove asap
+ */
+
+.sc-btn-with-icon--ghost {
+  @extend .sc-btn-ghost;
 }
