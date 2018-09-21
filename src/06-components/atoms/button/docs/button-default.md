@@ -19,7 +19,8 @@ A button toggles something in the interface, like a video player; or triggers ne
 
 #### Usage information
 
-* Bob: Primary button, should be used for all top level interactions.
-* Ross: Secondary button, should be used for less important interactions.
-* Ghost: Use it for data-driven actions e.g. show phone number on desktop.
-* Marketing: Use for marketing purposes e.g. banner ads from the marketing department.
+* Bob: Primary button, used for the most important interaction.
+* Ross: Secondary button, used for important interactions.
+* Ghost Bob: Used for less important interactions / to distinguish between the two most important interactions on a page (e.g. send e-mail and call button on the detailpage). Also useful when you need lots of them on a single page.
+* Ghost Ross: Used, if a single link is not prominent enough / too many Ghost Buttons are visually too “heavy”.
+* Marketing: For marketing purposes only e.g. banner ads from the marketing department.
