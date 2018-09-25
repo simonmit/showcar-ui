@@ -55,7 +55,7 @@ gulp.task('copy:fragments', () => {
 const fs = require('fs');
 const UglifyJS = require('uglify-js');
 const readFile = filename => fs.readFileSync(filename, 'utf-8');
-const readJsFile = filename => UglifyJS.minify(readFile(filename), { fromString: true }).code;
+const readJsFile = filename => UglifyJS.minify(readFile(filename)).code;
 const stringReplace = require('gulp-string-replace');
 var replaceOptions = {
     logs: {
