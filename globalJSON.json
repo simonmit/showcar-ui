@@ -355,6 +355,15 @@
         "html": "\"<textarea class=\\\"sc-input\\\" placeholder=\\\".sc-input\\\">...</textarea>\\n\"",
         "codeExample": "\"&lt;textarea class=&quot;sc-input&quot; placeholder=&quot;.sc-input&quot;&gt;...&lt;/textarea&gt;\\n\""
     },
+    "toggle": {
+        "name": "toggle",
+        "type": "atoms",
+        "group": "input",
+        "srcDir": "src/06-components/atoms/input/docs",
+        "markDown": "\"<h2>Toggle<span class=\\\"status review\\\">review</span></h2>\\n\"",
+        "html": "\"<div class=\\\"new-offers-email\\\"><input type=\\\"checkbox\\\" id=\\\"email-toggle\\\" class=\\\"sc-toggle-checkbox\\\" checked=\\\"true\\\"><label class=\\\"sc-toggle\\\" for=\\\"email-toggle\\\"><div class=\\\"sc-toggle-background\\\"><as24-icon type=\\\"hook\\\"></as24-icon></div></label></div>\"",
+        "codeExample": "\"&lt;div class=&quot;new-offers-email&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;email-toggle&quot; class=&quot;sc-toggle-checkbox&quot; checked=&quot;true&quot;&gt;&lt;label class=&quot;sc-toggle&quot; for=&quot;email-toggle&quot;&gt;&lt;div class=&quot;sc-toggle-background&quot;&gt;&lt;as24-icon type=&quot;hook&quot;&gt;&lt;/as24-icon&gt;&lt;/div&gt;&lt;/label&gt;&lt;/div&gt;\""
+    },
     "label": {
         "name": "label",
         "type": "atoms",
