@@ -229,3 +229,64 @@ input[type='checkbox'] {
     }
   }
 }
+
+.sc-toggle-checkbox {
+  display: none;
+  + label.sc-toggle {
+    background: $black-60;
+    as24-icon {
+      opacity: 0;
+      transition: all 250ms ease-in 200ms;
+    }
+  }
+
+  &:checked {
+    + label.sc-toggle {
+      background: $color-link;
+      as24-icon {
+        opacity: 1;
+        transition: all 250ms ease-in 200ms;
+      }
+
+      .sc-toggle-background {
+        transform: translate(25px, 0);
+      }
+    }
+  }
+}
+
+.sc-toggle {
+  transition: all 300ms;
+  display: inline-block;
+  height: 23px;
+  width: 48px;
+  background: $black-60;
+  border-radius: 11.5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  as24-icon {
+    height: 19px;
+    width: 19px;
+    opacity: 0;
+    transition: all 50ms ease-in 0ms;
+    
+    svg {
+      fill: #007cca;
+      stroke: #007cca;
+      stroke-width: 1px;
+      padding: 3px;
+    }
+  } 
+
+  .sc-toggle-background {
+    margin: 2px 0 0 2px;
+    height: 19px;
+    width: 19px;
+    border-radius: 23px;
+    background: white;
+    transition: all 300ms;
+  }
+}
