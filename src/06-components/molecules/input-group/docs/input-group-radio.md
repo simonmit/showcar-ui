@@ -1,1 +1,1 @@
-<h2>Input group - toggle<span class="status approved">Approved</span></h2>
+<h2>Input group - radio<span class="status approved">Approved</span></h2>
