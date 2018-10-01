@@ -382,6 +382,15 @@
         "html": "\"<img width=\\\"300\\\" height=\\\"200\\\" data-src=\\\"https://placeimg.com/640/480?1\\\" src=\\\"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==\\\" class=\\\"sc-lazy-image lazyload\\\" alt=\\\"\\\">\\n\"",
         "codeExample": "\"&lt;img width=&quot;300&quot; height=&quot;200&quot; data-src=&quot;https://placeimg.com/640/480?1&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; class=&quot;sc-lazy-image lazyload&quot; alt=&quot;&quot;&gt;\\n\""
     },
+    "lazy-shimmer": {
+        "name": "lazy-shimmer",
+        "type": "atoms",
+        "group": "lazy-shimmer",
+        "srcDir": "src/06-components/atoms/lazy-shimmer/docs",
+        "markDown": "\"<h2>Shimmer for lazy loading elements<span class=\\\"status review\\\">Review</span><span class=\\\"status js\\\">JS</span></h2>\\n\\n<p>If you want to provide a visual indication for elements which are loaded lazily, you need to add <code>sc-shimmer</code> class to your element.  </p>\\n\"",
+        "html": "\"<div>\\n    <div class=\\\"lazy-sample-img sc-shimmer\\\"></div>\\n</div>\\n<div>\\n    <div class=\\\"sample-lazy-text-block sc-shimmer\\\"></div>\\n    <div class=\\\"sample-lazy-text-block sc-shimmer\\\"></div>\\n    <div class=\\\"sample-lazy-text-block sc-shimmer\\\"></div>        \\n</div>\\n\\n\"",
+        "codeExample": "\"&lt;div&gt;\\n    &lt;div class=&quot;lazy-sample-img sc-shimmer&quot;&gt;&lt;/div&gt;\\n&lt;/div&gt;\\n&lt;div&gt;\\n    &lt;div class=&quot;sample-lazy-text-block sc-shimmer&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sample-lazy-text-block sc-shimmer&quot;&gt;&lt;/div&gt;\\n    &lt;div class=&quot;sample-lazy-text-block sc-shimmer&quot;&gt;&lt;/div&gt;        \\n&lt;/div&gt;\\n\\n\""
+    },
     "lightbox": {
         "name": "lightbox",
         "type": "atoms",
@@ -603,7 +612,7 @@
         "type": "molecules",
         "group": "input-group",
         "srcDir": "src/06-components/molecules/input-group/docs",
-        "markDown": "\"<h2>Input group - toggle<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
+        "markDown": "\"<h2>Input group - radio<span class=\\\"status approved\\\">Approved</span></h2>\\n\"",
         "html": "\"<div class=\\\"sc-input-group-radio\\\">\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-7\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\">\\n    <label for=\\\"as24-radio-7\\\">Option 1</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-8\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\" checked=\\\"\\\">\\n    <label for=\\\"as24-radio-8\\\">Option 2</label>\\n\\n    <input class=\\\"sc-input\\\" id=\\\"as24-radio-9\\\" name=\\\"as24-radio\\\" type=\\\"radio\\\">\\n    <label for=\\\"as24-radio-9\\\">Option 3</label>\\n</div>\\n\"",
         "codeExample": "\"&lt;div class=&quot;sc-input-group-radio&quot;&gt;\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-7&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;\\n    &lt;label for=&quot;as24-radio-7&quot;&gt;Option 1&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-8&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot; checked=&quot;&quot;&gt;\\n    &lt;label for=&quot;as24-radio-8&quot;&gt;Option 2&lt;/label&gt;\\n\\n    &lt;input class=&quot;sc-input&quot; id=&quot;as24-radio-9&quot; name=&quot;as24-radio&quot; type=&quot;radio&quot;&gt;\\n    &lt;label for=&quot;as24-radio-9&quot;&gt;Option 3&lt;/label&gt;\\n&lt;/div&gt;\\n\""
     },
