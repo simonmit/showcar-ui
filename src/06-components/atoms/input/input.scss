@@ -231,7 +231,7 @@ input[type='checkbox'] {
 }
 
 .sc-toggle-checkbox {
-  display: block;
+  display: inline-block;
   opacity: 0;
   position: absolute;
   + label.sc-toggle {
