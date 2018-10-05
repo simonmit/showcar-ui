@@ -1,1 +1,1 @@
-<h2>Toggle<span class="status review">review</span></h2>
+<h2>Toggle<span class="status approved">Approved</span></h2>
