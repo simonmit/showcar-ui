@@ -1,0 +1,45 @@
+GIT
+  remote: git@github.com:AutoScout24/as24_ecr.git
+  revision: 6363a9756a2512b00c8900afbf3024039e36b706
+  specs:
+    as24_ecr (0.1.0)
+
+GIT
+  remote: git@github.com:AutoScout24/gatekeeper-runner.git
+  revision: e3823690401550552a9cfb06b5433dcfccf55918
+  specs:
+    gatekeeper-runner (0.2.1)
+      as24_ecr (~> 0.1.0)
+      aws-sdk-core (~> 2)
+      colorize (~> 0.8.1)
+      docker-compose (~> 1.1.7)
+      json (~> 2.0)
+      parallel (~> 1.11)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-sdk-core (2.10.71)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sigv4 (1.0.2)
+    backticks (1.0.2)
+    colorize (0.8.1)
+    docker-compose (1.1.7)
+      backticks (~> 1.0)
+    jmespath (1.3.1)
+    json (2.1.0)
+    parallel (1.12.0)
+    rake (12.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  as24_ecr!
+  aws-sdk-core
+  gatekeeper-runner!
+  rake
+
+BUNDLED WITH
+   1.14.6
