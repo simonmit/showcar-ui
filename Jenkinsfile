@@ -59,7 +59,7 @@ pipeline {
         BRANCH='develop'
       }
 
-      agent { node { label 'build-node' } }
+      agent { node { label 'deploy-as24dev' } }
 
       steps {
         unstash 'output-dev-dist'
@@ -115,7 +115,7 @@ pipeline {
         BRANCH='master'
       }
 
-      agent { node { label 'deploy-as24prod' } }
+      agent { node { label 'build-node' } }
 
       steps {
         sh './deploy/prepare.sh'
@@ -133,10 +133,10 @@ pipeline {
          BRANCH='master'
       }
 
-      agent { node { label 'deploy-as24prod' } }
+      agent { node { label 'deploy-as24dev' } }
       steps {
-        unstash 'output-prod-dist'
-        sh './deploy/deploy.sh'
+        // unstash 'output-prod-dist'
+        // sh './deploy/deploy.sh'
       }
     }
   }
