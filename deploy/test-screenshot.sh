@@ -2,6 +2,5 @@
 
 set -ev
 
-bundle install 
+bundle install --deployment
 bundle exec rake test:pull test:screenshot
-
