@@ -135,6 +135,7 @@ pipeline {
 
       agent { node { label 'deploy-as24dev' } }
       steps {
+        echo 'Hello prod deploy'
         // unstash 'output-prod-dist'
         // sh './deploy/deploy.sh'
       }
@@ -148,6 +149,5 @@ pipeline {
     fixed {
       slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] recovered. (<${env.BUILD_URL}|Open>)"
     }
-
   }
 }
