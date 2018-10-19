@@ -17,19 +17,19 @@ pipeline {
 
   stages {
     
-    stage('Build') {
-      when {
-        beforeAgent true
-        branch 'master'
-      }
+    // stage('Build') {
+    //   when {
+    //     beforeAgent true
+    //     branch 'master'
+    //   }
 
-      agent { node { label 'build-node' } }
-      steps {
-        sh './deploy/build.sh'
-        stash includes: 'dist/*', name: 'output-dev-dist'
-      }
+    //   agent { node { label 'build-node' } }
+    //   steps {
+    //     sh './deploy/build.sh'
+    //     stash includes: 'dist/*', name: 'output-dev-dist'
+    //   }
 
-    }
+    // }
 
     stage('PrepareDev') {
       when {
