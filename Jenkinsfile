@@ -34,7 +34,7 @@ pipeline {
     stage('PrepareDev') {
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {
@@ -52,7 +52,7 @@ pipeline {
     stage('DeployDev') {
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {
@@ -71,7 +71,7 @@ pipeline {
 
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {
@@ -90,7 +90,7 @@ pipeline {
 
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {
@@ -108,7 +108,7 @@ pipeline {
     stage('PrepareProd') {
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {
@@ -126,7 +126,7 @@ pipeline {
     stage('DeployProd') {
       when {
         beforeAgent true
-        branch 'master'
+        branch 'release'
       }
 
       environment {

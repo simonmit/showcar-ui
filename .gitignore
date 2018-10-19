@@ -16,7 +16,7 @@ backstop.json
 .vscode
 .tmp
 dist/temp
-
+.idea
 docs/index.html
 docs/globalJSON.json
 galen-report
