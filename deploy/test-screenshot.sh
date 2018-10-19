@@ -2,5 +2,6 @@
 
 set -ev
 
-bundle install --gemfile="deploy/Gemfile"
-bundle exec rake test:pull test:screenshot
+cd deploy
+bundle install
+bundle exec rake test:pull test:screenshot # we need to provide a proper Gemfile. 
