@@ -81,7 +81,9 @@ pipeline {
       agent { node { label 'build-gocdcompatible' } }
 
       steps {
-        sh './deploy/test-screenshot.sh'
+        sshagent (credentials: ['github-readonly-ssh']) {
+          sh './deploy/test-screenshot.sh'
+        }
       }
 
     }
