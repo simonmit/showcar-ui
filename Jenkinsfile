@@ -11,7 +11,7 @@ pipeline {
   // Environment variables for all stages
   environment {
     AWS_DEFAULT_REGION="eu-west-1"
-    SERVICE="showcar-ui"
+    SERVICE_NAME="showcar-ui"
     COMMIT_HASH=getInvokedBuildNumber()
   }
 
