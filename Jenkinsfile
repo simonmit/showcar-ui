@@ -67,7 +67,7 @@ pipeline {
       }
     }
 
-    stage('IntegrationTests-screenshot') {
+    stage('IntegrationTests') {
 
       when {
         beforeAgent true
@@ -82,27 +82,8 @@ pipeline {
 
       steps {
         sshagent (credentials: ['github-readonly-ssh']) {
-          sh './deploy/test-screenshot.sh'
+          sh './deploy/test.sh'
         }
-      }
-
-    }
-
-    stage('IntegrationTests-user-journeys') {
-
-      when {
-        beforeAgent true
-        branch 'release'
-      }
-
-      environment {
-        BRANCH='develop'
-      }
-
-      agent { node { label 'build-gocdcompatible' } }
-
-      steps {
-        sh './deploy/test-user_journeys.sh'
       }
 
     }
