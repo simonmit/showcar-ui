@@ -78,7 +78,7 @@ pipeline {
         BRANCH='develop'
       }
 
-      agent { node { label 'build-gocdcompatible' } }
+      agent { node { label 'deploy-as24dev' } }
 
       steps {
         sshagent (credentials: ['github-readonly-ssh']) {
