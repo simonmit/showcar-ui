@@ -16,19 +16,9 @@ pipeline {
   }
 
   stages {
-    
+
+    // TODO - replace Travis
     // stage('Build') {
-    //   when {
-    //     beforeAgent true
-    //     branch 'master'
-    //   }
-
-    //   agent { node { label 'build-node' } }
-    //   steps {
-    //     sh './deploy/build.sh'
-    //     stash includes: 'dist/*', name: 'output-dev-dist'
-    //   }
-
     // }
 
     stage('PrepareDev') {
@@ -67,26 +57,9 @@ pipeline {
       }
     }
 
-    stage('IntegrationTests') {
-
-      when {
-        beforeAgent true
-        branch 'release'
-      }
-
-      environment {
-        BRANCH='develop'
-      }
-
-      agent { node { label 'deploy-as24dev' } }
-
-      steps {
-        sshagent (credentials: ['github-readonly-ssh']) {
-          sh './deploy/test.sh'
-        }
-      }
-
-    }
+//  TODO - replace BrowserStack / Rakefile
+//  stage('IntegrationTests') {
+//  }
 
     stage('PrepareProd') {
       when {
@@ -118,9 +91,8 @@ pipeline {
 
       agent { node { label 'deploy-as24dev' } }
       steps {
-        echo 'Hello prod deploy'
-        // unstash 'output-prod-dist'
-        // sh './deploy/deploy.sh'
+        unstash 'output-prod-dist'
+        sh './deploy/deploy.sh'
       }
     }
   }
@@ -129,8 +101,8 @@ pipeline {
     failure {
       slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
     }
-    fixed {
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] recovered. (<${env.BUILD_URL}|Open>)"
+    success {
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/AutoScout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
     }
   }
 }
