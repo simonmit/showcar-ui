@@ -9,7 +9,6 @@ fail() {
   exit 1
 }
 
-
 prepare_assets() {
     sed -i -e "s=@@ASSET_PATH=${ASSET_PATH}=" dist/index.html
     sed -i -e "s=@@ASSET_PATH=${ASSET_PATH}=" dist/index-standalone.html
@@ -20,3 +19,4 @@ prepare_assets() {
     # echo "/*# sourceMappingURL=${ASSET_PATH}/showcar-ui.css.map */" >> dist/showcar-ui.css
 }
 
+prepare_assets

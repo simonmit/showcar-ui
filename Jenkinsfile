@@ -74,8 +74,9 @@ pipeline {
       agent { node { label 'build-node' } }
 
       steps {
-        sh './deploy/prepare.sh'
-        stash includes: 'dist/*', name: 'output-prod-dist'
+          echo "prepare done"
+//        sh './deploy/prepare.sh'
+//        stash includes: 'dist/*', name: 'output-prod-dist'
       }
     }
 
@@ -91,8 +92,9 @@ pipeline {
 
       agent { node { label 'deploy-as24dev' } }
       steps {
-        unstash 'output-prod-dist'
-        sh './deploy/deploy.sh'
+          echo "done deploy"
+//        unstash 'output-prod-dist'
+//        sh './deploy/deploy.sh'
       }
     }
   }
