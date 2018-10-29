@@ -1,8 +1,6 @@
 #!/bin/bash
 
-set -ev
-
-ASSET_PATH="/assets/external/${SERVICE_NAME}/${BRANCH}/${COMMIT_HASH}"
+set -e
 
 fail() {
   echo "FAIL: $*"
@@ -10,7 +8,7 @@ fail() {
 }
 
 upload_to_s3() {
-    echo "Uploading assets to S3"
+    echo "Uploading assets to s3://as24-assets-eu-west-1/${SERVICE_NAME}/${BRANCH}/${COMMIT_HASH}/"
 
     aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE_NAME}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
     aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE_NAME}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read

@@ -54,6 +54,7 @@ pipeline {
       steps {
         unstash 'output-dev-dist'
         sh './deploy/deploy.sh'
+        slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] deploy to production waiting for approval. (<${env.BUILD_URL}|Open>)"
         input message: "Approve build to be propagated to production?"
       }
     }
@@ -75,9 +76,8 @@ pipeline {
       agent { node { label 'build-node' } }
 
       steps {
-          echo "prepare done"
-//        sh './deploy/prepare.sh'
-//        stash includes: 'dist/*', name: 'output-prod-dist'
+        sh './deploy/prepare.sh'
+        stash includes: 'dist/*', name: 'output-prod-dist'
       }
     }
 
@@ -93,9 +93,8 @@ pipeline {
 
       agent { node { label 'deploy-as24dev' } }
       steps {
-          echo "done deploy"
-//        unstash 'output-prod-dist'
-//        sh './deploy/deploy.sh'
+        unstash 'output-prod-dist'
+        sh './deploy/deploy.sh'
       }
     }
   }

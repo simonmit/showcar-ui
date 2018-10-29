@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ev
+set -e
 
 ASSET_PATH="/assets/external/${SERVICE_NAME}/${BRANCH}/${COMMIT_HASH}"
 
@@ -10,6 +10,7 @@ fail() {
 }
 
 prepare_assets() {
+    echo "Preparing assets with ${ASSET_PATH}"
     sed -i -e "s=@@ASSET_PATH=${ASSET_PATH}=" dist/index.html
     sed -i -e "s=@@ASSET_PATH=${ASSET_PATH}=" dist/index-standalone.html
     sed -i -e "s=showcar-icons.js.map=${ASSET_PATH}/showcar-icons.js.map=" dist/showcar-icons.js
