@@ -54,7 +54,7 @@ pipeline {
       steps {
         unstash 'output-dev-dist'
         sh './deploy/deploy.sh'
-        slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] deploy to production waiting for approval. (<${env.BUILD_URL}|Open>)"
+        slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":question: ${env.JOB_NAME} [${env.BUILD_NUMBER}] deploy to production waiting for approval. (<${env.BUILD_URL}|Open>)"
         input message: "Approve build to be propagated to production?"
       }
     }
@@ -101,10 +101,13 @@ pipeline {
 
   post { 
     failure {
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: ":bomb: ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
+    }
+    aborted {
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":-1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] aborted. (<${env.BUILD_URL}|Open>)"
     }
     success {
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/AutoScout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: ":+1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/AutoScout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
     }
   }
 }
