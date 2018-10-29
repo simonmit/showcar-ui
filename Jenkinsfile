@@ -54,6 +54,7 @@ pipeline {
       steps {
         unstash 'output-dev-dist'
         sh './deploy/deploy.sh'
+        input message: "Approve build to be propagated to production?"
       }
     }
 
