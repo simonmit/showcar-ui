@@ -1,6 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'aws-sdk-core'
-gem 'as24_ecr',           git: 'git@github.com:AutoScout24/as24_ecr.git'
-gem 'gatekeeper-runner',  git: 'git@github.com:AutoScout24/gatekeeper-runner.git'
-gem 'rake'
