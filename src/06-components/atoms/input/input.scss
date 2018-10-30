@@ -308,6 +308,40 @@ input[type='checkbox'] {
       }
     }
   }
+
+  &.loading {
+    + label.sc-toggle {
+      .sc-toggle-background {
+        position: relative;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+
+        as24-icon {
+          display: none;    
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          border-radius: 50%;
+          display: block;
+          height: 15px;
+          width: 15px;
+          border: 2px solid $blue-30;
+          border-right-color: $color-link;
+          transform-origin: center center;
+          animation:loop 1.4s linear infinite;
+        }
+
+        @keyframes loop {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
 }
 
 .sc-toggle {
