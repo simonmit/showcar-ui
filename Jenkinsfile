@@ -18,8 +18,20 @@ pipeline {
   stages {
 
     // TODO - replace Travis
-    // stage('Build') {
-    // }
+    stage('Build') {
+      when {
+        beforeAgent true
+        branch 'release'
+      }
+
+      agent { node { label 'build-node' } }
+
+      steps {
+        sh './deploy/build.sh'
+        stash includes: 'dist/*', name: 'build-dist'
+      }
+
+    }
 
     stage('PrepareDev') {
       when {
@@ -34,6 +46,7 @@ pipeline {
       agent { node { label 'build-node' } }
 
       steps {
+        unstash 'build-dist'
         sh './deploy/prepare.sh'
         stash includes: 'dist/*', name: 'output-dev-dist'
       }
@@ -76,6 +89,7 @@ pipeline {
       agent { node { label 'build-node' } }
 
       steps {
+        unstash 'build-dist'
         sh './deploy/prepare.sh'
         stash includes: 'dist/*', name: 'output-prod-dist'
       }
