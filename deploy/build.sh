@@ -2,8 +2,6 @@
 
 set -e
 
-cd ..
-
 RELEASE_BRANCH="build-${COMMIT_HASH}"
 
 fail() {
