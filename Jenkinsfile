@@ -21,7 +21,7 @@ pipeline {
     stage('Build') {
       when {
         beforeAgent true
-        branch 'release'
+        branch 'refactoring-jenkins'
       }
 
       agent { node { label 'build-node' } }
@@ -36,7 +36,7 @@ pipeline {
     stage('PrepareDev') {
       when {
         beforeAgent true
-        branch 'release'
+        branch 'refactoring-jenkins'
       }
 
       environment {
@@ -55,7 +55,7 @@ pipeline {
     stage('DeployDev') {
       when {
         beforeAgent true
-        branch 'release'
+        branch 'refactoring-jenkins'
       }
 
       environment {
@@ -66,7 +66,8 @@ pipeline {
 
       steps {
         unstash 'output-dev-dist'
-        sh './deploy/deploy.sh'
+        echo 'deploy production'
+        //sh './deploy/deploy.sh'
         slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":question: ${env.JOB_NAME} [${env.BUILD_NUMBER}] deploy to production waiting for approval. (<${env.BUILD_URL}|Open>)"
         input message: "Approve build to be propagated to production?"
       }
@@ -79,7 +80,7 @@ pipeline {
     stage('PrepareProd') {
       when {
         beforeAgent true
-        branch 'release'
+        branch 'refactoring-jenkins'
       }
 
       environment {
@@ -98,7 +99,7 @@ pipeline {
     stage('DeployProd') {
       when {
         beforeAgent true
-        branch 'release'
+        branch 'refactoring-jenkins'
       }
 
       environment {
@@ -108,7 +109,9 @@ pipeline {
       agent { node { label 'deploy-as24dev' } }
       steps {
         unstash 'output-prod-dist'
-        sh './deploy/deploy.sh'
+        echo 'deploy production'
+
+        //sh './deploy/deploy.sh'
       }
     }
   }
