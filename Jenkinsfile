@@ -1,6 +1,6 @@
 pipeline {
   // Execute the pipeline on the master, stages will still be executed on the agents
-  agent none 
+  agent none
 
   options {
     timestamps() // Enable timestamps in the build log
@@ -11,24 +11,14 @@ pipeline {
   // Environment variables for all stages
   environment {
     AWS_DEFAULT_REGION="eu-west-1"
-    SERVICE="showcar-ui"
+    SERVICE_NAME="showcar-ui"
     COMMIT_HASH=getInvokedBuildNumber()
   }
 
   stages {
-    
+
+    // TODO - replace Travis
     // stage('Build') {
-    //   when {
-    //     beforeAgent true
-    //     branch 'master'
-    //   }
-
-    //   agent { node { label 'build-node' } }
-    //   steps {
-    //     sh './deploy/build.sh'
-    //     stash includes: 'dist/*', name: 'output-dev-dist'
-    //   }
-
     // }
 
     stage('PrepareDev') {
@@ -59,51 +49,19 @@ pipeline {
         BRANCH='develop'
       }
 
-      agent { node { label 'build-node' } }
+      agent { node { label 'deploy-as24dev' } }
 
       steps {
         unstash 'output-dev-dist'
         sh './deploy/deploy.sh'
+        slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":question: ${env.JOB_NAME} [${env.BUILD_NUMBER}] deploy to production waiting for approval. (<${env.BUILD_URL}|Open>)"
+        input message: "Approve build to be propagated to production?"
       }
     }
 
-    stage('IntegrationTests-screenshot') {
-
-      when {
-        beforeAgent true
-        branch 'release'
-      }
-
-      environment {
-        BRANCH='develop'
-      }
-
-      agent { node { label 'build-gocdcompatible' } }
-
-      steps {
-        sh './deploy/test-screenshot.sh'
-      }
-
-    }
-
-    stage('IntegrationTests-user-journeys') {
-
-      when {
-        beforeAgent true
-        branch 'release'
-      }
-
-      environment {
-        BRANCH='develop'
-      }
-
-      agent { node { label 'build-gocdcompatible' } }
-
-      steps {
-        sh './deploy/test-user_journeys.sh'
-      }
-
-    }
+//  TODO - replace BrowserStack / Rakefile
+//  stage('IntegrationTests') {
+//  }
 
     stage('PrepareProd') {
       when {
@@ -115,7 +73,7 @@ pipeline {
         BRANCH='master'
       }
 
-      agent { node { label 'deploy-as24prod' } }
+      agent { node { label 'build-node' } }
 
       steps {
         sh './deploy/prepare.sh'
@@ -133,7 +91,7 @@ pipeline {
          BRANCH='master'
       }
 
-      agent { node { label 'deploy-as24prod' } }
+      agent { node { label 'deploy-as24dev' } }
       steps {
         unstash 'output-prod-dist'
         sh './deploy/deploy.sh'
@@ -141,16 +99,15 @@ pipeline {
     }
   }
 
-  post { 
-    success { 
-      slackSend channel: 'as24_web_experience', color: '#FF0000', message: ":tada: ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/AutoScout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
+  post {
+    failure {
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: ":bomb: ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
     }
-    failure { 
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
+    aborted {
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":-1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] aborted. (<${env.BUILD_URL}|Open>)"
     }
-    fixed {
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] recovered. (<${env.BUILD_URL}|Open>)"
+    success {
+      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: ":+1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/AutoScout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
     }
-
   }
 }

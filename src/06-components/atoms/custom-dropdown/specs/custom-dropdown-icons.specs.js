@@ -11,7 +11,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             const labelCoupe = frame.get('#custom-dropdown-icons [for=coupe]').toDomElement();
             helper.click(labelCabrio);
             helper.click(labelCoupe);
-            assert.include(trigger.innerText, ' Coupé', 'contains');
+            assert.include(trigger.innerText, 'Coupé', 'contains');
         });
     });
 };

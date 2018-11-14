@@ -25,9 +25,11 @@ rm -rf ./!(.git*|.|..)
 
 cp -r ../dist .
 cp -r ../src .
+cp -r ../deploy .
 cp ../package.json .
 cp ../README.md .
 cp ../LICENSE.md .
+cp ../Jenkinsfile .
 
 git add . -A
 
