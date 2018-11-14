@@ -1,6 +1,6 @@
 .sc-shimmer {
-  background: #f6f7f8;
-  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background: $black-20;
+  background-image: linear-gradient(to right, $black-20 0%, #f0f0f0 20%, $black-20 40%, $black-20 100%);
   background-repeat: no-repeat;
   background-size: 768px 580px;
   display: inline-block;
