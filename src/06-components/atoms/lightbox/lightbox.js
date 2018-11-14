@@ -1,12 +1,11 @@
 import registerElement from '../../../07-utilities/helpers.js';
 
 export default function (tagName) {
-    const onOpenCallbacks = [];
-    const onCloseCallbacks = [];
     let scrollbarWidth;
 
     function attachedCallback() {
         let lb = {
+            self: this,
             parent: this.parentElement,
             container: this.querySelector('.sc-lightbox__container'),
             content: this.querySelector('.sc-lightbox__content'),
@@ -14,6 +13,10 @@ export default function (tagName) {
             preventOutsideClose: this.getAttribute('prevent-outsideclose'),
             customIdentifier: this.getAttribute('data-custom') || ''
         };
+
+        // Extend instance with callback information
+        this.onCloseCallbacks = [];
+        this.onOpenCallbacks = [];
 
         const id = this.id || '';
         const openElements = Array.from(document.querySelectorAll('[data-lightbox-open="' + id + '"]'));
@@ -67,7 +70,7 @@ export default function (tagName) {
             lb.overlay.classList.add('sc-lightbox--fadein');
         }, 20);
 
-        onOpenCallbacks.forEach(cb => cb());
+        lb.self.onOpenCallbacks.forEach(cb => cb());
     };
 
     /**
@@ -91,12 +94,23 @@ export default function (tagName) {
                 }, 250);
             }
 
-            executeOnCloseCallback && onCloseCallbacks.forEach(cb => cb());
+            executeOnCloseCallback && lb.self.onCloseCallbacks.forEach(cb => cb());
         }
     };
 
-    const registerOnOpenCallback = cb => onOpenCallbacks.push(cb);
-    const registerOnCloseCallback = cb => onCloseCallbacks.push(cb);
+    /**
+     * Register callback to the current custom-element instance the call is made on
+     */
+    function registerOnOpenCallback(cb) {
+        this.onOpenCallbacks.push(cb);
+    }
+
+    /**
+     * Register callback to the current custom-element instance the call is made on
+     */
+    function registerOnCloseCallback(cb) {
+        this.onCloseCallbacks.push(cb);
+    }
 
     const measureScrollbarWidth = () => window && document && (window.innerWidth - document.documentElement.clientWidth) || 0;
 
