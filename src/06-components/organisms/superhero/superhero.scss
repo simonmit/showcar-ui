@@ -118,8 +118,6 @@
     padding-bottom: $XL;
 
     .sc-label {
-      color: $black-100; //to prevent content--light from making everything white
-
       &:first-of-type {
         margin-top: 0;
       }
