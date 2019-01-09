@@ -337,10 +337,10 @@ code {
     border-bottom: none;
 }
 .docs-table-visibility tr td.cell-visible {
-    background-color: #e6f5cf;
+    background-color: #e6f5cf !important;
 }
 .docs-table-visibility tr td.cell-hidden {
-    background-color: #ffdddc;
+    background-color: #ffdddc !important;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
