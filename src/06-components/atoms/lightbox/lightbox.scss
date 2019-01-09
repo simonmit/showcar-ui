@@ -22,8 +22,12 @@
     max-height: calc(100vh - 120px);
   }
 
-  h5 {
-    padding-right: 25px;
+  &:first-of-type h1,
+  &:first-of-type h2,
+  &:first-of-type h3,
+  &:first-of-type h4,
+  &:first-of-type h5 {
+    padding-right: $XXXL;
   }
 }
 
@@ -38,7 +42,7 @@
 .sc-lightbox__content {
   max-height: calc(100vh - 120px);
   overflow: auto;
-  padding: 0 $XXL;
+  padding: 0 $L;
   flex: 1;
 }
 
