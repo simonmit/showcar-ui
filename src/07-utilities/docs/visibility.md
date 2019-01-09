@@ -7,6 +7,11 @@ IMPORTANT: Try to use these on a limited basis and avoid creating entirely diffe
 
 THE OLD CLASSES (e.g. sc-visible-s) STILL WORK AS THEY USED TO.
 
+#### Hidden attribute:
+
+The `hidden` attribute may be applied to any element, and effectively hides elements similar to `display: none` in CSS.  
+It is supported by all major browsers.
+
 <table class="docs-table docs-table-visibility">
     <thead>
     <tr>
