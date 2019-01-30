@@ -6955,10 +6955,490 @@ showcar.spyNavigation({
                 </div>
             
 <hr></div><div id="superhero-target" class="positon-anchor">
-                <div class="element" id="superhero">
-                    <div class="markdown"> <h2>Superhero<span class="status review">needs UX review</span></h2>
+                <div class="element" id="superhero-branded">
+                    <div class="markdown"> <h2>Superhero<span class="status approved">Approved</span></h2>
 
-<p> The Superhero enables the author to display a variety and combination of different elements (e.g. image, text, button) on the very top of the page. It&#39;s fully responsive and therefore covers all screensizes. The text is black as default (on S version it will always be black) but in case of dark pictures, you may want to use a white color instead for M/L sizes (when texts and background-pics overlap): put the class name <code>sc-superhero__content--light</code> on <code>sc-superhero__content</code> container (see the third example).</p>
+<p> This is the new Superhero. It replaces the old one (see below). The main difference is the orange border above the headline.</p>
+<p> The superhero enables the author to display a variety of different elements (e.g. image, text, button) on the very top of the page. It&#39;s fully responsive and therefore covers all screensizes. The text is black per default but in case of dark pictures, you may want to use white color for M/L views (on S it&#39;s always black): put the class name <code>sc-superhero__content--light</code> on <code>sc-superhero__content</code> container (see third example).</p>
+</div>
+                   <div class="sample"><!-- 
+  ************
+    EXAMPLE 1 
+  ************
+-->
+
+<style>
+  .sc-superhero__imgs {
+    background-image: url('https://via.placeholder.com/480x270');
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/768x432');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/1100x430');
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+</style>
+
+<div class="sc-superhero">
+  <div class="sc-superhero__imgs"></div>
+  <div class="sc-superhero__content">
+    <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
+    <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
+    <h4 class="sc-font-xl">Mit dem richtigen Preis.</h4>
+    <p class="s-font-l sc-margin-top-m">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+    </p>
+  </div>
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 2 
+  ************
+-->
+
+<style>
+  .sc-superhero__imgs {
+    background-image: url('https://via.placeholder.com/480x270');
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/768x432');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/1100x430');
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+</style>
+
+<div class="sc-superhero">
+  <div class="sc-superhero__imgs"></div>
+  <div class="sc-superhero__content">
+    <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
+    <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
+    <p class="s-font-l sc-margin-top-m">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+    </p>
+    <p>
+      <a href="#superhero" class="sc-btn-bob sc-margin-top-xl">I am Bob!</a>
+    </p>
+  </div>
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 3 
+  ************
+-->
+
+<style>
+  .sc-superhero__imgs {
+    background-image: url('https://via.placeholder.com/480x270');
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/768x432');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/1100x430');
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+</style>
+
+<div class="sc-superhero">
+  <div class="sc-superhero__imgs"></div>
+  <div class="sc-superhero__content sc-superhero__content--light">
+    <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
+    <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
+    <h4 class="sc-font-xl">Mit dem richtigen Preis.</h4>
+    <ul class="sc-list sc-list--disc sc-margin-top-m">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </div>
+</div>
+
+<!-- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<!-- 
+  ************
+    EXAMPLE 4 
+  ************
+-->
+
+<style>
+  .sc-superhero__imgs {
+    background-image: url('https://via.placeholder.com/480x270');
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/768x432');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url('https://via.placeholder.com/1100x430');
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+</style>
+
+<div class="sc-superhero">
+  <div class="sc-superhero__imgs"></div>
+  <div class="sc-superhero__wrapper">
+    <div class="sc-superhero__content">
+      <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
+      <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
+      <h4 class="sc-font-xl">Mit dem richtigen Preis.</h4>
+      <p class="s-font-l sc-margin-top-m">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+      </p>
+    </div>
+    <div class="sc-superhero__input--wrapper">
+      <div class="sc-superhero__input--content">
+        <label class="sc-label">Marke</label>
+        <select class="sc-input">
+          <option>Please select</option>
+          <option>...</option>
+        </select>
+        <label class="sc-label">Modell</label>
+        <select class="sc-input" disabled>
+          <option>Please select</option>
+          <option>...</option>
+        </select>
+        <label class="sc-label">Erstzulassung</label>
+        <select class="sc-input" disabled>
+          <option>Jahr</option>
+          <option>...</option>
+        </select>
+        <label class="sc-label">Kraftstoff</label>
+        <select class="sc-input" disabled>
+          <option>Please select</option>
+          <option>...</option>
+        </select>
+        <label class="sc-label">Ort</label>
+        <input type="text" class="sc-input" placeholder="Stadt/PLZ">
+        <button class="sc-btn-bob sc-btn-block sc-margin-top-xxl">Absenden</button>
+      </div>
+    </div>
+  </div>
+</div></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-superhero-branded" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-superhero-branded" class="hjs html">&lt;!-- 
+  ************
+    EXAMPLE 1 
+  ************
+--&gt;
+
+&lt;style&gt;
+  .sc-superhero__imgs {
+    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-superhero__content&quot;&gt;
+    &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
+    &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
+    &lt;h4 class=&quot;sc-font-xl&quot;&gt;Mit dem richtigen Preis.&lt;/h4&gt;
+    &lt;p class=&quot;s-font-l sc-margin-top-m&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 2 
+  ************
+--&gt;
+
+&lt;style&gt;
+  .sc-superhero__imgs {
+    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-superhero__content&quot;&gt;
+    &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
+    &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
+    &lt;p class=&quot;s-font-l sc-margin-top-m&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;#superhero&quot; class=&quot;sc-btn-bob sc-margin-top-xl&quot;&gt;I am Bob!&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 3 
+  ************
+--&gt;
+
+&lt;style&gt;
+  .sc-superhero__imgs {
+    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
+    &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
+    &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
+    &lt;h4 class=&quot;sc-font-xl&quot;&gt;Mit dem richtigen Preis.&lt;/h4&gt;
+    &lt;ul class=&quot;sc-list sc-list--disc sc-margin-top-m&quot;&gt;
+      &lt;li&gt;One&lt;/li&gt;
+      &lt;li&gt;Two&lt;/li&gt;
+      &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- --&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- 
+  ************
+    EXAMPLE 4 
+  ************
+--&gt;
+
+&lt;style&gt;
+  .sc-superhero__imgs {
+    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
+  }
+
+  @media screen and (min-width: 768px) {
+    .sc-superhero__imgs {
+      background-image: none;
+    }
+
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .sc-superhero {
+      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
+    }
+  }
+
+  h2.sc-superhero__title--branded {
+    margin-bottom: 0 !important;
+    font-size: 20px !important;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;sc-superhero&quot;&gt;
+  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sc-superhero__wrapper&quot;&gt;
+    &lt;div class=&quot;sc-superhero__content&quot;&gt;
+      &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
+      &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
+      &lt;h4 class=&quot;sc-font-xl&quot;&gt;Mit dem richtigen Preis.&lt;/h4&gt;
+      &lt;p class=&quot;s-font-l sc-margin-top-m&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sc-superhero__input--wrapper&quot;&gt;
+      &lt;div class=&quot;sc-superhero__input--content&quot;&gt;
+        &lt;label class=&quot;sc-label&quot;&gt;Marke&lt;/label&gt;
+        &lt;select class=&quot;sc-input&quot;&gt;
+          &lt;option&gt;Please select&lt;/option&gt;
+          &lt;option&gt;...&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;label class=&quot;sc-label&quot;&gt;Modell&lt;/label&gt;
+        &lt;select class=&quot;sc-input&quot; disabled&gt;
+          &lt;option&gt;Please select&lt;/option&gt;
+          &lt;option&gt;...&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;label class=&quot;sc-label&quot;&gt;Erstzulassung&lt;/label&gt;
+        &lt;select class=&quot;sc-input&quot; disabled&gt;
+          &lt;option&gt;Jahr&lt;/option&gt;
+          &lt;option&gt;...&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;label class=&quot;sc-label&quot;&gt;Kraftstoff&lt;/label&gt;
+        &lt;select class=&quot;sc-input&quot; disabled&gt;
+          &lt;option&gt;Please select&lt;/option&gt;
+          &lt;option&gt;...&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;label class=&quot;sc-label&quot;&gt;Ort&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Stadt/PLZ&quot;&gt;
+        &lt;button class=&quot;sc-btn-bob sc-btn-block sc-margin-top-xxl&quot;&gt;Absenden&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="superhero-deprecated">
+                    <div class="markdown"> <h2>Superhero<span class="status deprecated">Deprecated</span></h2>
+
+<p> This is the old superhero.</p>
 </div>
                    <div class="sample"><!-- 
   ************
@@ -7159,145 +7639,14 @@ showcar.spyNavigation({
       </p>
       <span class="sc-block sc-margin-top-xxl sc-font-s">* some footnotes</span>
     </div>
-</div>
-
-<!-- -->
-
-<br><br>
-<hr>
-<br><br>
-
-<!-- 
-  ************
-    EXAMPLE 5 
-  ************
--->
-
-<style>
-  .sc-superhero__imgs {
-    background-image: url('https://via.placeholder.com/480x270');
-  }
-
-  @media screen and (min-width: 768px) {
-    .sc-superhero__imgs {
-      background-image: none;
-    }
-
-    .sc-superhero {
-      background-image: url('https://via.placeholder.com/768x432');
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .sc-superhero {
-      background-image: url('https://via.placeholder.com/1100x430');
-    }
-  }
-
-  h2.sc-superhero__title--branded {
-    margin-bottom: 0 !important;
-    font-size: 20px !important;
-  }
-</style>
-
-<div class="sc-superhero">
-  <div class="sc-superhero__imgs"></div>
-  <div class="sc-superhero__content">
-    <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
-    <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
-    <h4 class="sc-font-xl">Mit dem richtigen Preis.</h4>
-    <p class="s-font-l sc-margin-top-m">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
-    </p>
-  </div>
-</div>
-
-<!-- -->
-
-<br><br>
-<hr>
-<br><br>
-
-<!-- 
-  ************
-    EXAMPLE 6 
-  ************
--->
-
-<style>
-  .sc-superhero__imgs {
-    background-image: url('https://via.placeholder.com/480x270');
-  }
-
-  @media screen and (min-width: 768px) {
-    .sc-superhero__imgs {
-      background-image: none;
-    }
-
-    .sc-superhero {
-      background-image: url('https://via.placeholder.com/768x432');
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .sc-superhero {
-      background-image: url('https://via.placeholder.com/1100x430');
-    }
-  }
-
-  h2.sc-superhero__title--branded {
-    margin-bottom: 0 !important;
-    font-size: 20px !important;
-  }
-</style>
-
-<div class="sc-superhero">
-  <div class="sc-superhero__imgs"></div>
-  <div class="sc-superhero__wrapper">
-    <div class="sc-superhero__content sc-superhero__content--light">
-      <h2 class="sc-superhero__title--branded sc-font-l sc-margin-top-m">Fahrzeugbewertung</h2>
-      <h3 class="sc-font-xl sc-font-bold">Bringen Sie Ihr Auto groß raus.</h3>
-      <h4 class="sc-font-xl">Mit dem richtigen Preis.</h4>
-      <p class="s-font-l sc-margin-top-m">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
-      </p>
-    </div>
-    <div class="sc-superhero__input--wrapper">
-      <div class="sc-superhero__input--content">
-        <label class="sc-label">Marke</label>
-        <select class="sc-input">
-          <option>Please select</option>
-          <option>...</option>
-        </select>
-        <label class="sc-label">Modell</label>
-        <select class="sc-input" disabled>
-          <option>Please select</option>
-          <option>...</option>
-        </select>
-        <label class="sc-label">Erstzulassung</label>
-        <select class="sc-input" disabled>
-          <option>Jahr</option>
-          <option>...</option>
-        </select>
-        <label class="sc-label">Kraftstoff</label>
-        <select class="sc-input" disabled>
-          <option>Please select</option>
-          <option>...</option>
-        </select>
-        <label class="sc-label">Ort</label>
-        <input type="text" class="sc-input" placeholder="Stadt/PLZ">
-        <button class="sc-btn-bob sc-btn-block sc-margin-top-xxl">Absenden</button>
-      </div>
-    </div>
-  </div>
 </div></div> 
                     <div class="code-sample">
                         <div class="code">
-                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-superhero" title="Copy to clipboard">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-superhero-deprecated" title="Copy to clipboard">
                                 <span></span>
                              </button>
                             <pre>
-                                <code id="copy_code-code-superhero" class="hjs html">&lt;!-- 
+                                <code id="copy_code-code-superhero-deprecated" class="hjs html">&lt;!-- 
   ************
     EXAMPLE 1 
   ************
@@ -7496,137 +7845,6 @@ showcar.spyNavigation({
       &lt;/p&gt;
       &lt;span class=&quot;sc-block sc-margin-top-xxl sc-font-s&quot;&gt;* some footnotes&lt;/span&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- --&gt;
-
-&lt;br&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;!-- 
-  ************
-    EXAMPLE 5 
-  ************
---&gt;
-
-&lt;style&gt;
-  .sc-superhero__imgs {
-    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
-  }
-
-  @media screen and (min-width: 768px) {
-    .sc-superhero__imgs {
-      background-image: none;
-    }
-
-    .sc-superhero {
-      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .sc-superhero {
-      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
-    }
-  }
-
-  h2.sc-superhero__title--branded {
-    margin-bottom: 0 !important;
-    font-size: 20px !important;
-  }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-superhero&quot;&gt;
-  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;sc-superhero__content&quot;&gt;
-    &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
-    &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
-    &lt;h4 class=&quot;sc-font-xl&quot;&gt;Mit dem richtigen Preis.&lt;/h4&gt;
-    &lt;p class=&quot;s-font-l sc-margin-top-m&quot;&gt;
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- --&gt;
-
-&lt;br&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;!-- 
-  ************
-    EXAMPLE 6 
-  ************
---&gt;
-
-&lt;style&gt;
-  .sc-superhero__imgs {
-    background-image: url(&apos;https://via.placeholder.com/480x270&apos;);
-  }
-
-  @media screen and (min-width: 768px) {
-    .sc-superhero__imgs {
-      background-image: none;
-    }
-
-    .sc-superhero {
-      background-image: url(&apos;https://via.placeholder.com/768x432&apos;);
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .sc-superhero {
-      background-image: url(&apos;https://via.placeholder.com/1100x430&apos;);
-    }
-  }
-
-  h2.sc-superhero__title--branded {
-    margin-bottom: 0 !important;
-    font-size: 20px !important;
-  }
-&lt;/style&gt;
-
-&lt;div class=&quot;sc-superhero&quot;&gt;
-  &lt;div class=&quot;sc-superhero__imgs&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;sc-superhero__wrapper&quot;&gt;
-    &lt;div class=&quot;sc-superhero__content sc-superhero__content--light&quot;&gt;
-      &lt;h2 class=&quot;sc-superhero__title--branded sc-font-l sc-margin-top-m&quot;&gt;Fahrzeugbewertung&lt;/h2&gt;
-      &lt;h3 class=&quot;sc-font-xl sc-font-bold&quot;&gt;Bringen Sie Ihr Auto gro&szlig; raus.&lt;/h3&gt;
-      &lt;h4 class=&quot;sc-font-xl&quot;&gt;Mit dem richtigen Preis.&lt;/h4&gt;
-      &lt;p class=&quot;s-font-l sc-margin-top-m&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, neque eu gravida convallis, libero lorem elementum enim, non sodales arcu erat non tortor.
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;sc-superhero__input--wrapper&quot;&gt;
-      &lt;div class=&quot;sc-superhero__input--content&quot;&gt;
-        &lt;label class=&quot;sc-label&quot;&gt;Marke&lt;/label&gt;
-        &lt;select class=&quot;sc-input&quot;&gt;
-          &lt;option&gt;Please select&lt;/option&gt;
-          &lt;option&gt;...&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label class=&quot;sc-label&quot;&gt;Modell&lt;/label&gt;
-        &lt;select class=&quot;sc-input&quot; disabled&gt;
-          &lt;option&gt;Please select&lt;/option&gt;
-          &lt;option&gt;...&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label class=&quot;sc-label&quot;&gt;Erstzulassung&lt;/label&gt;
-        &lt;select class=&quot;sc-input&quot; disabled&gt;
-          &lt;option&gt;Jahr&lt;/option&gt;
-          &lt;option&gt;...&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label class=&quot;sc-label&quot;&gt;Kraftstoff&lt;/label&gt;
-        &lt;select class=&quot;sc-input&quot; disabled&gt;
-          &lt;option&gt;Please select&lt;/option&gt;
-          &lt;option&gt;...&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label class=&quot;sc-label&quot;&gt;Ort&lt;/label&gt;
-        &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;Stadt/PLZ&quot;&gt;
-        &lt;button class=&quot;sc-btn-bob sc-btn-block sc-margin-top-xxl&quot;&gt;Absenden&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
 &lt;/div&gt;</code>
                             </pre>
                         </div>
