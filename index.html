@@ -3725,6 +3725,11 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
     var hider = document.querySelector('#tooltip-hide');
     shower.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('show-tooltip-event')); }, false);
     hider.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('hide-tooltip-event')); }, false);
+
+    setTimeout(() => document.dispatchEvent(new CustomEvent('show-detailed-tooltip')), 1000);
+    var closeDetailedTooltipButton = document.querySelector('#close-detailed-tooltip-button');    closeDetailedTooltipButton.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('hide-detailed-tooltip'));
+    }, false);
   })
 </script>
 </div>
@@ -3744,6 +3749,16 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
 	<button id="tooltip-show" class="sc-btn-bob">click me to show it</button>
 	<button id="tooltip-hide" class="sc-btn-ross">click me to hide it</button>
 </p>
+<div style="margin-top: 200px">
+	<as24-tooltip class="sc-tooltip" id="test-detailed-tooltip" show-event="show-detailed-tooltip" hide-event="hide-detailed-tooltip">
+		<button class="sc-btn-bob">Some new feature</button>
+		<div class="sc-tooltip-content">
+			<h5 class="sc-font-bold">Use new feature</h5>
+			<p class="sc-margin-top-s">I am here to explain to you how to use the feature!</p>
+			<button class="sc-margin-top-m sc-btn-marketing" id="close-detailed-tooltip-button">Ok, understood</button>
+		</div>
+	</as24-tooltip>
+</div>
 </div> 
                     <div class="code-sample">
                         <div class="code">
@@ -3767,6 +3782,16 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
 &Tab;&lt;button id=&quot;tooltip-show&quot; class=&quot;sc-btn-bob&quot;&gt;click me to show it&lt;/button&gt;
 &Tab;&lt;button id=&quot;tooltip-hide&quot; class=&quot;sc-btn-ross&quot;&gt;click me to hide it&lt;/button&gt;
 &lt;/p&gt;
+&lt;div style=&quot;margin-top: 200px&quot;&gt;
+&Tab;&lt;as24-tooltip class=&quot;sc-tooltip&quot; id=&quot;test-detailed-tooltip&quot; show-event=&quot;show-detailed-tooltip&quot; hide-event=&quot;hide-detailed-tooltip&quot;&gt;
+&Tab;&Tab;&lt;button class=&quot;sc-btn-bob&quot;&gt;Some new feature&lt;/button&gt;
+&Tab;&Tab;&lt;div class=&quot;sc-tooltip-content&quot;&gt;
+&Tab;&Tab;&Tab;&lt;h5 class=&quot;sc-font-bold&quot;&gt;Use new feature&lt;/h5&gt;
+&Tab;&Tab;&Tab;&lt;p class=&quot;sc-margin-top-s&quot;&gt;I am here to explain to you how to use the feature!&lt;/p&gt;
+&Tab;&Tab;&Tab;&lt;button class=&quot;sc-margin-top-m sc-btn-marketing&quot; id=&quot;close-detailed-tooltip-button&quot;&gt;Ok, understood&lt;/button&gt;
+&Tab;&Tab;&lt;/div&gt;
+&Tab;&lt;/as24-tooltip&gt;
+&lt;/div&gt;
 </code>
                             </pre>
                         </div>
@@ -8423,7 +8448,7 @@ showcar.spyNavigation({
 
 <p>Use <code>srcset</code> attribute in the <code>&lt;img&gt;</code> tag when you need to select a different source of the same image because you need a different resolution.</p>
 <p>The height and width of the image should remain fixed.</p>
-<pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;
+<pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt; 
 </code></pre>
 <p>Сustom height and width of the image based on the viewport.</p>
 <pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; sizes=&quot;(max-width: 40em) 100vw, 50vw&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;
