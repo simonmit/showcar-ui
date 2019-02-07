@@ -63,7 +63,6 @@
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
-    "to": "^0.2.9",
     "uglify-js": "^3.4.9",
     "whatwg-fetch": "^1.1.1",
     "zepto-modules": "^1.0.1"
