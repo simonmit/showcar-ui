@@ -15,5 +15,10 @@
     var hider = document.querySelector('#tooltip-hide');
     shower.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('show-tooltip-event')); }, false);
     hider.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('hide-tooltip-event')); }, false);
+
+    setTimeout(() => document.dispatchEvent(new CustomEvent('show-detailed-tooltip')), 1000);
+    var closeDetailedTooltipButton = document.querySelector('#close-detailed-tooltip-button');    closeDetailedTooltipButton.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('hide-detailed-tooltip'));
+    }, false);
   })
 </script>
