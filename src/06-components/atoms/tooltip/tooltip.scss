@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, .75); // we want only transparent background, but not text
   border-color: $black-120;
   color: white;
-  padding: 16px;
+  padding: $M;
   position: absolute;
   z-index: 2;
   border-radius: 4px;

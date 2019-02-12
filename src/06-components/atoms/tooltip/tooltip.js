@@ -14,7 +14,7 @@ export default function (tagName) {
         let tt = {
             tooltip: this,
             shown: false,
-            indentTop: 8,
+            indentTop: 12,
             content: this.querySelector('.sc-tooltip-content'),
             timeoutID: 0,
             showEvent: this.getAttribute('show-event'),
