@@ -28,7 +28,7 @@
 .sc-tab--with-icon {
   background-color: $white;
   height: 36px;
-  padding-top: $S;
+  padding-top: $XS;
   width: 25%;
   max-width: 120px;
   opacity: .9;
@@ -39,27 +39,40 @@
 
   @include mqmin(510px) {
     height: 48px;
+    padding-top: $S;
   }
 
   as24-icon {
     width: 36px;
     height: $L;
     display: inline-block;
+
+    svg g {
+      fill: $black-80;
+    }
   }
 
   &:last-child {
     margin-right: 0;
   }
+
+  &:focus {
+    svg g {
+      fill: $orange-100;
+    }
+  }
 }
 
 .sc-tab--with-icon--active {
   opacity: 1;
-  height: 45px;
-  padding-top: 11px;
+  height: 41px;
+  padding-top: 3px;
   margin-bottom: 0;
+  border-top: 4px solid $orange-100;
 
   @include mqmin(510px) {
     height: 53px;
+    padding-top: 7px;
   }
 
   as24-icon svg g {
