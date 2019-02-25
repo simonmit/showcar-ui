@@ -2,55 +2,60 @@
 @import '../../../02-sass-tools/sass-mq';
 
 .sc-tabs--with-text {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-
-  @include mqmax($viewportM - 1) {
-    display: block;
+  @include mqmin($viewportM) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
 .sc-tab {
-  order: 1;
-  flex-grow: 1;
-  height: 51px;
+  height: 52px;
   background-color: $white;
-  margin: 7px 0 3px 3px;
-  border: none;
+  width: 100%;
+  border-bottom: 1px solid $black-30;
+  opacity: .9;
   -webkit-tap-highlight-color: transparent; // to prevent default blinking behavior
 
-  &:first-child {
-    margin-left: 0;
+  &:focus {
+    color: $orange-100;
   }
 
-  @include mqmax($viewportM - 1) {
-    display: block;
-    width: 100%;
-    margin: 3px 0;
-    border-bottom: 1px solid $black-30;
+  @include mqmin($viewportM) {
+    width: auto;
+    order: 1;
+    flex-grow: 1;
+    margin: $XS 0 1px 1px;
+    padding-top: 2px;
+    border: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
 .sc-tab--with-text--active {
-  margin-bottom: 0;
-  margin-top: 4px;
-  height: 57px;
+  border-bottom: none;
+  height: 48px;
   color: $orange-100;
+  border-top: 4px solid $orange-100;
+  opacity: 1;
   outline: none; // to prevent bottom line
 
-  @include mqmax($viewportM - 1) {
-    border-bottom: none;
+  @include mqmin($viewportM) {
+    height: 57px;
     margin-top: 0;
-    height: 51px;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 }
 
 .sc-tabs__content {
-  order: 2;
+  border-bottom: 1px solid $black-30;
   width: 100%;
 
-  @include mqmax($viewportM - 1) {
-    border-bottom: 1px solid $black-30;
+  @include mqmin($viewportM) {
+    order: 2;
   }
 }
