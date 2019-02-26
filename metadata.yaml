@@ -1,9 +1,20 @@
-service: showcar-ui
-team: acquisition
+type: library
+id: showcar-ui
+name: showcar-ui
 vertical: as24
-segment: cxp
-owner: '#AS24-acquisition-cxp-ds@scout24.com'
-repository_url: https://github.com/Scout24/showcar-ui.git
+owners:
+- '#AS24-acquisition-cxp-ds@scout24.com'
+availability: false
+integrity: false
+confidentiality: public
+product: showcar
 links:
-  dashboard:
-  - https://acquisition.fizz.cloud.scout24.com/job/showcar-ui
+- type: repository
+  title: Git Repository
+  address: https://github.com/Scout24/showcar-ui
+- type: documentation
+  title: Readme
+  address: https://github.com/Scout24/showcar-ui/blob/master/README.md
+- type: runbook
+  title: Fizz Job
+  address: https://acquisition.fizz.cloud.scout24.com/job/showcar-ui
