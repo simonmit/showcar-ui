@@ -11,6 +11,10 @@ custom-dropdown.sc-input {
     opacity: 0.55;
     cursor: not-allowed;
 
+    &:hover {
+      border-color: $black-60;
+    }
+
     div:first-child {
       pointer-events: none;
     }
