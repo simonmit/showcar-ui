@@ -38,7 +38,7 @@
   outline: none;
 
   @include mqmin(510px) {
-    height: 48px;
+    height: 47px;
     padding-top: $S;
   }
 
@@ -71,7 +71,7 @@
   border-top: 4px solid $orange-100;
 
   @include mqmin(510px) {
-    height: 53px;
+    height: 52px;
     padding-top: 7px;
   }
 
