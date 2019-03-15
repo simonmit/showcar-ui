@@ -13,7 +13,6 @@ module.exports = function(){
     @@POLYFILL_ARRAY
     @@POLYFILL_STRING
     @@POLYFILL_OBJECT
-    @@POLYFILL_ES6_COLLECTIONS
     @@POLYFILL_PROMISE
     @@POLYFILL_FETCH
     
