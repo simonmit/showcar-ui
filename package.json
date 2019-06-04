@@ -1,6 +1,6 @@
 {
   "name": "showcar-ui",
-  "version": "4.3.76",
+  "version": "4.3.77",
   "description": "Showcar-ui is the pattern library that is used to build the frontend of AutoScout24. It provides CSS classes, custom elements and components.",
   "repository": {
     "type": "git",
@@ -64,6 +64,7 @@
     "showcar-tracking": "git+https://github.com/AutoScout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
     "uglify-js": "^3.4.9",
+    "url-search-params-polyfill": "^6.0.0",
     "whatwg-fetch": "^1.1.1",
     "zepto-modules": "^1.0.1"
   }
