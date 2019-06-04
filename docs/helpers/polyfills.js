@@ -15,6 +15,7 @@ module.exports = function(){
     @@POLYFILL_OBJECT
     @@POLYFILL_PROMISE
     @@POLYFILL_FETCH
+    @@POLYFILL_URL_SEARCH_PARAMS
     
     (function(w) {
         if(!w.__proto__){l('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')}
