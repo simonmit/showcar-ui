@@ -6,7 +6,7 @@ const scroll = (to, duration) => {
 
         let perTick = difference / duration * 10;
         $(this).scrollToTimerCache = setTimeout(() => {
-            if (! isNaN(parseInt(perTick, 10))) {
+            if (!isNaN(parseInt(perTick, 10))) {
                 window.scrollTo(0, window.pageYOffset + perTick);
                 scroll(to, duration - 10);
             }
@@ -22,13 +22,16 @@ export function smoothScroll(target, duration = 300, cb) {
     // We need to handle href and name since spy navigation is using name as target
     if (hrefTarget && hrefTarget.length) {
         targetSelector = 'a[name="' + hrefTarget.split('#')[1] + '"]';
-        if (! $(targetSelector).length) {
+        if (!$(targetSelector).length) {
             targetSelector = hrefTarget;
         }
     } else {
         const nameTarget = $(target).attr('name');
-        if (nameTarget.length) {
+        const idTarget = $(target).attr('id');
+        if (nameTarget) {
             targetSelector = 'a[name="' + nameTarget + '"]';
+        } else if (idTarget) {
+            targetSelector = 'a#' + idTarget;
         } else {
             console.warn('No target for scroll');
             return;
@@ -40,7 +43,7 @@ export function smoothScroll(target, duration = 300, cb) {
 
     scroll(to, duration);
 
-    if (cb) {cb();}
+    if (cb) { cb(); }
 }
 
 export default function registerSmoothScrolling() {

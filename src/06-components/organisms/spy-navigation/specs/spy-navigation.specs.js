@@ -10,7 +10,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             links = frame.getAll('.sc-spy-navigation__link');
             assert(links.length() > 0, 'we have no links on page');
             lastLink = frame.get('.sc-spy-navigation__link:last-child').toDomElement();
-            lastSection = frame.get('a[name="section-4"]');
+            lastSection = frame.get('a#section-5');
         })
 
         afterEach(done => {
@@ -20,7 +20,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         it('Initial state is non-sticky and inactive', () => {
             assert.equal(spyNavigation.getRawStyle('position'), 'relative', 'position should be relative');
 
-            for (var i = 0; i < links.length() - 1; i ++) {
+            for (var i = 0; i < links.length() - 1; i++) {
                 assert.isFalse(helper.hasClass(links.at(i).toDomElement(), 'sc-spy-navigation__link--active'), 'has not active link');
             }
         });
@@ -47,7 +47,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         it('Change class by scrolling to the section', (done) => {
             //as timeout is too long, we must check all behaviours in one test
             if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-                 done();
+                done();
                 return;
             }
 
