@@ -1,5 +1,7 @@
-<h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the name set to the value that you set in the data-href attribute.
+<h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the `id` set to the value that you set in the data-href attribute.
 The anchor tag defines the start of the section you want to jump to or select when scrolling there.
+
+Important note: old links with `name` attribute are still valid, but we suggest you to use `id` instead as a HTML5 compatible.
 
 
 <script>
@@ -16,7 +18,7 @@ The anchor tag defines the start of the section you want to jump to or select wh
 
     var subnav = document.querySelector('#page-subnav-stick');
     var subnavOffsetTop;
-    var lastElement = document.querySelector('#spy-navigation a[name^="section-"]:last-of-type');
+    var lastElement = document.querySelector('#spy-navigation #section-5');
     var lastElementOfsetBottom;
 
 

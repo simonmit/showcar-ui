@@ -18,11 +18,13 @@ export default function (config) {
     var stickElem = document.querySelector(stickElemSelector);
     var links = componentElem.querySelectorAll(linkClass);
 
-    if (! links.length) return;
+    if (!links.length) return;
 
     var linkTargetPairs = Array.prototype.map.call(links, function (link) {
         var href = link.getAttribute('data-href');
-        var target = document.querySelector('[name="' + href + '"]');
+        var oldTarget = document.querySelector('[name="' + href + '"]');
+        var newTarget = document.querySelector('#' + href);
+        var target = newTarget || oldTarget; // support both name and id
         return { link: link, target: target };
     });
 
@@ -50,12 +52,12 @@ export default function (config) {
     }
 
     function handleStickiness() {
-        if (! stickElem) return;
+        if (!stickElem) return;
 
         var needToStick = ((config && config.stickPosFn) || defaultStickWhenFn)(window.pageYOffset, stickElem);
         var needToUnstick = ((config && config.unstickPosFn) || defaultUnstickWhen)(window.pageYOffset, stickElem, componentElem);
 
-        if (! componentSticked() && needToStick) {
+        if (!componentSticked() && needToStick) {
             stick();
         } else if (componentSticked() && needToUnstick) {
             unstick();
@@ -117,13 +119,15 @@ export default function (config) {
                 element.removeAttribute('style');
             }
 
-            index ++;
+            index++;
         });
     }
 
     function navigateToAnchor($item) {
-        const targetName = $item.getAttribute('data-href');
-        const target = document.querySelector('[name="' + targetName + '"]');
+        var targetName = $item.getAttribute('data-href');
+        var oldTarget = document.querySelector('[name="' + targetName + '"]');
+        var newTarget = document.querySelector('#' + targetName);
+        var target = newTarget || oldTarget; // support both name and id
 
         if (target) {
             smoothScroll(target, 300, function () {
@@ -134,7 +138,7 @@ export default function (config) {
     }
 
     function closeNavigation() {
-        if (! componentElem) return;
+        if (!componentElem) return;
 
         componentElem.classList.remove('sc-spy-navigation--expanded');
     }
@@ -146,7 +150,7 @@ export default function (config) {
             scrollTop = window.pageYOffset,
             componentHeight = componentElem.getBoundingClientRect().height;
         activeNavItem = linkTargetPairs.filter(function (pair) {
-            if (! pair.target) {
+            if (!pair.target) {
                 throw new Error('Check hash name on target');
             }
             return pair.target.getBoundingClientRect().top + (document.body.scrollTop || document.documentElement.scrollTop) <= scrollTop + componentHeight + 5;
