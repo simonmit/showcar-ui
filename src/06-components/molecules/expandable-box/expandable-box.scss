@@ -4,8 +4,6 @@
 @import '../../../02-sass-tools/utils';
 
 .sc-expandable-box {
-  cursor: pointer;
-
   border-top: 1px solid $black-30;
 
   @include mqmin($viewportM) {
@@ -21,6 +19,8 @@
       }
 
       .sc-expandable-box__label {
+        cursor: auto;
+
         &:after {
           display: none;
         }
@@ -50,6 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 
     &:after {
       @include rotating-arrow('down');
