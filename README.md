@@ -58,11 +58,14 @@ The showcar-ui library includes some libraries and polyfills:
 
 ### Polyfills
 
-- document-register-element
-- dom4
-- es6-collections
-- whatwg-fetch (fetch)
-- promiz (promises)
+ - document-register-element (from [document-register-element](https://www.npmjs.com/package/document-register-element))
+ - dom4 (from [dom4](https://www.npmjs.com/package/dom4))
+ - Array (.of, .includes, .from, .find)
+ - String (.includes, .startsWith, .endsWith)
+ - Object (.assign)
+ - Promises (from [promiz](https://www.npmjs.com/package/promiz))
+ - Fetch (from [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch))
+ - URLSearchParams (from [url-search-params-polyfill](https://www.npmjs.com/package/url-search-params-polyfill))
 
 ### showcar-storage
 
