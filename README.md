@@ -22,7 +22,7 @@ and follow the instructions
 
 For building on your local machine install all npm packages first. Then you can use the gulp command to run the build: 
 
-    npm install or use `yarn`
+    yarn
     gulp build
 
 ## How to run locally:
