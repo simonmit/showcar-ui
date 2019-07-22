@@ -32,10 +32,10 @@ deploy:
   tag: next
 
 script:
-- npm run build
-- npm run docs
+- yarn run build
+- yarn run docs
 - 'if  ! [[ ${TRAVIS_COMMIT_MESSAGE} == *"--skip-tests"* ]]; then
-    npm run test;
+    yarn run test;
   fi'
 
 after_success:
