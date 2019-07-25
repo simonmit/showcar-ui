@@ -1,1 +1,32 @@
-<img width="300" height="200" data-src="https://placeimg.com/640/480?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+<ol>
+    <li>
+        <h3>As <code>&lt;img&gt;</code></h3>
+        <img data-src="https://placeimg.com/640/480?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+    </li>
+
+    <li>
+        <h3>As <code>&lt;picture&gt;</code></h3>
+        <picture>
+            <source class="lazyload" media="(max-width: 480px)" data-srcset="https://placeimg.com/300/225?1" type="image/jpeg">
+            <source class="lazyload" media="(min-width: 769px)" data-srcset="https://placeimg.com/1200/900?1" type="image/jpeg">
+            <img class="lazyload" data-src="https://placeimg.com/300/225?1" src="https://placeimg.com/50/38?1">
+        </picture>
+    </li>
+
+    <li>
+        <h3>As <code>background-image</code></h3>
+        <div class="dummy-placeholder lazyload"></div>
+        <style>
+        #lazy-image-target .sample .dummy-placeholder{
+            width: 300px;
+            height: 225px;
+            background-image: url('https://placeimg.com/50/38?1');
+            background-size: cover;
+        }
+
+        #lazy-image-target .sample .dummy-placeholder.lazyloaded{
+            background-image: url('https://placeimg.com/2200/1650?1');
+        }
+        </style>
+    </li>
+</ol>
