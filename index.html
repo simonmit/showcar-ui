@@ -2670,35 +2670,43 @@ margin-bottom:15px;
                    <div class="sample"><ol>
     <li>
         <h3>As <code>&lt;img&gt;</code></h3>
-        <img data-src="https://placeimg.com/640/480?1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="sc-lazy-image lazyload" alt="">
+        <p><code>&lt;data-src&gt;</code> has an original image inside,<br /> <code>&lt;src&gt;</code> has an encoded 1x1
+            gray image to for background during loading</p><br />
+        <img data-src="https://placeimg.com/640/480?1"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="sc-lazy-image lazyload" alt="small random image">
     </li>
-
     <li>
         <h3>As <code>&lt;picture&gt;</code></h3>
+        <p><code>data-src</code> has an original image in different resolutions,<br /> <code>src</code>
+            in <code>&lt;img&gt;</code> tag has a thumbnail image for background during loading</p>
+        <p>You only need to apply <code>class="lazyload"</code> to <code>&lt;img&gt;</code> tag</p><br />
         <picture>
-            <source class="lazyload" media="(max-width: 480px)" data-srcset="https://placeimg.com/300/225?1" type="image/jpeg">
-            <source class="lazyload" media="(min-width: 769px)" data-srcset="https://placeimg.com/1200/900?1" type="image/jpeg">
-            <img class="lazyload" data-src="https://placeimg.com/300/225?1" src="https://placeimg.com/50/38?1">
+            <source media="(max-width: 480px)" data-srcset="https://loremflickr.com/300/225?lock=1" type="image/jpeg">
+            <source media="(min-width: 769px)" data-srcset="https://loremflickr.com/1200/900?lock=1" type="image/jpeg">
+            <img class="lazyload" data-src="https://loremflickr.com/300/225?lock=1"
+                src="https://loremflickr.com/50/38?lock=1">
         </picture>
     </li>
-
     <li>
-        <h3>As <code>background-image</code></h3>
+        <h3>As <code>background-image</code> (NOT recommended, please consider two first options as a better choice)
+        </h3>
         <div class="dummy-placeholder lazyload"></div>
         <style>
-        #lazy-image-target .sample .dummy-placeholder{
-            width: 300px;
-            height: 225px;
-            background-image: url('https://placeimg.com/50/38?1');
-            background-size: cover;
-        }
+            #lazy-image-target .sample .dummy-placeholder {
+                width: 300px;
+                height: 225px;
+                background-image: url('https://placeimg.com/50/38?1');
+                background-size: cover;
+            }
 
-        #lazy-image-target .sample .dummy-placeholder.lazyloaded{
-            background-image: url('https://placeimg.com/2200/1650?1');
-        }
+            #lazy-image-target .sample .dummy-placeholder.lazyloaded {
+                background-image: url('https://placeimg.com/2200/1650?1');
+            }
         </style>
     </li>
-</ol></div> 
+</ol>
+</div> 
                     <div class="code-sample">
                         <div class="code">
                             <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-lazy-image" title="Copy to clipboard">
@@ -2708,35 +2716,43 @@ margin-bottom:15px;
                                 <code id="copy_code-code-lazy-image" class="hjs html">&lt;ol&gt;
     &lt;li&gt;
         &lt;h3&gt;As &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;&lt;/h3&gt;
-        &lt;img data-src=&quot;https://placeimg.com/640/480?1&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; class=&quot;sc-lazy-image lazyload&quot; alt=&quot;&quot;&gt;
+        &lt;p&gt;&lt;code&gt;&amp;lt;data-src&amp;gt;&lt;/code&gt; has an original image inside,&lt;br /&gt; &lt;code&gt;&amp;lt;src&amp;gt;&lt;/code&gt; has an encoded 1x1
+            gray image to for background during loading&lt;/p&gt;&lt;br /&gt;
+        &lt;img data-src=&quot;https://placeimg.com/640/480?1&quot;
+            src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot;
+            class=&quot;sc-lazy-image lazyload&quot; alt=&quot;small random image&quot;&gt;
     &lt;/li&gt;
-
     &lt;li&gt;
         &lt;h3&gt;As &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt;&lt;/h3&gt;
+        &lt;p&gt;&lt;code&gt;data-src&lt;/code&gt; has an original image in different resolutions,&lt;br /&gt; &lt;code&gt;src&lt;/code&gt;
+            in &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag has a thumbnail image for background during loading&lt;/p&gt;
+        &lt;p&gt;You only need to apply &lt;code&gt;class=&quot;lazyload&quot;&lt;/code&gt; to &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag&lt;/p&gt;&lt;br /&gt;
         &lt;picture&gt;
-            &lt;source class=&quot;lazyload&quot; media=&quot;(max-width: 480px)&quot; data-srcset=&quot;https://placeimg.com/300/225?1&quot; type=&quot;image/jpeg&quot;&gt;
-            &lt;source class=&quot;lazyload&quot; media=&quot;(min-width: 769px)&quot; data-srcset=&quot;https://placeimg.com/1200/900?1&quot; type=&quot;image/jpeg&quot;&gt;
-            &lt;img class=&quot;lazyload&quot; data-src=&quot;https://placeimg.com/300/225?1&quot; src=&quot;https://placeimg.com/50/38?1&quot;&gt;
+            &lt;source media=&quot;(max-width: 480px)&quot; data-srcset=&quot;https://loremflickr.com/300/225?lock=1&quot; type=&quot;image/jpeg&quot;&gt;
+            &lt;source media=&quot;(min-width: 769px)&quot; data-srcset=&quot;https://loremflickr.com/1200/900?lock=1&quot; type=&quot;image/jpeg&quot;&gt;
+            &lt;img class=&quot;lazyload&quot; data-src=&quot;https://loremflickr.com/300/225?lock=1&quot;
+                src=&quot;https://loremflickr.com/50/38?lock=1&quot;&gt;
         &lt;/picture&gt;
     &lt;/li&gt;
-
     &lt;li&gt;
-        &lt;h3&gt;As &lt;code&gt;background-image&lt;/code&gt;&lt;/h3&gt;
+        &lt;h3&gt;As &lt;code&gt;background-image&lt;/code&gt; (NOT recommended, please consider two first options as a better choice)
+        &lt;/h3&gt;
         &lt;div class=&quot;dummy-placeholder lazyload&quot;&gt;&lt;/div&gt;
         &lt;style&gt;
-        #lazy-image-target .sample .dummy-placeholder{
-            width: 300px;
-            height: 225px;
-            background-image: url(&apos;https://placeimg.com/50/38?1&apos;);
-            background-size: cover;
-        }
+            #lazy-image-target .sample .dummy-placeholder {
+                width: 300px;
+                height: 225px;
+                background-image: url(&apos;https://placeimg.com/50/38?1&apos;);
+                background-size: cover;
+            }
 
-        #lazy-image-target .sample .dummy-placeholder.lazyloaded{
-            background-image: url(&apos;https://placeimg.com/2200/1650?1&apos;);
-        }
+            #lazy-image-target .sample .dummy-placeholder.lazyloaded {
+                background-image: url(&apos;https://placeimg.com/2200/1650?1&apos;);
+            }
         &lt;/style&gt;
     &lt;/li&gt;
-&lt;/ol&gt;</code>
+&lt;/ol&gt;
+</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
