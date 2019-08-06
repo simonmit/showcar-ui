@@ -305,11 +305,6 @@
         }
       }
 
-      /* Works only on big screens */
-      li.separator {
-        display: none;
-      }
-
       li {
         a::after {
           content: none;
@@ -468,7 +463,6 @@
             left: 0;
             margin-left: -1px;
             margin-right: -1px;
-            margin-top: -1px; /* remove double line*/
             padding: 12px 24px;
 
             li {
