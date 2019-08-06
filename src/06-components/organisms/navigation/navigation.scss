@@ -2,12 +2,11 @@
 @import '../../../02-sass-tools/fonts';
 @import '../../../02-sass-tools/link';
 
-.sc-navigation {
+@mixin sc-navigation-mixin($breakpoint) {
   position: relative;
   background-color: $white;
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
-
   border-bottom: solid 1px $black-30;
 
   .sc-btn-mobile-menu {
@@ -85,7 +84,7 @@
       box-sizing: border-box;
       height: 1px;
       margin: $M 0;
-      width: 209px;
+      width: 209px; // remove the width
       border-top: 1px solid #dcdcdc;
     }
 
@@ -135,7 +134,8 @@
         margin-top: 6px;
         width: 12px;
         height: 12px;
-        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==') no-repeat center center;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')
+          no-repeat center center;
         color: $orange-100;
       }
     }
@@ -225,7 +225,7 @@
       display: inline-block;
     }
 
-    @media screen and (min-width: $viewportL) {
+    @media screen and (min-width: $breakpoint) {
       .icon-auto24,
       as24-icon {
         width: 85px;
@@ -235,9 +235,8 @@
     }
   }
 
-  /* ... => $viewportL */
-  @media screen and (max-width: $viewportL) {
-  
+  /* ... => $breakpoint*/
+  @media screen and (max-width: $breakpoint) {
     nav {
       .title {
         display: inline-block;
@@ -325,23 +324,21 @@
       display: none !important;
     }
   }
-}
 
-@media screen and (min-width: $viewportL) and (max-width: $viewportXL) {
-  .sc-navigation nav ul li.open ul.submenu {
-    white-space: normal;
+  // @media screen and (min-width: $breakpoint) and (max-width: $viewportXL) {
+  //   & nav ul li.open ul.submenu {
+  //     white-space: normal;
+  //   }
+  // }
+
+  @media screen and (min-width: $viewportXL) {
+    & nav ul li.open ul.submenu {
+      white-space: nowrap;
+    }
   }
-}
 
-@media screen and (min-width: $viewportXL) {
-  .sc-navigation nav ul li.open ul.submenu {
-    white-space: nowrap;
-  }
-}
-
-/* $viewportL => ... */
-@media screen and (min-width: $viewportL) {
-  .sc-navigation {
+  /* $breakpoint=> ... */
+  @media screen and (min-width: $breakpoint) {
     height: 70px;
     width: 100%;
     overflow: visible;
@@ -478,6 +475,7 @@
           }
 
           ul.submenu {
+            white-space: normal;
             > li {
               ul {
                 position: static;
@@ -510,5 +508,10 @@
         }
       }
     }
+    // @content;
   }
+}
+
+.sc-navigation {
+  @include sc-navigation-mixin(923px);
 }
