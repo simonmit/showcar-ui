@@ -80,6 +80,15 @@
       padding-right: 20px;
     }
 
+    /* Special empty li separator */
+    li.separator {
+      box-sizing: border-box;
+      height: 1px;
+      margin: $M 0;
+      width: 209px;
+      border-top: 1px solid #dcdcdc;
+    }
+
     a {
       display: block;
       padding: $S 0;
@@ -412,15 +421,6 @@
             right: 0;
             left: auto;
           }
-        }
-
-        /* Special empty li separator */
-        li.separator {
-          box-sizing: border-box;
-          height: 1px;
-          margin: $M 0;
-          width: 209px;
-          border-top: 1px solid #dcdcdc;
         }
 
         li.open {
