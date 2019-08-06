@@ -264,7 +264,7 @@ class Navigation {
 }
 
 export default function () {
-    let navigationElement = document.querySelector('.sc-navigation'),
+    let navigationElement = document.querySelector('header[role=navigation]'),
         navigation = null;
     if (navigationElement) {
         navigation = new Navigation(navigationElement);
