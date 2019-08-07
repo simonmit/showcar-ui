@@ -249,7 +249,7 @@
   }
 
   /* ... => $breakpoint*/
-  @media screen and (max-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint - 1px) {
     nav {
       .title {
         display: inline-block;
