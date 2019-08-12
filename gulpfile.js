@@ -9,30 +9,30 @@ updateNotifier({
     updateCheckInterval: 1 //check each time
 }).notify({ defer: false, isGlobal: false });
 
-gulp.task('js', ['eslint'], scgulp.js({
+gulp.task('eslint', scgulp.eslint({
+    files: 'src/**/*.js'
+}));
+
+gulp.task('js', gulp.series('eslint'), scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
 }));
 
-gulp.task('icons', ['eslint'], scgulp.js({
+gulp.task('icons', gulp.series('eslint'), scgulp.js({
     entry: 'src/js/showcar-icons.js',
     out: 'dist/showcar-icons.js',
 }));
 
-gulp.task('tracking', ['eslint'], scgulp.js({
+gulp.task('tracking', gulp.series('eslint'), scgulp.js({
     entry: 'src/js/showcar-tracking.js',
     out: 'dist/showcar-tracking.js',
-}));
-
-gulp.task('eslint', scgulp.eslint({
-    files: 'src/**/*.js'
 }));
 
 gulp.task('stylelint', scgulp.stylelint({
     files: 'src/**/*.scss'
 }));
 
-gulp.task('scss', ['stylelint'], scgulp.scss({
+gulp.task('scss', gulp.series('stylelint'), scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
 }));
@@ -45,11 +45,12 @@ gulp.task('serve', scgulp.serve({
     dir: 'dist'
 }));
 
-gulp.task('copy:fragments', () => {
+gulp.task('copy:fragments', done => {
     gulp.src('src/html/showcar-ui-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/showcar-ui-standalone-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/showcar-ui-toggled-fragment.html').pipe(gulp.dest('dist/'));
     gulp.src('src/html/optimizely-*.html').pipe(gulp.dest('dist/'));
+    done();
 });
 
 const fs = require('fs');
@@ -62,7 +63,7 @@ var replaceOptions = {
         enabled: false
     }
 };
-gulp.task('replace', function () {
+gulp.task('replace', done => {
     gulp.src(['src/html/index.html', 'src/html/index-standalone.html', 'docs/helpers/polyfills.js'])
         .pipe(stringReplace('@@POLYFILL_DOCUMENT_REGISTER_ELEMENT', readFile('node_modules/document-register-element/build/document-register-element.js'), replaceOptions))
         .pipe(stringReplace('@@POLYFILL_DOM4', readFile('node_modules/dom4/build/dom4.js'), replaceOptions))
@@ -75,6 +76,7 @@ gulp.task('replace', function () {
         .pipe(stringReplace('@@SCRIPT_ERROR_COLLECTOR', readJsFile('src/js/inline-js/js-error-collector.js'), replaceOptions))
         .pipe(stringReplace('@@SCRIPT_FONT_LOADER', readJsFile('src/js/inline-js/font-loader.js'), replaceOptions))
         .pipe(gulp.dest('dist/'));
+    done();
 });
 
 gulp.task('set-dev', () => {
@@ -88,12 +90,12 @@ gulp.task('docs:generate', () => {
 
 const serveDocs = require('./docs/tasks/docs');
 
+gulp.task('build', gulp.series('js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace'));
 gulp.task('docs:serve', () => {serveDocs(gulp);});
-gulp.task('docs:edit', ['build'], () => {serveDocs(gulp);});
-gulp.task('docs:watch', ['build'], () => {serveDocs(gulp);});
+gulp.task('docs:edit', gulp.series('build'), () => {serveDocs(gulp);});
+gulp.task('docs:watch', gulp.series('build'), () => {serveDocs(gulp);});
 
-gulp.task('build', ['js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace']);
-gulp.task('default', ['docs:watch']);
+gulp.task('default', gulp.series('docs:watch'));
 
 const testingParams = {
     files: ['.quixoteconf.js'],
@@ -105,19 +107,19 @@ const testingParams = {
     }
 };
 
-gulp.task('test', ['docs:serve'], scgulp.karma(
+gulp.task('test', gulp.series('docs:serve'), scgulp.karma(
     Object.assign({}, testingParams, {
         browsers: ['Firefox', 'Chrome', 'Safari']
     }))
 );
 
-gulp.task('test:fast', ['docs:serve'], scgulp.karma(
+gulp.task('test:fast', gulp.series('docs:serve'), scgulp.karma(
     Object.assign({}, testingParams, {
         browsers: ['Chrome']
     }))
 );
 
-gulp.task('test:bs', ['docs:serve'], scgulp.karma(
+gulp.task('test:bs', gulp.series('docs:serve'), scgulp.karma(
     Object.assign({}, testingParams, {
         browserStack: {
             build: new Date().toLocaleString('de-DE', {
@@ -133,7 +135,7 @@ gulp.task('test:bs', ['docs:serve'], scgulp.karma(
     }))
 );
 
-gulp.task('test:travis', ['docs:serve'], scgulp.karma(
+gulp.task('test:travis', gulp.series('docs:serve'), scgulp.karma(
     Object.assign({}, testingParams, {
         browserStack: {
             project: 'Showcar-ui',
