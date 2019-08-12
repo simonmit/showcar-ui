@@ -397,12 +397,15 @@
     
         <div id="content"><div id="about-target" class="positon-anchor"><h2 class="type_name">getting started</h2>
                 <div class="element" id="about">
-                    <div class="markdown"><p><h2>About</h2>
+                    <div class="markdown"><h2>About</h2>
 The showcar-ui library can be used to implement a consistent user experience for our AutoScout24 pages.
 The library provides several pre-defined CSS classes and components you can use to create the frontend of your web based application.
-The structure of all elements follows the <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">ATOMIC DESIGN</a> principle.</p>
-<p><h4>Github repository:</h4> <a href="https://github.com/AutoScout24/showcar-ui" target="_blank">https://github.com/AutoScout24/showcar-ui</a></p>
-<p><br></p>
+The structure of all elements follows the <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">ATOMIC DESIGN</a> principle.
+
+<h4>Github repository:</h4> <a href="https://github.com/AutoScout24/showcar-ui" target="_blank">https://github.com/AutoScout24/showcar-ui</a>
+
+<br>
+
 <p>This documentation follows the following structure:</p>
 <ul>
 <li><h4>Getting started</h4>: General information about showcar-ui and how to use it.</li>
@@ -411,9 +414,12 @@ The structure of all elements follows the <a href="http://bradfrost.com/blog/pos
 <li><h4>Molecules:</h4> Molecules are groups of atoms bonded together.</li>
 <li><h4>Organisms:</h4> Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.</li>
 <li><h4>Utilities:</h4> Information about utility classes and layout.</li>
-<li><h4>Extra packages:</h4> Here you can find more information about additional showcar-* NPM packages that can be used with showcar-ui (e.g. gallery, icons, etc.).</li>
+<li><h4>Extra packages:</h4> Here you can find more information about additional showcar-* NPM packages that can be used with showcar-ui (e.g. gallery, icons, etc.).
+
+</li>
 </ul>
-<p><br></p>
+<br>
+
 <p>Label description:</p>
 <p><span class="status approved">Approved</span> - Element is completely implemented and approved. <br>
 <span class="status review">Needs review</span> - Element is implemented and can be used but needs to be reviewed. <br>
@@ -429,51 +435,48 @@ The structure of all elements follows the <a href="http://bradfrost.com/blog/pos
                     <div class="markdown"><h2>Usage</h2>
 
 <p>You can either include showcar-ui as a fragment or directly include the JS, CSS and inline HTML on your page. The library provides some HTML content that needs to be inlined on your page. Use the index.html in the dist folder as a template in order to include the inline HTML, CSS and JS on your page.</p>
-<p><br></p>
+<br>
+
 <h4>Include jigsaw fragment (prefered):</h4><p>If you are using UI-Composition you can use the showcar-ui fragment by adding the following line after the beginning of the BODY tag in your HTML:</p>
-<pre><code class="lang-html">&lt;body&gt;
+<pre><code class="language-html">&lt;body&gt;
     &lt;!--#include virtual=&quot;/fragment/assets/external/showcar-ui/showcar-ui-standalone-fragment.html&quot; --&gt;
-&lt;/body&gt;
-</code></pre>
-<p><br></p>
+&lt;/body&gt;</code></pre>
+<br>
+
 <h4>Include pre-built dist files:</h4><p>In case you can not use the fragment to include showcar-ui you can also include the pre-built files directly from the release branch in the github repository.
 In order to do so follow these steps:</p>
 <p>1.
 Install showcar-ui NPM package:</p>
-<pre><code class="lang-js">npm install showcar-ui --save
-</code></pre>
+<pre><code class="language-js">npm install showcar-ui --save</code></pre>
 <p>2.
 Include the files on your page:</p>
-<pre><code class="lang-html">&lt;html&gt;
+<pre><code class="language-html">&lt;html&gt;
   &lt;head&gt;
       &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/showcar-ui/dist/showcar-ui.css&quot;&gt;
   &lt;/head&gt;
   &lt;body&gt;
       &lt;script src=&quot;node_modules/showcar-ui/dist/showcar-ui.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
 <p>CAUTION: Be aware that you will not get any polyfills if you only include the JS/CSS files. In order to make the showcar-ui
 library work properly cross browser you also need to include the inlined JS/CSS that we provide with our index-standalone.html
 file. This file can also be found in the dist folder. Please make sure you also include this html file on your page. If you
 need assistance please contact the Web Experience Team.</p>
-<p><br></p>
+<br>
+
 <h4>Build locally:</h4><p>For building locally you can use the showcar-gulp build pipeline template: <a href="https://github.com/AutoScout24/showcar-gulp">https://github.com/AutoScout24/showcar-gulp</a></p>
 <p>1.
 Clone repository</p>
-<pre><code class="lang-bash">git clone git@github.com:AutoScout24/showcar-ui.git
-</code></pre>
+<pre><code class="language-bash">git clone git@github.com:AutoScout24/showcar-ui.git</code></pre>
 <p>2.
 Setup</p>
-<pre><code class="lang-bash">brew install node # install node if you didn&#39;t do it before
+<pre><code class="language-bash">brew install node # install node if you didn&#39;t do it before
 brew install yarn # we use yarn instead of npm to manage node package dependencies
 yarn global add gulp # install gulp globally
-yarn install
-</code></pre>
+yarn install</code></pre>
 <p>3.
 Build and run</p>
-<pre><code class="lang-bash">gulp build
-</code></pre>
+<pre><code class="language-bash">gulp build</code></pre>
 </div>
                      
                 </div>
@@ -585,7 +588,7 @@ Build and run</p>
             
 
                 <div class="element" id="colors-primary-blue">
-                    <div class="markdown"><p><h2>Colors Primary Blue<span class="status approved">Approved</span></h2></p>
+                    <div class="markdown"><h2>Colors Primary Blue<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
             <div class="ndpl-component__color-container">
                 <div class="ndpl-component__color" style="background-color: rgb(0, 52, 104);">
@@ -649,7 +652,7 @@ Build and run</p>
             
 
                 <div class="element" id="colors-primary-orange">
-                    <div class="markdown"><p><h2>Colors Primary Orange<span class="status approved">Approved</span></h2></p>
+                    <div class="markdown"><h2>Colors Primary Orange<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 <div class="ndpl-component__color-container">
 <div class="ndpl-component__color" style="background-color: rgb(128, 55, 0);">
@@ -731,7 +734,7 @@ Build and run</p>
             
 
                 <div class="element" id="colors-secondary">
-                    <div class="markdown"><p><h2>Colors Secondary<span class="status approved">Approved</span></h2></p>
+                    <div class="markdown"><h2>Colors Secondary<span class="status approved">Approved</span></h2>
 <div class="ndpl-component__colors ndpl-cf">
 <div class="ndpl-component__color-container">
 <div class="ndpl-component__color" style="background-color: rgb(217, 26, 42);">
@@ -837,7 +840,7 @@ Build and run</p>
             
 
                 <div class="element" id="spacings">
-                    <div class="markdown"><p><br></p>
+                    <div class="markdown"><br>
 <h2>Spacings<span class="status approved">Approved</span></h2>
 
 <p>There are several variables that should be used for the spacing inside and between elements.<br>Use the variables only for the spacing and not for other properties like e.g. font-sizes.  </p>
@@ -940,12 +943,12 @@ Build and run</p>
 <h4>Font sizes</h4><p>Several helper classes for font styling are available, the font sizes follow simple T-Shirt sizes.</p>
 <h4>Headlines</h4><p>For styling <code>&lt;h*&gt;</code> elements please use <code>sc-font-*</code> classes directly.
 For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
-<p><table class="docs-table">
+<table class="docs-table">
     <thead>
         <tr>
             <th>class</th>
-            <th>font-size/line-height (viewport &lt; 768px)</th>
-            <th>font-size/line-height (viewport &gt;= 768px)</th>
+            <th>font-size/line-height (viewport < 768px)</th>
+            <th>font-size/line-height (viewport >= 768px)</th>
         </tr>
     </thead>
     <tbody>
@@ -980,7 +983,7 @@ For example <code>&lt;h2 class=&#39;sc-font-m&#39;&gt;</code></p>
             <td>2.5rem (40px) <br> 1.2 (48px)</td>
         </tr>
     </tbody>
-</table></p>
+</table>
 <style>
 #fonts .sample p{
 margin-bottom:15px;
@@ -1176,7 +1179,7 @@ margin-bottom:15px;
             
 <hr></div><div id="collapse-target" class="positon-anchor">
                 <div class="element" id="collapse-more-less">
-                    <div class="markdown"><h2>Collapse more&amp;less<span class="status approved">Approved</span><span class="status js">JS</span></h2>
+                    <div class="markdown"><h2>Collapse more&less<span class="status approved">Approved</span><span class="status js">JS</span></h2>
 </div>
                    <div class="sample"><a class="sc-collapse sc-collapse-target in" data-toggle="sc-collapse" data-target=".sc-collapse-target">
     More Content
@@ -2079,7 +2082,7 @@ margin-bottom:15px;
             
 <hr></div><div id="disruptor-target" class="positon-anchor">
                 <div class="element" id="disruptor-small">
-                    <div class="markdown"><p><h2>Disruptor Small<span class="status approved">APPROVED</span></h2></p>
+                    <div class="markdown"><h2>Disruptor Small<span class="status approved">APPROVED</span></h2>
 <p>The Disruptor Small is currently used in the main navigation only.</p>
 </div>
                    <div class="sample"><p>Modelfinder <em class="sc-disruptor-small">New</em></p>
@@ -2127,11 +2130,11 @@ margin-bottom:15px;
                 <div class="element" id="google-map">
                     <div class="markdown"><h2>Google Map<span class="status approved">Approved</span></h2>
 
-<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>apikey</code> - your google public API key (visit <a href="https://console.developers.google.com/projectselector/apis/credentials" target="_blank">https://console.developers.google.com/projectselector/apis/credentials</a> if you need to generate it)<br><code>query</code> - location (e.g. <code>Dingolfinger Str. 1-15 81673 München</code> or <code>48.138570, 11.573496</code>)<br>You also have to provide height to make map interactive</p>
-<pre><code class="lang-css">.sc-google-maps--example {
+<p>To use google map on your page add <code>as24-google-map</code> custom element on it. Please provide following data-attributes:<br><code>apikey</code> - your google public API key (visit <a href="https://console.developers.google.com/projectselector/apis/credentials" target="_blank">https://console.developers.google.com/projectselector/apis/credentials</a> if you need to generate it)<br><code>query</code> - location (e.g. <code>Dingolfinger Str. 1-15 81673 München</code> or <code>48.138570, 11.573496</code>)  
+You also have to provide height to make map interactive</p>
+<pre><code class="language-css">.sc-google-maps--example {
     height: 300px;
-}
-</code></pre>
+}</code></pre>
 <style>
 #google-map .sc-google-maps {
     height: 300px;
@@ -2835,9 +2838,8 @@ and add the <code>data-lightbox-open=&quot;ID&quot;</code> to your trigger eleme
 to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-lightbox&quot; id=&quot;lb1&quot; prevent-outsideclose&gt;</code>.</p>
 <p>In case you need to disable opening lightbox when clicking button that opens the lightbox, you can provide the <code>data-lightbox-prevent-open=&quot;true&quot;</code> attribute. And you can switch this to <code>data-lightbox-prevent-open=&quot;false&quot;</code> if you want to open it.</p>
 <p>You can register (multiple) callbacks for when the lightbox opens/closes by calling the <code>registerOnOpenCallback, registerOnCloseCallback</code> methods on the <code>&lt;as24-lightbox&gt;</code> DOM element, i.e. <br/><br/></p>
-<pre><code class="lang-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
-myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
-</code></pre>
+<pre><code class="language-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
+myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));</code></pre>
 </div>
                    <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
 <as24-lightbox class="sc-lightbox" id="lb1" data-custom="custom-lightbox">
@@ -3043,7 +3045,8 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
                 <div class="element" id="spinner-percentage">
                     <div class="markdown"><h2>Spinner with percentage value<span class="status approved">Approved</span></h2>
 
-<h4>How to choose spinner?</h4><p>We suggest you these simple rules:<br>1) On blue or orange background use the semi-transparent version - <code>sc-spinner</code><br>2) On white background use orange version - <code>sc-spinner orange</code><br>3) On light grey background use grey version - <code>sc-spinner grey</code>  </p>
+<h4>How to choose spinner?</h4><p>We suggest you these simple rules:  </p>
+<p>1) On blue or orange background use the semi-transparent version - <code>sc-spinner</code><br>2) On white background use orange version - <code>sc-spinner orange</code><br>3) On light grey background use grey version - <code>sc-spinner grey</code>  </p>
 <p>Note that background-color and <code>sc-absolute-center</code> to the div wrapper in example are added only for example styling</p>
 <style>
 #spinner-percentage .sample{
@@ -3789,30 +3792,29 @@ myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));
             
 <hr></div><div id="tooltip-target" class="positon-anchor">
                 <div class="element" id="tooltip">
-                    <div class="markdown"><p><h2>Tooltip<span class="status approved">Approved</span><span class="status js">JS</span></h2></p>
-<p><style></p>
-<p>#tooltip-2 .sample{
+                    <div class="markdown"><h2>Tooltip<span class="status approved">Approved</span><span class="status js">JS</span></h2>
+<style>
+#tooltip-2 .sample{
     padding-top:60px;
-}</p>
-<p>#tooltip-show, #tooltip-hide {
+}
+#tooltip-show, #tooltip-hide {
     cursor: pointer;
     font-weight: 900;
 }
-</style></p>
+</style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
 
-    var shower = document.querySelector('#tooltip-show');
-    var hider = document.querySelector('#tooltip-hide');
-    shower.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('show-tooltip-event')); }, false);
-    hider.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('hide-tooltip-event')); }, false);
+<pre><code>var shower = document.querySelector(&#39;#tooltip-show&#39;);
+var hider = document.querySelector(&#39;#tooltip-hide&#39;);
+shower.addEventListener(&#39;click&#39;, () =&gt; { document.dispatchEvent(new CustomEvent(&#39;show-tooltip-event&#39;)); }, false);
+hider.addEventListener(&#39;click&#39;, () =&gt; { document.dispatchEvent(new CustomEvent(&#39;hide-tooltip-event&#39;)); }, false);
 
-    setTimeout(() => document.dispatchEvent(new CustomEvent('show-detailed-tooltip')), 1000);
-    var closeDetailedTooltipButton = document.querySelector('#close-detailed-tooltip-button');    closeDetailedTooltipButton.addEventListener('click', () => {
-      document.dispatchEvent(new CustomEvent('hide-detailed-tooltip'));
-    }, false);
-  })
-</script>
+setTimeout(() =&gt; document.dispatchEvent(new CustomEvent(&#39;show-detailed-tooltip&#39;)), 1000);
+var closeDetailedTooltipButton = document.querySelector(&#39;#close-detailed-tooltip-button&#39;);    closeDetailedTooltipButton.addEventListener(&#39;click&#39;, () =&gt; {
+  document.dispatchEvent(new CustomEvent(&#39;hide-detailed-tooltip&#39;));
+}, false);</code></pre><p>  })
+</script></p>
 </div>
                    <div class="sample"><p>That text needs to be explained
 	<as24-tooltip class="sc-tooltip" id="test-hover-tooltip">
@@ -6535,8 +6537,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
 
                 <div class="element" id="search-mask">
-                    <div class="markdown"><p><h2>Search mask<span class="status approved">Approved</span></h2>
-The search mask uses tabs element for show/hide logic. See <a href="https://scout24.github.io/showcar-ui/#tabs-target">here</a></p>
+                    <div class="markdown"><h2>Search mask<span class="status approved">Approved</span></h2>
+The search mask uses tabs element for show/hide logic. See <a href="https://scout24.github.io/showcar-ui/#tabs-target">here</a>
+
 <p>All the <code>sc-search-*</code> classes are used only for styling (include responsive behavior).</p>
 <style>
 #search-mask .sample{
@@ -6920,8 +6923,9 @@ The search mask uses tabs element for show/hide logic. See <a href="https://scou
             
 <hr></div><div id="spy-navigation-target" class="positon-anchor">
                 <div class="element" id="spy-navigation">
-                    <div class="markdown"><p><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the <code>id</code> set to the value that you set in the data-href attribute.
-The anchor tag defines the start of the section you want to jump to or select when scrolling there.</p>
+                    <div class="markdown"><h2>Spy Navigation <span class="status refactor">Needs refactoring</span><span class="status js">JS</span></h2> Make sure you always set the target for each navigation link by providing the data-href attribute as shown in the code example below. The target element itself needs to be an anchor tag with the `id` set to the value that you set in the data-href attribute.
+The anchor tag defines the start of the section you want to jump to or select when scrolling there.
+
 <p>Important note: old links with <code>name</code> attribute are still valid, but we suggest you to use <code>id</code> instead as a HTML5 compatible.</p>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -8303,7 +8307,9 @@ showcar.spyNavigation({
                 <div class="element" id="grid">
                     <div class="markdown"><h2>Grid<span class="status approved">Approved</span></h2>
 
-<p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.<br>Every grid row is represented as <code>.sc-grid-row</code>.<br>Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
+<p>ShowCar UI includes the responsive Susy grid system. It is implemented with a 12 column layout. There are predefined classes for grid rows and grid columns.<br>Every grid row should be placed within a <code>.sc-content-container</code>.  
+Every grid row is represented as <code>.sc-grid-row</code>.  
+Every grid cell is a <code>.sc-grid-col-*</code> container.  </p>
 <style>
 #grid .sample .sc-grid-row > div{
     border: 1px solid #dcdcdc;
@@ -8569,7 +8575,8 @@ showcar.spyNavigation({
                 <div class="element" id="responsive-grid">
                     <div class="markdown"><h2>Responsive grid<span class="status approved">Approved</span></h2>
 
-<p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.<br>Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
+<p>In case you need some responsive grid functionality, you need to use the responsive grid classes additionally. The best practice is to use the general <code>.sc-grid-col-*</code> class first and override it, depending on your needs with the necessary viewport specific grid class <code>.sc-grid-col-*-*</code>.  
+Always keep in mind, that smaller viewport grid classes override bigger ones.</p>
 <table class="docs-table">
     <thead>
     <tr>
@@ -8580,32 +8587,32 @@ showcar.spyNavigation({
     </thead>
     <tbody>
     <tr>
-        <td><code>.sc-grid-col-*</code><br>(default)</td>
+        <td>`.sc-grid-col-*`<br>(default)</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td><code>.sc-grid-col-xl-*</code></td>
+        <td>`.sc-grid-col-xl-*`</td>
         <td>1100px</td>
         <td>∞</td>
     </tr>
     <tr>
-        <td><code>.sc-grid-col-l-*</code></td>
+        <td>`.sc-grid-col-l-*`</td>
         <td></td>
         <td>1099px</td>
     </tr>
     <tr>
-        <td><code>.sc-grid-col-m-*</code></td>
+        <td>`.sc-grid-col-m-*`</td>
         <td></td>
         <td>1023px</td>
     </tr>
     <tr>
-        <td><code>.sc-grid-col-s-*</code></td>
+        <td>`.sc-grid-col-s-*`</td>
         <td></td>
         <td>767px</td>
     </tr>
     <tr>
-        <td><code>.sc-grid-col-xs-*</code></td>
+        <td>`.sc-grid-col-xs-*`</td>
         <td></td>
         <td>320px</td>
     </tr>
@@ -8709,11 +8716,9 @@ showcar.spyNavigation({
 
 <p>Use <code>srcset</code> attribute in the <code>&lt;img&gt;</code> tag when you need to select a different source of the same image because you need a different resolution.</p>
 <p>The height and width of the image should remain fixed.</p>
-<pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt; 
-</code></pre>
+<pre><code class="language-html">&lt;img src=&quot;images/space-needle.jpg&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt; </code></pre>
 <p>Сustom height and width of the image based on the viewport.</p>
-<pre><code class="lang-html">&lt;img src=&quot;images/space-needle.jpg&quot; sizes=&quot;(max-width: 40em) 100vw, 50vw&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;
-</code></pre>
+<pre><code class="language-html">&lt;img src=&quot;images/space-needle.jpg&quot; sizes=&quot;(max-width: 40em) 100vw, 50vw&quot; srcset=&quot;images/space-needle.jpg 200w, images/space-needle-2x.jpg 400w, images/space-needle-hd.jpg 600w&quot;&gt;</code></pre>
 <p>Also see demo page <a href="https://scottjehl.github.io/picturefill/examples/demo-01.html">here</a></p>
 </div>
                    <div class="sample"><img src="https://placehold.it/468x150" sizes="(max-width: 40em) 100vw, 50vw" srcset="https://placehold.it/468x150/FFE494 468w, https://placehold.it/780x150/e494ff 780w, https://placehold.it/1024x150/94FFE4 1024w">
@@ -8737,7 +8742,8 @@ showcar.spyNavigation({
                 <div class="element" id="sticky">
                     <div class="markdown"><h2>Sticky elements<span class="status approved">Approved</span></h2>
 
-<p>Sticky element represents any HTML element that keeps in view even if you scroll.<br>Please note, that the sticky element position is in the middle of <strong>viewport</strong>.<br>It consists of three parts:  </p>
+<p>Sticky element represents any HTML element that keeps in view even if you scroll.<br>Please note, that the sticky element position is in the middle of <strong>viewport</strong>.  
+It consists of three parts:  </p>
 <ul>
 <li>The sticky element itself, identified by a <code>data-sticky</code> attribute with a unique identifier for the element as a value.  </li>
 <li>Marker where it undocks (starts scrolling), identified by a <code>data-sticky-undock</code> attribute with the identifier as a value.  </li>
@@ -8818,7 +8824,7 @@ height: 100px;
             
 
                 <div class="element" id="center-blocks">
-                    <div class="markdown"><p><h2>Block centering<span class="status approved">Approved</span></h2></p>
+                    <div class="markdown"><h2>Block centering<span class="status approved">Approved</span></h2>
 <style>
 #center-blocks .sample .sc-block-center{
 padding: 20px;
@@ -8914,7 +8920,7 @@ border: 1px solid #808080;
             
 
                 <div class="element" id="floats">
-                    <div class="markdown"><p><h2>Floats<span class="status approved">Approved</span></h2></p>
+                    <div class="markdown"><h2>Floats<span class="status approved">Approved</span></h2>
 <style>
 #floats .sample .sc-pull-left{
     width: 100px;
@@ -8969,8 +8975,8 @@ border: 1px solid #808080;
             
 
                 <div class="element" id="horizontal-line">
-                    <div class="markdown"><p><h2>Horizontal line<span class="status approved">Approved</span></h2>
-To separate some content you can use a horizontal line.</p>
+                    <div class="markdown"><h2>Horizontal line<span class="status approved">Approved</span></h2>
+To separate some content you can use a horizontal line.
 </div>
                    <div class="sample">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 <hr>
@@ -9208,12 +9214,13 @@ smoothScroll(target, duration, () => {
             
 <hr></div><div id="icons-target" class="positon-anchor"><h2 class="type_name">extra packages</h2>
                 <div class="element" id="icons">
-                    <div class="markdown"><p><h2>Icons</h2>
-You can use all the icons defined by showcar-icons with the custom tag <code>&lt;as24-icon type=&quot;[[icon-name]]&quot;&gt;&lt;/as24-icon&gt;</code>.</p>
+                    <div class="markdown"><h2>Icons</h2>
+You can use all the icons defined by showcar-icons with the custom tag `<as24-icon type="[[icon-name]]"></as24-icon>`.
+
 <p>For further information see the documentation under <a href="https://github.com/Scout24/showcar-icons" target="_blank">https://github.com/Scout24/showcar-icons</a></p>
 <p>We also have standart size classes for styling icons <a href="https://scout24.github.io/showcar-ui/#utilities-target" target="_blank">here</a></p>
 <p>The following icon names are currently available:</p>
-<p><ul id="as24-icons-list" class="icons-list"></ul></p>
+<ul id="as24-icons-list" class="icons-list"></ul>
 <style type="text/css">
 #icons as24-icon {
 display: inline-block;
@@ -9276,9 +9283,11 @@ iconsList.appendChild(item);
             
 <hr></div><div id="pictures-target" class="positon-anchor">
                 <div class="element" id="pictures">
-                    <div class="markdown"><p><h2>Pictures</h2>
-This module provides an easy to use vanilla js gallery library with previews and full screen view.</p>
-<p><img src="/showcar-ui/docs/assets/images/showcar-pictures.jpg"></p>
+                    <div class="markdown"><h2>Pictures</h2>
+This module provides an easy to use vanilla js gallery library with previews and full screen view.
+
+<img src="/showcar-ui/docs/assets/images/showcar-pictures.jpg">
+
 <p>Actually it is just a wrapper that handles the communication between two <a href="https://github.com/Scout24/showcar-carousel" target="_blank">https://github.com/Scout24/showcar-carousel</a> components.</p>
 <p> Examples: <a href="https://scout24.github.io/showcar-pictures/" target="_blank">https://scout24.github.io/showcar-pictures</a></p>
 <p>For further information see the documentation under <a href="https://github.com/Scout24/showcar-pictures" target="_blank">https://github.com/Scout24/showcar-pictures</a></p>
@@ -9288,8 +9297,9 @@ This module provides an easy to use vanilla js gallery library with previews and
             
 <hr></div><div id="tracking-target" class="positon-anchor">
                 <div class="element" id="tracking">
-                    <div class="markdown"><p><h2>Tracking</h2>
-Tracking library for ShowCar-based pages.</p>
+                    <div class="markdown"><h2>Tracking</h2>
+Tracking library for ShowCar-based pages.
+
 <p>For further information see the documentation under <a href="https://github.com/Scout24/showcar-tracking" target="_blank">https://github.com/Scout24/showcar-tracking</a></p>
 </div>
                      
@@ -9297,8 +9307,9 @@ Tracking library for ShowCar-based pages.</p>
             
 <hr></div><div id="ads-target" class="positon-anchor">
                 <div class="element" id="ads">
-                    <div class="markdown"><p><h2>Ads</h2>
-This library provides a unified solution for integrating advertisements (ads) on all AS24 Tatsu web pages.</p>
+                    <div class="markdown"><h2>Ads</h2>
+This library provides a unified solution for integrating advertisements (ads) on all AS24 Tatsu web pages.
+
 <p>For further information see the documentation under <a href="https://github.com/Scout24/showcar-ads" target="_blank">https://github.com/Scout24/showcar-ads</a></p>
 </div>
                      
@@ -9306,8 +9317,9 @@ This library provides a unified solution for integrating advertisements (ads) on
             
 <hr></div><div id="storage-target" class="positon-anchor">
                 <div class="element" id="storage">
-                    <div class="markdown"><p><h2>Storage</h2>
-This module provides an abstraction layer for storing information on the client-side.</p>
+                    <div class="markdown"><h2>Storage</h2>
+This module provides an abstraction layer for storing information on the client-side.
+
 <p>For further information see the documentation under <a href="https://github.com/Scout24/showcar-storage" target="_blank">https://github.com/Scout24/showcar-storage</a></p>
 </div>
                      
@@ -9318,7 +9330,8 @@ This module provides an abstraction layer for storing information on the client-
                     <div class="markdown"><h2>Videotron</h2>
 
 <p>&quot;showcar-videotron&quot; is a component for including youtube and glomex videos in a simple way to your site.</p>
-<p><img src="/showcar-ui/docs/assets/images/showcar-videotron.jpg" alt="showcar-videotron"></p>
+<img src="/showcar-ui/docs/assets/images/showcar-videotron.jpg" alt="showcar-videotron">
+
 <p>For how-to-use read the <a href="https://github.com/Scout24/showcar-videotron" target="_blank">documentation</a>.</p>
 </div>
                      
@@ -9329,10 +9342,12 @@ This module provides an abstraction layer for storing information on the client-
                     <div class="markdown"><h2>Social Button</h2>
 
 <p>&quot;showcar-social&quot; is a component for adding social media share buttons to your site</p>
-<p><h3>on Mobile:</h3>
-<img src="/showcar-ui/docs/assets/images/showcar-social-mobile.jpg" alt="showcar-social"></p>
-<p><h3>on Desktop:</h3>
-<img src="/showcar-ui/docs/assets/images/showcar-social-desktop.jpg" alt="showcar-social"></p>
+<h3>on Mobile:</h3>
+<img src="/showcar-ui/docs/assets/images/showcar-social-mobile.jpg" alt="showcar-social">
+
+<h3>on Desktop:</h3>
+<img src="/showcar-ui/docs/assets/images/showcar-social-desktop.jpg" alt="showcar-social">
+
 <p>For how-to-use read the <a href="https://github.com/Scout24/showcar-social" target="_blank">documentation</a>.</p>
 </div>
                      
@@ -9343,8 +9358,9 @@ This module provides an abstraction layer for storing information on the client-
                     <div class="markdown"><h2>Teaser</h2>
 
 <p>This &quot;Teaser&quot; component presents the author a way to display information and enhance those by adding a background image.</p>
-<p><img src="/showcar-ui/docs/assets/images/showcar-teaser_app.jpg" alt="showcar-teaser_app">
-<img src="/showcar-ui/docs/assets/images/showcar-teaser_bg.jpg" alt="showcar-teaser_bg"></p>
+<img src="/showcar-ui/docs/assets/images/showcar-teaser_app.jpg" alt="showcar-teaser_app">
+<img src="/showcar-ui/docs/assets/images/showcar-teaser_bg.jpg" alt="showcar-teaser_bg">
+
 <p>For how-to-use read the <a href="https://github.com/Scout24/showcar-benefits" target="_blank">documentation</a>.</p>
 </div>
                      
