@@ -13,29 +13,29 @@ gulp.task('eslint', scgulp.eslint({
     files: 'src/**/*.js'
 }));
 
-gulp.task('js', gulp.series('eslint'), scgulp.js({
+gulp.task('js', gulp.series('eslint', scgulp.js({
     entry: 'src/showcar-ui.js',
     out: 'dist/showcar-ui.js',
-}));
+})));
 
-gulp.task('icons', gulp.series('eslint'), scgulp.js({
+gulp.task('icons', gulp.series('eslint', scgulp.js({
     entry: 'src/js/showcar-icons.js',
     out: 'dist/showcar-icons.js',
-}));
+})));
 
-gulp.task('tracking', gulp.series('eslint'), scgulp.js({
+gulp.task('tracking', gulp.series('eslint', scgulp.js({
     entry: 'src/js/showcar-tracking.js',
     out: 'dist/showcar-tracking.js',
-}));
+})));
 
 gulp.task('stylelint', scgulp.stylelint({
     files: 'src/**/*.scss'
 }));
 
-gulp.task('scss', gulp.series('stylelint'), scgulp.scss({
+gulp.task('scss', gulp.series('stylelint', scgulp.scss({
     entry: 'src/showcar-ui.scss',
     out: 'dist/showcar-ui.css',
-}));
+})));
 
 gulp.task('clean', scgulp.clean({
     files: ['dist/**/*']
@@ -83,9 +83,10 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('docs:generate', () => {
+gulp.task('docs:generate', done => {
     require('./docs/tasks/generateJson')();
     require('./docs/tasks/generateHtml')();
+    done();
 });
 
 const serveDocs = require('./docs/tasks/docs');
@@ -107,19 +108,19 @@ const testingParams = {
     }
 };
 
-gulp.task('test', gulp.series('docs:serve'), scgulp.karma(
+gulp.task('test', gulp.series('docs:serve', scgulp.karma(
     Object.assign({}, testingParams, {
         browsers: ['Firefox', 'Chrome', 'Safari']
     }))
-);
+));
 
-gulp.task('test:fast', gulp.series('docs:serve'), scgulp.karma(
+gulp.task('test:fast', gulp.series('docs:serve', scgulp.karma(
     Object.assign({}, testingParams, {
         browsers: ['Chrome']
     }))
-);
+));
 
-gulp.task('test:bs', gulp.series('docs:serve'), scgulp.karma(
+gulp.task('test:bs', gulp.series('docs:serve', scgulp.karma(
     Object.assign({}, testingParams, {
         browserStack: {
             build: new Date().toLocaleString('de-DE', {
@@ -133,9 +134,9 @@ gulp.task('test:bs', gulp.series('docs:serve'), scgulp.karma(
         },
         browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
     }))
-);
+));
 
-gulp.task('test:travis', gulp.series('docs:serve'), scgulp.karma(
+gulp.task('test:travis', gulp.series('docs:serve', scgulp.karma(
     Object.assign({}, testingParams, {
         browserStack: {
             project: 'Showcar-ui',
@@ -146,4 +147,4 @@ gulp.task('test:travis', gulp.series('docs:serve'), scgulp.karma(
         browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],  //temporary remove safari
         // browsers: ['bs_chrome_win'], //only test on chrome
     }))
-);
+));
