@@ -83,7 +83,7 @@ gulp.task('set-dev', () => {
     scgulp.config.devmode = true;
 });
 
-gulp.task('docs:generate', done => {
+gulp.task('docs:generate', (done) => {
     require('./docs/tasks/generateJson')();
     require('./docs/tasks/generateHtml')();
     done();
@@ -92,7 +92,10 @@ gulp.task('docs:generate', done => {
 const serveDocs = require('./docs/tasks/docs');
 
 gulp.task('build', gulp.series('js', 'icons', 'tracking', 'scss', 'copy:fragments', 'replace'));
-gulp.task('docs:serve', () => {serveDocs(gulp);});
+gulp.task('docs:serve', done => {
+    serveDocs(gulp);
+    done();
+});
 gulp.task('docs:edit', gulp.series('build'), () => {serveDocs(gulp);});
 gulp.task('docs:watch', gulp.series('build'), () => {serveDocs(gulp);});
 
