@@ -115,12 +115,12 @@
     }
 
     var styleElement = document.createElement('style');
-    styleElement.innerHTML = '.font-loaded body{font-family:Source Sans Pro,sans-serif;}';
+    styleElement.innerHTML = '.font-loaded body{font-family:Work Sans,sans-serif;}';
 
     var firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(styleElement, firstScript);
 
-    loadFont('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext', 'Source Sans Pro', [400, 600], 'font-loaded');
+    loadFont('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext', 'Work Sans', [400, 600], 'font-loaded');
 
     if (location.href.indexOf('web-font=opensans') >= 0) {
         loadFont('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext', 'Open Sans', [400, 600], 'font-loaded');

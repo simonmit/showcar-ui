@@ -8,18 +8,18 @@ $sc-btn-ross-text-color: $white;
 $sc-btn-ghost-text-color: $orange-100;
 $sc-btn-marketing-text-color: $blue-80;
 
-$sc-btn-bob-background-color: $orange-100;
-$sc-btn-ross-background-color: $blue-80;
+$sc-btn-bob-background-color: #4093f6;
+$sc-btn-ross-background-color: #4093f6;
 $sc-btn-ghost-background-color: $white;
 $sc-btn-marketing-background-color: $white;
 
-$sc-btn-bob-hover-background-color: $orange-110;
-$sc-btn-ross-hover-background-color: $blue-90;
+$sc-btn-bob-hover-background-color: #0adeff;
+$sc-btn-ross-hover-background-color: #0adeff;
 $sc-btn-ghost-hover-text-color: $orange-110;
 $sc-btn-marketing-hover-text-color: $blue-90;
 
-$sc-btn-bob-active-background-color: $orange-120;
-$sc-btn-ross-active-background-color: $blue-100;
+$sc-btn-bob-active-background-color: #0adeff;
+$sc-btn-ross-active-background-color: #0adeff;
 $sc-btn-ghost-active-text-color: $orange-120;
 $sc-btn-marketing-active-text-color: $blue-100;
 
@@ -44,11 +44,11 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
   transition-property: color, background-color, border-color;
   text-decoration: none;
   text-align: center;
-  
+
   &:hover {
     color: $white;
   }
-  
+
   [class^='icon-'] {
     width: $L;
     height: $L;
