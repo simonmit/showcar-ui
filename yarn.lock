@@ -9511,9 +9511,10 @@ showcar-gulp@^3.1.2:
     webpack "^2.7.0"
     webpack-stream "^5.2.1"
 
-"showcar-icons@ ^0.6.x":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/showcar-icons/-/showcar-icons-0.6.3.tgz#9f383f1a722e2f325e129c41ab3a9eb4bcf11bae"
+"showcar-icons@ 0.7.0-beta.2":
+  version "0.7.0-beta.2"
+  resolved "https://registry.yarnpkg.com/showcar-icons/-/showcar-icons-0.7.0-beta.2.tgz#33611f4b87fb00dd9f0ae3da0f86b53f74a238c0"
+  integrity sha512-JzbIicaTOxUbJOAWMJkrJtCFqm1C/kPJpzZMVIr3pyTzP/Le0YYDiAQhDccibqlXfrME+88nN225qZw0xJx5lg==
 
 showcar-pictures@^3.0.3:
   version "3.1.0"
