@@ -4,17 +4,18 @@
 // variables
 // ----------------------------
 $sc-btn-bob-text-color: $white;
-$sc-btn-ross-text-color: $white;
+$sc-btn-ross-text-color: #276DDD;
 $sc-btn-ghost-text-color: $orange-100;
 $sc-btn-marketing-text-color: $blue-80;
 
 $sc-btn-bob-background-color: #276DDD;
-$sc-btn-ross-background-color: #276DDD;
+$sc-btn-ross-background-color: $white;
 $sc-btn-ghost-background-color: $white;
 $sc-btn-marketing-background-color: $white;
 
 $sc-btn-bob-hover-background-color: #1e4c7a;
 $sc-btn-ross-hover-background-color: #1e4c7a;
+$sc-btn-ross-hover-text-color: #1e4c7a;
 $sc-btn-ghost-hover-text-color: $orange-110;
 $sc-btn-marketing-hover-text-color: $blue-90;
 
@@ -24,7 +25,7 @@ $sc-btn-ghost-active-text-color: $orange-120;
 $sc-btn-marketing-active-text-color: $blue-100;
 
 $sc-btn-bob-disabled-background-color: $orange-50;
-$sc-btn-ross-disabled-background-color: $blue-40;
+$sc-btn-ross-disabled-background-color: $white;
 $sc-btn-ghost-disabled-text-color: $orange-50;
 $sc-btn-marketing-disabled-text-color: $blue-40;
 
@@ -80,15 +81,17 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 .sc-btn-ross {
   @include button;
 
+  color: $sc-btn-ross-text-color;
+  border: solid $sc-btn-ross-text-color 1px;
   background-color: $sc-btn-ross-background-color;
 
   &:hover {
-    background-color: $sc-btn-ross-hover-background-color;
+    color: $sc-btn-ross-hover-text-color;
+    border: solid $sc-btn-ross-hover-text-color 1px;
   }
 
   &:active {
-    background-color: $sc-btn-ross-active-background-color;
-    color: $sc-btn-ross-text-color;
+    color: $sc-btn-ross-active-background-color;
   }
 
   &[disabled] {
@@ -119,6 +122,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
   &[disabled] {
     border: solid $sc-btn-ghost-disabled-text-color 1px;
     color: $sc-btn-ghost-disabled-text-color;
+    background-color: $sc-btn-ghost-background-color;
   }
 }
 
@@ -127,7 +131,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   background-color: $sc-btn-ghost-background-color;
   border: solid $sc-btn-ross-background-color 1px;
-  color: $sc-btn-ross-background-color;
+  color: $sc-btn-ross-text-color;
 
   padding-top: 9px;
   padding-bottom: 9px;
@@ -144,7 +148,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   &[disabled] {
     border: solid $sc-btn-ross-disabled-background-color 1px;
-    color: $sc-btn-ross-disabled-background-color;
+    // color: $sc-btn-ross-disabled-background-color;
   }
 }
 
