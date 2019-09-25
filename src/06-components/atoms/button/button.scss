@@ -4,28 +4,27 @@
 // variables
 // ----------------------------
 $sc-btn-bob-text-color: $white;
-$sc-btn-ross-text-color: #276DDD;
+$sc-btn-ross-text-color: $white;
 $sc-btn-ghost-text-color: $orange-100;
 $sc-btn-marketing-text-color: $blue-80;
 
-$sc-btn-bob-background-color: #276DDD;
-$sc-btn-ross-background-color: $white;
+$sc-btn-bob-background-color: $orange-100;
+$sc-btn-ross-background-color: $blue-80;
 $sc-btn-ghost-background-color: $white;
 $sc-btn-marketing-background-color: $white;
 
-$sc-btn-bob-hover-background-color: #1e4c7a;
-$sc-btn-ross-hover-background-color: #1e4c7a;
-$sc-btn-ross-hover-text-color: #1e4c7a;
+$sc-btn-bob-hover-background-color: $orange-110;
+$sc-btn-ross-hover-background-color: $blue-90;
 $sc-btn-ghost-hover-text-color: $orange-110;
 $sc-btn-marketing-hover-text-color: $blue-90;
 
-$sc-btn-bob-active-background-color: #003468;
-$sc-btn-ross-active-background-color: #003468;
+$sc-btn-bob-active-background-color: $orange-120;
+$sc-btn-ross-active-background-color: $blue-100;
 $sc-btn-ghost-active-text-color: $orange-120;
 $sc-btn-marketing-active-text-color: $blue-100;
 
 $sc-btn-bob-disabled-background-color: $orange-50;
-$sc-btn-ross-disabled-background-color: $white;
+$sc-btn-ross-disabled-background-color: $blue-40;
 $sc-btn-ghost-disabled-text-color: $orange-50;
 $sc-btn-marketing-disabled-text-color: $blue-40;
 
@@ -39,17 +38,17 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   appearance: none;
   border: none;
-  border-radius: 20px;
+  border-radius: $form-border-radius;
   color: $white;
   transition: all $transition-time ease-in;
   transition-property: color, background-color, border-color;
   text-decoration: none;
   text-align: center;
-
+  
   &:hover {
     color: $white;
   }
-
+  
   [class^='icon-'] {
     width: $L;
     height: $L;
@@ -81,17 +80,15 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 .sc-btn-ross {
   @include button;
 
-  color: $sc-btn-ross-text-color;
-  border: solid $sc-btn-ross-text-color 1px;
   background-color: $sc-btn-ross-background-color;
 
   &:hover {
-    color: $sc-btn-ross-hover-text-color;
-    border: solid $sc-btn-ross-hover-text-color 1px;
+    background-color: $sc-btn-ross-hover-background-color;
   }
 
   &:active {
-    color: $sc-btn-ross-active-background-color;
+    background-color: $sc-btn-ross-active-background-color;
+    color: $sc-btn-ross-text-color;
   }
 
   &[disabled] {
@@ -122,7 +119,6 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
   &[disabled] {
     border: solid $sc-btn-ghost-disabled-text-color 1px;
     color: $sc-btn-ghost-disabled-text-color;
-    background-color: $sc-btn-ghost-background-color;
   }
 }
 
@@ -131,7 +127,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   background-color: $sc-btn-ghost-background-color;
   border: solid $sc-btn-ross-background-color 1px;
-  color: $sc-btn-ross-text-color;
+  color: $sc-btn-ross-background-color;
 
   padding-top: 9px;
   padding-bottom: 9px;
@@ -148,7 +144,7 @@ $sc-btn-marketing-disabled-text-color: $blue-40;
 
   &[disabled] {
     border: solid $sc-btn-ross-disabled-background-color 1px;
-    // color: $sc-btn-ross-disabled-background-color;
+    color: $sc-btn-ross-disabled-background-color;
   }
 }
 

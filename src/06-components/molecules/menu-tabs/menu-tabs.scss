@@ -13,15 +13,15 @@
 }
 
 .sc-menu-tab--active {
-  border-left: solid $XS #4093f6;
+  border-left: solid $XS $orange-100;
   padding-left: $M;
 
   a {
-    color: #4093f6;
+    color: $orange-100;
   }
 }
 
-.sc-menu-tab--active::after {
+.sc-menu-tab--active::after{
   content: '';
   position: absolute;
   right: -$L;
@@ -52,15 +52,15 @@
 }
 
 .sc-menu-tab__icon--success {
-  background-color: #009f00;
+  background-color: #009F00;
 }
 
 .sc-menu-tab__icon--info {
-  background-color: #ffbe00;
+  background-color: #FFBE00;
 }
 
 .sc-menu-tab__icon--error {
-  background-color: #e70315;
+  background-color: #E70315;
 }
 
 .sc-menu-tab__icon__hook {
