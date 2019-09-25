@@ -2,13 +2,13 @@
     padding:0 0 2000px 0;
 }
 @font-face {
-    font-family: 'Work Sans';
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 300;
-    src: local('Work Sans'), local('WorkSans'), url(../WorkSans.woff2) format('woff2');
+    src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(../SourceSansPro.woff2) format('woff2');
 }
 * {
-    font-family: "Work Sans" !important
+    font-family: "Source Sans Pro" !important
 }
 body {
     background: #fff;
