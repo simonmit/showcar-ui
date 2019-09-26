@@ -31,7 +31,7 @@ pipeline {
       }
 
       environment {
-        BRANCH=${env.BRANCH_NAME}
+        BRANCH="${env.BRANCH_NAME}"
       }
 
       agent { node { label 'build-node' } }
@@ -54,7 +54,7 @@ pipeline {
       }
 
       environment {
-        BRANCH=${env.BRANCH_NAME}
+        BRANCH="${env.BRANCH_NAME}"
       }
 
       agent { node { label 'deploy-as24dev' } }
