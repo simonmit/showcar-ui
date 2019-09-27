@@ -1,0 +1,9 @@
+<!--# if expr="$arg_toguru = /sc_develop%3[dD]true/" -->
+<!--# include virtual="/assets/external/showcar-ui/develop/latest/index-standalone.html" -->
+<!--# elif expr="$arg_toguru = /sc_develop%3[dD]false/" -->
+<!--# include virtual="/assets/external/showcar-ui/master/latest/index-standalone.html" -->
+<!--# elif expr="$arg_toguru = /sc_develop%3[dD](?<branch>[^\|\%]+)/" -->
+<!--# include virtual="/assets/external/showcar-ui/$branch/latest/index-standalone.html" -->
+<!--# else -->
+<!--# include virtual="/assets/external/showcar-ui/master/latest/index-standalone.html" -->
+<!--# endif -->
