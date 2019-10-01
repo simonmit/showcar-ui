@@ -48,16 +48,16 @@ Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 ## How to test:
 
 You can check development state of the library on home, list and detail page with a parameter `?toguru=sc_develop%3dtrue`.
+To test particular branch please use query parameter `?sc_branch=your-branch-name`.
 
-## How to test fragments with togglea
-
-You can check any branch of the library on your page with parameter `?toguru=sc_develop%3dtest-branch` where `test-branch` is the name of the desired branch.
-
+## How to test fragments with toggles
 Locally run 
 
    docker-compose up
 
-and check `localhost:8080/test/showcar-ui-toggled-fragment.html?toguru=sc_develop%3dtest-branch` where `test-branch` is the name of the branch to test
+and check `localhost:8080/test/showcar-ui-toggled-test--fragment.html?sc_branch=test-branch` where `test-branch` is the name of the branch to test
+
+Also before merging this changes back to life check https://www.autoscout24.de/static/showcar-ui/?sc_branch=test-deploy-branch to make sure that it works with latest jigsaw setup
 
 ## Additional information
 

@@ -62,7 +62,7 @@
     "showcar-pictures": "^3.0.3",
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/Scout24/showcar-tracking.git#v0.1.11",
-    "susy": "^2.2.12",
+    "susy": "^2.2.14",
     "uglify-js": "^3.4.9",
     "url-search-params-polyfill": "^6.0.0",
     "whatwg-fetch": "^1.1.1",
