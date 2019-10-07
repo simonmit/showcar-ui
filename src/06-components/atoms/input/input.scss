@@ -100,6 +100,7 @@ textarea {
   &.sc-input {
     @include input();
     @extend %customInputStyles;
+    background-color: $white;
     cursor: auto;
   }
 }

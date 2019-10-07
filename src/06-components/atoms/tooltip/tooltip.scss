@@ -5,7 +5,7 @@
   transition: opacity .3s linear;
   display: none;
   max-width: 220px;
-  background-color: rgba(0, 0, 0, .75); // we want only transparent background, but not text
+  background-color: rgba(yellow, 0.75); // we want only transparent background, but not text
   border-color: $black-120;
   color: white;
   padding: $M;

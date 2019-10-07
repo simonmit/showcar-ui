@@ -2,14 +2,14 @@
 $size: 50px;
 $spin-duration: 1s;
 
-$orange: #FF7500;
-$off-orange: #FFE3CC;
+$orange: $orange-60;
+$off-orange: $orange-20;
 
-$white: #FFFFFF;
+$white: $white;
 $off-white: rgba($white, 0.7);
 
-$grey: #949494;
-$off-grey: #D2D2D2;
+$grey: $black-50;
+$off-grey: $black-20;
 
 @keyframes spin {
   0% {

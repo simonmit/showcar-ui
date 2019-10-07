@@ -1,7 +1,7 @@
 #withoutmenu #content{
     padding:0 0 2000px 0;
 }
-@font-face {
+/* @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 300;
@@ -9,7 +9,7 @@
 }
 * {
     font-family: "Source Sans Pro" !important
-}
+} */
 body {
     background: #fff;
 }
