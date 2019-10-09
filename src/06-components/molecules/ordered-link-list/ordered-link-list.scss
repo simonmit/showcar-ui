@@ -10,6 +10,7 @@
 }
 
 .sc-ordered-link-list {
+  background-color: $white;
   counter-reset: list-index;
   width: 100%;
   column-count: 2;
