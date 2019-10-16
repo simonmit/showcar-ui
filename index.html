@@ -2840,6 +2840,12 @@ to the as24-lightbox element like so <code>&lt;as24-lightbox class=&quot;sc-ligh
 <p>You can register (multiple) callbacks for when the lightbox opens/closes by calling the <code>registerOnOpenCallback, registerOnCloseCallback</code> methods on the <code>&lt;as24-lightbox&gt;</code> DOM element, i.e. <br/><br/></p>
 <pre><code class="language-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
 myLightbox.registerOnOpenCallback(() =&gt; console.log(&quot;open!&quot;));</code></pre>
+<p>To trigger the lightbox programmatically you can use its <code>show</code> function like this:<br/><br/></p>
+<pre><code class="language-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
+myLightbox.show();</code></pre>
+<p>To trigger the lightbox programmatically you can use its <code>hide</code> function like this:<br/><br/></p>
+<pre><code class="language-js">const myLightbox = document.getElementsByTagName(&quot;as24-lightbox&quot;)[0];
+myLightbox.hide();</code></pre>
 </div>
                    <div class="sample"><button class="sc-btn-bob" data-lightbox-open="lb1">Try me</button>
 <as24-lightbox class="sc-lightbox" id="lb1" data-custom="custom-lightbox">
