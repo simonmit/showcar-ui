@@ -23,21 +23,26 @@ export default function (tagName) {
         scrollbarWidth = measureScrollbarWidth();
 
         openElements.forEach(el => {
-            el.addEventListener('click', () => show(lb, el), false);
+            el.addEventListener('click', () => showByTrigger(lb, el), false);
         });
 
         lb.close.forEach(el => {
-            el.addEventListener('click', e => hide(lb, e, lb.preventOutsideClose !== null), false);
+            el.addEventListener('click', e => hideByTrigger(lb, e, lb.preventOutsideClose !== null), false);
         });
+        this.lb = lb;
     }
 
-    const show = (lb, opener) => {
+    const showByTrigger= (lb, opener) => {
         if (
             opener.hasAttribute('data-lightbox-prevent-open') &&
             opener.getAttribute('data-lightbox-prevent-open') == 'true'
         ) {
             return;
         }
+        show(lb);
+    };
+
+    const show = (lb) => {
         lb.overlay = document.createElement('div');
         lb.overlay.classList.add('sc-lightbox__overlay');
 
@@ -56,9 +61,9 @@ export default function (tagName) {
         lb.container.classList.add('sc-lightbox__container--visible');
 
         if (lb.preventOutsideClose === null) {
-            lb.overlay.addEventListener('click', e => hide(lb, e), false);
+            lb.overlay.addEventListener('click', e => hideByTrigger(lb, e), false);
             document.addEventListener('keydown', e => {
-                if (e.keyCode === 27) hide(lb, e);
+                if (e.keyCode === 27) hideByTrigger(lb, e);
             });
         }
 
@@ -76,27 +81,32 @@ export default function (tagName) {
     /**
      * @param {boolean} executeOnCloseCallback executeOnCloseCallback Hide method gets called twice when clicking on close button, but we want to run close callback only-once
      */
-    const hide = (lb, e, executeOnCloseCallback = true) => {
+    const hideByTrigger = (lb, e, executeOnCloseCallback = true) => {
         if (e.target === lb.overlay || lb.close.includes(e.target) || e.keyCode === 27) {
             e.preventDefault();
 
-            // Unapply scrollbar fixes
-            const html = document.querySelector('html');
-            html.classList.remove('sc-unscroll');
-            html.style.marginRight = 0; // reset margin
-
-            lb.container.classList.remove('sc-lightbox__container--visible');
-            lb.parent.appendChild(lb.container);
-            if (lb.overlay) {
-                lb.overlay.classList.remove('sc-lightbox--fadein');
-                setTimeout(() => {
-                    lb.overlay.remove();
-                }, 250);
-            }
-
-            executeOnCloseCallback && lb.self.onCloseCallbacks.forEach(cb => cb());
+            hide(lb, executeOnCloseCallback);
         }
     };
+
+    const hide = (lb, executeOnCloseCallback) => {
+        // Unapply scrollbar fixes
+        const html = document.querySelector('html');
+        html.classList.remove('sc-unscroll');
+        html.style.marginRight = 0; // reset margin
+
+        lb.container.classList.remove('sc-lightbox__container--visible');
+        lb.parent.appendChild(lb.container);
+        if (lb.overlay) {
+            lb.overlay.classList.remove('sc-lightbox--fadein');
+            setTimeout(() => {
+                lb.overlay.remove();
+            }, 250);
+        }
+
+        executeOnCloseCallback && lb.self.onCloseCallbacks.forEach(cb => cb());
+    };
+    
 
     /**
      * Register callback to the current custom-element instance the call is made on
@@ -112,6 +122,14 @@ export default function (tagName) {
         this.onCloseCallbacks.push(cb);
     }
 
+    function showDirectly() {
+        show(this.lb);
+    }
+
+    function hideDirectly() {
+        hide(this.lb, true);
+    }
+
     const measureScrollbarWidth = () => window && document && (window.innerWidth - document.documentElement.clientWidth) || 0;
 
     registerElement(
@@ -125,7 +143,13 @@ export default function (tagName) {
             },
             registerOnCloseCallback: {
                 value: registerOnCloseCallback
-            }
+            },
+            show: {
+                value: showDirectly
+            },
+            hide: {
+                value: hideDirectly
+            }            
         }
     );
 }
