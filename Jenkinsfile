@@ -111,8 +111,5 @@ pipeline {
     aborted {
       slackSend channel: 'as24_acq_cxp_fizz', color: '#FFFF00', message: ":-1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] aborted. (<${env.BUILD_URL}|Open>)"
     }
-    success {
-      slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: ":+1: ${env.JOB_NAME} [${env.BUILD_NUMBER}] ShowCar UI was released. For the details go to: <https://github.com/Scout24/showcar-ui|showcar-ui>. (<${env.BUILD_URL}|Open>)"
-    }
   }
 }
