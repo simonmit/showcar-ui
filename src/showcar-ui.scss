@@ -60,3 +60,23 @@
 @import '06-components/organisms/superhero/superhero';
 
 @import '07-utilities/utils';
+
+@font-face {
+  font-family: scout24;
+  src: url(./scout24-regular-2019-10-17.woff2);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: scout24;
+  src: url(./scout24-bold-2019-10-17.woff2);
+  font-weight: 600;
+  font-display: swap;
+}
+
+body {
+  font-family: scout24, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
