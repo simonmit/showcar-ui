@@ -30,7 +30,7 @@ $breakpoint-XL: 1099;
     overflow: hidden;
     border: 1px solid $black-30;
     border-radius: $XS;
-    transition: border .3s ease, color 0.2s ease-in;
+    transition: border 0.3s ease, color 0.2s ease-in;
     margin-top: $L;
     margin-left: $L;
 
@@ -45,7 +45,7 @@ $breakpoint-XL: 1099;
     text-overflow: ellipsis;
     padding: $L $XL;
     text-align: center;
-    background: white;
+    background: $white;
     font-size: 13px;
 
     @include mqmin($breakpoint-S) {
@@ -88,7 +88,8 @@ $breakpoint-XL: 1099;
       padding: $XXXL $L 60px;
     }
 
-    @include mqmax($breakpoint-S - 1) { // hack. @include mq problem, it floats top when rendering
+    @include mqmax($breakpoint-S - 1) {
+      // hack. @include mq problem, it floats top when rendering
       display: block;
     }
   }
@@ -97,7 +98,7 @@ $breakpoint-XL: 1099;
     display: none;
 
     & ~ .sc-cards__list {
-      .sc-card:nth-child(1n+5) {
+      .sc-card:nth-child(1n + 5) {
         display: none;
         @include mqmin($breakpoint-S) {
           display: block;
