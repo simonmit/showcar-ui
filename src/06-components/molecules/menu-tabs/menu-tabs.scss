@@ -10,18 +10,20 @@
   background-color: $white;
   border-bottom: solid 1px $black-30;
   min-height: 60px;
+  color: $black-120;
 }
 
 .sc-menu-tab--active {
   border-left: solid $XS $orange-100;
   padding-left: $M;
+  color: $orange-100;
 
   a {
     color: $orange-100;
   }
 }
 
-.sc-menu-tab--active::after{
+.sc-menu-tab--active::after {
   content: '';
   position: absolute;
   right: -$L;
@@ -52,15 +54,15 @@
 }
 
 .sc-menu-tab__icon--success {
-  background-color: #009F00;
+  background-color: #009f00;
 }
 
 .sc-menu-tab__icon--info {
-  background-color: #FFBE00;
+  background-color: #ffbe00;
 }
 
 .sc-menu-tab__icon--error {
-  background-color: #E70315;
+  background-color: #e70315;
 }
 
 .sc-menu-tab__icon__hook {
