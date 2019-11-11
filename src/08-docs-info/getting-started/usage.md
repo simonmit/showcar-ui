@@ -10,10 +10,9 @@ If you are using UI-Composition you can use the showcar-ui fragment by adding th
 
 ```html
 <body>
-    <!--#include virtual="/fragment/assets/external/showcar-ui/showcar-ui-standalone-fragment.html" -->
+  <!--#include virtual="/fragment/assets/external/showcar-ui/showcar-ui-standalone-fragment.html" -->
 </body>
 ```
-
 
 <br>
 
@@ -35,10 +34,10 @@ Include the files on your page:
 ```html
 <html>
   <head>
-      <link rel="stylesheet" href="node_modules/showcar-ui/dist/showcar-ui.css">
+    <link rel="stylesheet" href="node_modules/showcar-ui/dist/showcar-ui.css" />
   </head>
   <body>
-      <script src="node_modules/showcar-ui/dist/showcar-ui.js"></script>
+    <script src="node_modules/showcar-ui/dist/showcar-ui.js"></script>
   </body>
 </html>
 ```
@@ -52,16 +51,18 @@ need assistance please contact the Web Experience Team.
 
 #### Build locally:
 
-For building locally you can use the showcar-gulp build pipeline template: <a href="https://github.com/AutoScout24/showcar-gulp">https://github.com/AutoScout24/showcar-gulp</a>
+For building locally you can use the showcar-gulp build pipeline template: <a href="https://github.com/Scout24/showcar-gulp">https://github.com/Scout24/showcar-gulp</a>
 
 1.
 Clone repository
+
 ```bash
-git clone git@github.com:AutoScout24/showcar-ui.git
+git clone git@github.com:Scout24/showcar-ui.git
 ```
 
 2.
 Setup
+
 ```bash
 brew install node # install node if you didn't do it before
 brew install yarn # we use yarn instead of npm to manage node package dependencies
@@ -71,6 +72,7 @@ yarn install
 
 3.
 Build and run
+
 ```bash
 gulp build
 ```
