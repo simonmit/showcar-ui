@@ -264,8 +264,11 @@ class Navigation {
 }
 
 export default function () {
-    let navigationElements = document.querySelectorAll('header[role=navigation]');
-    let navigationElementsArr = Array.prototype.slice.call(navigationElements);
-    
-    return navigationElementsArr.map(navigationElement => new Navigation(navigationElement));
+    let navigationElement = document.querySelector('header[role=navigation]'),
+        navigation = null;
+    if (navigationElement) {
+        navigation = new Navigation(navigationElement);
+    }
+
+    return navigation;
 }
