@@ -101,7 +101,8 @@
     }
   }
 
-  .left, .right {
+  .left,
+  .right {
     padding: 0 $L;
     border: none;
   }
@@ -118,7 +119,7 @@
         width: 100%;
         font-size: 0;
         display: block;
-        border-top: 1px solid #dcdcdc;
+        border-top: 1px solid $black-30;
         content: ' ';
       }
     }
@@ -131,7 +132,7 @@
       width: 100%;
       font-size: 0;
       display: block;
-      border-top: 1px solid #dcdcdc;
+      border-top: 1px solid $black-30;
       content: ' ';
     }
   }
@@ -149,11 +150,12 @@
       padding-left: 0;
     }
   }
-  
+
   li {
     overflow: hidden;
 
-    &:hover, &.open {
+    &:hover,
+    &.open {
       .title {
         color: $orange-100;
         &::after {
@@ -168,15 +170,15 @@
       }
     }
   }
-  
+
   /* Special empty li separator */
   li.separator {
     box-sizing: border-box;
     height: 1px;
     margin: $M 0;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid $black-30;
   }
-  
+
   // Menubar Item title
   .title {
     cursor: pointer;
@@ -210,13 +212,13 @@
     transition: max-height 0.5s ease-out;
     max-height: 0;
     overflow: hidden;
-    
+
     a {
       display: block;
       padding: $S 10px;
       text-decoration: none;
-  
-      @include link(M, $variant: black);
+
+      @include link(M, $variant: $black-120);
     }
   }
 
@@ -254,7 +256,7 @@
       display: block;
       padding: $L 0 $XS;
       font-size: 13px;
-      
+
       a {
         @extend .sc-link;
         display: inline;
@@ -283,19 +285,19 @@
       position: absolute;
       transition: none;
       max-height: 0;
-      background-color: #fff;
+      background-color: $white;
       top: 70px;
-      border: 1px solid #dcdcdc;
+      border: 1px solid $black-30;
       left: -1px;
       white-space: nowrap;
       padding: $M $XXL;
       overflow: hidden;
-      
+
       a {
         padding-left: 0;
         padding-right: 0;
       }
-      
+
       &.extended {
         display: flex;
 
@@ -327,7 +329,7 @@
 
       &.open {
         overflow: visible;
-        border: 1px solid #dcdcdc;
+        border: 1px solid $black-30;
         border-width: 0 1px;
 
         &::after {
@@ -352,16 +354,16 @@
       display: inline;
       position: absolute;
       padding-left: 11px;
-      color: #949494;
+      color: $black-60;
       font-size: 12px;
       overflow: hidden;
       top: 47px;
-      height: 16px;
+      // height: 16px; // will be ignored because of display inline
     }
-    
+
     .title {
       padding-right: 18px;
-      
+
       &::after {
         margin-right: 0;
       }
@@ -375,8 +377,8 @@
       .title {
         display: block;
       }
-    } 
-    
+    }
+
     /* Remove line between top level li */
     .left {
       &::after {
@@ -388,10 +390,11 @@
       }
     }
 
-    .left, .right {
+    .left,
+    .right {
       padding: 0;
       display: flex;
-      
+
       > li {
         padding: $L;
       }
@@ -405,15 +408,15 @@
       flex-basis: 100%;
       z-index: 130;
     }
-    
+
     /* Optional functionality */
     .button-with-subtitle {
       padding-left: 0;
-  
+
       > a {
         min-width: 200px;
       }
-  
+
       span {
         padding-top: $S;
       }
