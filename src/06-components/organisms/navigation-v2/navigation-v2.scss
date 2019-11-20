@@ -3,7 +3,7 @@
 @import '../../../02-sass-tools/link';
 @import '../../../02-sass-tools/sass-mq.scss';
 
-@mixin sc-navigation-v2-mixin($breakpoint) {
+.sc-navigation-v2 {
   background-color: $white;
   -webkit-tap-highlight-color: transparent;
   border-bottom: solid 1px $black-30;
@@ -81,7 +81,7 @@
 
   // Expandable Menu Items
   .submenu {
-    padding-left: $XL;
+    padding: 0 0 7px $XL;
     max-height: 0;
     transition: max-height 0.3s ease-out;
 
@@ -113,7 +113,7 @@
     > li {
       /* draw line between top level li */
       &::before {
-        margin: $S 0;
+        margin: 0 0 $S;
         height: 1px;
         line-height: 1px;
         width: 100%;
@@ -122,11 +122,15 @@
         border-top: 1px solid $black-30;
         content: ' ';
       }
+
+      > a {
+        padding-bottom: $L;
+      }
     }
 
     /* draw line between top level li */
     &::after {
-      margin: $S 0;
+      margin: 0 0 $S;
       height: 1px;
       line-height: 1px;
       width: 100%;
@@ -223,7 +227,7 @@
   }
 
   .bar {
-    padding: $S 0;
+    padding: $S 0 $M;
     text-align: center;
     height: 35px;
     box-sizing: content-box;
@@ -266,7 +270,7 @@
     }
   }
 
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (min-width: 923px) {
     display: flex;
 
     .sc-btn-mobile-menu {
@@ -351,14 +355,14 @@
     }
 
     .subtitle {
-      display: inline;
+      display: inline-block;
       position: absolute;
       padding-left: 11px;
       color: $black-60;
       font-size: 12px;
       overflow: hidden;
       top: 47px;
-      // height: 16px; // will be ignored because of display inline
+      height: 16px;
     }
 
     .title {
@@ -385,9 +389,16 @@
         display: none;
       }
 
-      > li::before {
-        display: none;
+      > li {
+        &::before {
+          display: none;
+        }
+
+        > a {
+          padding-bottom: $S;
+        }
       }
+      
     }
 
     .left,
@@ -450,8 +461,4 @@
       }
     }
   }
-}
-
-.sc-navigation-v2 {
-  @include sc-navigation-v2-mixin(923px);
 }
