@@ -13,13 +13,6 @@
     "dist",
     "src"
   ],
-  "git-pre-hooks": {
-    "pre-push": [
-      "npm version patch",
-      "git push --no-verify",
-      "npm publish"
-    ]
-  },
   "scripts": {
     "build": "./node_modules/.bin/gulp build",
     "docs": "./node_modules/.bin/gulp docs:generate",
