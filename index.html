@@ -302,6 +302,10 @@
             <a href="/docs/organisms/navigation" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#navigation-v2-target">navigation-v2</a>
+            <a href="/docs/organisms/navigation-v2" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#pagination-target">pagination</a>
             <a href="/docs/organisms/pagination" class="open-separate"></a>
         </li>
@@ -6354,6 +6358,709 @@ background-color: #f4f4f4;
     &lt;/nav&gt;
 &lt;/header&gt;
 </code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="navigation-v2-target" class="positon-anchor">
+                <div class="element" id="navigation-v2-default">
+                    <div class="markdown"><h2>Navigation v2<span class="status js">JS</span></h2>
+
+<p>This is the <em>current</em> navigation component. It should be preferred over (old)Navigation component as it uses flex-box for layout and is based on mobile-first approach.</p>
+<style>
+#navigation-v2-default .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><header class="sc-navigation-v2" role="navigation">
+    <div class="bar">
+        <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+        <a href="https://www.autoscout24.de" class="icon-auto24">
+            <as24-icon type="auto24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 35">
+                    <path fill="#003468" d="M0 0v17h74V0H0z"></path>
+                    <path d="M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z" fill="#ff7500"></path>
+                    <g fill="#003468">
+                        <path
+                            d="M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z">
+                        </path>
+                    </g>
+                    <path
+                        d="M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z"
+                        fill="#fff"></path>
+                </svg></as24-icon>
+        </a>
+    </div>
+    <nav>
+        <ul class="left">
+            <li class="link-only">
+                <a href="http://google.de/" target="_blank">Link Without Subnav</a>
+            </li>
+
+            <li>
+                <span class="title" tabindex="2">Menu 1</span>
+                <span class="subtitle">I am small text</span>
+                <ul class="submenu">
+                    <li><a href="#navigation-v2">Menu 1 Link 1</a></li>
+                    <li><a href="#navigation-v2">Menu 1 Link 2
+                        <em class="sc-disruptor-small"> New</em>
+                    </a></li>
+                    <li><a href="#navigation-v2">Menu 1 Link 3</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="title" tabindex="2">Sub menu Right</span>
+                <span class="subtitle">You place me below top level link. I will be truncated</span>
+                <ul class="submenu extended">
+                    <li>
+                        <ul>
+                            <li class="subheadline">Left header</li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 1</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 2</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="subheadline">Right Header</li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 1</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 2</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="left-flyout">
+                <span class="title" tabindex="3">Submenu Left</span>
+                <ul class="submenu extended">
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 1</li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 1</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 2</a></li>
+                            <li><a href="#navigation-v2">Submenu 1 Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 2</li>
+                            <li><a href="#navigation-v2">Submenu 2 Link 1</a></li>
+                            <li><a href="#navigation-v2">Submenu 2 Link 2</a></li>
+                            <li><a href="#navigation-v2">Submenu 2 Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="subheadline">Submenu 3</li>
+                            <li><a href="#navigation-v2">Submenu 3 Link 1</a></li>
+                            <li><a href="#navigation-v2">Submenu 3 Link 2</a></li>
+                            <li><a href="#navigation-v2">Submenu 3 Link 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="right left-flyout">
+            <li>
+                <span class="title" tabindex="2">Right menu</span>
+                <span class="subtitle">I am small text</span>
+                <ul class="submenu">
+                    <li><a href="#navigation-v2">Right menu Link 1 (<span>0</span>)</a></li>
+                    <li><a href="#navigation-v2">Right menu Link 2</a></li>
+                    <li><a href="#navigation-v2">Right menu Link 3</a></li>
+                    <li class="button-with-subtitle">
+                        <a href="#navigation-v2">Button Link</a>
+                        <span>Small Tagline?
+                            <a href="#navigation-v2">Click me</a>
+                        </span>
+                    </li>
+                    <li class="separator">
+                    </li>
+                    <li><a href="#navigation-v2">Another link</a></li>
+                </ul>
+            </li>
+
+            <li class="country-selector">
+                <span class="title" tabindex="5"><as24-icon type="flag/de"></as24-icon></span>
+                <ul class="submenu">
+                    <li>
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                        </a>
+                    </li>
+                    <li>—</li>
+                    <li><a href="#navigation-v2">Български</a></li>
+                    <li><a href="#navigation-v2">Česky</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-default" class="hjs html">&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+            &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 74 35&quot;&gt;
+                    &lt;path fill=&quot;#003468&quot; d=&quot;M0 0v17h74V0H0z&quot;&gt;&lt;/path&gt;
+                    &lt;path d=&quot;M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z&quot; fill=&quot;#ff7500&quot;&gt;&lt;/path&gt;
+                    &lt;g fill=&quot;#003468&quot;&gt;
+                        &lt;path
+                            d=&quot;M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z&quot;&gt;
+                        &lt;/path&gt;
+                    &lt;/g&gt;
+                    &lt;path
+                        d=&quot;M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z&quot;
+                        fill=&quot;#fff&quot;&gt;&lt;/path&gt;
+                &lt;/svg&gt;&lt;/as24-icon&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;nav&gt;
+        &lt;ul class=&quot;left&quot;&gt;
+            &lt;li class=&quot;link-only&quot;&gt;
+                &lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Link Without Subnav&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Menu 1&lt;/span&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;I am small text&lt;/span&gt;
+                &lt;ul class=&quot;submenu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 2
+                        &lt;em class=&quot;sc-disruptor-small&quot;&gt; New&lt;/em&gt;
+                    &lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Sub menu Right&lt;/span&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;You place me below top level link. I will be truncated&lt;/span&gt;
+                &lt;ul class=&quot;submenu extended&quot;&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Left header&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Right Header&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;left-flyout&quot;&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;3&quot;&gt;Submenu Left&lt;/span&gt;
+                &lt;ul class=&quot;submenu extended&quot;&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 1&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 2&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ul&gt;
+                            &lt;li class=&quot;subheadline&quot;&gt;Submenu 3&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul class=&quot;right left-flyout&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Right menu&lt;/span&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;I am small text&lt;/span&gt;
+                &lt;ul class=&quot;submenu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 1 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;button-with-subtitle&quot;&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Button Link&lt;/a&gt;
+                        &lt;span&gt;Small Tagline?
+                            &lt;a href=&quot;#navigation-v2&quot;&gt;Click me&lt;/a&gt;
+                        &lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;separator&quot;&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;Another link&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;country-selector&quot;&gt;
+                &lt;span class=&quot;title&quot; tabindex=&quot;5&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/span&gt;
+                &lt;ul class=&quot;submenu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&mdash;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#navigation-v2&quot;&gt;&Ccaron;esky&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="navigation-v2-variation1">
+                    <div class="markdown"><h2>Navigation v2 - Variation1<span class="status js">JS</span></h2>
+
+<p>It shows a layout where right menu has slightly different menu options.</p>
+<style>
+#navigation-v2-variation1 .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><header class="sc-navigation-v2" role="navigation">
+        <div class="bar">
+            <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+            <a href="https://www.autoscout24.de" class="icon-auto24">
+                <as24-icon type="auto24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 35">
+                        <path fill="#003468" d="M0 0v17h74V0H0z"></path>
+                        <path d="M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z" fill="#ff7500"></path>
+                        <g fill="#003468">
+                            <path
+                                d="M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z">
+                            </path>
+                        </g>
+                        <path
+                            d="M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z"
+                            fill="#fff"></path>
+                    </svg></as24-icon>
+            </a>
+        </div>
+        <nav>
+            <ul class="left">
+                <li class="link-only">
+                    <a href="http://google.de/" target="_blank">Link Without Subnav</a>
+                </li>
+    
+                <li>
+                    <span class="title" tabindex="2">Menu 1</span>
+                    <span class="subtitle">I am small text</span>
+                    <ul class="submenu">
+                        <li><a href="#navigation-v2-variation1">Menu 1 Link 1</a></li>
+                        <li><a href="#navigation-v2-variation1">Menu 1 Link 2</a></li>
+                        <li><a href="#navigation-v2-variation1">Menu 1 Link 3</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <span class="title" tabindex="2">Sub menu Right</span>
+                    <span class="subtitle">You place me below top level link. I will be truncated</span>
+                    <ul class="submenu extended">
+                        <li>
+                            <ul>
+                                <li class="subheadline">Left header</li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 1</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 2</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="subheadline">Right Header</li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 1</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 2</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="left-flyout">
+                    <span class="title" tabindex="3">Submenu Left
+                        <em class="sc-disruptor-small"> NEW</em>
+                    </span>
+                    <ul class="submenu extended">
+                        <li>
+                            <ul>
+                                <li class="subheadline">Submenu 1</li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 1</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 2</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 1 Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="subheadline">Submenu 2</li>
+                                <li><a href="#navigation-v2-variation1">Submenu 2 Link 1</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 2 Link 2</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 2 Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="subheadline">Submenu 3</li>
+                                <li><a href="#navigation-v2-variation1">Submenu 3 Link 1</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 3 Link 2</a></li>
+                                <li><a href="#navigation-v2-variation1">Submenu 3 Link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <ul class="right left-flyout">
+                <li>
+                    <span class="title" tabindex="5">Right Menu</span>
+                    <ul class="submenu">
+                        <li><a href="#">Right menu Link 1</a></li>
+                        <li><a href="#">Right menu Link 2</a></li>
+                        <li><a href="#">Right menu Link 3</a></li>
+                        <li class="separator"></li>
+                        <li><a rel="nofollow" href="#">Another Link</a></li>
+                    </ul>
+                </li>
+    
+                <li class="country-selector">
+                    <span class="title" tabindex="5"><as24-icon type="flag/de"></as24-icon></span>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#navigation-v2-variation1">
+                                <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#navigation-v2-variation1">
+                                <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                            </a>
+                        </li>
+                        <li>—</li>
+                        <li><a href="#navigation-v2-variation1">Български</a></li>
+                        <li><a href="#navigation-v2-variation1">Česky</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-variation1" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-variation1" class="hjs html">&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+        &lt;div class=&quot;bar&quot;&gt;
+            &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+            &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+                &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 74 35&quot;&gt;
+                        &lt;path fill=&quot;#003468&quot; d=&quot;M0 0v17h74V0H0z&quot;&gt;&lt;/path&gt;
+                        &lt;path d=&quot;M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z&quot; fill=&quot;#ff7500&quot;&gt;&lt;/path&gt;
+                        &lt;g fill=&quot;#003468&quot;&gt;
+                            &lt;path
+                                d=&quot;M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z&quot;&gt;
+                            &lt;/path&gt;
+                        &lt;/g&gt;
+                        &lt;path
+                            d=&quot;M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z&quot;
+                            fill=&quot;#fff&quot;&gt;&lt;/path&gt;
+                    &lt;/svg&gt;&lt;/as24-icon&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;nav&gt;
+            &lt;ul class=&quot;left&quot;&gt;
+                &lt;li class=&quot;link-only&quot;&gt;
+                    &lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Link Without Subnav&lt;/a&gt;
+                &lt;/li&gt;
+    
+                &lt;li&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Menu 1&lt;/span&gt;
+                    &lt;span class=&quot;subtitle&quot;&gt;I am small text&lt;/span&gt;
+                    &lt;ul class=&quot;submenu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Menu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Menu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Menu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+    
+                &lt;li&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;2&quot;&gt;Sub menu Right&lt;/span&gt;
+                    &lt;span class=&quot;subtitle&quot;&gt;You place me below top level link. I will be truncated&lt;/span&gt;
+                    &lt;ul class=&quot;submenu extended&quot;&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;subheadline&quot;&gt;Left header&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;subheadline&quot;&gt;Right Header&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+    
+                &lt;li class=&quot;left-flyout&quot;&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;3&quot;&gt;Submenu Left
+                        &lt;em class=&quot;sc-disruptor-small&quot;&gt; NEW&lt;/em&gt;
+                    &lt;/span&gt;
+                    &lt;ul class=&quot;submenu extended&quot;&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;subheadline&quot;&gt;Submenu 1&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 1 Link 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;subheadline&quot;&gt;Submenu 2&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 2 Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 2 Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 2 Link 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;subheadline&quot;&gt;Submenu 3&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 3 Link 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 3 Link 2&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;Submenu 3 Link 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+    
+            &lt;ul class=&quot;right left-flyout&quot;&gt;
+                &lt;li&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;5&quot;&gt;Right Menu&lt;/span&gt;
+                    &lt;ul class=&quot;submenu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Right menu Link 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Right menu Link 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Right menu Link 3&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;separator&quot;&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;#&quot;&gt;Another Link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+    
+                &lt;li class=&quot;country-selector&quot;&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;5&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/span&gt;
+                    &lt;ul class=&quot;submenu&quot;&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#navigation-v2-variation1&quot;&gt;
+                                &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#navigation-v2-variation1&quot;&gt;
+                                &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&mdash;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation1&quot;&gt;&Ccaron;esky&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="navigation-v2-variation2">
+                    <div class="markdown"><h2>Navigation v2 - Variation2<span class="status js">JS</span></h2>
+
+<p>Layout with minimal links on left and right navigation.</p>
+<style>
+#navigation-v2-variation2 .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><header class="sc-navigation-v2" role="navigation">
+        <div class="bar">
+            <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+            <a href="https://www.autoscout24.de" class="icon-auto24">
+                <as24-icon type="auto24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 35">
+                        <path fill="#003468" d="M0 0v17h74V0H0z"></path>
+                        <path d="M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z" fill="#ff7500"></path>
+                        <g fill="#003468">
+                            <path
+                                d="M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z">
+                            </path>
+                        </g>
+                        <path
+                            d="M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z"
+                            fill="#fff"></path>
+                    </svg></as24-icon>
+            </a>
+        </div>
+        <nav>
+            <ul class="left">
+                <li class="link-only">
+                    <a href="http://google.de/">Link Without Subnav 1</a>
+                </li>
+
+                <li class="link-only">
+                    <a href="http://google.de/">Link Without Subnav 2</a>
+                </li>
+                
+                <li class="link-only">
+                    <a href="http://google.de/">Link Without Subnav 3</a>
+                </li>
+            </ul>
+    
+            <ul class="right left-flyout">
+                <li>
+                    <span class="title" tabindex="5">Right Menu</span>
+                    <ul class="submenu">
+                            <li><a href="#navigation-v2-variation2">Right menu Link 1 (<span>0</span>)</a></li>
+                            <li><a href="#navigation-v2-variation2">Right menu Link 2 (<span>0</span>)</a></li>
+                    </ul>
+                </li>
+    
+                <li class="country-selector">
+                    <span class="title" tabindex="5"><as24-icon type="flag/de"></as24-icon></span>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#navigation-v2-variation2">
+                                <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#navigation-v2-variation2">
+                                <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                            </a>
+                        </li>
+                        <li>—</li>
+                        <li><a href="#navigation-v2-variation2">Български</a></li>
+                        <li><a href="#navigation-v2-variation2">Česky</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header></div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-variation2" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-variation2" class="hjs html">&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+        &lt;div class=&quot;bar&quot;&gt;
+            &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+            &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+                &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 74 35&quot;&gt;
+                        &lt;path fill=&quot;#003468&quot; d=&quot;M0 0v17h74V0H0z&quot;&gt;&lt;/path&gt;
+                        &lt;path d=&quot;M0 35h65.3c4.9 0 8.7-3.9 8.7-8.5V18H0v17z&quot; fill=&quot;#ff7500&quot;&gt;&lt;/path&gt;
+                        &lt;g fill=&quot;#003468&quot;&gt;
+                            &lt;path
+                                d=&quot;M6.7 31.7h-.1c-1.5 0-2.8-1.1-2.8-2.8 0-1.1 1.6-1.1 1.6 0 0 .8.5 1.2 1.2 1.2h.1c.7 0 1.3-.4 1.3-1.1 0-1.8-4-1.9-4-4.5v-.3c0-1.5 1.5-2.4 2.7-2.4h.1c1.4 0 2.7.9 2.7 2.2 0 1-1.6 1.1-1.6 0 0-.4-.4-.7-1.1-.7h-.2c-.6 0-1.1.3-1.1.9v.2c0 1.1 4 1.6 4 4.5.1 1.7-1.2 2.8-2.8 2.8zM13.7 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.4 0 2.6 1 2.8 2.3v.1c0 .5-.4.8-.8.8s-.7-.2-.8-.7c-.1-.6-.6-1-1.2-1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.6 0 1.1-.4 1.2-1 .1-.5.4-.7.8-.7s.8.3.8.8v.2c-.2 1.3-1.4 2.3-2.8 2.3zM20.6 31.7h-.1c-1.5 0-2.8-1.2-2.8-2.7v-4.4c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V29c0 1.5-1.3 2.7-2.8 2.7zm1.1-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V29c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1v-4.4zM27.9 31.7h-.1c-1.5 0-2.8-1.3-2.8-2.8v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2v-6.2c0-.5.4-.8.8-.8s.8.3.8.8v6.2c0 1.6-1.2 2.8-2.8 2.8zM36.4 23.6h-1.1v7.3c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-7.3h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.2.8-.8.8zM43.9 31.6h-3.6c-.5 0-.8-.5-.8-1 0-.2 0-.4.1-.5l3.2-5.1c.2-.3.2-.4.2-.6v-.1c0-.4-.4-.8-.8-.8-.5 0-.8.4-.8.8v.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-.2c0-1.4 1.1-2.4 2.4-2.4 1.3 0 2.4 1 2.4 2.4v.2c0 .5-.2 1-.5 1.5l-2.6 4h2.4c.5 0 .8.4.8.8s-.2.8-.8.8zM50.3 29.7H50v1.2c0 .5-.4.8-.8.8s-.8-.3-.8-.8v-1.2h-2.2c-.6 0-.9-.3-.9-.9 0-.1 0-.3.1-.4l2.6-6.1c.2-.4.4-.5.7-.5.4 0 .8.3.8.8 0 .1 0 .2-.1.3L47.1 28h1.2v-.8c0-.5.4-.8.8-.8s.8.3.8.8v.8h.3c.5 0 .8.4.8.8.1.5-.2.9-.7.9z&quot;&gt;
+                            &lt;/path&gt;
+                        &lt;/g&gt;
+                        &lt;path
+                            d=&quot;M10.2 13.8c-.3 0-.6-.2-.7-.6L9 11.5H6.2l-.5 1.7c-.1.4-.4.6-.8.6s-.8-.3-.8-.8v-.3l2.5-8.1c.3-.6.6-.7 1-.7.3 0 .7.1.9.7l2.5 8.1v.3c0 .5-.4.8-.8.8zM7.6 6.9l-.9 3h1.8l-.9-3zM15.1 13.8H15c-1.5 0-2.8-1.3-2.8-2.8V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 .6.5 1.2 1.2 1.2h.1c.7 0 1.2-.5 1.2-1.2V4.7c0-.5.4-.8.8-.8s.8.3.8.8V11c0 1.5-1.3 2.8-2.8 2.8zM23.7 5.6h-1.1V13c0 .5-.4.8-.8.8s-.8-.3-.8-.8V5.6h-1.1c-.5 0-.8-.4-.8-.8s.3-.8.8-.8h3.8c.5 0 .8.4.8.8s-.3.8-.8.8zM28.4 13.8h-.1c-1.5 0-2.8-1.2-2.8-2.7V6.7c0-1.6 1.3-2.7 2.8-2.7h.1c1.5 0 2.8 1.2 2.8 2.7V11c0 1.6-1.3 2.8-2.8 2.8zm1.2-7.1c0-.7-.5-1.1-1.2-1.1h-.1c-.7 0-1.2.5-1.2 1.1V11c0 .7.5 1.1 1.2 1.1h.1c.7 0 1.2-.5 1.2-1.1V6.7z&quot;
+                            fill=&quot;#fff&quot;&gt;&lt;/path&gt;
+                    &lt;/svg&gt;&lt;/as24-icon&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;nav&gt;
+            &lt;ul class=&quot;left&quot;&gt;
+                &lt;li class=&quot;link-only&quot;&gt;
+                    &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 1&lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;link-only&quot;&gt;
+                    &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 2&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;link-only&quot;&gt;
+                    &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 3&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+    
+            &lt;ul class=&quot;right left-flyout&quot;&gt;
+                &lt;li&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;5&quot;&gt;Right Menu&lt;/span&gt;
+                    &lt;ul class=&quot;submenu&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation2&quot;&gt;Right menu Link 1 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation2&quot;&gt;Right menu Link 2 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+    
+                &lt;li class=&quot;country-selector&quot;&gt;
+                    &lt;span class=&quot;title&quot; tabindex=&quot;5&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/span&gt;
+                    &lt;ul class=&quot;submenu&quot;&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#navigation-v2-variation2&quot;&gt;
+                                &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#navigation-v2-variation2&quot;&gt;
+                                &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&mdash;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation2&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#navigation-v2-variation2&quot;&gt;&Ccaron;esky&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;</code>
                             </pre>
                         </div>
                         <div class="code-sample-toggle"><span>Show</span> code sample</div>
