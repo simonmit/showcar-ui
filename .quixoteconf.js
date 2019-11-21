@@ -4,7 +4,7 @@ var config = {
     filesSet: [
         require.context('./src/06-components/atoms/', true, /^((?!tooltip).)*(specs.js)$/),
         require.context('./src/06-components/molecules/', true, /\.specs.js$/),
-        require.context('./src/06-components/organisms/', true, /^((?!navigation).)*(specs.js)$/),
+        // require.context('./src/06-components/organisms/', true, /^((?!navigation).)*(specs.js)$/),
         require.context('./src/07-utilities/', true, /\.specs.js$/),
     ]
 };
