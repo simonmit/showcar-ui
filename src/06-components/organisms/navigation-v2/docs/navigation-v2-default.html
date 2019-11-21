@@ -5,14 +5,14 @@
             <as24-icon type="auto24"></as24-icon>
         </a>
     </div>
-    <nav>
+    <nav aria-labelledby="mainmenu">
         <ul class="left">
             <li>
                 <a href="http://google.de/" target="_blank">Link Without Subnav</a>
             </li>
 
             <li>
-                <button class="title sc-inline-link sc-btn-block">Menu 1</button>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Menu 1</button>
                 <span class="subtitle">I am small text</span>
                 <ul class="submenu">
                     <li><a href="#navigation-v2">Menu 1 Link 1</a></li>
@@ -24,7 +24,7 @@
             </li>
 
             <li>
-                <button class="title sc-inline-link sc-btn-block">Sub menu Right</button>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Sub menu Right</button>
                 <span class="subtitle">You place me below top level link. I will be truncated</span>
                 <ul class="submenu extended">
                     <li>
@@ -47,7 +47,7 @@
             </li>
 
             <li class="left-flyout">
-                <button class="title sc-inline-link sc-btn-block">Submenu Left</button>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Submenu Left</button>
                 <ul class="submenu extended">
                     <li>
                         <ul>
@@ -79,7 +79,7 @@
 
         <ul class="right left-flyout">
             <li>
-                <button class="title sc-inline-link sc-btn-block">Right menu</button>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Right menu</button>
                 <span class="subtitle">I am small text</span>
                 <ul class="submenu">
                     <li><a href="#navigation-v2">Right menu Link 1 (<span>0</span>)</a></li>
@@ -98,7 +98,7 @@
             </li>
 
             <li class="country-selector">
-                <button class="title sc-inline-link sc-btn-block"><as24-icon type="flag/de"></as24-icon></button>
+                <button class="title sc-inline-link sc-btn-block aria-haspopup="true" aria-expanded="false""><as24-icon type="flag/de"></as24-icon></button>
                 <ul class="submenu">
                     <li>
                         <a href="#navigation-v2">

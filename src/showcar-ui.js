@@ -84,6 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation();
 });
 
+// navigation-v2
+import navigationv2 from './06-components/organisms/navigation-v2/navigation-v2';
+// Loading on document ready. Otherwise the navigation does not work in IE11.
+document.addEventListener('DOMContentLoaded', function() {
+    navigationv2();
+});
+
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
 // TODO do we still need it?
