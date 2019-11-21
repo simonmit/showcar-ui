@@ -2,7 +2,7 @@ var config = {
     url: 'http://localhost:9876/test/',   // karma url with port
     width: [320, 768, 1024],
     filesSet: [
-        require.context('./src/', true, /\.specs.js$/),
+        require.context('./src/', true, /^((?!tag|notification|navigation|tooltip).)*(specs.js)$/),
     ]
 };
 require('showcar-gulp/gulptasks/quixote.js')(config);
