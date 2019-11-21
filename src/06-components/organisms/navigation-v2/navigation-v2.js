@@ -36,7 +36,6 @@ class Navigation {
         }
 
         if (this.activeMenu && this.menuIsOpen) {
-
             if (this.activeMenu[0] == clickedMenu[0]) {
                 this.closeMenu();
                 return;
@@ -65,6 +64,7 @@ class Navigation {
     closeMenu(menu) {
         let closeTarget = menu || this.activeMenu;
         closeTarget.removeClass('open');
+        closeTarget.children('button').attr('aria-expanded', 'false');
         this.unsetInactiveMenuItems();
         this.items = [];
         this.menuIsOpen = false;
@@ -78,6 +78,7 @@ class Navigation {
         }
 
         this.activeMenu.addClass('open');
+        this.activeMenu.children('button').attr('aria-expanded', 'true');
         this.items = this.activeMenu.find('ul:not(.submenu) > li:not(.subheadline)');
         this.menuIsOpen = true;
     }
