@@ -77,22 +77,19 @@ module.exports = (frame, assert, browserWidth, helper) => {
             assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
         });
 
-        it('Check event based tooltip', () => {
+        it('Check event based tooltip', (done) => {
             tooltipEvent.style.position = 'fixed';
             tooltipEvent.style.right = 0;
             tooltipEvent.style.bottom = 0;
             document.dispatchEvent(new CustomEvent("show-tooltip-event"));
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-            await sleep(25);
+            setTimeout(() => done(), 1000)
             const tooltipContent = frame.get('.sc-tooltip-content.sc-tooltip-shown').toDomElement();
 
             assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
             assert.isTrue(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
 
             document.dispatchEvent(new CustomEvent("hide-tooltip-event"));
-            await sleep(25);
+            setTimeout(() => done(), 1000)
             assert.isFalse(helper.hasClass(tooltipContent, 'sc-tooltip-top'), 'position bottom');
             assert.isFalse(helper.hasClass(tooltipContent, 'sc-tooltip-left'), 'position right');
         });

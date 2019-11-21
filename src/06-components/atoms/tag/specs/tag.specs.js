@@ -35,33 +35,24 @@ module.exports = (frame, assert, browserWidth, helper) => {
     });
 
     describe('Tag {INTERACTION}', () => {
+        let tags;
+        let firstTagClose;
+
+        beforeEach(() => {
+            tags = frame.getAll('#tag .sc-tag');
+            firstTagClose = frame.getAll('#tag .sc-tag .sc-tag__close').at(0).toDomElement();
+        });
+
         afterEach(done => {
             helper.reload(frame, done)
         });
 
-        it('is removed after clicking close button', done => {
-            const tag = frame.getAll('#tag .sc-tag').at(0);
-            const tagEl = tag.toDomElement();
-
-            // const tagClose = frame.getAll('#tag .sc-tag as24-icon').at(0).toDomElement();
-            const tagClose = tag.toDomElement().querySelector('.sc-tag__close');
-
-            const checkOnAnimationEnd = () => {
-                setTimeout(() => {
-                    tag.assert({
-                        rendered: false
-                    });
-                    clearTimeout(fallbackTimeout);
-                    fallbackTimeout = () => {};
-                    done();
-                }, 50)
-            }
-            tagEl.addEventListener('animationend', checkOnAnimationEnd);
-
-            // fallbackTimeout for stupid browsers
-            let fallbackTimeout = setTimeout(checkOnAnimationEnd, 5000);
-
-            helper.click(tagClose);
+        it('is removed after clicking close button', (done) => {
+            helper.click(frame.getAll('#tag .sc-tag .sc-tag__close').at(0).toDomElement());
+            setTimeout(() => {
+                assert(frame.getAll('#tag .sc-tag').length() === 2, 'three tags shown instead of two');
+                done();
+            }, 5000); //wait for animation
         });
     });
 };
