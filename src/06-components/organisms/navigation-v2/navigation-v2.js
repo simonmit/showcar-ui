@@ -22,6 +22,7 @@ class Navigation {
     initEvents() {
         this.rootElement.on('click', 'ul>li, .sc-btn-mobile-menu', $.proxy(this.toggleMenu, this));
         this.document.on('click', $.proxy(this.escapeMenu, this));
+        this.document.on('keydown', $.proxy(this.onKeyDown, this));
     }
 
     /**
@@ -86,6 +87,13 @@ class Navigation {
     /**
      * @param {Object} event
      */
+    onKeyDown(event) {
+        const keyCode = event.which;
+        if(keyCode === 9) {
+            this.rootElement.addClass('sc-focus-visible-only');
+        }
+    }
+
     escapeMenu() {
         this.activeMenu && this.menuIsOpen && this.closeMenu();
     }
