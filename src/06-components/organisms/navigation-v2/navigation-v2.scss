@@ -154,14 +154,14 @@
       padding-left: 0;
     }
   }
-  
+
   // Menubar Item title
   .title {
     padding: $S 10px;
     outline: 0;
     position: relative;
     text-align: left;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -171,7 +171,8 @@
       margin-right: $L;
       width: 12px;
       height: 12px;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==') no-repeat center center;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')
+        no-repeat center center;
       color: $orange-100;
     }
   }
@@ -394,7 +395,6 @@
           padding-bottom: $S;
         }
       }
-      
     }
 
     .left,
@@ -460,28 +460,30 @@
 }
 
 .skip-main {
-  left:-999px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-  z-index:-999;
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     color: $white;
     display: block;
-    background-color:$black-100;
+    background-color: $black-100;
     left: auto;
     top: auto;
     width: 30%;
     height: auto;
-    overflow:auto;
+    overflow: auto;
     margin: 10px 35%;
-    padding:5px;
-    border-radius: 15px;
-    border:2px solid $black-60;
-    text-align:center;
-    font-size:1.2em;
-    z-index:999;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid $black-60;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
   }
 }
