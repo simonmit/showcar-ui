@@ -16,8 +16,8 @@ $arrow-right: 90%;
   position: absolute;
   z-index: 2;
 
-  left: inherit;
-  transform: none;
+  // left: inherit;
+  // transform: none;
 
   /*
   transform: translateX(-50%);
@@ -67,15 +67,15 @@ $arrow-right: 90%;
   &:before,
   &:after {
     content: '';
-    display: block;
-    height: 0;
+    // display: block;
+    // height: 0;
     left: $arrow-left;
-    margin: 0 auto;
+    // margin: 0 auto;
     position: absolute;
     pointer-events: none;
     top: 0;
     transform: translate(-50%, -100%);
-    width: 0;
+    // width: 0;
   }
 
   &:before {
