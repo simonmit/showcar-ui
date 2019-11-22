@@ -458,3 +458,30 @@
     }
   }
 }
+
+.skip-main {
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+
+  &:focus, &:active {
+    color: $white;
+    display: block;
+    background-color:$black-100;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:2px solid $black-60;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+  }
+}
