@@ -6,43 +6,84 @@ export default () => {
             return;
         }
         if(keyCode === 9) {
+            // TAB
             header.classList.add('sc-focus-visible-only');
         } else if(keyCode === 27) {
-            e.target.closest('.sc-navigation-v2  nav li.open').classList.remove('open');
+            // ESCAPE
+            e.target.closest('.sc-navigation-v2 nav li.open').classList.remove('open');
         }
     });
 
     document.addEventListener('click', e => {
         const header = e.target.closest('.sc-navigation-v2');
+        console.log('header?', e.target);
 
+        // 1. click outside header closes all the menus
+        // 2. click hamburger button opens the main menu
+        // 3. click on submenu opens/closes the submenu
+        // 4. click on header outside submenus/hamburger button closes all the menus
+        // 5. click on a link inside of submenu closes this submenu
+        // 6*. click anywhere in the header not listed above -> no actions
+
+        // 1
         if(!header) {
-            return;
-        }
-        
-        const menuOpener = e.target.closest('.sc-navigation-v2 nav li');
-        if (menuOpener) {
-            toggleSubmenu(menuOpener);
+            closeAllOpenedSubmenus();
             return;
         }
 
-        const menuItemOpener = e.target.closest('.sc-navigation-v2 .sc-btn-mobile-menu');
-        if (menuItemOpener) {
-            toggleMenu(header);
+        // 2
+        const mobileButton = e.target.closest('.sc-navigation-v2 .sc-btn-mobile-menu');
+        if (mobileButton) {
+            toggleMenu(header, mobileButton);
             return;
         }
+
+        // 3
+        const menuOpener = e.target.closest('.sc-navigation-v2 nav li');
+        const menuButton = e.target.closest('.sc-navigation-v2 nav li button');
+        if (menuOpener && menuButton) {
+            toggleSubmenu(menuOpener, menuButton);
+            return;
+        }
+
+        // 4
+        const openedLi = e.target.closest('.sc-navigation-v2 nav li.open');
+        if (!openedLi) {
+            closeAllOpenedSubmenus();
+            return;
+        }
+
+        // 5
+        const anyLink = e.target.closest('.sc-navigation-v2 nav a');
+        if (anyLink) {
+            closeAllOpenedSubmenus();
+            return;
+        }
+
     });
 
-    const toggleMenu = (header) => {
+    const toggleSubmenu = (opener, button) => {
+        const activeMenu = document.querySelector('.sc-navigation-v2 nav li.open');
+        if (activeMenu) {
+            closeMenu(activeMenu);
+        }
+        if (activeMenu !== opener) {
+            button.setAttribute('aria-expanded', true);
+            opener.classList.toggle('open');
+        } 
+    };
+
+    const toggleMenu = (header, menuItemOpener) => {
+        menuItemOpener.setAttribute('aria-expanded', header.classList.contains('open'));
         header.classList.toggle('open');
     };
 
-    const toggleSubmenu = (menu) => {
-        const activeMenu = document.querySelector('.sc-navigation-v2 nav li.open');
-        if (activeMenu) {
-            activeMenu.classList.remove('open');
-        }
-        if (activeMenu !== menu) {
-            menu.classList.toggle('open');
-        } 
+    const closeMenu = (menu) => {
+        menu.querySelector('button').setAttribute('aria-expanded', false);
+        menu.classList.remove('open');
+    };
+
+    const closeAllOpenedSubmenus = () => {
+        [...document.querySelectorAll('.sc-navigation-v2 nav li.open')].forEach(openedMenu => closeMenu(openedMenu));
     };
 };
