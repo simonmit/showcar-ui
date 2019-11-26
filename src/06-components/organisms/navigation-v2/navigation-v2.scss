@@ -82,12 +82,32 @@
   // Expandable Menu Items
   .submenu {
     padding: 0 0 7px $XL;
-    max-height: 0;
     transition: max-height 0.3s ease-out;
+    display: none;
 
-    ul li:not(.subheadline) {
+    &.visible-on-mobile {
+      display: block;
+    }
+
+    ul li {
       padding-left: $L;
     }
+
+    ul li.subheadline {
+      padding-left: 0;
+    }
+
+    .extended li {
+      padding-left: 0;
+    }
+  }
+
+  li.open .submenu {
+    display: block;
+  }
+
+  li.open .submenu .extended > li {
+    display: flex;
   }
 
   // Subheadline for Menu Items
@@ -178,7 +198,7 @@
   }
 
   li {
-    overflow: hidden;
+    // overflow: hidden;
 
     &:hover,
     &.open {
@@ -282,7 +302,11 @@
       padding: $XS 0 $S 0;
     }
 
-    ul.submenu {
+    .submenu {
+      &.visible-on-mobile {
+        display: none;
+      }
+
       position: absolute;
       transition: none;
       max-height: 0;
@@ -299,7 +323,11 @@
         padding-right: 0;
       }
 
-      &.extended {
+      ul li {
+        padding-left: 0;
+      }
+
+      .extended {
         display: flex;
 
         > li {
@@ -322,6 +350,14 @@
         left: auto;
       }
     }
+
+    // .left,
+    // .right {
+    //   li {
+    //     border: 1px solid $white;
+    //     border-width: 0 1px;
+    //   }
+    // }
 
     li {
       position: relative;
@@ -358,7 +394,6 @@
       color: $black-60;
       font-size: 12px;
       overflow: hidden;
-      top: 47px;
       height: 16px;
     }
 
