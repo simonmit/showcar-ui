@@ -32,6 +32,12 @@ You can use the gulp default command to run the build locally:
 
     gulp
 
+## How to run tests locally:
+
+You can run tests locally in Chrome:
+
+    gulp test:fast
+
 ### Interacting w/ local changes
 
 You can preview/interact with the local changes by running `yarn run docs:serve`. This will generate the docs & launch a server where you can look at them, running the local version of showcar-ui
@@ -50,7 +56,7 @@ Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
 You can check development state of the library on home, list and detail page with a parameter `?toguru=sc_develop%3dtrue`.
 
-## How to test fragments with togglea
+## How to test fragments with toggles
 
 You can check any branch of the library on your page with parameter `?toguru=sc_develop%3dtest-branch` where `test-branch` is the name of the desired branch.
 
