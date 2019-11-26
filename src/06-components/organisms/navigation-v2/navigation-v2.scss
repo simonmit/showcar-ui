@@ -8,6 +8,10 @@
   -webkit-tap-highlight-color: transparent;
   border-bottom: solid 1px $black-30;
 
+  a {
+    white-space: nowrap;
+  }
+
   &.open {
     .sc-btn-mobile-menu {
       color: $orange-100;
@@ -106,8 +110,22 @@
     display: block;
   }
 
-  li.open .submenu .extended > li {
-    display: flex;
+  @media (min-width: 923px) {
+    li.open .submenu:not(.extended) {
+      min-width: 165px;
+    }
+    li.open .submenu.extended {
+      display: flex;
+
+      & > * {
+    
+        width: 165px;
+
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
   }
 
   // Subheadline for Menu Items
@@ -236,7 +254,7 @@
 
     a {
       display: block;
-      padding: $S 10px;
+      padding: $S 20px;
       text-decoration: none;
 
       @include link(M, $variant: $black-120);
@@ -314,7 +332,6 @@
       top: 70px;
       border: 1px solid $black-30;
       left: -1px;
-      white-space: nowrap;
       padding: $M $XXL;
       overflow: hidden;
 

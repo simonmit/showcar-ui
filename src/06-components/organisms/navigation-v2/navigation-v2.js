@@ -16,7 +16,6 @@ export default () => {
 
     document.addEventListener('click', e => {
         const header = e.target.closest('.sc-navigation-v2');
-        console.log('header?', e.target);
 
         // 1. click outside header closes all the menus
         // 2. click hamburger button opens the main menu
@@ -63,14 +62,19 @@ export default () => {
     });
 
     const toggleSubmenu = (opener, button) => {
-        const activeMenu = document.querySelector('.sc-navigation-v2 nav li.open');
-        if (activeMenu) {
-            closeMenu(activeMenu);
+        const isDesktop = window.innerWidth >= 923; // see breakpoint
+        const menuItems = document.querySelectorAll('.sc-navigation-v2 nav li');
+
+        if (isDesktop) {
+            menuItems.forEach(item => {
+                if (item !== opener) {
+                    closeMenu(item);
+                }
+            });
         }
-        if (activeMenu !== opener) {
-            button.setAttribute('aria-expanded', true);
-            opener.classList.toggle('open');
-        } 
+
+        button.setAttribute('aria-expanded', true);
+        opener.classList.toggle('open');
     };
 
     const toggleMenu = (header, menuItemOpener) => {
@@ -79,7 +83,10 @@ export default () => {
     };
 
     const closeMenu = (menu) => {
-        menu.querySelector('button').setAttribute('aria-expanded', false);
+        const hasButton = menu.querySelector('button');
+        if(hasButton) {
+            menu.querySelector('button').setAttribute('aria-expanded', false);
+        }
         menu.classList.remove('open');
     };
 
