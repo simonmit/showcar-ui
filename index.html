@@ -160,6 +160,10 @@
             <a href="/docs/atoms/list" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#popover-target">popover</a>
+            <a href="/docs/atoms/popover" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#rotating-arrow-target">rotating-arrow</a>
             <a href="/docs/atoms/rotating-arrow" class="open-separate"></a>
         </li>
@@ -3014,6 +3018,192 @@ myLightbox.hide();</code></pre>
     &lt;li&gt;Two&lt;/li&gt;
     &lt;li&gt;Three&lt;/li&gt;
 &lt;/ul&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="popover-target" class="positon-anchor">
+                <div class="element" id="about-popover">
+                    <div class="markdown"><h2>Popover<span class="status review">Needs Review</span></h2>
+<p>Popover component is a small overlay, that opens on demand, without blocking the on-page interaction. Showcar-UI provides you only with the html structure and the css classes to create the popover overlay. Triggering it (closing & opening) should be done on your own. The popover should be opened below the trigger. For the positioning of the Arrow (Left, Center, Right) please use the provided classes. Feel free to overwrite the position the popover on your page as needed with css.</p>
+<p>NOTE: when triggering the popover please add the ARIA accessability attribute to it's trigger: aria-expanded = true or false. For more info please refer to https://www.w3.org/WAI/GL/wiki/Using_aria-expanded_to_indicate_the_state_of_a_collapsible_element</p>
+</div>
+                     
+                </div>
+            
+
+                <div class="element" id="popover-center">
+                    <div class="markdown"><h2>Popover (arrow in the middle)</h2>
+</div>
+                   <div class="sample"><div style='height:350px;'>
+    <div class="sc-text-center">Some <a>link</a> that will trigger the popover</div>
+    <div class="sc-popover sc-popover-center">
+        <button class="sc-popover__close">
+            <as24-icon type="close"></as24-icon>
+        </button>
+        <div class="sc-popover__content">
+            <h3 class="sc-font-m sc-font-bold sc-margin-top-xs">The popover title</h3>
+            <p class="sc-margin-top-l">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </p>
+            <label class="sc-label">The input label</label>
+            <input type="text" class="sc-input" placeholder="share your thoughts with us">
+            <button class="sc-btn-bob sc-btn-block sc-margin-top-l">Button
+                bob</button>
+
+        </div>
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-popover-center" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-popover-center" class="hjs html">&lt;div style=&apos;height:350px;&apos;&gt;
+    &lt;div class=&quot;sc-text-center&quot;&gt;Some &lt;a&gt;link&lt;/a&gt; that will trigger the popover&lt;/div&gt;
+    &lt;div class=&quot;sc-popover sc-popover-center&quot;&gt;
+        &lt;button class=&quot;sc-popover__close&quot;&gt;
+            &lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;sc-popover__content&quot;&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-margin-top-xs&quot;&gt;The popover title&lt;/h3&gt;
+            &lt;p class=&quot;sc-margin-top-l&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            &lt;/p&gt;
+            &lt;label class=&quot;sc-label&quot;&gt;The input label&lt;/label&gt;
+            &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
+            &lt;button class=&quot;sc-btn-bob sc-btn-block sc-margin-top-l&quot;&gt;Button
+                bob&lt;/button&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="popover-default">
+                    <div class="markdown"><h2>Popover (arrow on the left, default)</h2>
+</div>
+                   <div class="sample"><div style='height:350px;'>
+    <div>Some <a>link</a> that will trigger the popover</div>
+    <div class="sc-popover">
+        <button class="sc-popover__close">
+            <as24-icon type="close"></as24-icon>
+        </button>
+        <div class="sc-popover__content">
+            <h3 class="sc-font-m sc-font-bold sc-margin-top-xs">The popover title</h3>
+            <p class="sc-margin-top-l">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </p>
+            <label class="sc-label">The input label</label>
+            <input type="text" class="sc-input" placeholder="share your thoughts with us">
+            <button class="sc-btn-bob sc-btn-block sc-margin-top-l">Button
+                bob</button>
+
+        </div>
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-popover-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-popover-default" class="hjs html">&lt;div style=&apos;height:350px;&apos;&gt;
+    &lt;div&gt;Some &lt;a&gt;link&lt;/a&gt; that will trigger the popover&lt;/div&gt;
+    &lt;div class=&quot;sc-popover&quot;&gt;
+        &lt;button class=&quot;sc-popover__close&quot;&gt;
+            &lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;sc-popover__content&quot;&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-margin-top-xs&quot;&gt;The popover title&lt;/h3&gt;
+            &lt;p class=&quot;sc-margin-top-l&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            &lt;/p&gt;
+            &lt;label class=&quot;sc-label&quot;&gt;The input label&lt;/label&gt;
+            &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
+            &lt;button class=&quot;sc-btn-bob sc-btn-block sc-margin-top-l&quot;&gt;Button
+                bob&lt;/button&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="popover-right">
+                    <div class="markdown"><h2>Popover (arrow on the right side)</h2>
+</div>
+                   <div class="sample"><div style='height:350px;'>
+    <div class="sc-text-right">Some <a>link</a> that will trigger the popover</div>
+    <div class="sc-popover sc-popover-right">
+        <button class="sc-popover__close">
+            <as24-icon type="close"></as24-icon>
+        </button>
+        <div class="sc-popover__content">
+            <h3 class="sc-font-m sc-font-bold sc-margin-top-xs">The popover title</h3>
+            <p class="sc-margin-top-l">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </p>
+            <label class="sc-label">The input label</label>
+            <input type="text" class="sc-input" placeholder="share your thoughts with us">
+            <button class="sc-btn-bob sc-btn-block sc-margin-top-l">Button
+                bob</button>
+
+        </div>
+    </div>
+</div>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-popover-right" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-popover-right" class="hjs html">&lt;div style=&apos;height:350px;&apos;&gt;
+    &lt;div class=&quot;sc-text-right&quot;&gt;Some &lt;a&gt;link&lt;/a&gt; that will trigger the popover&lt;/div&gt;
+    &lt;div class=&quot;sc-popover sc-popover-right&quot;&gt;
+        &lt;button class=&quot;sc-popover__close&quot;&gt;
+            &lt;as24-icon type=&quot;close&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;sc-popover__content&quot;&gt;
+            &lt;h3 class=&quot;sc-font-m sc-font-bold sc-margin-top-xs&quot;&gt;The popover title&lt;/h3&gt;
+            &lt;p class=&quot;sc-margin-top-l&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            &lt;/p&gt;
+            &lt;label class=&quot;sc-label&quot;&gt;The input label&lt;/label&gt;
+            &lt;input type=&quot;text&quot; class=&quot;sc-input&quot; placeholder=&quot;share your thoughts with us&quot;&gt;
+            &lt;button class=&quot;sc-btn-bob sc-btn-block sc-margin-top-l&quot;&gt;Button
+                bob&lt;/button&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code>
                             </pre>
                         </div>
