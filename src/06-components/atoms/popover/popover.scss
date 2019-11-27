@@ -1,4 +1,5 @@
 @import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
 
 $arrow-left: 10%;
 $arrow-center: 50%;
@@ -10,13 +11,19 @@ $arrow-right: 90%;
   border-radius: $XS;
   box-shadow: 0 0 10px $black-30;
   margin-top: $L;
-  width: calc(100vw - 16px);
+
+  @include mqmax(482px - 1) {
+    width: calc(100% - 16px);
+    left: 8px;
+  }
+
   max-width: 450px;
   padding: $L;
   position: absolute;
   z-index: 2;
 
   &__content {
+
     &:first-of-type h2,
     &:first-of-type h3,
     &:first-of-type h4,
@@ -90,6 +97,14 @@ $arrow-right: 90%;
 .sc-popover.sc-popover-center {
   left: 25%;
 
+  @include mqmax(768px) {
+    left: calc((100% - 450px) / 2);
+  }
+
+  @include mqmax(482px - 1) {
+    left: 8px;
+  }
+
   &:before,
   &:after {
     left: $arrow-center;
@@ -98,6 +113,11 @@ $arrow-right: 90%;
 
 .sc-popover.sc-popover-right {
   right: $L;
+
+  @include mqmax(482px - 1) {
+    left: 8px;
+    right: inherit;
+  }
 
   &:before,
   &:after {
