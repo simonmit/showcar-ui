@@ -85,47 +85,17 @@
 
   // Expandable Menu Items
   .submenu {
-    padding: 0 0 7px $XL;
+    padding: 0 0 7px 24px;
     transition: max-height 0.3s ease-out;
     display: none;
 
     &.visible-on-mobile {
       display: block;
     }
-
-    ul li {
-      padding-left: $L;
-    }
-
-    ul li.subheadline {
-      padding-left: 0;
-    }
-
-    .extended li {
-      padding-left: 0;
-    }
   }
 
   li.open .submenu {
     display: block;
-  }
-
-  @media (min-width: 923px) {
-    li.open .submenu:not(.extended) {
-      min-width: 165px;
-    }
-    li.open .submenu.extended {
-      display: flex;
-
-      & > * {
-    
-        width: 165px;
-
-        &:not(:first-child) {
-          margin-left: 20px;
-        }
-      }
-    }
   }
 
   // Subheadline for Menu Items
@@ -216,8 +186,6 @@
   }
 
   li {
-    // overflow: hidden;
-
     &:hover,
     &.open {
       .title {
@@ -235,11 +203,12 @@
   }
 
   /* Special empty li separator */
-  li.separator {
+  .separator {
     box-sizing: border-box;
     height: 1px;
     margin: $M 0;
     border-top: 1px solid $black-30;
+    display: block;
   }
 
   // Menubar Item subtitle
@@ -253,10 +222,12 @@
     overflow: hidden;
 
     a {
-      display: block;
       padding: $S 20px;
       text-decoration: none;
+    }
 
+    a:not(.button-with-subtitle):not(.sc-link) {
+      display: block;
       @include link(M, $variant: $black-120);
     }
   }
@@ -286,21 +257,34 @@
   .button-with-subtitle {
     padding-left: 10px;
 
-    > a {
-      @extend .sc-btn-ross;
-      @extend .sc-btn-block;
-    }
-
-    span {
+    ~ span:first-of-type {
       display: block;
-      padding: $L 0 $XS;
       font-size: 13px;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
       a {
-        @extend .sc-link;
         display: inline;
         font-size: 13px;
         padding: 0;
+      }
+    }
+  }
+
+  @media (min-width: 923px) {
+    .open .submenu:not(.extended) {
+      min-width: 165px;
+    }
+    .open .submenu.extended {
+      display: flex;
+
+      & > * {
+    
+        width: 165px;
+
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -340,24 +324,8 @@
         padding-right: 0;
       }
 
-      ul li {
-        padding-left: 0;
-      }
-
       .extended {
         display: flex;
-
-        > li {
-          padding-left: $XXL;
-
-          &:first-child {
-            padding-left: 0;
-          }
-        }
-
-        ul li:not(.subheadline) {
-          padding-left: 0;
-        }
       }
     }
 
@@ -367,14 +335,6 @@
         left: auto;
       }
     }
-
-    // .left,
-    // .right {
-    //   li {
-    //     border: 1px solid $white;
-    //     border-width: 0 1px;
-    //   }
-    // }
 
     li {
       position: relative;
@@ -513,22 +473,15 @@
 
 .skip-main {
   position: absolute;
-  left: -999px;
-  top: auto;
   width: 1px;
-  height: 1px;
   overflow: hidden;
-  z-index: -999;
 
   &:focus,
   &:active {
     color: $white;
     display: block;
     background-color: $black-100;
-    left: auto;
-    top: auto;
     width: 30%;
-    height: auto;
     overflow: auto;
     margin: 10px 35%;
     padding: 5px;
@@ -536,7 +489,7 @@
     border: 2px solid $black-60;
     text-align: center;
     font-size: 1.2em;
-    z-index: 999;
+    z-index: 140; // more than header
   }
 }
 
