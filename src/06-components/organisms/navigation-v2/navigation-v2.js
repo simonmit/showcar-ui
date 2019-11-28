@@ -5,10 +5,7 @@ export default () => {
         if (!header) {
             return;
         }
-        if(keyCode === 9) {
-            // TAB
-            header.classList.add('sc-focus-visible-only');
-        } else if(keyCode === 27) {
+        if(keyCode === 27) {
             // ESCAPE
             e.target.closest('.sc-navigation-v2 nav li.open').classList.remove('open');
         }

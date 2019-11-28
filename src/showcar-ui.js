@@ -86,10 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // navigation-v2
 import navigationv2 from './06-components/organisms/navigation-v2/navigation-v2';
-// Loading on document ready. Otherwise the navigation does not work in IE11.
-document.addEventListener('DOMContentLoaded', function() {
-    navigationv2();
-});
+navigationv2();
 
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
@@ -103,6 +100,10 @@ if (! window.notification) {
 //Scroll
 import registerSmoothScrolling from './07-utilities/scroll';
 registerSmoothScrolling();
+
+//Add borders to links when tab was hit
+import accessibleLinks from './07-utilities/accessible-links';
+accessibleLinks();
 
 //Clean up cookies
 import cleanCookies from './js/showcar-clean-cookies';
