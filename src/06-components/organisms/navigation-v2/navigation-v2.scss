@@ -86,7 +86,7 @@
   // Expandable Menu Items
   .submenu {
     padding: 0 0 7px 24px;
-    transition: max-height 0.3s ease-out;
+    transition: 0.3s ease-out;
     display: none;
 
     &.visible-on-mobile {
