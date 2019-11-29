@@ -306,6 +306,10 @@
             <a href="/docs/organisms/navigation" class="open-separate"></a>
         </li>
 <li>
+            <a data-scroll href="#navigation-v2-target">navigation-v2</a>
+            <a href="/docs/organisms/navigation-v2" class="open-separate"></a>
+        </li>
+<li>
             <a data-scroll href="#pagination-target">pagination</a>
             <a href="/docs/organisms/pagination" class="open-separate"></a>
         </li>
@@ -2927,6 +2931,27 @@ myLightbox.hide();</code></pre>
                 </div>
             
 <hr></div><div id="link-target" class="positon-anchor">
+                <div class="element" id="btn-link">
+                    <div class="markdown"><h2>Button link<span class="status approved">Approved</span></h2>
+</div>
+                   <div class="sample"><button class="sc-link">Button link</button>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-btn-link" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-btn-link" class="hjs html">&lt;button class=&quot;sc-link&quot;&gt;Button link&lt;/button&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
                 <div class="element" id="default-link">
                     <div class="markdown"><h2>Link default<span class="status approved">Approved</span></h2>
 </div>
@@ -6543,6 +6568,583 @@ background-color: #f4f4f4;
         &lt;/ul&gt;
     &lt;/nav&gt;
 &lt;/header&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+<hr></div><div id="navigation-v2-target" class="positon-anchor">
+                <div class="element" id="navigation-v2-default">
+                    <div class="markdown"><h2>Navigation v2<span class="status js">JS</span></h2>
+
+<p>This is the <em>current</em> navigation component. It should be preferred over (old)Navigation component as it uses flex-box for layout and is based on mobile-first approach.</p>
+<style>
+#navigation-v2-default .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><a class="skip-main" href="#main-target">Skip to main content</a>
+<header class="sc-navigation-v2" role="navigation">
+    <div class="bar">
+        <button class="sc-btn-mobile-menu" aria-expanded="false"><span></span>Menu</button>
+        <a href="https://www.autoscout24.de" class="icon-auto24">
+            <as24-icon type="auto24"></as24-icon>
+        </a>
+    </div>
+    <nav aria-label="mainmenu">
+        <ul class="left">
+            <li>
+                <a href="http://google.de/" target="_blank">Suchen</a>
+            </li>
+
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Verkaufen</button>
+                <div class="submenu">
+                    <span class="subheadline">I am small text</span>
+                    <a href="#navigation-v2">Menu 1 Link 1</a>
+                    <a href="#navigation-v2">Menu 1 Link<em class="sc-disruptor-small"> New</em></a>
+                    <a href="#navigation-v2">Menu 1 Link 3</a>
+                </div>
+            </li>
+
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Informieren</button>
+                <span class="subtitle">You place me below top level link. I will be truncated</span>
+                <div class="submenu extended">
+                    <div>
+                        <span class="subheadline">Left header</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Right Header</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="left-flyout">
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Finanzieren</button>
+                <div class="submenu extended">
+                    <div>
+                        <span class="subheadline">Submenu 1</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Submenu 2</span>
+                        <a href="#navigation-v2">Submenu 2 Link 1</a>
+                        <a href="#navigation-v2">Submenu 2 Link 2</a>
+                        <a href="#navigation-v2">Submenu 2 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Submenu 3</span>
+                        <a href="#navigation-v2">Submenu 3 Link 1</a>
+                        <a href="#navigation-v2">Submenu 3 Link 2</a>
+                        <a href="#navigation-v2">Submenu 3 Link 3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="right left-flyout">
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Mein Konto</button>
+                <span class="subtitle">I am small text</span>
+                <div class="submenu visible-on-mobile">
+                    <a href="#navigation-v2">Right menu Link 1 (<span>0</span>)</a>
+                    <a href="#navigation-v2">Right menu Link 2</a>
+                    <a href="#navigation-v2">Right menu Link 3</a>
+                    <a href="#navigation-v2" class="sc-btn-ross sc-btn-block button-with-subtitle">Button Link</a>
+                    <span>Small Tagline?
+                        <a href="#navigation-v2" class="sc-link">Click me</a>
+                    </span>
+                    <span class="separator"></span>
+                    <a href="#navigation-v2">Another link</a>
+                </div>
+            </li>
+
+            <li class="country-selector">
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false"><as24-icon type="flag/de"></as24-icon></button>
+                <div class="submenu">
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                        </a>
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                        </a>
+                    <span>—</span>
+                    <a href="#navigation-v2">Български</a>
+                    <a href="#navigation-v2">Česky</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<span id="main-target"></span>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-default" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-default" class="hjs html">&lt;a class=&quot;skip-main&quot; href=&quot;#main-target&quot;&gt;Skip to main content&lt;/a&gt;
+&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;button class=&quot;sc-btn-mobile-menu&quot; aria-expanded=&quot;false&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+            &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;nav aria-label=&quot;mainmenu&quot;&gt;
+        &lt;ul class=&quot;left&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Suchen&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Verkaufen&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                    &lt;span class=&quot;subheadline&quot;&gt;I am small text&lt;/span&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 1&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link&lt;em class=&quot;sc-disruptor-small&quot;&gt; New&lt;/em&gt;&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 3&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Informieren&lt;/button&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;You place me below top level link. I will be truncated&lt;/span&gt;
+                &lt;div class=&quot;submenu extended&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Left header&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Right Header&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;left-flyout&quot;&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Finanzieren&lt;/button&gt;
+                &lt;div class=&quot;submenu extended&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 1&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 2&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 3&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul class=&quot;right left-flyout&quot;&gt;
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Mein Konto&lt;/button&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;I am small text&lt;/span&gt;
+                &lt;div class=&quot;submenu visible-on-mobile&quot;&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 1 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 2&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Right menu Link 3&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot; class=&quot;sc-btn-ross sc-btn-block button-with-subtitle&quot;&gt;Button Link&lt;/a&gt;
+                    &lt;span&gt;Small Tagline?
+                        &lt;a href=&quot;#navigation-v2&quot; class=&quot;sc-link&quot;&gt;Click me&lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Another link&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;country-selector&quot;&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;span&gt;&mdash;&lt;/span&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Ccaron;esky&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;span id=&quot;main-target&quot;&gt;&lt;/span&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="navigation-v2-variation1">
+                    <div class="markdown"><h2>Navigation v2 - Variation1<span class="status js">JS</span></h2>
+
+<p>It shows a layout where right menu has slightly different menu options.</p>
+<style>
+#navigation-v2-variation1 .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><a class="skip-main" href="#main-target">Skip to main content</a>
+<header class="sc-navigation-v2" role="navigation">
+    <div class="bar">
+        <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+        <a href="https://www.autoscout24.de" class="icon-auto24">
+            <as24-icon type="auto24"></as24-icon>
+        </a>
+    </div>
+    <nav aria-label="mainmenu">
+        <ul class="left">
+            <li>
+                <a href="http://google.de/" target="_blank">Link Without Subnav</a>
+            </li>
+
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Menu 1</button>
+                <span class="subtitle">I am small text</span>
+                <div class="submenu">
+                    <a href="#navigation-v2">Menu 1 Link 1</a>
+                    <a href="#navigation-v2">Menu 1 Link 2<em class="sc-disruptor-small"> New</em></a>
+                    <a href="#navigation-v2">Menu 1 Link 3</a>
+                </div>
+            </li>
+
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Sub menu Right</button>
+                <span class="subtitle">You place me below top level link. I will be truncated</span>
+                <div class="submenu extended">
+                    <div>
+                        <span class="subheadspanne">Left header</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Right Header</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="left-flyout">
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Submenu Left</button>
+                <div class="submenu extended">
+                    <div>
+                        <span class="subheadline">Submenu 1</span>
+                        <a href="#navigation-v2">Submenu 1 Link 1</a>
+                        <a href="#navigation-v2">Submenu 1 Link 2</a>
+                        <a href="#navigation-v2">Submenu 1 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Submenu 2</span>
+                        <a href="#navigation-v2">Submenu 2 Link 1</a>
+                        <a href="#navigation-v2">Submenu 2 Link 2</a>
+                        <a href="#navigation-v2">Submenu 2 Link 3</a>
+                    </div>
+                    <div>
+                        <span class="subheadline">Submenu 3</span>
+                        <a href="#navigation-v2">Submenu 3 Link 1</a>
+                        <a href="#navigation-v2">Submenu 3 Link 2</a>
+                        <a href="#navigation-v2">Submenu 3 Link 3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="right left-flyout">
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Right Menu</button>
+                <div class="submenu">
+                    <a href="#">Right menu Link 1</a>
+                    <a href="#">Right menu Link 2</a>
+                    <a href="#">Right menu Link 3</a>
+                    <span class="separator"></span>
+                    <a rel="nofollow" href="#">Another Link</a>
+                </div>
+            </li>
+
+            <li class="country-selector">
+                <button class="title sc-inline-link sc-btn-block aria-haspopup="true" aria-expanded="false""><as24-icon type="flag/de"></as24-icon></button>
+                <div class="submenu">
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                        </a>
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                        </a>
+                    <span>—</span>
+                    <a href="#navigation-v2">Български</a>
+                    <a href="#navigation-v2">Česky</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<span id="#main-target"></span>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-variation1" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-variation1" class="hjs html">&lt;a class=&quot;skip-main&quot; href=&quot;#main-target&quot;&gt;Skip to main content&lt;/a&gt;
+&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+            &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;nav aria-label=&quot;mainmenu&quot;&gt;
+        &lt;ul class=&quot;left&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;http://google.de/&quot; target=&quot;_blank&quot;&gt;Link Without Subnav&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Menu 1&lt;/button&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;I am small text&lt;/span&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 1&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 2&lt;em class=&quot;sc-disruptor-small&quot;&gt; New&lt;/em&gt;&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;Menu 1 Link 3&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Sub menu Right&lt;/button&gt;
+                &lt;span class=&quot;subtitle&quot;&gt;You place me below top level link. I will be truncated&lt;/span&gt;
+                &lt;div class=&quot;submenu extended&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadspanne&quot;&gt;Left header&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Right Header&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;left-flyout&quot;&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Submenu Left&lt;/button&gt;
+                &lt;div class=&quot;submenu extended&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 1&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 1 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 2&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 2 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;subheadline&quot;&gt;Submenu 3&lt;/span&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 1&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 2&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;Submenu 3 Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul class=&quot;right left-flyout&quot;&gt;
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Right Menu&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;Right menu Link 1&lt;/a&gt;
+                    &lt;a href=&quot;#&quot;&gt;Right menu Link 2&lt;/a&gt;
+                    &lt;a href=&quot;#&quot;&gt;Right menu Link 3&lt;/a&gt;
+                    &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+                    &lt;a rel=&quot;nofollow&quot; href=&quot;#&quot;&gt;Another Link&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;country-selector&quot;&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;span&gt;&mdash;&lt;/span&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Ccaron;esky&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;span id=&quot;#main-target&quot;&gt;&lt;/span&gt;
+</code>
+                            </pre>
+                        </div>
+                        <div class="code-sample-toggle"><span>Show</span> code sample</div>
+                    </div>
+                 
+                </div>
+            
+
+                <div class="element" id="navigation-v2-variation2">
+                    <div class="markdown"><h2>Navigation v2 - Variation2<span class="status js">JS</span></h2>
+
+<p>Layout with minimal links on left and right navigation.</p>
+<style>
+#navigation-v2-variation2 .sample{
+background-color: #f4f4f4;
+}
+</style></div>
+                   <div class="sample"><a class="skip-main" href="#main-target">Skip to main content</a>
+<header class="sc-navigation-v2" role="navigation">
+    <div class="bar">
+        <button class="sc-btn-mobile-menu"><span></span>Menu</button>
+        <a href="https://www.autoscout24.de" class="icon-auto24">
+            <as24-icon type="auto24"></as24-icon>
+        </a>
+    </div>
+    <nav aria-label="mainmenu">
+        <ul class="left">
+            <li>
+                <a href="http://google.de/">Link Without Subnav 1</a>
+            </li>
+
+            <li>
+                <a href="http://google.de/">Link Without Subnav 2</a>
+            </li>
+            
+            <li>
+                <a href="http://google.de/">Link Without Subnav 3</a>
+            </li>
+        </ul>
+
+        <ul class="right left-flyout">
+            <li>
+                <button class="title sc-inline-link sc-btn-block" aria-haspopup="true" aria-expanded="false">Right Menu</button>
+                <div class="submenu">
+                        <a href="#navigation-v2-variation2">Right menu Link 1 (<span>0</span>)</a>
+                        <a href="#navigation-v2-variation2">Right menu Link 2 (<span>0</span>)</a>
+                </div>
+            </li>
+
+            <li class="country-selector">
+                <button class="title sc-inline-link sc-btn-block aria-haspopup="true" aria-expanded="false""><as24-icon type="flag/de"></as24-icon></button>
+                <div class="submenu">
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/de"></as24-icon><span>Deutschland</span>
+                        </a>
+                        <a href="#navigation-v2">
+                            <as24-icon type="flag/be"></as24-icon><span>België/Belgique</span>
+                        </a>
+                    <span>—</span>
+                    <a href="#navigation-v2">Български</a>
+                    <a href="#navigation-v2">Česky</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<span id="#main-target"></span>
+</div> 
+                    <div class="code-sample">
+                        <div class="code">
+                            <button class="clipbrd-btn" data-clipboard-target="#copy_code-code-navigation-v2-variation2" title="Copy to clipboard">
+                                <span></span>
+                             </button>
+                            <pre>
+                                <code id="copy_code-code-navigation-v2-variation2" class="hjs html">&lt;a class=&quot;skip-main&quot; href=&quot;#main-target&quot;&gt;Skip to main content&lt;/a&gt;
+&lt;header class=&quot;sc-navigation-v2&quot; role=&quot;navigation&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;button class=&quot;sc-btn-mobile-menu&quot;&gt;&lt;span&gt;&lt;/span&gt;Menu&lt;/button&gt;
+        &lt;a href=&quot;https://www.autoscout24.de&quot; class=&quot;icon-auto24&quot;&gt;
+            &lt;as24-icon type=&quot;auto24&quot;&gt;&lt;/as24-icon&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;nav aria-label=&quot;mainmenu&quot;&gt;
+        &lt;ul class=&quot;left&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 1&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 2&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;
+                &lt;a href=&quot;http://google.de/&quot;&gt;Link Without Subnav 3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul class=&quot;right left-flyout&quot;&gt;
+            &lt;li&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Right Menu&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                        &lt;a href=&quot;#navigation-v2-variation2&quot;&gt;Right menu Link 1 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2-variation2&quot;&gt;Right menu Link 2 (&lt;span&gt;0&lt;/span&gt;)&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;country-selector&quot;&gt;
+                &lt;button class=&quot;title sc-inline-link sc-btn-block aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&quot;&gt;&lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;/button&gt;
+                &lt;div class=&quot;submenu&quot;&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/de&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Deutschland&lt;/span&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#navigation-v2&quot;&gt;
+                            &lt;as24-icon type=&quot;flag/be&quot;&gt;&lt;/as24-icon&gt;&lt;span&gt;Belgi&euml;/Belgique&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;span&gt;&mdash;&lt;/span&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;&lt;/a&gt;
+                    &lt;a href=&quot;#navigation-v2&quot;&gt;&Ccaron;esky&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;span id=&quot;#main-target&quot;&gt;&lt;/span&gt;
 </code>
                             </pre>
                         </div>
