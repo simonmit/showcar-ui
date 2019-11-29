@@ -1,4 +1,4 @@
-@import '../../../01-settings/variables';
+// TODO: Discuss if inline-link is still needed - could be removed completely
 @import '../../../02-sass-tools/link';
 
 a,
@@ -8,12 +8,4 @@ a,
 
 .sc-inline-link {
   @include link($variant: black);
-}
-
-button {
-  &.sc-link, &.sc-inline-link {
-    background-color: transparent;
-    border: none;
-    font-size: $L;
-  }
 }

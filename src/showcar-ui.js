@@ -84,10 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation();
 });
 
-// navigation-v2
-import navigationv2 from './06-components/organisms/navigation-v2/navigation-v2';
-navigationv2();
-
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
 // TODO do we still need it?
@@ -100,10 +96,6 @@ if (!window.notification) {
 //Scroll
 import registerSmoothScrolling from './07-utilities/scroll';
 registerSmoothScrolling();
-
-//Add borders to links when tab was hit
-import accessibleLinks from './07-utilities/accessible-links';
-accessibleLinks();
 
 //Clean up cookies
 import cleanCookies from './js/showcar-clean-cookies';
