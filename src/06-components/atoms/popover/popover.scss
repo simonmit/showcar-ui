@@ -1,0 +1,126 @@
+@import '../../../01-settings/variables';
+@import '../../../02-sass-tools/sass-mq';
+
+$arrow-left: 10%;
+$arrow-center: 50%;
+$arrow-right: 90%;
+
+.sc-popover {
+  background: $white;
+  border: 1px solid $black-30;
+  border-radius: $XS;
+  box-shadow: 0 0 10px $black-30;
+  margin-top: $L;
+
+  @include mqmax(482px - 1) {
+    width: calc(100% - 16px);
+    left: 8px;
+  }
+
+  max-width: 450px;
+  padding: $L;
+  position: absolute;
+  z-index: 2;
+
+  &__content {
+
+    &:first-of-type h2,
+    &:first-of-type h3,
+    &:first-of-type h4,
+    &:first-of-type h5 {
+      padding-right: $XXXL;
+    }
+  }
+
+  &__close {
+    height: 32px;
+    width: 32px;
+    line-height: $XL;
+    padding: $S;
+    display: inline-block;
+    position: absolute;
+    top: $L;
+    right: $L;
+    background: $white;
+    border: 1px solid $black-30;
+    cursor: pointer;
+    border-radius: $XS;
+    transition: border-color 0.2s;
+    z-index: 1;
+
+    svg {
+      transition: fill 0.2s;
+      fill: $black-60;
+      width: $M;
+      height: $M;
+    }
+  }
+
+  &__close:hover {
+    border-color: $black-90;
+
+    svg {
+      fill: $black-90;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    left: $arrow-left;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  &:before {
+    border: 14px solid transparent;
+    border-bottom-color: $black-30;
+  }
+
+  &:after {
+    border: 13px solid transparent;
+    border-bottom-color: $white;
+  }
+}
+
+.sc-popover.sc-popover-left {
+  left: 0;
+
+  &:before,
+  &:after {
+    left: $arrow-left;
+  }
+}
+
+.sc-popover.sc-popover-center {
+  left: 25%;
+
+  @include mqmax(768px) {
+    left: calc((100% - 450px) / 2);
+  }
+
+  @include mqmax(482px - 1) {
+    left: 8px;
+  }
+
+  &:before,
+  &:after {
+    left: $arrow-center;
+  }
+}
+
+.sc-popover.sc-popover-right {
+  right: $L;
+
+  @include mqmax(482px - 1) {
+    left: 8px;
+    right: inherit;
+  }
+
+  &:before,
+  &:after {
+    left: $arrow-right;
+  }
+}

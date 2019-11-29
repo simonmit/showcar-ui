@@ -1,5 +1,5 @@
 // Todo: remove Zepto
-if(!window.$){
+if (!window.$) {
     window.$ = window.Zepto = require('zepto-modules/zepto');
     require('zepto-modules/event');
     require('zepto-modules/ajax');
@@ -45,7 +45,7 @@ rotatingArrow();
 
 // Collapse
 import collapse from './06-components/atoms/collapse/collapse';
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     collapse();
 });
 
@@ -80,7 +80,7 @@ tag();
 // navigation
 import navigation from './06-components/organisms/navigation/navigation';
 // Loading on document ready. Otherwise the navigation does not work in IE11.
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     navigation();
 });
 
@@ -91,7 +91,7 @@ navigationv2();
 // notification
 import notification from './06-components/molecules/notification/notification'; // TODO: question for the guild
 // TODO do we still need it?
-if (! window.notification) {
+if (!window.notification) {
     window.notification = notification('as24-notification');
 } else {
     warn('window.notification is already registered.');
@@ -107,7 +107,7 @@ accessibleLinks();
 
 //Clean up cookies
 import cleanCookies from './js/showcar-clean-cookies';
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     cleanCookies();
 });
 
@@ -115,7 +115,11 @@ window.addEventListener('load', function() {
 window.Storage = require('showcar-storage');
 
 //lazysizes
-window.lazySizesConfig = { loadMode: 1, expFactor: 0, hFac: 0 };
+window.lazySizesConfig = {
+    loadMode: 1,
+    expFactor: 0,
+    hFac: 0
+};
 import 'lazysizes';
 
 window.showcar = window.showcar || showcar;

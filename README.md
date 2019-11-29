@@ -15,12 +15,13 @@ To install showcar-ui within your project use npm.
 
 ## How to build:
 
-We are using *node 10.16.0* version for build. Make sure you have it installed. If you are using `nvm` simply run 
+We are using _node 10.16.0_ version for build. Make sure you have it installed. If you are using `nvm` simply run
 
     nvm use
+
 and follow the instructions
 
-For building on your local machine install all npm packages first. Then you can use the gulp command to run the build: 
+For building on your local machine install all npm packages first. Then you can use the gulp command to run the build:
 
     yarn
     gulp build
@@ -30,6 +31,12 @@ For building on your local machine install all npm packages first. Then you can 
 You can use the gulp default command to run the build locally:
 
     gulp
+
+## How to run tests locally:
+
+You can run tests locally in Chrome:
+
+    gulp test:fast
 
 ### Interacting w/ local changes
 
@@ -49,13 +56,13 @@ Make sure to replace the @@ASSET_PATH string with the path to the JS/CSS file.
 
 You can check development state of the library on home, list and detail page with a parameter `?toguru=sc_develop%3dtrue`.
 
-## How to test fragments with togglea
+## How to test fragments with toggles
 
 You can check any branch of the library on your page with parameter `?toguru=sc_develop%3dtest-branch` where `test-branch` is the name of the desired branch.
 
-Locally run 
+Locally run
 
-   docker-compose up
+docker-compose up
 
 and check `localhost:8080/test/showcar-ui-toggled-fragment.html?toguru=sc_develop%3dtest-branch` where `test-branch` is the name of the branch to test
 
@@ -73,22 +80,22 @@ The showcar-ui library includes some libraries and polyfills:
 
 ### Polyfills
 
- - document-register-element (from [document-register-element](https://www.npmjs.com/package/document-register-element))
- - dom4 (from [dom4](https://www.npmjs.com/package/dom4))
- - Array (.of, .includes, .from, .find)
- - String (.includes, .startsWith, .endsWith)
- - Object (.assign)
- - Promises (from [promiz](https://www.npmjs.com/package/promiz))
- - Fetch (from [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch))
- - URLSearchParams (from [url-search-params-polyfill](https://www.npmjs.com/package/url-search-params-polyfill))
+- document-register-element (from [document-register-element](https://www.npmjs.com/package/document-register-element))
+- dom4 (from [dom4](https://www.npmjs.com/package/dom4))
+- Array (.of, .includes, .from, .find)
+- String (.includes, .startsWith, .endsWith)
+- Object (.assign)
+- Promises (from [promiz](https://www.npmjs.com/package/promiz))
+- Fetch (from [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch))
+- URLSearchParams (from [url-search-params-polyfill](https://www.npmjs.com/package/url-search-params-polyfill))
 
 ### showcar-storage
 
-You can access the Stroage API via the global `Storage` object. For further information see the documentation under https://github.com/AutoScout24/showcar-storage
+You can access the Stroage API via the global `Storage` object. For further information see the documentation under https://github.com/Scout24/showcar-storage
 
 ### showcar-icons
 
-You can use all the icons defined by showcar-icons with the custom `<as24-icon>` tag. For further information see the documentation under https://github.com/AutoScout24/showcar-icons
+You can use all the icons defined by showcar-icons with the custom `<as24-icon>` tag. For further information see the documentation under https://github.com/Scout24/showcar-icons
 
 ### Zepto
 
@@ -127,21 +134,20 @@ Published 13.03.2017
 | header             |              | 130             | useful  |                                                  |
 | notification       |              | 9999            | remove! |                                                  |
 
-
 ## Optimizely (to be continued)
+
 ```js
 window.optimizelyReady.then(() => {
-    const state = window.optimizely.get("state");
-    const variationMap = state.getVariationMap();
+  const state = window.optimizely.get('state');
+  const variationMap = state.getVariationMap();
 
-    const experiment = variationMap["11184022659"];
-    console.log(experiment.name);
-    console.log(experiment.index);
+  const experiment = variationMap['11184022659'];
+  console.log(experiment.name);
+  console.log(experiment.index);
 });
 
-
 window.optimizely.push({
-    type: "event",
-    eventName: "favoritesAdd"
+  type: 'event',
+  eventName: 'favoritesAdd',
 });
 ```
