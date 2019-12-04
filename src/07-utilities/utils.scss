@@ -372,4 +372,18 @@
     height: $XL - 1;
   }
 }
+
+.sc-focus-visible-only {
+  button:focus {
+    outline: 5px auto;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  a:focus {
+    outline: 5px auto;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  button a {
+    margin: 5px;
+  }
+}
 //LEAGACY CODE - SHOULD NOT BE USED
