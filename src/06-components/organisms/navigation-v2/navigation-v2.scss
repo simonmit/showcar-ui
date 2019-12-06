@@ -167,11 +167,15 @@
       padding-left: 0;
     }
 
+    .myaccount {
+      padding-left: 10px;
+    }
+
     .myaccount a:not(.sc-link):not(.button-with-subtitle) {
       display: flex;
       align-items: center;
       text-decoration: none;
-      padding: $S 20px;
+      padding: $S 0;
       @include link(M, $variant: $black-120);
     }
   }
@@ -375,6 +379,7 @@
       font-size: 12px;
       overflow: hidden;
       height: 16px;
+      margin-top: -8px;
     }
 
     .title {
