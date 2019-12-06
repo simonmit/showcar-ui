@@ -123,7 +123,8 @@
       &::before {
         border-top: 1px solid $black-30;
       }
-      &::before, &::after {
+      &::before,
+      &::after {
         margin: 0 0 $S;
         height: 1px;
         line-height: 1px;
@@ -144,6 +145,13 @@
       border-top: 1px solid $black-30;
       content: ' ';
     }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: $S 20px;
+      @include link(M, $variant: $black-120);
+    }
   }
 
   // Right Navigation Bar
@@ -157,6 +165,14 @@
     .submenu {
       max-height: none;
       padding-left: 0;
+    }
+
+    .myaccount a:not(.sc-link):not(.button-with-subtitle) {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: $S 20px;
+      @include link(M, $variant: $black-120);
     }
   }
 
@@ -217,16 +233,6 @@
     transition: max-height 0.5s ease-out;
     max-height: 0;
     overflow: hidden;
-
-    a {
-      padding: $S 20px;
-      text-decoration: none;
-    }
-
-    a:not(.button-with-subtitle):not(.sc-link) {
-      display: block;
-      @include link(M, $variant: $black-120);
-    }
   }
 
   .bar {
@@ -277,7 +283,6 @@
       display: flex;
 
       & > * {
-    
         max-width: 210px;
 
         &:not(:first-child) {
@@ -388,7 +393,7 @@
       .submenu--login {
         min-width: 258px;
       }
-      
+
       .login-teaser {
         position: absolute;
         color: $black-60;
@@ -411,7 +416,7 @@
         display: none;
       }
 
-      >li:not(.open)::after {
+      > li:not(.open)::after {
         display: none;
       }
 
@@ -478,10 +483,17 @@
       a {
         display: flex;
         align-items: center;
+        text-decoration: none;
+        @include link(M, $variant: $black-120);
+        padding: 8px 0;
 
         span {
           margin-left: $M;
           line-height: 1;
+        }
+
+        ~ span ~ a {
+          padding: 0;
         }
       }
     }
