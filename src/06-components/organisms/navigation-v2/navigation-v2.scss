@@ -259,6 +259,7 @@
       font-size: 13px;
       padding-top: 8px;
       padding-bottom: 8px;
+      white-space: nowrap;
 
       a {
         display: inline;
@@ -277,7 +278,7 @@
 
       & > * {
     
-        width: 210px;
+        max-width: 210px;
 
         &:not(:first-child) {
           margin-left: 20px;
@@ -346,7 +347,7 @@
         &::after {
           display: block;
           content: '';
-          height: 2px;
+          height: 10px;
           background-color: $white;
           width: 100%;
           position: absolute;
@@ -382,6 +383,21 @@
     .right {
       .submenu {
         padding-left: $XXL;
+      }
+
+      .submenu--login {
+        min-width: 258px;
+      }
+      
+      .login-teaser {
+        position: absolute;
+        color: $black-60;
+        margin-top: 0;
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 150px;
       }
 
       .title {
@@ -470,6 +486,12 @@
       }
     }
   }
+
+  .hidden-on-mobile {
+    @include mqminmax(0, 923px - 1) {
+      display: none !important;
+    }
+  }
 }
 
 .skip-main {
@@ -491,11 +513,5 @@
     text-align: center;
     font-size: 1.2em;
     z-index: 140; // more than header
-  }
-}
-
-.hidden-on-mobile {
-  @include mqminmax(0, 923px - 1) {
-    display: none !important;
   }
 }
