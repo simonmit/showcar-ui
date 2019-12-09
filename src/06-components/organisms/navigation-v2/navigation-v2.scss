@@ -377,9 +377,12 @@
       padding-left: 11px;
       color: $black-60;
       font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       overflow: hidden;
       height: 16px;
       margin-top: -8px;
+      max-width: 150px;
     }
 
     .title {
@@ -397,17 +400,6 @@
 
       .submenu--login {
         min-width: 258px;
-      }
-
-      .login-teaser {
-        position: absolute;
-        color: $black-60;
-        margin-top: 0;
-        display: block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 150px;
       }
 
       .title {
