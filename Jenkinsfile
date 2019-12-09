@@ -59,7 +59,6 @@ pipeline {
       steps {
         unstash 'output-dev-dist'
         sh './deploy/deploy.sh'
-        input message: "Approve build to be propagated to production?"
         slackSend channel: 'as24_acq_cxp_fizz', color: '#00FF00', message: "Showcar-UI :branch: ${env.BRANCH_NAME} is deployed, check it with toggle `?sc_branch=${env.BRANCH_NAME}`"
       }
     }
