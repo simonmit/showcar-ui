@@ -3,6 +3,12 @@
 @import '../../../02-sass-tools/link';
 @import '../../../02-sass-tools/sass-mq.scss';
 
+$flyout-arrow: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==';
+$flyout-arrow-highlighted: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==';
+
+$navigation-breakpoint: 923px;
+$symbol-highlighted: $orange-100;
+
 .sc-navigation-v2 {
   background-color: $white;
   -webkit-tap-highlight-color: transparent;
@@ -14,19 +20,19 @@
 
   &.open {
     .sc-btn-mobile-menu {
-      color: $orange-100;
+      color: $symbol-highlighted;
 
       span {
         background: transparent;
 
         &::before {
           transform: rotate(45deg) translate(3px, 5px);
-          background: $orange-100;
+          background: $symbol-highlighted;
         }
 
         &::after {
           transform: rotate(-45deg) translate(3px, -6px);
-          background: $orange-100;
+          background: $symbol-highlighted;
         }
       }
     }
@@ -151,6 +157,10 @@
       text-decoration: none;
       padding: $S 20px;
       @include link(M, $variant: $black-120);
+
+      &:focus {
+        color: $symbol-highlighted;
+      }
     }
   }
 
@@ -196,9 +206,16 @@
       margin-right: $L;
       width: 12px;
       height: 12px;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')
-        no-repeat center center;
-      color: $orange-100;
+      background: url($flyout-arrow) no-repeat center center;
+      color: $symbol-highlighted;
+    }
+
+    &:focus {
+      color: $symbol-highlighted;
+
+      &::after {
+        background-image: url($flyout-arrow-highlighted);
+      }
     }
   }
 
@@ -207,7 +224,7 @@
     &.open {
       .title {
         &::after {
-          background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+          background-image: url($flyout-arrow-highlighted);
         }
       }
     }
@@ -279,7 +296,7 @@
     }
   }
 
-  @media (min-width: 923px) {
+  @media (min-width: $navigation-breakpoint) {
     .open .submenu:not(.extended) {
       min-width: 165px;
     }
@@ -296,7 +313,7 @@
     }
   }
 
-  @media screen and (min-width: 923px) {
+  @media screen and (min-width: $navigation-breakpoint) {
     display: flex;
 
     .sc-btn-mobile-menu {
@@ -450,8 +467,6 @@
 
     /* Optional functionality */
     .button-with-subtitle {
-      padding-left: 0;
-
       > a {
         min-width: 200px;
       }
@@ -466,7 +481,7 @@
       display: list-item;
 
       .title {
-        padding-top: 11px;
+        padding-top: 9px;
         padding-bottom: 0;
 
         &::after {
@@ -476,6 +491,7 @@
 
       as24-icon {
         width: 21px;
+        margin-top: 2px;
       }
 
       a {
@@ -498,7 +514,7 @@
   }
 
   .hidden-on-mobile {
-    @include mqminmax(0, 923px - 1) {
+    @include mqminmax(0, $navigation-breakpoint - 1) {
       display: none !important;
     }
   }
