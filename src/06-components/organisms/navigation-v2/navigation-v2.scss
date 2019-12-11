@@ -18,6 +18,15 @@ $symbol-highlighted: $orange-100;
     white-space: nowrap;
   }
 
+  button {
+    &.sc-link, &.sc-inline-link {
+      background-color: transparent;
+      border: none;
+      font-size: $L;
+    }
+  }
+  
+
   &.open {
     .sc-btn-mobile-menu {
       color: $symbol-highlighted;

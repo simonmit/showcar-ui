@@ -9,11 +9,3 @@ a,
 .sc-inline-link {
   @include link($variant: black);
 }
-
-button {
-  &.sc-link, &.sc-inline-link {
-    background-color: transparent;
-    border: none;
-    font-size: $L;
-  }
-}
