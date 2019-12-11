@@ -19,13 +19,13 @@ $symbol-highlighted: $orange-100;
   }
 
   button {
-    &.sc-link, &.sc-inline-link {
+    &.sc-link,
+    &.sc-inline-link {
       background-color: transparent;
       border: none;
       font-size: $L;
     }
   }
-  
 
   &.open {
     .sc-btn-mobile-menu {
@@ -331,6 +331,12 @@ $symbol-highlighted: $orange-100;
 
     .bar {
       padding: $L;
+
+      .icon-auto24,
+      as24-icon {
+        width: 85px;
+        height: 39px;
+      }
     }
 
     .subheadline {
