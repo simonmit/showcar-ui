@@ -8,6 +8,7 @@ $flyout-arrow-highlighted: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3
 
 $navigation-breakpoint: 923px;
 $symbol-highlighted: $orange-100;
+$header-height: 71px;
 
 .sc-navigation-v2 {
   background-color: $white;
@@ -323,6 +324,7 @@ $symbol-highlighted: $orange-100;
 
   @media screen and (min-width: $navigation-breakpoint) {
     display: flex;
+    height: $header-height;
 
     .sc-btn-mobile-menu {
       display: none;
@@ -351,7 +353,8 @@ $symbol-highlighted: $orange-100;
       transition: none;
       max-height: 0;
       background-color: $white;
-      top: 68px;
+      /* top value has to be equivalant to the header's height, to hide the border between header and submenu */
+      top: $header-height;
       border: 1px solid $black-30;
       left: -1px;
       padding: $M $XXL;
