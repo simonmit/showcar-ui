@@ -115,9 +115,8 @@ $symbol-highlighted: $orange-100;
 
   // Subheadline for Menu Items
   .subheadline {
+    @include font(S, $silent: true);
     padding: $XS;
-    color: $black-60;
-    font-size: $M;
 
     &:hover {
       cursor: default;
@@ -404,11 +403,11 @@ $symbol-highlighted: $orange-100;
     }
 
     .subtitle {
+      @include font(S, $silent: true);
+
       display: inline-block;
       position: absolute;
       padding-left: 11px;
-      color: $black-60;
-      font-size: 12px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
