@@ -8,6 +8,7 @@ $flyout-arrow-highlighted: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3
 
 $navigation-breakpoint: 923px;
 $symbol-highlighted: $orange-100;
+$header-height: 71px;
 
 .sc-navigation-v2 {
   background-color: $white;
@@ -19,13 +20,13 @@ $symbol-highlighted: $orange-100;
   }
 
   button {
-    &.sc-link, &.sc-inline-link {
+    &.sc-link,
+    &.sc-inline-link {
       background-color: transparent;
       border: none;
       font-size: $L;
     }
   }
-  
 
   &.open {
     .sc-btn-mobile-menu {
@@ -115,9 +116,8 @@ $symbol-highlighted: $orange-100;
 
   // Subheadline for Menu Items
   .subheadline {
+    @include font(S, $silent: true);
     padding: $XS;
-    color: $black-60;
-    font-size: $M;
 
     &:hover {
       cursor: default;
@@ -324,6 +324,7 @@ $symbol-highlighted: $orange-100;
 
   @media screen and (min-width: $navigation-breakpoint) {
     display: flex;
+    height: $header-height;
 
     .sc-btn-mobile-menu {
       display: none;
@@ -331,6 +332,12 @@ $symbol-highlighted: $orange-100;
 
     .bar {
       padding: $L;
+
+      .icon-auto24,
+      as24-icon {
+        width: 85px;
+        height: 39px;
+      }
     }
 
     .subheadline {
@@ -346,7 +353,8 @@ $symbol-highlighted: $orange-100;
       transition: none;
       max-height: 0;
       background-color: $white;
-      top: 68px;
+      /* top value has to be equivalant to the header's height, to hide the border between header and submenu */
+      top: $header-height;
       border: 1px solid $black-30;
       left: -1px;
       padding: $M $XXL;
@@ -398,11 +406,11 @@ $symbol-highlighted: $orange-100;
     }
 
     .subtitle {
+      @include font(S, $silent: true);
+
       display: inline-block;
       position: absolute;
       padding-left: 11px;
-      color: $black-60;
-      font-size: 12px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
