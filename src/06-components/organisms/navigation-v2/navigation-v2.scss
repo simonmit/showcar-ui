@@ -266,7 +266,7 @@ $header-height: 71px;
   }
 
   .bar {
-    padding: $S 0 $M;
+    padding: 10px 0;
     text-align: center;
     height: 35px;
     box-sizing: content-box;
@@ -353,8 +353,8 @@ $header-height: 71px;
       transition: none;
       max-height: 0;
       background-color: $white;
-      /* top value has to be equivalant to the header's height, to hide the border between header and submenu */
-      top: $header-height;
+      /* top value has to be equivalant to the header's height - border size, to hide the border between header and submenu */
+      top: $header-height - 1px;
       border: 1px solid $black-30;
       left: -1px;
       padding: $M $XXL;
