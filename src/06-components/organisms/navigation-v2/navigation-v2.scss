@@ -6,11 +6,11 @@
 $flyout-arrow: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiM5NDk0OTQiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==';
 $flyout-arrow-highlighted: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjYuMjc2NjEzMiIgdmlld0JveD0iMCAwIDEwLjUgNi4yNzY2MTMyIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIGQ9Ik0gMC4wMDQzNjQ1OSwwLjAyODQ2Mzk3IDQuNTc4ODgzNCw0LjIxOTIwNzYgOS4xNTMyNTg5LDAuMDI4ODE5NzUiIHN0cm9rZS13aWR0aD0iMS45OTk2NzAzOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjY3IC43MTQpIiBzdHJva2U9IiNmZjc1MDAiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==';
 
-$navigation-breakpoint: 923px;
 $symbol-highlighted: $orange-100;
 $header-height: 71px;
 
-.sc-navigation-v2 {
+// Dealer Team is using the styles from mixing because their header has different breakpoints
+@mixin sc-navigation-v2-mixin($breakpoint) {
   background-color: $white;
   -webkit-tap-highlight-color: transparent;
   border-bottom: solid 1px $black-30;
@@ -305,7 +305,7 @@ $header-height: 71px;
     }
   }
 
-  @media (min-width: $navigation-breakpoint) {
+  @media (min-width: $breakpoint) {
     .open .submenu:not(.extended) {
       min-width: 165px;
     }
@@ -322,7 +322,7 @@ $header-height: 71px;
     }
   }
 
-  @media screen and (min-width: $navigation-breakpoint) {
+  @media screen and (min-width: $breakpoint) {
     display: flex;
     height: $header-height;
 
@@ -531,10 +531,14 @@ $header-height: 71px;
   }
 
   .hidden-on-mobile {
-    @include mqminmax(0, $navigation-breakpoint - 1) {
+    @include mqminmax(0, $breakpoint - 1) {
       display: none !important;
     }
   }
+}
+
+.sc-navigation-v2 {
+  @include sc-navigation-v2-mixin(923px);
 }
 
 .skip-main {
