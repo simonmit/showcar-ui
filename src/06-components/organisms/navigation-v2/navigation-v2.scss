@@ -308,10 +308,12 @@ $header-height: 71px;
       min-width: 165px;
     }
     .open .submenu.extended {
-      display: flex;
+      white-space: nowrap;
 
       & > * {
         max-width: 210px;
+        display: inline-block;
+        vertical-align: top;
 
         &:not(:first-child) {
           margin-left: 20px;
