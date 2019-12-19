@@ -11,6 +11,9 @@ env:
   global:
     - secure: "QlPJQwynPbNLFeprD57TfAnYMQzXmqmZoVRSz5NzldrKqWpavl53UGavchPZhRqBm6Qx63urUYmSne5gt8HTcgqgUX/CZBk5dKpruT2Lb/ynG77NWA5skVcSFRL9/UsU1m++l2wCGLAK1LvcRpduzD0puWS4af91ZhCD7p+kLe1C9RG4Fz4VcssaGsW0nQ9kNxdHjWsN/Gu1PXfKcxHcsMZgHafaDvrsqLt/nVWeGJxJLwj29IvabDtaRPJFQfr9VNlOEECEmqbPzXa5tUA5+0I0BHHoAmwtMfNcRAbDAIjDQurD3i7G/7eHQP1ZQb3q3s/adbsKQVGtnMGknnYSiFvzOj4mL9hp8J7WXzvnkw7ow13Dzw7qGHu4DIi4ooFQ/TlVstP7cRDh8jep0LB5kN0d/fAPlNRWVDNLhCKZkhFkZrySVNCg5VeI6EmmkHJfroJuW75cKuAK6LQ5hUq1XghvYQwowiz3RM6OugyolblLmULP5mh4k2nCO/cO7tCN+NGngcBsrs/O/EP682VjVzJHZsevgXgVpEdpQKEkxiIsjcmcFedIBzqxbgeLkheQAfbOxdciPFX+US7POC4RBM/oWOYRymt9uYksJqU6iOfDZ57WiB0oqsc3vMQlVLBrB10OUm2K1milTpyw13K3wbo/6ukZZ+JI8ddqznaWr9o="
 
+addons:
+  sauce_connect: true
+
 before_install:
     - set -e
 
