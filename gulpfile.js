@@ -168,6 +168,6 @@ gulp.task('test:travis', gulp.series('docs:serve', scgulp.karma(
         sauceLabs: {
             project: 'Showcar-ui',
         },
-        brwosers: ['sl_chrome', 'sl_ie', 'sl_firefox', 'sl_edge', 'sl_safari']
+        browsers: ['sl_chrome', 'sl_ie', 'sl_firefox', 'sl_edge', 'sl_safari']
     })
 )));
