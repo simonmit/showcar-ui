@@ -9539,10 +9539,10 @@ showcar-carousel@^4.3.4, showcar-carousel@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/showcar-carousel/-/showcar-carousel-4.4.1.tgz#7e1c347ded96a6cc1633287299a6f64524194f3f"
 
-showcar-gulp@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/showcar-gulp/-/showcar-gulp-3.2.4.tgz#ab4ef350af0d051f9fe76c9568f9b20e4a79b0fe"
-  integrity sha512-oP+McW76SYw4fta2OYSA8TulnoPFp/qdeUIIRD4hBO5jU7vLKHFLO5aNDmdQKNNphS+COVSmYXbUbObMW3vIzQ==
+showcar-gulp@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/showcar-gulp/-/showcar-gulp-3.2.5.tgz#8880175cfaafe798bc1b15316aa6312f0c388a15"
+  integrity sha512-sA1thfc5Ocn4S7guf7JTUUgyif8kCQ5RaliqfJdzczva2C65MTIQsQZjpi6T25ifqEQSpeKtc/o2gK6eLqkaqw==
   dependencies:
     "@types/chai" "^3.4.35"
     "@types/karma" "^0.13.36"
