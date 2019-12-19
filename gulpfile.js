@@ -141,15 +141,33 @@ gulp.task('test:bs', gulp.series('docs:serve', scgulp.karma(
     }))
 ));
 
+// gulp.task('test:sauce', gulp.series('docs:serve', scgulp.karma(
+//     Object.assign({}, testingParams, {
+//         sauceLabs: {
+//             project: 'Showcar-ui',
+//         },
+//         browsers: ['sl_chrome', 'sl_ie', 'sl_firefox', 'sl_edge']
+//     })
+// )));
+
+// gulp.task('test:travis', gulp.series('docs:serve', scgulp.karma(
+//     Object.assign({}, testingParams, {
+//         browserStack: {
+//             project: 'Showcar-ui',
+//         },
+//         // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
+//         // temporary removed iphones
+//         // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],
+//         browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],  //temporary remove safari
+//         // browsers: ['bs_chrome_win'], //only test on chrome
+//     }))
+// ));
+
 gulp.task('test:travis', gulp.series('docs:serve', scgulp.karma(
     Object.assign({}, testingParams, {
-        browserStack: {
+        sauceLabs: {
             project: 'Showcar-ui',
         },
-        // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win', 'bs_iphone6s', 'bs_iphone7'],
-        // temporary removed iphones
-        // browsers: ['bs_safari_mac', 'bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],
-        browsers: ['bs_chrome_win', 'bs_firefox_win', 'bs_edge_win', 'bs_ie11_win'],  //temporary remove safari
-        // browsers: ['bs_chrome_win'], //only test on chrome
-    }))
-));
+        brwosers: ['sl_chrome', 'sl_ie', 'sl_firefox', 'sl_edge', 'sl_safari']
+    })
+)));
