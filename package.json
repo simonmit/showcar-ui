@@ -39,7 +39,7 @@
     "html-entities": "^1.2.1",
     "marked": "^0.7.0",
     "recursive-readdir-sync": "^1.0.6",
-    "showcar-gulp": "^3.2.0",
+    "showcar-gulp": "^3.2.1",
     "update-notifier": "^2.2.0",
     "yargs": "^4.6.0"
   },
