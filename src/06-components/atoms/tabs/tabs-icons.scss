@@ -57,7 +57,7 @@
 
   &:focus {
     svg g {
-      fill: $coral;
+      fill: $google-blue;
     }
   }
 }
@@ -67,7 +67,7 @@
   height: 41px;
   padding-top: 3px;
   margin-bottom: 0;
-  border-top: 4px solid $coral;
+  border-top: 4px solid $google-blue;
 
   @include mqmin(510px) {
     height: 52px;
@@ -75,6 +75,6 @@
   }
 
   as24-icon svg g {
-    fill: $coral;
+    fill: $google-blue;
   }
 }
