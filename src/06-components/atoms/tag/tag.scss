@@ -2,13 +2,13 @@
 
 @keyframes closing {
   0% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
   // 10% {
   //   transform: scale(1.2,1.2);
   // }
   100% {
-    transform: scale(0,0);
+    transform: scale(0, 0);
   }
 }
 
@@ -17,7 +17,7 @@
   background-color: $black-20;
   border-radius: 20px;
   margin: 2px $XS 2px 0;
-  padding: 5px 0 5px $S;
+  padding: 0 0 0 $S;
 
   &__label {
     display: inline-block;
