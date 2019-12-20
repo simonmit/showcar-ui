@@ -3,30 +3,30 @@
 
 // variables
 // ----------------------------
-$sc-btn-bob-text-color: $white;
-$sc-btn-ross-text-color: $white;
-$sc-btn-ghost-text-color: $google-blue;
-$sc-btn-marketing-text-color: $google-blue;
+$sc-btn-bob-text-color: $black-100;
+$sc-btn-ross-text-color: $black-100;
+$sc-btn-ghost-text-color: $black-100;
+$sc-btn-marketing-text-color: $black-100;
 
-$sc-btn-bob-background-color: $google-blue;
-$sc-btn-ross-background-color: $google-blue;
+$sc-btn-bob-background-color: $yellow;
+$sc-btn-ross-background-color: $black-100;
 $sc-btn-ghost-background-color: $white;
 $sc-btn-marketing-background-color: $white;
 
-$sc-btn-bob-hover-background-color: $google-blue-90;
-$sc-btn-ross-hover-background-color: $google-blue-90;
-$sc-btn-ghost-hover-text-color: $google-blue-90;
-$sc-btn-marketing-hover-text-color: $google-blue-90;
+$sc-btn-bob-hover-background-color: $yellow-90;
+$sc-btn-ross-hover-background-color: $black-120;
+$sc-btn-ghost-hover-text-color: $black-120;
+$sc-btn-marketing-hover-text-color: $black-120;
 
-$sc-btn-bob-active-background-color: $google-blue-90;
-$sc-btn-ross-active-background-color: $google-blue-90;
-$sc-btn-ghost-active-text-color: $google-blue-90;
-$sc-btn-marketing-active-text-color: $google-blue-90;
+$sc-btn-bob-active-background-color: $yellow-90;
+$sc-btn-ross-active-background-color: $black-120;
+$sc-btn-ghost-active-text-color: $black-120;
+$sc-btn-marketing-active-text-color: $black-120;
 
-$sc-btn-bob-disabled-background-color: $google-blue-50;
-$sc-btn-ross-disabled-background-color: $google-blue-50;
-$sc-btn-ghost-disabled-text-color: $google-blue-50;
-$sc-btn-marketing-disabled-text-color: $google-blue-50;
+$sc-btn-bob-disabled-background-color: $yellow-50;
+$sc-btn-ross-disabled-background-color: $black-50;
+$sc-btn-ghost-disabled-text-color: $black-50;
+$sc-btn-marketing-disabled-text-color: $black-50;
 
 @mixin button {
   // max-width: 288px;
@@ -39,14 +39,14 @@ $sc-btn-marketing-disabled-text-color: $google-blue-50;
   appearance: none;
   border: none;
   border-radius: $form-border-radius;
-  color: $white;
+  color: $black-100;
   transition: all $transition-time ease-in;
   transition-property: color, background-color, border-color;
   text-decoration: none;
   text-align: center;
 
   &:hover {
-    color: $white;
+    color: $black-100;
   }
 
   [class^='icon-'] {
@@ -63,6 +63,7 @@ $sc-btn-marketing-disabled-text-color: $google-blue-50;
 
   background-color: $sc-btn-bob-background-color;
   color: $sc-btn-bob-text-color;
+  box-shadow: 1px 1px 5px #949494;
 
   &:hover {
     background-color: $sc-btn-bob-hover-background-color;
@@ -190,6 +191,7 @@ $sc-btn-marketing-disabled-text-color: $google-blue-50;
 .sc-btn-bob-l,
 .sc-btn-bob-m {
   @include button;
+  box-shadow: 1px 1px 5px #949494;
 
   background-color: $orange-100;
 
