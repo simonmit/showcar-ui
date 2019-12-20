@@ -62,3 +62,23 @@
 @import '06-components/organisms/superhero/superhero';
 
 @import '07-utilities/utils';
+
+@font-face {
+  font-family: MakeItSans;
+  src: url(./MakeItSans-Regular.oft);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MakeItSans;
+  src: url(./MakeItSans-Bold.otf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+body {
+  font-family: MakeItSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
