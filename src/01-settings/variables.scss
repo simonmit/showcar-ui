@@ -38,9 +38,13 @@ $orange-40: #ffd5b0;
 $orange-30: #ffe3cc;
 $orange-20: #fff1e5;
 
-$color-link: #007cca;
-$color-link-hover: $blue-90;
-$color-link-active: $blue-100;
+$coral-90: #c7002c;
+$coral-50: #fdb2c3; 
+$coral: #f90038;
+
+$color-link: $coral;
+$color-link-hover: $coral-90;
+$color-link-active: $coral-90;
 
 //use $color-error instead of $color-error-text
 $color-error: #d91a2a;

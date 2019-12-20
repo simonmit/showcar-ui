@@ -29,8 +29,8 @@ $off-grey: #D2D2D2;
   border-top-color: $white;
 
   &.orange {
-    border-color: $off-orange;
-    border-top-color: $orange;
+    border: 6px solid $off-white;
+    border-top-color: $white;
   }
 
   &.grey {
@@ -57,7 +57,7 @@ $off-grey: #D2D2D2;
   }
 
   .orange ~ .sc-spinner-value {
-    color: $orange;
+    color: $white;
   }
 
   .grey ~ .sc-spinner-value {
