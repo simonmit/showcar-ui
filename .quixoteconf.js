@@ -3,7 +3,7 @@ var config = {
     // width: [320, 768, 1024],
     width: [320, 1024],
     filesSet: [
-        require.context('./src/', true, /^((?!tag|notification|navigation|tooltip).)*(specs.js)$/),
+        require.context('./src/', true, /^((?!tag|notification|navigation|tooltip|input-group).)*(specs.js)$/),
     ]
 };
 require('showcar-gulp/gulptasks/quixote.js')(config);
