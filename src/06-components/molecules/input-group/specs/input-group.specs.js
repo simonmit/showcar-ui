@@ -42,7 +42,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             });
 
             secondEl.assert({
-                right: thirdEl.left.plus(1)
+                right: thirdEl.left.plus(3)
             });
         });
 
@@ -59,7 +59,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
         });
 
         it('option 2 is checked by default', () => {
-            assert.equal(secondEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
+            assert.equal(secondEl.getRawStyle('background-color'), 'rgb(51, 51, 51)', 'should be black');
         });
     });
 
@@ -75,7 +75,7 @@ module.exports = (frame, assert, browserWidth, helper) => {
             helper.click(firstEltrigger);
             setTimeout(() => {
                 assert.oneOf(secondEl.getRawStyle('background-color'), ['rgba(0, 0, 0, 0)', 'transparent'], 'should be transparent');
-                assert.equal(firstEl.getRawStyle('background-color'), 'rgb(196, 196, 196)', 'should be gray');
+                assert.equal(firstEl.getRawStyle('background-color'), 'rgb(51, 51, 51)', 'should be black');
                 done();
             }, 550); //wait for transition
         });
