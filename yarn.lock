@@ -9446,9 +9446,14 @@ shell-quote@^1.4.2, shell-quote@^1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
-showcar-carousel@^4.3.4, showcar-carousel@^4.4.1:
+showcar-carousel@^4.3.4:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/showcar-carousel/-/showcar-carousel-4.4.1.tgz#7e1c347ded96a6cc1633287299a6f64524194f3f"
+
+showcar-carousel@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/showcar-carousel/-/showcar-carousel-4.4.2.tgz#80ca1f4211657a0699f060689f9be8771c2f6c9e"
+  integrity sha512-OwZuoJoXYzwQDx9GWcCFbFDAllisLTh9VH/U9BtwJS0SMrVRPoYaDKdQDhGU+vgOZqgyHrKm3/IZG9vMiro4tw==
 
 showcar-gulp@^3.1.7:
   version "3.1.7"
@@ -9520,11 +9525,12 @@ showcar-gulp@^3.1.7:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/showcar-icons/-/showcar-icons-0.6.3.tgz#9f383f1a722e2f325e129c41ab3a9eb4bcf11bae"
 
-showcar-pictures@^3.0.3:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/showcar-pictures/-/showcar-pictures-3.1.0.tgz#292b87b8c2391c876583817fa625eb0eddec5f5c"
+showcar-pictures@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/showcar-pictures/-/showcar-pictures-3.1.2.tgz#bd840c8c7dd93c0a028736f0530f6d0abe45a0fc"
+  integrity sha512-72oj2Q8oqjFg2aPXmc9PgE5FXGAj+oBsEpiHU1eZP0R5hx4bjqvww5ib4hXImNKCj3CToiVJjFMjlH9yYWJlMg==
   dependencies:
-    showcar-carousel "^4.4.1"
+    showcar-carousel "^4.4.2"
 
 showcar-storage@^1.1.1:
   version "1.1.1"
