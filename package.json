@@ -52,7 +52,7 @@
     "promiz": "^1.0.5",
     "showcar-carousel": "^4.3.4",
     "showcar-icons": " ^0.6.x",
-    "showcar-pictures": "^3.0.3",
+    "showcar-pictures": "^3.1.2",
     "showcar-storage": "^1.1.1",
     "showcar-tracking": "git+https://github.com/Scout24/showcar-tracking.git#v0.1.11",
     "susy": "^2.2.12",
