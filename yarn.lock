@@ -9525,10 +9525,10 @@ showcar-gulp@^3.1.7:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/showcar-icons/-/showcar-icons-0.6.3.tgz#9f383f1a722e2f325e129c41ab3a9eb4bcf11bae"
 
-showcar-pictures@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/showcar-pictures/-/showcar-pictures-3.1.2.tgz#bd840c8c7dd93c0a028736f0530f6d0abe45a0fc"
-  integrity sha512-72oj2Q8oqjFg2aPXmc9PgE5FXGAj+oBsEpiHU1eZP0R5hx4bjqvww5ib4hXImNKCj3CToiVJjFMjlH9yYWJlMg==
+showcar-pictures@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/showcar-pictures/-/showcar-pictures-3.1.3.tgz#13fdd7b0ad09d3b0bcf498205eecc538a31e0c1a"
+  integrity sha512-Oq30Du0QiqV3hM0RxPsWZa9LSBYGnKRObR18yYAx63jfbS85vyvhi3bVHygcHM15N1ADkfBcnewDfGBrgUm+SQ==
   dependencies:
     showcar-carousel "^4.4.2"
 
