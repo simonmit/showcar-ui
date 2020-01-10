@@ -1,6 +1,6 @@
 @import '../../../01-settings/variables';
 
-.sc-highlight {
+.sc-highlight, .sc-highlight--silent {
   display: inline-block;
   background-color: $color-success-message;
   vertical-align: middle;
