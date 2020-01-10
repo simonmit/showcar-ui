@@ -267,7 +267,7 @@ $header-height: 71px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: $S $L $M;
+    padding: 10px $L;
     height: 35px;
     box-sizing: content-box;
 
@@ -275,8 +275,11 @@ $header-height: 71px;
     as24-icon {
       width: 126px;
       height: 35px;
-      background-size: contain;
-      display: inline-block;
+      display: flex;
+
+      svg {
+        width: 100%;
+      }
     }
   }
 
@@ -287,8 +290,6 @@ $header-height: 71px;
 
   /* Optional functionality */
   .button-with-subtitle {
-    padding-left: 10px;
-
     ~ span:first-of-type {
       display: block;
       font-size: 13px;
@@ -336,6 +337,7 @@ $header-height: 71px;
       as24-icon {
         width: 148px;
         height: 39px;
+        display: inline-block;
       }
     }
 
@@ -352,8 +354,8 @@ $header-height: 71px;
       transition: none;
       max-height: 0;
       background-color: $white;
-      /* top value has to be equivalant to the header's height, to hide the border between header and submenu */
-      top: $header-height;
+      /* top value has to be equivalant to the header's height - border size, to hide the border between header and submenu */
+      top: $header-height - 1px;
       border: 1px solid $black-30;
       left: -1px;
       padding: $M $XXL;
@@ -413,7 +415,6 @@ $header-height: 71px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      height: 16px;
       margin-top: -8px;
       max-width: 150px;
     }
