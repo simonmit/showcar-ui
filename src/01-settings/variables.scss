@@ -39,8 +39,12 @@ $orange-30: #ffe3cc;
 $orange-20: #fff1e5;
 
 $google-blue-90: #145bb9;
-$google-blue-50: #bad4f8; 
-$google-blue: #1A72E8;
+$google-blue-50: #bad4f8;
+$google-blue: #1a72e8;
+
+$yellow-90: #c4c100;
+$yellow-50: #fefde5;
+$yellow: #f5f201;
 
 $color-link: $google-blue;
 $color-link-hover: $google-blue-90;
@@ -77,7 +81,7 @@ $body-red: $color-error;
 $body-violet: #991289;
 $body-blue: #0059b2;
 $body-green: #38a614;
-$body-dark-sky-blue: #33AADD;
+$body-dark-sky-blue: #33aadd;
 
 $body-other: url('data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHN0eWxlPjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojQzZDNkM2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCl1dPjwvc3R5bGU+PHBhdGggZD0iTTAgMGgzMHYzMEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDAgNDBsNTAtNTBNLTMwIDQwbDUwLTUwTS0yMCA0MGw1MC01ME0tMTAgNDBsNTAtNTBNMCA0MGw1MC01ME0xMCA0MGw1MC01ME0yMCA0MGw1MC01MCIvPjwvc3ZnPg==');
 
@@ -133,5 +137,5 @@ $susy: (
   container: $grid-max-width,
   debug: (
     image: $susy-grid-background,
-  )
+  ),
 );
