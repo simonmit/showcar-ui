@@ -47,6 +47,10 @@ table {
   font-smooth: always;
 }
 
+*::selection {
+  background-color: $yellow;
+}
+
 html {
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
