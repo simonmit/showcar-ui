@@ -54,7 +54,10 @@ const whiteList = [
     '5c3e5f30-4d66-4a27-931d-61b7f4905dedcconsent',
     '5c3e5f30-4d66-4a27-931d-61b7f4905dedeuconsent',
     '5c3e5f30-4d66-4a27-931d-61b7f4905dedfaktorChecksum',
-    '5c3e5f30-4d66-4a27-931d-61b7f4905dedfaktorId'
+    '5c3e5f30-4d66-4a27-931d-61b7f4905dedfaktorId',
+    'brand-variation',
+    'brand-opt-out',
+    'brand-survey-was-shown'
 ];
 
 const deleteCookieByName = function(cookie) {
