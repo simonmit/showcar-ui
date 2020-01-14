@@ -60,7 +60,7 @@ export default () => {
 
     const toggleSubmenu = (opener, button) => {
         const isDesktop = window.innerWidth >= 923; // see breakpoint
-        const menuItems = document.querySelectorAll('.sc-navigation-v2 nav li');
+        const menuItems = [...document.querySelectorAll('.sc-navigation-v2 nav li')]; // return array, not NodeList
 
         if (isDesktop) {
             menuItems.forEach(item => {
