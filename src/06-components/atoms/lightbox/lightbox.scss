@@ -13,7 +13,7 @@
   z-index: 140; // overlay header
   max-height: calc(100vh - 80px);
 
-  @include mqmin($viewportS) {
+  @include mqmin($viewportM) {
     padding: $XXXL !important;
   }
 
@@ -49,7 +49,7 @@
   padding: 0 !important;
   flex: 1;
 
-  @include mqmin($viewportS) {
+  @include mqmin($viewportM) {
     padding: 0 !important;
   }
 }
