@@ -9,12 +9,12 @@
   transform: translate(-50%, -50%);
   border-radius: $form-border-radius;
   background-color: $white;
-  padding: $L 0;
+  padding: $L !important;
   z-index: 140; // overlay header
   max-height: calc(100vh - 80px);
 
   @include mqmin($viewportS) {
-    padding: $XXXL 0 !important;
+    padding: $XXXL !important;
   }
 
   @include mqmin(582px) {
@@ -46,11 +46,11 @@
 .sc-lightbox__content {
   max-height: calc(100vh - 120px);
   overflow: auto;
-  padding: 0 $L;
+  padding: 0 !important;
   flex: 1;
 
   @include mqmin($viewportS) {
-    padding: 0 $XXXL !important;
+    padding: 0 !important;
   }
 }
 
