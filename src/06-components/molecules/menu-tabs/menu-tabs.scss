@@ -14,12 +14,12 @@
 }
 
 .sc-menu-tab--active {
-  border-left: solid $XS $orange-100;
+  border-left: solid $XS $color-link;
   padding-left: $M;
-  color: $orange-100;
+  color: $color-link;
 
   a {
-    color: $orange-100;
+    color: $color-link;
   }
 }
 
@@ -30,7 +30,7 @@
   top: $L;
   border-top: 14px solid transparent;
   border-bottom: 14px solid transparent;
-  border-right: $M solid #fff;
+  border-right: $M solid $white;
   clear: both;
 }
 
