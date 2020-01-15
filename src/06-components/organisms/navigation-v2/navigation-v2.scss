@@ -304,7 +304,7 @@ $header-height: 71px;
     }
   }
 
-  @media (min-width: $navigation-breakpoint) {
+  @media (min-width: $breakpoint) {
     .open .submenu:not(.extended) {
       min-width: 165px;
     }
@@ -323,7 +323,7 @@ $header-height: 71px;
     }
   }
 
-  @media screen and (min-width: $navigation-breakpoint) {
+  @media screen and (min-width: $breakpoint) {
     display: flex;
     height: $header-height;
 
@@ -534,14 +534,14 @@ $header-height: 71px;
   }
 
   .hidden-on-mobile {
-    @include mqminmax(0, $navigation-breakpoint - 1) {
+    @include mqminmax(0, $breakpoint - 1) {
       display: none !important;
     }
   }
 }
 
 .sc-navigation-v2 {
-  @include sc-navigation-v2-mixin(923px);
+  @include sc-navigation-v2-mixin($navigation-breakpoint);
 }
 
 .skip-main {
