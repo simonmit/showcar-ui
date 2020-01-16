@@ -246,7 +246,7 @@ input[type='checkbox'] {
 
   &:hover {
     + label.sc-toggle {
-      background-color: $black-80;
+      background-color: $coral-90;
     }
   }
 
@@ -256,12 +256,12 @@ input[type='checkbox'] {
 
   &:active {
     + label.sc-toggle {
-      background-color: $black-90;
+      background-color: $coral-90;
     }
   }
 
   &:disabled + label.sc-toggle {
-    background-color: $black-30;
+    background-color: $coral-50;
     cursor: not-allowed;
   }
 
@@ -279,10 +279,10 @@ input[type='checkbox'] {
 
     &:hover {
       + label.sc-toggle {
-        background-color: $blue-90;
+        background-color: $coral-90;
         as24-icon svg {
-          fill: $blue-90;
-          stroke: $blue-90;
+          fill: $coral-90;
+          stroke: $coral-90;
           transition: all 100ms ease-in 100ms;
         }
       }
@@ -290,7 +290,7 @@ input[type='checkbox'] {
 
     &:active {
       + label.sc-toggle {
-        background-color: $blue-100;
+        background-color: $coral-90;
       }
     }
 
@@ -302,10 +302,10 @@ input[type='checkbox'] {
 
     &:disabled {
       + label.sc-toggle {
-        background-color: $blue-30;
+        background-color: $coral-50;
         as24-icon svg {
-          fill: $blue-30;
-          stroke: $blue-30;
+          fill: $coral-50;
+          stroke: $coral-50;
         }
       }
     }
@@ -368,8 +368,8 @@ input[type='checkbox'] {
     opacity: 0;
 
     svg {
-      fill: #007cca;
-      stroke: #007cca;
+      fill: $coral;
+      stroke: $coral;
       stroke-width: 2px;
       padding: $XS;
     }
