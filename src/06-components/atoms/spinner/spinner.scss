@@ -29,8 +29,7 @@ $off-grey: #D2D2D2;
   border-top-color: $white;
 
   &.orange {
-    border: 6px solid $off-white;
-    border-top-color: $white;
+    border-color: $black-60 $off-grey $off-grey;
   }
 
   &.grey {
